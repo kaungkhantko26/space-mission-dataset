@@ -160,4 +160,49 @@ Records carry `source_ids` that point to the *expected* authoritative document o
 3. `python3 tools/build.py && python3 tools/make_schemas.py && python3 tools/validate.py && python3 tools/make_reports.py && node tools/parity_check.js`.
 4. Resolve entries in `known_conflicts` first (Electron/Falcon 9 stage masses, Deimos GM).
 """)
+BM=L("analysis/benchmark_results.json")
+eq="\n".join(f"| {e['scenario_id']} | {e['designs']:,} | {'exact match' if e['exact_match'] else 'MISMATCH '+str(e['mismatches'])} |" for e in BM["equivalence"])
+tm="\n".join(f"| {t['scenario_id']} | {t['designs']:,} | {t['scalar_python_enumerate_s']:.2f} | {t['vectorized_one_full_pass_s']:.3f} | {t['speedup']:.0f}x | {t['js_enumerate_s']:.2f} |" for t in BM["timing"])
+sc_="\n".join(f"| {s['instruments']} | {s['designs']:,} | {s['vectorized_exact_solve_s']:.2f} | {f(s['scalar_exact_solve_s'],2)} | {s['optimum_science']:.0f} |" for s in BM["scaling"])
+hr="\n".join(f"| {h['scenario_id']} | {h['objective']} | {h['solver']} | {h['runs_found_exact_optimum']}/{h['runs']} | {h['runs_feasible']}/{h['runs']} | {f(h['median_gap_pct'],1)} |" for h in BM["heuristics"] if h["evaluations"]==2000)
+W("BENCHMARK_REPORT.md",f"""# Benchmark report
+{BANNER}
+All timings are single runs on the build sandbox (Python {BM['environment']['python']}, numpy {BM['environment']['numpy']}); relative speedups are meaningful, absolute seconds are not. Reproduce: `python3 tools/benchmark.py`. Heuristic runs use seeds 0-19.
+
+## 1. Exactness: vectorized solver vs scalar reference
+| Scenario | Designs | Result (8 objectives) |
+|---|---:|---|
+{eq}
+
+## 2. Speed (one full pass over every design)
+| Scenario | Designs | Scalar Python (s) | Vectorized (s) | Speedup | JavaScript (s) |
+|---|---:|---:|---:|---:|---:|
+{tm}
+
+## 3. Scaling with instrument count (lunar scenario, synthetic instrument clones, exact max-science)
+| Instruments | Designs | Vectorized (s) | Scalar (s) | Optimum science |
+|---|---:|---:|---:|---:|
+{sc_}
+
+The design space doubles per added instrument; the vectorized exact solver stays under ~1.2 s up to {BM['scaling'][-1]['designs']:,} designs. Clones are synthetic (perturbed copies) and used only to test scaling.
+
+## 4. Heuristic solvers vs the exact optimum (2000 evaluations per run, 20 seeds)
+"Found exact" = reached the exact optimum value; "feasible" = run ended on a feasible design; gap = median relative gap among feasible runs.
+
+| Scenario | Objective | Solver | Found exact | Feasible | Median gap % |
+|---|---|---|---:|---:|---:|
+{hr}
+
+## Findings
+* The vectorized solver reproduces every scalar optimum exactly (same design, same value) and is ~10-20x faster per pass; it makes exact search practical well beyond the current catalog.
+* Heuristics are unreliable here: no solver finds the exact optimum in every run, and in the tightly constrained Mars scenario only ~55-65% of hill-climb/GA runs even end feasible. A genetic algorithm helps on LEO cost/mass but not uniformly.
+* Practical rule: use exact enumeration while the space is below ~1e8 designs; consider NSGA-II / MILP only beyond that (not implemented or benchmarked here).
+
+## Ways to get more optimization (ranked)
+1. **Replace scalar enumeration by the vectorized exact solver** (done in `tools/vec_model.py`, validated above).
+2. **Port the vectorized idea to the browser** (typed arrays/WebWorker) so the website can handle larger catalogs without freezing (not done).
+3. **Dominance pruning** of catalog options (e.g. drop a battery/computer that is worse on every metric) before enumeration (not implemented).
+4. **Real component data** (retrieval required) will change optima more than any solver improvement.
+5. **Add reliability and thermal models** before declaring designs "balanced"; both are currently not modeled.
+""")
 print("reports written")

@@ -30,10 +30,10 @@ const COMPARE={ // dataset -> metrics (label, path, higher_is_better?)
  "Historical missions":[["Launch mass (kg)","launch_mass_kg"],["Dry mass (kg)","dry_mass_kg"],["Cost (M$ nominal)","cost_musd_nominal"],["Dry/launch","derived.dry_to_launch_mass"]],
  "Stages":[["Dry mass (kg)","dry_mass_kg"],["Propellant (kg)","propellant_mass_kg"],["Inert fraction","derived.inert_mass_fraction"]],
 };
-const TABS=["Overview","Explorer","Compare","Calculators","Optimizer","Sensitivity & risk","Quality"];
+const TABS=["Overview","Guide","Explorer","Compare","Calculators","Optimizer","Sensitivity & risk","Benchmarks","Quality"];
 let cur=TABS[0];
 function tabs(){const n=$("#tabs");n.innerHTML="";TABS.forEach(t=>{const b=el(`<button role="tab" aria-selected="${t===cur}">${t}</button>`);b.onclick=()=>{cur=t;tabs();render();};n.append(b);});}
-function render(){const v=$("#view");v.innerHTML="";({Overview:overview,Explorer:explorer,Compare:compare,Calculators:calculators,Optimizer:optimizer,"Sensitivity & risk":sensitivity,Quality:quality})[cur](v);}
+function render(){const v=$("#view");v.innerHTML="";({Overview:overview,Guide:guide,Benchmarks:benchmarks,Explorer:explorer,Compare:compare,Calculators:calculators,Optimizer:optimizer,"Sensitivity & risk":sensitivity,Quality:quality})[cur](v);}
 function table(rows,cols,opts={}){
   let sortK=null,dir=1; const wrap=el(`<div class="tw"><table></table></div>`),t=wrap.firstChild;
   function draw(){const rs=sortK==null?rows:[...rows].sort((a,b)=>{const x=get(a,sortK),y=get(b,sortK);if(x==null)return 1;if(y==null)return -1;return (x>y?1:x<y?-1:0)*dir});
@@ -41,6 +41,24 @@ function table(rows,cols,opts={}){
    rs.map(r=>"<tr>"+cols.map(c=>`<td>${fmt(get(r,c))}</td>`).join("")+(opts.cls===false?"":`<td><span class="tag ${r.data_class}">${r.data_class||""}</span></td>`)+"</tr>").join("")+"</tbody>";
    t.querySelectorAll("th[data-k]").forEach(h=>h.onclick=()=>{const k=h.dataset.k;dir=sortK===k?-dir:1;sortK=k;draw();});}
   draw();return wrap;}
+let BM=null;
+function guide(v){v.append(el(`<div class="card"><h2>How to use this site</h2><ol>
+<li><b>Overview</b> – record counts vs the research targets and how many records are unverified (all of them).</li>
+<li><b>Explorer</b> – pick a dataset, type to filter, click a column header to sort. “—” means not recorded.</li>
+<li><b>Compare</b> – choose a dataset (engines, vehicles, instruments, bodies, missions), tick 2–4 records; bars are scaled to the largest value per row.</li>
+<li><b>Calculators</b> – rocket equation, Hohmann transfer, link budget and solar/battery sizing; type in any box and results update.</li>
+<li><b>Optimizer</b> – pick a scenario and objective, move the budget/margin sliders, then press <i>Re-run optimizer</i>. Choose <i>Balanced</i> and weight mass, cost and science to trade them off. The chart is the Pareto front (each dot is a non-dominated design; darker = more science; ringed = your pick). “No feasible design” means your constraints are too tight; the violation counts tell you which.</li>
+<li><b>Sensitivity &amp; risk</b> – which assumptions move the optimum most, and the chance a chosen design stays feasible under uncertainty.</li>
+<li><b>Benchmarks</b> – solver speed and how well heuristic solvers match the exact optimum.</li>
+<li><b>Quality</b> – validation results, known conflicts and gaps.</li></ol>
+<p class="mut">Reading results: costs are fictional credits; science points are educational weights; component values are estimates. Use the site to learn trade-offs, not to size real hardware.</p></div>`));}
+async function benchmarks(v){
+  if(!BM){try{BM=await (await fetch("data/benchmark_results.json")).json();}catch(e){v.append(el("<div class='card'>benchmark_results.json not found.</div>"));return;}}
+  v.append(el(`<div class="card"><h2>Exactness &amp; speed</h2><div id="a"></div><p class="mut">Vectorized exact solver matches the scalar reference on every objective. Timings are single runs on the build machine.</p></div>`));
+  v.firstChild.querySelector("#a").append(table(BM.timing.map(t=>({scenario:t.scenario_id,designs:t.designs,scalar_s:t.scalar_python_enumerate_s,vectorized_s:t.vectorized_one_full_pass_s,speedup:t.speedup,js_s:t.js_enumerate_s})),["scenario","designs","scalar_s","vectorized_s","speedup","js_s"],{cls:false}));
+  const s=el(`<div class="card"><h2>Scaling (synthetic instruments)</h2><div id="b"></div></div>`);s.querySelector("#b").append(table(BM.scaling,["instruments","designs","vectorized_exact_solve_s","scalar_exact_solve_s","optimum_science"],{cls:false}));v.append(s);
+  const h=el(`<div class="card"><h2>Heuristics vs exact optimum (2000 evals, 20 seeds)</h2><div id="c"></div></div>`);h.querySelector("#c").append(table(BM.heuristics.filter(x=>x.evaluations===2000).map(x=>({scenario:x.scenario_id,objective:x.objective,solver:x.solver,found_exact:x.runs_found_exact_optimum+"/"+x.runs,feasible:x.runs_feasible+"/"+x.runs,median_gap_pct:x.median_gap_pct})),["scenario","objective","solver","found_exact","feasible","median_gap_pct"],{cls:false}));v.append(h);
+}
 function overview(v){
   const c=Q.record_counts,tg=Q.targets;
   v.append(el(`<div class="card"><h2>Dataset coverage vs targets</h2><div class="kpi">${Object.keys(c).map(k=>`<div><small>${k.replace(/_/g," ")}</small><div class="big">${c[k]}</div><small>target ${tg[k]} · ${Q.target_attainment_pct[k]}%</small></div>`).join("")}</div></div>`));

@@ -15,9 +15,16 @@ Machine-readable engineering data, analysis, and optimization models for an educ
 ```bash
 python3 tools/make_schemas.py && python3 tools/build.py && python3 tools/validate.py && python3 tools/make_reports.py
 node tools/parity_check.js          # JS optimizer == Python optimizer
+python3 tools/benchmark.py          # solver benchmarks (needs numpy), writes analysis/benchmark_results.json
 cd docs && python3 -m http.server   # open http://localhost:8000
 ```
 Python 3.10+ standard library, plus `jsonschema` for validation. To publish the site: repo **Settings → Pages → Deploy from branch → `/docs`**.
+
+## Using the website
+Live site (after enabling Pages on `main` → `/docs`): https://kaungkhantko26.github.io/space-mission-dataset/ — open the **Guide** tab for a walkthrough. In short: *Explorer* to browse/sort data, *Compare* to put 2–4 records side by side, *Calculators* for Δv/link/power sizing, *Optimizer* to move budget/margin/weight sliders and see the Pareto front, *Sensitivity & risk*, *Benchmarks*, *Quality*.
+
+## Benchmarks (see `space-mission-research/reports/BENCHMARK_REPORT.md`)
+A numpy-vectorized exact solver (`tools/vec_model.py`) matches the scalar optimizer on all 24 scenario-objective checks and is ~10–20× faster per pass; it solves a 15.7M-design space in ~1 s. Random search, hill-climbing and a genetic algorithm are benchmarked against the exact optimum; none finds it reliably, so exact search is preferred while the space is small enough.
 
 ## Key conventions
 SI units with unit-suffixed names; `null` = not recorded (never zero); every record has `data_class`, `confidence`, `source_ids`, `retrieval_status`. Optimization = exhaustive enumeration, so "optimal" means optimal *within the stated catalog and model*.

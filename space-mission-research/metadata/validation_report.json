@@ -6,7 +6,7 @@
   {
    "check": "json_syntax_all_files",
    "passed": true,
-   "detail": "62 files; failures=[]"
+   "detail": "63 files; failures=[]"
   },
   {
    "check": "schema:celestial/planets.json",
