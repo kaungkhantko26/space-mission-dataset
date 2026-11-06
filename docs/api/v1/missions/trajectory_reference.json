@@ -1,0 +1,131 @@
+{
+ "records": [
+  {
+   "id": "leo400_circular",
+   "description": "400 km circular LEO (Earth mean radius)",
+   "velocity_m_s": 7672.598648385013,
+   "period_s": 5544.855095980793,
+   "data_class": "derived",
+   "derived_from": "two-body / patched-conic formulas in tools/astro.py",
+   "inputs_data_class": "unverified"
+  },
+  {
+   "id": "leo400_to_geo_hohmann",
+   "description": "Coplanar Hohmann LEO(400 km)->GEO (r=42,164 km); no plane change",
+   "dv1_m_s": 2399.467858483942,
+   "dv2_m_s": 1457.221015225073,
+   "total_m_s": 3856.688873709015,
+   "transfer_time_h": 5.290087793119805,
+   "data_class": "derived",
+   "derived_from": "two-body / patched-conic formulas in tools/astro.py",
+   "inputs_data_class": "unverified"
+  },
+  {
+   "id": "plane_change_28p5_at_geo",
+   "description": "Plane change 28.5 deg at GEO speed",
+   "dv_m_s": 1513.678461606494,
+   "data_class": "derived",
+   "derived_from": "two-body / patched-conic formulas in tools/astro.py",
+   "inputs_data_class": "unverified"
+  },
+  {
+   "id": "leo400_to_moon_100km",
+   "description": "Patched-conic TLI + LOI (see optimization scenario basis)",
+   "total_m_s": 3904.580454794844,
+   "basis": "derived: TLI 3084 m/s + LOI 821 m/s (patched conic, 400 km LEO to 100 km circular) + 100 m/s ops",
+   "data_class": "derived",
+   "derived_from": "two-body / patched-conic formulas in tools/astro.py",
+   "inputs_data_class": "unverified"
+  },
+  {
+   "id": "earth_to_venus_hohmann",
+   "description": "Circular coplanar heliocentric Hohmann Earth->Venus (approximation; real transfers use eccentric, inclined orbits)",
+   "v_infinity_departure_m_s": 2495.346977014517,
+   "c3_km2_s2": 6.226756535695488,
+   "v_infinity_arrival_m_s": 2706.516536972636,
+   "departure_dv_from_400km_leo_m_s": 3461.326830712399,
+   "capture_dv_to_400km_circular_m_s": 3297.787102429347,
+   "transfer_time_days": 146.07579205183802,
+   "synodic_period_days": 583.9227287266739,
+   "launch_window_recurrence_days": 583.9227287266739,
+   "data_class": "derived",
+   "derived_from": "two-body / patched-conic formulas in tools/astro.py",
+   "inputs_data_class": "unverified"
+  },
+  {
+   "id": "earth_to_mars_hohmann",
+   "description": "Circular coplanar heliocentric Hohmann Earth->Mars (approximation; real transfers use eccentric, inclined orbits)",
+   "v_infinity_departure_m_s": 2944.8226306584857,
+   "c3_km2_s2": 8.671980326038364,
+   "v_infinity_arrival_m_s": 2649.001361172541,
+   "departure_dv_from_400km_leo_m_s": 3570.6002008943783,
+   "capture_dv_to_400km_circular_m_s": 2080.687077978788,
+   "transfer_time_days": 258.870580972083,
+   "synodic_period_days": 779.9358921613593,
+   "launch_window_recurrence_days": 779.9358921613593,
+   "data_class": "derived",
+   "derived_from": "two-body / patched-conic formulas in tools/astro.py",
+   "inputs_data_class": "unverified"
+  },
+  {
+   "id": "earth_to_jupiter_hohmann",
+   "description": "Circular coplanar heliocentric Hohmann Earth->Jupiter (approximation; real transfers use eccentric, inclined orbits)",
+   "v_infinity_departure_m_s": 8792.745187403305,
+   "c3_km2_s2": 77.31236793060398,
+   "v_infinity_arrival_m_s": 5643.205764629341,
+   "departure_dv_from_400km_leo_m_s": 6293.428273005444,
+   "capture_dv_to_400km_circular_m_s": 17847.055033370252,
+   "transfer_time_days": 997.5030725210339,
+   "synodic_period_days": 398.88404404528075,
+   "launch_window_recurrence_days": 398.88404404528075,
+   "data_class": "derived",
+   "derived_from": "two-body / patched-conic formulas in tools/astro.py",
+   "inputs_data_class": "unverified"
+  },
+  {
+   "id": "earth_to_saturn_hohmann",
+   "description": "Circular coplanar heliocentric Hohmann Earth->Saturn (approximation; real transfers use eccentric, inclined orbits)",
+   "v_infinity_departure_m_s": 10288.580690329489,
+   "c3_km2_s2": 105.85489262142083,
+   "v_infinity_arrival_m_s": 5442.8136692781545,
+   "departure_dv_from_400km_leo_m_s": 7280.408830373896,
+   "capture_dv_to_400km_circular_m_s": 10944.958492518555,
+   "transfer_time_days": 2208.4057679319644,
+   "synodic_period_days": 378.0919069714198,
+   "launch_window_recurrence_days": 378.0919069714198,
+   "data_class": "derived",
+   "derived_from": "two-body / patched-conic formulas in tools/astro.py",
+   "inputs_data_class": "unverified"
+  },
+  {
+   "id": "earth_to_uranus_hohmann",
+   "description": "Circular coplanar heliocentric Hohmann Earth->Uranus (approximation; real transfers use eccentric, inclined orbits)",
+   "v_infinity_departure_m_s": 11280.794317402084,
+   "c3_km2_s2": 127.25632043153114,
+   "v_infinity_arrival_m_s": 4659.278551079406,
+   "departure_dv_from_400km_leo_m_s": 7979.681072790755,
+   "capture_dv_to_400km_circular_m_s": 6717.627092768801,
+   "transfer_time_days": 5857.347122094645,
+   "synodic_period_days": 369.65602812602015,
+   "launch_window_recurrence_days": 369.65602812602015,
+   "data_class": "derived",
+   "derived_from": "two-body / patched-conic formulas in tools/astro.py",
+   "inputs_data_class": "unverified"
+  },
+  {
+   "id": "earth_to_neptune_hohmann",
+   "description": "Circular coplanar heliocentric Hohmann Earth->Neptune (approximation; real transfers use eccentric, inclined orbits)",
+   "v_infinity_departure_m_s": 11653.822669990504,
+   "c3_km2_s2": 135.8115828235846,
+   "v_infinity_arrival_m_s": 4053.5178194263217,
+   "departure_dv_from_400km_leo_m_s": 8250.627245320811,
+   "capture_dv_to_400km_circular_m_s": 7194.863831226833,
+   "transfer_time_days": 11182.365883800463,
+   "synodic_period_days": 367.4867089023638,
+   "launch_window_recurrence_days": 367.4867089023638,
+   "data_class": "derived",
+   "derived_from": "two-body / patched-conic formulas in tools/astro.py",
+   "inputs_data_class": "unverified"
+  }
+ ]
+}

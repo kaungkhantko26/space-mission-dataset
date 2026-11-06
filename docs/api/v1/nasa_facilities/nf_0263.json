@@ -1,0 +1,32 @@
+{
+ "collection": "nasa_facilities",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "nf_0263",
+  "center": "Kennedy Space Center",
+  "facility": "Engineering Development Laboratory/M7-409",
+  "category": "propulsion_test",
+  "category_basis": "keyword rules on facility name (derived, may be wrong)",
+  "status": null,
+  "status_raw": null,
+  "occupied_date": "1966-01-01",
+  "record_date": "1996-03-01",
+  "last_update": "2015-06-22",
+  "url": null,
+  "city": "Kennedy Space Center",
+  "state": "FL",
+  "zipcode": "32899",
+  "lat": 28.538331,
+  "lon": -81.378879,
+  "location_raw": "32899 (28.538331, -81.378879)",
+  "antenna": null,
+  "duplicate_key": "0b0b0f",
+  "data_class": "unverified",
+  "confidence": "medium",
+  "source_ids": [
+   "S37"
+  ],
+  "retrieval_status": "user_supplied_not_independently_verified",
+  "possible_duplicate": false
+ }
+}

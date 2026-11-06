@@ -1,0 +1,2454 @@
+{
+ "openapi": "3.0.3",
+ "info": {
+  "title": "Space Mission Research Data API",
+  "version": "1.0.0",
+  "description": "Static read-only JSON API. NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional."
+ },
+ "servers": [
+  {
+   "url": "https://kaungkhantko26.github.io/space-mission-dataset/api/v1",
+   "description": "GitHub Pages"
+  },
+  {
+   "url": "http://localhost:8000/api/v1",
+   "description": "Local (python3 -m http.server in docs/)"
+  }
+ ],
+ "paths": {
+  "/index.json": {
+   "get": {
+    "summary": "API index (collections, endpoints, data status)",
+    "responses": {
+     "200": {
+      "description": "OK"
+     }
+    }
+   }
+  },
+  "/search-index.json": {
+   "get": {
+    "summary": "Lightweight id/name index for client-side search",
+    "responses": {
+     "200": {
+      "description": "OK"
+     }
+    }
+   }
+  },
+  "/quality.json": {
+   "get": {
+    "summary": "Quality/completeness/known-conflict report",
+    "responses": {
+     "200": {
+      "description": "OK"
+     }
+    }
+   }
+  },
+  "/planets.json": {
+   "get": {
+    "summary": "List planets: Sun, planets, dwarf planets (SI)",
+    "tags": [
+     "planets"
+    ],
+    "responses": {
+     "200": {
+      "description": "Collection",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "properties": {
+          "collection": {
+           "type": "string"
+          },
+          "count": {
+           "type": "integer"
+          },
+          "records": {
+           "type": "array",
+           "items": {
+            "$ref": "#/components/schemas/Record"
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/planets/{id}.json": {
+   "get": {
+    "summary": "Get one planets record",
+    "tags": [
+     "planets"
+    ],
+    "parameters": [
+     {
+      "name": "id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "enum": [
+        "sun",
+        "mercury",
+        "venus",
+        "earth",
+        "mars",
+        "jupiter",
+        "saturn",
+        "uranus",
+        "neptune",
+        "pluto",
+        "ceres",
+        "eris"
+       ]
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Record"
+     },
+     "404": {
+      "description": "Unknown id"
+     }
+    }
+   }
+  },
+  "/moons.json": {
+   "get": {
+    "summary": "List moons: Major moons",
+    "tags": [
+     "moons"
+    ],
+    "responses": {
+     "200": {
+      "description": "Collection",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "properties": {
+          "collection": {
+           "type": "string"
+          },
+          "count": {
+           "type": "integer"
+          },
+          "records": {
+           "type": "array",
+           "items": {
+            "$ref": "#/components/schemas/Record"
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/moons/{id}.json": {
+   "get": {
+    "summary": "Get one moons record",
+    "tags": [
+     "moons"
+    ],
+    "parameters": [
+     {
+      "name": "id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "enum": [
+        "moon",
+        "phobos",
+        "deimos",
+        "io",
+        "europa",
+        "ganymede",
+        "callisto",
+        "titan",
+        "enceladus",
+        "triton",
+        "charon"
+       ]
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Record"
+     },
+     "404": {
+      "description": "Unknown id"
+     }
+    }
+   }
+  },
+  "/asteroids.json": {
+   "get": {
+    "summary": "List asteroids: Selected small bodies",
+    "tags": [
+     "asteroids"
+    ],
+    "responses": {
+     "200": {
+      "description": "Collection",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "properties": {
+          "collection": {
+           "type": "string"
+          },
+          "count": {
+           "type": "integer"
+          },
+          "records": {
+           "type": "array",
+           "items": {
+            "$ref": "#/components/schemas/Record"
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/asteroids/{id}.json": {
+   "get": {
+    "summary": "Get one asteroids record",
+    "tags": [
+     "asteroids"
+    ],
+    "parameters": [
+     {
+      "name": "id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "enum": [
+        "vesta",
+        "bennu"
+       ]
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Record"
+     },
+     "404": {
+      "description": "Unknown id"
+     }
+    }
+   }
+  },
+  "/orbital_elements.json": {
+   "get": {
+    "summary": "List orbital_elements: Orbital elements with epochs",
+    "tags": [
+     "orbital_elements"
+    ],
+    "responses": {
+     "200": {
+      "description": "Collection",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "properties": {
+          "collection": {
+           "type": "string"
+          },
+          "count": {
+           "type": "integer"
+          },
+          "records": {
+           "type": "array",
+           "items": {
+            "$ref": "#/components/schemas/Record"
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/orbital_elements/{id}.json": {
+   "get": {
+    "summary": "Get one orbital_elements record",
+    "tags": [
+     "orbital_elements"
+    ],
+    "parameters": [
+     {
+      "name": "id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "enum": [
+        "mercury",
+        "venus",
+        "earth",
+        "mars",
+        "jupiter",
+        "saturn",
+        "uranus",
+        "neptune",
+        "pluto",
+        "ceres",
+        "eris",
+        "vesta",
+        "bennu",
+        "moon",
+        "phobos",
+        "deimos",
+        "io",
+        "europa",
+        "ganymede",
+        "callisto",
+        "titan",
+        "enceladus",
+        "triton",
+        "charon"
+       ]
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Record"
+     },
+     "404": {
+      "description": "Unknown id"
+     }
+    }
+   }
+  },
+  "/atmospheres.json": {
+   "get": {
+    "summary": "List atmospheres: Atmosphere summaries",
+    "tags": [
+     "atmospheres"
+    ],
+    "responses": {
+     "200": {
+      "description": "Collection",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "properties": {
+          "collection": {
+           "type": "string"
+          },
+          "count": {
+           "type": "integer"
+          },
+          "records": {
+           "type": "array",
+           "items": {
+            "$ref": "#/components/schemas/Record"
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/atmospheres/{id}.json": {
+   "get": {
+    "summary": "Get one atmospheres record",
+    "tags": [
+     "atmospheres"
+    ],
+    "parameters": [
+     {
+      "name": "id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "enum": [
+        "venus",
+        "earth",
+        "mars",
+        "titan",
+        "jupiter",
+        "saturn",
+        "uranus",
+        "neptune",
+        "pluto",
+        "mercury",
+        "moon"
+       ]
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Record"
+     },
+     "404": {
+      "description": "Unknown id"
+     }
+    }
+   }
+  },
+  "/rocket_engines.json": {
+   "get": {
+    "summary": "List rocket_engines: Chemical engines/motors/thrusters",
+    "tags": [
+     "rocket_engines"
+    ],
+    "responses": {
+     "200": {
+      "description": "Collection",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "properties": {
+          "collection": {
+           "type": "string"
+          },
+          "count": {
+           "type": "integer"
+          },
+          "records": {
+           "type": "array",
+           "items": {
+            "$ref": "#/components/schemas/Record"
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/rocket_engines/{id}.json": {
+   "get": {
+    "summary": "Get one rocket_engines record",
+    "tags": [
+     "rocket_engines"
+    ],
+    "parameters": [
+     {
+      "name": "id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "enum": [
+        "rs25d",
+        "rl10c1",
+        "merlin1d",
+        "mvac",
+        "raptor2",
+        "rutherford",
+        "f1",
+        "j2",
+        "rd180",
+        "be4",
+        "vinci",
+        "vulcain2",
+        "rsrm",
+        "srb5",
+        "star48b",
+        "mr103",
+        "aj10_190",
+        "aj10_137",
+        "draco"
+       ]
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Record"
+     },
+     "404": {
+      "description": "Unknown id"
+     }
+    }
+   }
+  },
+  "/electric_propulsion.json": {
+   "get": {
+    "summary": "List electric_propulsion: Ion and Hall thrusters",
+    "tags": [
+     "electric_propulsion"
+    ],
+    "responses": {
+     "200": {
+      "description": "Collection",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "properties": {
+          "collection": {
+           "type": "string"
+          },
+          "count": {
+           "type": "integer"
+          },
+          "records": {
+           "type": "array",
+           "items": {
+            "$ref": "#/components/schemas/Record"
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/electric_propulsion/{id}.json": {
+   "get": {
+    "summary": "Get one electric_propulsion record",
+    "tags": [
+     "electric_propulsion"
+    ],
+    "parameters": [
+     {
+      "name": "id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "enum": [
+        "nstar",
+        "next",
+        "t6",
+        "bpt4000",
+        "spt100"
+       ]
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Record"
+     },
+     "404": {
+      "description": "Unknown id"
+     }
+    }
+   }
+  },
+  "/propellants.json": {
+   "get": {
+    "summary": "List propellants: Propellant densities",
+    "tags": [
+     "propellants"
+    ],
+    "responses": {
+     "200": {
+      "description": "Collection",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "properties": {
+          "collection": {
+           "type": "string"
+          },
+          "count": {
+           "type": "integer"
+          },
+          "records": {
+           "type": "array",
+           "items": {
+            "$ref": "#/components/schemas/Record"
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/propellants/{id}.json": {
+   "get": {
+    "summary": "Get one propellants record",
+    "tags": [
+     "propellants"
+    ],
+    "parameters": [
+     {
+      "name": "id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "enum": [
+        "lox",
+        "lh2",
+        "lch4",
+        "rp1",
+        "n2o4",
+        "mmh",
+        "n2h4",
+        "xe"
+       ]
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Record"
+     },
+     "404": {
+      "description": "Unknown id"
+     }
+    }
+   }
+  },
+  "/launch_vehicles.json": {
+   "get": {
+    "summary": "List launch_vehicles: Launch vehicles",
+    "tags": [
+     "launch_vehicles"
+    ],
+    "responses": {
+     "200": {
+      "description": "Collection",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "properties": {
+          "collection": {
+           "type": "string"
+          },
+          "count": {
+           "type": "integer"
+          },
+          "records": {
+           "type": "array",
+           "items": {
+            "$ref": "#/components/schemas/Record"
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/launch_vehicles/{id}.json": {
+   "get": {
+    "summary": "Get one launch_vehicles record",
+    "tags": [
+     "launch_vehicles"
+    ],
+    "parameters": [
+     {
+      "name": "id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "enum": [
+        "saturn_v",
+        "sls_b1",
+        "falcon9_b5",
+        "falcon_heavy",
+        "starship",
+        "atlas_v_551",
+        "vulcan_vc6",
+        "electron",
+        "ariane5_eca",
+        "ariane64",
+        "ariane62",
+        "delta4_heavy",
+        "new_glenn",
+        "vega_c",
+        "soyuz_21b",
+        "cz5"
+       ]
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Record"
+     },
+     "404": {
+      "description": "Unknown id"
+     }
+    }
+   }
+  },
+  "/rocket_stages.json": {
+   "get": {
+    "summary": "List rocket_stages: Stages",
+    "tags": [
+     "rocket_stages"
+    ],
+    "responses": {
+     "200": {
+      "description": "Collection",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "properties": {
+          "collection": {
+           "type": "string"
+          },
+          "count": {
+           "type": "integer"
+          },
+          "records": {
+           "type": "array",
+           "items": {
+            "$ref": "#/components/schemas/Record"
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/rocket_stages/{id}.json": {
+   "get": {
+    "summary": "Get one rocket_stages record",
+    "tags": [
+     "rocket_stages"
+    ],
+    "parameters": [
+     {
+      "name": "id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "enum": [
+        "saturn_v_s1c",
+        "saturn_v_s2",
+        "saturn_v_s4b",
+        "sls_core",
+        "f9_s1",
+        "f9_s2",
+        "electron_s1",
+        "electron_s2"
+       ]
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Record"
+     },
+     "404": {
+      "description": "Unknown id"
+     }
+    }
+   }
+  },
+  "/boosters.json": {
+   "get": {
+    "summary": "List boosters: Boosters",
+    "tags": [
+     "boosters"
+    ],
+    "responses": {
+     "200": {
+      "description": "Collection",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "properties": {
+          "collection": {
+           "type": "string"
+          },
+          "count": {
+           "type": "integer"
+          },
+          "records": {
+           "type": "array",
+           "items": {
+            "$ref": "#/components/schemas/Record"
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/boosters/{id}.json": {
+   "get": {
+    "summary": "Get one boosters record",
+    "tags": [
+     "boosters"
+    ],
+    "parameters": [
+     {
+      "name": "id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "enum": [
+        "sls_srb",
+        "stg_rsrm",
+        "ariane5_eap",
+        "fh_side"
+       ]
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Record"
+     },
+     "404": {
+      "description": "Unknown id"
+     }
+    }
+   }
+  },
+  "/components.json": {
+   "get": {
+    "summary": "List components: Spacecraft component classes and named items",
+    "tags": [
+     "components"
+    ],
+    "responses": {
+     "200": {
+      "description": "Collection",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "properties": {
+          "collection": {
+           "type": "string"
+          },
+          "count": {
+           "type": "integer"
+          },
+          "records": {
+           "type": "array",
+           "items": {
+            "$ref": "#/components/schemas/Record"
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/components/{id}.json": {
+   "get": {
+    "summary": "Get one components record",
+    "tags": [
+     "components"
+    ],
+    "parameters": [
+     {
+      "name": "id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "enum": [
+        "sa_si",
+        "sa_3j_gaas",
+        "sa_body",
+        "bat_li_ion",
+        "bat_nih2",
+        "rtg_mmrtg",
+        "rtg_gphs",
+        "cpu_rad750",
+        "cpu_leon3",
+        "cpu_cots",
+        "rw_small",
+        "rw_large",
+        "st_star",
+        "mtq",
+        "rad_heater",
+        "rad_radiator",
+        "ant_patch",
+        "ant_hga_1m",
+        "ant_hga_3m",
+        "xpdr_deep_space",
+        "tank_ti",
+        "struct_bus",
+        "shield_rad"
+       ]
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Record"
+     },
+     "404": {
+      "description": "Unknown id"
+     }
+    }
+   }
+  },
+  "/ground_stations.json": {
+   "get": {
+    "summary": "List ground_stations: Ground stations",
+    "tags": [
+     "ground_stations"
+    ],
+    "responses": {
+     "200": {
+      "description": "Collection",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "properties": {
+          "collection": {
+           "type": "string"
+          },
+          "count": {
+           "type": "integer"
+          },
+          "records": {
+           "type": "array",
+           "items": {
+            "$ref": "#/components/schemas/Record"
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/ground_stations/{id}.json": {
+   "get": {
+    "summary": "Get one ground_stations record",
+    "tags": [
+     "ground_stations"
+    ],
+    "parameters": [
+     {
+      "name": "id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "enum": [
+        "dsn_goldstone_dss14",
+        "dsn_canberra_dss43",
+        "dsn_madrid_dss63",
+        "dsn_34m_bwg",
+        "estrack_new_norcia",
+        "estrack_cebreros",
+        "estrack_malargue",
+        "ksat_svalbard"
+       ]
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Record"
+     },
+     "404": {
+      "description": "Unknown id"
+     }
+    }
+   }
+  },
+  "/instruments.json": {
+   "get": {
+    "summary": "List instruments: Science instruments",
+    "tags": [
+     "instruments"
+    ],
+    "responses": {
+     "200": {
+      "description": "Collection",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "properties": {
+          "collection": {
+           "type": "string"
+          },
+          "count": {
+           "type": "integer"
+          },
+          "records": {
+           "type": "array",
+           "items": {
+            "$ref": "#/components/schemas/Record"
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/instruments/{id}.json": {
+   "get": {
+    "summary": "Get one instruments record",
+    "tags": [
+     "instruments"
+    ],
+    "parameters": [
+     {
+      "name": "id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "enum": [
+        "lorri",
+        "ralph",
+        "alice",
+        "rex",
+        "swap",
+        "pepssi",
+        "sdc",
+        "hirise",
+        "crism",
+        "sharad",
+        "mola",
+        "lroc_nac",
+        "sam",
+        "oli",
+        "tirs",
+        "msi"
+       ]
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Record"
+     },
+     "404": {
+      "description": "Unknown id"
+     }
+    }
+   }
+  },
+  "/missions.json": {
+   "get": {
+    "summary": "List missions: Historical missions",
+    "tags": [
+     "missions"
+    ],
+    "responses": {
+     "200": {
+      "description": "Collection",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "properties": {
+          "collection": {
+           "type": "string"
+          },
+          "count": {
+           "type": "integer"
+          },
+          "records": {
+           "type": "array",
+           "items": {
+            "$ref": "#/components/schemas/Record"
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/missions/{id}.json": {
+   "get": {
+    "summary": "Get one missions record",
+    "tags": [
+     "missions"
+    ],
+    "parameters": [
+     {
+      "name": "id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "enum": [
+        "apollo11",
+        "voyager2",
+        "cassini",
+        "lro",
+        "mro",
+        "new_horizons",
+        "juno",
+        "curiosity",
+        "jwst",
+        "landsat8",
+        "sentinel2a",
+        "dawn",
+        "osiris_rex",
+        "marco"
+       ]
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Record"
+     },
+     "404": {
+      "description": "Unknown id"
+     }
+    }
+   }
+  },
+  "/mission_profiles.json": {
+   "get": {
+    "summary": "List mission_profiles: Hypothetical analysis scenarios",
+    "tags": [
+     "mission_profiles"
+    ],
+    "responses": {
+     "200": {
+      "description": "Collection",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "properties": {
+          "collection": {
+           "type": "string"
+          },
+          "count": {
+           "type": "integer"
+          },
+          "records": {
+           "type": "array",
+           "items": {
+            "$ref": "#/components/schemas/Record"
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/mission_profiles/{id}.json": {
+   "get": {
+    "summary": "Get one mission_profiles record",
+    "tags": [
+     "mission_profiles"
+    ],
+    "parameters": [
+     {
+      "name": "id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "enum": [
+        "leo_eo",
+        "lunar_orbiter",
+        "mars_orbiter"
+       ]
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Record"
+     },
+     "404": {
+      "description": "Unknown id"
+     }
+    }
+   }
+  },
+  "/engineering_constraints.json": {
+   "get": {
+    "summary": "List engineering_constraints: Constraint statements",
+    "tags": [
+     "engineering_constraints"
+    ],
+    "responses": {
+     "200": {
+      "description": "Collection",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "properties": {
+          "collection": {
+           "type": "string"
+          },
+          "count": {
+           "type": "integer"
+          },
+          "records": {
+           "type": "array",
+           "items": {
+            "$ref": "#/components/schemas/Record"
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/engineering_constraints/{id}.json": {
+   "get": {
+    "summary": "Get one engineering_constraints record",
+    "tags": [
+     "engineering_constraints"
+    ],
+    "parameters": [
+     {
+      "name": "id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "enum": [
+        "c_payload_saturn_v_LEO_expended",
+        "c_payload_saturn_v_TLI_expended",
+        "c_payload_sls_b1_LEO_expended",
+        "c_payload_sls_b1_TLI_expended",
+        "c_payload_falcon9_b5_LEO_expended",
+        "c_payload_falcon9_b5_GTO_expended",
+        "c_payload_falcon9_b5_GTO_droneship",
+        "c_payload_falcon_heavy_LEO_expended",
+        "c_payload_falcon_heavy_GTO_expended",
+        "c_payload_falcon_heavy_Mars transfer_expended",
+        "c_payload_starship_LEO_fully",
+        "c_payload_atlas_v_551_LEO_expended",
+        "c_payload_atlas_v_551_GTO_expended",
+        "c_payload_vulcan_vc6_LEO_expended",
+        "c_payload_vulcan_vc6_GTO_expended",
+        "c_payload_electron_SSO_expended",
+        "c_payload_ariane5_eca_GTO_expended",
+        "c_payload_ariane64_LEO_expended",
+        "c_payload_ariane64_GTO_expended",
+        "c_payload_ariane62_LEO_expended",
+        "c_payload_ariane62_GTO_expended",
+        "c_payload_delta4_heavy_LEO_expended",
+        "c_payload_delta4_heavy_GTO_expended",
+        "c_payload_new_glenn_LEO_booster",
+        "c_payload_new_glenn_GTO_booster",
+        "c_payload_vega_c_SSO_expended",
+        "c_payload_soyuz_21b_LEO_expended",
+        "c_payload_cz5_LEO_expended",
+        "c_payload_cz5_GTO_expended",
+        "c_twr_rs25d",
+        "c_twr_rl10c1",
+        "c_twr_rutherford",
+        "c_twr_f1",
+        "c_twr_j2",
+        "c_twr_rd180",
+        "c_twr_vinci",
+        "c_twr_mr103",
+        "c_twr_aj10_190",
+        "c_twr_spt100",
+        "c_power_nstar",
+        "c_power_next",
+        "c_power_t6",
+        "c_power_bpt4000",
+        "c_power_spt100",
+        "c_dv_leo_eo",
+        "c_ecl_leo_eo",
+        "c_rad_leo_eo",
+        "c_budget_leo_eo",
+        "c_dv_lunar_orbiter",
+        "c_ecl_lunar_orbiter",
+        "c_rad_lunar_orbiter",
+        "c_budget_lunar_orbiter",
+        "c_dv_mars_orbiter",
+        "c_ecl_mars_orbiter",
+        "c_rad_mars_orbiter",
+        "c_budget_mars_orbiter",
+        "c_global_mga",
+        "c_global_dv_margin",
+        "c_global_power_margin",
+        "c_global_launch_margin",
+        "c_global_struct_frac",
+        "c_global_thermal_frac",
+        "c_global_bat_eta",
+        "c_global_ebn0_req_db",
+        "c_global_link_margin_req_db",
+        "c_global_misc_loss_db",
+        "c_global_tx_dc_eff",
+        "c_global_tx_overhead_w",
+        "c_global_integ_frac",
+        "c_global_sa_pack",
+        "c_global_dl_eff",
+        "c_global_rad_design_margin",
+        "c_global_max_electric_burn_days",
+        "c_global_min_rate_bps",
+        "c_global_bat_min_wh",
+        "c_flux_venus",
+        "c_flux_mars",
+        "c_flux_jupiter"
+       ]
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Record"
+     },
+     "404": {
+      "description": "Unknown id"
+     }
+    }
+   }
+  },
+  "/experiments.json": {
+   "get": {
+    "summary": "List experiments: 27 optimization experiments",
+    "tags": [
+     "experiments"
+    ],
+    "responses": {
+     "200": {
+      "description": "Collection",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "properties": {
+          "collection": {
+           "type": "string"
+          },
+          "count": {
+           "type": "integer"
+          },
+          "records": {
+           "type": "array",
+           "items": {
+            "$ref": "#/components/schemas/Record"
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/experiments/{id}.json": {
+   "get": {
+    "summary": "Get one experiments record",
+    "tags": [
+     "experiments"
+    ],
+    "parameters": [
+     {
+      "name": "id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "enum": [
+        "opt_leo_eo_min_mass",
+        "opt_leo_eo_min_cost",
+        "opt_leo_eo_min_propellant",
+        "opt_leo_eo_min_power",
+        "opt_leo_eo_max_science",
+        "opt_leo_eo_max_payload",
+        "opt_leo_eo_max_link_margin",
+        "opt_leo_eo_max_feasibility_margin",
+        "opt_leo_eo_balanced",
+        "opt_lunar_orbiter_min_mass",
+        "opt_lunar_orbiter_min_cost",
+        "opt_lunar_orbiter_min_propellant",
+        "opt_lunar_orbiter_min_power",
+        "opt_lunar_orbiter_max_science",
+        "opt_lunar_orbiter_max_payload",
+        "opt_lunar_orbiter_max_link_margin",
+        "opt_lunar_orbiter_max_feasibility_margin",
+        "opt_lunar_orbiter_balanced",
+        "opt_mars_orbiter_min_mass",
+        "opt_mars_orbiter_min_cost",
+        "opt_mars_orbiter_min_propellant",
+        "opt_mars_orbiter_min_power",
+        "opt_mars_orbiter_max_science",
+        "opt_mars_orbiter_max_payload",
+        "opt_mars_orbiter_max_link_margin",
+        "opt_mars_orbiter_max_feasibility_margin",
+        "opt_mars_orbiter_balanced"
+       ]
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Record"
+     },
+     "404": {
+      "description": "Unknown id"
+     }
+    }
+   }
+  },
+  "/spacex_launches.json": {
+   "get": {
+    "summary": "List spacex_launches: SpaceX launch table 2010-2018 (user-supplied, normalized)",
+    "tags": [
+     "spacex_launches"
+    ],
+    "responses": {
+     "200": {
+      "description": "Collection",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "properties": {
+          "collection": {
+           "type": "string"
+          },
+          "count": {
+           "type": "integer"
+          },
+          "records": {
+           "type": "array",
+           "items": {
+            "$ref": "#/components/schemas/Record"
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/spacex_launches/{id}.json": {
+   "get": {
+    "summary": "Get one spacex_launches record",
+    "tags": [
+     "spacex_launches"
+    ],
+    "parameters": [
+     {
+      "name": "id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "enum": [
+        "spx_f001",
+        "spx_f002",
+        "spx_f003",
+        "spx_f004",
+        "spx_f005",
+        "spx_f006",
+        "spx_f007",
+        "spx_f008",
+        "spx_f009",
+        "spx_f010",
+        "spx_f011",
+        "spx_f012",
+        "spx_f013",
+        "spx_f014",
+        "spx_f015",
+        "spx_f016",
+        "spx_f017",
+        "spx_f018",
+        "spx_f019",
+        "spx_f020",
+        "spx_f021",
+        "spx_f022",
+        "spx_f023",
+        "spx_f024",
+        "spx_f025",
+        "spx_f026",
+        "spx_f027",
+        "spx_f028",
+        "spx_f029",
+        "spx_f030",
+        "spx_f031",
+        "spx_f032",
+        "spx_f033",
+        "spx_f034",
+        "spx_f035",
+        "spx_f036",
+        "spx_f037",
+        "spx_f038",
+        "spx_f039",
+        "spx_f040",
+        "spx_f041",
+        "spx_f042",
+        "spx_f043",
+        "spx_f044",
+        "spx_f045",
+        "spx_f046",
+        "spx_f047",
+        "spx_f048",
+        "spx_fh01",
+        "spx_f049",
+        "spx_f050",
+        "spx_f051",
+        "spx_f052",
+        "spx_f053",
+        "spx_f054",
+        "spx_f055",
+        "spx_f056"
+       ]
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Record"
+     },
+     "404": {
+      "description": "Unknown id"
+     }
+    }
+   }
+  },
+  "/launch_sites.json": {
+   "get": {
+    "summary": "List launch_sites: Launch pads",
+    "tags": [
+     "launch_sites"
+    ],
+    "responses": {
+     "200": {
+      "description": "Collection",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "properties": {
+          "collection": {
+           "type": "string"
+          },
+          "count": {
+           "type": "integer"
+          },
+          "records": {
+           "type": "array",
+           "items": {
+            "$ref": "#/components/schemas/Record"
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/launch_sites/{id}.json": {
+   "get": {
+    "summary": "Get one launch_sites record",
+    "tags": [
+     "launch_sites"
+    ],
+    "parameters": [
+     {
+      "name": "id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "enum": [
+        "ccsfs_slc40",
+        "ksc_lc39a",
+        "vsfb_slc4e"
+       ]
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Record"
+     },
+     "404": {
+      "description": "Unknown id"
+     }
+    }
+   }
+  },
+  "/nasa_facilities.json": {
+   "get": {
+    "summary": "List nasa_facilities: NASA facilities (user-supplied, normalized; category derived)",
+    "tags": [
+     "nasa_facilities"
+    ],
+    "responses": {
+     "200": {
+      "description": "Collection",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "properties": {
+          "collection": {
+           "type": "string"
+          },
+          "count": {
+           "type": "integer"
+          },
+          "records": {
+           "type": "array",
+           "items": {
+            "$ref": "#/components/schemas/Record"
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/nasa_facilities/{id}.json": {
+   "get": {
+    "summary": "Get one nasa_facilities record",
+    "tags": [
+     "nasa_facilities"
+    ],
+    "parameters": [
+     {
+      "name": "id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "enum": [
+        "nf_0001",
+        "nf_0002",
+        "nf_0003",
+        "nf_0004",
+        "nf_0005",
+        "nf_0006",
+        "nf_0007",
+        "nf_0008",
+        "nf_0009",
+        "nf_0010",
+        "nf_0011",
+        "nf_0012",
+        "nf_0013",
+        "nf_0014",
+        "nf_0015",
+        "nf_0016",
+        "nf_0017",
+        "nf_0018",
+        "nf_0019",
+        "nf_0020",
+        "nf_0021",
+        "nf_0022",
+        "nf_0023",
+        "nf_0024",
+        "nf_0025",
+        "nf_0026",
+        "nf_0027",
+        "nf_0028",
+        "nf_0029",
+        "nf_0030",
+        "nf_0031",
+        "nf_0032",
+        "nf_0033",
+        "nf_0034",
+        "nf_0035",
+        "nf_0036",
+        "nf_0037",
+        "nf_0038",
+        "nf_0039",
+        "nf_0040",
+        "nf_0041",
+        "nf_0042",
+        "nf_0043",
+        "nf_0044",
+        "nf_0045",
+        "nf_0046",
+        "nf_0047",
+        "nf_0048",
+        "nf_0049",
+        "nf_0050",
+        "nf_0051",
+        "nf_0052",
+        "nf_0053",
+        "nf_0054",
+        "nf_0055",
+        "nf_0056",
+        "nf_0057",
+        "nf_0058",
+        "nf_0059",
+        "nf_0060",
+        "nf_0061",
+        "nf_0062",
+        "nf_0063",
+        "nf_0064",
+        "nf_0065",
+        "nf_0066",
+        "nf_0067",
+        "nf_0068",
+        "nf_0069",
+        "nf_0070",
+        "nf_0071",
+        "nf_0072",
+        "nf_0073",
+        "nf_0074",
+        "nf_0075",
+        "nf_0076",
+        "nf_0077",
+        "nf_0078",
+        "nf_0079",
+        "nf_0080",
+        "nf_0081",
+        "nf_0082",
+        "nf_0083",
+        "nf_0084",
+        "nf_0085",
+        "nf_0086",
+        "nf_0087",
+        "nf_0088",
+        "nf_0089",
+        "nf_0090",
+        "nf_0091",
+        "nf_0092",
+        "nf_0093",
+        "nf_0094",
+        "nf_0095",
+        "nf_0096",
+        "nf_0097",
+        "nf_0098",
+        "nf_0099",
+        "nf_0100",
+        "nf_0101",
+        "nf_0102",
+        "nf_0103",
+        "nf_0104",
+        "nf_0105",
+        "nf_0106",
+        "nf_0107",
+        "nf_0108",
+        "nf_0109",
+        "nf_0110",
+        "nf_0111",
+        "nf_0112",
+        "nf_0113",
+        "nf_0114",
+        "nf_0115",
+        "nf_0116",
+        "nf_0117",
+        "nf_0118",
+        "nf_0119",
+        "nf_0120",
+        "nf_0121",
+        "nf_0122",
+        "nf_0123",
+        "nf_0124",
+        "nf_0125",
+        "nf_0126",
+        "nf_0127",
+        "nf_0128",
+        "nf_0129",
+        "nf_0130",
+        "nf_0131",
+        "nf_0132",
+        "nf_0133",
+        "nf_0134",
+        "nf_0135",
+        "nf_0136",
+        "nf_0137",
+        "nf_0138",
+        "nf_0139",
+        "nf_0140",
+        "nf_0141",
+        "nf_0142",
+        "nf_0143",
+        "nf_0144",
+        "nf_0145",
+        "nf_0146",
+        "nf_0147",
+        "nf_0148",
+        "nf_0149",
+        "nf_0150",
+        "nf_0151",
+        "nf_0152",
+        "nf_0153",
+        "nf_0154",
+        "nf_0155",
+        "nf_0156",
+        "nf_0157",
+        "nf_0158",
+        "nf_0159",
+        "nf_0160",
+        "nf_0161",
+        "nf_0162",
+        "nf_0163",
+        "nf_0164",
+        "nf_0165",
+        "nf_0166",
+        "nf_0167",
+        "nf_0168",
+        "nf_0169",
+        "nf_0170",
+        "nf_0171",
+        "nf_0172",
+        "nf_0173",
+        "nf_0174",
+        "nf_0175",
+        "nf_0176",
+        "nf_0177",
+        "nf_0178",
+        "nf_0179",
+        "nf_0180",
+        "nf_0181",
+        "nf_0182",
+        "nf_0183",
+        "nf_0184",
+        "nf_0185",
+        "nf_0186",
+        "nf_0187",
+        "nf_0188",
+        "nf_0189",
+        "nf_0190",
+        "nf_0191",
+        "nf_0192",
+        "nf_0193",
+        "nf_0194",
+        "nf_0195",
+        "nf_0196",
+        "nf_0197",
+        "nf_0198",
+        "nf_0199",
+        "nf_0200",
+        "nf_0201",
+        "nf_0202",
+        "nf_0203",
+        "nf_0204",
+        "nf_0205",
+        "nf_0206",
+        "nf_0207",
+        "nf_0208",
+        "nf_0209",
+        "nf_0210",
+        "nf_0211",
+        "nf_0212",
+        "nf_0213",
+        "nf_0214",
+        "nf_0215",
+        "nf_0216",
+        "nf_0217",
+        "nf_0218",
+        "nf_0219",
+        "nf_0220",
+        "nf_0221",
+        "nf_0222",
+        "nf_0223",
+        "nf_0224",
+        "nf_0225",
+        "nf_0226",
+        "nf_0227",
+        "nf_0228",
+        "nf_0229",
+        "nf_0230",
+        "nf_0231",
+        "nf_0232",
+        "nf_0233",
+        "nf_0234",
+        "nf_0235",
+        "nf_0236",
+        "nf_0237",
+        "nf_0238",
+        "nf_0239",
+        "nf_0240",
+        "nf_0241",
+        "nf_0242",
+        "nf_0243",
+        "nf_0244",
+        "nf_0245",
+        "nf_0246",
+        "nf_0247",
+        "nf_0248",
+        "nf_0249",
+        "nf_0250",
+        "nf_0251",
+        "nf_0252",
+        "nf_0253",
+        "nf_0254",
+        "nf_0255",
+        "nf_0256",
+        "nf_0257",
+        "nf_0258",
+        "nf_0259",
+        "nf_0260",
+        "nf_0261",
+        "nf_0262",
+        "nf_0263",
+        "nf_0264",
+        "nf_0265",
+        "nf_0266",
+        "nf_0267",
+        "nf_0268",
+        "nf_0269",
+        "nf_0270",
+        "nf_0271",
+        "nf_0272",
+        "nf_0273",
+        "nf_0274",
+        "nf_0275",
+        "nf_0276",
+        "nf_0277",
+        "nf_0278",
+        "nf_0279",
+        "nf_0280",
+        "nf_0281",
+        "nf_0282",
+        "nf_0283",
+        "nf_0284",
+        "nf_0285",
+        "nf_0286",
+        "nf_0287",
+        "nf_0288",
+        "nf_0289",
+        "nf_0290",
+        "nf_0291",
+        "nf_0292",
+        "nf_0293",
+        "nf_0294",
+        "nf_0295",
+        "nf_0296",
+        "nf_0297",
+        "nf_0298",
+        "nf_0299",
+        "nf_0300",
+        "nf_0301",
+        "nf_0302",
+        "nf_0303",
+        "nf_0304",
+        "nf_0305",
+        "nf_0306",
+        "nf_0307",
+        "nf_0308",
+        "nf_0309",
+        "nf_0310",
+        "nf_0311",
+        "nf_0312",
+        "nf_0313",
+        "nf_0314",
+        "nf_0315",
+        "nf_0316",
+        "nf_0317",
+        "nf_0318",
+        "nf_0319",
+        "nf_0320",
+        "nf_0321",
+        "nf_0322",
+        "nf_0323",
+        "nf_0324",
+        "nf_0325",
+        "nf_0326",
+        "nf_0327",
+        "nf_0328",
+        "nf_0329",
+        "nf_0330",
+        "nf_0331",
+        "nf_0332",
+        "nf_0333",
+        "nf_0334",
+        "nf_0335",
+        "nf_0336",
+        "nf_0337",
+        "nf_0338",
+        "nf_0339",
+        "nf_0340",
+        "nf_0341",
+        "nf_0342",
+        "nf_0343",
+        "nf_0344",
+        "nf_0345",
+        "nf_0346",
+        "nf_0347",
+        "nf_0348",
+        "nf_0349",
+        "nf_0350",
+        "nf_0351",
+        "nf_0352",
+        "nf_0353",
+        "nf_0354",
+        "nf_0355",
+        "nf_0356",
+        "nf_0357",
+        "nf_0358",
+        "nf_0359",
+        "nf_0360",
+        "nf_0361",
+        "nf_0362",
+        "nf_0363",
+        "nf_0364",
+        "nf_0365",
+        "nf_0366",
+        "nf_0367",
+        "nf_0368",
+        "nf_0369",
+        "nf_0370",
+        "nf_0371",
+        "nf_0372",
+        "nf_0373",
+        "nf_0374",
+        "nf_0375",
+        "nf_0376",
+        "nf_0377",
+        "nf_0378",
+        "nf_0379",
+        "nf_0380",
+        "nf_0381",
+        "nf_0382",
+        "nf_0383",
+        "nf_0384",
+        "nf_0385",
+        "nf_0386",
+        "nf_0387",
+        "nf_0388",
+        "nf_0389",
+        "nf_0390",
+        "nf_0391",
+        "nf_0392",
+        "nf_0393",
+        "nf_0394",
+        "nf_0395",
+        "nf_0396",
+        "nf_0397",
+        "nf_0398",
+        "nf_0399",
+        "nf_0400",
+        "nf_0401",
+        "nf_0402",
+        "nf_0403",
+        "nf_0404",
+        "nf_0405",
+        "nf_0406",
+        "nf_0407",
+        "nf_0408",
+        "nf_0409",
+        "nf_0410",
+        "nf_0411",
+        "nf_0412",
+        "nf_0413",
+        "nf_0414",
+        "nf_0415",
+        "nf_0416",
+        "nf_0417",
+        "nf_0418",
+        "nf_0419",
+        "nf_0420",
+        "nf_0421",
+        "nf_0422",
+        "nf_0423",
+        "nf_0424",
+        "nf_0425",
+        "nf_0426",
+        "nf_0427",
+        "nf_0428",
+        "nf_0429",
+        "nf_0430",
+        "nf_0431",
+        "nf_0432",
+        "nf_0433",
+        "nf_0434",
+        "nf_0435",
+        "nf_0436",
+        "nf_0437",
+        "nf_0438",
+        "nf_0439",
+        "nf_0440",
+        "nf_0441",
+        "nf_0442",
+        "nf_0443",
+        "nf_0444",
+        "nf_0445",
+        "nf_0446",
+        "nf_0447",
+        "nf_0448",
+        "nf_0449",
+        "nf_0450",
+        "nf_0451",
+        "nf_0452",
+        "nf_0453",
+        "nf_0454",
+        "nf_0455",
+        "nf_0456",
+        "nf_0457",
+        "nf_0458",
+        "nf_0459",
+        "nf_0460",
+        "nf_0461",
+        "nf_0462",
+        "nf_0463",
+        "nf_0464",
+        "nf_0465",
+        "nf_0466",
+        "nf_0467",
+        "nf_0468",
+        "nf_0469",
+        "nf_0470",
+        "nf_0471",
+        "nf_0472",
+        "nf_0473",
+        "nf_0474",
+        "nf_0475",
+        "nf_0476",
+        "nf_0477",
+        "nf_0478",
+        "nf_0479",
+        "nf_0480",
+        "nf_0481",
+        "nf_0482",
+        "nf_0483",
+        "nf_0484",
+        "nf_0485"
+       ]
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Record"
+     },
+     "404": {
+      "description": "Unknown id"
+     }
+    }
+   }
+  },
+  "/sources.json": {
+   "get": {
+    "summary": "List sources: Source catalog (none retrieved)",
+    "tags": [
+     "sources"
+    ],
+    "responses": {
+     "200": {
+      "description": "Collection",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "properties": {
+          "collection": {
+           "type": "string"
+          },
+          "count": {
+           "type": "integer"
+          },
+          "records": {
+           "type": "array",
+           "items": {
+            "$ref": "#/components/schemas/Record"
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/sources/{id}.json": {
+   "get": {
+    "summary": "Get one sources record",
+    "tags": [
+     "sources"
+    ],
+    "parameters": [
+     {
+      "name": "id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "enum": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S07",
+        "S08",
+        "S09",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S19",
+        "S20",
+        "S21",
+        "S22",
+        "S23",
+        "S24",
+        "S25",
+        "S26",
+        "S27",
+        "S28",
+        "S29",
+        "S30",
+        "S31",
+        "S32",
+        "S33",
+        "S34",
+        "S35",
+        "S36",
+        "S37",
+        "S39",
+        "G01"
+       ]
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Record"
+     },
+     "404": {
+      "description": "Unknown id"
+     }
+    }
+   }
+  },
+  "/optimization/scenarios.json": {
+   "get": {
+    "summary": "Scenarios, global parameters and component catalog for the optimizer",
+    "tags": [
+     "optimization & analysis"
+    ],
+    "responses": {
+     "200": {
+      "description": "OK"
+     }
+    }
+   }
+  },
+  "/optimization/sensitivity.json": {
+   "get": {
+    "summary": "One-at-a-time sensitivity results",
+    "tags": [
+     "optimization & analysis"
+    ],
+    "responses": {
+     "200": {
+      "description": "OK"
+     }
+    }
+   }
+  },
+  "/optimization/uncertainty.json": {
+   "get": {
+    "summary": "Monte Carlo results",
+    "tags": [
+     "optimization & analysis"
+    ],
+    "responses": {
+     "200": {
+      "description": "OK"
+     }
+    }
+   }
+  },
+  "/optimization/models.json": {
+   "get": {
+    "summary": "Model/equation documentation",
+    "tags": [
+     "optimization & analysis"
+    ],
+    "responses": {
+     "200": {
+      "description": "OK"
+     }
+    }
+   }
+  },
+  "/missions/trajectory_reference.json": {
+   "get": {
+    "summary": "Derived delta-v and transfer references",
+    "tags": [
+     "optimization & analysis"
+    ],
+    "responses": {
+     "200": {
+      "description": "OK"
+     }
+    }
+   }
+  },
+  "/optimization/pareto/{scenario_id}.json": {
+   "get": {
+    "summary": "Pareto front for a scenario",
+    "tags": [
+     "optimization & analysis"
+    ],
+    "parameters": [
+     {
+      "name": "scenario_id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "enum": [
+        "leo_eo",
+        "lunar_orbiter",
+        "mars_orbiter"
+       ]
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "OK"
+     }
+    }
+   }
+  },
+  "/analysis/{name}.json": {
+   "get": {
+    "summary": "Analysis result",
+    "tags": [
+     "optimization & analysis"
+    ],
+    "parameters": [
+     {
+      "name": "name",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "enum": [
+        "mass",
+        "propulsion",
+        "power",
+        "communications",
+        "feasibility",
+        "spacex_launch",
+        "nasa_facilities",
+        "benchmark"
+       ]
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "OK"
+     }
+    }
+   }
+  }
+ },
+ "components": {
+  "schemas": {
+   "Record": {
+    "type": "object",
+    "required": [
+     "id"
+    ],
+    "properties": {
+     "id": {
+      "type": "string"
+     },
+     "data_class": {
+      "enum": [
+       "verified",
+       "derived",
+       "estimated",
+       "fictional",
+       "unverified"
+      ]
+     },
+     "confidence": {
+      "enum": [
+       "low",
+       "medium",
+       "high"
+      ]
+     },
+     "source_ids": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "retrieval_status": {
+      "type": "string"
+     }
+    },
+    "additionalProperties": true
+   }
+  }
+ }
+}

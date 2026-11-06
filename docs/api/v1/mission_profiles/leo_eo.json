@@ -1,0 +1,20 @@
+{
+ "collection": "mission_profiles",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "leo_eo",
+  "name": "Earth-observation satellite (500 km LEO)",
+  "body": "earth",
+  "type": "synthetic_hypothetical",
+  "period_s": 5668.144369061165,
+  "eclipse_s": 2141.523141222473,
+  "sun_distance_au": 1.0,
+  "delta_v_onboard_m_s": 150.0,
+  "delta_v_basis": "estimated: drag make-up + deorbit allowance (assumption)",
+  "design_life_yr": 2.0,
+  "comm_distance_m": 1500000.0,
+  "downlink_hours_per_day": 0.8,
+  "data_class": "derived",
+  "note": "Hypothetical configuration for analysis; NOT a historical mission."
+ }
+}

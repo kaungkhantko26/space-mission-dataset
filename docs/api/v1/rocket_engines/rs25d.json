@@ -1,0 +1,33 @@
+{
+ "collection": "rocket_engines",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "rs25d",
+  "name": "RS-25D (SSME)",
+  "maker": "Aerojet Rocketdyne",
+  "type": "liquid",
+  "propellant": "LOX/LH2",
+  "thrust_vac_n": 2279000,
+  "thrust_sl_n": 1859000,
+  "isp_vac_s": 452,
+  "isp_sl_s": 366,
+  "dry_mass_kg": 3177,
+  "burn_s": null,
+  "restart": false,
+  "status": "historical_operational",
+  "power_w": null,
+  "note": "109% rated power level; flown 135 Shuttle missions; re-used on SLS (RS-25 variants differ).",
+  "source_ids": [
+   "S12"
+  ],
+  "confidence": "medium",
+  "data_class": "unverified",
+  "retrieval_status": "not_retrieved",
+  "derived": {
+   "mass_flow_vac_kg_s": 514.1445241983847,
+   "engine_thrust_to_weight_vac": 73.14867010943338,
+   "mass_flow_sl_kg_s": 517.9378251163849
+  },
+  "derived_from": "mdot=F/(Isp*g0); TWR=F/(m*g0); thrust/power"
+ }
+}

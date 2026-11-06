@@ -1,0 +1,42 @@
+{
+ "collection": "spacex_launches",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "spx_f010",
+  "flight_label": "10",
+  "date_utc": "2014-07-14",
+  "time_utc": "15:15:00",
+  "booster_family": "F9 v1.1",
+  "booster_serials": [],
+  "booster_version_raw": "F9 v1.1",
+  "launch_site_raw": "CCAFS LC-40",
+  "launch_site_id": "ccsfs_slc40",
+  "payload": "OG2 Mission 1 6 Orbcomm-OG2 satellites",
+  "payload_mass_kg": 1316.0,
+  "payload_mass_approximate": false,
+  "payload_mass_raw": "1,316",
+  "orbit_raw": "LEO",
+  "orbit_class": "leo",
+  "customer_raw": "Orbcomm",
+  "mission_outcome_raw": "Success",
+  "mission_outcome": "success",
+  "landing_outcome_raw": "Controlled (ocean)",
+  "landings": [
+   {
+    "raw": "Controlled (ocean)",
+    "result": "controlled",
+    "location": "ocean"
+   }
+  ],
+  "landing_attempts": 0,
+  "landing_successes": 0,
+  "booster_flight_number": null,
+  "record_type": "historical",
+  "data_class": "unverified",
+  "confidence": "medium",
+  "source_ids": [
+   "S36"
+  ],
+  "retrieval_status": "user_supplied_not_independently_verified"
+ }
+}

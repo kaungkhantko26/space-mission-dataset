@@ -1,0 +1,30 @@
+{
+ "collection": "instruments",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "tirs",
+  "name": "TIRS",
+  "instrument_type": "thermal_imager",
+  "heritage_mission": "Landsat 8",
+  "mass_kg": null,
+  "power_w": null,
+  "params": {
+   "gsd_m": 100,
+   "bands_um": [
+    10.9,
+    12.0
+   ],
+   "swath_km": 185
+  },
+  "data_class": "unverified",
+  "confidence": "medium",
+  "note": "",
+  "source_ids": [
+   "S24"
+  ],
+  "retrieval_status": "not_retrieved",
+  "derived": {
+   "power_to_mass_w_per_kg": null
+  }
+ }
+}

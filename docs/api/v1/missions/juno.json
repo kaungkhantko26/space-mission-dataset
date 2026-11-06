@@ -1,0 +1,33 @@
+{
+ "collection": "missions",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "juno",
+  "name": "Juno",
+  "agency": "NASA",
+  "launch_date": "2011-08-05",
+  "launch_vehicle_id": "atlas_v_551",
+  "launch_vehicle_note": "Atlas V 551",
+  "launch_mass_kg": 3625,
+  "dry_mass_kg": 1593,
+  "destination": "Jupiter polar orbit",
+  "outcome": "success_extended",
+  "cost_musd_nominal": 1130,
+  "cost_scope": "Approx, nominal USD",
+  "instrument_ids": [],
+  "power_system": "Solar arrays (large)",
+  "comms": "X/Ka-band",
+  "confidence": "low",
+  "note": "",
+  "record_type": "historical",
+  "source_ids": [
+   "S32"
+  ],
+  "retrieval_status": "not_retrieved",
+  "data_class": "unverified",
+  "derived": {
+   "dry_to_launch_mass": 0.43944827586206897,
+   "propellant_plus_other_fraction": 0.560551724137931
+  }
+ }
+}

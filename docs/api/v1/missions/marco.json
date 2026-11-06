@@ -1,0 +1,33 @@
+{
+ "collection": "missions",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "marco",
+  "name": "MarCO-A/B (6U CubeSats)",
+  "agency": "NASA JPL",
+  "launch_date": "2018-05-05",
+  "launch_vehicle_id": null,
+  "launch_vehicle_note": "Atlas V 401 (rideshare with InSight)",
+  "launch_mass_kg": 13.5,
+  "dry_mass_kg": null,
+  "destination": "Mars flyby relay",
+  "outcome": "success",
+  "cost_musd_nominal": 18.5,
+  "cost_scope": "Approx, nominal USD",
+  "instrument_ids": [],
+  "power_system": "Body/deployable solar panels",
+  "comms": "X-band, relayed InSight EDL",
+  "confidence": "low",
+  "note": "Rideshare with InSight on Atlas V 401; per-spacecraft mass ~13.5 kg.",
+  "record_type": "historical",
+  "source_ids": [
+   "S35"
+  ],
+  "retrieval_status": "not_retrieved",
+  "data_class": "unverified",
+  "derived": {
+   "dry_to_launch_mass": null,
+   "propellant_plus_other_fraction": null
+  }
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "collection": "instruments",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "msi",
+  "name": "MSI",
+  "instrument_type": "multispectral_camera",
+  "heritage_mission": "Sentinel-2",
+  "mass_kg": null,
+  "power_w": null,
+  "params": {
+   "gsd_m": [
+    10,
+    20,
+    60
+   ],
+   "bands": 13,
+   "swath_km": 290
+  },
+  "data_class": "unverified",
+  "confidence": "medium",
+  "note": "",
+  "source_ids": [
+   "S25"
+  ],
+  "retrieval_status": "not_retrieved",
+  "derived": {
+   "power_to_mass_w_per_kg": null
+  }
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "collection": "components",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "sa_si",
+  "name": "Silicon cell array (class)",
+  "category": "solar_array",
+  "record_kind": "technology_class",
+  "mass_kg": null,
+  "power_consumption_w": null,
+  "power_generation_w": null,
+  "energy_capacity_wh": null,
+  "params": {
+   "cell_efficiency_bol": [
+    0.14,
+    0.17
+   ],
+   "array_specific_power_w_per_kg": [
+    30,
+    60
+   ],
+   "degradation_per_year": [
+    0.02,
+    0.04
+   ]
+  },
+  "data_class": "estimated",
+  "confidence": "low",
+  "note": "Typical ranges; legacy technology.",
+  "source_ids": [
+   "S16"
+  ],
+  "retrieval_status": "not_retrieved"
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "collection": "rocket_stages",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "saturn_v_s1c",
+  "vehicle_id": "saturn_v",
+  "stage": "S-IC",
+  "dry_mass_kg": 137000,
+  "propellant_mass_kg": 2077000,
+  "engine_id": "f1",
+  "n_engines": 5,
+  "note": "",
+  "source_ids": [
+   "S09"
+  ],
+  "confidence": "medium",
+  "data_class": "unverified",
+  "retrieval_status": "not_retrieved",
+  "derived": {
+   "inert_mass_fraction": 0.06187895212285456,
+   "stage_thrust_vac_n": 38850000,
+   "stage_thrust_sl_n": 33850000,
+   "isp_vac_s": 304
+  }
+ }
+}

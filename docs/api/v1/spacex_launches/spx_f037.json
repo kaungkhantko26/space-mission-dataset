@@ -1,0 +1,44 @@
+{
+ "collection": "spacex_launches",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "spx_f037",
+  "flight_label": "37",
+  "date_utc": "2017-06-25",
+  "time_utc": "20:25:00",
+  "booster_family": "F9 FT",
+  "booster_serials": [
+   "B1036.1"
+  ],
+  "booster_version_raw": "F9 FT B1036.1",
+  "launch_site_raw": "VAFB SLC-4E",
+  "launch_site_id": "vsfb_slc4e",
+  "payload": "Iridium NEXT 2",
+  "payload_mass_kg": 9600.0,
+  "payload_mass_approximate": false,
+  "payload_mass_raw": "9,600",
+  "orbit_raw": "LEO",
+  "orbit_class": "leo",
+  "customer_raw": "Iridium Communications",
+  "mission_outcome_raw": "Success",
+  "mission_outcome": "success",
+  "landing_outcome_raw": "Success (drone ship)",
+  "landings": [
+   {
+    "raw": "Success (drone ship)",
+    "result": "success",
+    "location": "drone_ship"
+   }
+  ],
+  "landing_attempts": 1,
+  "landing_successes": 1,
+  "booster_flight_number": 1,
+  "record_type": "historical",
+  "data_class": "unverified",
+  "confidence": "medium",
+  "source_ids": [
+   "S36"
+  ],
+  "retrieval_status": "user_supplied_not_independently_verified"
+ }
+}

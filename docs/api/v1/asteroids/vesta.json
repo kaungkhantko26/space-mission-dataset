@@ -1,0 +1,37 @@
+{
+ "collection": "asteroids",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "vesta",
+  "name": "4 Vesta",
+  "category": "asteroid",
+  "parent_id": "sun",
+  "mu_m3_s2": 17288000000.0,
+  "gravitational_parameter_km3_s2": 17.288,
+  "mean_radius_m": 262700.0,
+  "equatorial_radius_m": null,
+  "mass_kg": 2.59e+20,
+  "surface_gravity_m_s2": 0.25,
+  "rotation_period_h": 5.342,
+  "semi_major_axis_m": 353275371658.0499,
+  "eccentricity": 0.0887,
+  "inclination_deg": 7.14,
+  "orbital_period_days": 1325.7,
+  "mean_surface_temperature_k": null,
+  "equatorial_magnetic_field_t": null,
+  "derived": {
+   "escape_velocity_m_s": 362.79169642936523,
+   "circular_velocity_surface_m_s": 256.5324687033755,
+   "gravity_from_mu_m_s2": 0.25050973543604244,
+   "derived_from": "v_esc=sqrt(2*mu/R_mean); v_circ=sqrt(mu/R_mean); g=mu/R^2 (spherical, non-rotating approximation)",
+   "solar_irradiance_w_m2": 244.05191814541706
+  },
+  "data_class": "unverified",
+  "confidence": "low",
+  "source_ids": [
+   "S01",
+   "S03"
+  ],
+  "retrieval_status": "not_retrieved"
+ }
+}

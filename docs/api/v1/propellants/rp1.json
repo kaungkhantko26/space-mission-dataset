@@ -1,0 +1,16 @@
+{
+ "collection": "propellants",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "rp1",
+  "name": "RP-1 kerosene",
+  "density_kg_m3": 820,
+  "condition": "~15-20 C; varies 800-820",
+  "data_class": "unverified",
+  "confidence": "medium",
+  "source_ids": [
+   "S15"
+  ],
+  "retrieval_status": "not_retrieved"
+ }
+}

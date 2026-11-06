@@ -1,0 +1,21 @@
+{
+ "collection": "boosters",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "sls_srb",
+  "name": "SLS 5-segment solid rocket booster",
+  "vehicle_id": "sls_b1",
+  "count": 2,
+  "thrust_sl_n": 16000000,
+  "propellant_mass_kg": 626400,
+  "burn_s": 126,
+  "engine_id": "srb5",
+  "note": "Approximate.",
+  "source_ids": [
+   "S08"
+  ],
+  "confidence": "medium",
+  "data_class": "unverified",
+  "retrieval_status": "not_retrieved"
+ }
+}

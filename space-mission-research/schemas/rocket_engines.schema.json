@@ -62,7 +62,8 @@
      "retrieval_status": {
       "enum": [
        "not_retrieved",
-       "retrieved"
+       "retrieved",
+       "user_supplied_not_independently_verified"
       ]
      },
      "thrust_vac_n": {

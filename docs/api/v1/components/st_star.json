@@ -1,0 +1,35 @@
+{
+ "collection": "components",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "st_star",
+  "name": "Star tracker (class)",
+  "category": "attitude_control",
+  "record_kind": "technology_class",
+  "mass_kg": null,
+  "power_consumption_w": null,
+  "power_generation_w": null,
+  "energy_capacity_wh": null,
+  "params": {
+   "accuracy_arcsec_1sigma": [
+    1,
+    30
+   ],
+   "mass_kg_range": [
+    0.2,
+    3.0
+   ],
+   "power_w_range": [
+    0.5,
+    10
+   ]
+  },
+  "data_class": "estimated",
+  "confidence": "low",
+  "note": "Wide range across small-sat to large-sat units.",
+  "source_ids": [
+   "S16"
+  ],
+  "retrieval_status": "not_retrieved"
+ }
+}

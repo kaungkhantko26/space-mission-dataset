@@ -1,0 +1,37 @@
+{
+ "collection": "planets",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "uranus",
+  "name": "Uranus",
+  "category": "planet",
+  "parent_id": "sun",
+  "mu_m3_s2": 5793951300000000.0,
+  "gravitational_parameter_km3_s2": 5793951.3,
+  "mean_radius_m": 25362000.0,
+  "equatorial_radius_m": 25559000.0,
+  "mass_kg": 8.681e+25,
+  "surface_gravity_m_s2": 8.69,
+  "rotation_period_h": -17.24,
+  "semi_major_axis_m": 2870658170655.732,
+  "eccentricity": 0.04725744,
+  "inclination_deg": 0.77263783,
+  "orbital_period_days": 30688.5,
+  "mean_surface_temperature_k": 76,
+  "equatorial_magnetic_field_t": 2.28e-05,
+  "derived": {
+   "escape_velocity_m_s": 21375.22372419812,
+   "circular_velocity_surface_m_s": 15114.56564476006,
+   "gravity_from_mu_m_s2": 9.007574112047987,
+   "derived_from": "v_esc=sqrt(2*mu/R_mean); v_circ=sqrt(mu/R_mean); g=mu/R^2 (spherical, non-rotating approximation)",
+   "solar_irradiance_w_m2": 3.6961193558915286
+  },
+  "data_class": "unverified",
+  "confidence": "medium",
+  "source_ids": [
+   "S01",
+   "S02"
+  ],
+  "retrieval_status": "not_retrieved"
+ }
+}

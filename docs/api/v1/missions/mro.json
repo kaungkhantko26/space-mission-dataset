@@ -1,0 +1,37 @@
+{
+ "collection": "missions",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "mro",
+  "name": "Mars Reconnaissance Orbiter",
+  "agency": "NASA",
+  "launch_date": "2005-08-12",
+  "launch_vehicle_id": null,
+  "launch_vehicle_note": "Atlas V 401",
+  "launch_mass_kg": 2180,
+  "dry_mass_kg": 1031,
+  "destination": "Mars orbit",
+  "outcome": "success",
+  "cost_musd_nominal": 720,
+  "cost_scope": "Approx, nominal USD",
+  "instrument_ids": [
+   "hirise",
+   "crism",
+   "sharad"
+  ],
+  "power_system": "Solar arrays ~1,000 W near Mars (approx)",
+  "comms": "X-band 3 m HGA, Ka demo",
+  "confidence": "low",
+  "note": "Launched on Atlas V 401; nearest family record used.",
+  "record_type": "historical",
+  "source_ids": [
+   "S20"
+  ],
+  "retrieval_status": "not_retrieved",
+  "data_class": "unverified",
+  "derived": {
+   "dry_to_launch_mass": 0.47293577981651375,
+   "propellant_plus_other_fraction": 0.5270642201834863
+  }
+ }
+}

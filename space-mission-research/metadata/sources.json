@@ -4,7 +4,7 @@
  "description": "Source catalog (none retrieved this build)",
  "generated": "2026-11-06",
  "retrieval_status": "NOT_RETRIEVED: values recalled from published references; network access to source hosts was blocked in the build environment. See metadata/quality_report.json.",
- "record_count": 36,
+ "record_count": 39,
  "records": [
   {
    "id": "S01",
@@ -420,6 +420,42 @@
    "organization": "NASA JPL",
    "url": "https://www.jpl.nasa.gov/missions/mars-cube-one-marco",
    "covers": "MarCO",
+   "retrieved": false,
+   "retrieval_date": null,
+   "page_or_section": null,
+   "note": "Canonical landing page recorded for where to verify; the document was NOT opened in this build.",
+   "used_by_records": true
+  },
+  {
+   "id": "S36",
+   "title": "User-supplied SpaceX launch table (data_raw/spacex_launch_data.csv); user indicated Kaggle dataset scoleman/spacex-launch-data",
+   "organization": "user upload",
+   "url": "https://www.kaggle.com/datasets/scoleman/spacex-launch-data",
+   "covers": "Falcon 9/Heavy launches 2010-06-04..2018-06-04; underlying origin and license NOT verified",
+   "retrieved": false,
+   "retrieval_date": null,
+   "page_or_section": null,
+   "note": "Canonical landing page recorded for where to verify; the document was NOT opened in this build.",
+   "used_by_records": true
+  },
+  {
+   "id": "S37",
+   "title": "User-supplied NASA Facilities table (data_raw/NASA_Facilities.csv)",
+   "organization": "user upload",
+   "url": "https://data.nasa.gov/",
+   "covers": "485 NASA facilities with coordinates; appears to be the NASA open-data facilities table, not verified",
+   "retrieved": false,
+   "retrieval_date": null,
+   "page_or_section": null,
+   "note": "Canonical landing page recorded for where to verify; the document was NOT opened in this build.",
+   "used_by_records": true
+  },
+  {
+   "id": "S39",
+   "title": "Launch-pad coordinates recalled from public maps/references",
+   "organization": "recalled",
+   "url": "https://www.nasa.gov/",
+   "covers": "3 launch sites, ~0.01 deg accuracy, not retrieved",
    "retrieved": false,
    "retrieval_date": null,
    "page_or_section": null,

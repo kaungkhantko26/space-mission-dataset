@@ -1,0 +1,57 @@
+{
+ "collection": "experiments",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "opt_lunar_orbiter_max_payload",
+  "scenario_id": "lunar_orbiter",
+  "objective": "max_payload",
+  "objective_name": "Maximum instrument payload mass",
+  "objective_field": "inst_mass",
+  "sense": "maximize",
+  "feasibility_status": "feasible_optimum_found",
+  "solver": "exhaustive enumeration (deterministic; ties: cost, mass, design string)",
+  "optimality_claim": "global optimum within the finite catalog and model; NOT a claim about all possible spacecraft",
+  "objective_value": 44.3,
+  "result": {
+   "feasible": true,
+   "violations": [],
+   "wet_kg": 1747.3726254414282,
+   "dry_kg": 128.98380424405823,
+   "prop_kg": 1498.5081677753426,
+   "cost": 27238.496889182683,
+   "science": 22.0,
+   "avg_power_w": 114.32857142857144,
+   "inst_mass": 44.3,
+   "array_w_bol": 233.66723069277683,
+   "array_area_m2": 1.3465717577489265,
+   "battery_wh": 163.97164310332266,
+   "link_rate_bps": 2000000.0,
+   "link_margin_db": 28.03793323442933,
+   "data_gen_bits_day": 658368000.0,
+   "data_down_bits_day": 46080000000.0,
+   "electric_burn_days": null,
+   "margin_min": 0.09205010369391056,
+   "mass_margin": 0.914845388623712,
+   "budget_margin": 0.09205010369391056
+  },
+  "selected_components": {
+   "instruments": [
+    "laser_alt",
+    "neutron_spec",
+    "uv_spec",
+    "magnetometer",
+    "rad_detector"
+   ],
+   "computer": "cpu_leon3",
+   "comm": "patch_s_5w",
+   "array": "sa_si",
+   "battery": "bat_li_ion",
+   "propulsion": "mono_n2h4",
+   "vehicle": "f9_class"
+  },
+  "input_dataset_version": "0.1.0",
+  "seed": null,
+  "data_class": "derived",
+  "inputs_data_class": "estimated+fictional"
+ }
+}

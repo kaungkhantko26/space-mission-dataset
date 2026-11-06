@@ -1,0 +1,32 @@
+{
+ "collection": "nasa_facilities",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "nf_0186",
+  "center": "Johnson Space Center",
+  "facility": "Vibration Acoustic Test Facility - B-49",
+  "category": "acoustic_vibration_structural",
+  "category_basis": "keyword rules on facility name (derived, may be wrong)",
+  "status": "active",
+  "status_raw": "Active",
+  "occupied_date": null,
+  "record_date": "2012-09-26",
+  "last_update": "2012-09-26",
+  "url": "http://www.nasa.gov/centers/johnson/pdf/639503main_VATF_User_Test_Planning_Guide.pdf",
+  "city": "Houston",
+  "state": "TX",
+  "zipcode": "77058",
+  "lat": 29.559177,
+  "lon": -95.097897,
+  "location_raw": "77058 (29.559177, -95.097897)",
+  "antenna": null,
+  "duplicate_key": "1b9787",
+  "data_class": "unverified",
+  "confidence": "medium",
+  "source_ids": [
+   "S37"
+  ],
+  "retrieval_status": "user_supplied_not_independently_verified",
+  "possible_duplicate": false
+ }
+}

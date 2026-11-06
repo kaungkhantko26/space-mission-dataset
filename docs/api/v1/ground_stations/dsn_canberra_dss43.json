@@ -1,0 +1,28 @@
+{
+ "collection": "ground_stations",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "dsn_canberra_dss43",
+  "name": "DSN Canberra DSS-43 (70 m)",
+  "operator": "NASA DSN",
+  "lat": -35.4014,
+  "lon": 148.9817,
+  "antenna_m": 70.0,
+  "gain_dbi": {
+   "S": 63.0,
+   "X": 74.0
+  },
+  "bands": [
+   "S",
+   "X"
+  ],
+  "tx_power_w_max": 20000,
+  "note": "Gains approximate.",
+  "data_class": "unverified",
+  "confidence": "low",
+  "source_ids": [
+   "S26"
+  ],
+  "retrieval_status": "not_retrieved"
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "collection": "boosters",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "ariane5_eap",
+  "name": "Ariane 5 EAP (P241)",
+  "vehicle_id": "ariane5_eca",
+  "count": 2,
+  "thrust_sl_n": 7080000,
+  "propellant_mass_kg": 237000,
+  "burn_s": 130,
+  "engine_id": null,
+  "note": "Peak thrust; approximate.",
+  "source_ids": [
+   "S11"
+  ],
+  "confidence": "low",
+  "data_class": "unverified",
+  "retrieval_status": "not_retrieved"
+ }
+}

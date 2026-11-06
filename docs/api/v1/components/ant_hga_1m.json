@@ -1,0 +1,26 @@
+{
+ "collection": "components",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "ant_hga_1m",
+  "name": "1 m parabolic HGA (X-band class)",
+  "category": "communications",
+  "record_kind": "technology_class",
+  "mass_kg": null,
+  "power_consumption_w": null,
+  "power_generation_w": null,
+  "energy_capacity_wh": null,
+  "params": {
+   "diameter_m": 1.0,
+   "band": "X",
+   "efficiency": 0.55
+  },
+  "data_class": "estimated",
+  "confidence": "low",
+  "note": "Gain derived from aperture in analysis files.",
+  "source_ids": [
+   "S16"
+  ],
+  "retrieval_status": "not_retrieved"
+ }
+}

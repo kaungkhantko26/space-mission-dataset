@@ -1,0 +1,32 @@
+{
+ "collection": "rocket_engines",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "aj10_190",
+  "name": "AJ10-190 (Shuttle OMS)",
+  "maker": "Aerojet",
+  "type": "bipropellant_thruster",
+  "propellant": "MMH/NTO",
+  "thrust_vac_n": 26700,
+  "thrust_sl_n": null,
+  "isp_vac_s": 316,
+  "isp_sl_s": null,
+  "dry_mass_kg": 118,
+  "burn_s": null,
+  "restart": true,
+  "status": "historical",
+  "power_w": null,
+  "note": "",
+  "source_ids": [
+   "S12"
+  ],
+  "confidence": "medium",
+  "data_class": "unverified",
+  "retrieval_status": "not_retrieved",
+  "derived": {
+   "mass_flow_vac_kg_s": 8.61595660965528,
+   "engine_thrust_to_weight_vac": 23.07323973433109
+  },
+  "derived_from": "mdot=F/(Isp*g0); TWR=F/(m*g0); thrust/power"
+ }
+}

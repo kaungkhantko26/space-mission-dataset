@@ -1,0 +1,27 @@
+{
+ "collection": "components",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "sa_body",
+  "name": "Body-mounted cells on 6U CubeSat (class)",
+  "category": "solar_array",
+  "record_kind": "technology_class",
+  "mass_kg": null,
+  "power_consumption_w": null,
+  "power_generation_w": null,
+  "energy_capacity_wh": null,
+  "params": {
+   "typical_orbit_avg_power_w": [
+    5,
+    20
+   ]
+  },
+  "data_class": "estimated",
+  "confidence": "low",
+  "note": "Small-sat scale.",
+  "source_ids": [
+   "S16"
+  ],
+  "retrieval_status": "not_retrieved"
+ }
+}

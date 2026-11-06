@@ -1,0 +1,27 @@
+{
+ "collection": "instruments",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "lroc_nac",
+  "name": "LROC NAC",
+  "instrument_type": "optical_camera",
+  "heritage_mission": "Lunar Reconnaissance Orbiter",
+  "mass_kg": null,
+  "power_w": null,
+  "params": {
+   "gsd_m_at_50km": 0.5,
+   "pixels_across": 5064,
+   "fov_deg": 2.86
+  },
+  "data_class": "unverified",
+  "confidence": "medium",
+  "note": "",
+  "source_ids": [
+   "S22"
+  ],
+  "retrieval_status": "not_retrieved",
+  "derived": {
+   "power_to_mass_w_per_kg": null
+  }
+ }
+}

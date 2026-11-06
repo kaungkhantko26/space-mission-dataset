@@ -1,0 +1,192 @@
+{
+ "scenario_id": "mars_orbiter",
+ "objectives": [
+  "wet_kg (min)",
+  "cost (min)",
+  "science (max)"
+ ],
+ "front_size": 9,
+ "points": [
+  {
+   "wet_kg": 346.8159290493225,
+   "cost": 55997.04736276503,
+   "science": 20.0,
+   "link_margin_db": 4.585563384047894,
+   "design": {
+    "instruments": [
+     "sharad_like",
+     "mola_like",
+     "uv_spec",
+     "particles"
+    ],
+    "computer": "cpu_leon3",
+    "comm": "hga3_x_100w",
+    "array": "sa_3j_gaas",
+    "battery": "bat_li_ion",
+    "propulsion": "bi_mmh_nto",
+    "vehicle": "falcon_heavy"
+   }
+  },
+  {
+   "wet_kg": 363.24187621549964,
+   "cost": 50248.78777604831,
+   "science": 20.0,
+   "link_margin_db": 4.585563384047894,
+   "design": {
+    "instruments": [
+     "sharad_like",
+     "mola_like",
+     "uv_spec",
+     "particles"
+    ],
+    "computer": "cpu_leon3",
+    "comm": "hga3_x_100w",
+    "array": "sa_si",
+    "battery": "bat_li_ion",
+    "propulsion": "bi_mmh_nto",
+    "vehicle": "falcon_heavy"
+   }
+  },
+  {
+   "wet_kg": 383.7935116145245,
+   "cost": 57222.76434857147,
+   "science": 21.0,
+   "link_margin_db": 4.585563384047894,
+   "design": {
+    "instruments": [
+     "crism_like",
+     "mola_like",
+     "uv_spec",
+     "particles"
+    ],
+    "computer": "cpu_leon3",
+    "comm": "hga3_x_100w",
+    "array": "sa_3j_gaas",
+    "battery": "bat_li_ion",
+    "propulsion": "bi_mmh_nto",
+    "vehicle": "falcon_heavy"
+   }
+  },
+  {
+   "wet_kg": 400.0185090841222,
+   "cost": 51544.827100537856,
+   "science": 21.0,
+   "link_margin_db": 4.585563384047894,
+   "design": {
+    "instruments": [
+     "crism_like",
+     "mola_like",
+     "uv_spec",
+     "particles"
+    ],
+    "computer": "cpu_leon3",
+    "comm": "hga3_x_100w",
+    "array": "sa_si",
+    "battery": "bat_li_ion",
+    "propulsion": "bi_mmh_nto",
+    "vehicle": "falcon_heavy"
+   }
+  },
+  {
+   "wet_kg": 415.58376553448375,
+   "cost": 48492.886574806325,
+   "science": 20.0,
+   "link_margin_db": 4.585563384047894,
+   "design": {
+    "instruments": [
+     "sharad_like",
+     "mola_like",
+     "uv_spec",
+     "particles"
+    ],
+    "computer": "cpu_leon3",
+    "comm": "hga3_x_100w",
+    "array": "sa_si",
+    "battery": "bat_li_ion",
+    "propulsion": "mono_n2h4",
+    "vehicle": "falcon_heavy"
+   }
+  },
+  {
+   "wet_kg": 458.7723816617879,
+   "cost": 49796.91631100743,
+   "science": 21.0,
+   "link_margin_db": 4.585563384047894,
+   "design": {
+    "instruments": [
+     "crism_like",
+     "mola_like",
+     "uv_spec",
+     "particles"
+    ],
+    "computer": "cpu_leon3",
+    "comm": "hga3_x_100w",
+    "array": "sa_si",
+    "battery": "bat_li_ion",
+    "propulsion": "mono_n2h4",
+    "vehicle": "falcon_heavy"
+   }
+  },
+  {
+   "wet_kg": 458.8219515934146,
+   "cost": 61187.44444806702,
+   "science": 22.343102404806807,
+   "link_margin_db": 2.8741564000200057,
+   "design": {
+    "instruments": [
+     "hirise_like",
+     "mola_like",
+     "uv_spec",
+     "particles"
+    ],
+    "computer": "cpu_leon3",
+    "comm": "hga3_x_100w",
+    "array": "sa_3j_gaas",
+    "battery": "bat_li_ion",
+    "propulsion": "bi_mmh_nto",
+    "vehicle": "falcon_heavy"
+   }
+  },
+  {
+   "wet_kg": 474.9859943217166,
+   "cost": 55530.83830943394,
+   "science": 22.343102404806807,
+   "link_margin_db": 2.8741564000200057,
+   "design": {
+    "instruments": [
+     "hirise_like",
+     "mola_like",
+     "uv_spec",
+     "particles"
+    ],
+    "computer": "cpu_leon3",
+    "comm": "hga3_x_100w",
+    "array": "sa_si",
+    "battery": "bat_li_ion",
+    "propulsion": "bi_mmh_nto",
+    "vehicle": "falcon_heavy"
+   }
+  },
+  {
+   "wet_kg": 546.8104017144128,
+   "cost": 53799.215608978135,
+   "science": 22.343102404806807,
+   "link_margin_db": 2.8741564000200057,
+   "design": {
+    "instruments": [
+     "hirise_like",
+     "mola_like",
+     "uv_spec",
+     "particles"
+    ],
+    "computer": "cpu_leon3",
+    "comm": "hga3_x_100w",
+    "array": "sa_si",
+    "battery": "bat_li_ion",
+    "propulsion": "mono_n2h4",
+    "vehicle": "falcon_heavy"
+   }
+  }
+ ],
+ "note": "Non-dominated feasible designs (duplicates by objective tuple removed)."
+}

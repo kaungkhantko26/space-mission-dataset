@@ -1,0 +1,82 @@
+{
+ "schema_version": "0.1.0",
+ "dataset": "launch_sites",
+ "description": "Launch pads appearing in the launch table; coordinates recalled",
+ "generated": "2026-11-06",
+ "retrieval_status": "NOT_RETRIEVED: values recalled from published references; network access to source hosts was blocked in the build environment. See metadata/quality_report.json.",
+ "record_count": 3,
+ "records": [
+  {
+   "id": "ccsfs_slc40",
+   "name": "Cape Canaveral SFS Space Launch Complex 40",
+   "lat": 28.5619,
+   "lon": -80.5773,
+   "operator_note": "listed as 'CCAFS LC-40' then 'CCAFS SLC-40' in the file; treated as the same pad (assumption)",
+   "launches_in_file": 33,
+   "first_launch": "2010-06-04",
+   "last_launch": "2018-06-04",
+   "orbit_classes": [
+    "gto",
+    "heo",
+    "leo",
+    "leo_iss",
+    "sun_earth_l1"
+   ],
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S36",
+    "S39"
+   ],
+   "retrieval_status": "not_retrieved",
+   "note": "Coordinates recalled to ~0.01 deg, not retrieved; launch counts from user file."
+  },
+  {
+   "id": "ksc_lc39a",
+   "name": "Kennedy Space Center Launch Complex 39A",
+   "lat": 28.6082,
+   "lon": -80.6041,
+   "operator_note": "NASA KSC",
+   "launches_in_file": 14,
+   "first_launch": "2017-02-19",
+   "last_launch": "2018-05-11",
+   "orbit_classes": [
+    "gto",
+    "heliocentric",
+    "leo",
+    "leo_iss"
+   ],
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S36",
+    "S39"
+   ],
+   "retrieval_status": "not_retrieved",
+   "note": "Coordinates recalled to ~0.01 deg, not retrieved; launch counts from user file."
+  },
+  {
+   "id": "vsfb_slc4e",
+   "name": "Vandenberg SFB Space Launch Complex 4 East",
+   "lat": 34.632,
+   "lon": -120.611,
+   "operator_note": "polar/SSO launches",
+   "launches_in_file": 10,
+   "first_launch": "2013-09-29",
+   "last_launch": "2018-05-22",
+   "orbit_classes": [
+    "leo",
+    "polar_leo",
+    "sso"
+   ],
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S36",
+    "S39"
+   ],
+   "retrieval_status": "not_retrieved",
+   "note": "Coordinates recalled to ~0.01 deg, not retrieved; launch counts from user file."
+  }
+ ]
+}

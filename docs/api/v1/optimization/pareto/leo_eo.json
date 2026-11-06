@@ -1,0 +1,252 @@
+{
+ "scenario_id": "leo_eo",
+ "objectives": [
+  "wet_kg (min)",
+  "cost (min)",
+  "science (max)"
+ ],
+ "front_size": 12,
+ "points": [
+  {
+   "wet_kg": 52.94647507860934,
+   "cost": 8150.129984791499,
+   "science": 12.0,
+   "link_margin_db": 51.647728722507864,
+   "design": {
+    "instruments": [
+     "gnss_ro",
+     "small_cam",
+     "magnetometer",
+     "rad_detector"
+    ],
+    "computer": "cpu_cots",
+    "comm": "hga1_x_20w",
+    "array": "sa_3j_gaas",
+    "battery": "bat_li_ion",
+    "propulsion": "mono_n2h4",
+    "vehicle": "electron"
+   }
+  },
+  {
+   "wet_kg": 53.96414904149614,
+   "cost": 6994.361898299954,
+   "science": 12.0,
+   "link_margin_db": 51.647728722507864,
+   "design": {
+    "instruments": [
+     "gnss_ro",
+     "small_cam",
+     "magnetometer",
+     "rad_detector"
+    ],
+    "computer": "cpu_cots",
+    "comm": "hga1_x_20w",
+    "array": "sa_si",
+    "battery": "bat_li_ion",
+    "propulsion": "mono_n2h4",
+    "vehicle": "electron"
+   }
+  },
+  {
+   "wet_kg": 63.12996502996708,
+   "cost": 9519.049168245032,
+   "science": 13.0,
+   "link_margin_db": 54.91389711031165,
+   "design": {
+    "instruments": [
+     "thermal_imager",
+     "gnss_ro",
+     "magnetometer",
+     "rad_detector"
+    ],
+    "computer": "cpu_cots",
+    "comm": "hga1_x_20w",
+    "array": "sa_3j_gaas",
+    "battery": "bat_li_ion",
+    "propulsion": "mono_n2h4",
+    "vehicle": "electron"
+   }
+  },
+  {
+   "wet_kg": 64.23592148153138,
+   "cost": 8263.019026585966,
+   "science": 13.0,
+   "link_margin_db": 54.91389711031165,
+   "design": {
+    "instruments": [
+     "thermal_imager",
+     "gnss_ro",
+     "magnetometer",
+     "rad_detector"
+    ],
+    "computer": "cpu_cots",
+    "comm": "hga1_x_20w",
+    "array": "sa_si",
+    "battery": "bat_li_ion",
+    "propulsion": "mono_n2h4",
+    "vehicle": "electron"
+   }
+  },
+  {
+   "wet_kg": 69.82646159480605,
+   "cost": 9976.617152671617,
+   "science": 14.0,
+   "link_margin_db": 49.990680051983034,
+   "design": {
+    "instruments": [
+     "thermal_imager",
+     "gnss_ro",
+     "small_cam"
+    ],
+    "computer": "cpu_cots",
+    "comm": "hga1_x_20w",
+    "array": "sa_3j_gaas",
+    "battery": "bat_li_ion",
+    "propulsion": "mono_n2h4",
+    "vehicle": "electron"
+   }
+  },
+  {
+   "wet_kg": 70.63892794241151,
+   "cost": 10137.358054971612,
+   "science": 15.0,
+   "link_margin_db": 49.99436989487198,
+   "design": {
+    "instruments": [
+     "thermal_imager",
+     "small_cam",
+     "magnetometer",
+     "rad_detector"
+    ],
+    "computer": "cpu_cots",
+    "comm": "hga1_x_20w",
+    "array": "sa_3j_gaas",
+    "battery": "bat_li_ion",
+    "propulsion": "mono_n2h4",
+    "vehicle": "electron"
+   }
+  },
+  {
+   "wet_kg": 70.9290225660366,
+   "cost": 8724.443243903608,
+   "science": 14.0,
+   "link_margin_db": 49.990680051983034,
+   "design": {
+    "instruments": [
+     "thermal_imager",
+     "gnss_ro",
+     "small_cam"
+    ],
+    "computer": "cpu_cots",
+    "comm": "hga1_x_20w",
+    "array": "sa_si",
+    "battery": "bat_li_ion",
+    "propulsion": "mono_n2h4",
+    "vehicle": "electron"
+   }
+  },
+  {
+   "wet_kg": 71.21722272820338,
+   "cost": 10374.482949902362,
+   "science": 16.0,
+   "link_margin_db": 49.98883630548154,
+   "design": {
+    "instruments": [
+     "thermal_imager",
+     "gnss_ro",
+     "small_cam",
+     "rad_detector"
+    ],
+    "computer": "cpu_cots",
+    "comm": "hga1_x_20w",
+    "array": "sa_3j_gaas",
+    "battery": "bat_li_ion",
+    "propulsion": "mono_n2h4",
+    "vehicle": "electron"
+   }
+  },
+  {
+   "wet_kg": 71.7245115119733,
+   "cost": 8904.465310658894,
+   "science": 15.0,
+   "link_margin_db": 49.99436989487198,
+   "design": {
+    "instruments": [
+     "thermal_imager",
+     "small_cam",
+     "magnetometer",
+     "rad_detector"
+    ],
+    "computer": "cpu_cots",
+    "comm": "hga1_x_20w",
+    "array": "sa_si",
+    "battery": "bat_li_ion",
+    "propulsion": "mono_n2h4",
+    "vehicle": "electron"
+   }
+  },
+  {
+   "wet_kg": 72.35373850277142,
+   "cost": 9083.746712223769,
+   "science": 16.0,
+   "link_margin_db": 49.98883630548154,
+   "design": {
+    "instruments": [
+     "thermal_imager",
+     "gnss_ro",
+     "small_cam",
+     "rad_detector"
+    ],
+    "computer": "cpu_cots",
+    "comm": "hga1_x_20w",
+    "array": "sa_si",
+    "battery": "bat_li_ion",
+    "propulsion": "mono_n2h4",
+    "vehicle": "electron"
+   }
+  },
+  {
+   "wet_kg": 73.3033644282994,
+   "cost": 10873.781645748479,
+   "science": 18.0,
+   "link_margin_db": 49.98515115904149,
+   "design": {
+    "instruments": [
+     "thermal_imager",
+     "gnss_ro",
+     "small_cam",
+     "magnetometer",
+     "rad_detector"
+    ],
+    "computer": "cpu_cots",
+    "comm": "hga1_x_20w",
+    "array": "sa_3j_gaas",
+    "battery": "bat_li_ion",
+    "propulsion": "mono_n2h4",
+    "vehicle": "electron"
+   }
+  },
+  {
+   "wet_kg": 74.4908124078737,
+   "cost": 9525.201914704008,
+   "science": 18.0,
+   "link_margin_db": 49.98515115904149,
+   "design": {
+    "instruments": [
+     "thermal_imager",
+     "gnss_ro",
+     "small_cam",
+     "magnetometer",
+     "rad_detector"
+    ],
+    "computer": "cpu_cots",
+    "comm": "hga1_x_20w",
+    "array": "sa_si",
+    "battery": "bat_li_ion",
+    "propulsion": "mono_n2h4",
+    "vehicle": "electron"
+   }
+  }
+ ],
+ "note": "Non-dominated feasible designs (duplicates by objective tuple removed)."
+}

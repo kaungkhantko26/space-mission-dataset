@@ -1,0 +1,32 @@
+{
+ "collection": "rocket_engines",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "raptor2",
+  "name": "Raptor 2",
+  "maker": "SpaceX",
+  "type": "liquid",
+  "propellant": "LOX/CH4",
+  "thrust_vac_n": null,
+  "thrust_sl_n": 2300000,
+  "isp_vac_s": 350,
+  "isp_sl_s": 327,
+  "dry_mass_kg": 1600,
+  "burn_s": null,
+  "restart": true,
+  "status": "developmental_operational_testing",
+  "power_w": null,
+  "note": "Vacuum thrust not separately recorded; thrust_vac_n is set equal to the sea-level figure as a LOWER bound and flagged. Isp and dry mass are approximate public figures. (vacuum thrust left null rather than copying the sea-level value.)",
+  "source_ids": [
+   "S06"
+  ],
+  "confidence": "low",
+  "data_class": "unverified",
+  "retrieval_status": "not_retrieved",
+  "derived": {
+   "mass_flow_sl_kg_s": 717.2315871098579,
+   "engine_thrust_to_weight_sl": 146.5842056155772
+  },
+  "derived_from": "mdot=F/(Isp*g0); TWR=F/(m*g0); thrust/power"
+ }
+}

@@ -1,0 +1,11 @@
+{
+ "collection": "engineering_constraints",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "c_power_bpt4000",
+  "type": "power",
+  "statement": "BPT-4000 Hall thruster requires ~4500 W at recorded operating point",
+  "bound_w": 4500,
+  "data_class": "unverified"
+ }
+}

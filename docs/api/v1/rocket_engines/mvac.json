@@ -1,0 +1,31 @@
+{
+ "collection": "rocket_engines",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "mvac",
+  "name": "Merlin Vacuum",
+  "maker": "SpaceX",
+  "type": "liquid",
+  "propellant": "LOX/RP-1",
+  "thrust_vac_n": 981000,
+  "thrust_sl_n": null,
+  "isp_vac_s": 348,
+  "isp_sl_s": null,
+  "dry_mass_kg": null,
+  "burn_s": null,
+  "restart": true,
+  "status": "operational",
+  "power_w": null,
+  "note": "Falcon 9/Heavy second stage.",
+  "source_ids": [
+   "S06"
+  ],
+  "confidence": "medium",
+  "data_class": "unverified",
+  "retrieval_status": "not_retrieved",
+  "derived": {
+   "mass_flow_vac_kg_s": 287.4544841756746
+  },
+  "derived_from": "mdot=F/(Isp*g0); TWR=F/(m*g0); thrust/power"
+ }
+}

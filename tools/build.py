@@ -3,7 +3,7 @@
 import json, math, os, random, datetime, statistics, sys, copy
 sys.path.insert(0, os.path.dirname(__file__))
 from astro import *
-import data_celestial as DC, data_prop_launch as DP, data_sc as DS, opt_model as O
+import data_celestial as DC, data_prop_launch as DP, data_sc as DS, opt_model as O, ingest_external as IX
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "space-mission-research")
 VERSION = "0.1.0"; BUILD_DATE = "2026-11-06"
@@ -53,6 +53,9 @@ SRC = [
  ("S33","JWST mission references","NASA GSFC / STScI","https://science.nasa.gov/mission/webb/","JWST"),
  ("S34","OSIRIS-REx mission references","NASA GSFC / Univ. Arizona","https://www.nasa.gov/osiris-rex","OSIRIS-REx"),
  ("S35","MarCO mission references","NASA JPL","https://www.jpl.nasa.gov/missions/mars-cube-one-marco","MarCO"),
+ ("S36","User-supplied SpaceX launch table (data_raw/spacex_launch_data.csv); user indicated Kaggle dataset scoleman/spacex-launch-data","user upload","https://www.kaggle.com/datasets/scoleman/spacex-launch-data","Falcon 9/Heavy launches 2010-06-04..2018-06-04; underlying origin and license NOT verified"),
+ ("S37","User-supplied NASA Facilities table (data_raw/NASA_Facilities.csv)","user upload","https://data.nasa.gov/","485 NASA facilities with coordinates; appears to be the NASA open-data facilities table, not verified"),
+ ("S39","Launch-pad coordinates recalled from public maps/references","recalled","https://www.nasa.gov/","3 launch sites, ~0.01 deg accuracy, not retrieved"),
  ("G01","Project-defined game/analysis assumptions (this repository)","this repository","tools/opt_model.py","Fictional credits, estimated catalog values, scenario assumptions"),
 ]
 sources = [dict(id=i,title=t,organization=o,url=u,covers=c,retrieved=False,retrieval_date=None,page_or_section=None,note="Canonical landing page recorded for where to verify; the document was NOT opened in this build.") for i,t,o,u,c in SRC]
@@ -203,6 +206,13 @@ for m in DS.MISSIONS:
     r["derived"]=dict(dry_to_launch_mass=(r["dry_mass_kg"]/r["launch_mass_kg"] if r["dry_mass_kg"] else None),propellant_plus_other_fraction=(1-r["dry_mass_kg"]/r["launch_mass_kg"] if r["dry_mass_kg"] else None))
     missions.append(r)
 W("missions/historical_missions.json",meta("historical_missions","Historical missions (actual, not hypothetical). launch_vehicle_id is set only when the exact vehicle variant exists in launch/; otherwise null with launch_vehicle_note.",missions))
+
+# ---------------- external user-supplied data ----------------
+spx,sha_spx=IX.spacex(); spx_an=IX.spacex_analysis(spx); launch_sites=IX.sites(spx); fac,sha_fac=IX.facilities(); fac_an=IX.fac_analysis(fac)
+W("missions/spacex_launch_history.json",{**meta("spacex_launch_history","Normalized user-supplied SpaceX launch table (57 rows, 2010-2018). Historical observations, not vehicle specifications.",spx),"input_file":"data_raw/spacex_launch_data.csv","input_sha256":sha_spx})
+W("missions/launch_sites.json",meta("launch_sites","Launch pads appearing in the launch table; coordinates recalled",launch_sites))
+W("infrastructure/nasa_facilities.json",{**meta("nasa_facilities","Normalized user-supplied NASA facilities table (485 rows); category is keyword-derived",fac),"input_file":"data_raw/NASA_Facilities.csv","input_sha256":sha_fac})
+W("analysis/spacex_launch_analysis.json",spx_an); W("analysis/nasa_facilities_analysis.json",fac_an)
 
 # ---------------- reference astro numbers ----------------
 E=BODY["earth"]; MN=BODY["moon"]; MA=BODY["mars"]; SU=planets[0]
@@ -439,7 +449,7 @@ W("missions/engineering_constraints.json",meta("engineering_constraints","Constr
 
 # ---------------- metadata ----------------
 used=set()
-for coll in (planets,moons,asteroids,atm,engines,propellants,vehicles,stages,boosters,comps,ins,ground,optical,missions,payload_caps,elements): 
+for coll in (spx,fac,launch_sites,planets,moons,asteroids,atm,engines,propellants,vehicles,stages,boosters,comps,ins,ground,optical,missions,payload_caps,elements): 
     for r in coll: used.update(r.get("source_ids",[]))
 for s in sources: s["used_by_records"]= s["id"] in used
 W("metadata/sources.json",meta("sources","Source catalog (none retrieved this build)",sources))
@@ -458,17 +468,17 @@ def completeness(coll,fields):
         n=sum(1 for r in coll if r.get(f) is not None); out[f]=round(100*n/len(coll),1)
     return out
 counts=dict(celestial_bodies=len(planets)+len(moons)+len(asteroids),engines_and_propulsion=len(engines),launch_vehicles=len(vehicles),stages_and_boosters=len(stages)+len(boosters),spacecraft_components=len(comps),
-   instruments=len(ins),historical_missions=len(missions),ground_comm_systems=len(ground)+len(optical),engineering_constraints=len(ec),optimization_examples=len(exp))
+   instruments=len(ins),historical_missions=len(missions),spacex_launch_records=len(spx),nasa_facilities=len(fac),nasa_antenna_facilities=len(fan_ant:=[r for r in fac if r['antenna']]),launch_sites=len(launch_sites),ground_comm_systems=len(ground)+len(optical),engineering_constraints=len(ec),optimization_examples=len(exp))
 targets=dict(celestial_bodies=40,engines_and_propulsion=40,launch_vehicles=20,stages_and_boosters=40,spacecraft_components=100,instruments=50,historical_missions=30,ground_comm_systems=15,engineering_constraints=50,optimization_examples=20)
-all_recs=planets+moons+asteroids+chem+elec+vehicles+stages+boosters+comps+ins+missions+ground
+all_recs=planets+moons+asteroids+chem+elec+vehicles+stages+boosters+comps+ins+missions+ground+spx+fac+launch_sites
 cls=collections.Counter(r.get("data_class") for r in all_recs)
 quality=dict(build_date=BUILD_DATE,version=VERSION,retrieval=dict(sources_listed=len(sources)-1,sources_retrieved=0,reason="HTTPS CONNECT to nasa.gov / jpl.nasa.gov / esa hosts returned 403 from the sandbox egress proxy; no source document was opened."),
-   record_counts=counts,targets=targets,target_attainment_pct={k:round(100*counts[k]/targets[k],1) for k in counts},
+   record_counts=counts,targets=targets,target_attainment_pct={k:round(100*counts[k]/targets[k],1) for k in counts if k in targets},
    data_class_counts=dict(cls),verified_records=0,
-   statement="NO record is classified 'verified'. Figures were written from recalled published values and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+   statement="NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
    completeness_pct=dict(engines=completeness(engines,["thrust_vac_n","thrust_sl_n","isp_vac_s","isp_sl_s","dry_mass_kg","burn_s"]),vehicles=completeness(vehicles,["liftoff_mass_kg","thrust_sl_n","price_usd","fairing_diam_m","height_m"]),
         instruments=completeness(ins,["mass_kg","power_w"]),missions=completeness(missions,["launch_mass_kg","dry_mass_kg","cost_musd_nominal"]),moons=completeness(moons,["rotation_period_h"]),components=completeness(comps,["mass_kg","power_consumption_w","power_generation_w","energy_capacity_wh"])),
-   known_conflicts=[dict(topic="Deimos GM vs mass",note="Recorded GM (9.62e-5 km3/s2) and mass (1.4762e15 kg) disagree by ~2.4% via GM=G*M; both retained, GM preferred for orbital use; resolve against JPL SSD sat_phys_par."),dict(topic="Small-body surface gravity",note="For irregular bodies (Phobos, Deimos, Bennu, Enceladus) g=mu/R^2 is a spherical approximation; recorded g is a mean/typical value."),dict(topic="Saturn V liftoff thrust",values=["~33.4 MN (design)","~34.5-35.1 MN (flight-reported)"],preferred="33.4 MN design value recorded; flight values vary by mission"),
+   known_conflicts=[dict(topic="SpaceX launch table coverage",note="User-supplied file ends at flight 56 (2018-06-04); 57 rows. Reliability (56/57) and landing statistics describe the 2010-2018 development era only and must not be extrapolated to Block 5. Origin/license of the Kaggle-derived file is unverified."),dict(topic="NASA facilities table",note="86 rows lack a status, 1 status is the truncated value 'Under' (assumed Under Rehabilitation), 340 lack URLs, and 256 of 485 fall into the 'other' category of the keyword classifier (category is derived, unreviewed)."),dict(topic="CCAFS LC-40 vs SLC-40",note="Launch-site strings differ across rows; treated as the same pad (assumption)."),dict(topic="Deimos GM vs mass",note="Recorded GM (9.62e-5 km3/s2) and mass (1.4762e15 kg) disagree by ~2.4% via GM=G*M; both retained, GM preferred for orbital use; resolve against JPL SSD sat_phys_par."),dict(topic="Small-body surface gravity",note="For irregular bodies (Phobos, Deimos, Bennu, Enceladus) g=mu/R^2 is a spherical approximation; recorded g is a mean/typical value."),dict(topic="Saturn V liftoff thrust",values=["~33.4 MN (design)","~34.5-35.1 MN (flight-reported)"],preferred="33.4 MN design value recorded; flight values vary by mission"),
         dict(topic="Falcon 9 mass accounting",note="Recorded liftoff mass minus recorded stage masses leaves ~31 t, more than payload+fairing implies; at least one input (stage dry mass or liftoff mass) is likely off. See analysis/mass_analysis.json."),
         dict(topic="Electron stage masses",note="Recorded stage dry+propellant masses sum exactly to liftoff mass, leaving no room for payload/fairing; ideal dv in propulsion_analysis (~11.6-12 km/s) is therefore an overestimate and not a credible ascent number. Needs retrieval of the payload user's guide."),
         dict(topic="SLS stack ideal delta-v",note="Core-stage-only accounting (boosters excluded); stack residual is dominated by booster/upper-stage mass, so the ideal-dv total is not a vehicle capability."),
@@ -478,7 +488,7 @@ quality=dict(build_date=BUILD_DATE,version=VERSION,retrieval=dict(sources_listed
 W("metadata/quality_report.json",quality)
 # provenance: record-level
 prov=[]
-for fn,coll in (("celestial",planets+moons+asteroids),("propulsion",engines),("launch",vehicles+stages+boosters),("spacecraft",comps),("instruments",ins),("missions",missions)):
+for fn,coll in (("celestial",planets+moons+asteroids),("propulsion",engines),("launch",vehicles+stages+boosters),("spacecraft",comps),("instruments",ins),("missions",missions),("launch_history",spx),("infrastructure",fac)):
     for r in coll: prov.append(dict(record_id=r.get("id"),dataset=fn,data_class=r.get("data_class"),confidence=r.get("confidence"),source_ids=r.get("source_ids"),retrieval_status="not_retrieved",retrieval_date=None,original_value="not separately stored (recalled; SI-converted at write time)",verification_status="unverified" if r.get("data_class")!="estimated" else "estimated",derived_fields=list(r.get("derived",{}).keys()) if isinstance(r.get("derived"),dict) else []))
 W("metadata/provenance.json",meta("provenance","Record-level provenance",prov))
 
@@ -493,6 +503,7 @@ combined=dict(schema_version=VERSION,generated=BUILD_DATE,note="Generated by too
   instruments=ins,missions=dict(historical=missions,profiles=profiles,requirements=reqs,trajectory_reference=traj,engineering_constraints=ec),
   analysis=dict(mass=mass,propulsion=prop,power=power,communications=comm,feasibility=feas),
   optimization=dict(models=models,constraints=cons,experiments=exp,pareto=pareto_out,sensitivity=sens,uncertainty=mc),
+  launch_history=dict(launches=spx,sites=launch_sites,analysis=spx_an),infrastructure=dict(nasa_facilities=fac,analysis=fac_an),
   metadata=dict(sources=sources,quality=quality))
 W("combined/all_space_mission_data.json",combined)
 # website copy

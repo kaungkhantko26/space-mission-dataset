@@ -1,0 +1,29 @@
+{
+ "collection": "launch_sites",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "ccsfs_slc40",
+  "name": "Cape Canaveral SFS Space Launch Complex 40",
+  "lat": 28.5619,
+  "lon": -80.5773,
+  "operator_note": "listed as 'CCAFS LC-40' then 'CCAFS SLC-40' in the file; treated as the same pad (assumption)",
+  "launches_in_file": 33,
+  "first_launch": "2010-06-04",
+  "last_launch": "2018-06-04",
+  "orbit_classes": [
+   "gto",
+   "heo",
+   "leo",
+   "leo_iss",
+   "sun_earth_l1"
+  ],
+  "data_class": "unverified",
+  "confidence": "low",
+  "source_ids": [
+   "S36",
+   "S39"
+  ],
+  "retrieval_status": "not_retrieved",
+  "note": "Coordinates recalled to ~0.01 deg, not retrieved; launch counts from user file."
+ }
+}

@@ -1,0 +1,51 @@
+{
+ "collection": "launch_vehicles",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "new_glenn",
+  "name": "New Glenn",
+  "maker": "Blue Origin",
+  "country": "US",
+  "status": "operational",
+  "height_m": 98.0,
+  "diameter_m": 7.0,
+  "stages": 2,
+  "liftoff_mass_kg": null,
+  "thrust_sl_n": 17100000,
+  "reusable": true,
+  "fairing_diam_m": 7.0,
+  "fairing_height_m": 21.9,
+  "price_usd": null,
+  "price_year": null,
+  "payloads": [
+   {
+    "orbit": "LEO",
+    "payload_kg": 45000,
+    "altitude_km": null,
+    "inclination_deg": null,
+    "mode": "booster recovery",
+    "assumption": "Published capability"
+   },
+   {
+    "orbit": "GTO",
+    "payload_kg": 13600,
+    "altitude_km": null,
+    "inclination_deg": null,
+    "mode": "booster recovery",
+    "assumption": ""
+   }
+  ],
+  "sites": [
+   "CCSFS LC-36"
+  ],
+  "note": "Thrust = 7 x BE-4 SL (derived).",
+  "source_ids": [
+   "S07"
+  ],
+  "confidence": "low",
+  "data_class": "unverified",
+  "retrieval_status": "not_retrieved",
+  "derived": {},
+  "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)"
+ }
+}

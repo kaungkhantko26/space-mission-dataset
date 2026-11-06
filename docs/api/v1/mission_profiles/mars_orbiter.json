@@ -1,0 +1,20 @@
+{
+ "collection": "mission_profiles",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "mars_orbiter",
+  "name": "Mars science orbiter (400 km x 1 sol)",
+  "body": "mars",
+  "type": "synthetic_hypothetical",
+  "period_s": 88642.66,
+  "eclipse_s": 1496.9705928728897,
+  "sun_distance_au": 1.52371034,
+  "delta_v_onboard_m_s": 1064.0309953804904,
+  "delta_v_basis": "derived: MOI 914 m/s from Hohmann v_inf 2.65 km/s into 400 km x 1-sol orbit + 150 m/s ops; launcher supplies departure",
+  "design_life_yr": 2.0,
+  "comm_distance_m": 399426314768.99994,
+  "downlink_hours_per_day": 8.0,
+  "data_class": "derived",
+  "note": "Hypothetical configuration for analysis; NOT a historical mission."
+ }
+}

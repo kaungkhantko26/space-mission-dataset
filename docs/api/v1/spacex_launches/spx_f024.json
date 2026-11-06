@@ -1,0 +1,44 @@
+{
+ "collection": "spacex_launches",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "spx_f024",
+  "flight_label": "24",
+  "date_utc": "2016-05-06",
+  "time_utc": "05:21:00",
+  "booster_family": "F9 FT",
+  "booster_serials": [
+   "B1022"
+  ],
+  "booster_version_raw": "F9 FT B1022",
+  "launch_site_raw": "CCAFS LC-40",
+  "launch_site_id": "ccsfs_slc40",
+  "payload": "JCSAT-14",
+  "payload_mass_kg": 4696.0,
+  "payload_mass_approximate": false,
+  "payload_mass_raw": "4,696",
+  "orbit_raw": "GTO",
+  "orbit_class": "gto",
+  "customer_raw": "SKY Perfect JSAT Group",
+  "mission_outcome_raw": "Success",
+  "mission_outcome": "success",
+  "landing_outcome_raw": "Success (drone ship)",
+  "landings": [
+   {
+    "raw": "Success (drone ship)",
+    "result": "success",
+    "location": "drone_ship"
+   }
+  ],
+  "landing_attempts": 1,
+  "landing_successes": 1,
+  "booster_flight_number": 1,
+  "record_type": "historical",
+  "data_class": "unverified",
+  "confidence": "medium",
+  "source_ids": [
+   "S36"
+  ],
+  "retrieval_status": "user_supplied_not_independently_verified"
+ }
+}

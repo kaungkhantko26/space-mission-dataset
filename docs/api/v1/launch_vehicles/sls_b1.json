@@ -1,0 +1,65 @@
+{
+ "collection": "launch_vehicles",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "sls_b1",
+  "name": "SLS Block 1",
+  "maker": "NASA",
+  "country": "US",
+  "status": "operational",
+  "height_m": 98.0,
+  "diameter_m": 8.4,
+  "stages": 2,
+  "liftoff_mass_kg": 2608000,
+  "thrust_sl_n": 39100000,
+  "reusable": false,
+  "fairing_diam_m": 5.1,
+  "fairing_height_m": null,
+  "price_usd": null,
+  "price_year": null,
+  "payloads": [
+   {
+    "orbit": "LEO",
+    "payload_kg": 95000,
+    "altitude_km": null,
+    "inclination_deg": null,
+    "mode": "expended",
+    "assumption": "Reference orbit not recorded"
+   },
+   {
+    "orbit": "TLI",
+    "payload_kg": 27000,
+    "altitude_km": null,
+    "inclination_deg": null,
+    "mode": "expended",
+    "assumption": ""
+   }
+  ],
+  "sites": [
+   "KSC LC-39B"
+  ],
+  "note": "Thrust includes 2 SRBs + 4 RS-25; height of Block 1 stack.",
+  "source_ids": [
+   "S08"
+  ],
+  "confidence": "medium",
+  "data_class": "unverified",
+  "retrieval_status": "not_retrieved",
+  "derived": {
+   "liftoff_thrust_to_weight": 1.5287923285060199,
+   "payload_fraction_by_orbit": [
+    {
+     "orbit": "LEO",
+     "mode": "expended",
+     "payload_to_liftoff": 0.03642638036809816
+    },
+    {
+     "orbit": "TLI",
+     "mode": "expended",
+     "payload_to_liftoff": 0.010352760736196318
+    }
+   ]
+  },
+  "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)"
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "collection": "launch_sites",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "vsfb_slc4e",
+  "name": "Vandenberg SFB Space Launch Complex 4 East",
+  "lat": 34.632,
+  "lon": -120.611,
+  "operator_note": "polar/SSO launches",
+  "launches_in_file": 10,
+  "first_launch": "2013-09-29",
+  "last_launch": "2018-05-22",
+  "orbit_classes": [
+   "leo",
+   "polar_leo",
+   "sso"
+  ],
+  "data_class": "unverified",
+  "confidence": "low",
+  "source_ids": [
+   "S36",
+   "S39"
+  ],
+  "retrieval_status": "not_retrieved",
+  "note": "Coordinates recalled to ~0.01 deg, not retrieved; launch counts from user file."
+ }
+}

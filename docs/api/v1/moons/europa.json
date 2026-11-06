@@ -1,0 +1,38 @@
+{
+ "collection": "moons",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "europa",
+  "name": "Europa",
+  "category": "moon",
+  "parent_id": "jupiter",
+  "mu_m3_s2": 3202739000000.0,
+  "gravitational_parameter_km3_s2": 3202.739,
+  "mean_radius_m": 1560800.0,
+  "equatorial_radius_m": null,
+  "mass_kg": 4.8e+22,
+  "surface_gravity_m_s2": 1.314,
+  "rotation_period_h": null,
+  "semi_major_axis_m": 671100000.0,
+  "eccentricity": 0.0094,
+  "inclination_deg": 0.47,
+  "orbital_period_days": 3.551,
+  "mean_surface_temperature_k": null,
+  "equatorial_magnetic_field_t": null,
+  "derived": {
+   "escape_velocity_m_s": 2025.8260143684738,
+   "circular_velocity_surface_m_s": 1432.475312264064,
+   "gravity_from_mu_m_s2": 1.3147011277844873,
+   "derived_from": "v_esc=sqrt(2*mu/R_mean); v_circ=sqrt(mu/R_mean); g=mu/R^2 (spherical, non-rotating approximation)",
+   "solar_irradiance_w_m2": null
+  },
+  "data_class": "unverified",
+  "confidence": "medium",
+  "source_ids": [
+   "S03"
+  ],
+  "retrieval_status": "not_retrieved",
+  "retrograde_orbit": false,
+  "tidally_locked_assumed": true
+ }
+}

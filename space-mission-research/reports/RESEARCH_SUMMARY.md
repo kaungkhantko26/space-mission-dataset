@@ -12,15 +12,19 @@
 | spacecraft components | 23 | 100 | 23.0% |
 | instruments | 16 | 50 | 32.0% |
 | historical missions | 14 | 30 | 46.7% |
+| spacex launch records | 57 | n/a (external data) | n/a |
+| nasa facilities | 485 | n/a (external data) | n/a |
+| nasa antenna facilities | 28 | n/a (external data) | n/a |
+| launch sites | 3 | n/a (external data) | n/a |
 | ground comm systems | 10 | 15 | 66.7% |
 | engineering constraints | 78 | 50 | 156.0% |
 | optimization examples | 27 | 20 | 135.0% |
 
 Targets are goals from the brief, not quotas; no records were invented to reach them. Where attainment is low the shortfall is real.
 
-* Verified records: **0** · Data classes: unverified=118, estimated=20
-* Sources listed: 35 · retrieved: **0**
-* Automated validation: **56/56** checks pass (`metadata/validation_report.json`). Checks compare internal consistency and recompute textbook values (e.g. LEO→GEO Hohmann Δv, Earth escape velocity); they do **not** compare against retrieved authoritative data.
+* Verified records: **0** · Data classes: unverified=663, estimated=20
+* Sources listed: 38 · retrieved: **0**
+* Automated validation: **72/72** checks pass (`metadata/validation_report.json`). Checks compare internal consistency and recompute textbook values (e.g. LEO→GEO Hohmann Δv, Earth escape velocity); they do **not** compare against retrieved authoritative data.
 
 ## Engineering findings (all derived from unverified inputs)
 * **Δv anchors:** 400 km LEO circular speed 7,673 m/s; LEO→GEO Hohmann 3,857 m/s (+1,514 m/s if a 28.5° plane change is done at GEO); LEO→100 km lunar orbit ≈ 3,905 m/s; Earth→Mars Hohmann v∞ 2,945 m/s, C3 8.7 km²/s², transfer 259 d, window every 780 d.

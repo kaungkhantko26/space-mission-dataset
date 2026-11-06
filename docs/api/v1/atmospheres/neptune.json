@@ -1,0 +1,22 @@
+{
+ "collection": "atmospheres",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "neptune",
+  "surface_pressure_pa": 100000,
+  "temp_k": 72,
+  "scale_height_km": 19.7,
+  "composition_vol_pct": {
+   "H2": 80.0,
+   "He": 19.0,
+   "CH4": 1.5
+  },
+  "note": "Reference 1-bar level.",
+  "data_class": "unverified",
+  "confidence": "medium",
+  "source_ids": [
+   "S01"
+  ],
+  "retrieval_status": "not_retrieved"
+ }
+}

@@ -1,0 +1,44 @@
+{
+ "collection": "spacex_launches",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "spx_f054",
+  "flight_label": "54",
+  "date_utc": "2018-05-11",
+  "time_utc": "20:14:00",
+  "booster_family": "F9 B5",
+  "booster_serials": [
+   "B1046.1"
+  ],
+  "booster_version_raw": "F9 B5 B1046.1",
+  "launch_site_raw": "KSC LC-39A",
+  "launch_site_id": "ksc_lc39a",
+  "payload": "Bangabandhu-1",
+  "payload_mass_kg": 3600.0,
+  "payload_mass_approximate": false,
+  "payload_mass_raw": "3,600",
+  "orbit_raw": "GTO",
+  "orbit_class": "gto",
+  "customer_raw": "Thales-Alenia/BTRC",
+  "mission_outcome_raw": "Success",
+  "mission_outcome": "success",
+  "landing_outcome_raw": "Success (drone ship)",
+  "landings": [
+   {
+    "raw": "Success (drone ship)",
+    "result": "success",
+    "location": "drone_ship"
+   }
+  ],
+  "landing_attempts": 1,
+  "landing_successes": 1,
+  "booster_flight_number": 1,
+  "record_type": "historical",
+  "data_class": "unverified",
+  "confidence": "medium",
+  "source_ids": [
+   "S36"
+  ],
+  "retrieval_status": "user_supplied_not_independently_verified"
+ }
+}

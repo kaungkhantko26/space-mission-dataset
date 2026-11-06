@@ -1,0 +1,56 @@
+{
+ "collection": "experiments",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "opt_lunar_orbiter_max_link_margin",
+  "scenario_id": "lunar_orbiter",
+  "objective": "max_link_margin",
+  "objective_name": "Maximum communication link margin",
+  "objective_field": "link_margin_db",
+  "sense": "maximize",
+  "feasibility_status": "feasible_optimum_found",
+  "solver": "exhaustive enumeration (deterministic; ties: cost, mass, design string)",
+  "optimality_claim": "global optimum within the finite catalog and model; NOT a claim about all possible spacecraft",
+  "objective_value": 76.61789150542653,
+  "result": {
+   "feasible": true,
+   "violations": [],
+   "wet_kg": 1695.366128675704,
+   "dry_kg": 125.14490022291115,
+   "prop_kg": 1453.908544863697,
+   "cost": 29979.073236691114,
+   "science": 15.0,
+   "avg_power_w": 170.60476190476192,
+   "inst_mass": 18.4,
+   "array_w_bol": 348.68573759965494,
+   "array_area_m2": 2.0093975744458654,
+   "battery_wh": 244.68374598953483,
+   "link_rate_bps": 10000000.0,
+   "link_margin_db": 76.61789150542653,
+   "data_gen_bits_day": 604800000.0,
+   "data_down_bits_day": 230400000000.0,
+   "electric_burn_days": null,
+   "margin_min": 0.0,
+   "mass_margin": 0.9173798182906576,
+   "budget_margin": 0.000697558776962857
+  },
+  "selected_components": {
+   "instruments": [
+    "neutron_spec",
+    "uv_spec",
+    "magnetometer",
+    "rad_detector"
+   ],
+   "computer": "cpu_leon3",
+   "comm": "hga3_x_100w",
+   "array": "sa_si",
+   "battery": "bat_li_ion",
+   "propulsion": "mono_n2h4",
+   "vehicle": "f9_class"
+  },
+  "input_dataset_version": "0.1.0",
+  "seed": null,
+  "data_class": "derived",
+  "inputs_data_class": "estimated+fictional"
+ }
+}

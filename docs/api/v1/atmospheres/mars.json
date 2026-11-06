@@ -1,0 +1,22 @@
+{
+ "collection": "atmospheres",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "mars",
+  "surface_pressure_pa": 636,
+  "temp_k": 210,
+  "scale_height_km": 11.1,
+  "composition_vol_pct": {
+   "CO2": 95.3,
+   "N2": 2.7,
+   "Ar": 1.6
+  },
+  "note": "Pressure varies ~30% seasonally and with elevation.",
+  "data_class": "unverified",
+  "confidence": "medium",
+  "source_ids": [
+   "S01"
+  ],
+  "retrieval_status": "not_retrieved"
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "collection": "components",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "rw_small",
+  "name": "Small reaction wheel (CubeSat class)",
+  "category": "attitude_control",
+  "record_kind": "technology_class",
+  "mass_kg": 0.1,
+  "power_consumption_w": null,
+  "power_generation_w": null,
+  "energy_capacity_wh": null,
+  "params": {
+   "momentum_storage_nms": [
+    0.001,
+    0.02
+   ],
+   "mass_kg_range": [
+    0.05,
+    0.3
+   ]
+  },
+  "data_class": "estimated",
+  "confidence": "low",
+  "note": "Order-of-magnitude class record; mass shown is representative midpoint-ish and ESTIMATED.",
+  "source_ids": [
+   "S16"
+  ],
+  "retrieval_status": "not_retrieved"
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "collection": "instruments",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "sam",
+  "name": "SAM",
+  "instrument_type": "mass_spectrometer_gas_chromatograph",
+  "heritage_mission": "Mars Science Laboratory",
+  "mass_kg": 40.0,
+  "power_w": null,
+  "params": {
+   "target": "organics, volatiles"
+  },
+  "data_class": "unverified",
+  "confidence": "low",
+  "note": "",
+  "source_ids": [
+   "S23"
+  ],
+  "retrieval_status": "not_retrieved",
+  "derived": {
+   "power_to_mass_w_per_kg": null
+  }
+ }
+}

@@ -1,0 +1,42 @@
+{
+ "collection": "spacex_launches",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "spx_f011",
+  "flight_label": "11",
+  "date_utc": "2014-08-05",
+  "time_utc": "08:00:00",
+  "booster_family": "F9 v1.1",
+  "booster_serials": [],
+  "booster_version_raw": "F9 v1.1",
+  "launch_site_raw": "CCAFS LC-40",
+  "launch_site_id": "ccsfs_slc40",
+  "payload": "AsiaSat 8",
+  "payload_mass_kg": 4535.0,
+  "payload_mass_approximate": false,
+  "payload_mass_raw": "4,535",
+  "orbit_raw": "GTO",
+  "orbit_class": "gto",
+  "customer_raw": "AsiaSat",
+  "mission_outcome_raw": "Success",
+  "mission_outcome": "success",
+  "landing_outcome_raw": "No attempt",
+  "landings": [
+   {
+    "raw": "No attempt",
+    "result": "no_attempt",
+    "location": null
+   }
+  ],
+  "landing_attempts": 0,
+  "landing_successes": 0,
+  "booster_flight_number": null,
+  "record_type": "historical",
+  "data_class": "unverified",
+  "confidence": "medium",
+  "source_ids": [
+   "S36"
+  ],
+  "retrieval_status": "user_supplied_not_independently_verified"
+ }
+}

@@ -1,0 +1,894 @@
+{
+ "collection": "launch_vehicles",
+ "description": "Launch vehicles",
+ "count": 16,
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "records": [
+  {
+   "id": "saturn_v",
+   "name": "Saturn V",
+   "maker": "NASA/Boeing/NAA/Douglas",
+   "country": "US",
+   "status": "retired",
+   "height_m": 110.6,
+   "diameter_m": 10.1,
+   "stages": 3,
+   "liftoff_mass_kg": 2970000,
+   "thrust_sl_n": 33400000,
+   "reusable": false,
+   "fairing_diam_m": null,
+   "fairing_height_m": null,
+   "price_usd": null,
+   "price_year": null,
+   "payloads": [
+    {
+     "orbit": "LEO",
+     "payload_kg": 140000,
+     "altitude_km": 190,
+     "inclination_deg": 28.5,
+     "mode": "expended",
+     "assumption": "Apollo 17 class, incl. S-IVB"
+    },
+    {
+     "orbit": "TLI",
+     "payload_kg": 48600,
+     "altitude_km": null,
+     "inclination_deg": null,
+     "mode": "expended",
+     "assumption": "Translunar injection"
+    }
+   ],
+   "sites": [
+    "KSC LC-39"
+   ],
+   "note": "Thrust is nominal design value; actual Apollo thrust ~34.5-35.1 MN.",
+   "source_ids": [
+    "S09"
+   ],
+   "confidence": "medium",
+   "data_class": "unverified",
+   "retrieval_status": "not_retrieved",
+   "derived": {
+    "liftoff_thrust_to_weight": 1.1467515661098586,
+    "payload_fraction_by_orbit": [
+     {
+      "orbit": "LEO",
+      "mode": "expended",
+      "payload_to_liftoff": 0.04713804713804714
+     },
+     {
+      "orbit": "TLI",
+      "mode": "expended",
+      "payload_to_liftoff": 0.016363636363636365
+     }
+    ]
+   },
+   "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)"
+  },
+  {
+   "id": "sls_b1",
+   "name": "SLS Block 1",
+   "maker": "NASA",
+   "country": "US",
+   "status": "operational",
+   "height_m": 98.0,
+   "diameter_m": 8.4,
+   "stages": 2,
+   "liftoff_mass_kg": 2608000,
+   "thrust_sl_n": 39100000,
+   "reusable": false,
+   "fairing_diam_m": 5.1,
+   "fairing_height_m": null,
+   "price_usd": null,
+   "price_year": null,
+   "payloads": [
+    {
+     "orbit": "LEO",
+     "payload_kg": 95000,
+     "altitude_km": null,
+     "inclination_deg": null,
+     "mode": "expended",
+     "assumption": "Reference orbit not recorded"
+    },
+    {
+     "orbit": "TLI",
+     "payload_kg": 27000,
+     "altitude_km": null,
+     "inclination_deg": null,
+     "mode": "expended",
+     "assumption": ""
+    }
+   ],
+   "sites": [
+    "KSC LC-39B"
+   ],
+   "note": "Thrust includes 2 SRBs + 4 RS-25; height of Block 1 stack.",
+   "source_ids": [
+    "S08"
+   ],
+   "confidence": "medium",
+   "data_class": "unverified",
+   "retrieval_status": "not_retrieved",
+   "derived": {
+    "liftoff_thrust_to_weight": 1.5287923285060199,
+    "payload_fraction_by_orbit": [
+     {
+      "orbit": "LEO",
+      "mode": "expended",
+      "payload_to_liftoff": 0.03642638036809816
+     },
+     {
+      "orbit": "TLI",
+      "mode": "expended",
+      "payload_to_liftoff": 0.010352760736196318
+     }
+    ]
+   },
+   "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)"
+  },
+  {
+   "id": "falcon9_b5",
+   "name": "Falcon 9 Block 5",
+   "maker": "SpaceX",
+   "country": "US",
+   "status": "operational",
+   "height_m": 70.0,
+   "diameter_m": 3.7,
+   "stages": 2,
+   "liftoff_mass_kg": 549054,
+   "thrust_sl_n": 7607000,
+   "reusable": true,
+   "fairing_diam_m": 5.2,
+   "fairing_height_m": 13.1,
+   "price_usd": null,
+   "price_year": null,
+   "payloads": [
+    {
+     "orbit": "LEO",
+     "payload_kg": 22800,
+     "altitude_km": null,
+     "inclination_deg": null,
+     "mode": "expended",
+     "assumption": "Published figure; reference orbit details not recorded"
+    },
+    {
+     "orbit": "GTO",
+     "payload_kg": 8300,
+     "altitude_km": null,
+     "inclination_deg": null,
+     "mode": "expended",
+     "assumption": ""
+    },
+    {
+     "orbit": "GTO",
+     "payload_kg": 5500,
+     "altitude_km": null,
+     "inclination_deg": null,
+     "mode": "droneship recovery",
+     "assumption": "Reusable figure approximate"
+    }
+   ],
+   "sites": [
+    "CCSFS SLC-40",
+    "KSC LC-39A",
+    "VSFB SLC-4E"
+   ],
+   "note": "Published price not recorded (varies; 2022 website value ~67M USD recalled but not retained).",
+   "source_ids": [
+    "S06"
+   ],
+   "confidence": "medium",
+   "data_class": "unverified",
+   "retrieval_status": "not_retrieved",
+   "derived": {
+    "liftoff_thrust_to_weight": 1.4127902232062968,
+    "payload_fraction_by_orbit": [
+     {
+      "orbit": "LEO",
+      "mode": "expended",
+      "payload_to_liftoff": 0.041525970123157285
+     },
+     {
+      "orbit": "GTO",
+      "mode": "expended",
+      "payload_to_liftoff": 0.01511691017641252
+     },
+     {
+      "orbit": "GTO",
+      "mode": "droneship recovery",
+      "payload_to_liftoff": 0.010017229634972152
+     }
+    ]
+   },
+   "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)"
+  },
+  {
+   "id": "falcon_heavy",
+   "name": "Falcon Heavy",
+   "maker": "SpaceX",
+   "country": "US",
+   "status": "operational",
+   "height_m": 70.0,
+   "diameter_m": 12.2,
+   "stages": 2,
+   "liftoff_mass_kg": 1420788,
+   "thrust_sl_n": 22819000,
+   "reusable": true,
+   "fairing_diam_m": 5.2,
+   "fairing_height_m": 13.1,
+   "price_usd": 97000000,
+   "price_year": 2022,
+   "payloads": [
+    {
+     "orbit": "LEO",
+     "payload_kg": 63800,
+     "altitude_km": null,
+     "inclination_deg": null,
+     "mode": "expended",
+     "assumption": ""
+    },
+    {
+     "orbit": "GTO",
+     "payload_kg": 26700,
+     "altitude_km": null,
+     "inclination_deg": null,
+     "mode": "expended",
+     "assumption": ""
+    },
+    {
+     "orbit": "Mars transfer",
+     "payload_kg": 16800,
+     "altitude_km": null,
+     "inclination_deg": null,
+     "mode": "expended",
+     "assumption": "Direct transfer"
+    }
+   ],
+   "sites": [
+    "KSC LC-39A"
+   ],
+   "note": "Price is a historical website figure (2022).",
+   "source_ids": [
+    "S06"
+   ],
+   "confidence": "medium",
+   "data_class": "unverified",
+   "retrieval_status": "not_retrieved",
+   "derived": {
+    "liftoff_thrust_to_weight": 1.637746395939672,
+    "payload_fraction_by_orbit": [
+     {
+      "orbit": "LEO",
+      "mode": "expended",
+      "payload_to_liftoff": 0.044904658541598044
+     },
+     {
+      "orbit": "GTO",
+      "mode": "expended",
+      "payload_to_liftoff": 0.018792388449226767
+     },
+     {
+      "orbit": "Mars transfer",
+      "mode": "expended",
+      "payload_to_liftoff": 0.0118244241927719
+     }
+    ],
+    "usd_per_kg_leo_expended": 1520.3761755485893
+   },
+   "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)"
+  },
+  {
+   "id": "starship",
+   "name": "Starship (Super Heavy + Ship)",
+   "maker": "SpaceX",
+   "country": "US",
+   "status": "developmental",
+   "height_m": 121.0,
+   "diameter_m": 9.0,
+   "stages": 2,
+   "liftoff_mass_kg": 5000000,
+   "thrust_sl_n": 75900000,
+   "reusable": true,
+   "fairing_diam_m": null,
+   "fairing_height_m": null,
+   "price_usd": null,
+   "price_year": null,
+   "payloads": [
+    {
+     "orbit": "LEO",
+     "payload_kg": 100000,
+     "altitude_km": null,
+     "inclination_deg": null,
+     "mode": "fully reusable (target)",
+     "assumption": "Target 100-150 t; not demonstrated operationally"
+    }
+   ],
+   "sites": [
+    "Starbase"
+   ],
+   "note": "Developmental; thrust computed as 33 x 2.3 MN nominal Raptor 2 (derived); liftoff mass approximate.",
+   "source_ids": [
+    "S06"
+   ],
+   "confidence": "low",
+   "data_class": "unverified",
+   "retrieval_status": "not_retrieved",
+   "derived": {
+    "liftoff_thrust_to_weight": 1.547929211300495,
+    "payload_fraction_by_orbit": [
+     {
+      "orbit": "LEO",
+      "mode": "fully reusable (target)",
+      "payload_to_liftoff": 0.02
+     }
+    ]
+   },
+   "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)"
+  },
+  {
+   "id": "atlas_v_551",
+   "name": "Atlas V 551",
+   "maker": "ULA",
+   "country": "US",
+   "status": "operational_retiring",
+   "height_m": 58.3,
+   "diameter_m": 3.81,
+   "stages": 2,
+   "liftoff_mass_kg": 590000,
+   "thrust_sl_n": null,
+   "reusable": false,
+   "fairing_diam_m": 5.4,
+   "fairing_height_m": 20.7,
+   "price_usd": null,
+   "price_year": null,
+   "payloads": [
+    {
+     "orbit": "LEO",
+     "payload_kg": 18850,
+     "altitude_km": null,
+     "inclination_deg": 28.7,
+     "mode": "expended",
+     "assumption": ""
+    },
+    {
+     "orbit": "GTO",
+     "payload_kg": 8900,
+     "altitude_km": null,
+     "inclination_deg": null,
+     "mode": "expended",
+     "assumption": ""
+    }
+   ],
+   "sites": [
+    "CCSFS SLC-41",
+    "VSFB SLC-3E"
+   ],
+   "note": "Thrust at liftoff not retained.",
+   "source_ids": [
+    "S07"
+   ],
+   "confidence": "medium",
+   "data_class": "unverified",
+   "retrieval_status": "not_retrieved",
+   "derived": {
+    "payload_fraction_by_orbit": [
+     {
+      "orbit": "LEO",
+      "mode": "expended",
+      "payload_to_liftoff": 0.031949152542372884
+     },
+     {
+      "orbit": "GTO",
+      "mode": "expended",
+      "payload_to_liftoff": 0.015084745762711864
+     }
+    ]
+   },
+   "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)"
+  },
+  {
+   "id": "vulcan_vc6",
+   "name": "Vulcan Centaur VC6",
+   "maker": "ULA",
+   "country": "US",
+   "status": "operational",
+   "height_m": 61.6,
+   "diameter_m": 5.4,
+   "stages": 2,
+   "liftoff_mass_kg": null,
+   "thrust_sl_n": null,
+   "reusable": false,
+   "fairing_diam_m": 5.4,
+   "fairing_height_m": null,
+   "price_usd": null,
+   "price_year": null,
+   "payloads": [
+    {
+     "orbit": "LEO",
+     "payload_kg": 27200,
+     "altitude_km": null,
+     "inclination_deg": null,
+     "mode": "expended",
+     "assumption": ""
+    },
+    {
+     "orbit": "GTO",
+     "payload_kg": 14400,
+     "altitude_km": null,
+     "inclination_deg": null,
+     "mode": "expended",
+     "assumption": ""
+    }
+   ],
+   "sites": [
+    "CCSFS SLC-41"
+   ],
+   "note": "",
+   "source_ids": [
+    "S07"
+   ],
+   "confidence": "low",
+   "data_class": "unverified",
+   "retrieval_status": "not_retrieved",
+   "derived": {},
+   "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)"
+  },
+  {
+   "id": "electron",
+   "name": "Electron",
+   "maker": "Rocket Lab",
+   "country": "US/NZ",
+   "status": "operational",
+   "height_m": 18.0,
+   "diameter_m": 1.2,
+   "stages": 2,
+   "liftoff_mass_kg": 12500,
+   "thrust_sl_n": 224000,
+   "reusable": false,
+   "fairing_diam_m": 1.2,
+   "fairing_height_m": 2.4,
+   "price_usd": 7500000,
+   "price_year": 2021,
+   "payloads": [
+    {
+     "orbit": "SSO",
+     "payload_kg": 300,
+     "altitude_km": 500,
+     "inclination_deg": 97.4,
+     "mode": "expended",
+     "assumption": "Published capability ~300 kg to 500 km SSO"
+    }
+   ],
+   "sites": [
+    "Mahia LC-1",
+    "Wallops LC-2"
+   ],
+   "note": "Price is a ~2021 figure; thrust sum of 9 Rutherford SL (derived 9 x 25 kN).",
+   "source_ids": [
+    "S10"
+   ],
+   "confidence": "medium",
+   "data_class": "unverified",
+   "retrieval_status": "not_retrieved",
+   "derived": {
+    "liftoff_thrust_to_weight": 1.8273314536564473,
+    "payload_fraction_by_orbit": [
+     {
+      "orbit": "SSO",
+      "mode": "expended",
+      "payload_to_liftoff": 0.024
+     }
+    ],
+    "usd_per_kg_sso_expended": 25000.0
+   },
+   "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)"
+  },
+  {
+   "id": "ariane5_eca",
+   "name": "Ariane 5 ECA",
+   "maker": "Arianespace",
+   "country": "EU",
+   "status": "retired",
+   "height_m": 52.0,
+   "diameter_m": 5.4,
+   "stages": 2,
+   "liftoff_mass_kg": 780000,
+   "thrust_sl_n": null,
+   "reusable": false,
+   "fairing_diam_m": 5.4,
+   "fairing_height_m": 17.0,
+   "price_usd": null,
+   "price_year": null,
+   "payloads": [
+    {
+     "orbit": "GTO",
+     "payload_kg": 10500,
+     "altitude_km": null,
+     "inclination_deg": null,
+     "mode": "expended",
+     "assumption": "Dual-launch figure approximate"
+    }
+   ],
+   "sites": [
+    "Kourou ELA-3"
+   ],
+   "note": "",
+   "source_ids": [
+    "S11"
+   ],
+   "confidence": "medium",
+   "data_class": "unverified",
+   "retrieval_status": "not_retrieved",
+   "derived": {
+    "payload_fraction_by_orbit": [
+     {
+      "orbit": "GTO",
+      "mode": "expended",
+      "payload_to_liftoff": 0.013461538461538462
+     }
+    ]
+   },
+   "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)"
+  },
+  {
+   "id": "ariane64",
+   "name": "Ariane 64",
+   "maker": "Arianespace",
+   "country": "EU",
+   "status": "operational",
+   "height_m": 62.0,
+   "diameter_m": 5.4,
+   "stages": 2,
+   "liftoff_mass_kg": null,
+   "thrust_sl_n": null,
+   "reusable": false,
+   "fairing_diam_m": 5.4,
+   "fairing_height_m": 20.0,
+   "price_usd": null,
+   "price_year": null,
+   "payloads": [
+    {
+     "orbit": "LEO",
+     "payload_kg": 21650,
+     "altitude_km": null,
+     "inclination_deg": null,
+     "mode": "expended",
+     "assumption": "Reference orbit details not recorded"
+    },
+    {
+     "orbit": "GTO",
+     "payload_kg": 11500,
+     "altitude_km": null,
+     "inclination_deg": null,
+     "mode": "expended",
+     "assumption": ""
+    }
+   ],
+   "sites": [
+    "Kourou ELA-4"
+   ],
+   "note": "",
+   "source_ids": [
+    "S11"
+   ],
+   "confidence": "low",
+   "data_class": "unverified",
+   "retrieval_status": "not_retrieved",
+   "derived": {},
+   "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)"
+  },
+  {
+   "id": "ariane62",
+   "name": "Ariane 62",
+   "maker": "Arianespace",
+   "country": "EU",
+   "status": "operational",
+   "height_m": 62.0,
+   "diameter_m": 5.4,
+   "stages": 2,
+   "liftoff_mass_kg": null,
+   "thrust_sl_n": null,
+   "reusable": false,
+   "fairing_diam_m": 5.4,
+   "fairing_height_m": 20.0,
+   "price_usd": null,
+   "price_year": null,
+   "payloads": [
+    {
+     "orbit": "LEO",
+     "payload_kg": 10350,
+     "altitude_km": null,
+     "inclination_deg": null,
+     "mode": "expended",
+     "assumption": ""
+    },
+    {
+     "orbit": "GTO",
+     "payload_kg": 4500,
+     "altitude_km": null,
+     "inclination_deg": null,
+     "mode": "expended",
+     "assumption": ""
+    }
+   ],
+   "sites": [
+    "Kourou ELA-4"
+   ],
+   "note": "",
+   "source_ids": [
+    "S11"
+   ],
+   "confidence": "low",
+   "data_class": "unverified",
+   "retrieval_status": "not_retrieved",
+   "derived": {},
+   "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)"
+  },
+  {
+   "id": "delta4_heavy",
+   "name": "Delta IV Heavy",
+   "maker": "ULA",
+   "country": "US",
+   "status": "retired",
+   "height_m": 72.0,
+   "diameter_m": 5.1,
+   "stages": 2,
+   "liftoff_mass_kg": 733000,
+   "thrust_sl_n": null,
+   "reusable": false,
+   "fairing_diam_m": 5.1,
+   "fairing_height_m": 19.1,
+   "price_usd": null,
+   "price_year": null,
+   "payloads": [
+    {
+     "orbit": "LEO",
+     "payload_kg": 28790,
+     "altitude_km": null,
+     "inclination_deg": 28.7,
+     "mode": "expended",
+     "assumption": ""
+    },
+    {
+     "orbit": "GTO",
+     "payload_kg": 14220,
+     "altitude_km": null,
+     "inclination_deg": null,
+     "mode": "expended",
+     "assumption": ""
+    }
+   ],
+   "sites": [
+    "CCSFS SLC-37B",
+    "VSFB SLC-6"
+   ],
+   "note": "",
+   "source_ids": [
+    "S07"
+   ],
+   "confidence": "medium",
+   "data_class": "unverified",
+   "retrieval_status": "not_retrieved",
+   "derived": {
+    "payload_fraction_by_orbit": [
+     {
+      "orbit": "LEO",
+      "mode": "expended",
+      "payload_to_liftoff": 0.039276944065484314
+     },
+     {
+      "orbit": "GTO",
+      "mode": "expended",
+      "payload_to_liftoff": 0.019399727148703957
+     }
+    ]
+   },
+   "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)"
+  },
+  {
+   "id": "new_glenn",
+   "name": "New Glenn",
+   "maker": "Blue Origin",
+   "country": "US",
+   "status": "operational",
+   "height_m": 98.0,
+   "diameter_m": 7.0,
+   "stages": 2,
+   "liftoff_mass_kg": null,
+   "thrust_sl_n": 17100000,
+   "reusable": true,
+   "fairing_diam_m": 7.0,
+   "fairing_height_m": 21.9,
+   "price_usd": null,
+   "price_year": null,
+   "payloads": [
+    {
+     "orbit": "LEO",
+     "payload_kg": 45000,
+     "altitude_km": null,
+     "inclination_deg": null,
+     "mode": "booster recovery",
+     "assumption": "Published capability"
+    },
+    {
+     "orbit": "GTO",
+     "payload_kg": 13600,
+     "altitude_km": null,
+     "inclination_deg": null,
+     "mode": "booster recovery",
+     "assumption": ""
+    }
+   ],
+   "sites": [
+    "CCSFS LC-36"
+   ],
+   "note": "Thrust = 7 x BE-4 SL (derived).",
+   "source_ids": [
+    "S07"
+   ],
+   "confidence": "low",
+   "data_class": "unverified",
+   "retrieval_status": "not_retrieved",
+   "derived": {},
+   "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)"
+  },
+  {
+   "id": "vega_c",
+   "name": "Vega-C",
+   "maker": "Arianespace/Avio",
+   "country": "EU",
+   "status": "operational",
+   "height_m": 35.0,
+   "diameter_m": 3.4,
+   "stages": 4,
+   "liftoff_mass_kg": 210000,
+   "thrust_sl_n": null,
+   "reusable": false,
+   "fairing_diam_m": 3.3,
+   "fairing_height_m": 8.1,
+   "price_usd": null,
+   "price_year": null,
+   "payloads": [
+    {
+     "orbit": "SSO",
+     "payload_kg": 2300,
+     "altitude_km": 700,
+     "inclination_deg": null,
+     "mode": "expended",
+     "assumption": ""
+    }
+   ],
+   "sites": [
+    "Kourou ELV"
+   ],
+   "note": "",
+   "source_ids": [
+    "S11"
+   ],
+   "confidence": "low",
+   "data_class": "unverified",
+   "retrieval_status": "not_retrieved",
+   "derived": {
+    "payload_fraction_by_orbit": [
+     {
+      "orbit": "SSO",
+      "mode": "expended",
+      "payload_to_liftoff": 0.010952380952380953
+     }
+    ]
+   },
+   "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)"
+  },
+  {
+   "id": "soyuz_21b",
+   "name": "Soyuz-2.1b",
+   "maker": "Roscosmos/TsSKB",
+   "country": "RU",
+   "status": "operational",
+   "height_m": 46.3,
+   "diameter_m": 2.95,
+   "stages": 3,
+   "liftoff_mass_kg": 312000,
+   "thrust_sl_n": null,
+   "reusable": false,
+   "fairing_diam_m": null,
+   "fairing_height_m": null,
+   "price_usd": null,
+   "price_year": null,
+   "payloads": [
+    {
+     "orbit": "LEO",
+     "payload_kg": 8200,
+     "altitude_km": null,
+     "inclination_deg": null,
+     "mode": "expended",
+     "assumption": ""
+    }
+   ],
+   "sites": [
+    "Baikonur",
+    "Plesetsk",
+    "Vostochny",
+    "Kourou (historical)"
+   ],
+   "note": "",
+   "source_ids": [
+    "S12"
+   ],
+   "confidence": "low",
+   "data_class": "unverified",
+   "retrieval_status": "not_retrieved",
+   "derived": {
+    "payload_fraction_by_orbit": [
+     {
+      "orbit": "LEO",
+      "mode": "expended",
+      "payload_to_liftoff": 0.026282051282051282
+     }
+    ]
+   },
+   "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)"
+  },
+  {
+   "id": "cz5",
+   "name": "Long March 5",
+   "maker": "CASC",
+   "country": "CN",
+   "status": "operational",
+   "height_m": 57.0,
+   "diameter_m": 5.0,
+   "stages": 2,
+   "liftoff_mass_kg": 869000,
+   "thrust_sl_n": 10573000,
+   "reusable": false,
+   "fairing_diam_m": 5.2,
+   "fairing_height_m": 12.0,
+   "price_usd": null,
+   "price_year": null,
+   "payloads": [
+    {
+     "orbit": "LEO",
+     "payload_kg": 25000,
+     "altitude_km": null,
+     "inclination_deg": null,
+     "mode": "expended",
+     "assumption": ""
+    },
+    {
+     "orbit": "GTO",
+     "payload_kg": 14000,
+     "altitude_km": null,
+     "inclination_deg": null,
+     "mode": "expended",
+     "assumption": ""
+    }
+   ],
+   "sites": [
+    "Wenchang"
+   ],
+   "note": "Thrust approximate.",
+   "source_ids": [
+    "S12"
+   ],
+   "confidence": "low",
+   "data_class": "unverified",
+   "retrieval_status": "not_retrieved",
+   "derived": {
+    "liftoff_thrust_to_weight": 1.2406742830627888,
+    "payload_fraction_by_orbit": [
+     {
+      "orbit": "LEO",
+      "mode": "expended",
+      "payload_to_liftoff": 0.028768699654775604
+     },
+     {
+      "orbit": "GTO",
+      "mode": "expended",
+      "payload_to_liftoff": 0.01611047180667434
+     }
+    ]
+   },
+   "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)"
+  }
+ ]
+}

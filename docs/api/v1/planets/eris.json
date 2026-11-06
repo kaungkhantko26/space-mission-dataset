@@ -1,0 +1,37 @@
+{
+ "collection": "planets",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "eris",
+  "name": "Eris",
+  "category": "dwarf_planet",
+  "parent_id": "sun",
+  "mu_m3_s2": 1108000000000.0,
+  "gravitational_parameter_km3_s2": 1108.0,
+  "mean_radius_m": 1163000.0,
+  "equatorial_radius_m": null,
+  "mass_kg": 1.66e+22,
+  "surface_gravity_m_s2": 0.82,
+  "rotation_period_h": 380.0,
+  "semi_major_axis_m": 10139743676046.0,
+  "eccentricity": 0.4407,
+  "inclination_deg": 44.0,
+  "orbital_period_days": 203830,
+  "mean_surface_temperature_k": null,
+  "equatorial_magnetic_field_t": null,
+  "derived": {
+   "escape_velocity_m_s": 1380.3684381119092,
+   "circular_velocity_surface_m_s": 976.0678831248141,
+   "gravity_from_mu_m_s2": 0.8191818679860325,
+   "derived_from": "v_esc=sqrt(2*mu/R_mean); v_circ=sqrt(mu/R_mean); g=mu/R^2 (spherical, non-rotating approximation)",
+   "solar_irradiance_w_m2": 0.2962477060937173
+  },
+  "data_class": "unverified",
+  "confidence": "low",
+  "source_ids": [
+   "S01",
+   "S03"
+  ],
+  "retrieval_status": "not_retrieved"
+ }
+}

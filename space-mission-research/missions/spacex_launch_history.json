@@ -1,0 +1,2294 @@
+{
+ "schema_version": "0.1.0",
+ "dataset": "spacex_launch_history",
+ "description": "Normalized user-supplied SpaceX launch table (57 rows, 2010-2018). Historical observations, not vehicle specifications.",
+ "generated": "2026-11-06",
+ "retrieval_status": "NOT_RETRIEVED: values recalled from published references; network access to source hosts was blocked in the build environment. See metadata/quality_report.json.",
+ "record_count": 57,
+ "records": [
+  {
+   "id": "spx_f001",
+   "flight_label": "1",
+   "date_utc": "2010-06-04",
+   "time_utc": "18:45:00",
+   "booster_family": "F9 v1.0",
+   "booster_serials": [
+    "B0003"
+   ],
+   "booster_version_raw": "F9 v1.0 B0003",
+   "launch_site_raw": "CCAFS LC-40",
+   "launch_site_id": "ccsfs_slc40",
+   "payload": "Dragon Spacecraft Qualification Unit",
+   "payload_mass_kg": null,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": null,
+   "orbit_raw": "LEO",
+   "orbit_class": "leo",
+   "customer_raw": "SpaceX",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "Failure (parachute)",
+   "landings": [
+    {
+     "raw": "Failure   (parachute)",
+     "result": "failure",
+     "location": "parachute"
+    }
+   ],
+   "landing_attempts": 0,
+   "landing_successes": 0,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f002",
+   "flight_label": "2",
+   "date_utc": "2010-12-08",
+   "time_utc": "15:43:00",
+   "booster_family": "F9 v1.0",
+   "booster_serials": [
+    "B0004"
+   ],
+   "booster_version_raw": "F9 v1.0 B0004",
+   "launch_site_raw": "CCAFS LC-40",
+   "launch_site_id": "ccsfs_slc40",
+   "payload": "Dragon demo flight C1, two CubeSats, barrel of Brouère cheese",
+   "payload_mass_kg": null,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": null,
+   "orbit_raw": "LEO (ISS)",
+   "orbit_class": "leo_iss",
+   "customer_raw": "NASA (COTS) NRO",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "Failure (parachute)",
+   "landings": [
+    {
+     "raw": "Failure   (parachute)",
+     "result": "failure",
+     "location": "parachute"
+    }
+   ],
+   "landing_attempts": 0,
+   "landing_successes": 0,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f003",
+   "flight_label": "3",
+   "date_utc": "2012-05-22",
+   "time_utc": "07:44:00",
+   "booster_family": "F9 v1.0",
+   "booster_serials": [
+    "B0005"
+   ],
+   "booster_version_raw": "F9 v1.0 B0005",
+   "launch_site_raw": "CCAFS LC-40",
+   "launch_site_id": "ccsfs_slc40",
+   "payload": "Dragon demo flight C2+",
+   "payload_mass_kg": 525.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "525",
+   "orbit_raw": "LEO (ISS)",
+   "orbit_class": "leo_iss",
+   "customer_raw": "NASA (COTS)",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "No attempt",
+   "landings": [
+    {
+     "raw": "No attempt",
+     "result": "no_attempt",
+     "location": null
+    }
+   ],
+   "landing_attempts": 0,
+   "landing_successes": 0,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f004",
+   "flight_label": "4",
+   "date_utc": "2012-10-08",
+   "time_utc": "00:35:00",
+   "booster_family": "F9 v1.0",
+   "booster_serials": [
+    "B0006"
+   ],
+   "booster_version_raw": "F9 v1.0 B0006",
+   "launch_site_raw": "CCAFS LC-40",
+   "launch_site_id": "ccsfs_slc40",
+   "payload": "SpaceX CRS-1",
+   "payload_mass_kg": 500.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "500",
+   "orbit_raw": "LEO (ISS)",
+   "orbit_class": "leo_iss",
+   "customer_raw": "NASA (CRS)",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "No attempt",
+   "landings": [
+    {
+     "raw": "No attempt",
+     "result": "no_attempt",
+     "location": null
+    }
+   ],
+   "landing_attempts": 0,
+   "landing_successes": 0,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f005",
+   "flight_label": "5",
+   "date_utc": "2013-03-01",
+   "time_utc": "15:10:00",
+   "booster_family": "F9 v1.0",
+   "booster_serials": [
+    "B0007"
+   ],
+   "booster_version_raw": "F9 v1.0 B0007",
+   "launch_site_raw": "CCAFS LC-40",
+   "launch_site_id": "ccsfs_slc40",
+   "payload": "SpaceX CRS-2",
+   "payload_mass_kg": 677.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "677",
+   "orbit_raw": "LEO (ISS)",
+   "orbit_class": "leo_iss",
+   "customer_raw": "NASA (CRS)",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "No attempt",
+   "landings": [
+    {
+     "raw": "No attempt",
+     "result": "no_attempt",
+     "location": null
+    }
+   ],
+   "landing_attempts": 0,
+   "landing_successes": 0,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f006",
+   "flight_label": "6",
+   "date_utc": "2013-09-29",
+   "time_utc": "16:00:00",
+   "booster_family": "F9 v1.1",
+   "booster_serials": [
+    "B1003"
+   ],
+   "booster_version_raw": "F9 v1.1 B1003",
+   "launch_site_raw": "VAFB SLC-4E",
+   "launch_site_id": "vsfb_slc4e",
+   "payload": "CASSIOPE",
+   "payload_mass_kg": 500.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "500",
+   "orbit_raw": "Polar LEO",
+   "orbit_class": "polar_leo",
+   "customer_raw": "MDA",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "Uncontrolled (ocean)",
+   "landings": [
+    {
+     "raw": "Uncontrolled (ocean)",
+     "result": "uncontrolled",
+     "location": "ocean"
+    }
+   ],
+   "landing_attempts": 0,
+   "landing_successes": 0,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f007",
+   "flight_label": "7",
+   "date_utc": "2013-12-03",
+   "time_utc": "22:41:00",
+   "booster_family": "F9 v1.1",
+   "booster_serials": [],
+   "booster_version_raw": "F9 v1.1",
+   "launch_site_raw": "CCAFS LC-40",
+   "launch_site_id": "ccsfs_slc40",
+   "payload": "SES-8",
+   "payload_mass_kg": 3170.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "3,170",
+   "orbit_raw": "GTO",
+   "orbit_class": "gto",
+   "customer_raw": "SES",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "No attempt",
+   "landings": [
+    {
+     "raw": "No attempt",
+     "result": "no_attempt",
+     "location": null
+    }
+   ],
+   "landing_attempts": 0,
+   "landing_successes": 0,
+   "booster_flight_number": null,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f008",
+   "flight_label": "8",
+   "date_utc": "2014-01-06",
+   "time_utc": "22:06:00",
+   "booster_family": "F9 v1.1",
+   "booster_serials": [],
+   "booster_version_raw": "F9 v1.1",
+   "launch_site_raw": "CCAFS LC-40",
+   "launch_site_id": "ccsfs_slc40",
+   "payload": "Thaicom 6",
+   "payload_mass_kg": 3325.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "3,325",
+   "orbit_raw": "GTO",
+   "orbit_class": "gto",
+   "customer_raw": "Thaicom",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "No attempt",
+   "landings": [
+    {
+     "raw": "No attempt",
+     "result": "no_attempt",
+     "location": null
+    }
+   ],
+   "landing_attempts": 0,
+   "landing_successes": 0,
+   "booster_flight_number": null,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f009",
+   "flight_label": "9",
+   "date_utc": "2014-04-18",
+   "time_utc": "19:25:00",
+   "booster_family": "F9 v1.1",
+   "booster_serials": [],
+   "booster_version_raw": "F9 v1.1",
+   "launch_site_raw": "CCAFS LC-40",
+   "launch_site_id": "ccsfs_slc40",
+   "payload": "SpaceX CRS-3",
+   "payload_mass_kg": 2296.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "2,296",
+   "orbit_raw": "LEO (ISS)",
+   "orbit_class": "leo_iss",
+   "customer_raw": "NASA (CRS)",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "Controlled (ocean)",
+   "landings": [
+    {
+     "raw": "Controlled (ocean)",
+     "result": "controlled",
+     "location": "ocean"
+    }
+   ],
+   "landing_attempts": 0,
+   "landing_successes": 0,
+   "booster_flight_number": null,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f010",
+   "flight_label": "10",
+   "date_utc": "2014-07-14",
+   "time_utc": "15:15:00",
+   "booster_family": "F9 v1.1",
+   "booster_serials": [],
+   "booster_version_raw": "F9 v1.1",
+   "launch_site_raw": "CCAFS LC-40",
+   "launch_site_id": "ccsfs_slc40",
+   "payload": "OG2 Mission 1 6 Orbcomm-OG2 satellites",
+   "payload_mass_kg": 1316.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "1,316",
+   "orbit_raw": "LEO",
+   "orbit_class": "leo",
+   "customer_raw": "Orbcomm",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "Controlled (ocean)",
+   "landings": [
+    {
+     "raw": "Controlled (ocean)",
+     "result": "controlled",
+     "location": "ocean"
+    }
+   ],
+   "landing_attempts": 0,
+   "landing_successes": 0,
+   "booster_flight_number": null,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f011",
+   "flight_label": "11",
+   "date_utc": "2014-08-05",
+   "time_utc": "08:00:00",
+   "booster_family": "F9 v1.1",
+   "booster_serials": [],
+   "booster_version_raw": "F9 v1.1",
+   "launch_site_raw": "CCAFS LC-40",
+   "launch_site_id": "ccsfs_slc40",
+   "payload": "AsiaSat 8",
+   "payload_mass_kg": 4535.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "4,535",
+   "orbit_raw": "GTO",
+   "orbit_class": "gto",
+   "customer_raw": "AsiaSat",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "No attempt",
+   "landings": [
+    {
+     "raw": "No attempt",
+     "result": "no_attempt",
+     "location": null
+    }
+   ],
+   "landing_attempts": 0,
+   "landing_successes": 0,
+   "booster_flight_number": null,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f012",
+   "flight_label": "12",
+   "date_utc": "2014-09-07",
+   "time_utc": "05:00:00",
+   "booster_family": "F9 v1.1",
+   "booster_serials": [
+    "B1011"
+   ],
+   "booster_version_raw": "F9 v1.1 B1011",
+   "launch_site_raw": "CCAFS LC-40",
+   "launch_site_id": "ccsfs_slc40",
+   "payload": "AsiaSat 6",
+   "payload_mass_kg": 4428.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "4,428",
+   "orbit_raw": "GTO",
+   "orbit_class": "gto",
+   "customer_raw": "AsiaSat",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "No attempt",
+   "landings": [
+    {
+     "raw": "No attempt",
+     "result": "no_attempt",
+     "location": null
+    }
+   ],
+   "landing_attempts": 0,
+   "landing_successes": 0,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f013",
+   "flight_label": "13",
+   "date_utc": "2014-09-21",
+   "time_utc": "05:52:00",
+   "booster_family": "F9 v1.1",
+   "booster_serials": [
+    "B1010"
+   ],
+   "booster_version_raw": "F9 v1.1 B1010",
+   "launch_site_raw": "CCAFS LC-40",
+   "launch_site_id": "ccsfs_slc40",
+   "payload": "SpaceX CRS-4",
+   "payload_mass_kg": 2216.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "2,216",
+   "orbit_raw": "LEO (ISS)",
+   "orbit_class": "leo_iss",
+   "customer_raw": "NASA (CRS)",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "Uncontrolled (ocean)",
+   "landings": [
+    {
+     "raw": "Uncontrolled (ocean)",
+     "result": "uncontrolled",
+     "location": "ocean"
+    }
+   ],
+   "landing_attempts": 0,
+   "landing_successes": 0,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f014",
+   "flight_label": "14",
+   "date_utc": "2015-01-10",
+   "time_utc": "09:47:00",
+   "booster_family": "F9 v1.1",
+   "booster_serials": [
+    "B1012"
+   ],
+   "booster_version_raw": "F9 v1.1 B1012",
+   "launch_site_raw": "CCAFS LC-40",
+   "launch_site_id": "ccsfs_slc40",
+   "payload": "SpaceX CRS-5",
+   "payload_mass_kg": 2395.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "2,395",
+   "orbit_raw": "LEO (ISS)",
+   "orbit_class": "leo_iss",
+   "customer_raw": "NASA (CRS)",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "Failure (drone ship)",
+   "landings": [
+    {
+     "raw": "Failure  (drone ship)",
+     "result": "failure",
+     "location": "drone_ship"
+    }
+   ],
+   "landing_attempts": 1,
+   "landing_successes": 0,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f015",
+   "flight_label": "15",
+   "date_utc": "2015-02-11",
+   "time_utc": "23:03:00",
+   "booster_family": "F9 v1.1",
+   "booster_serials": [
+    "B1013"
+   ],
+   "booster_version_raw": "F9 v1.1 B1013",
+   "launch_site_raw": "CCAFS LC-40",
+   "launch_site_id": "ccsfs_slc40",
+   "payload": "DSCOVR",
+   "payload_mass_kg": 570.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "570",
+   "orbit_raw": "Sun–Earth L1",
+   "orbit_class": "sun_earth_l1",
+   "customer_raw": "U.S. Air Force NASA NOAA",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "Controlled (ocean)",
+   "landings": [
+    {
+     "raw": "Controlled (ocean)",
+     "result": "controlled",
+     "location": "ocean"
+    }
+   ],
+   "landing_attempts": 0,
+   "landing_successes": 0,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f016",
+   "flight_label": "16",
+   "date_utc": "2015-03-02",
+   "time_utc": "03:50:00",
+   "booster_family": "F9 v1.1",
+   "booster_serials": [
+    "B1014"
+   ],
+   "booster_version_raw": "F9 v1.1 B1014",
+   "launch_site_raw": "CCAFS LC-40",
+   "launch_site_id": "ccsfs_slc40",
+   "payload": "ABS-3A Eutelsat 115 West B",
+   "payload_mass_kg": 4159.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "4,159",
+   "orbit_raw": "GTO",
+   "orbit_class": "gto",
+   "customer_raw": "ABS Eutelsat",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "No attempt",
+   "landings": [
+    {
+     "raw": "No attempt",
+     "result": "no_attempt",
+     "location": null
+    }
+   ],
+   "landing_attempts": 0,
+   "landing_successes": 0,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f017",
+   "flight_label": "17",
+   "date_utc": "2015-04-14",
+   "time_utc": "20:10:00",
+   "booster_family": "F9 v1.1",
+   "booster_serials": [
+    "B1015"
+   ],
+   "booster_version_raw": "F9 v1.1 B1015",
+   "launch_site_raw": "CCAFS LC-40",
+   "launch_site_id": "ccsfs_slc40",
+   "payload": "SpaceX CRS-6",
+   "payload_mass_kg": 1898.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "1,898",
+   "orbit_raw": "LEO (ISS)",
+   "orbit_class": "leo_iss",
+   "customer_raw": "NASA (CRS)",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "Failure (drone ship)",
+   "landings": [
+    {
+     "raw": "Failure  (drone ship)",
+     "result": "failure",
+     "location": "drone_ship"
+    }
+   ],
+   "landing_attempts": 1,
+   "landing_successes": 0,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f018",
+   "flight_label": "18",
+   "date_utc": "2015-04-27",
+   "time_utc": "23:03:00",
+   "booster_family": "F9 v1.1",
+   "booster_serials": [
+    "B1016"
+   ],
+   "booster_version_raw": "F9 v1.1 B1016",
+   "launch_site_raw": "CCAFS LC-40",
+   "launch_site_id": "ccsfs_slc40",
+   "payload": "TürkmenÄlem 52°E / MonacoSAT",
+   "payload_mass_kg": 4707.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "4,707",
+   "orbit_raw": "GTO",
+   "orbit_class": "gto",
+   "customer_raw": "Turkmenistan National Space Agency",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "No attempt",
+   "landings": [
+    {
+     "raw": "No attempt",
+     "result": "no_attempt",
+     "location": null
+    }
+   ],
+   "landing_attempts": 0,
+   "landing_successes": 0,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f019",
+   "flight_label": "19",
+   "date_utc": "2015-06-28",
+   "time_utc": "14:21:00",
+   "booster_family": "F9 v1.1",
+   "booster_serials": [
+    "B1018"
+   ],
+   "booster_version_raw": "F9 v1.1 B1018",
+   "launch_site_raw": "CCAFS LC-40",
+   "launch_site_id": "ccsfs_slc40",
+   "payload": "SpaceX CRS-7",
+   "payload_mass_kg": 1952.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "1,952",
+   "orbit_raw": "LEO (ISS)",
+   "orbit_class": "leo_iss",
+   "customer_raw": "NASA (CRS)",
+   "mission_outcome_raw": "Failure (in flight)",
+   "mission_outcome": "failure_in_flight",
+   "landing_outcome_raw": "Precluded (drone ship)",
+   "landings": [
+    {
+     "raw": "Precluded  (drone ship)",
+     "result": "precluded",
+     "location": "drone_ship"
+    }
+   ],
+   "landing_attempts": 0,
+   "landing_successes": 0,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f020",
+   "flight_label": "20",
+   "date_utc": "2015-12-22",
+   "time_utc": "01:29:00",
+   "booster_family": "F9 FT",
+   "booster_serials": [
+    "B1019"
+   ],
+   "booster_version_raw": "F9 FT B1019",
+   "launch_site_raw": "CCAFS LC-40",
+   "launch_site_id": "ccsfs_slc40",
+   "payload": "OG2 Mission 2 11 Orbcomm-OG2 satellites",
+   "payload_mass_kg": 2034.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "2,034",
+   "orbit_raw": "LEO",
+   "orbit_class": "leo",
+   "customer_raw": "Orbcomm",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "Success (ground pad)",
+   "landings": [
+    {
+     "raw": "Success  (ground pad)",
+     "result": "success",
+     "location": "ground_pad"
+    }
+   ],
+   "landing_attempts": 1,
+   "landing_successes": 1,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f021",
+   "flight_label": "21",
+   "date_utc": "2016-01-17",
+   "time_utc": "18:42:00",
+   "booster_family": "F9 v1.1",
+   "booster_serials": [
+    "B1017"
+   ],
+   "booster_version_raw": "F9 v1.1 B1017",
+   "launch_site_raw": "VAFB SLC-4E",
+   "launch_site_id": "vsfb_slc4e",
+   "payload": "Jason-3",
+   "payload_mass_kg": 553.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "553",
+   "orbit_raw": "LEO",
+   "orbit_class": "leo",
+   "customer_raw": "NASA (LSP) NOAA CNES",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "Failure (drone ship)",
+   "landings": [
+    {
+     "raw": "Failure (drone ship)",
+     "result": "failure",
+     "location": "drone_ship"
+    }
+   ],
+   "landing_attempts": 1,
+   "landing_successes": 0,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f022",
+   "flight_label": "22",
+   "date_utc": "2016-03-04",
+   "time_utc": "23:35:00",
+   "booster_family": "F9 FT",
+   "booster_serials": [
+    "B1020"
+   ],
+   "booster_version_raw": "F9 FT B1020",
+   "launch_site_raw": "CCAFS LC-40",
+   "launch_site_id": "ccsfs_slc40",
+   "payload": "SES-9",
+   "payload_mass_kg": 5271.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "5,271",
+   "orbit_raw": "GTO",
+   "orbit_class": "gto",
+   "customer_raw": "SES",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "Failure (drone ship)",
+   "landings": [
+    {
+     "raw": "Failure (drone ship)",
+     "result": "failure",
+     "location": "drone_ship"
+    }
+   ],
+   "landing_attempts": 1,
+   "landing_successes": 0,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f023",
+   "flight_label": "23",
+   "date_utc": "2016-04-08",
+   "time_utc": "20:43:00",
+   "booster_family": "F9 FT",
+   "booster_serials": [
+    "B1021.1"
+   ],
+   "booster_version_raw": "F9 FT B1021.1",
+   "launch_site_raw": "CCAFS LC-40",
+   "launch_site_id": "ccsfs_slc40",
+   "payload": "SpaceX CRS-8",
+   "payload_mass_kg": 3136.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "3,136",
+   "orbit_raw": "LEO (ISS)",
+   "orbit_class": "leo_iss",
+   "customer_raw": "NASA (CRS)",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "Success (drone ship)",
+   "landings": [
+    {
+     "raw": "Success  (drone ship)",
+     "result": "success",
+     "location": "drone_ship"
+    }
+   ],
+   "landing_attempts": 1,
+   "landing_successes": 1,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f024",
+   "flight_label": "24",
+   "date_utc": "2016-05-06",
+   "time_utc": "05:21:00",
+   "booster_family": "F9 FT",
+   "booster_serials": [
+    "B1022"
+   ],
+   "booster_version_raw": "F9 FT B1022",
+   "launch_site_raw": "CCAFS LC-40",
+   "launch_site_id": "ccsfs_slc40",
+   "payload": "JCSAT-14",
+   "payload_mass_kg": 4696.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "4,696",
+   "orbit_raw": "GTO",
+   "orbit_class": "gto",
+   "customer_raw": "SKY Perfect JSAT Group",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "Success (drone ship)",
+   "landings": [
+    {
+     "raw": "Success (drone ship)",
+     "result": "success",
+     "location": "drone_ship"
+    }
+   ],
+   "landing_attempts": 1,
+   "landing_successes": 1,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f025",
+   "flight_label": "25",
+   "date_utc": "2016-05-27",
+   "time_utc": "21:39:00",
+   "booster_family": "F9 FT",
+   "booster_serials": [
+    "B1023.1"
+   ],
+   "booster_version_raw": "F9 FT B1023.1",
+   "launch_site_raw": "CCAFS LC-40",
+   "launch_site_id": "ccsfs_slc40",
+   "payload": "Thaicom 8",
+   "payload_mass_kg": 3100.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "3,100",
+   "orbit_raw": "GTO",
+   "orbit_class": "gto",
+   "customer_raw": "Thaicom",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "Success (drone ship)",
+   "landings": [
+    {
+     "raw": "Success  (drone ship)",
+     "result": "success",
+     "location": "drone_ship"
+    }
+   ],
+   "landing_attempts": 1,
+   "landing_successes": 1,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f026",
+   "flight_label": "26",
+   "date_utc": "2016-06-15",
+   "time_utc": "14:29:00",
+   "booster_family": "F9 FT",
+   "booster_serials": [
+    "B1024"
+   ],
+   "booster_version_raw": "F9 FT B1024",
+   "launch_site_raw": "CCAFS LC-40",
+   "launch_site_id": "ccsfs_slc40",
+   "payload": "ABS-2A Eutelsat 117 West B",
+   "payload_mass_kg": 3600.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "3,600",
+   "orbit_raw": "GTO",
+   "orbit_class": "gto",
+   "customer_raw": "ABS Eutelsat",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "Failure (drone ship)",
+   "landings": [
+    {
+     "raw": "Failure  (drone ship)",
+     "result": "failure",
+     "location": "drone_ship"
+    }
+   ],
+   "landing_attempts": 1,
+   "landing_successes": 0,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f027",
+   "flight_label": "27",
+   "date_utc": "2016-07-18",
+   "time_utc": "04:45:00",
+   "booster_family": "F9 FT",
+   "booster_serials": [
+    "B1025.1"
+   ],
+   "booster_version_raw": "F9 FT B1025.1",
+   "launch_site_raw": "CCAFS LC-40",
+   "launch_site_id": "ccsfs_slc40",
+   "payload": "SpaceX CRS-9",
+   "payload_mass_kg": 2257.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "2,257",
+   "orbit_raw": "LEO (ISS)",
+   "orbit_class": "leo_iss",
+   "customer_raw": "NASA (CRS)",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "Success (ground pad)",
+   "landings": [
+    {
+     "raw": "Success (ground pad)",
+     "result": "success",
+     "location": "ground_pad"
+    }
+   ],
+   "landing_attempts": 1,
+   "landing_successes": 1,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f028",
+   "flight_label": "28",
+   "date_utc": "2016-08-14",
+   "time_utc": "05:26:00",
+   "booster_family": "F9 FT",
+   "booster_serials": [
+    "B1026"
+   ],
+   "booster_version_raw": "F9 FT B1026",
+   "launch_site_raw": "CCAFS LC-40",
+   "launch_site_id": "ccsfs_slc40",
+   "payload": "JCSAT-16",
+   "payload_mass_kg": 4600.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "4,600",
+   "orbit_raw": "GTO",
+   "orbit_class": "gto",
+   "customer_raw": "SKY Perfect JSAT Group",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "Success (drone ship)",
+   "landings": [
+    {
+     "raw": "Success (drone ship)",
+     "result": "success",
+     "location": "drone_ship"
+    }
+   ],
+   "landing_attempts": 1,
+   "landing_successes": 1,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f029",
+   "flight_label": "29",
+   "date_utc": "2017-01-14",
+   "time_utc": "17:54:00",
+   "booster_family": "F9 FT",
+   "booster_serials": [
+    "B1029.1"
+   ],
+   "booster_version_raw": "F9 FT B1029.1",
+   "launch_site_raw": "VAFB SLC-4E",
+   "launch_site_id": "vsfb_slc4e",
+   "payload": "Iridium NEXT 1",
+   "payload_mass_kg": 9600.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "9,600",
+   "orbit_raw": "Polar LEO",
+   "orbit_class": "polar_leo",
+   "customer_raw": "Iridium Communications",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "Success (drone ship)",
+   "landings": [
+    {
+     "raw": "Success  (drone ship)",
+     "result": "success",
+     "location": "drone_ship"
+    }
+   ],
+   "landing_attempts": 1,
+   "landing_successes": 1,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f030",
+   "flight_label": "30",
+   "date_utc": "2017-02-19",
+   "time_utc": "14:39:00",
+   "booster_family": "F9 FT",
+   "booster_serials": [
+    "B1031.1"
+   ],
+   "booster_version_raw": "F9 FT B1031.1",
+   "launch_site_raw": "KSC LC-39A",
+   "launch_site_id": "ksc_lc39a",
+   "payload": "SpaceX CRS-10",
+   "payload_mass_kg": 2490.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "2,490",
+   "orbit_raw": "LEO (ISS)",
+   "orbit_class": "leo_iss",
+   "customer_raw": "NASA (CRS)",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "Success (ground pad)",
+   "landings": [
+    {
+     "raw": "Success (ground pad)",
+     "result": "success",
+     "location": "ground_pad"
+    }
+   ],
+   "landing_attempts": 1,
+   "landing_successes": 1,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f031",
+   "flight_label": "31",
+   "date_utc": "2017-03-16",
+   "time_utc": "06:00:00",
+   "booster_family": "F9 FT",
+   "booster_serials": [
+    "B1030"
+   ],
+   "booster_version_raw": "F9 FT B1030",
+   "launch_site_raw": "KSC LC-39A",
+   "launch_site_id": "ksc_lc39a",
+   "payload": "EchoStar 23",
+   "payload_mass_kg": 5600.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "5,600",
+   "orbit_raw": "GTO",
+   "orbit_class": "gto",
+   "customer_raw": "EchoStar",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "No attempt",
+   "landings": [
+    {
+     "raw": "No attempt",
+     "result": "no_attempt",
+     "location": null
+    }
+   ],
+   "landing_attempts": 0,
+   "landing_successes": 0,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f032",
+   "flight_label": "32",
+   "date_utc": "2017-03-30",
+   "time_utc": "22:27:00",
+   "booster_family": "F9 FT",
+   "booster_serials": [
+    "B1021.2"
+   ],
+   "booster_version_raw": "F9 FT B1021.2",
+   "launch_site_raw": "KSC LC-39A",
+   "launch_site_id": "ksc_lc39a",
+   "payload": "SES-10",
+   "payload_mass_kg": 5300.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "5,300",
+   "orbit_raw": "GTO",
+   "orbit_class": "gto",
+   "customer_raw": "SES",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "Success (drone ship)",
+   "landings": [
+    {
+     "raw": "Success (drone ship)",
+     "result": "success",
+     "location": "drone_ship"
+    }
+   ],
+   "landing_attempts": 1,
+   "landing_successes": 1,
+   "booster_flight_number": 2,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f033",
+   "flight_label": "33",
+   "date_utc": "2017-05-01",
+   "time_utc": "11:15:00",
+   "booster_family": "F9 FT",
+   "booster_serials": [
+    "B1032.1"
+   ],
+   "booster_version_raw": "F9 FT B1032.1",
+   "launch_site_raw": "KSC LC-39A",
+   "launch_site_id": "ksc_lc39a",
+   "payload": "NROL-76",
+   "payload_mass_kg": null,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "Classified",
+   "orbit_raw": "LEO",
+   "orbit_class": "leo",
+   "customer_raw": "NRO",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "Success (ground pad)",
+   "landings": [
+    {
+     "raw": "Success (ground pad)",
+     "result": "success",
+     "location": "ground_pad"
+    }
+   ],
+   "landing_attempts": 1,
+   "landing_successes": 1,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f034",
+   "flight_label": "34",
+   "date_utc": "2017-05-15",
+   "time_utc": "23:21:00",
+   "booster_family": "F9 FT",
+   "booster_serials": [
+    "B1034"
+   ],
+   "booster_version_raw": "F9 FT B1034",
+   "launch_site_raw": "KSC LC-39A",
+   "launch_site_id": "ksc_lc39a",
+   "payload": "Inmarsat-5 F4",
+   "payload_mass_kg": 6070.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "6,070",
+   "orbit_raw": "GTO",
+   "orbit_class": "gto",
+   "customer_raw": "Inmarsat",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "No attempt",
+   "landings": [
+    {
+     "raw": "No attempt",
+     "result": "no_attempt",
+     "location": null
+    }
+   ],
+   "landing_attempts": 0,
+   "landing_successes": 0,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f035",
+   "flight_label": "35",
+   "date_utc": "2017-06-03",
+   "time_utc": "21:07:00",
+   "booster_family": "F9 FT",
+   "booster_serials": [
+    "B1035.1"
+   ],
+   "booster_version_raw": "F9 FT B1035.1",
+   "launch_site_raw": "KSC LC-39A",
+   "launch_site_id": "ksc_lc39a",
+   "payload": "SpaceX CRS-11",
+   "payload_mass_kg": 2708.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "2,708",
+   "orbit_raw": "LEO (ISS)",
+   "orbit_class": "leo_iss",
+   "customer_raw": "NASA (CRS)",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "Success (ground pad)",
+   "landings": [
+    {
+     "raw": "Success (ground pad)",
+     "result": "success",
+     "location": "ground_pad"
+    }
+   ],
+   "landing_attempts": 1,
+   "landing_successes": 1,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f036",
+   "flight_label": "36",
+   "date_utc": "2017-06-23",
+   "time_utc": "19:10:00",
+   "booster_family": "F9 FT",
+   "booster_serials": [
+    "B1029.2"
+   ],
+   "booster_version_raw": "F9 FT B1029.2",
+   "launch_site_raw": "KSC LC-39A",
+   "launch_site_id": "ksc_lc39a",
+   "payload": "BulgariaSat-1",
+   "payload_mass_kg": 3669.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "3,669",
+   "orbit_raw": "GTO",
+   "orbit_class": "gto",
+   "customer_raw": "Bulsatcom",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "Success (drone ship)",
+   "landings": [
+    {
+     "raw": "Success (drone ship)",
+     "result": "success",
+     "location": "drone_ship"
+    }
+   ],
+   "landing_attempts": 1,
+   "landing_successes": 1,
+   "booster_flight_number": 2,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f037",
+   "flight_label": "37",
+   "date_utc": "2017-06-25",
+   "time_utc": "20:25:00",
+   "booster_family": "F9 FT",
+   "booster_serials": [
+    "B1036.1"
+   ],
+   "booster_version_raw": "F9 FT B1036.1",
+   "launch_site_raw": "VAFB SLC-4E",
+   "launch_site_id": "vsfb_slc4e",
+   "payload": "Iridium NEXT 2",
+   "payload_mass_kg": 9600.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "9,600",
+   "orbit_raw": "LEO",
+   "orbit_class": "leo",
+   "customer_raw": "Iridium Communications",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "Success (drone ship)",
+   "landings": [
+    {
+     "raw": "Success (drone ship)",
+     "result": "success",
+     "location": "drone_ship"
+    }
+   ],
+   "landing_attempts": 1,
+   "landing_successes": 1,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f038",
+   "flight_label": "38",
+   "date_utc": "2017-07-05",
+   "time_utc": "23:38:00",
+   "booster_family": "F9 FT",
+   "booster_serials": [
+    "B1037"
+   ],
+   "booster_version_raw": "F9 FT B1037",
+   "launch_site_raw": "KSC LC-39A",
+   "launch_site_id": "ksc_lc39a",
+   "payload": "Intelsat 35e",
+   "payload_mass_kg": 6761.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "6,761",
+   "orbit_raw": "GTO",
+   "orbit_class": "gto",
+   "customer_raw": "Intelsat",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "No attempt",
+   "landings": [
+    {
+     "raw": "No attempt",
+     "result": "no_attempt",
+     "location": null
+    }
+   ],
+   "landing_attempts": 0,
+   "landing_successes": 0,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f039",
+   "flight_label": "39",
+   "date_utc": "2017-08-14",
+   "time_utc": "16:31:00",
+   "booster_family": "F9 B4",
+   "booster_serials": [
+    "B1039.1"
+   ],
+   "booster_version_raw": "F9 B4 B1039.1",
+   "launch_site_raw": "KSC LC-39A",
+   "launch_site_id": "ksc_lc39a",
+   "payload": "SpaceX CRS-12",
+   "payload_mass_kg": 3310.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "3,310",
+   "orbit_raw": "LEO (ISS)",
+   "orbit_class": "leo_iss",
+   "customer_raw": "NASA (CRS)",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "Success (ground pad)",
+   "landings": [
+    {
+     "raw": "Success (ground pad)",
+     "result": "success",
+     "location": "ground_pad"
+    }
+   ],
+   "landing_attempts": 1,
+   "landing_successes": 1,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f040",
+   "flight_label": "40",
+   "date_utc": "2017-08-24",
+   "time_utc": "18:51:00",
+   "booster_family": "F9 FT",
+   "booster_serials": [
+    "B1038.1"
+   ],
+   "booster_version_raw": "F9 FT B1038.1",
+   "launch_site_raw": "VAFB SLC-4E",
+   "launch_site_id": "vsfb_slc4e",
+   "payload": "Formosat-5",
+   "payload_mass_kg": 475.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "475",
+   "orbit_raw": "SSO",
+   "orbit_class": "sso",
+   "customer_raw": "NSPO",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "Success (drone ship)",
+   "landings": [
+    {
+     "raw": "Success (drone ship)",
+     "result": "success",
+     "location": "drone_ship"
+    }
+   ],
+   "landing_attempts": 1,
+   "landing_successes": 1,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f041",
+   "flight_label": "41",
+   "date_utc": "2017-09-07",
+   "time_utc": "14:00:00",
+   "booster_family": "F9 B4",
+   "booster_serials": [
+    "B1040.1"
+   ],
+   "booster_version_raw": "F9 B4 B1040.1",
+   "launch_site_raw": "KSC LC-39A",
+   "launch_site_id": "ksc_lc39a",
+   "payload": "Boeing X-37B OTV-5",
+   "payload_mass_kg": 4990.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "4,990",
+   "orbit_raw": "LEO",
+   "orbit_class": "leo",
+   "customer_raw": "U.S. Air Force",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "Success (ground pad)",
+   "landings": [
+    {
+     "raw": "Success (ground pad)",
+     "result": "success",
+     "location": "ground_pad"
+    }
+   ],
+   "landing_attempts": 1,
+   "landing_successes": 1,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f042",
+   "flight_label": "42",
+   "date_utc": "2017-10-09",
+   "time_utc": "12:37:00",
+   "booster_family": "F9 B4",
+   "booster_serials": [
+    "B1041.1"
+   ],
+   "booster_version_raw": "F9 B4 B1041.1",
+   "launch_site_raw": "VAFB SLC-4E",
+   "launch_site_id": "vsfb_slc4e",
+   "payload": "Iridium NEXT 3",
+   "payload_mass_kg": 9600.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "9,600",
+   "orbit_raw": "Polar LEO",
+   "orbit_class": "polar_leo",
+   "customer_raw": "Iridium Communications",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "Success (drone ship)",
+   "landings": [
+    {
+     "raw": "Success (drone ship)",
+     "result": "success",
+     "location": "drone_ship"
+    }
+   ],
+   "landing_attempts": 1,
+   "landing_successes": 1,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f043",
+   "flight_label": "43",
+   "date_utc": "2017-10-11",
+   "time_utc": "22:53:00",
+   "booster_family": "F9 FT",
+   "booster_serials": [
+    "B1031.2"
+   ],
+   "booster_version_raw": "F9 FT B1031.2",
+   "launch_site_raw": "KSC LC-39A",
+   "launch_site_id": "ksc_lc39a",
+   "payload": "SES-11 / EchoStar 105",
+   "payload_mass_kg": 5200.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "5,200",
+   "orbit_raw": "GTO",
+   "orbit_class": "gto",
+   "customer_raw": "SES EchoStar",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "Success (drone ship)",
+   "landings": [
+    {
+     "raw": "Success (drone ship)",
+     "result": "success",
+     "location": "drone_ship"
+    }
+   ],
+   "landing_attempts": 1,
+   "landing_successes": 1,
+   "booster_flight_number": 2,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f044",
+   "flight_label": "44",
+   "date_utc": "2017-10-30",
+   "time_utc": "19:34:00",
+   "booster_family": "F9 B4",
+   "booster_serials": [
+    "B1042.1"
+   ],
+   "booster_version_raw": "F9 B4 B1042.1",
+   "launch_site_raw": "KSC LC-39A",
+   "launch_site_id": "ksc_lc39a",
+   "payload": "Koreasat 5A",
+   "payload_mass_kg": 3500.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "3,500",
+   "orbit_raw": "GTO",
+   "orbit_class": "gto",
+   "customer_raw": "KT Corporation",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "Success (drone ship)",
+   "landings": [
+    {
+     "raw": "Success (drone ship)",
+     "result": "success",
+     "location": "drone_ship"
+    }
+   ],
+   "landing_attempts": 1,
+   "landing_successes": 1,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f045",
+   "flight_label": "45",
+   "date_utc": "2017-12-15",
+   "time_utc": "15:36:00",
+   "booster_family": "F9 FT",
+   "booster_serials": [
+    "B1035.2"
+   ],
+   "booster_version_raw": "F9 FT B1035.2",
+   "launch_site_raw": "CCAFS SLC-40",
+   "launch_site_id": "ccsfs_slc40",
+   "payload": "SpaceX CRS-13",
+   "payload_mass_kg": 2205.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "2,205",
+   "orbit_raw": "LEO (ISS)",
+   "orbit_class": "leo_iss",
+   "customer_raw": "NASA (CRS)",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "Success (ground pad)",
+   "landings": [
+    {
+     "raw": "Success (ground pad)",
+     "result": "success",
+     "location": "ground_pad"
+    }
+   ],
+   "landing_attempts": 1,
+   "landing_successes": 1,
+   "booster_flight_number": 2,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f046",
+   "flight_label": "46",
+   "date_utc": "2017-12-23",
+   "time_utc": "01:27:00",
+   "booster_family": "F9 FT",
+   "booster_serials": [
+    "B1036.2"
+   ],
+   "booster_version_raw": "F9 FT B1036.2",
+   "launch_site_raw": "VAFB SLC-4E",
+   "launch_site_id": "vsfb_slc4e",
+   "payload": "Iridium NEXT 4",
+   "payload_mass_kg": 9600.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "9,600",
+   "orbit_raw": "Polar LEO",
+   "orbit_class": "polar_leo",
+   "customer_raw": "Iridium Communications",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "Controlled (ocean)",
+   "landings": [
+    {
+     "raw": "Controlled (ocean)",
+     "result": "controlled",
+     "location": "ocean"
+    }
+   ],
+   "landing_attempts": 0,
+   "landing_successes": 0,
+   "booster_flight_number": 2,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f047",
+   "flight_label": "47",
+   "date_utc": "2018-01-08",
+   "time_utc": "01:00:00",
+   "booster_family": "F9 B4",
+   "booster_serials": [
+    "B1043.1"
+   ],
+   "booster_version_raw": "F9 B4 B1043.1",
+   "launch_site_raw": "CCAFS SLC-40",
+   "launch_site_id": "ccsfs_slc40",
+   "payload": "Zuma",
+   "payload_mass_kg": null,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "Classified",
+   "orbit_raw": "LEO",
+   "orbit_class": "leo",
+   "customer_raw": "Northrop Grumman",
+   "mission_outcome_raw": "Success (payload status unclear)",
+   "mission_outcome": "success_payload_unclear",
+   "landing_outcome_raw": "Success (ground pad)",
+   "landings": [
+    {
+     "raw": "Success (ground pad)",
+     "result": "success",
+     "location": "ground_pad"
+    }
+   ],
+   "landing_attempts": 1,
+   "landing_successes": 1,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f048",
+   "flight_label": "48",
+   "date_utc": "2018-01-31",
+   "time_utc": "21:25:00",
+   "booster_family": "F9 FT",
+   "booster_serials": [
+    "B1032.2"
+   ],
+   "booster_version_raw": "F9 FT B1032.2",
+   "launch_site_raw": "CCAFS SLC-40",
+   "launch_site_id": "ccsfs_slc40",
+   "payload": "GovSat-1 / SES-16",
+   "payload_mass_kg": 4230.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "4,230",
+   "orbit_raw": "GTO",
+   "orbit_class": "gto",
+   "customer_raw": "SES",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "Controlled (ocean)",
+   "landings": [
+    {
+     "raw": "Controlled (ocean)",
+     "result": "controlled",
+     "location": "ocean"
+    }
+   ],
+   "landing_attempts": 0,
+   "landing_successes": 0,
+   "booster_flight_number": 2,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_fh01",
+   "flight_label": "FH 1",
+   "date_utc": "2018-02-06",
+   "time_utc": "20:45:00",
+   "booster_family": "FH",
+   "booster_serials": [
+    "B1023.2",
+    "B1033",
+    "B1025.2"
+   ],
+   "booster_version_raw": "B1023.2 (side) , Heavy core B1033, B1025.2 (side)",
+   "launch_site_raw": "KSC LC-39A",
+   "launch_site_id": "ksc_lc39a",
+   "payload": "Elon Musk's Tesla Roadster",
+   "payload_mass_kg": 1250.0,
+   "payload_mass_approximate": true,
+   "payload_mass_raw": "~1,250",
+   "orbit_raw": "Heliocentric 0.99–1.67 AU  (close to Mars transfer orbit)",
+   "orbit_class": "heliocentric",
+   "customer_raw": "SpaceX",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "Success (ground pad), Failure (drone ship), Success (ground pad)",
+   "landings": [
+    {
+     "raw": "Success (ground pad)",
+     "result": "success",
+     "location": "ground_pad"
+    },
+    {
+     "raw": "Failure (drone ship)",
+     "result": "failure",
+     "location": "drone_ship"
+    },
+    {
+     "raw": "Success (ground pad)",
+     "result": "success",
+     "location": "ground_pad"
+    }
+   ],
+   "landing_attempts": 3,
+   "landing_successes": 2,
+   "booster_flight_number": 2,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f049",
+   "flight_label": "49",
+   "date_utc": "2018-02-22",
+   "time_utc": "14:17:00",
+   "booster_family": "F9 FT",
+   "booster_serials": [
+    "B1038.2"
+   ],
+   "booster_version_raw": "F9 FT B1038.2",
+   "launch_site_raw": "VAFB SLC-4E",
+   "launch_site_id": "vsfb_slc4e",
+   "payload": "Paz Tintin A & B",
+   "payload_mass_kg": 2150.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "2,150",
+   "orbit_raw": "SSO",
+   "orbit_class": "sso",
+   "customer_raw": "Hisdesat exactEarth SpaceX",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "No attempt",
+   "landings": [
+    {
+     "raw": "No attempt",
+     "result": "no_attempt",
+     "location": null
+    }
+   ],
+   "landing_attempts": 0,
+   "landing_successes": 0,
+   "booster_flight_number": 2,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f050",
+   "flight_label": "50",
+   "date_utc": "2018-03-06",
+   "time_utc": "05:33:00",
+   "booster_family": "F9 B4",
+   "booster_serials": [
+    "B1044"
+   ],
+   "booster_version_raw": "F9 B4 B1044",
+   "launch_site_raw": "CCAFS SLC-40",
+   "launch_site_id": "ccsfs_slc40",
+   "payload": "Hispasat 30W-6 PODSat",
+   "payload_mass_kg": 6092.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "6,092",
+   "orbit_raw": "GTO",
+   "orbit_class": "gto",
+   "customer_raw": "Hispasat NovaWurks",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "No attempt",
+   "landings": [
+    {
+     "raw": "No attempt",
+     "result": "no_attempt",
+     "location": null
+    }
+   ],
+   "landing_attempts": 0,
+   "landing_successes": 0,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f051",
+   "flight_label": "51",
+   "date_utc": "2018-03-30",
+   "time_utc": "14:14:00",
+   "booster_family": "F9 B4",
+   "booster_serials": [
+    "B1041.2"
+   ],
+   "booster_version_raw": "F9 B4 B1041.2",
+   "launch_site_raw": "VAFB SLC-4E",
+   "launch_site_id": "vsfb_slc4e",
+   "payload": "Iridium NEXT 5",
+   "payload_mass_kg": 9600.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "9,600",
+   "orbit_raw": "Polar LEO",
+   "orbit_class": "polar_leo",
+   "customer_raw": "Iridium Communications",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "No attempt",
+   "landings": [
+    {
+     "raw": "No attempt",
+     "result": "no_attempt",
+     "location": null
+    }
+   ],
+   "landing_attempts": 0,
+   "landing_successes": 0,
+   "booster_flight_number": 2,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f052",
+   "flight_label": "52",
+   "date_utc": "2018-04-02",
+   "time_utc": "20:30:00",
+   "booster_family": "F9 B4",
+   "booster_serials": [
+    "B1039.2"
+   ],
+   "booster_version_raw": "F9 B4 B1039.2",
+   "launch_site_raw": "CCAFS SLC-40",
+   "launch_site_id": "ccsfs_slc40",
+   "payload": "SpaceX CRS-14",
+   "payload_mass_kg": 2647.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "2,647",
+   "orbit_raw": "LEO (ISS)",
+   "orbit_class": "leo_iss",
+   "customer_raw": "NASA (CRS)",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "No attempt",
+   "landings": [
+    {
+     "raw": "No attempt",
+     "result": "no_attempt",
+     "location": null
+    }
+   ],
+   "landing_attempts": 0,
+   "landing_successes": 0,
+   "booster_flight_number": 2,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f053",
+   "flight_label": "53",
+   "date_utc": "2018-04-18",
+   "time_utc": "22:51:00",
+   "booster_family": "F9 B4",
+   "booster_serials": [
+    "B1045.1"
+   ],
+   "booster_version_raw": "F9 B4 B1045.1",
+   "launch_site_raw": "CCAFS SLC-40",
+   "launch_site_id": "ccsfs_slc40",
+   "payload": "Transiting Exoplanet Survey Satellite (TESS)",
+   "payload_mass_kg": 362.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "362",
+   "orbit_raw": "HEO",
+   "orbit_class": "heo",
+   "customer_raw": "NASA (LSP)",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "Success (drone ship)",
+   "landings": [
+    {
+     "raw": "Success (drone ship)",
+     "result": "success",
+     "location": "drone_ship"
+    }
+   ],
+   "landing_attempts": 1,
+   "landing_successes": 1,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f054",
+   "flight_label": "54",
+   "date_utc": "2018-05-11",
+   "time_utc": "20:14:00",
+   "booster_family": "F9 B5",
+   "booster_serials": [
+    "B1046.1"
+   ],
+   "booster_version_raw": "F9 B5 B1046.1",
+   "launch_site_raw": "KSC LC-39A",
+   "launch_site_id": "ksc_lc39a",
+   "payload": "Bangabandhu-1",
+   "payload_mass_kg": 3600.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "3,600",
+   "orbit_raw": "GTO",
+   "orbit_class": "gto",
+   "customer_raw": "Thales-Alenia/BTRC",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "Success (drone ship)",
+   "landings": [
+    {
+     "raw": "Success (drone ship)",
+     "result": "success",
+     "location": "drone_ship"
+    }
+   ],
+   "landing_attempts": 1,
+   "landing_successes": 1,
+   "booster_flight_number": 1,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f055",
+   "flight_label": "55",
+   "date_utc": "2018-05-22",
+   "time_utc": "19:47:58",
+   "booster_family": "F9 B4",
+   "booster_serials": [
+    "B1043.2"
+   ],
+   "booster_version_raw": "F9 B4 B1043.2",
+   "launch_site_raw": "VAFB SLC-4E",
+   "launch_site_id": "vsfb_slc4e",
+   "payload": "Iridium NEXT 6 GRACE-FO 1, 2",
+   "payload_mass_kg": 6460.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "6,460",
+   "orbit_raw": "Polar LEO",
+   "orbit_class": "polar_leo",
+   "customer_raw": "Iridium Communications GFZ • NASA",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "No attempt",
+   "landings": [
+    {
+     "raw": "No attempt",
+     "result": "no_attempt",
+     "location": null
+    }
+   ],
+   "landing_attempts": 0,
+   "landing_successes": 0,
+   "booster_flight_number": 2,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  },
+  {
+   "id": "spx_f056",
+   "flight_label": "56",
+   "date_utc": "2018-06-04",
+   "time_utc": "04:45:00",
+   "booster_family": "F9 B4",
+   "booster_serials": [
+    "B1040.2"
+   ],
+   "booster_version_raw": "F9 B4 B1040.2",
+   "launch_site_raw": "CCAFS SLC-40",
+   "launch_site_id": "ccsfs_slc40",
+   "payload": "SES-12",
+   "payload_mass_kg": 5384.0,
+   "payload_mass_approximate": false,
+   "payload_mass_raw": "5,384",
+   "orbit_raw": "GTO",
+   "orbit_class": "gto",
+   "customer_raw": "SES",
+   "mission_outcome_raw": "Success",
+   "mission_outcome": "success",
+   "landing_outcome_raw": "No attempt",
+   "landings": [
+    {
+     "raw": "No attempt",
+     "result": "no_attempt",
+     "location": null
+    }
+   ],
+   "landing_attempts": 0,
+   "landing_successes": 0,
+   "booster_flight_number": 2,
+   "record_type": "historical",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S36"
+   ],
+   "retrieval_status": "user_supplied_not_independently_verified"
+  }
+ ],
+ "input_file": "data_raw/spacex_launch_data.csv",
+ "input_sha256": "8cf4733ad11e4d178e24487b3441071b45d8b065f3508a6457b357f7ad3b6ce8"
+}

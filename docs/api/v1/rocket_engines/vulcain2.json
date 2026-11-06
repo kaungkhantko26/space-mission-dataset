@@ -1,0 +1,32 @@
+{
+ "collection": "rocket_engines",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "vulcain2",
+  "name": "Vulcain 2",
+  "maker": "ArianeGroup",
+  "type": "liquid",
+  "propellant": "LOX/LH2",
+  "thrust_vac_n": 1359000,
+  "thrust_sl_n": 960000,
+  "isp_vac_s": 431,
+  "isp_sl_s": 310,
+  "dry_mass_kg": null,
+  "burn_s": null,
+  "restart": false,
+  "status": "operational",
+  "power_w": null,
+  "note": "Variant 2.1 on Ariane 6 differs slightly.",
+  "source_ids": [
+   "S11"
+  ],
+  "confidence": "low",
+  "data_class": "unverified",
+  "retrieval_status": "not_retrieved",
+  "derived": {
+   "mass_flow_vac_kg_s": 321.5300077580057,
+   "mass_flow_sl_kg_s": 315.78308530929394
+  },
+  "derived_from": "mdot=F/(Isp*g0); TWR=F/(m*g0); thrust/power"
+ }
+}

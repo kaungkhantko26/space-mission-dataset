@@ -1,0 +1,57 @@
+{
+ "collection": "experiments",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "opt_leo_eo_max_science",
+  "scenario_id": "leo_eo",
+  "objective": "max_science",
+  "objective_name": "Maximum science within budget",
+  "objective_field": "science",
+  "sense": "maximize",
+  "feasibility_status": "feasible_optimum_found",
+  "solver": "exhaustive enumeration (deterministic; ties: cost, mass, design string)",
+  "optimality_claim": "global optimum within the finite catalog and model; NOT a claim about all possible spacecraft",
+  "objective_value": 18.0,
+  "result": {
+   "feasible": true,
+   "violations": [],
+   "wet_kg": 74.4908124078737,
+   "dry_kg": 68.82701344688199,
+   "prop_kg": 5.2442582972145475,
+   "cost": 9525.201914704008,
+   "science": 18.0,
+   "avg_power_w": 34.97142857142857,
+   "inst_mass": 21.5,
+   "array_w_bol": 71.65140410200186,
+   "array_area_m2": 0.41291094553890223,
+   "battery_wh": 77.04950984292495,
+   "link_rate_bps": 100000000.0,
+   "link_margin_db": 49.98515115904149,
+   "data_gen_bits_day": 203731200000.0,
+   "data_down_bits_day": 230400000000.0,
+   "electric_burn_days": null,
+   "margin_min": 0.206233173774666,
+   "mass_margin": 0.7241081021930603,
+   "budget_margin": 0.206233173774666
+  },
+  "selected_components": {
+   "instruments": [
+    "thermal_imager",
+    "gnss_ro",
+    "small_cam",
+    "magnetometer",
+    "rad_detector"
+   ],
+   "computer": "cpu_cots",
+   "comm": "hga1_x_20w",
+   "array": "sa_si",
+   "battery": "bat_li_ion",
+   "propulsion": "mono_n2h4",
+   "vehicle": "electron"
+  },
+  "input_dataset_version": "0.1.0",
+  "seed": null,
+  "data_class": "derived",
+  "inputs_data_class": "estimated+fictional"
+ }
+}

@@ -1,0 +1,37 @@
+{
+ "collection": "planets",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "neptune",
+  "name": "Neptune",
+  "category": "planet",
+  "parent_id": "sun",
+  "mu_m3_s2": 6835100000000000.0,
+  "gravitational_parameter_km3_s2": 6835100.0,
+  "mean_radius_m": 24622000.0,
+  "equatorial_radius_m": 24764000.0,
+  "mass_kg": 1.02413e+26,
+  "surface_gravity_m_s2": 11.15,
+  "rotation_period_h": 16.11,
+  "semi_major_axis_m": 4498396417009.467,
+  "eccentricity": 0.00859048,
+  "inclination_deg": 1.77004347,
+  "orbital_period_days": 60182.0,
+  "mean_surface_temperature_k": 72,
+  "equatorial_magnetic_field_t": 1.41e-05,
+  "derived": {
+   "escape_velocity_m_s": 23562.73889606159,
+   "circular_velocity_surface_m_s": 16661.372456733177,
+   "gravity_from_mu_m_s2": 11.27452408991905,
+   "derived_from": "v_esc=sqrt(2*mu/R_mean); v_circ=sqrt(mu/R_mean); g=mu/R^2 (spherical, non-rotating approximation)",
+   "solar_irradiance_w_m2": 1.5051975409059468
+  },
+  "data_class": "unverified",
+  "confidence": "medium",
+  "source_ids": [
+   "S01",
+   "S02"
+  ],
+  "retrieval_status": "not_retrieved"
+ }
+}

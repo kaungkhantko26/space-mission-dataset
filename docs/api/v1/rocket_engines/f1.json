@@ -1,0 +1,33 @@
+{
+ "collection": "rocket_engines",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "f1",
+  "name": "F-1",
+  "maker": "Rocketdyne",
+  "type": "liquid",
+  "propellant": "LOX/RP-1",
+  "thrust_vac_n": 7770000,
+  "thrust_sl_n": 6770000,
+  "isp_vac_s": 304,
+  "isp_sl_s": 263,
+  "dry_mass_kg": 8400,
+  "burn_s": 165,
+  "restart": false,
+  "status": "historical",
+  "power_w": null,
+  "note": "Saturn V S-IC; five engines.",
+  "source_ids": [
+   "S09"
+  ],
+  "confidence": "medium",
+  "data_class": "unverified",
+  "retrieval_status": "not_retrieved",
+  "derived": {
+   "mass_flow_vac_kg_s": 2606.3141364600338,
+   "engine_thrust_to_weight_vac": 94.32374970045836,
+   "mass_flow_sl_kg_s": 2624.896867627595
+  },
+  "derived_from": "mdot=F/(Isp*g0); TWR=F/(m*g0); thrust/power"
+ }
+}

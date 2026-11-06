@@ -1,0 +1,26 @@
+{
+ "collection": "rocket_stages",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "f9_s2",
+  "vehicle_id": "falcon9_b5",
+  "stage": "Stage 2",
+  "dry_mass_kg": 4000,
+  "propellant_mass_kg": 92670,
+  "engine_id": "mvac",
+  "n_engines": 1,
+  "note": "",
+  "source_ids": [
+   "S06"
+  ],
+  "confidence": "medium",
+  "data_class": "unverified",
+  "retrieval_status": "not_retrieved",
+  "derived": {
+   "inert_mass_fraction": 0.04137788352125789,
+   "stage_thrust_vac_n": 981000,
+   "stage_thrust_sl_n": null,
+   "isp_vac_s": 348
+  }
+ }
+}

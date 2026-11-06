@@ -1,0 +1,21 @@
+{
+ "collection": "boosters",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "fh_side",
+  "name": "Falcon Heavy side booster (F9 core derivative)",
+  "vehicle_id": "falcon_heavy",
+  "count": 2,
+  "thrust_sl_n": 7607000,
+  "propellant_mass_kg": 395700,
+  "burn_s": null,
+  "engine_id": "merlin1d",
+  "note": "Equivalent to Falcon 9 stage 1.",
+  "source_ids": [
+   "S06"
+  ],
+  "confidence": "medium",
+  "data_class": "unverified",
+  "retrieval_status": "not_retrieved"
+ }
+}

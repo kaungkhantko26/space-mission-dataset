@@ -1,0 +1,44 @@
+{
+ "collection": "spacex_launches",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "spx_f049",
+  "flight_label": "49",
+  "date_utc": "2018-02-22",
+  "time_utc": "14:17:00",
+  "booster_family": "F9 FT",
+  "booster_serials": [
+   "B1038.2"
+  ],
+  "booster_version_raw": "F9 FT B1038.2",
+  "launch_site_raw": "VAFB SLC-4E",
+  "launch_site_id": "vsfb_slc4e",
+  "payload": "Paz Tintin A & B",
+  "payload_mass_kg": 2150.0,
+  "payload_mass_approximate": false,
+  "payload_mass_raw": "2,150",
+  "orbit_raw": "SSO",
+  "orbit_class": "sso",
+  "customer_raw": "Hisdesat exactEarth SpaceX",
+  "mission_outcome_raw": "Success",
+  "mission_outcome": "success",
+  "landing_outcome_raw": "No attempt",
+  "landings": [
+   {
+    "raw": "No attempt",
+    "result": "no_attempt",
+    "location": null
+   }
+  ],
+  "landing_attempts": 0,
+  "landing_successes": 0,
+  "booster_flight_number": 2,
+  "record_type": "historical",
+  "data_class": "unverified",
+  "confidence": "medium",
+  "source_ids": [
+   "S36"
+  ],
+  "retrieval_status": "user_supplied_not_independently_verified"
+ }
+}

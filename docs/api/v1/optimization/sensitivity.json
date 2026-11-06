@@ -1,0 +1,1012 @@
+{
+ "results": [
+  {
+   "scenario_id": "leo_eo",
+   "parameter": "mga",
+   "description": "mass growth allowance",
+   "value": 0.1,
+   "baseline": {
+    "feasible": 258,
+    "min_mass": 52.94647507860934,
+    "min_cost": 6994.361898299954,
+    "max_science": 18.0
+   },
+   "result": {
+    "feasible": 258,
+    "min_mass": 48.53426882205857,
+    "min_cost": 6993.950323474617,
+    "max_science": 18.0
+   },
+   "delta_min_mass_pct": -8.333333333333314,
+   "delta_min_cost_pct": -0.005884379895142702,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "leo_eo",
+   "parameter": "mga",
+   "description": "mass growth allowance",
+   "value": 0.3,
+   "baseline": {
+    "feasible": 258,
+    "min_mass": 52.94647507860934,
+    "min_cost": 6994.361898299954,
+    "max_science": 18.0
+   },
+   "result": {
+    "feasible": 258,
+    "min_mass": 57.35868133516012,
+    "min_cost": 6994.773473125291,
+    "max_science": 18.0
+   },
+   "delta_min_mass_pct": 8.33333333333334,
+   "delta_min_cost_pct": 0.005884379895142702,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "leo_eo",
+   "parameter": "dv_margin",
+   "description": "delta-v margin",
+   "value": 0.0,
+   "baseline": {
+    "feasible": 258,
+    "min_mass": 52.94647507860934,
+    "min_cost": 6994.361898299954,
+    "max_science": 18.0
+   },
+   "result": {
+    "feasible": 258,
+    "min_mass": 52.74688781070914,
+    "min_cost": 6994.117036684163,
+    "max_science": 18.0
+   },
+   "delta_min_mass_pct": -0.3769604446828103,
+   "delta_min_cost_pct": -0.0035008428124131278,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "leo_eo",
+   "parameter": "dv_margin",
+   "description": "delta-v margin",
+   "value": 0.1,
+   "baseline": {
+    "feasible": 258,
+    "min_mass": 52.94647507860934,
+    "min_cost": 6994.361898299954,
+    "max_science": 18.0
+   },
+   "result": {
+    "feasible": 258,
+    "min_mass": 53.14687798259418,
+    "min_cost": 6994.607760570607,
+    "max_science": 18.0
+   },
+   "delta_min_mass_pct": 0.3785009364406234,
+   "delta_min_cost_pct": 0.0035151494050144924,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "leo_eo",
+   "parameter": "power_margin",
+   "description": "power margin",
+   "value": 0.05,
+   "baseline": {
+    "feasible": 258,
+    "min_mass": 52.94647507860934,
+    "min_cost": 6994.361898299954,
+    "max_science": 18.0
+   },
+   "result": {
+    "feasible": 269,
+    "min_mass": 52.86159366555578,
+    "min_cost": 6924.929278962612,
+    "max_science": 18.0
+   },
+   "delta_min_mass_pct": -0.1603155128411017,
+   "delta_min_cost_pct": -0.9926941205918728,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "leo_eo",
+   "parameter": "power_margin",
+   "description": "power margin",
+   "value": 0.25,
+   "baseline": {
+    "feasible": 258,
+    "min_mass": 52.94647507860934,
+    "min_cost": 6994.361898299954,
+    "max_science": 18.0
+   },
+   "result": {
+    "feasible": 244,
+    "min_mass": 53.031356491662905,
+    "min_cost": 7063.794517637298,
+    "max_science": 18.0
+   },
+   "delta_min_mass_pct": 0.16031551284111514,
+   "delta_min_cost_pct": 0.9926941205918988,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "leo_eo",
+   "parameter": "launch_margin",
+   "description": "launch capacity margin",
+   "value": 0.0,
+   "baseline": {
+    "feasible": 258,
+    "min_mass": 52.94647507860934,
+    "min_cost": 6994.361898299954,
+    "max_science": 18.0
+   },
+   "result": {
+    "feasible": 258,
+    "min_mass": 52.94647507860934,
+    "min_cost": 6994.361898299954,
+    "max_science": 18.0
+   },
+   "delta_min_mass_pct": 0.0,
+   "delta_min_cost_pct": 0.0,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "leo_eo",
+   "parameter": "launch_margin",
+   "description": "launch capacity margin",
+   "value": 0.2,
+   "baseline": {
+    "feasible": 258,
+    "min_mass": 52.94647507860934,
+    "min_cost": 6994.361898299954,
+    "max_science": 18.0
+   },
+   "result": {
+    "feasible": 258,
+    "min_mass": 52.94647507860934,
+    "min_cost": 6994.361898299954,
+    "max_science": 18.0
+   },
+   "delta_min_mass_pct": 0.0,
+   "delta_min_cost_pct": 0.0,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "leo_eo",
+   "parameter": "budget_scale",
+   "description": "budget x",
+   "value": 0.8,
+   "baseline": {
+    "feasible": 258,
+    "min_mass": 52.94647507860934,
+    "min_cost": 6994.361898299954,
+    "max_science": 18.0
+   },
+   "result": {
+    "feasible": 54,
+    "min_mass": 52.94647507860934,
+    "min_cost": 6994.361898299954,
+    "max_science": 18.0
+   },
+   "delta_min_mass_pct": 0.0,
+   "delta_min_cost_pct": 0.0,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "leo_eo",
+   "parameter": "budget_scale",
+   "description": "budget x",
+   "value": 1.2,
+   "baseline": {
+    "feasible": 258,
+    "min_mass": 52.94647507860934,
+    "min_cost": 6994.361898299954,
+    "max_science": 18.0
+   },
+   "result": {
+    "feasible": 519,
+    "min_mass": 52.94647507860934,
+    "min_cost": 6994.361898299954,
+    "max_science": 18.0
+   },
+   "delta_min_mass_pct": 0.0,
+   "delta_min_cost_pct": 0.0,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "leo_eo",
+   "parameter": "gt_shift_db",
+   "description": "ground G/T shift (dB)",
+   "value": -3,
+   "baseline": {
+    "feasible": 258,
+    "min_mass": 52.94647507860934,
+    "min_cost": 6994.361898299954,
+    "max_science": 18.0
+   },
+   "result": {
+    "feasible": 258,
+    "min_mass": 52.94647507860934,
+    "min_cost": 6994.361898299954,
+    "max_science": 18.0
+   },
+   "delta_min_mass_pct": 0.0,
+   "delta_min_cost_pct": 0.0,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "leo_eo",
+   "parameter": "gt_shift_db",
+   "description": "ground G/T shift (dB)",
+   "value": 3,
+   "baseline": {
+    "feasible": 258,
+    "min_mass": 52.94647507860934,
+    "min_cost": 6994.361898299954,
+    "max_science": 18.0
+   },
+   "result": {
+    "feasible": 258,
+    "min_mass": 52.94647507860934,
+    "min_cost": 6994.361898299954,
+    "max_science": 18.0
+   },
+   "delta_min_mass_pct": 0.0,
+   "delta_min_cost_pct": 0.0,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "leo_eo",
+   "parameter": "distance_scale",
+   "description": "comm distance x",
+   "value": 0.5,
+   "baseline": {
+    "feasible": 258,
+    "min_mass": 52.94647507860934,
+    "min_cost": 6994.361898299954,
+    "max_science": 18.0
+   },
+   "result": {
+    "feasible": 258,
+    "min_mass": 52.94647507860934,
+    "min_cost": 6994.361898299954,
+    "max_science": 18.0
+   },
+   "delta_min_mass_pct": 0.0,
+   "delta_min_cost_pct": 0.0,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "leo_eo",
+   "parameter": "distance_scale",
+   "description": "comm distance x",
+   "value": 1.5,
+   "baseline": {
+    "feasible": 258,
+    "min_mass": 52.94647507860934,
+    "min_cost": 6994.361898299954,
+    "max_science": 18.0
+   },
+   "result": {
+    "feasible": 258,
+    "min_mass": 52.94647507860934,
+    "min_cost": 6994.361898299954,
+    "max_science": 18.0
+   },
+   "delta_min_mass_pct": 0.0,
+   "delta_min_cost_pct": 0.0,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "leo_eo",
+   "parameter": "dv_scale",
+   "description": "mission delta-v x",
+   "value": 0.9,
+   "baseline": {
+    "feasible": 258,
+    "min_mass": 52.94647507860934,
+    "min_cost": 6994.361898299954,
+    "max_science": 18.0
+   },
+   "result": {
+    "feasible": 258,
+    "min_mass": 52.52827937600015,
+    "min_cost": 6993.848839142748,
+    "max_science": 18.0
+   },
+   "delta_min_mass_pct": -0.7898461644298256,
+   "delta_min_cost_pct": -0.007335324718195491,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "leo_eo",
+   "parameter": "dv_scale",
+   "description": "mission delta-v x",
+   "value": 1.1,
+   "baseline": {
+    "feasible": 258,
+    "min_mass": 52.94647507860934,
+    "min_cost": 6994.361898299954,
+    "max_science": 18.0
+   },
+   "result": {
+    "feasible": 257,
+    "min_mass": 53.36826776264934,
+    "min_cost": 6994.879370377356,
+    "max_science": 18.0
+   },
+   "delta_min_mass_pct": 0.7966397827499686,
+   "delta_min_cost_pct": 0.007398417252728462,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "lunar_orbiter",
+   "parameter": "mga",
+   "description": "mass growth allowance",
+   "value": 0.1,
+   "baseline": {
+    "feasible": 574,
+    "min_mass": 512.5137471703935,
+    "min_cost": 20950.937541186486,
+    "max_science": 24.0
+   },
+   "result": {
+    "feasible": 596,
+    "min_mass": 469.8042682395273,
+    "min_cost": 20842.162493589152,
+    "max_science": 24.0
+   },
+   "delta_min_mass_pct": -8.333333333333343,
+   "delta_min_cost_pct": -0.5191894032593892,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "lunar_orbiter",
+   "parameter": "mga",
+   "description": "mass growth allowance",
+   "value": 0.3,
+   "baseline": {
+    "feasible": 574,
+    "min_mass": 512.5137471703935,
+    "min_cost": 20950.937541186486,
+    "max_science": 24.0
+   },
+   "result": {
+    "feasible": 549,
+    "min_mass": 555.2232261012595,
+    "min_cost": 21059.712588783816,
+    "max_science": 24.0
+   },
+   "delta_min_mass_pct": 8.333333333333309,
+   "delta_min_cost_pct": 0.5191894032593719,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "lunar_orbiter",
+   "parameter": "dv_margin",
+   "description": "delta-v margin",
+   "value": 0.0,
+   "baseline": {
+    "feasible": 574,
+    "min_mass": 512.5137471703935,
+    "min_cost": 20950.937541186486,
+    "max_science": 24.0
+   },
+   "result": {
+    "feasible": 616,
+    "min_mass": 463.06253731015585,
+    "min_cost": 20713.46233145458,
+    "max_science": 24.0
+   },
+   "delta_min_mass_pct": -9.648757742257548,
+   "delta_min_cost_pct": -1.1334824957836152,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "lunar_orbiter",
+   "parameter": "dv_margin",
+   "description": "delta-v margin",
+   "value": 0.1,
+   "baseline": {
+    "feasible": 574,
+    "min_mass": 512.5137471703935,
+    "min_cost": 20950.937541186486,
+    "max_science": 24.0
+   },
+   "result": {
+    "feasible": 513,
+    "min_mass": 569.4499774674432,
+    "min_cost": 21270.18486170201,
+    "max_science": 23.0
+   },
+   "delta_min_mass_pct": 11.109210359994576,
+   "delta_min_cost_pct": 1.5237853670649917,
+   "delta_max_science_pct": -4.166666666666667
+  },
+  {
+   "scenario_id": "lunar_orbiter",
+   "parameter": "power_margin",
+   "description": "power margin",
+   "value": 0.05,
+   "baseline": {
+    "feasible": 574,
+    "min_mass": 512.5137471703935,
+    "min_cost": 20950.937541186486,
+    "max_science": 24.0
+   },
+   "result": {
+    "feasible": 647,
+    "min_mass": 511.31154940146985,
+    "min_cost": 20759.355507655062,
+    "max_science": 24.0
+   },
+   "delta_min_mass_pct": -0.23456888240773782,
+   "delta_min_cost_pct": -0.9144317916790191,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "lunar_orbiter",
+   "parameter": "power_margin",
+   "description": "power margin",
+   "value": 0.25,
+   "baseline": {
+    "feasible": 574,
+    "min_mass": 512.5137471703935,
+    "min_cost": 20950.937541186486,
+    "max_science": 24.0
+   },
+   "result": {
+    "feasible": 498,
+    "min_mass": 513.7159449393168,
+    "min_cost": 21142.51957471791,
+    "max_science": 24.0
+   },
+   "delta_min_mass_pct": 0.23456888240769347,
+   "delta_min_cost_pct": 0.9144317916790191,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "lunar_orbiter",
+   "parameter": "launch_margin",
+   "description": "launch capacity margin",
+   "value": 0.0,
+   "baseline": {
+    "feasible": 574,
+    "min_mass": 512.5137471703935,
+    "min_cost": 20950.937541186486,
+    "max_science": 24.0
+   },
+   "result": {
+    "feasible": 574,
+    "min_mass": 512.5137471703935,
+    "min_cost": 20950.937541186486,
+    "max_science": 24.0
+   },
+   "delta_min_mass_pct": 0.0,
+   "delta_min_cost_pct": 0.0,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "lunar_orbiter",
+   "parameter": "launch_margin",
+   "description": "launch capacity margin",
+   "value": 0.2,
+   "baseline": {
+    "feasible": 574,
+    "min_mass": 512.5137471703935,
+    "min_cost": 20950.937541186486,
+    "max_science": 24.0
+   },
+   "result": {
+    "feasible": 574,
+    "min_mass": 512.5137471703935,
+    "min_cost": 20950.937541186486,
+    "max_science": 24.0
+   },
+   "delta_min_mass_pct": 0.0,
+   "delta_min_cost_pct": 0.0,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "lunar_orbiter",
+   "parameter": "budget_scale",
+   "description": "budget x",
+   "value": 0.8,
+   "baseline": {
+    "feasible": 574,
+    "min_mass": 512.5137471703935,
+    "min_cost": 20950.937541186486,
+    "max_science": 24.0
+   },
+   "result": {
+    "feasible": 17,
+    "min_mass": 526.6240787159536,
+    "min_cost": 20950.937541186486,
+    "max_science": 17.0
+   },
+   "delta_min_mass_pct": 2.7531615734141344,
+   "delta_min_cost_pct": 0.0,
+   "delta_max_science_pct": -29.166666666666668
+  },
+  {
+   "scenario_id": "lunar_orbiter",
+   "parameter": "budget_scale",
+   "description": "budget x",
+   "value": 1.2,
+   "baseline": {
+    "feasible": 574,
+    "min_mass": 512.5137471703935,
+    "min_cost": 20950.937541186486,
+    "max_science": 24.0
+   },
+   "result": {
+    "feasible": 2303,
+    "min_mass": 512.5137471703935,
+    "min_cost": 20950.937541186486,
+    "max_science": 30.0
+   },
+   "delta_min_mass_pct": 0.0,
+   "delta_min_cost_pct": 0.0,
+   "delta_max_science_pct": 25.0
+  },
+  {
+   "scenario_id": "lunar_orbiter",
+   "parameter": "gt_shift_db",
+   "description": "ground G/T shift (dB)",
+   "value": -3,
+   "baseline": {
+    "feasible": 574,
+    "min_mass": 512.5137471703935,
+    "min_cost": 20950.937541186486,
+    "max_science": 24.0
+   },
+   "result": {
+    "feasible": 574,
+    "min_mass": 512.5137471703935,
+    "min_cost": 20950.937541186486,
+    "max_science": 24.0
+   },
+   "delta_min_mass_pct": 0.0,
+   "delta_min_cost_pct": 0.0,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "lunar_orbiter",
+   "parameter": "gt_shift_db",
+   "description": "ground G/T shift (dB)",
+   "value": 3,
+   "baseline": {
+    "feasible": 574,
+    "min_mass": 512.5137471703935,
+    "min_cost": 20950.937541186486,
+    "max_science": 24.0
+   },
+   "result": {
+    "feasible": 574,
+    "min_mass": 512.5137471703935,
+    "min_cost": 20950.937541186486,
+    "max_science": 24.0
+   },
+   "delta_min_mass_pct": 0.0,
+   "delta_min_cost_pct": 0.0,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "lunar_orbiter",
+   "parameter": "distance_scale",
+   "description": "comm distance x",
+   "value": 0.5,
+   "baseline": {
+    "feasible": 574,
+    "min_mass": 512.5137471703935,
+    "min_cost": 20950.937541186486,
+    "max_science": 24.0
+   },
+   "result": {
+    "feasible": 574,
+    "min_mass": 512.5137471703935,
+    "min_cost": 20950.937541186486,
+    "max_science": 24.0
+   },
+   "delta_min_mass_pct": 0.0,
+   "delta_min_cost_pct": 0.0,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "lunar_orbiter",
+   "parameter": "distance_scale",
+   "description": "comm distance x",
+   "value": 1.5,
+   "baseline": {
+    "feasible": 574,
+    "min_mass": 512.5137471703935,
+    "min_cost": 20950.937541186486,
+    "max_science": 24.0
+   },
+   "result": {
+    "feasible": 574,
+    "min_mass": 512.5137471703935,
+    "min_cost": 20950.937541186486,
+    "max_science": 24.0
+   },
+   "delta_min_mass_pct": 0.0,
+   "delta_min_cost_pct": 0.0,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "lunar_orbiter",
+   "parameter": "dv_scale",
+   "description": "mission delta-v x",
+   "value": 0.9,
+   "baseline": {
+    "feasible": 574,
+    "min_mass": 512.5137471703935,
+    "min_cost": 20950.937541186486,
+    "max_science": 24.0
+   },
+   "result": {
+    "feasible": 652,
+    "min_mass": 415.7723995566315,
+    "min_cost": 20514.634483544833,
+    "max_science": 24.0
+   },
+   "delta_min_mass_pct": -18.875854188863098,
+   "delta_min_cost_pct": -2.0824989659004283,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "lunar_orbiter",
+   "parameter": "dv_scale",
+   "description": "mission delta-v x",
+   "value": 1.1,
+   "baseline": {
+    "feasible": 574,
+    "min_mass": 512.5137471703935,
+    "min_cost": 20950.937541186486,
+    "max_science": 24.0
+   },
+   "result": {
+    "feasible": 429,
+    "min_mass": 642.7492349493077,
+    "min_cost": 21775.077108016063,
+    "max_science": 23.0
+   },
+   "delta_min_mass_pct": 25.411120871966656,
+   "delta_min_cost_pct": 3.9336643775937907,
+   "delta_max_science_pct": -4.166666666666667
+  },
+  {
+   "scenario_id": "mars_orbiter",
+   "parameter": "mga",
+   "description": "mass growth allowance",
+   "value": 0.1,
+   "baseline": {
+    "feasible": 64,
+    "min_mass": 346.8159290493225,
+    "min_cost": 48492.886574806325,
+    "max_science": 22.343102404806807
+   },
+   "result": {
+    "feasible": 64,
+    "min_mass": 317.9146016285457,
+    "min_cost": 48474.688980976585,
+    "max_science": 22.343102404806807
+   },
+   "delta_min_mass_pct": -8.33333333333331,
+   "delta_min_cost_pct": -0.03752631595083129,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "mars_orbiter",
+   "parameter": "mga",
+   "description": "mass growth allowance",
+   "value": 0.3,
+   "baseline": {
+    "feasible": 64,
+    "min_mass": 346.8159290493225,
+    "min_cost": 48492.886574806325,
+    "max_science": 22.343102404806807
+   },
+   "result": {
+    "feasible": 64,
+    "min_mass": 375.7172564700994,
+    "min_cost": 48511.08416863606,
+    "max_science": 22.343102404806807
+   },
+   "delta_min_mass_pct": 8.333333333333343,
+   "delta_min_cost_pct": 0.037526315950816284,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "mars_orbiter",
+   "parameter": "dv_margin",
+   "description": "delta-v margin",
+   "value": 0.0,
+   "baseline": {
+    "feasible": 64,
+    "min_mass": 346.8159290493225,
+    "min_cost": 48492.886574806325,
+    "max_science": 22.343102404806807
+   },
+   "result": {
+    "feasible": 64,
+    "min_mass": 339.9082605279789,
+    "min_cost": 48479.01985074153,
+    "max_science": 22.343102404806807
+   },
+   "delta_min_mass_pct": -1.9917391165621023,
+   "delta_min_cost_pct": -0.02859537768163331,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "mars_orbiter",
+   "parameter": "dv_margin",
+   "description": "delta-v margin",
+   "value": 0.1,
+   "baseline": {
+    "feasible": 64,
+    "min_mass": 346.8159290493225,
+    "min_cost": 48492.886574806325,
+    "max_science": 22.343102404806807
+   },
+   "result": {
+    "feasible": 64,
+    "min_mass": 353.8828305998321,
+    "min_cost": 48507.19937899946,
+    "max_science": 22.343102404806807
+   },
+   "delta_min_mass_pct": 2.0376519526888837,
+   "delta_min_cost_pct": 0.02951526544218972,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "mars_orbiter",
+   "parameter": "power_margin",
+   "description": "power margin",
+   "value": 0.05,
+   "baseline": {
+    "feasible": 64,
+    "min_mass": 346.8159290493225,
+    "min_cost": 48492.886574806325,
+    "max_science": 22.343102404806807
+   },
+   "result": {
+    "feasible": 64,
+    "min_mass": 345.44588554122964,
+    "min_cost": 48145.546161969025,
+    "max_science": 22.343102404806807
+   },
+   "delta_min_mass_pct": -0.3950347701296101,
+   "delta_min_cost_pct": -0.7162708540797721,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "mars_orbiter",
+   "parameter": "power_margin",
+   "description": "power margin",
+   "value": 0.25,
+   "baseline": {
+    "feasible": 64,
+    "min_mass": 346.8159290493225,
+    "min_cost": 48492.886574806325,
+    "max_science": 22.343102404806807
+   },
+   "result": {
+    "feasible": 64,
+    "min_mass": 348.1859725574154,
+    "min_cost": 48840.22698764362,
+    "max_science": 22.343102404806807
+   },
+   "delta_min_mass_pct": 0.39503477012962646,
+   "delta_min_cost_pct": 0.7162708540797571,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "mars_orbiter",
+   "parameter": "launch_margin",
+   "description": "launch capacity margin",
+   "value": 0.0,
+   "baseline": {
+    "feasible": 64,
+    "min_mass": 346.8159290493225,
+    "min_cost": 48492.886574806325,
+    "max_science": 22.343102404806807
+   },
+   "result": {
+    "feasible": 64,
+    "min_mass": 346.8159290493225,
+    "min_cost": 48492.886574806325,
+    "max_science": 22.343102404806807
+   },
+   "delta_min_mass_pct": 0.0,
+   "delta_min_cost_pct": 0.0,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "mars_orbiter",
+   "parameter": "launch_margin",
+   "description": "launch capacity margin",
+   "value": 0.2,
+   "baseline": {
+    "feasible": 64,
+    "min_mass": 346.8159290493225,
+    "min_cost": 48492.886574806325,
+    "max_science": 22.343102404806807
+   },
+   "result": {
+    "feasible": 64,
+    "min_mass": 346.8159290493225,
+    "min_cost": 48492.886574806325,
+    "max_science": 22.343102404806807
+   },
+   "delta_min_mass_pct": 0.0,
+   "delta_min_cost_pct": 0.0,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "mars_orbiter",
+   "parameter": "budget_scale",
+   "description": "budget x",
+   "value": 0.8,
+   "baseline": {
+    "feasible": 64,
+    "min_mass": 346.8159290493225,
+    "min_cost": 48492.886574806325,
+    "max_science": 22.343102404806807
+   },
+   "result": {
+    "feasible": 64,
+    "min_mass": 346.8159290493225,
+    "min_cost": 48492.886574806325,
+    "max_science": 22.343102404806807
+   },
+   "delta_min_mass_pct": 0.0,
+   "delta_min_cost_pct": 0.0,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "mars_orbiter",
+   "parameter": "budget_scale",
+   "description": "budget x",
+   "value": 1.2,
+   "baseline": {
+    "feasible": 64,
+    "min_mass": 346.8159290493225,
+    "min_cost": 48492.886574806325,
+    "max_science": 22.343102404806807
+   },
+   "result": {
+    "feasible": 64,
+    "min_mass": 346.8159290493225,
+    "min_cost": 48492.886574806325,
+    "max_science": 22.343102404806807
+   },
+   "delta_min_mass_pct": 0.0,
+   "delta_min_cost_pct": 0.0,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "mars_orbiter",
+   "parameter": "gt_shift_db",
+   "description": "ground G/T shift (dB)",
+   "value": -3,
+   "baseline": {
+    "feasible": 64,
+    "min_mass": 346.8159290493225,
+    "min_cost": 48492.886574806325,
+    "max_science": 22.343102404806807
+   },
+   "result": {
+    "feasible": 0,
+    "min_mass": null,
+    "min_cost": null,
+    "max_science": null
+   },
+   "delta_min_mass_pct": null,
+   "delta_min_cost_pct": null,
+   "delta_max_science_pct": null
+  },
+  {
+   "scenario_id": "mars_orbiter",
+   "parameter": "gt_shift_db",
+   "description": "ground G/T shift (dB)",
+   "value": 3,
+   "baseline": {
+    "feasible": 64,
+    "min_mass": 346.8159290493225,
+    "min_cost": 48492.886574806325,
+    "max_science": 22.343102404806807
+   },
+   "result": {
+    "feasible": 496,
+    "min_mass": 346.8159290493225,
+    "min_cost": 48492.886574806325,
+    "max_science": 31.985283895744118
+   },
+   "delta_min_mass_pct": 0.0,
+   "delta_min_cost_pct": 0.0,
+   "delta_max_science_pct": 43.15507003567656
+  },
+  {
+   "scenario_id": "mars_orbiter",
+   "parameter": "distance_scale",
+   "description": "comm distance x",
+   "value": 0.5,
+   "baseline": {
+    "feasible": 64,
+    "min_mass": 346.8159290493225,
+    "min_cost": 48492.886574806325,
+    "max_science": 22.343102404806807
+   },
+   "result": {
+    "feasible": 528,
+    "min_mass": 331.8981496202982,
+    "min_cost": 45134.06067337589,
+    "max_science": 38.0
+   },
+   "delta_min_mass_pct": -4.301353594085565,
+   "delta_min_cost_pct": -6.92643011928982,
+   "delta_max_science_pct": 70.07485939743458
+  },
+  {
+   "scenario_id": "mars_orbiter",
+   "parameter": "distance_scale",
+   "description": "comm distance x",
+   "value": 1.5,
+   "baseline": {
+    "feasible": 64,
+    "min_mass": 346.8159290493225,
+    "min_cost": 48492.886574806325,
+    "max_science": 22.343102404806807
+   },
+   "result": {
+    "feasible": 0,
+    "min_mass": null,
+    "min_cost": null,
+    "max_science": null
+   },
+   "delta_min_mass_pct": null,
+   "delta_min_cost_pct": null,
+   "delta_max_science_pct": null
+  },
+  {
+   "scenario_id": "mars_orbiter",
+   "parameter": "dv_scale",
+   "description": "mission delta-v x",
+   "value": 0.9,
+   "baseline": {
+    "feasible": 64,
+    "min_mass": 346.8159290493225,
+    "min_cost": 48492.886574806325,
+    "max_science": 22.343102404806807
+   },
+   "result": {
+    "feasible": 64,
+    "min_mass": 332.4886124056087,
+    "min_cost": 48464.261993442655,
+    "max_science": 22.343102404806807
+   },
+   "delta_min_mass_pct": -4.13110109532375,
+   "delta_min_cost_pct": -0.059028413001386504,
+   "delta_max_science_pct": 0.0
+  },
+  {
+   "scenario_id": "mars_orbiter",
+   "parameter": "dv_scale",
+   "description": "mission delta-v x",
+   "value": 1.1,
+   "baseline": {
+    "feasible": 64,
+    "min_mass": 346.8159290493225,
+    "min_cost": 48492.886574806325,
+    "max_science": 22.343102404806807
+   },
+   "result": {
+    "feasible": 64,
+    "min_mass": 361.8456520997132,
+    "min_cost": 48523.47937144095,
+    "max_science": 22.343102404806807
+   },
+   "delta_min_mass_pct": 4.3336311257644855,
+   "delta_min_cost_pct": 0.06308718411191057,
+   "delta_max_science_pct": 0.0
+  }
+ ]
+}

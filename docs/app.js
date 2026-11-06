@@ -20,6 +20,12 @@ const SETS={ // dataset -> [records, columns]
  "Engineering constraints":[D.missions.engineering_constraints,["type","statement","data_class"]],
 };
 const get=(o,p)=>p.split(".").reduce((a,k)=>a==null?a:a[k],o);
+const DIRS={"Chemical engines":{isp_vac_s:1,"derived.engine_thrust_to_weight_vac":1,dry_mass_kg:-1},"Electric propulsion":{isp_vac_s:1,power_w:-1,"derived.thrust_per_power_mN_per_kW":1},
+ "Launch vehicles":{price_usd:-1},"Instruments":{mass_kg:-1,power_w:-1,"derived.power_to_mass_w_per_kg":-1},"Stages":{"derived.inert_mass_fraction":-1},"Historical missions":{}};
+SETS["SpaceX launch history (2010-2018)"]=[D.launch_history.launches,["id","date_utc","booster_family","booster_version_raw","launch_site_id","payload","payload_mass_kg","orbit_class","mission_outcome","landing_outcome_raw"]];
+SETS["Launch sites"]=[D.launch_history.sites,["name","lat","lon","launches_in_file","first_launch","last_launch"]];
+SETS["NASA facilities"]=[D.infrastructure.nasa_facilities,["center","facility","category","status","city","state","lat","lon","occupied_date","last_update"]];
+window.UI={el,table,fmt,get,D,Q,SETS};
 const COMPARE={ // dataset -> metrics (label, path, higher_is_better?)
  "Chemical engines":[["Vac thrust (N)","thrust_vac_n"],["Vac Isp (s)","isp_vac_s"],["Engine T/W (vac)","derived.engine_thrust_to_weight_vac"],["Dry mass (kg)","dry_mass_kg"]],
  "Electric propulsion":[["Thrust (N)","thrust_vac_n"],["Isp (s)","isp_vac_s"],["Power (W)","power_w"],["mN per kW","derived.thrust_per_power_mN_per_kW"]],
@@ -30,10 +36,10 @@ const COMPARE={ // dataset -> metrics (label, path, higher_is_better?)
  "Historical missions":[["Launch mass (kg)","launch_mass_kg"],["Dry mass (kg)","dry_mass_kg"],["Cost (M$ nominal)","cost_musd_nominal"],["Dry/launch","derived.dry_to_launch_mass"]],
  "Stages":[["Dry mass (kg)","dry_mass_kg"],["Propellant (kg)","propellant_mass_kg"],["Inert fraction","derived.inert_mass_fraction"]],
 };
-const TABS=["Overview","Guide","Explorer","Compare","Calculators","Optimizer","Sensitivity & risk","Benchmarks","Quality"];
+const TABS=["Overview","Guide","Explorer","Compare","Mission fit","Calculators","Optimizer","Simulator","Launch & facilities","Sensitivity & risk","Benchmarks","API","Quality"];
 let cur=TABS[0];
 function tabs(){const n=$("#tabs");n.innerHTML="";TABS.forEach(t=>{const b=el(`<button role="tab" aria-selected="${t===cur}">${t}</button>`);b.onclick=()=>{cur=t;tabs();render();};n.append(b);});}
-function render(){const v=$("#view");v.innerHTML="";({Overview:overview,Guide:guide,Benchmarks:benchmarks,Explorer:explorer,Compare:compare,Calculators:calculators,Optimizer:optimizer,"Sensitivity & risk":sensitivity,Quality:quality})[cur](v);}
+function render(){const v=$("#view");v.innerHTML="";({Overview:overview,Guide:guide,Benchmarks:benchmarks,Simulator:simulator,Explorer:explorer,Compare:compare,Calculators:calculators,Optimizer:optimizer,"Sensitivity & risk":sensitivity,Quality:quality,"Mission fit":v=>EXTRA.missionFit(v,UI),"Launch & facilities":v=>EXTRA.launchFacilities(v,UI),API:v=>EXTRA.apiTab(v,UI)})[cur](v);}
 function table(rows,cols,opts={}){
   let sortK=null,dir=1; const wrap=el(`<div class="tw"><table></table></div>`),t=wrap.firstChild;
   function draw(){const rs=sortK==null?rows:[...rows].sort((a,b)=>{const x=get(a,sortK),y=get(b,sortK);if(x==null)return 1;if(y==null)return -1;return (x>y?1:x<y?-1:0)*dir});
@@ -49,6 +55,11 @@ function guide(v){v.append(el(`<div class="card"><h2>How to use this site</h2><o
 <li><b>Calculators</b> – rocket equation, Hohmann transfer, link budget and solar/battery sizing; type in any box and results update.</li>
 <li><b>Optimizer</b> – pick a scenario and objective, move the budget/margin sliders, then press <i>Re-run optimizer</i>. Choose <i>Balanced</i> and weight mass, cost and science to trade them off. The chart is the Pareto front (each dot is a non-dominated design; darker = more science; ringed = your pick). “No feasible design” means your constraints are too tight; the violation counts tell you which.</li>
 <li><b>Sensitivity &amp; risk</b> – which assumptions move the optimum most, and the chance a chosen design stays feasible under uncertainty.</li>
+<li><b>Compare</b> also marks the winner (✔) on metrics where better has a clear direction, then asks “which is better for a mission?” — choose Earth orbit, GTO, Moon or Mars and a dry mass to get a verdict per part.</li>
+<li><b>Mission fit</b> – pick a mission and spacecraft dry mass; launch vehicles, engines and instruments are ranked with the reason shown (capacity vs needed mass, restart/acceleration limits, relevance vs mass+power). “Not rated” = data missing, never guessed.</li>
+<li><b>Simulator</b> – choose or edit a design and scenario, set uncertainty, run a seeded Monte Carlo to get the success rate and failure reasons; <i>Suggest improvements</i> tests every single change and ranks them; part rankings are sortable. Tick the launch-reliability box to fold in the Falcon record from your uploaded launch table.</li>
+<li><b>Launch &amp; facilities</b> – your uploaded SpaceX launch table (reliability, landings, payloads) and NASA facilities table (filter, map).</li>
+<li><b>API</b> – try the JSON API live; <a href="api.html">api.html</a> has the full guide and JS/Python clients.</li>
 <li><b>Benchmarks</b> – solver speed and how well heuristic solvers match the exact optimum.</li>
 <li><b>Quality</b> – validation results, known conflicts and gaps.</li></ol>
 <p class="mut">Reading results: costs are fictional credits; science points are educational weights; component values are estimates. Use the site to learn trade-offs, not to size real hardware.</p></div>`));}
@@ -59,9 +70,93 @@ async function benchmarks(v){
   const s=el(`<div class="card"><h2>Scaling (synthetic instruments)</h2><div id="b"></div></div>`);s.querySelector("#b").append(table(BM.scaling,["instruments","designs","vectorized_exact_solve_s","scalar_exact_solve_s","optimum_science"],{cls:false}));v.append(s);
   const h=el(`<div class="card"><h2>Heuristics vs exact optimum (2000 evals, 20 seeds)</h2><div id="c"></div></div>`);h.querySelector("#c").append(table(BM.heuristics.filter(x=>x.evaluations===2000).map(x=>({scenario:x.scenario_id,objective:x.objective,solver:x.solver,found_exact:x.runs_found_exact_optimum+"/"+x.runs,feasible:x.runs_feasible+"/"+x.runs,median_gap_pct:x.median_gap_pct})),["scenario","objective","solver","found_exact","feasible","median_gap_pct"],{cls:false}));v.append(h);
 }
+
+// ---------------- Simulator ----------------
+const rng32=a=>()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296};
+const triD=(r,lo,hi,mo)=>{const u=r(),c=(mo-lo)/(hi-lo);return u<c?lo+Math.sqrt(u*(hi-lo)*(mo-lo)):hi-Math.sqrt((1-u)*(hi-lo)*(hi-mo));};
+const gaussD=r=>{let u=0,v=0;while(!u)u=r();while(!v)v=r();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v);};
+const DEF_UNC={mga:[0.10,0.35],dvm:[0,0.10],pm:[0.05,0.25],gt_sd:1.5,dvs:[0.95,1.10,1.0],cost:[0.9,1.4,1.0]};
+function resolveDesign(sc,cat,d){const f=(arr,id)=>arr.find(x=>x.id===id);
+  const sel=d.instruments.map(id=>sc.instruments.findIndex(i=>i.id===id)).filter(i=>i>=0);
+  return {sel,comp:f(cat.computers,d.computer),comm:f(cat.comms,d.comm),arr:f(cat.arrays,d.array),bat:f(cat.batteries,d.battery),prop:f(cat.propulsion,d.propulsion),veh:f(sc.vehicles,d.vehicle)};}
+function evalDesign(G,sc,cat,d){const x=resolveDesign(sc,cat,d);if(!x.sel.length||!x.comp||!x.comm||!x.arr||!x.bat||!x.prop||!x.veh)return null;return evaluate(G,sc,x.sel,x.comp,x.comm,x.arr,x.bat,x.prop,x.veh);}
+function simulate(G,sc,cat,d,N,seed,u){
+  const r=rng32(seed),wet=[],cost=[],reasons={};let ok=0;const x=resolveDesign(sc,cat,d);
+  for(let k=0;k<N;k++){
+    const g=Object.assign({},G,{mga:u.mga[0]+(u.mga[1]-u.mga[0])*r(),dv_margin:u.dvm[0]+(u.dvm[1]-u.dvm[0])*r(),power_margin:u.pm[0]+(u.pm[1]-u.pm[0])*r()});
+    const sh=gaussD(r)*u.gt_sd,gt={};for(const b in sc.gt_db)gt[b]=sc.gt_db[b]+sh;
+    const s=Object.assign({},sc,{gt_db:gt,dv_ms:sc.dv_ms*triD(r,u.dvs[0],u.dvs[1],u.dvs[2])});
+    const e=evaluate(g,s,x.sel,x.comp,x.comm,x.arr,x.bat,x.prop,x.veh),c=e.cost*triD(r,u.cost[0],u.cost[1],u.cost[2]);
+    const fails=e.violations.filter(v=>v!=="exceeds_budget");if(c>sc.budget)fails.push("exceeds_budget");
+    fails.forEach(f=>reasons[f]=(reasons[f]||0)+1);if(!fails.length)ok++;wet.push(e.wet_kg);cost.push(c);}
+  const q=(a,p)=>[...a].sort((m,n)=>m-n)[Math.min(a.length-1,Math.floor(p*a.length))];
+  return {p:ok/N,N,reasons,wet,cost,wet50:q(wet,.5),wet95:q(wet,.95),cost50:q(cost,.5),cost95:q(cost,.95)};}
+const ADVICE={exceeds_budget:"Raise the budget, drop the most expensive instrument, or choose cheaper comm/array/battery options. Cost growth (up to +40%) is the usual cause.",
+ exceeds_launch_capacity:"Pick a larger launch vehicle, a more efficient propulsion option (higher Isp), or remove heavy instruments.",
+ science_below_minimum:"Add an instrument, or raise downlink capability (bigger dish / more transmit power) so data is not lost.",
+ radiation_tolerance:"Use a more radiation-tolerant computer (LEON3-class or RAD750-class).",
+ link_rate_too_low:"Use a larger dish or higher transmit power; the distance is too large for the current antenna.",
+ electric_burn_too_long:"Use chemical propulsion or reduce Δv; low-thrust burn exceeds the allowed duration.",
+ propellant_tank_infeasible:"Δv is too large for this propulsion option; use a higher-Isp system."};
+function simulator(v){
+  const cons=D.optimization.constraints,cat={arrays:cons.catalog.arrays,batteries:cons.catalog.batteries,computers:cons.catalog.computers,comms:cons.catalog.comms,propulsion:cons.catalog.propulsion};
+  const card=el(`<div class="card"><h2>Mission simulator &amp; modifier</h2><p class="mut">Choose or edit a design, add uncertainty, and run a seeded Monte Carlo to see the <b>success rate</b> (no constraint violated, cost growth included). Then ask for suggestions or rank parts.</p>
+  <div class="row"><div><label>Scenario<select id="sc"></select></label><div class="chips" id="ins"></div>
+   <label>Computer<select id="comp"></select></label><label>Comm system<select id="comm"></select></label><label>Solar array<select id="arr"></select></label><label>Battery<select id="bat"></select></label><label>Propulsion<select id="prop"></select></label><label>Launch vehicle<select id="veh"></select></label>
+   <p><button class="act" id="load">Load balanced optimum</button> <button class="act" id="sim">Run simulation</button> <button class="act" id="sug">Suggest improvements</button></p></div>
+  <div><h3>Modify scenario</h3><label>Budget (credits)<input type="number" id="bud"></label><label>Onboard Δv (m/s)<input type="number" id="dv"></label><label>Minimum science points<input type="number" id="ms"></label><label>Downlink hours/day<input type="number" step="0.1" id="dl"></label><label>Design life (years)<input type="number" step="0.5" id="life"></label>
+   <h3>Uncertainty (assumed distributions)</h3><label>Mass growth allowance range <span id="u1"></span><input type="range" id="umga" min="0" max="0.5" step="0.01" value="0.35"></label><label>Cost growth upper bound <span id="u2"></span><input type="range" id="ucost" min="1" max="2" step="0.05" value="1.4"></label><label>Ground G/T uncertainty σ (dB) <span id="u3"></span><input type="range" id="ugt" min="0" max="4" step="0.5" value="1.5"></label><label>Samples <span id="u4"></span><input type="range" id="un" min="200" max="20000" step="200" value="3000"></label><label>Seed<input type="number" id="seed" value="20261106"></label><label><input type="checkbox" id="rel"> Multiply by launch reliability (Falcon family only: observed in your uploaded 2010–2018 launch table)</label></div></div>
+  <div id="out"></div></div>`);
+  v.append(card);const $c=s=>card.querySelector(s);
+  cons.scenarios.forEach(s=>$c("#sc").append(new Option(s.name,s.id)));
+  const fill=(id,arr)=>{$c(id).innerHTML="";arr.forEach(a=>$c(id).append(new Option(a.name||a.id,a.id)));};
+  let sc,G,des=null,desKey="";
+  function setScenario(){sc=JSON.parse(JSON.stringify(cons.scenarios.find(s=>s.id===$c("#sc").value)));G=Object.assign({},cons.global_parameters);
+    $c("#ins").innerHTML=sc.instruments.map(i=>`<label><input type="checkbox" value="${i.id}"> ${i.name} <span class="mut">(${i.mass} kg, ${i.power} W)</span></label>`).join("");
+    fill("#comp",cat.computers);fill("#comm",cat.comms);fill("#arr",cat.arrays);fill("#bat",cat.batteries);fill("#prop",cat.propulsion.filter(p=>!p.electric||sc.allow_electric));fill("#veh",sc.vehicles);
+    $c("#bud").value=sc.budget;$c("#dv").value=Math.round(sc.dv_ms);$c("#ms").value=sc.min_science;$c("#dl").value=sc.dl_hours_per_day;$c("#life").value=sc.life_yr;loadOpt();}
+  function applyEdits(){sc.budget=+$c("#bud").value;sc.dv_ms=+$c("#dv").value;sc.min_science=+$c("#ms").value;sc.dl_hours_per_day=+$c("#dl").value;sc.life_yr=+$c("#life").value;}
+  const getDesign=()=>({instruments:[...card.querySelectorAll("#ins input:checked")].map(i=>i.value),computer:$c("#comp").value,comm:$c("#comm").value,array:$c("#arr").value,battery:$c("#bat").value,propulsion:$c("#prop").value,vehicle:$c("#veh").value});
+  const setDesign=d=>{card.querySelectorAll("#ins input").forEach(i=>i.checked=d.instruments.includes(i.value));$c("#comp").value=d.computer;$c("#comm").value=d.comm;$c("#arr").value=d.array;$c("#bat").value=d.battery;$c("#prop").value=d.propulsion;$c("#veh").value=d.vehicle;};
+  const unc=()=>({mga:[0.10,+$c("#umga").value],dvm:DEF_UNC.dvm,pm:DEF_UNC.pm,gt_sd:+$c("#ugt").value,dvs:DEF_UNC.dvs,cost:[0.9,+$c("#ucost").value,1.0]});
+  function enumCached(){applyEdits();const k=JSON.stringify([sc.budget,sc.dv_ms,sc.min_science,sc.dl_hours_per_day,sc.life_yr,$c("#sc").value]);if(k!==desKey){des=enumerate(G,sc,cat);desKey=k;}return des;}
+  function loadOpt(){const b=balanced(enumCached());if(b)setDesign(b.design);else $c("#out").innerHTML="<p class='bad'>No feasible design under the edited scenario; choose parts manually or relax constraints.</p>";}
+  function hist(vals,label,w=300,h=90,bins=24){const lo=Math.min(...vals),hi=Math.max(...vals),span=(hi-lo)||1,c=new Array(bins).fill(0);vals.forEach(x=>c[Math.min(bins-1,Math.floor((x-lo)/span*bins))]++);const m=Math.max(...c);
+    return `<svg viewBox="0 0 ${w} ${h+18}" width="100%" role="img" aria-label="${label} histogram">${c.map((n,i)=>`<rect x="${i*w/bins}" y="${h-h*n/m}" width="${w/bins-1}" height="${h*n/m}" fill="var(--ac)" fill-opacity=".7"/>`).join("")}<text x="0" y="${h+13}">${fmt(lo)}</text><text x="${w/2}" y="${h+13}" text-anchor="middle">${label}</text><text x="${w}" y="${h+13}" text-anchor="end">${fmt(hi)}</text></svg>`;}
+  function runSim(){applyEdits();const d=getDesign(),e=evalDesign(G,sc,cat,d),out=$c("#out");if(!e){out.innerHTML="<p class='bad'>Select at least one instrument and all parts.</p>";return;}
+    const r=simulate(G,sc,cat,d,+$c("#un").value,+$c("#seed").value,unc());
+    const relOn=$c("#rel").checked&&/f9_class|falcon/.test(d.vehicle),relF=relOn?D.launch_history.analysis.mission_reliability.point_estimate:1,pAll=r.p*relF;r.pDesign=r.p;r.p=pAll;
+    const se=Math.sqrt(r.p*(1-r.p)/r.N),col=r.p>=.9?"ok":r.p>=.6?"":"bad";
+    const rs=Object.entries(r.reasons).sort((a,b)=>b[1]-a[1]);
+    out.innerHTML=`<h3>Nominal design check</h3><p>${e.feasible?'<span class="ok">Feasible</span>':'<span class="bad">Violates: '+e.violations.join(", ")+'</span>'} · mass ${fmt(e.wet_kg)} kg · cost ${fmt(e.cost)} · science ${fmt(e.science)} · link margin ${fmt(e.link_margin_db)} dB · power ${fmt(e.avg_power_w)} W · mass margin ${fmt(100*e.mass_margin)}%</p>
+     <h3>Monte Carlo result</h3><div class="kpi"><div><small>Success rate</small><div class="big ${col}">${fmt(100*r.p,3)}%</div><small>± ${fmt(196*se,2)} pp (95%, n=${r.N})${relOn?` · design ${fmt(100*r.pDesign,3)}% × launch reliability ${fmt(100*relF,3)}%`:""}</small></div><div><small>Mass median / p95</small><div class="big">${fmt(r.wet50)}</div><small>p95 ${fmt(r.wet95)} kg</small></div><div><small>Cost median / p95</small><div class="big">${fmt(r.cost50)}</div><small>p95 ${fmt(r.cost95)}</small></div></div>
+     <div class="row"><div>${hist(r.wet,"launch mass (kg)")}</div><div>${hist(r.cost,"cost incl. growth (credits)")}</div></div>
+     <h3>Why runs fail</h3>${rs.length?`<table><tbody>${rs.map(([k,n])=>`<tr><td>${k}</td><td>${fmt(100*n/r.N,3)}% of runs</td><td class="mut">${ADVICE[k]||""}</td></tr>`).join("")}</tbody></table>`:"<p class='ok'>No failures in this sample.</p>"}
+     <p class="mut">Assumed uncertainty: mass growth U(0.10–${unc().mga[1]}), Δv margin U(0–0.10), power margin U(0.05–0.25), G/T N(0, ${unc().gt_sd} dB), Δv scale Tri(0.95,1.10,1.0), cost growth Tri(0.9,${unc().cost[1]},1.0). These are assumptions, not source uncertainties. Same seed ⇒ same result.</p>`;}
+  function suggest(){applyEdits();const d=getDesign(),out=$c("#out");const base=evalDesign(G,sc,cat,d);if(!base){out.innerHTML="<p class='bad'>Select a complete design first.</p>";return;}
+    const N=Math.min(600,+$c("#un").value),u=unc(),seed=+$c("#seed").value,cur=simulate(G,sc,cat,d,N,seed,u).p,cands=[];
+    const add=(label,nd)=>{const e=evalDesign(G,sc,cat,nd);if(!e)return;const s=simulate(G,sc,cat,nd,N,seed,u);cands.push({label,design:nd,p:s.p,wet:e.wet_kg,cost:e.cost,science:e.science,nominal:e.feasible});};
+    const groups=[["computer",cat.computers],["comm",cat.comms],["array",cat.arrays],["battery",cat.batteries],["propulsion",cat.propulsion.filter(p=>!p.electric||sc.allow_electric)],["vehicle",sc.vehicles]];
+    groups.forEach(([g,opts])=>opts.forEach(o=>{if(o.id!==d[g])add(`${g}: ${d[g]} → ${o.id}`,Object.assign({},d,{[g]:o.id}));}));
+    sc.instruments.forEach(i=>{const has=d.instruments.includes(i.id),ni=has?d.instruments.filter(x=>x!==i.id):d.instruments.concat(i.id);if(ni.length)add(`${has?"remove":"add"} instrument ${i.id}`,Object.assign({},d,{instruments:ni}));});
+    cands.sort((a,b)=>b.p-a.p||a.cost-b.cost);const top=cands.slice(0,8);
+    out.innerHTML=`<h3>Suggested single changes (common random numbers, ${N} samples)</h3><p>Current success rate: <b>${fmt(100*cur,3)}%</b></p><table><thead><tr><th>change</th><th>success</th><th>Δ</th><th>mass kg</th><th>cost</th><th>science</th><th>nominal</th><th></th></tr></thead><tbody>${top.map((c,i)=>`<tr><td>${c.label}</td><td>${fmt(100*c.p,3)}%</td><td class="${c.p>cur?"ok":"bad"}">${c.p>=cur?"+":""}${fmt(100*(c.p-cur),3)} pp</td><td>${fmt(c.wet)}</td><td>${fmt(c.cost)}</td><td>${fmt(c.science)}</td><td>${c.nominal?"ok":"violates"}</td><td><button class="act" data-i="${i}">Apply</button></td></tr>`).join("")}</tbody></table><p class="mut">Only one change at a time is tested; combined changes may do better. Cost/mass shown are nominal. Press Apply, then Run simulation.</p>`;
+    out.querySelectorAll("button[data-i]").forEach(b=>b.onclick=()=>{setDesign(top[+b.dataset.i].design);runSim();});}
+  const rank=el(`<div class="card"><h2>Part rankings (sortable)</h2><label>Rank parts by best achievable…<select id="ro"><option value="min_mass">lowest launch mass</option><option value="min_cost">lowest cost</option><option value="max_science">highest science</option><option value="max_feasibility_margin">largest worst-case margin</option><option value="max_link_margin">largest link margin</option><option value="min_power">lowest power</option></select></label><div id="rt"></div><p class="mut">For each part: the best value of the chosen objective over all feasible designs that include it, how many feasible designs include it, and how many Pareto-optimal (mass/cost/science) designs include it. Click a header to sort. Uses the scenario edits above.</p></div>`);
+  function drawRank(){applyEdits();const des=enumCached(),key=rank.querySelector("#ro").value,[,fld,sg]=OBJ[key],feas=des.filter(d=>d.feasible),pf=pareto(des),rows=[];
+    const grp=[["computer",cat.computers],["comm",cat.comms],["array",cat.arrays],["battery",cat.batteries],["propulsion",cat.propulsion],["vehicle",sc.vehicles]];
+    const add=(g,id,name,test)=>{const f=feas.filter(test);if(!f.length&&!des.some(test))return;const best=f.length?f.reduce((b,d)=>sg*d[fld]<sg*b[fld]?d:b):null;rows.push({group:g,part:name||id,id,best_value:best?best[fld]:null,feasible_designs:f.length,pareto_designs:pf.filter(test).length,share_of_feasible_pct:feas.length?100*f.length/feas.length:0});};
+    grp.forEach(([g,opts])=>opts.forEach(o=>add(g,o.id,o.name,d=>d.design[g]===o.id)));sc.instruments.forEach(i=>add("instrument",i.id,i.name,d=>d.design.instruments.includes(i.id)));
+    rows.sort((a,b)=>a.best_value==null?1:b.best_value==null?-1:sg*(a.best_value-b.best_value));
+    const t=rank.querySelector("#rt");t.innerHTML="";t.append(table(rows,["group","part","best_value","feasible_designs","pareto_designs","share_of_feasible_pct"],{cls:false}));}
+  card.querySelectorAll("input[type=range]").forEach(i=>i.oninput=()=>{$c("#u1").textContent="max "+$c("#umga").value;$c("#u2").textContent="up to ×"+$c("#ucost").value;$c("#u3").textContent=$c("#ugt").value;$c("#u4").textContent=$c("#un").value;});
+  $c("#sc").onchange=()=>{setScenario();drawRank();};$c("#load").onclick=()=>{applyEdits();loadOpt();runSim();};$c("#sim").onclick=runSim;$c("#sug").onclick=suggest;rank.querySelector("#ro").onchange=drawRank;
+  ["#bud","#dv","#ms","#dl","#life"].forEach(s=>$c(s).onchange=()=>{desKey="";});
+  setScenario();v.append(rank);drawRank();runSim();
+}
 function overview(v){
   const c=Q.record_counts,tg=Q.targets;
-  v.append(el(`<div class="card"><h2>Dataset coverage vs targets</h2><div class="kpi">${Object.keys(c).map(k=>`<div><small>${k.replace(/_/g," ")}</small><div class="big">${c[k]}</div><small>target ${tg[k]} · ${Q.target_attainment_pct[k]}%</small></div>`).join("")}</div></div>`));
+  v.append(el(`<div class="card"><h2>Dataset coverage vs targets</h2><div class="kpi">${Object.keys(c).map(k=>`<div><small>${k.replace(/_/g," ")}</small><div class="big">${c[k]}</div><small>${tg[k]!==undefined?`target ${tg[k]} · ${Q.target_attainment_pct[k]}%`:'user-supplied data'}</small></div>`).join("")}</div></div>`));
   v.append(el(`<div class="card"><h2>Data classes</h2><p>${Object.entries(Q.data_class_counts).map(([k,n])=>`<span class="tag ${k}">${k}: ${n}</span>`).join(" ")}</p><p class="mut">“verified” requires a retrieved source. None were retrieved, so no record is marked verified. Counts are targets from the research brief, not quotas; no records were invented to hit them.</p></div>`));
   const ex=D.optimization.experiments.filter(e=>e.objective==="balanced");
   v.append(el(`<div class="card"><h2>What you can do here</h2><ul><li><b>Explorer</b> – sort every dataset.</li><li><b>Compare</b> – up to 4 engines, vehicles, instruments, bodies or missions side by side.</li><li><b>Calculators</b> – rocket equation, Hohmann transfer, link budget, solar/battery sizing.</li><li><b>Optimizer</b> – change budget, margins and objective weights; the optimizer re-searches all ${D.optimization.constraints.scenarios.map(s=>s.id).length} scenarios live in your browser.</li><li><b>Sensitivity &amp; risk</b> – stored one-at-a-time sensitivities and Monte Carlo feasibility.</li><li><b>Quality</b> – known conflicts, gaps and validation results.</li></ul></div>`));
@@ -80,8 +175,14 @@ function compare(v){
   function out(){const ds=card.querySelector("#ds").value,rs=SETS[ds][0],sel=[...card.querySelectorAll("#pick input:checked")].map(i=>rs[+i.value]).slice(0,4);const o=card.querySelector("#out");
     if(sel.length<2){o.innerHTML='<p class="mut">Tick 2–4 records.</p>';return;}
     let h="<table><thead><tr><th>metric</th>"+sel.map(r=>`<th>${r.name||r.id}</th>`).join("")+"</tr></thead><tbody>";
-    COMPARE[ds].forEach(([lab,p])=>{const vals=sel.map(r=>get(r,p)),mx=Math.max(...vals.filter(x=>x!=null),0);h+=`<tr><td>${lab}</td>`+vals.map(x=>`<td>${fmt(x)}${x!=null&&mx>0?`<div class="bar" style="width:${Math.max(2,100*x/mx)}%"></div>`:""}</td>`).join("")+"</tr>";});
-    h+="</tbody></table><p class='mut'>— = not recorded (never zero-filled). Different reference conditions (e.g. payload orbit) make some comparisons invalid; check the Explorer's payload table.</p>";o.innerHTML=h;}
+    const dirs=DIRS[ds]||{},wins=sel.map(()=>0);let scored=0;
+    COMPARE[ds].forEach(([lab,p])=>{const vals=sel.map(r=>get(r,p)),known=vals.filter(x=>x!=null),mx=Math.max(...known,0),dir=dirs[p]||0;
+      let best=null;if(dir&&known.length>=2){best=dir>0?Math.max(...known):Math.min(...known);if(known.filter(x=>x===best).length===known.length)best=null;}
+      if(best!==null){scored++;vals.forEach((x,i)=>{if(x===best)wins[i]++;});}
+      h+=`<tr><td>${lab}${dir?`<br><small class="mut">${dir>0?"higher":"lower"} is better</small>`:`<br><small class="mut">no winner (depends on mission)</small>`}</td>`+vals.map(x=>`<td${best!==null&&x===best?' style="background:rgba(22,163,74,.16)"':""}>${best!==null&&x===best?"✔ ":""}${fmt(x)}${x!=null&&mx>0?`<div class="bar" style="width:${Math.max(2,100*x/mx)}%"></div>`:""}</td>`).join("")+"</tr>";});
+    if(scored)h+=`<tr><td><b>Metrics won</b><br><small class="mut">of ${scored} direction-coded</small></td>`+wins.map(w=>`<td><b>${w}</b></td>`).join("")+"</tr>";
+    h+="</tbody></table><p class='mut'>✔ = best of the selected on a metric where “better” has an unambiguous direction (higher Isp, lower mass/power). Thrust, size and liftoff mass have no universal winner — see the mission verdict below. — = not recorded (never zero-filled).</p>";o.innerHTML=h;
+    if(window.EXTRA)EXTRA.compareVerdict(o,ds,sel,UI);}
   card.querySelector("#ds").onchange=pick;pick();
 }
 function calculators(v){

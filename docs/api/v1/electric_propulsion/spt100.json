@@ -1,0 +1,33 @@
+{
+ "collection": "electric_propulsion",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "spt100",
+  "name": "SPT-100 Hall thruster",
+  "maker": "Fakel",
+  "type": "hall_effect",
+  "propellant": "Xe",
+  "thrust_vac_n": 0.083,
+  "thrust_sl_n": null,
+  "isp_vac_s": 1600,
+  "isp_sl_s": null,
+  "dry_mass_kg": 3.5,
+  "burn_s": null,
+  "restart": true,
+  "status": "operational",
+  "power_w": 1350,
+  "note": "Approximate.",
+  "source_ids": [
+   "S14"
+  ],
+  "confidence": "low",
+  "data_class": "unverified",
+  "retrieval_status": "not_retrieved",
+  "derived": {
+   "mass_flow_vac_kg_s": 5.2897778548230035e-06,
+   "engine_thrust_to_weight_vac": 0.0024181841622048015,
+   "thrust_per_power_mN_per_kW": 61.48148148148148
+  },
+  "derived_from": "mdot=F/(Isp*g0); TWR=F/(m*g0); thrust/power"
+ }
+}

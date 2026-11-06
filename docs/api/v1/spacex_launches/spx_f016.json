@@ -1,0 +1,44 @@
+{
+ "collection": "spacex_launches",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "spx_f016",
+  "flight_label": "16",
+  "date_utc": "2015-03-02",
+  "time_utc": "03:50:00",
+  "booster_family": "F9 v1.1",
+  "booster_serials": [
+   "B1014"
+  ],
+  "booster_version_raw": "F9 v1.1 B1014",
+  "launch_site_raw": "CCAFS LC-40",
+  "launch_site_id": "ccsfs_slc40",
+  "payload": "ABS-3A Eutelsat 115 West B",
+  "payload_mass_kg": 4159.0,
+  "payload_mass_approximate": false,
+  "payload_mass_raw": "4,159",
+  "orbit_raw": "GTO",
+  "orbit_class": "gto",
+  "customer_raw": "ABS Eutelsat",
+  "mission_outcome_raw": "Success",
+  "mission_outcome": "success",
+  "landing_outcome_raw": "No attempt",
+  "landings": [
+   {
+    "raw": "No attempt",
+    "result": "no_attempt",
+    "location": null
+   }
+  ],
+  "landing_attempts": 0,
+  "landing_successes": 0,
+  "booster_flight_number": 1,
+  "record_type": "historical",
+  "data_class": "unverified",
+  "confidence": "medium",
+  "source_ids": [
+   "S36"
+  ],
+  "retrieval_status": "user_supplied_not_independently_verified"
+ }
+}

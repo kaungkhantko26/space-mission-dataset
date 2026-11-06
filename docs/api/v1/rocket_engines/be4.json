@@ -1,0 +1,29 @@
+{
+ "collection": "rocket_engines",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "be4",
+  "name": "BE-4",
+  "maker": "Blue Origin",
+  "type": "liquid",
+  "propellant": "LOX/LCH4",
+  "thrust_vac_n": null,
+  "thrust_sl_n": 2400000,
+  "isp_vac_s": null,
+  "isp_sl_s": null,
+  "dry_mass_kg": null,
+  "burn_s": null,
+  "restart": false,
+  "status": "operational",
+  "power_w": null,
+  "note": "Only sea-level thrust recorded; Isp not published in recalled material.",
+  "source_ids": [
+   "S07"
+  ],
+  "confidence": "low",
+  "data_class": "unverified",
+  "retrieval_status": "not_retrieved",
+  "derived": {},
+  "derived_from": "mdot=F/(Isp*g0); TWR=F/(m*g0); thrust/power"
+ }
+}

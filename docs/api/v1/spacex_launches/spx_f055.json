@@ -1,0 +1,44 @@
+{
+ "collection": "spacex_launches",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "spx_f055",
+  "flight_label": "55",
+  "date_utc": "2018-05-22",
+  "time_utc": "19:47:58",
+  "booster_family": "F9 B4",
+  "booster_serials": [
+   "B1043.2"
+  ],
+  "booster_version_raw": "F9 B4 B1043.2",
+  "launch_site_raw": "VAFB SLC-4E",
+  "launch_site_id": "vsfb_slc4e",
+  "payload": "Iridium NEXT 6 GRACE-FO 1, 2",
+  "payload_mass_kg": 6460.0,
+  "payload_mass_approximate": false,
+  "payload_mass_raw": "6,460",
+  "orbit_raw": "Polar LEO",
+  "orbit_class": "polar_leo",
+  "customer_raw": "Iridium Communications GFZ • NASA",
+  "mission_outcome_raw": "Success",
+  "mission_outcome": "success",
+  "landing_outcome_raw": "No attempt",
+  "landings": [
+   {
+    "raw": "No attempt",
+    "result": "no_attempt",
+    "location": null
+   }
+  ],
+  "landing_attempts": 0,
+  "landing_successes": 0,
+  "booster_flight_number": 2,
+  "record_type": "historical",
+  "data_class": "unverified",
+  "confidence": "medium",
+  "source_ids": [
+   "S36"
+  ],
+  "retrieval_status": "user_supplied_not_independently_verified"
+ }
+}

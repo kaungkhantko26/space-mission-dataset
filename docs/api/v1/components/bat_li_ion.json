@@ -1,0 +1,35 @@
+{
+ "collection": "components",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "bat_li_ion",
+  "name": "Li-ion battery (class)",
+  "category": "battery",
+  "record_kind": "technology_class",
+  "mass_kg": null,
+  "power_consumption_w": null,
+  "power_generation_w": null,
+  "energy_capacity_wh": null,
+  "params": {
+   "specific_energy_wh_per_kg": [
+    120,
+    200
+   ],
+   "max_dod_leo": [
+    0.2,
+    0.4
+   ],
+   "round_trip_efficiency": [
+    0.9,
+    0.95
+   ]
+  },
+  "data_class": "estimated",
+  "confidence": "low",
+  "note": "Cell-to-pack ranges; LEO DoD limits drive life.",
+  "source_ids": [
+   "S16"
+  ],
+  "retrieval_status": "not_retrieved"
+ }
+}

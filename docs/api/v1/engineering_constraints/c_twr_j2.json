@@ -1,0 +1,10 @@
+{
+ "collection": "engineering_constraints",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "c_twr_j2",
+  "type": "propulsion",
+  "statement": "J-2 engine thrust/weight (vac) = 58.9",
+  "data_class": "derived"
+ }
+}

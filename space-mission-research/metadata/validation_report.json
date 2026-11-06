@@ -1,12 +1,12 @@
 {
  "run_date": "2026-11-06",
- "passed": 56,
- "total": 56,
+ "passed": 72,
+ "total": 72,
  "checks": [
   {
    "check": "json_syntax_all_files",
    "passed": true,
-   "detail": "63 files; failures=[]"
+   "detail": "71 files; failures=[]"
   },
   {
    "check": "schema:celestial/planets.json",
@@ -55,6 +55,21 @@
   },
   {
    "check": "schema:optimization/optimized_configurations.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "schema:missions/spacex_launch_history.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "schema:infrastructure/nasa_facilities.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "schema:missions/launch_sites.json",
    "passed": true,
    "detail": ""
   },
@@ -169,6 +184,21 @@
    "detail": ""
   },
   {
+   "check": "unique_ids:spacex",
+   "passed": true,
+   "detail": "57 records"
+  },
+  {
+   "check": "unique_ids:sites",
+   "passed": true,
+   "detail": "3 records"
+  },
+  {
+   "check": "unique_ids:facilities",
+   "passed": true,
+   "detail": "485 records"
+  },
+  {
    "check": "xref:stage.engine_id",
    "passed": true,
    "detail": ""
@@ -210,6 +240,56 @@
   },
   {
    "check": "xref:scenario_vehicles",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "xref:spacex.launch_site_id",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "external:spacex_input_sha256_matches_raw_file",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "external:facilities_input_sha256_matches_raw_file",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "external:spacex_row_count_equals_raw_rows",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "external:facilities_row_count_equals_raw_rows",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "external:spacex_dates_valid_and_sorted",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "external:spacex_landing_successes<=attempts",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "recompute:spacex_reliability_56_of_57",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "physics:facility_coords_in_plausible_US_range",
+   "passed": true,
+   "detail": "[]"
+  },
+  {
+   "check": "external:every_facility_has_center_and_name",
    "passed": true,
    "detail": ""
   },

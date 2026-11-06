@@ -14,7 +14,7 @@ W=lambda n,t: open(f"{R}/reports/{n}","w").write(t)
 BANNER="> **Read first:** no source document was retrieved when this package was built (the sandbox proxy returned 403 for nasa.gov, jpl.nasa.gov and esa.int). Every external figure is therefore `unverified` (written from recalled published values with a subjective confidence tag). Derived results inherit that status. Optimization catalog values are `estimated`; credits are `fictional`.\n\n"
 # ---- RESEARCH_SUMMARY
 c=Q["record_counts"]; t=Q["targets"]
-rows="\n".join(f"| {k.replace('_',' ')} | {c[k]} | {t[k]} | {Q['target_attainment_pct'][k]}% |" for k in c)
+rows="\n".join(f"| {k.replace('_',' ')} | {c[k]} | {t.get(k,'n/a (external data)')} | {str(Q['target_attainment_pct'].get(k,'n/a'))+'%' if k in t else 'n/a'} |" for k in c)
 W("RESEARCH_SUMMARY.md",f"""# Research summary
 {BANNER}
 ## Dataset overview
@@ -204,5 +204,22 @@ The design space doubles per added instrument; the vectorized exact solver stays
 3. **Dominance pruning** of catalog options (e.g. drop a battery/computer that is worse on every metric) before enumeration (not implemented).
 4. **Real component data** (retrieval required) will change optima more than any solver improvement.
 5. **Add reliability and thermal models** before declaring designs "balanced"; both are currently not modeled.
+""")
+SX=L("analysis/spacex_launch_analysis.json"); NF=L("analysis/nasa_facilities_analysis.json")
+W("EXTERNAL_DATA_REPORT.md",f"""# External (user-supplied) data report
+{BANNER}
+Two files were supplied by the user and normalized by `tools/ingest_external.py` (raw copies in `data_raw/`, SHA-256 recorded in each output file and re-checked by `tools/validate.py`). Their original publisher, license and accuracy are **not verified**; the SpaceX file is described by the user as Kaggle `scoleman/spacex-launch-data`, which could not be opened from the build sandbox.
+
+## SpaceX launch table → `missions/spacex_launch_history.json`
+* {SX['coverage']['launches']} rows, {SX['coverage']['first']} → {SX['coverage']['last']}. **The file ends at flight 56** — later launches and Block 5 maturity are absent.
+* Mission success {SX['mission_reliability']['successes']}/{SX['mission_reliability']['launches']} (95% Wilson {100*SX['mission_reliability']['wilson95_low']:.1f}–{100*SX['mission_reliability']['wilson95_high']:.1f}%). Landing attempts (pad/drone ship only) {SX['landing']['successes']}/{SX['landing']['attempts']} = {100*SX['landing']['success_rate']:.0f}% (Wilson {100*SX['landing']['wilson95_low']:.0f}–{100*SX['landing']['wilson95_high']:.0f}%). Rows with a re-flown booster: {SX['reflown_rows']['count']} ({100*SX['reflown_rows']['fraction']:.0f}%).
+* Normalization: ISO dates/times, booster family and serials split, payload mass parsed to kg (approximate `~` flagged; "Classified"/blank → null; {SX['mass_unknown_rows']} unknown), orbit classes, landing outcomes parsed per booster (Falcon Heavy has three), `CCAFS LC-40`/`SLC-40` treated as one pad (assumption).
+* Use in the project: observed launch reliability feeds the Simulator's optional launch-reliability factor and the Mission-fit evidence line. It does **not** replace vehicle specifications and must not be extrapolated beyond 2010–2018.
+
+## NASA facilities table → `infrastructure/nasa_facilities.json`
+* {NF['records']} facilities, all with parsed coordinates. By status: {NF['by_status']}. By derived category: {NF['by_category']}.
+* Data-quality issues found: {NF['quality']['missing_status']} rows without status; {NF['quality']['truncated_status_values']} truncated status value "Under" (assumed Under Rehabilitation); {NF['quality']['missing_url']} without URL; {NF['quality']['missing_occupied_date']} without occupied date.
+* `category` is a keyword classifier on the facility name (derived, unreviewed; {NF['by_category'].get('other',0)} fall into `other`). {len(NF['antennas'])} entries look like antennas/ground stations (diameter/band parsed from the name where present).
+* Use in the project: reference list of ground-test and ground-station infrastructure; it is not wired into the optimizer.
 """)
 print("reports written")

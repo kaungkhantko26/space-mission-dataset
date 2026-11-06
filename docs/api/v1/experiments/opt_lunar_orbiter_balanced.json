@@ -1,0 +1,56 @@
+{
+ "collection": "experiments",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "opt_lunar_orbiter_balanced",
+  "scenario_id": "lunar_orbiter",
+  "objective": "balanced",
+  "objective_name": "Balanced compromise (equal-weight normalized L2 distance to utopia in mass, cost, science)",
+  "sense": "minimize",
+  "feasibility_status": "feasible_optimum_found",
+  "solver": "exhaustive enumeration",
+  "optimality_claim": "optimal for the stated scalarization only",
+  "objective_value": null,
+  "result": {
+   "feasible": true,
+   "violations": [],
+   "wet_kg": 673.1878236451513,
+   "dry_kg": 118.39404161405938,
+   "prop_kg": 504.35798366462905,
+   "cost": 27595.122230049023,
+   "science": 23.0,
+   "avg_power_w": 98.41428571428571,
+   "inst_mass": 28.4,
+   "array_w_bol": 201.1412660555466,
+   "array_area_m2": 1.1591319304176375,
+   "battery_wh": 141.14715098572904,
+   "link_rate_bps": 10000000.0,
+   "link_margin_db": 37.71967406684216,
+   "data_gen_bits_day": 104284800000.0,
+   "data_down_bits_day": 230400000000.0,
+   "electric_burn_days": null,
+   "margin_min": 0.08016259233169924,
+   "mass_margin": 0.9671935758457528,
+   "budget_margin": 0.08016259233169924
+  },
+  "selected_components": {
+   "instruments": [
+    "nac_cam",
+    "neutron_spec",
+    "uv_spec",
+    "magnetometer",
+    "rad_detector"
+   ],
+   "computer": "cpu_leon3",
+   "comm": "hga1_x_20w",
+   "array": "sa_si",
+   "battery": "bat_li_ion",
+   "propulsion": "bi_mmh_nto",
+   "vehicle": "f9_class"
+  },
+  "input_dataset_version": "0.1.0",
+  "seed": null,
+  "data_class": "derived",
+  "inputs_data_class": "estimated+fictional"
+ }
+}

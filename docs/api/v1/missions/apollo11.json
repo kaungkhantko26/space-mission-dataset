@@ -1,0 +1,33 @@
+{
+ "collection": "missions",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "apollo11",
+  "name": "Apollo 11",
+  "agency": "NASA",
+  "launch_date": "1969-07-16",
+  "launch_vehicle_id": "saturn_v",
+  "launch_vehicle_note": "Saturn V",
+  "launch_mass_kg": 43904,
+  "dry_mass_kg": null,
+  "destination": "Moon (landing)",
+  "outcome": "success",
+  "cost_musd_nominal": null,
+  "cost_scope": "Program cost not apportioned to mission",
+  "instrument_ids": [],
+  "power_system": "Fuel cells (CSM)",
+  "comms": "S-band unified",
+  "confidence": "medium",
+  "note": "CSM 28,801 kg + LM 15,103 kg approx.",
+  "record_type": "historical",
+  "source_ids": [
+   "S09"
+  ],
+  "retrieval_status": "not_retrieved",
+  "data_class": "unverified",
+  "derived": {
+   "dry_to_launch_mass": null,
+   "propellant_plus_other_fraction": null
+  }
+ }
+}

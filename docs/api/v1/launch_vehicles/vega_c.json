@@ -1,0 +1,51 @@
+{
+ "collection": "launch_vehicles",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "vega_c",
+  "name": "Vega-C",
+  "maker": "Arianespace/Avio",
+  "country": "EU",
+  "status": "operational",
+  "height_m": 35.0,
+  "diameter_m": 3.4,
+  "stages": 4,
+  "liftoff_mass_kg": 210000,
+  "thrust_sl_n": null,
+  "reusable": false,
+  "fairing_diam_m": 3.3,
+  "fairing_height_m": 8.1,
+  "price_usd": null,
+  "price_year": null,
+  "payloads": [
+   {
+    "orbit": "SSO",
+    "payload_kg": 2300,
+    "altitude_km": 700,
+    "inclination_deg": null,
+    "mode": "expended",
+    "assumption": ""
+   }
+  ],
+  "sites": [
+   "Kourou ELV"
+  ],
+  "note": "",
+  "source_ids": [
+   "S11"
+  ],
+  "confidence": "low",
+  "data_class": "unverified",
+  "retrieval_status": "not_retrieved",
+  "derived": {
+   "payload_fraction_by_orbit": [
+    {
+     "orbit": "SSO",
+     "mode": "expended",
+     "payload_to_liftoff": 0.010952380952380953
+    }
+   ]
+  },
+  "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)"
+ }
+}

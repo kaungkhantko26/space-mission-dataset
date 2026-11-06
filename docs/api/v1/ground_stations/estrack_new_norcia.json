@@ -1,0 +1,25 @@
+{
+ "collection": "ground_stations",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "estrack_new_norcia",
+  "name": "ESTRACK New Norcia (35 m)",
+  "operator": "ESA",
+  "lat": -31.048,
+  "lon": 116.191,
+  "antenna_m": 35.0,
+  "gain_dbi": {},
+  "bands": [
+   "S",
+   "X"
+  ],
+  "tx_power_w_max": null,
+  "note": "Gain not recorded.",
+  "data_class": "unverified",
+  "confidence": "low",
+  "source_ids": [
+   "S27"
+  ],
+  "retrieval_status": "not_retrieved"
+ }
+}

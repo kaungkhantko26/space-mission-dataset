@@ -1,0 +1,65 @@
+{
+ "collection": "launch_vehicles",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "cz5",
+  "name": "Long March 5",
+  "maker": "CASC",
+  "country": "CN",
+  "status": "operational",
+  "height_m": 57.0,
+  "diameter_m": 5.0,
+  "stages": 2,
+  "liftoff_mass_kg": 869000,
+  "thrust_sl_n": 10573000,
+  "reusable": false,
+  "fairing_diam_m": 5.2,
+  "fairing_height_m": 12.0,
+  "price_usd": null,
+  "price_year": null,
+  "payloads": [
+   {
+    "orbit": "LEO",
+    "payload_kg": 25000,
+    "altitude_km": null,
+    "inclination_deg": null,
+    "mode": "expended",
+    "assumption": ""
+   },
+   {
+    "orbit": "GTO",
+    "payload_kg": 14000,
+    "altitude_km": null,
+    "inclination_deg": null,
+    "mode": "expended",
+    "assumption": ""
+   }
+  ],
+  "sites": [
+   "Wenchang"
+  ],
+  "note": "Thrust approximate.",
+  "source_ids": [
+   "S12"
+  ],
+  "confidence": "low",
+  "data_class": "unverified",
+  "retrieval_status": "not_retrieved",
+  "derived": {
+   "liftoff_thrust_to_weight": 1.2406742830627888,
+   "payload_fraction_by_orbit": [
+    {
+     "orbit": "LEO",
+     "mode": "expended",
+     "payload_to_liftoff": 0.028768699654775604
+    },
+    {
+     "orbit": "GTO",
+     "mode": "expended",
+     "payload_to_liftoff": 0.01611047180667434
+    }
+   ]
+  },
+  "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)"
+ }
+}

@@ -1,0 +1,37 @@
+{
+ "collection": "planets",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "jupiter",
+  "name": "Jupiter",
+  "category": "planet",
+  "parent_id": "sun",
+  "mu_m3_s2": 1.26686534e+17,
+  "gravitational_parameter_km3_s2": 126686534.0,
+  "mean_radius_m": 69911000.0,
+  "equatorial_radius_m": 71492000.0,
+  "mass_kg": 1.8982e+27,
+  "surface_gravity_m_s2": 24.79,
+  "rotation_period_h": 9.925,
+  "semi_major_axis_m": 778340816692.7108,
+  "eccentricity": 0.04838624,
+  "inclination_deg": 1.30439695,
+  "orbital_period_days": 4332.589,
+  "mean_surface_temperature_k": 165,
+  "equatorial_magnetic_field_t": 0.000428,
+  "derived": {
+   "escape_velocity_m_s": 60201.52155939343,
+   "circular_velocity_surface_m_s": 42568.90413239524,
+   "gravity_from_mu_m_s2": 25.920264322253384,
+   "derived_from": "v_esc=sqrt(2*mu/R_mean); v_circ=sqrt(mu/R_mean); g=mu/R^2 (spherical, non-rotating approximation)",
+   "solar_irradiance_w_m2": 50.276997934366
+  },
+  "data_class": "unverified",
+  "confidence": "medium",
+  "source_ids": [
+   "S01",
+   "S02"
+  ],
+  "retrieval_status": "not_retrieved"
+ }
+}

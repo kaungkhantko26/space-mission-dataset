@@ -1,0 +1,21 @@
+{
+ "collection": "boosters",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "stg_rsrm",
+  "name": "Space Shuttle RSRM",
+  "vehicle_id": null,
+  "count": 2,
+  "thrust_sl_n": 12500000,
+  "propellant_mass_kg": 503500,
+  "burn_s": 123,
+  "engine_id": "rsrm",
+  "note": "Historical.",
+  "source_ids": [
+   "S08"
+  ],
+  "confidence": "medium",
+  "data_class": "unverified",
+  "retrieval_status": "not_retrieved"
+ }
+}

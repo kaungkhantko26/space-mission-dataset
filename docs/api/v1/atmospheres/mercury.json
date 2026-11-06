@@ -1,0 +1,18 @@
+{
+ "collection": "atmospheres",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "mercury",
+  "surface_pressure_pa": null,
+  "temp_k": null,
+  "scale_height_km": null,
+  "composition_vol_pct": {},
+  "note": "Surface-bounded exosphere; no meaningful pressure recorded.",
+  "data_class": "unverified",
+  "confidence": "low",
+  "source_ids": [
+   "S01"
+  ],
+  "retrieval_status": "not_retrieved"
+ }
+}

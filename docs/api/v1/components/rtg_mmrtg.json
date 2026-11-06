@@ -1,0 +1,26 @@
+{
+ "collection": "components",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "rtg_mmrtg",
+  "name": "MMRTG (Multi-Mission RTG)",
+  "category": "power_source",
+  "record_kind": "named_item",
+  "mass_kg": 45.0,
+  "power_consumption_w": null,
+  "power_generation_w": 110.0,
+  "energy_capacity_wh": null,
+  "params": {
+   "thermal_power_w": 2000,
+   "fuel": "Pu-238 (GPHS modules)",
+   "power_decay_per_year": 0.04
+  },
+  "data_class": "unverified",
+  "confidence": "medium",
+  "note": "~110 W electrical at BOL; flown on MSL and Mars 2020.",
+  "source_ids": [
+   "S17"
+  ],
+  "retrieval_status": "not_retrieved"
+ }
+}

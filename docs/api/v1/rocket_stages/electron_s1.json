@@ -1,0 +1,26 @@
+{
+ "collection": "rocket_stages",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "electron_s1",
+  "vehicle_id": "electron",
+  "stage": "Stage 1",
+  "dry_mass_kg": 950,
+  "propellant_mass_kg": 9250,
+  "engine_id": "rutherford",
+  "n_engines": 9,
+  "note": "",
+  "source_ids": [
+   "S10"
+  ],
+  "confidence": "low",
+  "data_class": "unverified",
+  "retrieval_status": "not_retrieved",
+  "derived": {
+   "inert_mass_fraction": 0.09313725490196079,
+   "stage_thrust_vac_n": 232200,
+   "stage_thrust_sl_n": 225000,
+   "isp_vac_s": 343
+  }
+ }
+}

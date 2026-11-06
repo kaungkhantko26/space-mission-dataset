@@ -1,0 +1,29 @@
+{
+ "collection": "rocket_engines",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "srb5",
+  "name": "SLS 5-segment booster",
+  "maker": "Northrop Grumman",
+  "type": "solid",
+  "propellant": "PBAN/APCP",
+  "thrust_vac_n": null,
+  "thrust_sl_n": 16000000,
+  "isp_vac_s": 267,
+  "isp_sl_s": null,
+  "dry_mass_kg": null,
+  "burn_s": 126,
+  "restart": false,
+  "status": "operational",
+  "power_w": null,
+  "note": "Approximate thrust at liftoff (~16 MN).",
+  "source_ids": [
+   "S08"
+  ],
+  "confidence": "medium",
+  "data_class": "unverified",
+  "retrieval_status": "not_retrieved",
+  "derived": {},
+  "derived_from": "mdot=F/(Isp*g0); TWR=F/(m*g0); thrust/power"
+ }
+}

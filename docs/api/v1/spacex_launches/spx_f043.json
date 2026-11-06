@@ -1,0 +1,44 @@
+{
+ "collection": "spacex_launches",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "spx_f043",
+  "flight_label": "43",
+  "date_utc": "2017-10-11",
+  "time_utc": "22:53:00",
+  "booster_family": "F9 FT",
+  "booster_serials": [
+   "B1031.2"
+  ],
+  "booster_version_raw": "F9 FT B1031.2",
+  "launch_site_raw": "KSC LC-39A",
+  "launch_site_id": "ksc_lc39a",
+  "payload": "SES-11 / EchoStar 105",
+  "payload_mass_kg": 5200.0,
+  "payload_mass_approximate": false,
+  "payload_mass_raw": "5,200",
+  "orbit_raw": "GTO",
+  "orbit_class": "gto",
+  "customer_raw": "SES EchoStar",
+  "mission_outcome_raw": "Success",
+  "mission_outcome": "success",
+  "landing_outcome_raw": "Success (drone ship)",
+  "landings": [
+   {
+    "raw": "Success (drone ship)",
+    "result": "success",
+    "location": "drone_ship"
+   }
+  ],
+  "landing_attempts": 1,
+  "landing_successes": 1,
+  "booster_flight_number": 2,
+  "record_type": "historical",
+  "data_class": "unverified",
+  "confidence": "medium",
+  "source_ids": [
+   "S36"
+  ],
+  "retrieval_status": "user_supplied_not_independently_verified"
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "collection": "missions",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "lro",
+  "name": "Lunar Reconnaissance Orbiter",
+  "agency": "NASA",
+  "launch_date": "2009-06-18",
+  "launch_vehicle_id": null,
+  "launch_vehicle_note": "Atlas V 401",
+  "launch_mass_kg": 1916,
+  "dry_mass_kg": 1018,
+  "destination": "Lunar polar orbit",
+  "outcome": "success",
+  "cost_musd_nominal": 504,
+  "cost_scope": "Approx, nominal USD",
+  "instrument_ids": [
+   "lroc_nac"
+  ],
+  "power_system": "Solar array + battery",
+  "comms": "S/Ka-band",
+  "confidence": "low",
+  "note": "Launched on Atlas V 401 variant (not 551); vehicle id is nearest family record.",
+  "record_type": "historical",
+  "source_ids": [
+   "S22"
+  ],
+  "retrieval_status": "not_retrieved",
+  "data_class": "unverified",
+  "derived": {
+   "dry_to_launch_mass": 0.5313152400835073,
+   "propellant_plus_other_fraction": 0.4686847599164927
+  }
+ }
+}

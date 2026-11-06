@@ -1,0 +1,21 @@
+{
+ "collection": "atmospheres",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "earth",
+  "surface_pressure_pa": 101325,
+  "temp_k": 288,
+  "scale_height_km": 8.5,
+  "composition_vol_pct": {
+   "N2": 78.08,
+   "O2": 20.95,
+   "Ar": 0.93
+  },
+  "data_class": "unverified",
+  "confidence": "medium",
+  "source_ids": [
+   "S01"
+  ],
+  "retrieval_status": "not_retrieved"
+ }
+}

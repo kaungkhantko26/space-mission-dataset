@@ -1,0 +1,27 @@
+{
+ "collection": "instruments",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "mola",
+  "name": "MOLA",
+  "instrument_type": "lidar_altimeter",
+  "heritage_mission": "Mars Global Surveyor",
+  "mass_kg": 25.9,
+  "power_w": 34.2,
+  "params": {
+   "wavelength_nm": 1064,
+   "rate_hz": 10,
+   "footprint_m": 160
+  },
+  "data_class": "unverified",
+  "confidence": "low",
+  "note": "",
+  "source_ids": [
+   "S21"
+  ],
+  "retrieval_status": "not_retrieved",
+  "derived": {
+   "power_to_mass_w_per_kg": 1.3204633204633207
+  }
+ }
+}

@@ -1,0 +1,32 @@
+{
+ "collection": "nasa_facilities",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "nf_0023",
+  "center": "Stennis Space Center",
+  "facility": "Push Boat",
+  "category": "other",
+  "category_basis": "keyword rules on facility name (derived, may be wrong)",
+  "status": "active",
+  "status_raw": "Active",
+  "occupied_date": "1965-01-01",
+  "record_date": "1996-03-01",
+  "last_update": "2015-04-06",
+  "url": "http://rockettest.nasa.gov",
+  "city": "Stennis Space Center",
+  "state": "MS",
+  "zipcode": "39529-6000",
+  "lat": 30.385948,
+  "lon": -89.604486,
+  "location_raw": "39529-6000 (30.385948, -89.604486)",
+  "antenna": null,
+  "duplicate_key": "ecea76",
+  "data_class": "unverified",
+  "confidence": "medium",
+  "source_ids": [
+   "S37"
+  ],
+  "retrieval_status": "user_supplied_not_independently_verified",
+  "possible_duplicate": false
+ }
+}

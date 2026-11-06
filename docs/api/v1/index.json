@@ -1,0 +1,190 @@
+{
+ "api": "Space Mission Research Data API",
+ "version": "v1",
+ "type": "static JSON (read-only, CORS-enabled on GitHub Pages)",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "license_note": "Add a LICENSE before redistribution; underlying facts come from public sources that were not retrieved.",
+ "openapi": "openapi.json",
+ "collections": [
+  {
+   "collection": "planets",
+   "description": "Sun, planets, dwarf planets (SI)",
+   "count": 12,
+   "url": "planets.json",
+   "record_url_template": "planets/{id}.json"
+  },
+  {
+   "collection": "moons",
+   "description": "Major moons",
+   "count": 11,
+   "url": "moons.json",
+   "record_url_template": "moons/{id}.json"
+  },
+  {
+   "collection": "asteroids",
+   "description": "Selected small bodies",
+   "count": 2,
+   "url": "asteroids.json",
+   "record_url_template": "asteroids/{id}.json"
+  },
+  {
+   "collection": "orbital_elements",
+   "description": "Orbital elements with epochs",
+   "count": 24,
+   "url": "orbital_elements.json",
+   "record_url_template": "orbital_elements/{id}.json"
+  },
+  {
+   "collection": "atmospheres",
+   "description": "Atmosphere summaries",
+   "count": 11,
+   "url": "atmospheres.json",
+   "record_url_template": "atmospheres/{id}.json"
+  },
+  {
+   "collection": "rocket_engines",
+   "description": "Chemical engines/motors/thrusters",
+   "count": 19,
+   "url": "rocket_engines.json",
+   "record_url_template": "rocket_engines/{id}.json"
+  },
+  {
+   "collection": "electric_propulsion",
+   "description": "Ion and Hall thrusters",
+   "count": 5,
+   "url": "electric_propulsion.json",
+   "record_url_template": "electric_propulsion/{id}.json"
+  },
+  {
+   "collection": "propellants",
+   "description": "Propellant densities",
+   "count": 8,
+   "url": "propellants.json",
+   "record_url_template": "propellants/{id}.json"
+  },
+  {
+   "collection": "launch_vehicles",
+   "description": "Launch vehicles",
+   "count": 16,
+   "url": "launch_vehicles.json",
+   "record_url_template": "launch_vehicles/{id}.json"
+  },
+  {
+   "collection": "rocket_stages",
+   "description": "Stages",
+   "count": 8,
+   "url": "rocket_stages.json",
+   "record_url_template": "rocket_stages/{id}.json"
+  },
+  {
+   "collection": "boosters",
+   "description": "Boosters",
+   "count": 4,
+   "url": "boosters.json",
+   "record_url_template": "boosters/{id}.json"
+  },
+  {
+   "collection": "components",
+   "description": "Spacecraft component classes and named items",
+   "count": 23,
+   "url": "components.json",
+   "record_url_template": "components/{id}.json"
+  },
+  {
+   "collection": "ground_stations",
+   "description": "Ground stations",
+   "count": 8,
+   "url": "ground_stations.json",
+   "record_url_template": "ground_stations/{id}.json"
+  },
+  {
+   "collection": "instruments",
+   "description": "Science instruments",
+   "count": 16,
+   "url": "instruments.json",
+   "record_url_template": "instruments/{id}.json"
+  },
+  {
+   "collection": "missions",
+   "description": "Historical missions",
+   "count": 14,
+   "url": "missions.json",
+   "record_url_template": "missions/{id}.json"
+  },
+  {
+   "collection": "mission_profiles",
+   "description": "Hypothetical analysis scenarios",
+   "count": 3,
+   "url": "mission_profiles.json",
+   "record_url_template": "mission_profiles/{id}.json"
+  },
+  {
+   "collection": "engineering_constraints",
+   "description": "Constraint statements",
+   "count": 78,
+   "url": "engineering_constraints.json",
+   "record_url_template": "engineering_constraints/{id}.json"
+  },
+  {
+   "collection": "experiments",
+   "description": "27 optimization experiments",
+   "count": 27,
+   "url": "experiments.json",
+   "record_url_template": "experiments/{id}.json"
+  },
+  {
+   "collection": "spacex_launches",
+   "description": "SpaceX launch table 2010-2018 (user-supplied, normalized)",
+   "count": 57,
+   "url": "spacex_launches.json",
+   "record_url_template": "spacex_launches/{id}.json"
+  },
+  {
+   "collection": "launch_sites",
+   "description": "Launch pads",
+   "count": 3,
+   "url": "launch_sites.json",
+   "record_url_template": "launch_sites/{id}.json"
+  },
+  {
+   "collection": "nasa_facilities",
+   "description": "NASA facilities (user-supplied, normalized; category derived)",
+   "count": 485,
+   "url": "nasa_facilities.json",
+   "record_url_template": "nasa_facilities/{id}.json"
+  },
+  {
+   "collection": "sources",
+   "description": "Source catalog (none retrieved)",
+   "count": 39,
+   "url": "sources.json",
+   "record_url_template": "sources/{id}.json"
+  }
+ ],
+ "other_endpoints": [
+  "search-index.json",
+  "optimization/scenarios.json",
+  "optimization/sensitivity.json",
+  "optimization/uncertainty.json",
+  "optimization/models.json",
+  "quality.json",
+  "missions/trajectory_reference.json",
+  "optimization/pareto/leo_eo.json",
+  "optimization/pareto/lunar_orbiter.json",
+  "optimization/pareto/mars_orbiter.json",
+  "analysis/mass.json",
+  "analysis/propulsion.json",
+  "analysis/power.json",
+  "analysis/communications.json",
+  "analysis/feasibility.json",
+  "analysis/spacex_launch.json",
+  "analysis/nasa_facilities.json",
+  "analysis/benchmark.json"
+ ],
+ "conventions": [
+  "SI units; unit-suffixed field names",
+  "null = not recorded",
+  "every record has data_class/confidence/source_ids/retrieval_status",
+  "ids are lowercase snake_case and unique within a collection"
+ ]
+}

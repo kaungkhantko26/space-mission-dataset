@@ -1,0 +1,56 @@
+{
+ "collection": "spacex_launches",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "spx_fh01",
+  "flight_label": "FH 1",
+  "date_utc": "2018-02-06",
+  "time_utc": "20:45:00",
+  "booster_family": "FH",
+  "booster_serials": [
+   "B1023.2",
+   "B1033",
+   "B1025.2"
+  ],
+  "booster_version_raw": "B1023.2 (side) , Heavy core B1033, B1025.2 (side)",
+  "launch_site_raw": "KSC LC-39A",
+  "launch_site_id": "ksc_lc39a",
+  "payload": "Elon Musk's Tesla Roadster",
+  "payload_mass_kg": 1250.0,
+  "payload_mass_approximate": true,
+  "payload_mass_raw": "~1,250",
+  "orbit_raw": "Heliocentric 0.99–1.67 AU  (close to Mars transfer orbit)",
+  "orbit_class": "heliocentric",
+  "customer_raw": "SpaceX",
+  "mission_outcome_raw": "Success",
+  "mission_outcome": "success",
+  "landing_outcome_raw": "Success (ground pad), Failure (drone ship), Success (ground pad)",
+  "landings": [
+   {
+    "raw": "Success (ground pad)",
+    "result": "success",
+    "location": "ground_pad"
+   },
+   {
+    "raw": "Failure (drone ship)",
+    "result": "failure",
+    "location": "drone_ship"
+   },
+   {
+    "raw": "Success (ground pad)",
+    "result": "success",
+    "location": "ground_pad"
+   }
+  ],
+  "landing_attempts": 3,
+  "landing_successes": 2,
+  "booster_flight_number": 2,
+  "record_type": "historical",
+  "data_class": "unverified",
+  "confidence": "medium",
+  "source_ids": [
+   "S36"
+  ],
+  "retrieval_status": "user_supplied_not_independently_verified"
+ }
+}

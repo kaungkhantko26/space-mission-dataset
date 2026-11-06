@@ -1,0 +1,32 @@
+{
+ "collection": "nasa_facilities",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "nf_0324",
+  "center": "Johnson Space Center",
+  "facility": "Chamber A, EC, B-32",
+  "category": "other",
+  "category_basis": "keyword rules on facility name (derived, may be wrong)",
+  "status": "under_rehabilitation",
+  "status_raw": "Under Rehabilitation",
+  "occupied_date": "1964-01-01",
+  "record_date": "1996-03-01",
+  "last_update": "2012-09-26",
+  "url": "http://ctsdtests.jsc.nasa.gov/A.html",
+  "city": "Houston",
+  "state": "TX",
+  "zipcode": "77058",
+  "lat": 29.559177,
+  "lon": -95.097897,
+  "location_raw": "77058 (29.559177, -95.097897)",
+  "antenna": null,
+  "duplicate_key": "17156a",
+  "data_class": "unverified",
+  "confidence": "medium",
+  "source_ids": [
+   "S37"
+  ],
+  "retrieval_status": "user_supplied_not_independently_verified",
+  "possible_duplicate": false
+ }
+}

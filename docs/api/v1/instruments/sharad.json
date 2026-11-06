@@ -1,0 +1,27 @@
+{
+ "collection": "instruments",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "sharad",
+  "name": "SHARAD",
+  "instrument_type": "sounding_radar",
+  "heritage_mission": "Mars Reconnaissance Orbiter",
+  "mass_kg": 17.0,
+  "power_w": null,
+  "params": {
+   "center_freq_mhz": 20,
+   "bandwidth_mhz": 10,
+   "vertical_resolution_m_free_space": 15
+  },
+  "data_class": "unverified",
+  "confidence": "low",
+  "note": "",
+  "source_ids": [
+   "S20"
+  ],
+  "retrieval_status": "not_retrieved",
+  "derived": {
+   "power_to_mass_w_per_kg": null
+  }
+ }
+}

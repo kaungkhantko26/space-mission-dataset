@@ -1,0 +1,21 @@
+{
+ "collection": "orbital_elements",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "body_id": "earth",
+  "epoch": "J2000.0 (JD 2451545.0)",
+  "frame": "ecliptic of J2000, heliocentric mean elements (EM barycenter for Earth)",
+  "semi_major_axis_au": 1.00000261,
+  "eccentricity": 0.01671123,
+  "inclination_deg": -1.531e-05,
+  "validity": "Standish approximate elements, nominal validity 1800-2050; secular rates NOT included here",
+  "time_dependence": "time-dependent (slow secular drift)",
+  "data_class": "unverified",
+  "confidence": "medium",
+  "source_ids": [
+   "S04"
+  ],
+  "retrieval_status": "not_retrieved",
+  "id": "earth"
+ }
+}

@@ -6,6 +6,9 @@
 Records carry `source_ids` that point to the *expected* authoritative document or landing page; `retrieved` is `false` for all of them and no page/section, original value or retrieval date is stored. Field-level provenance (original measurement + unit) therefore does not exist yet. Confidence tags (`low|medium|high`) are subjective recall confidence, not measurement uncertainty.
 
 ## Known conflicts and issues
+* **SpaceX launch table coverage** — User-supplied file ends at flight 56 (2018-06-04); 57 rows. Reliability (56/57) and landing statistics describe the 2010-2018 development era only and must not be extrapolated to Block 5. Origin/license of the Kaggle-derived file is unverified.
+* **NASA facilities table** — 86 rows lack a status, 1 status is the truncated value 'Under' (assumed Under Rehabilitation), 340 lack URLs, and 256 of 485 fall into the 'other' category of the keyword classifier (category is derived, unreviewed).
+* **CCAFS LC-40 vs SLC-40** — Launch-site strings differ across rows; treated as the same pad (assumption).
 * **Deimos GM vs mass** — Recorded GM (9.62e-5 km3/s2) and mass (1.4762e15 kg) disagree by ~2.4% via GM=G*M; both retained, GM preferred for orbital use; resolve against JPL SSD sat_phys_par.
 * **Small-body surface gravity** — For irregular bodies (Phobos, Deimos, Bennu, Enceladus) g=mu/R^2 is a spherical approximation; recorded g is a mean/typical value.
 * **Saturn V liftoff thrust** — ~33.4 MN (design) vs ~34.5-35.1 MN (flight-reported) — 33.4 MN design value recorded; flight values vary by mission
@@ -37,5 +40,5 @@ Records carry `source_ids` that point to the *expected* authoritative document o
 ## Refresh methodology
 1. From a networked environment, fetch each source in `metadata/sources.json`; store original value/unit/page in `provenance.json`.
 2. Edit `tools/data_*.py`, set classes to `verified` only when matched to a retrieved document.
-3. `python3 tools/build.py && python3 tools/make_schemas.py && python3 tools/validate.py && python3 tools/make_reports.py && node tools/parity_check.js`.
+3. `python3 tools/build.py && python3 tools/make_api.py && python3 tools/make_schemas.py && python3 tools/validate.py && python3 tools/make_reports.py && node tools/parity_check.js`.
 4. Resolve entries in `known_conflicts` first (Electron/Falcon 9 stage masses, Deimos GM).

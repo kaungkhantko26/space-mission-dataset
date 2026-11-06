@@ -1,0 +1,54 @@
+{
+ "collection": "launch_vehicles",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "soyuz_21b",
+  "name": "Soyuz-2.1b",
+  "maker": "Roscosmos/TsSKB",
+  "country": "RU",
+  "status": "operational",
+  "height_m": 46.3,
+  "diameter_m": 2.95,
+  "stages": 3,
+  "liftoff_mass_kg": 312000,
+  "thrust_sl_n": null,
+  "reusable": false,
+  "fairing_diam_m": null,
+  "fairing_height_m": null,
+  "price_usd": null,
+  "price_year": null,
+  "payloads": [
+   {
+    "orbit": "LEO",
+    "payload_kg": 8200,
+    "altitude_km": null,
+    "inclination_deg": null,
+    "mode": "expended",
+    "assumption": ""
+   }
+  ],
+  "sites": [
+   "Baikonur",
+   "Plesetsk",
+   "Vostochny",
+   "Kourou (historical)"
+  ],
+  "note": "",
+  "source_ids": [
+   "S12"
+  ],
+  "confidence": "low",
+  "data_class": "unverified",
+  "retrieval_status": "not_retrieved",
+  "derived": {
+   "payload_fraction_by_orbit": [
+    {
+     "orbit": "LEO",
+     "mode": "expended",
+     "payload_to_liftoff": 0.026282051282051282
+    }
+   ]
+  },
+  "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)"
+ }
+}

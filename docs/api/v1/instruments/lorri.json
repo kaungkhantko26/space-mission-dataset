@@ -1,0 +1,28 @@
+{
+ "collection": "instruments",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "lorri",
+  "name": "LORRI",
+  "instrument_type": "optical_camera",
+  "heritage_mission": "New Horizons",
+  "mass_kg": 8.8,
+  "power_w": 5.8,
+  "params": {
+   "aperture_cm": 20.8,
+   "ifov_urad": 4.97,
+   "fov_deg": 0.29,
+   "pixels": "1024x1024"
+  },
+  "data_class": "unverified",
+  "confidence": "medium",
+  "note": "",
+  "source_ids": [
+   "S19"
+  ],
+  "retrieval_status": "not_retrieved",
+  "derived": {
+   "power_to_mass_w_per_kg": 0.6590909090909091
+  }
+ }
+}

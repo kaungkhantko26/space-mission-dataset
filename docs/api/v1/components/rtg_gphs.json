@@ -1,0 +1,24 @@
+{
+ "collection": "components",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "rtg_gphs",
+  "name": "GPHS-RTG",
+  "category": "power_source",
+  "record_kind": "named_item",
+  "mass_kg": 55.9,
+  "power_consumption_w": null,
+  "power_generation_w": 300.0,
+  "energy_capacity_wh": null,
+  "params": {
+   "thermal_power_w": 4400
+  },
+  "data_class": "unverified",
+  "confidence": "medium",
+  "note": "Flown on Cassini, New Horizons (~245 W at launch for NH unit), others.",
+  "source_ids": [
+   "S17"
+  ],
+  "retrieval_status": "not_retrieved"
+ }
+}

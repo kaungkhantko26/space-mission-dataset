@@ -1,0 +1,146 @@
+{
+ "build_date": "2026-11-06",
+ "version": "0.1.0",
+ "retrieval": {
+  "sources_listed": 38,
+  "sources_retrieved": 0,
+  "reason": "HTTPS CONNECT to nasa.gov / jpl.nasa.gov / esa hosts returned 403 from the sandbox egress proxy; no source document was opened."
+ },
+ "record_counts": {
+  "celestial_bodies": 25,
+  "engines_and_propulsion": 24,
+  "launch_vehicles": 16,
+  "stages_and_boosters": 12,
+  "spacecraft_components": 23,
+  "instruments": 16,
+  "historical_missions": 14,
+  "spacex_launch_records": 57,
+  "nasa_facilities": 485,
+  "nasa_antenna_facilities": 28,
+  "launch_sites": 3,
+  "ground_comm_systems": 10,
+  "engineering_constraints": 78,
+  "optimization_examples": 27
+ },
+ "targets": {
+  "celestial_bodies": 40,
+  "engines_and_propulsion": 40,
+  "launch_vehicles": 20,
+  "stages_and_boosters": 40,
+  "spacecraft_components": 100,
+  "instruments": 50,
+  "historical_missions": 30,
+  "ground_comm_systems": 15,
+  "engineering_constraints": 50,
+  "optimization_examples": 20
+ },
+ "target_attainment_pct": {
+  "celestial_bodies": 62.5,
+  "engines_and_propulsion": 60.0,
+  "launch_vehicles": 80.0,
+  "stages_and_boosters": 30.0,
+  "spacecraft_components": 23.0,
+  "instruments": 32.0,
+  "historical_missions": 46.7,
+  "ground_comm_systems": 66.7,
+  "engineering_constraints": 156.0,
+  "optimization_examples": 135.0
+ },
+ "data_class_counts": {
+  "unverified": 663,
+  "estimated": 20
+ },
+ "verified_records": 0,
+ "statement": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "completeness_pct": {
+  "engines": {
+   "thrust_vac_n": 83.3,
+   "thrust_sl_n": 41.7,
+   "isp_vac_s": 95.8,
+   "isp_sl_s": 33.3,
+   "dry_mass_kg": 45.8,
+   "burn_s": 16.7
+  },
+  "vehicles": {
+   "liftoff_mass_kg": 75.0,
+   "thrust_sl_n": 50.0,
+   "price_usd": 12.5,
+   "fairing_diam_m": 81.2,
+   "height_m": 100.0
+  },
+  "instruments": {
+   "mass_kg": 75.0,
+   "power_w": 56.2
+  },
+  "missions": {
+   "launch_mass_kg": 100.0,
+   "dry_mass_kg": 21.4,
+   "cost_musd_nominal": 71.4
+  },
+  "moons": {
+   "rotation_period_h": 0.0
+  },
+  "components": {
+   "mass_kg": 13.0,
+   "power_consumption_w": 4.3,
+   "power_generation_w": 8.7,
+   "energy_capacity_wh": 0.0
+  }
+ },
+ "known_conflicts": [
+  {
+   "topic": "SpaceX launch table coverage",
+   "note": "User-supplied file ends at flight 56 (2018-06-04); 57 rows. Reliability (56/57) and landing statistics describe the 2010-2018 development era only and must not be extrapolated to Block 5. Origin/license of the Kaggle-derived file is unverified."
+  },
+  {
+   "topic": "NASA facilities table",
+   "note": "86 rows lack a status, 1 status is the truncated value 'Under' (assumed Under Rehabilitation), 340 lack URLs, and 256 of 485 fall into the 'other' category of the keyword classifier (category is derived, unreviewed)."
+  },
+  {
+   "topic": "CCAFS LC-40 vs SLC-40",
+   "note": "Launch-site strings differ across rows; treated as the same pad (assumption)."
+  },
+  {
+   "topic": "Deimos GM vs mass",
+   "note": "Recorded GM (9.62e-5 km3/s2) and mass (1.4762e15 kg) disagree by ~2.4% via GM=G*M; both retained, GM preferred for orbital use; resolve against JPL SSD sat_phys_par."
+  },
+  {
+   "topic": "Small-body surface gravity",
+   "note": "For irregular bodies (Phobos, Deimos, Bennu, Enceladus) g=mu/R^2 is a spherical approximation; recorded g is a mean/typical value."
+  },
+  {
+   "topic": "Saturn V liftoff thrust",
+   "values": [
+    "~33.4 MN (design)",
+    "~34.5-35.1 MN (flight-reported)"
+   ],
+   "preferred": "33.4 MN design value recorded; flight values vary by mission"
+  },
+  {
+   "topic": "Falcon 9 mass accounting",
+   "note": "Recorded liftoff mass minus recorded stage masses leaves ~31 t, more than payload+fairing implies; at least one input (stage dry mass or liftoff mass) is likely off. See analysis/mass_analysis.json."
+  },
+  {
+   "topic": "Electron stage masses",
+   "note": "Recorded stage dry+propellant masses sum exactly to liftoff mass, leaving no room for payload/fairing; ideal dv in propulsion_analysis (~11.6-12 km/s) is therefore an overestimate and not a credible ascent number. Needs retrieval of the payload user's guide."
+  },
+  {
+   "topic": "SLS stack ideal delta-v",
+   "note": "Core-stage-only accounting (boosters excluded); stack residual is dominated by booster/upper-stage mass, so the ideal-dv total is not a vehicle capability."
+  },
+  {
+   "topic": "Mission launch vehicle variants",
+   "note": "Several missions flew Atlas V 401/411/541 variants not in the launch dataset; launch_vehicle_id is null for them."
+  }
+ ],
+ "missing_categories": [
+  "hybrid rocket motors",
+  "most reaction wheels / star trackers as named products with specs",
+  "magnetometers/seismometers/mass spectrometers beyond SAM",
+  "optical comm hardware specs",
+  "radiation environment per body",
+  "terrain characteristics",
+  "per-field provenance with page numbers and original units/measurements (not available without retrieval)"
+ ],
+ "validations_run": "see validation_report.json (generated by tools/validate.py)"
+}

@@ -1,0 +1,42 @@
+{
+ "collection": "spacex_launches",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "spx_f008",
+  "flight_label": "8",
+  "date_utc": "2014-01-06",
+  "time_utc": "22:06:00",
+  "booster_family": "F9 v1.1",
+  "booster_serials": [],
+  "booster_version_raw": "F9 v1.1",
+  "launch_site_raw": "CCAFS LC-40",
+  "launch_site_id": "ccsfs_slc40",
+  "payload": "Thaicom 6",
+  "payload_mass_kg": 3325.0,
+  "payload_mass_approximate": false,
+  "payload_mass_raw": "3,325",
+  "orbit_raw": "GTO",
+  "orbit_class": "gto",
+  "customer_raw": "Thaicom",
+  "mission_outcome_raw": "Success",
+  "mission_outcome": "success",
+  "landing_outcome_raw": "No attempt",
+  "landings": [
+   {
+    "raw": "No attempt",
+    "result": "no_attempt",
+    "location": null
+   }
+  ],
+  "landing_attempts": 0,
+  "landing_successes": 0,
+  "booster_flight_number": null,
+  "record_type": "historical",
+  "data_class": "unverified",
+  "confidence": "medium",
+  "source_ids": [
+   "S36"
+  ],
+  "retrieval_status": "user_supplied_not_independently_verified"
+ }
+}

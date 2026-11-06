@@ -1,0 +1,44 @@
+{
+ "collection": "spacex_launches",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "spx_f022",
+  "flight_label": "22",
+  "date_utc": "2016-03-04",
+  "time_utc": "23:35:00",
+  "booster_family": "F9 FT",
+  "booster_serials": [
+   "B1020"
+  ],
+  "booster_version_raw": "F9 FT B1020",
+  "launch_site_raw": "CCAFS LC-40",
+  "launch_site_id": "ccsfs_slc40",
+  "payload": "SES-9",
+  "payload_mass_kg": 5271.0,
+  "payload_mass_approximate": false,
+  "payload_mass_raw": "5,271",
+  "orbit_raw": "GTO",
+  "orbit_class": "gto",
+  "customer_raw": "SES",
+  "mission_outcome_raw": "Success",
+  "mission_outcome": "success",
+  "landing_outcome_raw": "Failure (drone ship)",
+  "landings": [
+   {
+    "raw": "Failure (drone ship)",
+    "result": "failure",
+    "location": "drone_ship"
+   }
+  ],
+  "landing_attempts": 1,
+  "landing_successes": 0,
+  "booster_flight_number": 1,
+  "record_type": "historical",
+  "data_class": "unverified",
+  "confidence": "medium",
+  "source_ids": [
+   "S36"
+  ],
+  "retrieval_status": "user_supplied_not_independently_verified"
+ }
+}

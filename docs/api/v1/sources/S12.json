@@ -1,0 +1,16 @@
+{
+ "collection": "sources",
+ "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "S12",
+  "title": "Manufacturer datasheets and secondary compilations (Aerojet Rocketdyne, Northrop Grumman, Roscosmos, CASC)",
+  "organization": "various",
+  "url": "https://www.rocket.com/",
+  "covers": "RS-25D, Star 48B, MR-103, AJ10, Soyuz, Long March 5",
+  "retrieved": false,
+  "retrieval_date": null,
+  "page_or_section": null,
+  "note": "Canonical landing page recorded for where to verify; the document was NOT opened in this build.",
+  "used_by_records": true
+ }
+}

@@ -1,0 +1,152 @@
+{
+ "source_ids": [
+  "S36"
+ ],
+ "data_class": "derived",
+ "inputs_data_class": "unverified",
+ "coverage": {
+  "first": "2010-06-04",
+  "last": "2018-06-04",
+  "launches": 57,
+  "caveat": "File ends at flight 56 (2018-06-04); later launches, Block 5 maturity and all reuse statistics after mid-2018 are absent. Do not extrapolate."
+ },
+ "mission_reliability": {
+  "successes": 56,
+  "launches": 57,
+  "point_estimate": 0.9824561403508771,
+  "wilson95_low": 0.9070903306173727,
+  "wilson95_high": 0.99689641529332,
+  "definition": "success or success (payload status unclear) over all rows; one in-flight failure (CRS-7)",
+  "scope": "Falcon 9 / Falcon Heavy, 2010-2018 only"
+ },
+ "launches_by_year": {
+  "2010": {
+   "launches": 2,
+   "landing_attempts": 0,
+   "landing_successes": 0,
+   "landing_success_rate": null
+  },
+  "2012": {
+   "launches": 2,
+   "landing_attempts": 0,
+   "landing_successes": 0,
+   "landing_success_rate": null
+  },
+  "2013": {
+   "launches": 3,
+   "landing_attempts": 0,
+   "landing_successes": 0,
+   "landing_success_rate": null
+  },
+  "2014": {
+   "launches": 6,
+   "landing_attempts": 0,
+   "landing_successes": 0,
+   "landing_success_rate": null
+  },
+  "2015": {
+   "launches": 7,
+   "landing_attempts": 3,
+   "landing_successes": 1,
+   "landing_success_rate": 0.3333333333333333
+  },
+  "2016": {
+   "launches": 8,
+   "landing_attempts": 8,
+   "landing_successes": 5,
+   "landing_success_rate": 0.625
+  },
+  "2017": {
+   "launches": 18,
+   "landing_attempts": 14,
+   "landing_successes": 14,
+   "landing_success_rate": 1.0
+  },
+  "2018": {
+   "launches": 11,
+   "landing_attempts": 6,
+   "landing_successes": 5,
+   "landing_success_rate": 0.8333333333333334
+  }
+ },
+ "booster_family_counts": {
+  "F9 v1.0": 5,
+  "F9 v1.1": 15,
+  "F9 FT": 24,
+  "F9 B4": 11,
+  "FH": 1,
+  "F9 B5": 1
+ },
+ "landing": {
+  "attempts": 31,
+  "successes": 25,
+  "success_rate": 0.8064516129032258,
+  "wilson95_low": 0.6371939644454012,
+  "wilson95_high": 0.9081311641365236,
+  "definition": "ground-pad or drone-ship attempts only; ocean tests and parachute recoveries excluded"
+ },
+ "reflown_rows": {
+  "count": 12,
+  "fraction": 0.21052631578947367,
+  "definition": "rows whose booster serial carries a '.N' suffix with N>1"
+ },
+ "payload_mass_by_orbit_class": {
+  "leo_iss": {
+   "n": 15,
+   "min_kg": 500.0,
+   "median_kg": 2257.0,
+   "max_kg": 3310.0,
+   "mean_kg": 2080.8
+  },
+  "polar_leo": {
+   "n": 6,
+   "min_kg": 500.0,
+   "median_kg": 9600.0,
+   "max_kg": 9600.0,
+   "mean_kg": 7560.0
+  },
+  "gto": {
+   "n": 22,
+   "min_kg": 3100.0,
+   "median_kg": 4567.5,
+   "max_kg": 6761.0,
+   "mean_kg": 4590.772727272727
+  },
+  "leo": {
+   "n": 5,
+   "min_kg": 553.0,
+   "median_kg": 2034.0,
+   "max_kg": 9600.0,
+   "mean_kg": 3698.6
+  },
+  "sun_earth_l1": {
+   "n": 1,
+   "min_kg": 570.0,
+   "median_kg": 570.0,
+   "max_kg": 570.0,
+   "mean_kg": 570.0
+  },
+  "sso": {
+   "n": 2,
+   "min_kg": 475.0,
+   "median_kg": 1312.5,
+   "max_kg": 2150.0,
+   "mean_kg": 1312.5
+  },
+  "heliocentric": {
+   "n": 1,
+   "min_kg": 1250.0,
+   "median_kg": 1250.0,
+   "max_kg": 1250.0,
+   "mean_kg": 1250.0
+  },
+  "heo": {
+   "n": 1,
+   "min_kg": 362.0,
+   "median_kg": 362.0,
+   "max_kg": 362.0,
+   "mean_kg": 362.0
+  }
+ },
+ "mass_unknown_rows": 4
+}

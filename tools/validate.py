@@ -17,7 +17,7 @@ for f in files:
 chk("json_syntax_all_files",not bad,f"{len(files)} files; failures={bad}")
 # 2 schemas
 SM={"celestial/planets.json":"planets","celestial/moons.json":"moons","celestial/asteroids.json":"asteroids","propulsion/rocket_engines.json":"rocket_engines","propulsion/electric_propulsion.json":"electric_propulsion",
-    "launch/launch_vehicles.json":"launch_vehicles","launch/rocket_stages.json":"rocket_stages","launch/boosters.json":"boosters","missions/historical_missions.json":"historical_missions","optimization/optimized_configurations.json":"experiment"}
+    "launch/launch_vehicles.json":"launch_vehicles","launch/rocket_stages.json":"rocket_stages","launch/boosters.json":"boosters","missions/historical_missions.json":"historical_missions","optimization/optimized_configurations.json":"experiment","missions/spacex_launch_history.json":"spacex_launch_history","infrastructure/nasa_facilities.json":"nasa_facilities","missions/launch_sites.json":"launch_sites"}
 for f in ("cameras","spectrometers","radar","sensors"): SM[f"instruments/{f}.json"]="instrument"
 for f in ("batteries","solar_arrays","onboard_computers","attitude_control","thermal_control","structures"): SM[f"spacecraft/{f}.json"]="component"
 for f,s in SM.items():
@@ -31,6 +31,8 @@ colls={"planets":comb["celestial"]["planets"],"moons":comb["celestial"]["moons"]
 for n,c in colls.items(): chk(f"unique_ids:{n}",len(ids(c))==len(set(ids(c))),f"{len(c)} records")
 allbody=set(ids(colls["planets"])+ids(colls["moons"])+ids(colls["asteroids"]))
 chk("unique_ids:celestial_global",len(allbody)==len(colls["planets"])+len(colls["moons"])+len(colls["asteroids"]))
+colls.update(spacex=comb["launch_history"]["launches"],sites=comb["launch_history"]["sites"],facilities=comb["infrastructure"]["nasa_facilities"])
+for n in("spacex","sites","facilities"): chk(f"unique_ids:{n}",len(ids(colls[n]))==len(set(ids(colls[n]))),f"{len(colls[n])} records")
 # 4 cross refs
 eng=set(ids(colls["engines"])); veh=set(ids(colls["vehicles"])); insid=set(ids(colls["instruments"])); src={s["id"] for s in comb["metadata"]["sources"]}
 chk("xref:stage.engine_id",all(s["engine_id"] in eng for s in colls["stages"]))
@@ -42,6 +44,19 @@ chk("xref:source_ids",all(s in src for c in colls.values() for r in c for s in r
 chk("xref:orbital_elements.body_id",all(e["body_id"] in allbody for e in comb["celestial"]["orbital_elements"]))
 chk("xref:atmospheres.id",all(a["id"] in allbody for a in comb["celestial"]["atmospheres"]))
 chk("xref:scenario_vehicles",all(v["ref"].split(":")[1] in veh for s in comb["optimization"]["constraints"]["scenarios"] for v in s["vehicles"]))
+import hashlib, datetime
+sites={s["id"] for s in colls["sites"]}
+chk("xref:spacex.launch_site_id",all(r["launch_site_id"] in sites for r in colls["spacex"]))
+chk("external:spacex_input_sha256_matches_raw_file",hashlib.sha256(open(os.path.join(ROOT,"..","data_raw","spacex_launch_data.csv"),"rb").read()).hexdigest()==L("missions/spacex_launch_history.json")["input_sha256"])
+chk("external:facilities_input_sha256_matches_raw_file",hashlib.sha256(open(os.path.join(ROOT,"..","data_raw","NASA_Facilities.csv"),"rb").read()).hexdigest()==L("infrastructure/nasa_facilities.json")["input_sha256"])
+import csv as _csv
+chk("external:spacex_row_count_equals_raw_rows",len(colls["spacex"])==sum(1 for _ in _csv.DictReader(open(os.path.join(ROOT,"..","data_raw","spacex_launch_data.csv"),encoding="utf-8"))))
+chk("external:facilities_row_count_equals_raw_rows",len(colls["facilities"])==sum(1 for _ in _csv.DictReader(open(os.path.join(ROOT,"..","data_raw","NASA_Facilities.csv"),encoding="utf-8-sig"))))
+dates=[r["date_utc"] for r in colls["spacex"]]; chk("external:spacex_dates_valid_and_sorted",all(datetime.date.fromisoformat(x) for x in dates) and dates==sorted(dates))
+chk("external:spacex_landing_successes<=attempts",all(r["landing_successes"]<=r["landing_attempts"] for r in colls["spacex"]))
+an=comb["launch_history"]["analysis"]; chk("recompute:spacex_reliability_56_of_57",an["mission_reliability"]["successes"]==sum(1 for r in colls["spacex"] if r["mission_outcome"] in("success","success_payload_unclear")) and an["mission_reliability"]["launches"]==len(colls["spacex"]))
+chk("physics:facility_coords_in_plausible_US_range",all(r["lat"] is not None and 17<r["lat"]<72 and -180<r["lon"]<-60 for r in colls["facilities"]),str([r["id"] for r in colls["facilities"] if r["lat"] is None or not(17<r["lat"]<72 and -180<r["lon"]<-60)][:5]))
+chk("external:every_facility_has_center_and_name",all(r["center"] and r["facility"] for r in colls["facilities"]))
 # 5 plausibility
 bad=[]
 for b in colls["planets"]+colls["moons"]+colls["asteroids"]:
