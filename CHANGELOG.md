@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.1.0 — real data for the gaps
+* **New verified collections:** NASA SoA small-spacecraft components (1,724 rows), Launch Library 2 launcher configurations (532) and SpaceX launch record (743), NASA NSSDC missions (39) and instruments (181), NSSDC atmospheres (10), NIST fluid properties (6).
+* Source authority labels (`vendor-reported`, `aggregator`); 77 strict validation checks (every published value re-found in the raw source pages, no personal data, NIST physics sanity checks); 23 backend checks.
+* Cross-check: the user-supplied SpaceX table agrees with Launch Library on 57/57 dates and 56/57 outcomes.
+* New site tabs: Launchers, Components, Missions & instruments; Mission fit now also rates Launch Library vehicles.
+
 ## v2.0.0 — strict mode: verified data only
 * **Public dataset is now `verified/`**; everything exposed (API, CSV/SQLite, backend, website) is verified. Removed from public output: instruments, components, propellants, atmospheres, ground stations, unverified vehicle/engine fields, mission masses/costs, the user-supplied SpaceX table, and the estimated/fictional optimizer.
 * **Real datasets ingested directly:** JPL NHATS (7,185 targets), JPL SBDB NEOs with measured diameter (1,265), JPL satellite mean elements (461), official NASA Facilities (485, no contact data); user NASA facilities file cross-checked (485/485 agree).

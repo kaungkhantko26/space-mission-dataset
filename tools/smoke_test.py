@@ -29,6 +29,13 @@ try:
     c,j=call("/light-time?target=mars"); t("light time to Mars from verified orbits",c==200 and 4<j["records"][0]["min_one_way_light_time_min"]<5 and 20<j["records"][0]["max_one_way_light_time_min"]<22)
     c,j=call("/delta-v",dict(isp_s=310,m0_kg=1000,mf_kg=400)); t("delta-v (Tsiolkovsky)",c==200 and abs(j["delta_v_m_s"]-310*9.80665*math.log(2.5))<1e-6)
     c,j=call("/hohmann",dict(body="earth",altitude1_km=400,altitude2_km=35786)); t("Hohmann LEO->GEO ~3.86 km/s from verified GM",c==200 and abs(j["total_m_s"]-3857)<40,f'{j["total_m_s"]:.0f}')
+    c,j=call("/collections/launch_vehicle_configs?full_name=Falcon%209%20Block%205"); t("Launch Library: Falcon 9 Block 5 config",c==200 and j["total"]==1 and j["records"][0]["leo_capacity_kg"]==22800 and j["records"][0]["source_authority"].startswith("aggregator"))
+    c,j=call("/collections/launch_vehicle_configs?leo_capacity_kg_gte=40000&active=true&sort=-leo_capacity_kg&fields=full_name,leo_capacity_kg"); t("filter vehicles by capacity and active flag",c==200 and j["total"]>=3 and j["records"][0]["leo_capacity_kg"]>=40000,str([r["full_name"] for r in j["records"][:4]]))
+    c,j=call("/collections/spacex_launch_history?limit=1&sort=-date_utc"); t("SpaceX launch record (743+)",c==200 and j["total"]>=743)
+    c,j=call("/collections/smallsat_components?domain=propulsion&limit=3"); t("NASA SoA propulsion components",c==200 and j["total"]>150 and j["records"][0]["attributes"] and j["records"][0]["data_class"]=="verified")
+    c,j=call("/collections/nasa_instruments?q=LORRI"); t("NASA catalog instrument LORRI",c==200 and j["total"]>=1 and "aperture" in j["records"][0]["description"])
+    c,j=call("/collections/atmospheres/atm_venus"); t("Venus atmosphere published text",c==200 and "92 bars" in j["record"]["published"]["surface_pressure"])
+    c,j=call("/collections/fluid_properties/nist_oxygen"); t("NIST oxygen boiling point ~90 K",c==200 and abs(j["record"]["normal_boiling_point"]["temperature_k"]-90.19)<0.4)
     c,j=call("/optimize?scenario=leo_eo"); t("no synthetic optimizer is served",c==404)
     db=os.path.join(ROOT,"exports","space_mission.sqlite")
     if os.path.exists(db):

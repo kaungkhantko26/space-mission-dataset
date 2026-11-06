@@ -5,7 +5,9 @@ which contains ONLY:
   * datasets ingested directly from authoritative sources (JPL NHATS, JPL SBDB query, JPL satellite mean elements, official NASA Facilities CSV),
   * analyses derived purely from verified inputs.
 Everything estimated, fictional or merely recalled (optimizer catalog, costs, instruments, components, user-supplied SpaceX table, ...) is excluded."""
-import json, os, re, csv, html, math, hashlib, datetime, shutil, collections
+import json, os, re, csv, html, math, hashlib, datetime, shutil, collections, sys
+sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
+import ingest_real as IR
 HERE=os.path.dirname(os.path.abspath(__file__)); ROOT=os.path.join(HERE,".."); RET=os.path.join(ROOT,"data_raw","retrieved"); OUT=os.path.join(ROOT,"verified")
 S=json.load(open(os.path.join(ROOT,"space-mission-research","combined","all_space_mission_data.json")))
 sha=lambda f: hashlib.sha256(open(os.path.join(RET,f),"rb").read()).hexdigest()
@@ -105,6 +107,21 @@ for i,r in enumerate(csv.DictReader(open(os.path.join(RET,"nasa_facilities_offic
         record_date=r["Record Date"].strip() or None,last_update=r["Last Update"].strip() or None,data_class="verified",confidence="high",source_ids=["S53"],retrieval_status="retrieved"))
 # cross-check the user-supplied file against the official table
 u={(x["facility"],x["city"]):x for x in S["infrastructure"]["nasa_facilities"]}; agree=sum(1 for x in fac if (x["facility"],x["city"]) in u and u[(x["facility"],x["city"])]["center"]==x["center"] and abs((u[(x["facility"],x["city"])]["lat"] or 0)-(x["lat"] or 0))<1e-6)
+# ---------- NASA SoA components, NSSDC missions/instruments/atmospheres (ingested directly) ----------
+soa,soa_tables,soa_files=IR.soa_components(); nmc_ms,nmc_ex=IR.nmc_missions(); atm=IR.atmospheres()
+ll2_cfg=IR.ll2_launchers(); sx_hist=IR.ll2_spacex_launches(); fluid=IR.fluids()
+ll2_files={os.path.basename(r['provenance']['file']):r['provenance'] for r in ll2_cfg+sx_hist}
+soa_table_recs=[dict(id=f"soa_table_{i:03d}",domain=t["domain"],chapter=t["chapter"],table_id=t["table_id"],title=t["title"],columns=t["columns"],rows=t["rows"],data_class="verified",source_ids=["S54"],retrieval_status="retrieved") for i,t in enumerate(soa_tables)]
+# cross-check: user-supplied SpaceX table (2010-2018) against the Launch Library record
+ll_by_date=collections.defaultdict(list)
+for r in sx_hist: ll_by_date[(r["date_utc"] or "")[:10]].append(r)
+usx=S["launch_history"]["launches"]; matched=0; outcome_agree=0
+for u in usx:
+    c=ll_by_date.get(u["date_utc"],[])
+    if c:
+        matched+=1; ok_user=u["mission_outcome"] in ("success","success_payload_unclear"); ok_ll=any(x["status"]=="Launch Successful" for x in c)
+        outcome_agree+= (ok_user==ok_ll)
+sx_cross=f"Of {len(usx)} rows in the user-supplied SpaceX table, {matched} have a Launch Library SpaceX launch on the same UTC date and {outcome_agree} of those agree on success/failure. The public dataset uses the Launch Library record (743 launches), not the user table."
 # ---------- derived analyses from verified inputs only ----------
 byid={p["id"]:p for p in planets+moons}
 AU=149597870.7; C=299792.458
@@ -125,27 +142,29 @@ sources=[s for s in S["metadata"]["sources"] if s.get("retrieved") is True]
 sources+= [dict(id="S50",title="JPL NHATS Data API",organization="NASA JPL CNEOS",url="https://ssd-api.jpl.nasa.gov/nhats.api",retrieved=True,retrieval_date=P["retrieved"],retrieved_pages=[dict(url=P["source_url"],sha256=P["source_sha256"],retrieved=P["retrieved"])]),
  dict(id="S51",title="JPL SBDB Query API (NEOs with known diameter)",organization="NASA JPL SSD",url="https://ssd-api.jpl.nasa.gov/doc/sbdb_query.html",retrieved=True,retrieval_date=P2["retrieved"],retrieved_pages=[dict(url=P2["source_url"],sha256=P2["source_sha256"],retrieved=P2["retrieved"])]),
  dict(id="S52",title="JPL Planetary Satellite Mean Elements",organization="NASA JPL SSD",url="https://ssd.jpl.nasa.gov/sats/elem/",retrieved=True,retrieval_date=P3["retrieved"],retrieved_pages=[dict(url=P3["source_url"],sha256=P3["source_sha256"],retrieved=P3["retrieved"])]),
+ dict(id="S54",title="NASA State-of-the-Art Small Spacecraft Technology report 2026 (web edition, 12 chapters)",organization="NASA Small Spacecraft Systems Virtual Institute",url="https://www.nasa.gov/smallsat-institute/sst-soa/",retrieved=True,retrieval_date=max(v["retrieved"] for v in soa_files.values()),retrieved_pages=[dict(url=v["url"],sha256=v["source_sha256"],retrieved=v["retrieved"]) for v in soa_files.values()],note="Vendor-reported component specifications compiled by NASA; not NASA-tested."),
+ dict(id="S55",title="The Space Devs Launch Library 2 (launcher configurations; SpaceX launch record)",organization="The Space Devs",url="https://ll.thespacedevs.com/2.2.0/",retrieved=True,retrieval_date=max(v["retrieved"] for v in ll2_files.values()),retrieved_pages=[dict(url=v["url"],sha256=v["source_sha256"],retrieved=v["retrieved"],file=v["file"]) for v in ll2_files.values()],note="Community-curated aggregator citing manufacturers and agencies; reference orbits of capacity figures are not stated."),
+ dict(id="S56",title="NIST Chemistry WebBook: thermophysical properties of fluids (saturation tables)",organization="NIST",url="https://webbook.nist.gov/chemistry/fluid/",retrieved=True,retrieval_date=max(r["provenance"]["retrieved"] for r in fluid),retrieved_pages=[dict(url=r["provenance"]["url"],sha256=r["provenance"]["source_sha256"],retrieved=r["provenance"]["retrieved"]) for r in fluid]),
  dict(id="S53",title="NASA Facilities (data.nasa.gov legacy CSV; contact columns not ingested)",organization="NASA",url="https://data.nasa.gov/dataset/nasa-facilities",retrieved=True,retrieval_date=P4["retrieved"],retrieved_pages=[dict(url=P4["source_url"],sha256=P4["source_sha256"],retrieved=P4["retrieved"])],note="License listed as 'not specified' on data.nasa.gov.")]
 cols=dict(planets=planets,moons=moons,asteroids=asteroids,orbital_elements=elements,rocket_engines=engines,electric_propulsion=electric,launch_vehicles=vehicles,rocket_stages=stages,boosters=boosters,payload_capabilities=payload_caps,
-          missions=missions,nasa_facilities=fac,nhats_targets=nhats,neo_catalog=neos,moon_mean_elements=moon_el,sources=sources)
+          missions=missions,nasa_facilities=fac,nhats_targets=nhats,neo_catalog=neos,moon_mean_elements=moon_el,smallsat_components=soa,smallsat_tables=soa_table_recs,nasa_missions=nmc_ms,nasa_instruments=nmc_ex,atmospheres=atm,launch_vehicle_configs=ll2_cfg,spacex_launch_history=sx_hist,fluid_properties=fluid,sources=sources)
 counts={k:len(v) for k,v in cols.items()}
 cls=collections.Counter(r.get("data_class") for k,v in cols.items() if k!="sources" for r in v)
 q0=S["metadata"]["quality"]
 quality=dict(mode="STRICT: verified data only",build_date=datetime.date.today().isoformat(),record_counts=counts,data_class_counts=dict(cls),verified_records=cls.get("verified",0),targets={},target_attainment_pct={},
   retrieval=dict(sources_listed=len(sources),sources_retrieved=len(sources),reason="Only retrieved sources are used; see metadata sources and field_verification on each record."),
-  statement=("STRICT MODE: this dataset contains only values that were compared with, or ingested directly from, retrieved authoritative sources (JPL SSD/SBDB/NHATS, NASA NSSDC, NASA SLS page, Apollo 11 press kit, NTRS papers, ULA, ESA, data.nasa.gov). "
-             "Unverified, estimated and fictional values (optimizer catalog, costs, instruments, spacecraft components, Falcon/Starship/Electron and most engine specs, user-supplied SpaceX table) were removed. "
-             "Derived values are computed only from verified inputs and are labelled derived."),
+  statement=("STRICT MODE: this dataset contains only values that were compared with, or ingested directly from, retrieved sources: JPL (SSD, SBDB, NHATS), NASA (NSSDC fact sheets and mission catalog, Small Spacecraft SoA report 2026, SLS page, Apollo 11 press kit, NTRS papers, data.nasa.gov), ULA, ESA, NIST, and the Launch Library 2 aggregator. "
+             "Records carry source_authority/confidence where the source is an aggregator or vendor-reported compilation. Recalled, estimated and fictional values (optimizer catalog, costs, engine/vehicle specs without a retrievable source, the user-supplied SpaceX table) are not included. Derived values are computed only from verified inputs and are labelled derived."),
   conflicts_resolved=q0.get("conflicts_resolved",[]),known_conflicts=[dict(topic="Excluded data",note="Records or fields that could not be verified are excluded, not zero-filled; coverage is therefore partial by design. See staging reports for what was removed and why."),
-      dict(topic="NASA facilities cross-check",note=f"The user-supplied NASA_Facilities.csv agrees with the official data.nasa.gov table on {agree} of {len(fac)} facilities (center and coordinates); the official table is used. Official contact names and phone numbers are not ingested.")],
-  missing_categories=["instruments","spacecraft components","propellants","atmospheres","ground stations","SpaceX launch history (source not retrievable)","engine and vehicle specifications beyond the verified fields","costs"],completeness_pct={},validations_run="see verified/validation_report.json")
+      dict(topic="SpaceX table cross-check",note=sx_cross),dict(topic="Launch Library authority",note="Launch vehicle configurations and the SpaceX launch record come from The Space Devs Launch Library 2, a community-curated aggregator; records carry source_authority and confidence medium. Capacities do not state reference orbits. Falcon 9 Block 5 figures (22,800 kg LEO, 8,300 kg GTO, 549 t, 7,607 kN) agree with the previously recalled values."),dict(topic="NASA facilities cross-check",note=f"The user-supplied NASA_Facilities.csv agrees with the official data.nasa.gov table on {agree} of {len(fac)} facilities (center and coordinates); the official table is used. Official contact names and phone numbers are not ingested.")],
+  missing_categories=["structured instrument specifications (mass, power, data rate): only NASA catalog descriptions are included","properties of storable/kerosene propellants (RP-1, hydrazine, MMH, NTO): only cryogenic and noble-gas fluids from NIST are included","ground-station antenna gains (the NASA SoA ground tables are included as published)","engine and vehicle specifications beyond the verified fields","costs"],completeness_pct={},validations_run="see verified/validation_report.json")
 combined=dict(schema_version="verified-1.0.0",mode="STRICT: verified data only",generated=quality["build_date"],note=quality["statement"],
-  celestial=dict(planets=planets,moons=moons,asteroids=asteroids,orbital_elements=elements,atmospheres=[]),
-  propulsion=dict(rocket_engines=engines,electric_propulsion=electric,propellants=[]),launch=dict(launch_vehicles=vehicles,rocket_stages=stages,boosters=boosters,payload_capabilities=payload_caps),
+  celestial=dict(planets=planets,moons=moons,asteroids=asteroids,orbital_elements=elements,atmospheres=atm),
+  propulsion=dict(rocket_engines=engines,electric_propulsion=electric,propellants=fluid),launch=dict(launch_vehicles=vehicles,rocket_stages=stages,boosters=boosters,payload_capabilities=payload_caps),
   spacecraft=dict(components=[],ground_stations=[],optical_demonstrations=[]),instruments=[],
   missions=dict(historical=missions,profiles=[],requirements=[],trajectory_reference=traj,engineering_constraints=[]),
-  launch_history=dict(launches=[],sites=[],analysis=None),infrastructure=dict(provenance=P4,nasa_facilities=fac,analysis=dict(records=len(fac),by_center=dict(collections.Counter(x["center"] for x in fac).most_common()),by_status=dict(collections.Counter((x["status"] or "not_recorded") for x in fac).most_common()),antennas=[])),
-  real_data=dict(moon_mean_elements=moon_el,moon_mean_elements_provenance=P3,nhats_targets_file="nhats_targets.json",nhats_targets_count=len(nhats),nhats_provenance=P,neo_catalog_file="neo_catalog.json",neo_catalog_count=len(neos),neo_provenance=P2,note=nh_note),
+  launch_history=dict(launches=[],sites=[],analysis=None,note='see real_data.spacex_launch_history_file'),infrastructure=dict(provenance=P4,nasa_facilities=fac,analysis=dict(records=len(fac),by_center=dict(collections.Counter(x["center"] for x in fac).most_common()),by_status=dict(collections.Counter((x["status"] or "not_recorded") for x in fac).most_common()),antennas=[])),
+  real_data=dict(launch_vehicle_configs_file="launch_vehicle_configs.json",launch_vehicle_configs_count=len(ll2_cfg),spacex_launch_history_file="spacex_launch_history.json",spacex_launch_history_count=len(sx_hist),nasa_missions=nmc_ms,smallsat_components_file="smallsat_components.json",smallsat_components_count=len(soa),smallsat_tables=soa_table_recs,smallsat_provenance=soa_files,nasa_instruments_file="nasa_instruments.json",nasa_instruments_count=len(nmc_ex),moon_mean_elements=moon_el,moon_mean_elements_provenance=P3,nhats_targets_file="nhats_targets.json",nhats_targets_count=len(nhats),nhats_provenance=P,neo_catalog_file="neo_catalog.json",neo_catalog_count=len(neos),neo_provenance=P2,note=nh_note),
   analysis=dict(light_time=lt,nhats_lowest_delta_v=[dict(designation=n["designation"],min_delta_v_km_s=n["min_delta_v_km_s"],trip_days=n["min_delta_v_trip_days"],size_m=[n["size_min_m"],n["size_max_m"]],H_mag=n["H_mag"]) for n in best_nhats]),
   optimization=dict(constraints=dict(scenarios=[],catalog={},global_parameters={}),experiments=[],pareto=[],sensitivity=[],uncertainty=[],models=None),
   verification=dict(celestial=S["verification"]["celestial"],launch=S["verification"]["launch"],retrieved_files=S["verification"]["retrieved_files"]),
@@ -154,13 +173,8 @@ W("combined/verified_space_mission_data.json",combined)
 COLPROV={"nhats_targets":P,"neo_catalog":P2,"moon_mean_elements":P3,"nasa_facilities":P4}
 for k,v in cols.items(): W(f"{k}.json",dict(collection=k,count=len(v),mode="STRICT: verified data only",**({"provenance":COLPROV[k]} if k in COLPROV else {}),records=v))
 W("quality_report.json",quality)
-open(os.path.join(OUT,"README.md"),"w").write(f"""# verified/ — strict-mode dataset (generated)
-{quality['statement']}
-
-| Collection | Records | What |
-|---|---:|---|
-""" + "\n".join(f"| `{k}.json` | {n} | {d} |" for (k,n),d in zip(counts.items(),["Sun, planets, dwarf planets (verified fields only)","moons (verified GM/radius/mass)","Bennu, Vesta","planet/dwarf-planet orbital elements","engines (verified fields only)","NEXT, NSTAR, BPT-4000","launch vehicles (verified fields only)","Saturn V stages","SLS booster","verified payload capacities with stated reference orbits","missions: verified launch date / vehicle family","official NASA facilities (data.nasa.gov)","JPL NHATS accessible near-Earth targets (min delta-v, durations)","JPL SBDB near-Earth objects with measured diameter","JPL mean orbital elements of planetary satellites","retrieved sources"]))+"""
-
-Every record has `data_class: verified`, `source_ids`, `retrieval_status: retrieved` and either `field_verification` (per-field source text, URL, SHA-256, tolerance) or a `provenance` block (file, URL, SHA-256, retrieval date). Not generated by hand: run `python3 tools/make_verified.py`.
-""")
+DESC=dict(launch_vehicle_configs="532 launch vehicle configurations (Launch Library 2): dimensions, mass, thrust, LEO/GTO capacity, cost, launch statistics",spacex_launch_history="complete SpaceX launch record, 743 launches (Launch Library 2)",fluid_properties="NIST saturation properties of O2, H2, CH4, Xe, N2, He",planets="Sun, planets, dwarf planets (verified fields only)",moons="moons (verified GM/radius/mass)",asteroids="Bennu, Vesta",orbital_elements="planet/dwarf-planet orbital elements",rocket_engines="engines (verified fields only)",electric_propulsion="NEXT, NSTAR, BPT-4000",launch_vehicles="launch vehicles (verified fields only)",rocket_stages="Saturn V stages",boosters="SLS booster",
+  payload_capabilities="verified payload capacities with stated reference orbits",missions="missions: verified launch date / vehicle family",nasa_facilities="official NASA facilities (data.nasa.gov)",nhats_targets="JPL NHATS accessible near-Earth targets",neo_catalog="JPL SBDB near-Earth objects with measured diameter",moon_mean_elements="JPL mean orbital elements of planetary satellites",
+  smallsat_components="NASA SoA 2026 product tables: thrusters, power, GNC, radios, antennas, computers, platforms, launch, ground (vendor-reported)",smallsat_tables="index of the SoA tables and their columns",nasa_missions="39 missions from the NASA NSSDC catalog (launch date, vehicle, site, catalogued mass/power, description)",nasa_instruments="181 instruments/experiments with NASA catalog descriptions",atmospheres="NSSDC fact-sheet atmosphere data (published text + parsed numbers)",sources="retrieved sources")
+open(os.path.join(OUT,"README.md"),"w").write(f"# verified/ — strict-mode dataset (generated)\n{quality['statement']}\n\n| Collection | Records | What |\n|---|---:|---|\n"+"\n".join(f"| `{k}.json` | {n} | {DESC.get(k,k)} |" for k,n in counts.items())+"\n\nEvery record has `data_class: verified`, `source_ids`, `retrieval_status: retrieved` and either `field_verification` (per-field source text, URL, SHA-256, tolerance) or a `provenance` block (file, URL, SHA-256, retrieval date). Generated by `python3 tools/make_verified.py`.\n")
 print("verified:",counts); print("classes:",dict(cls)); print("facilities agree with official:",agree,"/",len(fac))

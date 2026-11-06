@@ -6,16 +6,22 @@ A hackathon-ready **backend dataset** for space-mission design projects. **Stric
 
 ```bash
 python3 tools/serve_api.py          # local backend on http://127.0.0.1:8000 (stdlib only)
-make all && make test               # rebuild everything, 51 validation checks, 16 backend checks
+make all && make test               # rebuild everything, 77 validation checks, 23 backend checks
 ```
 
-## What you get (all verified)
+## What you get (12,830 verified records)
 | | Records | Source |
 |---|---:|---|
-| Sun, planets, dwarf planets, moons, asteroids (verified fields) | 40 | JPL SSD, JPL SBDB, NASA NSSDC |
+| Sun, planets, dwarf planets, moons, asteroids (verified fields); orbital elements | 51 | JPL SSD, JPL SBDB, NASA NSSDC |
+| Atmospheres (published text + parsed numbers) | 10 | NASA NSSDC fact sheets |
 | Moon mean orbital elements | 461 | JPL (ingested directly) |
-| NHATS accessible near-Earth targets (min Δv, durations) | 7,185 | JPL NHATS API (ingested directly) |
-| Near-Earth objects with measured diameter | 1,265 | JPL SBDB (ingested directly) |
+| NHATS accessible near-Earth targets (min Δv, durations) | 7,185 | JPL NHATS API |
+| Near-Earth objects with measured diameter | 1,265 | JPL SBDB |
+| **Spacecraft components** (thrusters, batteries, solar arrays, radios, antennas, reaction wheels, star trackers, computers, platforms, launch integration, ground systems…) | 1,724 rows / 99 tables | NASA Small Spacecraft SoA report 2026 (vendor-reported) |
+| **Launch vehicle configurations** (dimensions, mass, thrust, capacities, cost, launch stats) | 532 | Launch Library 2 (aggregator) |
+| **SpaceX launch record** | 743 | Launch Library 2 (aggregator); your 2010-2018 file agrees on 57/57 dates, 56/57 outcomes |
+| **Missions / instruments** with NASA's descriptions | 39 / 181 | NASA NSSDC Master Catalog |
+| **Fluid properties** (O₂, H₂, CH₄, Xe, N₂, He saturation tables) | 6 | NIST Chemistry WebBook |
 | NASA facilities | 485 | official data.nasa.gov table (no contact data) |
 | Engines/thrusters, launch vehicles, Saturn V stages, payload capacities, missions — **verified fields only** | 41 | NTRS papers, Apollo 11 press kit, NASA SLS page, ULA, ESA, NSSDC catalog |
 
@@ -25,7 +31,8 @@ Access: static JSON API (`docs/api/v1`), local backend (`tools/serve_api.py`), C
 * Records carry only their verified fields; each has `field_verification` (source text, URL, retrieval date, file SHA-256, tolerance) or a collection-level `provenance` block. A missing field means "not verified", never zero.
 * Where a recalled value disagreed with its source, the **sourced value replaced it** (29 corrections, e.g. Saturn V S-IC dry mass 137,000 → 130,975 kg, BPT-4000 Isp 1850 → 2150 s, Eris radius, Uranus gravity). See `verified/quality_report.json` and the site's Quality tab.
 * `validate_verified.py` re-reads values from the **raw retrieved files** and scans for any unverified/estimated/fictional marker.
-* Not included: instruments, spacecraft components, propellants, atmospheres, ground stations, Falcon/Starship/Electron and most engine specs, costs, the SpaceX launch table, and the cost/science optimizer (those need values that could not be verified).
+* Source authority is stated: NASA/JPL/NIST/ESA/ULA documents and datasets; **vendor-reported** (NASA SoA tables); **aggregator** (Launch Library 2, `source_authority`, confidence medium).
+* Not included: structured instrument mass/power specs (NASA's catalog only has prose), storable-propellant properties (RP-1, hydrazine, MMH, NTO), costs, and the cost/science optimizer (needs estimated/fictional values).
 
 ## Repository map
 | Path | What |

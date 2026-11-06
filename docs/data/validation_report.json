@@ -1,12 +1,12 @@
 {
- "passed": 51,
- "total": 51,
+ "passed": 77,
+ "total": 77,
  "run_date": "2026-11-06",
  "checks": [
   {
    "check": "json_syntax_all_files",
    "passed": true,
-   "detail": "18 files"
+   "detail": "26 files"
   },
   {
    "check": "no_unverified_estimated_or_fictional_class_anywhere",
@@ -29,6 +29,16 @@
    "detail": "7"
   },
   {
+   "check": "unique_ids:nasa_missions",
+   "passed": true,
+   "detail": "39"
+  },
+  {
+   "check": "unique_ids:launch_vehicle_configs",
+   "passed": true,
+   "detail": "532"
+  },
+  {
    "check": "unique_ids:orbital_elements",
    "passed": true,
    "detail": "13"
@@ -39,14 +49,34 @@
    "detail": "485"
   },
   {
+   "check": "unique_ids:smallsat_components",
+   "passed": true,
+   "detail": "1724"
+  },
+  {
    "check": "unique_ids:boosters",
    "passed": true,
    "detail": "1"
   },
   {
+   "check": "unique_ids:fluid_properties",
+   "passed": true,
+   "detail": "6"
+  },
+  {
+   "check": "unique_ids:spacex_launch_history",
+   "passed": true,
+   "detail": "743"
+  },
+  {
    "check": "unique_ids:moons",
    "passed": true,
    "detail": "11"
+  },
+  {
+   "check": "unique_ids:smallsat_tables",
+   "passed": true,
+   "detail": "99"
   },
   {
    "check": "unique_ids:moon_mean_elements",
@@ -74,6 +104,11 @@
    "detail": "11"
   },
   {
+   "check": "unique_ids:atmospheres",
+   "passed": true,
+   "detail": "10"
+  },
+  {
    "check": "unique_ids:asteroids",
    "passed": true,
    "detail": "2"
@@ -82,6 +117,11 @@
    "check": "unique_ids:missions",
    "passed": true,
    "detail": "11"
+  },
+  {
+   "check": "unique_ids:nasa_instruments",
+   "passed": true,
+   "detail": "181"
   },
   {
    "check": "unique_ids:planets",
@@ -257,6 +297,96 @@
    "check": "staging_optimizer_and_fictional_data_excluded",
    "passed": true,
    "detail": ""
+  },
+  {
+   "check": "soa_every_published_value_found_in_raw_chapter_text",
+   "passed": true,
+   "detail": "0 missing, e.g. []"
+  },
+  {
+   "check": "soa_numeric_values_consistent_with_published_strings",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "soa_unique_ids_and_table_index",
+   "passed": true,
+   "detail": "1724 records, 99 tables"
+  },
+  {
+   "check": "soa_covers_all_domains",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "nmc_missions_launch_date_found_in_raw_page",
+   "passed": true,
+   "detail": "[]"
+  },
+  {
+   "check": "nmc_instruments_link_to_existing_missions",
+   "passed": true,
+   "detail": "0"
+  },
+  {
+   "check": "nmc_instrument_descriptions_found_in_raw_page",
+   "passed": true,
+   "detail": "[]"
+  },
+  {
+   "check": "no_personal_data_in_catalog_records",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "atmosphere_published_text_found_in_raw_fact_sheet",
+   "passed": true,
+   "detail": "[]"
+  },
+  {
+   "check": "atmosphere_parsed_values_sane",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "ll2_config_count_equals_raw",
+   "passed": true,
+   "detail": "532 vs 532"
+  },
+  {
+   "check": "ll2_falcon9_block5_values_plausible",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "ll2_configs_have_authority_label_and_provenance",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "ll2_spacex_count_equals_raw",
+   "passed": true,
+   "detail": "743 vs 743"
+  },
+  {
+   "check": "ll2_spacex_all_provider_spacex_and_dated",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "ll2_spacex_dates_sorted_ascending",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "ll2_spacex_status_values_known",
+   "passed": true,
+   "detail": "{'Launch was a Partial Failure', 'Launch Failure', 'Launch Successful'}"
+  },
+  {
+   "check": "nist_boiling_points_and_liquid_densities_match_known_physics",
+   "passed": true,
+   "detail": "[]"
   }
  ],
  "not_performed": [

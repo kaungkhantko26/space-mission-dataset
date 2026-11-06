@@ -17,27 +17,32 @@ curl "localhost:8000/collections"
 curl "localhost:8000/nhats/best?max_delta_v=6&min_size_m=100&limit=10"        # real JPL NHATS asteroid targets, lowest delta-v first
 curl "localhost:8000/collections/moon_mean_elements?satellite=Io"             # JPL mean elements
 curl "localhost:8000/collections/electric_propulsion?sort=-isp_vac_s&fields=id,name,isp_vac_s,thrust_vac_n,power_w"
+curl "localhost:8000/collections/launch_vehicle_configs?leo_capacity_kg_gte=15000&active=true&sort=-leo_capacity_kg&fields=full_name,leo_capacity_kg,launch_cost_usd"
+curl "localhost:8000/collections/smallsat_components?domain=propulsion&q=Hall&limit=5"      # NASA SoA thrusters
+curl "localhost:8000/collections/nasa_instruments?q=spectrometer&limit=3"
 curl -X POST localhost:8000/hohmann -d '{"body":"earth","altitude1_km":400,"altitude2_km":35786}'
 curl "localhost:8000/light-time?target=mars"
 ```
 Examples: [`examples/python_quickstart.py`](examples/python_quickstart.py), [`examples/node_quickstart.mjs`](examples/node_quickstart.mjs), [`examples/pandas_demo.py`](examples/pandas_demo.py).
 
-## What is in the dataset (all verified)
+## What is in the dataset (all verified; 12,830 records)
 | Collection | Records | Source |
 |---|---:|---|
-| `planets` (Sun, 8 planets, 3 dwarf planets), `moons` (11), `asteroids` (Bennu, Vesta), `orbital_elements` | 12 / 11 / 2 / 13 | JPL SSD physical parameters, JPL approximate elements, NASA NSSDC fact sheets, JPL SBDB — field-by-field checks |
-| `moon_mean_elements` | 461 | JPL planetary-satellite mean elements (ingested directly) |
-| `nhats_targets` | 7,185 | JPL NHATS API: accessible near-Earth targets, min delta-v (km/s), trip durations (days) |
-| `neo_catalog` | 1,265 | JPL SBDB query: near-Earth objects with measured diameter |
-| `nasa_facilities` | 485 | official NASA Facilities table on data.nasa.gov (contact names/phones **not** ingested) |
-| `rocket_engines` (5), `electric_propulsion` (3: NEXT, NSTAR, BPT-4000) | verified fields only | NASA NTRS, NASA SLS page, Apollo 11 press kit, ULA |
-| `launch_vehicles` (7), `rocket_stages` (Saturn V ×3), `boosters`, `payload_capabilities` (11) | verified fields only | Apollo 11 press kit, NASA SLS page, ULA, ESA |
-| `missions` (11) | launch date / vehicle family only | NASA NSSDC mission catalog |
+| `planets`, `moons`, `asteroids`, `orbital_elements`, `atmospheres` | 12 / 11 / 2 / 13 / 10 | JPL SSD/SBDB, NASA NSSDC (field-by-field checks) |
+| `moon_mean_elements` | 461 | JPL satellite mean elements |
+| `nhats_targets`, `neo_catalog` | 7,185 / 1,265 | JPL NHATS API, JPL SBDB query |
+| `smallsat_components` (+ `smallsat_tables` index) | 1,724 (99 tables) | NASA SoA 2026: propulsion, power, GNC, comms, avionics, thermal, structures, platforms, launch integration, ground — **vendor-reported**, strings as published, `numeric` parsed where units are in the header |
+| `launch_vehicle_configs` | 532 | Launch Library 2 — **aggregator**; capacities don't state reference orbits |
+| `spacex_launch_history` | 743 | Launch Library 2 — aggregator |
+| `nasa_missions`, `nasa_instruments` | 39 / 181 | NASA NSSDC Master Catalog (prose descriptions; no structured instrument mass/power) |
+| `fluid_properties` | 6 | NIST Chemistry WebBook (O₂, H₂, CH₄, Xe, N₂, He) |
+| `nasa_facilities` | 485 | official data.nasa.gov table (contacts not ingested) |
+| `rocket_engines` (5), `electric_propulsion` (3), `launch_vehicles` (7), `rocket_stages` (3), `boosters`, `payload_capabilities` (11), `missions` (11) | verified fields only | NTRS, Apollo 11 press kit, NASA SLS page, ULA, ESA, NSSDC |
 
-Records contain **only their verified fields**; absent field = not verified (never zero). `unverified_fields` / `verified_fields` lists make that explicit.
+Records contain **only their verified fields**; absent = not verified (never zero).
 
 ## ⚠ What is deliberately not here
-Instruments, spacecraft components, propellants, atmospheres, ground stations, Falcon/Starship/Electron and most engine specs, mission masses/costs, the SpaceX launch table, and the cost/science optimizer (it needed estimated and fictional values). Say so on your slide: *"verified-only; partial by design."* The staging build (`space-mission-research/`) still contains those values for maintainers, but nothing there is served or exported.
+Structured instrument mass/power specs (NASA's catalog gives prose only), storable-propellant properties (RP-1, hydrazine, MMH, NTO), costs, manufacturer-confirmed specs for most engines, and the cost/science optimizer (it needed estimated and fictional values). Aggregator and vendor-reported sources are labelled (`source_authority`). Say so on your slide: *"verified-only; partial by design."* The staging build (`space-mission-research/`) still contains those values for maintainers, but nothing there is served or exported.
 
 ## Local backend endpoints
 | Endpoint | What |
@@ -60,8 +65,8 @@ Instruments, spacecraft components, propellants, atmospheres, ground stations, F
 ## Rebuild / extend
 ```bash
 make setup    # pip install -r requirements.txt (jsonschema, numpy)
-make all      # staging build -> strict verified dataset -> 51 validation checks -> API -> CSV/SQLite
-make test     # + backend smoke test (16 endpoint checks)
+make all      # staging build -> strict verified dataset -> 77 validation checks -> API -> CSV/SQLite
+make test     # + backend smoke test (23 endpoint checks)
 make fetch    # re-download source pages (needs network access to JPL/NASA/ULA/ESA)
 make verify   # re-run verification on cached pages, then make all
 ```

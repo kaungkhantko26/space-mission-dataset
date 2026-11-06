@@ -17,20 +17,28 @@
   "nhats_targets": 7185,
   "neo_catalog": 1265,
   "moon_mean_elements": 461,
-  "sources": 18
+  "smallsat_components": 1724,
+  "smallsat_tables": 99,
+  "nasa_missions": 39,
+  "nasa_instruments": 181,
+  "atmospheres": 10,
+  "launch_vehicle_configs": 532,
+  "spacex_launch_history": 743,
+  "fluid_properties": 6,
+  "sources": 21
  },
  "data_class_counts": {
-  "verified": 9475
+  "verified": 12809
  },
- "verified_records": 9475,
+ "verified_records": 12809,
  "targets": {},
  "target_attainment_pct": {},
  "retrieval": {
-  "sources_listed": 18,
-  "sources_retrieved": 18,
+  "sources_listed": 21,
+  "sources_retrieved": 21,
   "reason": "Only retrieved sources are used; see metadata sources and field_verification on each record."
  },
- "statement": "STRICT MODE: this dataset contains only values that were compared with, or ingested directly from, retrieved authoritative sources (JPL SSD/SBDB/NHATS, NASA NSSDC, NASA SLS page, Apollo 11 press kit, NTRS papers, ULA, ESA, data.nasa.gov). Unverified, estimated and fictional values (optimizer catalog, costs, instruments, spacecraft components, Falcon/Starship/Electron and most engine specs, user-supplied SpaceX table) were removed. Derived values are computed only from verified inputs and are labelled derived.",
+ "statement": "STRICT MODE: this dataset contains only values that were compared with, or ingested directly from, retrieved sources: JPL (SSD, SBDB, NHATS), NASA (NSSDC fact sheets and mission catalog, Small Spacecraft SoA report 2026, SLS page, Apollo 11 press kit, NTRS papers, data.nasa.gov), ULA, ESA, NIST, and the Launch Library 2 aggregator. Records carry source_authority/confidence where the source is an aggregator or vendor-reported compilation. Recalled, estimated and fictional values (optimizer catalog, costs, engine/vehicle specs without a retrievable source, the user-supplied SpaceX table) are not included. Derived values are computed only from verified inputs and are labelled derived.",
  "conflicts_resolved": [
   {
    "record_id": "uranus",
@@ -183,17 +191,22 @@
    "note": "Records or fields that could not be verified are excluded, not zero-filled; coverage is therefore partial by design. See staging reports for what was removed and why."
   },
   {
+   "topic": "SpaceX table cross-check",
+   "note": "Of 57 rows in the user-supplied SpaceX table, 57 have a Launch Library SpaceX launch on the same UTC date and 56 of those agree on success/failure. The public dataset uses the Launch Library record (743 launches), not the user table."
+  },
+  {
+   "topic": "Launch Library authority",
+   "note": "Launch vehicle configurations and the SpaceX launch record come from The Space Devs Launch Library 2, a community-curated aggregator; records carry source_authority and confidence medium. Capacities do not state reference orbits. Falcon 9 Block 5 figures (22,800 kg LEO, 8,300 kg GTO, 549 t, 7,607 kN) agree with the previously recalled values."
+  },
+  {
    "topic": "NASA facilities cross-check",
    "note": "The user-supplied NASA_Facilities.csv agrees with the official data.nasa.gov table on 485 of 485 facilities (center and coordinates); the official table is used. Official contact names and phone numbers are not ingested."
   }
  ],
  "missing_categories": [
-  "instruments",
-  "spacecraft components",
-  "propellants",
-  "atmospheres",
-  "ground stations",
-  "SpaceX launch history (source not retrievable)",
+  "structured instrument specifications (mass, power, data rate): only NASA catalog descriptions are included",
+  "properties of storable/kerosene propellants (RP-1, hydrazine, MMH, NTO): only cryogenic and noble-gas fluids from NIST are included",
+  "ground-station antenna gains (the NASA SoA ground tables are included as published)",
   "engine and vehicle specifications beyond the verified fields",
   "costs"
  ],

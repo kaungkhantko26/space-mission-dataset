@@ -8,7 +8,7 @@ W=lambda p,o:(os.makedirs(os.path.dirname(os.path.join(OUT,p)),exist_ok=True),js
 DESC=dict(planets="Sun, planets, dwarf planets (verified fields only)",moons="Moons (verified GM, radius, mass)",asteroids="Bennu, Vesta (verified)",orbital_elements="Planet/dwarf-planet orbital elements (verified)",
  rocket_engines="Engines with verified fields only",electric_propulsion="NEXT, NSTAR, BPT-4000 (verified)",launch_vehicles="Launch vehicles, verified fields only",rocket_stages="Saturn V stages (verified)",boosters="SLS booster (verified field)",
  payload_capabilities="Verified payload capacities with stated reference orbits",missions="Missions: verified launch dates / vehicle families",nasa_facilities="Official NASA Facilities table (data.nasa.gov; contact data not ingested)",
- nhats_targets="JPL NHATS accessible near-Earth targets: min delta-v, durations (7,185)",neo_catalog="JPL SBDB near-Earth objects with measured diameter (1,265)",moon_mean_elements="JPL mean orbital elements of planetary satellites",sources="Retrieved sources with file hashes")
+ nhats_targets="JPL NHATS accessible near-Earth targets: min delta-v, durations (7,185)",neo_catalog="JPL SBDB near-Earth objects with measured diameter (1,265)",moon_mean_elements="JPL mean orbital elements of planetary satellites",smallsat_components="NASA SoA 2026 component/product tables (1,724 rows; vendor-reported)",smallsat_tables="Index of SoA tables and columns",nasa_missions="39 missions from the NASA NSSDC catalog",nasa_instruments="181 instruments/experiments (NASA catalog descriptions)",atmospheres="NSSDC fact-sheet atmospheres",launch_vehicle_configs="532 launch vehicle configurations (Launch Library 2; aggregator)",spacex_launch_history="743 SpaceX launches (Launch Library 2; aggregator)",fluid_properties="NIST saturation properties of six fluids",sources="Retrieved sources with file hashes")
 names=[f[:-5] for f in sorted(os.listdir(V)) if f.endswith(".json") and f not in ("quality_report.json","validation_report.json")]
 search=[]; idx=[]; BIG=800
 for n in names:
@@ -39,6 +39,6 @@ W("openapi.json",{"openapi":"3.0.3","info":{"title":"Space Mission Research Data
 # files the static site loads
 os.makedirs(os.path.join(ROOT,"docs","data"),exist_ok=True)
 shutil.copy(os.path.join(V,"combined","verified_space_mission_data.json"),os.path.join(ROOT,"docs","data","all_space_mission_data.json"))
-for f in ("nhats_targets.json","neo_catalog.json"): shutil.copy(os.path.join(V,f),os.path.join(ROOT,"docs","data",f))
+for f in ("nhats_targets.json","neo_catalog.json","smallsat_components.json","nasa_instruments.json","launch_vehicle_configs.json","spacex_launch_history.json"): shutil.copy(os.path.join(V,f),os.path.join(ROOT,"docs","data",f))
 if os.path.exists(vr): shutil.copy(vr,os.path.join(ROOT,"docs","data","validation_report.json"))
 print("api built:",len(names),"collections,",sum(len(json.load(open(os.path.join(V,n+'.json')))['records']) for n in names),"records")

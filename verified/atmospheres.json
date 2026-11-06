@@ -1,0 +1,318 @@
+{
+ "collection": "atmospheres",
+ "count": 10,
+ "mode": "STRICT: verified data only",
+ "records": [
+  {
+   "id": "atm_mercury",
+   "body_id": "mercury",
+   "published": {
+    "surface_pressure": "<~5 x 10 -15 bar (0.005 picobar)",
+    "total_atmosphere_mass": "<~10000 kg",
+    "average_temperature": "440 K (167 C) (590-725 K, sunward side)",
+    "atmospheric_composition": "Sodium 12,000-200,000; Magnesium 100,000; Oxygen <40,000; Hydrogen 5000, Potassium 800-1300, Calcium 300-1000; Iron <300; Aluminum 15; and possible trace amounts of Argon (Ar), Carbon Dioxide (CO 2 ), Water (H 2 O), Nitrogen (N 2 ), Xenon (Xe), Krypton (Kr), Neon (Ne), Helium (He) (The atmosphere of Mercury is a surface bounded exosphere, essentially a vacuum. Values for some species can vary with local time or location, these are given as ranges.) Notes on the factsheets - definitions of parameters, units, notes on sub- and superscripts, etc. Planetary Fact Table - metric units Planetary Fact"
+   },
+   "parsed": {
+    "surface_pressure_value": null,
+    "surface_pressure_unit": null,
+    "scale_height_km": null,
+    "average_temperature_value": 440.0,
+    "average_temperature_unit": "K"
+   },
+   "parse_note": "'published' holds the text exactly as printed on the NASA NSSDC fact sheet; 'parsed' holds the first number and unit of selected fields (check units: bars, mb, kPa, K).",
+   "data_class": "verified",
+   "confidence": "high",
+   "source_ids": [
+    "S01"
+   ],
+   "retrieval_status": "retrieved",
+   "provenance": {
+    "file": "data_raw/retrieved/nssdc_mercury.html",
+    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/mercuryfact.html",
+    "source_sha256": "e652306969f42ce128610a7a237cb059159f7b1ff577cbdbe8ff42d51af2766e",
+    "retrieved": "2026-11-06"
+   }
+  },
+  {
+   "id": "atm_venus",
+   "body_id": "venus",
+   "published": {
+    "surface_pressure": "92 bars",
+    "surface_density": "~65. kg/m 3",
+    "scale_height": "15.9 km",
+    "total_atmosphere_mass": "~4.8 x 10 20 kg",
+    "average_temperature": "737 K (464 C)",
+    "diurnal_temperature_range": "~0",
+    "wind_speeds": "0.3 to 1.0 m/s (surface)",
+    "mean_molecular_weight": "43.45",
+    "atmospheric_composition": "Major: 96.5% Carbon Dioxide (CO 2 ), 3.5% Nitrogen (N 2 ) Minor (ppm): Sulfur Dioxide (SO 2 ) - 150; Argon (Ar) - 70; Water (H 2 O) - 20; Carbon Monoxide (CO) - 17; Helium (He) - 12; Neon (Ne) - 7 Notes on the factsheets - definitions of parameters, units, notes on sub- and superscripts, etc. Planetary Fact Table - metric units Planetary Fact Table - U.S. units Planetary Fact Table - Earth ratio Venus Home Page Directory to other Planetary Fact Sheets Author/Curator: Dr. David R. Williams, [email removed] NSSDCA, Mail Code 690.1 NASA Goddard Space Flight Center Greenbelt, MD 20771 +1-301-286-1"
+   },
+   "parsed": {
+    "surface_pressure_value": 92.0,
+    "surface_pressure_unit": "bars",
+    "scale_height_km": 15.9,
+    "average_temperature_value": 737.0,
+    "average_temperature_unit": "K"
+   },
+   "parse_note": "'published' holds the text exactly as printed on the NASA NSSDC fact sheet; 'parsed' holds the first number and unit of selected fields (check units: bars, mb, kPa, K).",
+   "data_class": "verified",
+   "confidence": "high",
+   "source_ids": [
+    "S01"
+   ],
+   "retrieval_status": "retrieved",
+   "provenance": {
+    "file": "data_raw/retrieved/nssdc_venus.html",
+    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/venusfact.html",
+    "source_sha256": "f1ce7f52266660ded549fc0325143789adf0a1bfcd8a8b39523d9861ae17f81e",
+    "retrieved": "2026-11-06"
+   }
+  },
+  {
+   "id": "atm_earth",
+   "body_id": "earth",
+   "published": {
+    "surface_pressure": "1014 mb",
+    "surface_density": "1.217 kg/m 3",
+    "scale_height": "8.5 km",
+    "total_atmosphere_mass": "5.1 x 10 18 kg",
+    "average_temperature": "288 K (15 C)",
+    "diurnal_temperature_range": "283 K to 293 K (10 to 20 C)",
+    "wind_speeds": "0 to 100 m/s",
+    "mean_molecular_weight": "28.97",
+    "atmospheric_composition": "Major : 78.08% Nitrogen (N 2 ), 20.95% Oxygen (O 2 ), Minor (ppm): Argon (Ar) - 9340; Carbon Dioxide (CO 2 ) - 420 Neon (Ne) - 18.18; Helium (He) - 5.24; CH 4 - 1.94 Krypton (Kr) - 1.14; Hydrogen (H 2 ) - 0.55 Numbers do not add up to exactly 100% due to roundoff and uncertainty Water is highly variable, typically makes up about 1% Note that the acceleration values given are for the equator and pole. The standard acceleration of gravity for Earth is defined (CODATA 2018) as 9.80665 m/s 2 (exact). The Moon For information on the Moon, see the Moon Fact Sheet Notes on the factsheets - definition"
+   },
+   "parsed": {
+    "surface_pressure_value": 1014.0,
+    "surface_pressure_unit": "mb",
+    "scale_height_km": 8.5,
+    "average_temperature_value": 288.0,
+    "average_temperature_unit": "K"
+   },
+   "parse_note": "'published' holds the text exactly as printed on the NASA NSSDC fact sheet; 'parsed' holds the first number and unit of selected fields (check units: bars, mb, kPa, K).",
+   "data_class": "verified",
+   "confidence": "high",
+   "source_ids": [
+    "S01"
+   ],
+   "retrieval_status": "retrieved",
+   "provenance": {
+    "file": "data_raw/retrieved/nssdc_earth.html",
+    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
+    "source_sha256": "1b6925620e53d7b5560c8f822f27de95779b64a558947c914c5ab83d615d4296",
+    "retrieved": "2026-11-06"
+   }
+  },
+  {
+   "id": "atm_mars",
+   "body_id": "mars",
+   "published": {
+    "surface_pressure": "6.36 mb at mean radius (variable from 4.0 to 8.7 mb depending on season) [6.9 mb to 9 mb (Viking 1 Lander site)]",
+    "surface_density": "~0.016 +/- 0.006 kg/m 3",
+    "scale_height": "11.0 km",
+    "total_atmosphere_mass": "~2.5 x 10 16 kg",
+    "average_temperature": "~214 K (-59 C)",
+    "diurnal_temperature_range": "184 K to 242 K (-89 to -31 C) (Viking 1 Lander site)",
+    "wind_speeds": "2-7 m/s (summer), 5-10 m/s (fall), 17-30 m/s (dust storm) (Viking Lander sites)",
+    "mean_molecular_weight": "43.49",
+    "atmospheric_composition": "Major : Carbon Dioxide (CO 2 ) - 95.1% ; Nitrogen (N 2 ) - 2.59% Argon (Ar) - 1.94%; Oxygen (O 2 ) - 0.16%; Carbon Monoxide (CO) - 0.06% Minor (ppm): Water (H 2 O) - 210; Nitrogen Oxide (NO) - 100; Neon (Ne) - 2.5; Hydrogen-Deuterium-Oxygen (HDO) - 0.85; Krypton (Kr) - 0.3; Xenon (Xe) - 0.08 Satellites of Mars Phobos Deimos Semimajor axis* (km) 9378 23459 Sidereal orbit period (days) 0.31891 1.26244 Sidereal rotation period (days) 0.31891 1.26244 Orbital inclination (deg) 1.08 1.79 Orbital eccentricity 0.0151 0.0005 Subplanetary axis radius (km) 13.0 7.8 Along-orbit axis radius (km) 11.4 6.0 P"
+   },
+   "parsed": {
+    "surface_pressure_value": 6.36,
+    "surface_pressure_unit": "mb",
+    "scale_height_km": 11.0,
+    "average_temperature_value": 214.0,
+    "average_temperature_unit": "K"
+   },
+   "parse_note": "'published' holds the text exactly as printed on the NASA NSSDC fact sheet; 'parsed' holds the first number and unit of selected fields (check units: bars, mb, kPa, K).",
+   "data_class": "verified",
+   "confidence": "high",
+   "source_ids": [
+    "S01"
+   ],
+   "retrieval_status": "retrieved",
+   "provenance": {
+    "file": "data_raw/retrieved/nssdc_mars.html",
+    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+    "source_sha256": "3e372d4146b9faaa21c8a5161b7c62b5ca653bebe8e139a6eab8940e878935f7",
+    "retrieved": "2026-11-06"
+   }
+  },
+  {
+   "id": "atm_jupiter",
+   "body_id": "jupiter",
+   "published": {
+    "scale_height": "27 km",
+    "mean_molecular_weight": "2.22",
+    "atmospheric_composition": "Molecular hydrogen (H 2 ) - 89.8% (2.0%); Helium (He) - 10.2% (2.0%) Minor (ppm): Methane (CH 4 ) - 3000 (1000); Ammonia (NH 3 ) - 260 (40); Hydrogen Deuteride (HD) - 28 (10); Ethane (C 2 H 6 ) - 5.8 (1.5); Water (H 2 O) - 4 (varies with pressure) Aerosols: Ammonia ice, water ice, ammonia hydrosulfide Notes on the factsheets - definitions of parameters, units, notes on sub- and superscripts, etc. Jovian Satellite Fact Sheet Jovian Rings Fact Sheet Planetary Fact Table - metric units Planetary Fact Table - U.S. units Planetary Fact Table - Earth ratio Jupiter Home Page Directory to other Planet"
+   },
+   "parsed": {
+    "surface_pressure_value": null,
+    "surface_pressure_unit": null,
+    "scale_height_km": 27.0,
+    "average_temperature_value": null,
+    "average_temperature_unit": null
+   },
+   "parse_note": "'published' holds the text exactly as printed on the NASA NSSDC fact sheet; 'parsed' holds the first number and unit of selected fields (check units: bars, mb, kPa, K).",
+   "data_class": "verified",
+   "confidence": "high",
+   "source_ids": [
+    "S01"
+   ],
+   "retrieval_status": "retrieved",
+   "provenance": {
+    "file": "data_raw/retrieved/nssdc_jupiter.html",
+    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html",
+    "source_sha256": "d31b1668eaad4c0829aa4edbe88c8240f11504dbc2839a74e181199ba3dd00c0",
+    "retrieved": "2026-11-06"
+   }
+  },
+  {
+   "id": "atm_saturn",
+   "body_id": "saturn",
+   "published": {
+    "scale_height": "59.5 km",
+    "mean_molecular_weight": "2.07",
+    "atmospheric_composition": "Molecular hydrogen (H 2 ) - 96.3% (2.4%); Helium (He) - 3.25% (2.4%) Minor (ppm): Methane (CH 4 ) - 4500 (2000); Ammonia (NH 3 ) - 125 (75); Hydrogen Deuteride (HD) - 110 (58); Ethane (C 2 H 6 ) - 7 (1.5) Aerosols: Ammonia ice, water ice, ammonia hydrosulfide Notes on the factsheets - definitions of parameters, units, notes on sub- and superscripts, etc. Saturnian Satellite Fact Sheet Saturnian Rings Fact Sheet Planetary Fact Table - metric units Planetary Fact Table - U.S. units Planetary Fact Table - Earth ratio Saturn Home Page Directory to other Planetary Fact Sheets Author/Curator: Dr. Da"
+   },
+   "parsed": {
+    "surface_pressure_value": null,
+    "surface_pressure_unit": null,
+    "scale_height_km": 59.5,
+    "average_temperature_value": null,
+    "average_temperature_unit": null
+   },
+   "parse_note": "'published' holds the text exactly as printed on the NASA NSSDC fact sheet; 'parsed' holds the first number and unit of selected fields (check units: bars, mb, kPa, K).",
+   "data_class": "verified",
+   "confidence": "high",
+   "source_ids": [
+    "S01"
+   ],
+   "retrieval_status": "retrieved",
+   "provenance": {
+    "file": "data_raw/retrieved/nssdc_saturn.html",
+    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/saturnfact.html",
+    "source_sha256": "083a1a730278b49d6d4296986791c210a0ec152a0f21245ac49e83cf6bc98d8b",
+    "retrieved": "2026-11-06"
+   }
+  },
+  {
+   "id": "atm_uranus",
+   "body_id": "uranus",
+   "published": {
+    "scale_height": "27.7 km",
+    "wind_speeds": "0-250 m/s",
+    "mean_molecular_weight": "2.64",
+    "atmospheric_composition": "Molecular hydrogen (H 2 ) - 82.5% (3.3%); Helium (He) - 15.2% (3.3%) Methane (CH 4 ) - 2.3% Minor (ppm): Hydrogen Deuteride (HD) - 148 Aerosols: Ammonia ice, water ice, ammonia hydrosulfide, methane ice(?) Uranian Satellite Fact Sheet Uranian Rings Fact Sheet Planetary Fact Table - metric units Planetary Fact Table - U.S. units Planetary Fact Table - Earth ratio Uranus Home Page Directory to other Planetary Fact Sheets Notes on the factsheets - definitions of parameters, units, notes on sub- and superscripts, etc. Author/Curator: Dr. David R. Williams, [email removed] NSSDCA, Mail Code 690.1 N"
+   },
+   "parsed": {
+    "surface_pressure_value": null,
+    "surface_pressure_unit": null,
+    "scale_height_km": 27.7,
+    "average_temperature_value": null,
+    "average_temperature_unit": null
+   },
+   "parse_note": "'published' holds the text exactly as printed on the NASA NSSDC fact sheet; 'parsed' holds the first number and unit of selected fields (check units: bars, mb, kPa, K).",
+   "data_class": "verified",
+   "confidence": "high",
+   "source_ids": [
+    "S01"
+   ],
+   "retrieval_status": "retrieved",
+   "provenance": {
+    "file": "data_raw/retrieved/nssdc_uranus.html",
+    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/uranusfact.html",
+    "source_sha256": "5faa9c662c4afc2825312436272d91926d7b8f90284f7203b70c2896001eb73a",
+    "retrieved": "2026-11-06"
+   }
+  },
+  {
+   "id": "atm_neptune",
+   "body_id": "neptune",
+   "published": {
+    "scale_height": "19.1 - 20.3 km",
+    "wind_speeds": "0-580 m/s",
+    "mean_molecular_weight": "2.53 - 2.69",
+    "atmospheric_composition": "Molecular hydrogen (H 2 ) - 80.0% (3.2%); Helium (He) - 19.0% (3.2%); Methane (CH 4 ) 1.5% (0.5%) Minor (ppm): Hydrogen Deuteride (HD) - 192; Ethane (C 2 H 6 ) - 1.5 Aerosols: Ammonia ice, water ice, ammonia hydrosulfide, methane ice(?) Notes on the factsheets - definitions of parameters, units, notes on sub- and superscripts, etc. Neptunian Satellite Fact Sheet Neptunian Rings Fact Sheet Planetary Fact Table - metric units Planetary Fact Table - U.S. units Planetary Fact Table - Earth ratio Neptune Home Page Directory to other Planetary Fact Sheets Author/Curator: Dr. David R. Williams, [emai"
+   },
+   "parsed": {
+    "surface_pressure_value": null,
+    "surface_pressure_unit": null,
+    "scale_height_km": 19.1,
+    "average_temperature_value": null,
+    "average_temperature_unit": null
+   },
+   "parse_note": "'published' holds the text exactly as printed on the NASA NSSDC fact sheet; 'parsed' holds the first number and unit of selected fields (check units: bars, mb, kPa, K).",
+   "data_class": "verified",
+   "confidence": "high",
+   "source_ids": [
+    "S01"
+   ],
+   "retrieval_status": "retrieved",
+   "provenance": {
+    "file": "data_raw/retrieved/nssdc_neptune.html",
+    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/neptunefact.html",
+    "source_sha256": "c23977958b6bd5851dd3b9d0fe78a638ea45a8e41e5769229736b2ebd1a662fe",
+    "retrieved": "2026-11-06"
+   }
+  },
+  {
+   "id": "atm_moon",
+   "body_id": "moon",
+   "published": {
+    "surface_pressure": "3 x 10 -15 bar (2 x 10 -12 torr)",
+    "total_atmosphere_mass": "~25,000 kg",
+    "diurnal_temperature_range": "95 K to 390 K (~ -290 F to +240 F)"
+   },
+   "parsed": {
+    "surface_pressure_value": null,
+    "surface_pressure_unit": null,
+    "scale_height_km": null,
+    "average_temperature_value": null,
+    "average_temperature_unit": null
+   },
+   "parse_note": "'published' holds the text exactly as printed on the NASA NSSDC fact sheet; 'parsed' holds the first number and unit of selected fields (check units: bars, mb, kPa, K).",
+   "data_class": "verified",
+   "confidence": "high",
+   "source_ids": [
+    "S01"
+   ],
+   "retrieval_status": "retrieved",
+   "provenance": {
+    "file": "data_raw/retrieved/nssdc_moon.html",
+    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html",
+    "source_sha256": "38941ca49aa6283a849a4fd8d5aad1e420d5a3e9e962925fb6bc36cbea6d6f8f",
+    "retrieved": "2026-11-06"
+   }
+  },
+  {
+   "id": "atm_pluto",
+   "body_id": "pluto",
+   "published": {
+    "scale_height": "~18 km lower atmosphere, ~50 km above 30 km",
+    "mean_molecular_weight": "~28",
+    "atmospheric_composition": "99% Nitrogen (N 2 ), 0.5% Methane (CH 4 ), 0.05% Carbon Monoxide (CO), trace HCN, C 2 H x hydrocarbons Charon (P1) Mean distance from Pluto (km) 19,596 Sidereal orbit period (days) 6.3872 Sidereal rotation period (days) 6.3872 Orbital inclination to Pluto (deg) 0.00005 Orbital eccentricity 0.0 Equatorial radius (km) 606 Mass (10 21 kg) 1.586 Mean density (kg/m 3 ) 1700 Surface gravity (m/s 2 ) 0.29 Escape velocity (km/s) 0.59 Geometric Albedo 0.42 Bond Albedo 0.25 Apparent visual magnitude 16.8 Other Moons of Pluto Semi-Major Axis (km) Orbital Period (days) Rotation Period (days) Mean Diameter"
+   },
+   "parsed": {
+    "surface_pressure_value": null,
+    "surface_pressure_unit": null,
+    "scale_height_km": 18.0,
+    "average_temperature_value": null,
+    "average_temperature_unit": null
+   },
+   "parse_note": "'published' holds the text exactly as printed on the NASA NSSDC fact sheet; 'parsed' holds the first number and unit of selected fields (check units: bars, mb, kPa, K).",
+   "data_class": "verified",
+   "confidence": "high",
+   "source_ids": [
+    "S01"
+   ],
+   "retrieval_status": "retrieved",
+   "provenance": {
+    "file": "data_raw/retrieved/nssdc_pluto.html",
+    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/plutofact.html",
+    "source_sha256": "5609e695a3a6ea4c641a522131842889d3d413c4d8299cf5161b67d2db234415",
+    "retrieved": "2026-11-06"
+   }
+  }
+ ]
+}

@@ -18,6 +18,9 @@ const SETS={
  "Payload capacities":[D.launch.payload_capabilities,["vehicle_id","orbit","payload_kg","altitude_km","inclination_deg","mode"]],
  "Stages (Saturn V)":[D.launch.rocket_stages,["vehicle_id","stage","dry_mass_kg","propellant_mass_kg","n_engines"]],
  "Missions (verified fields)":[D.missions.historical,["name","launch_date","launch_vehicle_family","launch_mass_kg"]],
+ "Atmospheres (NSSDC)":[D.celestial.atmospheres,["body_id","published.surface_pressure","published.surface_density","published.scale_height","published.average_temperature","published.atmospheric_composition"]],
+ "Fluid properties (NIST)":[D.propulsion.propellants,["fluid","formula","normal_boiling_point.temperature_k","normal_boiling_point.liquid_density_kg_m3","highest_tabulated_saturation_state.temperature_k"]],
+ "Missions (NASA NSSDC catalog)":[D.real_data.nasa_missions,["name","cospar_id","launch_date","launch_vehicle","launch_site","catalog_mass_kg","nominal_power_w"]],
  "NASA facilities":[D.infrastructure.nasa_facilities,["center","facility","status","occupied","city","state","lat","lon"]],
 };
 const COMPARE={
@@ -30,10 +33,10 @@ const COMPARE={
 };
 const DIRS={"Chemical engines (verified fields)":{isp_vac_s:1,isp_sl_s:1,dry_mass_kg:-1},"Electric thrusters":{isp_vac_s:1,power_w:-1,dry_mass_kg:-1}};
 window.UI={el,table:(...a)=>table(...a),fmt,get,D,Q,SETS,esc};
-const TABS=["Overview","Guide","Explorer","Compare","Mission fit","Calculators","Asteroid targets","Facilities","API","Quality"];
+const TABS=["Overview","Guide","Explorer","Compare","Mission fit","Calculators","Launchers","Components","Missions & instruments","Asteroid targets","Facilities","API","Quality"];
 let cur=TABS[0];
 function tabs(){const n=$("#tabs");n.innerHTML="";TABS.forEach(t=>{const b=el(`<button role="tab" aria-selected="${t===cur}">${t}</button>`);b.onclick=()=>{cur=t;tabs();render();};n.append(b);});}
-function render(){const v=$("#view");v.innerHTML="";({Overview:overview,Guide:guide,Explorer:explorer,Compare:compare,"Mission fit":v=>EXTRA.missionFit(v,UI),Calculators:calculators,"Asteroid targets":v=>EXTRA.asteroids(v,UI),Facilities:v=>EXTRA.facilities(v,UI),API:v=>EXTRA.apiTab(v,UI),Quality:quality})[cur](v);}
+function render(){const v=$("#view");v.innerHTML="";({Overview:overview,Guide:guide,Explorer:explorer,Compare:compare,"Mission fit":v=>EXTRA.missionFit(v,UI),Calculators:calculators,"Asteroid targets":v=>EXTRA.asteroids(v,UI),Launchers:v=>EXTRA.launchers(v,UI),Components:v=>EXTRA.components(v,UI),"Missions & instruments":v=>EXTRA.instruments(v,UI),Facilities:v=>EXTRA.facilities(v,UI),API:v=>EXTRA.apiTab(v,UI),Quality:quality})[cur](v);}
 function table(rows,cols,opts={}){
   let sortK=null,dir=1; const lim=opts.limit||1000; const wrap=el(`<div class="tw"><table></table></div>`),t=wrap.firstChild;
   function draw(){const rs=sortK==null?rows:[...rows].sort((a,b)=>{const x=get(a,sortK),y=get(b,sortK);if(x==null)return 1;if(y==null)return -1;return (x>y?1:x<y?-1:0)*dir});
@@ -43,16 +46,19 @@ function table(rows,cols,opts={}){
   draw();return wrap;}
 window.TABLE=table;
 function overview(v){
-  const c=Q.record_counts,names={planets:"planets & dwarf planets",moons:"moons",asteroids:"asteroids",orbital_elements:"orbital element sets",rocket_engines:"chemical engines (verified fields)",electric_propulsion:"electric thrusters",launch_vehicles:"launch vehicles (verified fields)",rocket_stages:"Saturn V stages",boosters:"boosters",payload_capabilities:"payload capacities",missions:"missions (verified fields)",nasa_facilities:"NASA facilities (official)",nhats_targets:"NHATS asteroid targets",neo_catalog:"near-Earth objects (SBDB)",moon_mean_elements:"moon mean-element sets",sources:"retrieved sources"};
+  const c=Q.record_counts,names={planets:"planets & dwarf planets",moons:"moons",asteroids:"asteroids",orbital_elements:"orbital element sets",rocket_engines:"chemical engines (verified fields)",electric_propulsion:"electric thrusters",launch_vehicles:"launch vehicles (verified fields)",rocket_stages:"Saturn V stages",boosters:"boosters",payload_capabilities:"payload capacities",missions:"missions (verified fields)",nasa_facilities:"NASA facilities (official)",nhats_targets:"NHATS asteroid targets",neo_catalog:"near-Earth objects (SBDB)",moon_mean_elements:"moon mean-element sets",smallsat_components:"NASA SoA component rows",nasa_missions:"NASA catalog missions",nasa_instruments:"NASA catalog instruments",atmospheres:"atmospheres (NSSDC)",launch_vehicle_configs:"launch vehicle configurations (LL2)",spacex_launch_history:"SpaceX launches (LL2)",fluid_properties:"fluids (NIST)",sources:"retrieved sources"};
   v.append(el(`<div class="card"><h2>What is in the verified dataset</h2><div class="kpi">${Object.keys(names).map(k=>`<div><small>${names[k]}</small><div class="big">${(c[k]||0).toLocaleString()}</div></div>`).join("")}</div>
    <p class="mut">Every record is <b>verified</b>: compared with a retrieved source (field-by-field provenance) or ingested directly from an authoritative dataset. Values that could not be verified were removed, not zero-filled — coverage is partial by design.</p></div>`));
-  v.append(el(`<div class="card"><h2>What was left out, and why</h2><ul><li>Instruments, spacecraft components, propellants, atmospheres, ground stations — no retrievable source stated the numbers.</li><li>Falcon, Starship, Electron and most engine specifications — vendor pages are JavaScript-only, blocked, or unavailable.</li><li>The optimizer, costs and science weights — they depended on estimated/fictional catalog values.</li><li>The SpaceX launch table — its origin could not be verified (the API was down).</li></ul><p class="mut">See the Quality tab for conflicts found (recalled values replaced by sourced ones) and the validation results.</p></div>`));
+  v.append(el(`<div class="card"><h2>What was left out, and why</h2><ul><li>Structured instrument specs (mass, power, data rate) — NASA's catalog gives prose descriptions only.</li><li>Manufacturer-confirmed specs for most engines — only the fields listed per record are verified against a source; small-engine families are covered by the NASA SoA tables and vehicles by Launch Library (an aggregator).</li><li>Storable propellants (RP-1, hydrazine, MMH, NTO) — not in a retrievable table.</li><li>The optimizer, costs and science weights — they depended on estimated/fictional catalog values.</li></ul><p class="mut">See the Quality tab for conflicts found (recalled values replaced by sourced ones) and the validation results.</p></div>`));
 }
 function guide(v){v.append(el(`<div class="card"><h2>How to use this site</h2><ol>
 <li><b>Explorer</b> – browse and sort every verified collection (click a column header).</li>
 <li><b>Compare</b> – tick 2–4 engines, thrusters, vehicles, planets or moons; ✔ marks the best on metrics where “better” is unambiguous, and the mission verdict applies the Mission-fit rules to your selection.</li>
 <li><b>Mission fit</b> – choose Moon, Mars or GTO and a spacecraft dry mass; vehicles with a <i>recorded</i> capacity and engines with recorded thrust/Isp are ranked with reasons. Parts lacking verified numbers are shown as “Not rated”.</li>
 <li><b>Calculators</b> – rocket equation, Hohmann transfer (uses verified GM/radius), link budget, light time.</li>
+<li><b>Launchers</b> – 532 launch vehicle configurations and the full SpaceX launch record (Launch Library 2, aggregator).</li>
+<li><b>Components</b> – 1,724 product rows from NASA's Small Spacecraft SoA report (thrusters, batteries, radios, reaction wheels, star trackers, computers, …).</li>
+<li><b>Missions &amp; instruments</b> – 39 missions and 181 instruments from the NASA NSSDC catalog with NASA's descriptions.</li>
 <li><b>Asteroid targets</b> – JPL NHATS accessible near-Earth targets (lowest delta-v) and the SBDB NEO catalog with measured diameters.</li>
 <li><b>Facilities</b> – the official NASA Facilities table with filters and a map.</li>
 <li><b>API</b> – try the JSON API live; <a href="api.html">api.html</a> has the guide and clients.</li>

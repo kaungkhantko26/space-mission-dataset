@@ -8,7 +8,7 @@ def flat(o,pre=""):
     out={}
     for k,v in o.items():
         key=pre+k
-        if isinstance(v,dict) and k not in ("field_verification","provenance"): out.update(flat(v,key+"."))
+        if isinstance(v,dict) and k not in ("field_verification","provenance","attributes","numeric","published","parsed"): out.update(flat(v,key+"."))
         elif isinstance(v,(list,dict)): out[key]=json.dumps(v,ensure_ascii=False)
         else: out[key]=v
     return out
