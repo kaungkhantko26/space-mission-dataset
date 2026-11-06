@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it and keep the data_class / provenance fields."
+title: "Space Mission Research Dataset, API and Analysis Explorer"
+version: 1.0.0
+date-released: 2026-11-06
+authors:
+  - alias: kaungkhantko26
+repository-code: "https://github.com/kaungkhantko26/space-mission-dataset"
+license: MIT
+keywords: [space missions, rocket propulsion, launch vehicles, orbital mechanics, optimization, open data]
+abstract: "Provenance-tracked space mission engineering data with analysis, an exact design optimizer, a static JSON API and a local backend. Verified, derived, estimated, fictional and unverified values are labelled separately."

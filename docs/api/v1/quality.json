@@ -2,8 +2,8 @@
  "build_date": "2026-11-06",
  "version": "0.1.0",
  "retrieval": {
-  "sources_listed": 47,
-  "sources_retrieved": 13,
+  "sources_listed": 48,
+  "sources_retrieved": 14,
   "reason": "Retrieved: JPL SSD planetary/satellite physical parameters, JPL approximate planet elements, JPL SBDB API, NASA NSSDC fact sheets, NASA SLS page, NASA Apollo 11 press kit and three NTRS electric-propulsion documents, ULA Atlas V/Vulcan pages and the ESA Vega-C page (see metadata/sources.json). Not retrievable or not stating the numbers: SpaceX pages (JavaScript-rendered), api.spacexdata.com (HTTP 522), Rocket Lab, Aerojet Rocketdyne (403), Blue Origin (429), Arianespace manual; those records remain unverified."
  },
  "record_counts": {
@@ -53,8 +53,8 @@
  },
  "verified_records": 32,
  "launch_field_checks": {
-  "total": 64,
-  "verified": 44,
+  "total": 86,
+  "verified": 66,
   "conflicts_resolved_to_source": 13,
   "added_from_source": 7,
   "source_text_not_found": 0
@@ -64,7 +64,7 @@
   "verified": 198,
   "conflicts_resolved_to_source": 16
  },
- "statement": "32 records are verified (25 celestial bodies at core level; engines and stages whose core numeric fields were all checked) against retrieved JPL, NASA (NTRS, SLS page, Apollo 11 press kit), ULA and ESA pages. 198 celestial and 44 launch/engine field checks matched; 16 celestial and 13 launch/engine recalled values were wrong or outdated and were replaced by the sourced value. Launch vehicles are verified field by field only (see verified_field_count); everything not checked (e.g. Falcon, Starship, Electron, Ariane, most engines, spacecraft components, instruments, missions) is still unverified, as are two user-supplied tables. Derived values inherit the status of their inputs. Optimization catalog values are estimated/fictional.",
+ "statement": "32 records are verified (25 celestial bodies at core level; engines and stages whose core numeric fields were all checked) against retrieved JPL, NASA (NTRS, SLS page, Apollo 11 press kit), ULA and ESA pages. 198 celestial and 66 launch/engine field checks matched; 16 celestial and 13 launch/engine recalled values were wrong or outdated and were replaced by the sourced value. Launch vehicles are verified field by field only (see verified_field_count); everything not checked (e.g. Falcon, Starship, Electron, Ariane, most engines, spacecraft components, instruments, missions) is still unverified, as are two user-supplied tables. Derived values inherit the status of their inputs. Optimization catalog values are estimated/fictional.",
  "completeness_pct": {
   "engines": {
    "thrust_vac_n": 83.3,

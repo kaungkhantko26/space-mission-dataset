@@ -62,6 +62,7 @@ SRC = [
  ("S46","NSTAR ion thruster and power processor paper (NTRS 19980017550)","NASA GRC / Hughes","https://ntrs.nasa.gov/citations/19980017550","NSTAR thrust, power, Isp (pre-flight)"),
  ("S47","BPT-4000 Hall thruster NASA/TM-2006-214453 (NTRS 20060051789)","NASA GRC / Aerojet","https://ntrs.nasa.gov/citations/20060051789","BPT-4000 thrust, Isp, power"),
  ("S48","ESA Ariane 6 overview page","ESA","https://www.esa.int/Enabling_Support/Space_Transportation/Launch_vehicles/Ariane_6_overview","Ariane 62/64 GTO and LEO capability, fairing, height"),
+ ("S49","NASA NSSDC Master Catalog spacecraft pages","NASA GSFC NSSDC","https://nssdc.gsfc.nasa.gov/nmc/","Launch dates and launch-vehicle families of 11 missions; Apollo 11 CSM mass"),
  ("S36","User-supplied SpaceX launch table (data_raw/spacex_launch_data.csv); user indicated Kaggle dataset scoleman/spacex-launch-data","user upload","https://www.kaggle.com/datasets/scoleman/spacex-launch-data","Falcon 9/Heavy launches 2010-06-04..2018-06-04; underlying origin and license NOT verified"),
  ("S37","User-supplied NASA Facilities table (data_raw/NASA_Facilities.csv)","user upload","https://data.nasa.gov/","485 NASA facilities with coordinates; appears to be the NASA open-data facilities table, not verified"),
  ("S39","Launch-pad coordinates recalled from public maps/references","recalled","https://www.nasa.gov/","3 launch sites, ~0.01 deg accuracy, not retrieved"),
@@ -175,6 +176,7 @@ def patch_sources():
         rec = next((r for r in tables[c["collection"]] if r["id"] == c["record_id"]), None)
         if rec is None: continue
         f = c["field"]; v = c["source_value"]
+        if isinstance(v, float) and v == int(v): v = int(v)
         m = re.match(r"payloads\[(\w+)\]\.(\w+)$", f)
         if m:
             orbit, key = m.groups(); cand = [p for p in rec["payloads"] if p["orbit"] == orbit]

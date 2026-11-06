@@ -145,6 +145,29 @@ add("rocket_engines","nstar","isp_vac_s",E["nstar"]["isp_vac_s"],"nstar",r"speci
 add("rocket_engines","bpt4000","thrust_vac_n",E["bpt4000"]["thrust_vac_n"],"bpt",r"4\.5 kW.400 V (\d+) (\d+)",1e-3,"mN→N",1e-6,"BPT-4000 NASA/TM-2006-214453, Table 2, 4.5 kW-400 V: thrust 254 mN")
 add("rocket_engines","bpt4000","isp_vac_s",E["bpt4000"]["isp_vac_s"],"bpt",r"4\.5 kW.400 V \d+ (\d+)",1.0,"s",1e-2,"BPT-4000 NASA/TM-2006-214453, Table 2, 4.5 kW-400 V: Isp 2150 s")
 add("rocket_engines","bpt4000","power_w",E["bpt4000"]["power_w"],"bpt",r"BPT.4000 ([\d.]+) kW Hall",1e3,"kW→W",1e-6,"BPT-4000 NASA/TM-2006-214453 abstract: 4.5 kW Hall thruster")
+# ---------------- missions: launch date / vehicle family (NASA NSSDC Master Catalog pages) ----------------
+NMC={"apollo11":"1969-059A","voyager2":"1977-076A","lro":"2009-031A","mro":"2005-029A","new_horizons":"2006-001A","juno":"2011-040A","curiosity":"2011-070A","jwst":"2021-130A","landsat8":"2013-008A","dawn":"2007-043A","osiris_rex":"2016-055A"}
+def fam(x): return re.sub(r"\s+"," ",x.replace("Saturn 5","Saturn V")).lower()
+for mid,nid in NMC.items():
+    f=f"nmc/nmc_{nid}.html"; url=f"https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id={nid}"
+    pth=os.path.join(RET,f)
+    if not os.path.exists(pth): continue
+    txt=html_text(f); sha=hashlib.sha256(open(pth,"rb").read()).hexdigest(); ret=datetime.datetime.fromtimestamp(os.path.getmtime(pth),datetime.timezone.utc).strftime("%Y-%m-%d")
+    ld=re.search(r"Launch Date:\s*(\d{4}-\d{2}-\d{2})",txt); lv=re.search(r"Launch Vehicle:\s*(.*?)\s*Launch Site:",txt)
+    base=dict(collection="missions",record_id=mid,source_id="S49",url=url,file="data_raw/retrieved/"+f,source_sha256=sha,retrieved=ret,tolerance_rel=0.0)
+    if ld and M[mid]["launch_date"] and mid!="apollo11":
+        checks.append(dict(base,field="launch_date",mine_original=M[mid]["launch_date"],source_value=ld.group(1),source_original_text="Launch Date: "+ld.group(1),source_unit="date",statement_type="point value",section="NSSDC Master Catalog spacecraft page: Launch Date",status="verified" if ld.group(1)==M[mid]["launch_date"] else "conflict"))
+    if lv:
+        mine=(variant_note:=None)
+        VN={"apollo11":"Saturn V","voyager2":"Titan IIIE-Centaur","lro":"Atlas V 401","mro":"Atlas V 401","new_horizons":"Atlas V 551 + Star 48B","juno":"Atlas V 551","curiosity":"Atlas V 541","jwst":"Ariane 5 ECA","landsat8":"Atlas V 401","dawn":"Delta II 7925H","osiris_rex":"Atlas V 411"}[mid]
+        ok=fam(VN).startswith(fam(lv.group(1))) or fam(lv.group(1)).startswith(fam(VN))
+        checks.append(dict(base,field="launch_vehicle_note",mine_original=VN,source_value=lv.group(1),source_original_text="Launch Vehicle: "+lv.group(1),source_unit="text",statement_type="vehicle family match (variant letters/suffixes not always stated by the catalog)",section="NSSDC Master Catalog spacecraft page: Launch Vehicle",status="verified" if ok else "conflict"))
+# Apollo 11 total launch mass = CSM (NASA NSSDC catalog) + LM launch weight (Apollo 11 press kit)
+t11=re.sub(r"\s+"," ",html_text("nmc/nmc_1969-059A.html")); mcsm=re.search(r"Mass:\s*([\d,]+) kg",t11); mlm=re.search(r"launch weight of ([\d,]+) pounds",SRC["pk11"][3])
+if mcsm and mlm:
+    val=num(mcsm.group(1))+num(mlm.group(1))*LB; sid,url,file,sha,ret=meta("pk11")
+    checks.append(dict(collection="missions",record_id="apollo11",field="launch_mass_kg",mine_original=M["apollo11"]["launch_mass_kg"],source_value=val,source_original_text=f"CSM {mcsm.group(1)} kg (NSSDC catalog) + LM {mlm.group(1)} lb (press kit)",source_unit="kg (sum of two sources)",statement_type="derived sum",tolerance_rel=5e-3,
+        status="verified" if abs(M["apollo11"]["launch_mass_kg"]-val)/val<=5e-3 else "conflict",source_id="S44",url=url,file=file,source_sha256=sha,retrieved=ret,section="NASA Apollo 11 Press Kit (LM launch weight) + NSSDC Master Catalog (CSM mass 28,801 kg); excludes launch escape system and adapter"))
 note="Only numbers stated by a retrieved source are checked. Engines/vehicles not listed here (Falcon 9/Heavy, Starship, Merlin, Raptor, Rutherford, RL10, Vinci, Vulcain 2, Electron, Ariane 5, Delta IV, New Glenn, Soyuz, Long March 5, Star 48B, MR-103, AJ10, Draco, T6, SPT-100, RSRM, ...) remain unverified because no retrievable primary page or document stating their numbers was found."
 json.dump(dict(generated=datetime.date.today().isoformat(),note=note,checks=checks),open(os.path.join(OUT,"verification_launch.json"),"w"),indent=1)
 import collections

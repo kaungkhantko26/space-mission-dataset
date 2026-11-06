@@ -1,5 +1,5 @@
 # Verification report
-> **Read first:** 32 records are verified (25 celestial bodies at core level; engines and stages whose core numeric fields were all checked) against retrieved JPL, NASA (NTRS, SLS page, Apollo 11 press kit), ULA and ESA pages. 198 celestial and 44 launch/engine field checks matched; 16 celestial and 13 launch/engine recalled values were wrong or outdated and were replaced by the sourced value. Launch vehicles are verified field by field only (see verified_field_count); everything not checked (e.g. Falcon, Starship, Electron, Ariane, most engines, spacecraft components, instruments, missions) is still unverified, as are two user-supplied tables. Derived values inherit the status of their inputs. Optimization catalog values are estimated/fictional. Not retrieved: Retrieved: JPL SSD planetary/satellite physical parameters, JPL approximate planet elements, JPL SBDB API, NASA NSSDC fact sheets, NASA SLS page, NASA Apollo 11 press kit and three NTRS electric-propulsion documents, ULA Atlas V/Vulcan pages and the ESA Vega-C page (see metadata/sources.json). Not retrievable or not stating the numbers: SpaceX pages (JavaScript-rendered), api.spacexdata.com (HTTP 522), Rocket Lab, Aerojet Rocketdyne (403), Blue Origin (429), Arianespace manual; those records remain unverified.
+> **Read first:** 32 records are verified (25 celestial bodies at core level; engines and stages whose core numeric fields were all checked) against retrieved JPL, NASA (NTRS, SLS page, Apollo 11 press kit), ULA and ESA pages. 198 celestial and 66 launch/engine field checks matched; 16 celestial and 13 launch/engine recalled values were wrong or outdated and were replaced by the sourced value. Launch vehicles are verified field by field only (see verified_field_count); everything not checked (e.g. Falcon, Starship, Electron, Ariane, most engines, spacecraft components, instruments, missions) is still unverified, as are two user-supplied tables. Derived values inherit the status of their inputs. Optimization catalog values are estimated/fictional. Not retrieved: Retrieved: JPL SSD planetary/satellite physical parameters, JPL approximate planet elements, JPL SBDB API, NASA NSSDC fact sheets, NASA SLS page, NASA Apollo 11 press kit and three NTRS electric-propulsion documents, ULA Atlas V/Vulcan pages and the ESA Vega-C page (see metadata/sources.json). Not retrievable or not stating the numbers: SpaceX pages (JavaScript-rendered), api.spacexdata.com (HTTP 522), Rocket Lab, Aerojet Rocketdyne (403), Blue Origin (429), Arianespace manual; those records remain unverified.
 
 
 ## What "verified" means here
@@ -8,7 +8,7 @@ A **celestial record** is classed `verified` when its GM and mean radius are ver
 
 ## Coverage
 * Celestial: 198 field checks matched; 16 recalled values disagreed and were replaced by the sourced value (table below). 25 of 25 celestial records verified at core level.
-* Launch vehicles, stages, boosters, engines and the Apollo 11 launch date: 64 checks against NASA (SLS page, Apollo 11 press kit, NTRS electric-propulsion papers), ULA and ESA pages — 44 matched, 13 recalled values were wrong/outdated and replaced by the sourced value, 7 previously empty fields were filled from the source (table below). A record is classed `verified` only if **all** of its populated core numeric fields were checked: the 3 Saturn V stages, NEXT, NSTAR, BPT-4000 and BE-4. Vehicles are verified field by field. **Not verifiable with the retrieved material (still unverified):** Falcon 9/Heavy, Starship, Merlin, Raptor, Rutherford, Electron, Ariane 5, Delta IV, New Glenn, Soyuz, Long March 5, RL10, Vinci, Vulcain 2, Star 48B, MR-103, AJ10, Draco, T6, SPT-100, RSRM; most spacecraft components, instruments, propellants, atmospheres and mission figures. Reasons: SpaceX pages are JavaScript-rendered, api.spacexdata.com returned HTTP 522, Rocket Lab was unreachable, Aerojet Rocketdyne returned 403, Blue Origin returned 429, and no retrievable document gave the numbers.
+* Launch vehicles, stages, boosters, engines and the Apollo 11 launch date: 86 checks against NASA (SLS page, Apollo 11 press kit, NTRS electric-propulsion papers), ULA and ESA pages — 66 matched, 13 recalled values were wrong/outdated and replaced by the sourced value, 7 previously empty fields were filled from the source (table below). A record is classed `verified` only if **all** of its populated core numeric fields were checked: the 3 Saturn V stages, NEXT, NSTAR, BPT-4000 and BE-4. Vehicles are verified field by field. **Not verifiable with the retrieved material (still unverified):** Falcon 9/Heavy, Starship, Merlin, Raptor, Rutherford, Electron, Ariane 5, Delta IV, New Glenn, Soyuz, Long March 5, RL10, Vinci, Vulcain 2, Star 48B, MR-103, AJ10, Draco, T6, SPT-100, RSRM; most spacecraft components, instruments, propellants, atmospheres and mission figures. Reasons: SpaceX pages are JavaScript-rendered, api.spacexdata.com returned HTTP 522, Rocket Lab was unreachable, Aerojet Rocketdyne returned 403, Blue Origin returned 429, and no retrievable document gave the numbers.
 
 ## Recalled values that were wrong or outdated (now replaced)
 | Record | Field | Recalled | Source | Source text | Source id |
@@ -99,6 +99,28 @@ Notes: JPL gives Eris mean radius 1200±50 km (no diameter in SBDB); a more prec
 | rocket_engines/bpt4000 | thrust_vac_n | 0.254 | 0.254 | verified | 4.5 kW–400 V 254 2150 | S47 |
 | rocket_engines/bpt4000 | isp_vac_s | 1,850 | 2,150 | conflict | 4.5 kW–400 V 254 2150 | S47 |
 | rocket_engines/bpt4000 | power_w | 4,500 | 4,500 | verified | BPT–4000 4.5 kW Hall | S47 |
+| missions/apollo11 | launch_vehicle_note | Saturn V | Saturn 5 | verified | Launch Vehicle: Saturn 5 | S49 |
+| missions/voyager2 | launch_date | 1977-08-20 | 1977-08-20 | verified | Launch Date: 1977-08-20 | S49 |
+| missions/voyager2 | launch_vehicle_note | Titan IIIE-Centaur | Titan IIIE-Centaur | verified | Launch Vehicle: Titan IIIE-Centaur | S49 |
+| missions/lro | launch_date | 2009-06-18 | 2009-06-18 | verified | Launch Date: 2009-06-18 | S49 |
+| missions/lro | launch_vehicle_note | Atlas V 401 | Atlas V 401 | verified | Launch Vehicle: Atlas V 401 | S49 |
+| missions/mro | launch_date | 2005-08-12 | 2005-08-12 | verified | Launch Date: 2005-08-12 | S49 |
+| missions/mro | launch_vehicle_note | Atlas V 401 | Atlas V 401 | verified | Launch Vehicle: Atlas V 401 | S49 |
+| missions/new_horizons | launch_date | 2006-01-19 | 2006-01-19 | verified | Launch Date: 2006-01-19 | S49 |
+| missions/new_horizons | launch_vehicle_note | Atlas V 551 + Star 48B | Atlas V | verified | Launch Vehicle: Atlas V | S49 |
+| missions/juno | launch_date | 2011-08-05 | 2011-08-05 | verified | Launch Date: 2011-08-05 | S49 |
+| missions/juno | launch_vehicle_note | Atlas V 551 | Atlas V | verified | Launch Vehicle: Atlas V | S49 |
+| missions/curiosity | launch_date | 2011-11-26 | 2011-11-26 | verified | Launch Date: 2011-11-26 | S49 |
+| missions/curiosity | launch_vehicle_note | Atlas V 541 | Atlas V | verified | Launch Vehicle: Atlas V | S49 |
+| missions/jwst | launch_date | 2021-12-25 | 2021-12-25 | verified | Launch Date: 2021-12-25 | S49 |
+| missions/jwst | launch_vehicle_note | Ariane 5 ECA | Ariane 5 | verified | Launch Vehicle: Ariane 5 | S49 |
+| missions/landsat8 | launch_date | 2013-02-11 | 2013-02-11 | verified | Launch Date: 2013-02-11 | S49 |
+| missions/landsat8 | launch_vehicle_note | Atlas V 401 | Atlas V | verified | Launch Vehicle: Atlas V | S49 |
+| missions/dawn | launch_date | 2007-09-27 | 2007-09-27 | verified | Launch Date: 2007-09-27 | S49 |
+| missions/dawn | launch_vehicle_note | Delta II 7925H | Delta II 7925 | verified | Launch Vehicle: Delta II 7925 | S49 |
+| missions/osiris_rex | launch_date | 2016-09-08 | 2016-09-08 | verified | Launch Date: 2016-09-08 | S49 |
+| missions/osiris_rex | launch_vehicle_note | Atlas V 411 | Atlas V | verified | Launch Vehicle: Atlas V | S49 |
+| missions/apollo11 | launch_mass_kg | 43,904 | 43,863 | verified | CSM 28801 kg (NSSDC catalog) + LM 33,205 lb (press kit) | S44 |
 
 ## Retrieved files
 * `data_raw/retrieved/esa_ariane6_overview.html` — https://www.esa.int/Enabling_Support/Space_Transportation/Launch_vehicles/Ariane_6_overview (retrieved 2026-11-06, sha256 `232128d5a239…`)
@@ -107,6 +129,17 @@ Notes: JPL gives Eris mean radius 1200±50 km (no diameter in SBDB); a more prec
 * `data_raw/retrieved/jpl_planets_phys_par.html` — https://ssd.jpl.nasa.gov/planets/phys_par.html (retrieved 2026-11-06, sha256 `e49a48794729…`)
 * `data_raw/retrieved/jpl_sats_phys_par.html` — https://ssd.jpl.nasa.gov/sats/phys_par/ (retrieved 2026-11-06, sha256 `9a9c004d9509…`)
 * `data_raw/retrieved/nasa_sls_reference.html` — https://www.nasa.gov/reference/space-launch-system/ (retrieved 2026-11-06, sha256 `dacd12643163…`)
+* `data_raw/retrieved/nmc/nmc_1969-059A.html` — https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-059A (retrieved 2026-11-06, sha256 `0fcc4dc45fd1…`)
+* `data_raw/retrieved/nmc/nmc_1977-076A.html` — https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1977-076A (retrieved 2026-11-06, sha256 `3a0d986206bc…`)
+* `data_raw/retrieved/nmc/nmc_2005-029A.html` — https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2005-029A (retrieved 2026-11-06, sha256 `d5103ce69355…`)
+* `data_raw/retrieved/nmc/nmc_2006-001A.html` — https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2006-001A (retrieved 2026-11-06, sha256 `2d248ace1e7a…`)
+* `data_raw/retrieved/nmc/nmc_2007-043A.html` — https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2007-043A (retrieved 2026-11-06, sha256 `2584f4361300…`)
+* `data_raw/retrieved/nmc/nmc_2009-031A.html` — https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2009-031A (retrieved 2026-11-06, sha256 `331911babce1…`)
+* `data_raw/retrieved/nmc/nmc_2011-040A.html` — https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2011-040A (retrieved 2026-11-06, sha256 `0cb4c192aeb4…`)
+* `data_raw/retrieved/nmc/nmc_2011-070A.html` — https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2011-070A (retrieved 2026-11-06, sha256 `aab40fec9ab3…`)
+* `data_raw/retrieved/nmc/nmc_2013-008A.html` — https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2013-008A (retrieved 2026-11-06, sha256 `80345819acab…`)
+* `data_raw/retrieved/nmc/nmc_2016-055A.html` — https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2016-055A (retrieved 2026-11-06, sha256 `447db5b5b091…`)
+* `data_raw/retrieved/nmc/nmc_2021-130A.html` — https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2021-130A (retrieved 2026-11-06, sha256 `9a7263c80f76…`)
 * `data_raw/retrieved/nssdc_earth.html` — https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html (retrieved 2026-11-06, sha256 `1b06e3ec3124…`)
 * `data_raw/retrieved/nssdc_jupiter.html` — https://nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html (retrieved 2026-11-06, sha256 `9ac7835ae538…`)
 * `data_raw/retrieved/nssdc_mars.html` — https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html (retrieved 2026-11-06, sha256 `366b0ce9b69c…`)

@@ -1,0 +1,31 @@
+vehicle_id,orbit,payload_kg,altitude_km,inclination_deg,mode,assumption,reference_conditions_complete,warning,data_class,confidence,source_ids,retrieval_status
+saturn_v,LEO,140000,190,28.5,expended,"Apollo 17 class, incl. S-IVB",True,"Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",unverified,medium,"[""S09""]",not_retrieved
+saturn_v,TLI,48600,,,expended,Translunar injection,False,"Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",unverified,medium,"[""S09""]",not_retrieved
+sls_b1,LEO,95000,,,expended,Reference orbit not recorded,False,"Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",unverified,medium,"[""S08""]",not_retrieved
+sls_b1,TLI,27000,,,expended,,False,"Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",unverified,medium,"[""S08""]",not_retrieved
+falcon9_b5,LEO,22800,,,expended,Published figure; reference orbit details not recorded,False,"Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",unverified,medium,"[""S06""]",not_retrieved
+falcon9_b5,GTO,8300,,,expended,,False,"Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",unverified,medium,"[""S06""]",not_retrieved
+falcon9_b5,GTO,5500,,,droneship recovery,Reusable figure approximate,False,"Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",unverified,medium,"[""S06""]",not_retrieved
+falcon_heavy,LEO,63800,,,expended,,False,"Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",unverified,medium,"[""S06""]",not_retrieved
+falcon_heavy,GTO,26700,,,expended,,False,"Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",unverified,medium,"[""S06""]",not_retrieved
+falcon_heavy,Mars transfer,16800,,,expended,Direct transfer,False,"Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",unverified,medium,"[""S06""]",not_retrieved
+starship,LEO,100000,,,fully reusable (target),Target 100-150 t; not demonstrated operationally,False,"Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",unverified,low,"[""S06""]",not_retrieved
+atlas_v_551,LEO,18850,200,28.7,expended,,True,"Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",unverified,medium,"[""S07""]",not_retrieved
+atlas_v_551,GTO,8900,,27,expended,,False,"Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",unverified,medium,"[""S07""]",not_retrieved
+vulcan_vc6,LEO,27200,200,28.7,expended,,True,"Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",unverified,low,"[""S07""]",not_retrieved
+vulcan_vc6,GTO,14500,,27,expended,,False,"Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",unverified,low,"[""S07""]",not_retrieved
+vulcan_vc6,TLI,11500,,,expended,C3 = -2 km2/s2 (ULA definition),False,"Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",unverified,low,"[""S07""]",not_retrieved
+electron,SSO,300,500,97.4,expended,Published capability ~300 kg to 500 km SSO,True,"Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",unverified,medium,"[""S10""]",not_retrieved
+ariane5_eca,GTO,10500,,,expended,Dual-launch figure approximate,False,"Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",unverified,medium,"[""S11""]",not_retrieved
+ariane64,LEO,21650,,,expended,Reference orbit details not recorded,False,"Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",unverified,low,"[""S11""]",not_retrieved
+ariane64,GTO,11500,,,expended,,False,"Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",unverified,low,"[""S11""]",not_retrieved
+ariane62,LEO,10350,,,expended,,False,"Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",unverified,low,"[""S11""]",not_retrieved
+ariane62,GTO,4500,,,expended,,False,"Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",unverified,low,"[""S11""]",not_retrieved
+delta4_heavy,LEO,28790,,28.7,expended,,False,"Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",unverified,medium,"[""S07""]",not_retrieved
+delta4_heavy,GTO,14220,,,expended,,False,"Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",unverified,medium,"[""S07""]",not_retrieved
+new_glenn,LEO,45000,,,booster recovery,Published capability,False,"Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",unverified,low,"[""S07""]",not_retrieved
+new_glenn,GTO,13600,,,booster recovery,,False,"Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",unverified,low,"[""S07""]",not_retrieved
+vega_c,SSO,2300,700,,expended,,False,"Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",unverified,low,"[""S11""]",not_retrieved
+soyuz_21b,LEO,8200,,,expended,,False,"Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",unverified,low,"[""S12""]",not_retrieved
+cz5,LEO,25000,,,expended,,False,"Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",unverified,low,"[""S12""]",not_retrieved
+cz5,GTO,14000,,,expended,,False,"Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",unverified,low,"[""S12""]",not_retrieved

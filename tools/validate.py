@@ -91,7 +91,7 @@ for sc in cons["scenarios"]:
 chk("optimization:rerun_matches_saved_and_feasible",ok,str(msgs))
 chk("optimization:no_infeasible_experiments",all(e["feasibility_status"]=="feasible_optimum_found" for e in comb["optimization"]["experiments"]))
 # verification integrity (celestial)
-RET=os.path.join(ROOT,"..","data_raw","retrieved"); man=json.load(open(os.path.join(RET,"MANIFEST.json"))); mh={m["file"].split("/")[-1]:m for m in man}
+RET=os.path.join(ROOT,"..","data_raw","retrieved"); man=json.load(open(os.path.join(RET,"MANIFEST.json"))); mh={m["file"].split("data_raw/retrieved/")[-1]:m for m in man}
 chk("verification:retrieved_files_match_manifest_sha256",all(hashlib.sha256(open(os.path.join(RET,n),"rb").read()).hexdigest()==m["sha256"] for n,m in mh.items()),f"{len(mh)} files")
 verified=[r for c in colls.values() for r in c if r.get("data_class")=="verified"]
 chk("verification:verified_records_celestial_or_checked_engines_stages",all(r["id"] in allbody or r["id"] in {x["id"] for x in comb["propulsion"]["rocket_engines"]+comb["propulsion"]["electric_propulsion"]+comb["launch"]["rocket_stages"]} for r in verified),f"{len(verified)} verified")
@@ -110,12 +110,16 @@ chk("verification:every_record_value_agrees_with_its_retrieved_source_value",not
 VL=L("metadata/verification_launch.json"); lf=VL["checks"]
 bad=[c["record_id"]+"."+c["field"] for c in lf if c["status"] not in("verified","conflict","added_from_source")]
 chk("verification:launch_source_text_found_for_every_check",not bad,str(bad))
-sha_ok=all(c["source_sha256"]==hashlib.sha256(open(os.path.join(RET,c["file"].split("/")[-1]),"rb").read()).hexdigest() for c in lf if "source_sha256" in c)
+sha_ok=all(c["source_sha256"]==hashlib.sha256(open(os.path.join(RET,c["file"].split("data_raw/retrieved/")[-1]),"rb").read()).hexdigest() for c in lf if "source_sha256" in c)
 chk("verification:launch_checks_reference_retrieved_file_hash",sha_ok)
 LC={"launch_vehicles":{r["id"]:r for r in comb["launch"]["launch_vehicles"]},"rocket_stages":{r["id"]:r for r in comb["launch"]["rocket_stages"]},"boosters":{r["id"]:r for r in comb["launch"]["boosters"]},"rocket_engines":{r["id"]:r for r in comb["propulsion"]["rocket_engines"]+comb["propulsion"]["electric_propulsion"]},"missions":{r["id"]:r for r in comb["missions"]["historical"]}}
 bad=[]
 for c in lf:
     rec=LC[c["collection"]][c["record_id"]]; f=c["field"]
+    if c["collection"]=="missions" and f in ("launch_vehicle_note","launch_mass_kg","launch_date"):
+        if f=="launch_mass_kg" and c["status"]=="verified" and abs(rec[f]-c["source_value"])/c["source_value"]>c["tolerance_rel"]*1.0000001: bad.append((c["record_id"],f,rec[f],c["source_value"]))
+        if f=="launch_date" and c["status"]=="verified" and rec[f]!=c["source_value"]: bad.append((c["record_id"],f))
+        continue
     if c["field"]=="launch_date" or f=="stages" or f=="n_engines":
         val=rec.get(f)
         if c["status"]!="added_from_source" and val!=c["source_value"] and c["status"]=="verified": bad.append((c["record_id"],f,val,c["source_value"]))

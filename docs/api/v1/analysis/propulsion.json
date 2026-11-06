@@ -289,7 +289,7 @@
    "id": "nstar",
    "type": "ion",
    "propellant": "Xe",
-   "isp_vac_s": 3300.0,
+   "isp_vac_s": 3300,
    "thrust_vac_n": 0.092,
    "engine_twr_vac": null,
    "status": "operational_historical"
@@ -316,7 +316,7 @@
    "id": "bpt4000",
    "type": "hall_effect",
    "propellant": "Xe",
-   "isp_vac_s": 2150.0,
+   "isp_vac_s": 2150,
    "thrust_vac_n": 0.254,
    "engine_twr_vac": null,
    "status": "operational"

@@ -361,7 +361,7 @@
   {
    "check": "verification:retrieved_files_match_manifest_sha256",
    "passed": true,
-   "detail": "28 files"
+   "detail": "39 files"
   },
   {
    "check": "verification:verified_records_celestial_or_checked_engines_stages",

@@ -1,0 +1,12 @@
+id,surface_pressure_pa,temp_k,scale_height_km,composition_vol_pct.CO2,composition_vol_pct.N2,note,data_class,confidence,source_ids,retrieval_status,composition_vol_pct.O2,composition_vol_pct.Ar,composition_vol_pct.CH4,composition_vol_pct.H2,composition_vol_pct.He
+venus,9200000.0,737,15.9,96.5,3.5,Surface values (mean).,unverified,medium,"[""S01""]",not_retrieved,,,,,
+earth,101325,288,8.5,,78.08,,unverified,medium,"[""S01""]",not_retrieved,20.95,0.93,,,
+mars,636,210,11.1,95.3,2.7,Pressure varies ~30% seasonally and with elevation.,unverified,medium,"[""S01""]",not_retrieved,,1.6,,,
+titan,146700,93.7,21.0,,95.0,"Composition approximate (CH4 ~1.4% stratosphere, higher near surface).",unverified,low,"[""S01""]",not_retrieved,,,5.0,,
+jupiter,100000,165,27.0,,,"Reference 1-bar level, no solid surface.",unverified,medium,"[""S01""]",not_retrieved,,,,89.8,10.2
+saturn,100000,134,59.5,,,"Reference 1-bar level, no solid surface.",unverified,medium,"[""S01""]",not_retrieved,,,,96.3,3.25
+uranus,100000,76,27.7,,,Reference 1-bar level.,unverified,medium,"[""S01""]",not_retrieved,,,2.3,82.5,15.2
+neptune,100000,72,19.7,,,Reference 1-bar level.,unverified,medium,"[""S01""]",not_retrieved,,,1.5,80.0,19.0
+pluto,1.0,,,,,Tenuous N2 atmosphere ~1 Pa (order of magnitude); fractions not recorded.,unverified,low,"[""S01""]",not_retrieved,,,,,
+mercury,,,,,,Surface-bounded exosphere; no meaningful pressure recorded.,unverified,low,"[""S01""]",not_retrieved,,,,,
+moon,,,,,,Negligible exosphere.,unverified,low,"[""S01""]",not_retrieved,,,,,

@@ -4,10 +4,19 @@ Machine-readable engineering data, analysis, and optimization models for an educ
 
 > **Provenance status — please read.** 32 records are `verified` (25 celestial bodies at core level; the 3 Saturn V stages, NEXT, NSTAR, BPT-4000 and BE-4, whose core numeric fields were all checked) against **retrieved** primary pages: JPL SSD/SBDB, NASA NSSDC, NASA SLS page, NASA Apollo 11 press kit and NTRS papers, ULA and ESA. 29 recalled values (16 celestial, 13 launch/engine) were wrong or outdated and were replaced by the sourced value. Launch vehicles are verified field by field (`verified_field_count`). **Everything else is still `unverified`** — notably Falcon 9/Heavy, Starship, Merlin, Raptor, Electron, Ariane 5, most engines, spacecraft components, instruments and mission figures, whose sources could not be retrieved (JavaScript-only pages, HTTP 403/429/522, unreachable hosts). The optimizer catalog is `estimated`, credits are `fictional`, and the SpaceX/NASA-facility tables are user-supplied with unverified origin. See `space-mission-research/reports/VERIFICATION_REPORT.md`.
 
+## Start here (hackathon)
+**→ [`HACKATHON.md`](HACKATHON.md)** — 5-minute guide: live API, local backend (`python3 tools/serve_api.py`), CSV/SQLite exports, trust rules, project ideas.
+```bash
+make all && make test     # rebuild everything and run 82 validation checks + parity + backend smoke tests
+python3 tools/serve_api.py   # http://127.0.0.1:8000  (filter, optimize, simulate, delta-v)
+```
+
 ## Contents
 | Path | What |
 |---|---|
 | `space-mission-research/` | JSON datasets (`celestial/ propulsion/ launch/ spacecraft/ instruments/ missions/`), `analysis/`, `optimization/`, `metadata/`, `schemas/`, `combined/all_space_mission_data.json`, `reports/*.md` |
+| `exports/` | CSV per collection + `space_mission.sqlite` |
+| `examples/` | Python, Node and pandas quickstarts |
 | `tools/` | Reproducible pipeline: `ingest_external.py`, `make_api.py`, `build.py` (data → JSON, analysis, optimization), `validate.py` (56 checks), `make_schemas.py`, `make_reports.py`, `parity_check.js` |
 | `docs/` | Static website (GitHub Pages): explorer, comparison, calculators, optimizer with balance controls, sensitivity/risk, quality |
 

@@ -477,7 +477,7 @@
     {
      "orbit": "LEO",
      "payload_kg": 18850,
-     "altitude_km": 200.0,
+     "altitude_km": 200,
      "inclination_deg": 28.7,
      "mode": "expended",
      "assumption": ""
@@ -486,7 +486,7 @@
      "orbit": "GTO",
      "payload_kg": 8900,
      "altitude_km": null,
-     "inclination_deg": 27.0,
+     "inclination_deg": 27,
      "mode": "expended",
      "assumption": ""
     }
@@ -618,22 +618,22 @@
     {
      "orbit": "LEO",
      "payload_kg": 27200,
-     "altitude_km": 200.0,
+     "altitude_km": 200,
      "inclination_deg": 28.7,
      "mode": "expended",
      "assumption": ""
     },
     {
      "orbit": "GTO",
-     "payload_kg": 14500.0,
+     "payload_kg": 14500,
      "altitude_km": null,
-     "inclination_deg": 27.0,
+     "inclination_deg": 27,
      "mode": "expended",
      "assumption": ""
     },
     {
      "orbit": "TLI",
-     "payload_kg": 11500.0,
+     "payload_kg": 11500,
      "altitude_km": null,
      "inclination_deg": null,
      "mode": "expended",
@@ -1235,7 +1235,7 @@
    "thrust_sl_n": null,
    "reusable": false,
    "fairing_diam_m": 3.3,
-   "fairing_height_m": 9.0,
+   "fairing_height_m": 9,
    "price_usd": null,
    "price_year": null,
    "payloads": [

@@ -1,6 +1,6 @@
 {
  "collection": "missions",
- "data_status": "32 records are verified (25 celestial bodies at core level; engines and stages whose core numeric fields were all checked) against retrieved JPL, NASA (NTRS, SLS page, Apollo 11 press kit), ULA and ESA pages. 198 celestial and 44 launch/engine field checks matched; 16 celestial and 13 launch/engine recalled values were wrong or outdated and were replaced by the sourced value. Launch vehicles are verified field by field only (see verified_field_count); everything not checked (e.g. Falcon, Starship, Electron, Ariane, most engines, spacecraft components, instruments, missions) is still unverified, as are two user-supplied tables. Derived values inherit the status of their inputs. Optimization catalog values are estimated/fictional.",
+ "data_status": "32 records are verified (25 celestial bodies at core level; engines and stages whose core numeric fields were all checked) against retrieved JPL, NASA (NTRS, SLS page, Apollo 11 press kit), ULA and ESA pages. 198 celestial and 66 launch/engine field checks matched; 16 celestial and 13 launch/engine recalled values were wrong or outdated and were replaced by the sourced value. Launch vehicles are verified field by field only (see verified_field_count); everything not checked (e.g. Falcon, Starship, Electron, Ariane, most engines, spacecraft components, instruments, missions) is still unverified, as are two user-supplied tables. Derived values inherit the status of their inputs. Optimization catalog values are estimated/fictional.",
  "record": {
   "id": "voyager2",
   "name": "Voyager 2",
@@ -28,6 +28,41 @@
   "derived": {
    "dry_to_launch_mass": null,
    "propellant_plus_other_fraction": null
-  }
+  },
+  "field_verification": {
+   "launch_date": {
+    "status": "verified",
+    "source_id": "S49",
+    "source_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1977-076A",
+    "retrieved": "2026-11-06",
+    "source_sha256": "3a0d986206bc8a0df877d9b16a1ee1ddfcad38ea8e5b16254f03ec5099751602",
+    "section": "NSSDC Master Catalog spacecraft page: Launch Date",
+    "source_original_text": "Launch Date: 1977-08-20",
+    "source_value": "1977-08-20",
+    "source_unit": "date",
+    "statement_type": "point value",
+    "tolerance_rel": 0.0,
+    "recalled_value": "1977-08-20",
+    "note": null
+   },
+   "launch_vehicle_note": {
+    "status": "verified",
+    "source_id": "S49",
+    "source_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1977-076A",
+    "retrieved": "2026-11-06",
+    "source_sha256": "3a0d986206bc8a0df877d9b16a1ee1ddfcad38ea8e5b16254f03ec5099751602",
+    "section": "NSSDC Master Catalog spacecraft page: Launch Vehicle",
+    "source_original_text": "Launch Vehicle: Titan IIIE-Centaur",
+    "source_value": "Titan IIIE-Centaur",
+    "source_unit": "text",
+    "statement_type": "vehicle family match (variant letters/suffixes not always stated by the catalog)",
+    "tolerance_rel": 0.0,
+    "recalled_value": "Titan IIIE-Centaur",
+    "note": null
+   }
+  },
+  "verified_field_count": 2,
+  "unverified_fields": null,
+  "verification_scope": "partial: only the fields in field_verification were checked against a retrieved source; the record as a whole remains unverified"
  }
 }

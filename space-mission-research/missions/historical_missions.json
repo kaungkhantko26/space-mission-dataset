@@ -49,9 +49,39 @@
      "tolerance_rel": 0.0,
      "recalled_value": "1969-07-16",
      "note": null
+    },
+    "launch_vehicle_note": {
+     "status": "verified",
+     "source_id": "S49",
+     "source_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-059A",
+     "retrieved": "2026-11-06",
+     "source_sha256": "0fcc4dc45fd17dab302d98514ac3a52ce6432411bb54ebfe09a7bc829218f4a4",
+     "section": "NSSDC Master Catalog spacecraft page: Launch Vehicle",
+     "source_original_text": "Launch Vehicle: Saturn 5",
+     "source_value": "Saturn 5",
+     "source_unit": "text",
+     "statement_type": "vehicle family match (variant letters/suffixes not always stated by the catalog)",
+     "tolerance_rel": 0.0,
+     "recalled_value": "Saturn V",
+     "note": null
+    },
+    "launch_mass_kg": {
+     "status": "verified",
+     "source_id": "S44",
+     "source_url": "https://ntrs.nasa.gov/api/citations/19690022248/downloads/19690022248.pdf",
+     "retrieved": "2026-11-06",
+     "source_sha256": "3cce3b01294e90bedf9af742124ef657ffdf27536921ef50464cc34836526898",
+     "section": "NASA Apollo 11 Press Kit (LM launch weight) + NSSDC Master Catalog (CSM mass 28,801 kg); excludes launch escape system and adapter",
+     "source_original_text": "CSM 28801 kg (NSSDC catalog) + LM 33,205 lb (press kit)",
+     "source_value": 43862.53464585,
+     "source_unit": "kg (sum of two sources)",
+     "statement_type": "derived sum",
+     "tolerance_rel": 0.005,
+     "recalled_value": 43904,
+     "note": null
     }
    },
-   "verified_field_count": 1,
+   "verified_field_count": 3,
    "unverified_fields": null,
    "verification_scope": "partial: only the fields in field_verification were checked against a retrieved source; the record as a whole remains unverified"
   },
@@ -82,7 +112,42 @@
    "derived": {
     "dry_to_launch_mass": null,
     "propellant_plus_other_fraction": null
-   }
+   },
+   "field_verification": {
+    "launch_date": {
+     "status": "verified",
+     "source_id": "S49",
+     "source_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1977-076A",
+     "retrieved": "2026-11-06",
+     "source_sha256": "3a0d986206bc8a0df877d9b16a1ee1ddfcad38ea8e5b16254f03ec5099751602",
+     "section": "NSSDC Master Catalog spacecraft page: Launch Date",
+     "source_original_text": "Launch Date: 1977-08-20",
+     "source_value": "1977-08-20",
+     "source_unit": "date",
+     "statement_type": "point value",
+     "tolerance_rel": 0.0,
+     "recalled_value": "1977-08-20",
+     "note": null
+    },
+    "launch_vehicle_note": {
+     "status": "verified",
+     "source_id": "S49",
+     "source_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1977-076A",
+     "retrieved": "2026-11-06",
+     "source_sha256": "3a0d986206bc8a0df877d9b16a1ee1ddfcad38ea8e5b16254f03ec5099751602",
+     "section": "NSSDC Master Catalog spacecraft page: Launch Vehicle",
+     "source_original_text": "Launch Vehicle: Titan IIIE-Centaur",
+     "source_value": "Titan IIIE-Centaur",
+     "source_unit": "text",
+     "statement_type": "vehicle family match (variant letters/suffixes not always stated by the catalog)",
+     "tolerance_rel": 0.0,
+     "recalled_value": "Titan IIIE-Centaur",
+     "note": null
+    }
+   },
+   "verified_field_count": 2,
+   "unverified_fields": null,
+   "verification_scope": "partial: only the fields in field_verification were checked against a retrieved source; the record as a whole remains unverified"
   },
   {
    "id": "cassini",
@@ -142,7 +207,42 @@
    "derived": {
     "dry_to_launch_mass": 0.5313152400835073,
     "propellant_plus_other_fraction": 0.4686847599164927
-   }
+   },
+   "field_verification": {
+    "launch_date": {
+     "status": "verified",
+     "source_id": "S49",
+     "source_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2009-031A",
+     "retrieved": "2026-11-06",
+     "source_sha256": "331911babce15cb3b278dbc51b6ec96d63abcf76f216a188573fd36467bb3946",
+     "section": "NSSDC Master Catalog spacecraft page: Launch Date",
+     "source_original_text": "Launch Date: 2009-06-18",
+     "source_value": "2009-06-18",
+     "source_unit": "date",
+     "statement_type": "point value",
+     "tolerance_rel": 0.0,
+     "recalled_value": "2009-06-18",
+     "note": null
+    },
+    "launch_vehicle_note": {
+     "status": "verified",
+     "source_id": "S49",
+     "source_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2009-031A",
+     "retrieved": "2026-11-06",
+     "source_sha256": "331911babce15cb3b278dbc51b6ec96d63abcf76f216a188573fd36467bb3946",
+     "section": "NSSDC Master Catalog spacecraft page: Launch Vehicle",
+     "source_original_text": "Launch Vehicle: Atlas V 401",
+     "source_value": "Atlas V 401",
+     "source_unit": "text",
+     "statement_type": "vehicle family match (variant letters/suffixes not always stated by the catalog)",
+     "tolerance_rel": 0.0,
+     "recalled_value": "Atlas V 401",
+     "note": null
+    }
+   },
+   "verified_field_count": 2,
+   "unverified_fields": null,
+   "verification_scope": "partial: only the fields in field_verification were checked against a retrieved source; the record as a whole remains unverified"
   },
   {
    "id": "mro",
@@ -175,7 +275,42 @@
    "derived": {
     "dry_to_launch_mass": 0.47293577981651375,
     "propellant_plus_other_fraction": 0.5270642201834863
-   }
+   },
+   "field_verification": {
+    "launch_date": {
+     "status": "verified",
+     "source_id": "S49",
+     "source_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2005-029A",
+     "retrieved": "2026-11-06",
+     "source_sha256": "d5103ce693552d6a06b74d41d699940a27045fcc4978b20e1fa87ea21ffe1391",
+     "section": "NSSDC Master Catalog spacecraft page: Launch Date",
+     "source_original_text": "Launch Date: 2005-08-12",
+     "source_value": "2005-08-12",
+     "source_unit": "date",
+     "statement_type": "point value",
+     "tolerance_rel": 0.0,
+     "recalled_value": "2005-08-12",
+     "note": null
+    },
+    "launch_vehicle_note": {
+     "status": "verified",
+     "source_id": "S49",
+     "source_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2005-029A",
+     "retrieved": "2026-11-06",
+     "source_sha256": "d5103ce693552d6a06b74d41d699940a27045fcc4978b20e1fa87ea21ffe1391",
+     "section": "NSSDC Master Catalog spacecraft page: Launch Vehicle",
+     "source_original_text": "Launch Vehicle: Atlas V 401",
+     "source_value": "Atlas V 401",
+     "source_unit": "text",
+     "statement_type": "vehicle family match (variant letters/suffixes not always stated by the catalog)",
+     "tolerance_rel": 0.0,
+     "recalled_value": "Atlas V 401",
+     "note": null
+    }
+   },
+   "verified_field_count": 2,
+   "unverified_fields": null,
+   "verification_scope": "partial: only the fields in field_verification were checked against a retrieved source; the record as a whole remains unverified"
   },
   {
    "id": "new_horizons",
@@ -212,7 +347,42 @@
    "derived": {
     "dry_to_launch_mass": null,
     "propellant_plus_other_fraction": null
-   }
+   },
+   "field_verification": {
+    "launch_date": {
+     "status": "verified",
+     "source_id": "S49",
+     "source_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2006-001A",
+     "retrieved": "2026-11-06",
+     "source_sha256": "2d248ace1e7ae3f2239e45c3c98623a320be7050457e24a4052079d4a9ff5d20",
+     "section": "NSSDC Master Catalog spacecraft page: Launch Date",
+     "source_original_text": "Launch Date: 2006-01-19",
+     "source_value": "2006-01-19",
+     "source_unit": "date",
+     "statement_type": "point value",
+     "tolerance_rel": 0.0,
+     "recalled_value": "2006-01-19",
+     "note": null
+    },
+    "launch_vehicle_note": {
+     "status": "verified",
+     "source_id": "S49",
+     "source_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2006-001A",
+     "retrieved": "2026-11-06",
+     "source_sha256": "2d248ace1e7ae3f2239e45c3c98623a320be7050457e24a4052079d4a9ff5d20",
+     "section": "NSSDC Master Catalog spacecraft page: Launch Vehicle",
+     "source_original_text": "Launch Vehicle: Atlas V",
+     "source_value": "Atlas V",
+     "source_unit": "text",
+     "statement_type": "vehicle family match (variant letters/suffixes not always stated by the catalog)",
+     "tolerance_rel": 0.0,
+     "recalled_value": "Atlas V 551 + Star 48B",
+     "note": null
+    }
+   },
+   "verified_field_count": 2,
+   "unverified_fields": null,
+   "verification_scope": "partial: only the fields in field_verification were checked against a retrieved source; the record as a whole remains unverified"
   },
   {
    "id": "juno",
@@ -241,7 +411,42 @@
    "derived": {
     "dry_to_launch_mass": 0.43944827586206897,
     "propellant_plus_other_fraction": 0.560551724137931
-   }
+   },
+   "field_verification": {
+    "launch_date": {
+     "status": "verified",
+     "source_id": "S49",
+     "source_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2011-040A",
+     "retrieved": "2026-11-06",
+     "source_sha256": "0cb4c192aeb43428db709e6763e3d80e176869ffd787f5104f22f2db88f1ed49",
+     "section": "NSSDC Master Catalog spacecraft page: Launch Date",
+     "source_original_text": "Launch Date: 2011-08-05",
+     "source_value": "2011-08-05",
+     "source_unit": "date",
+     "statement_type": "point value",
+     "tolerance_rel": 0.0,
+     "recalled_value": "2011-08-05",
+     "note": null
+    },
+    "launch_vehicle_note": {
+     "status": "verified",
+     "source_id": "S49",
+     "source_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2011-040A",
+     "retrieved": "2026-11-06",
+     "source_sha256": "0cb4c192aeb43428db709e6763e3d80e176869ffd787f5104f22f2db88f1ed49",
+     "section": "NSSDC Master Catalog spacecraft page: Launch Vehicle",
+     "source_original_text": "Launch Vehicle: Atlas V",
+     "source_value": "Atlas V",
+     "source_unit": "text",
+     "statement_type": "vehicle family match (variant letters/suffixes not always stated by the catalog)",
+     "tolerance_rel": 0.0,
+     "recalled_value": "Atlas V 551",
+     "note": null
+    }
+   },
+   "verified_field_count": 2,
+   "unverified_fields": null,
+   "verification_scope": "partial: only the fields in field_verification were checked against a retrieved source; the record as a whole remains unverified"
   },
   {
    "id": "curiosity",
@@ -272,7 +477,42 @@
    "derived": {
     "dry_to_launch_mass": null,
     "propellant_plus_other_fraction": null
-   }
+   },
+   "field_verification": {
+    "launch_date": {
+     "status": "verified",
+     "source_id": "S49",
+     "source_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2011-070A",
+     "retrieved": "2026-11-06",
+     "source_sha256": "aab40fec9ab3ed4fc79763b417dada7a52e5c66d9c6653febda08d2937d9f554",
+     "section": "NSSDC Master Catalog spacecraft page: Launch Date",
+     "source_original_text": "Launch Date: 2011-11-26",
+     "source_value": "2011-11-26",
+     "source_unit": "date",
+     "statement_type": "point value",
+     "tolerance_rel": 0.0,
+     "recalled_value": "2011-11-26",
+     "note": null
+    },
+    "launch_vehicle_note": {
+     "status": "verified",
+     "source_id": "S49",
+     "source_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2011-070A",
+     "retrieved": "2026-11-06",
+     "source_sha256": "aab40fec9ab3ed4fc79763b417dada7a52e5c66d9c6653febda08d2937d9f554",
+     "section": "NSSDC Master Catalog spacecraft page: Launch Vehicle",
+     "source_original_text": "Launch Vehicle: Atlas V",
+     "source_value": "Atlas V",
+     "source_unit": "text",
+     "statement_type": "vehicle family match (variant letters/suffixes not always stated by the catalog)",
+     "tolerance_rel": 0.0,
+     "recalled_value": "Atlas V 541",
+     "note": null
+    }
+   },
+   "verified_field_count": 2,
+   "unverified_fields": null,
+   "verification_scope": "partial: only the fields in field_verification were checked against a retrieved source; the record as a whole remains unverified"
   },
   {
    "id": "jwst",
@@ -301,7 +541,42 @@
    "derived": {
     "dry_to_launch_mass": null,
     "propellant_plus_other_fraction": null
-   }
+   },
+   "field_verification": {
+    "launch_date": {
+     "status": "verified",
+     "source_id": "S49",
+     "source_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2021-130A",
+     "retrieved": "2026-11-06",
+     "source_sha256": "9a7263c80f76894cb9780e5d1a2faed295a6e4ac4739c127806d3c43ed64a67a",
+     "section": "NSSDC Master Catalog spacecraft page: Launch Date",
+     "source_original_text": "Launch Date: 2021-12-25",
+     "source_value": "2021-12-25",
+     "source_unit": "date",
+     "statement_type": "point value",
+     "tolerance_rel": 0.0,
+     "recalled_value": "2021-12-25",
+     "note": null
+    },
+    "launch_vehicle_note": {
+     "status": "verified",
+     "source_id": "S49",
+     "source_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2021-130A",
+     "retrieved": "2026-11-06",
+     "source_sha256": "9a7263c80f76894cb9780e5d1a2faed295a6e4ac4739c127806d3c43ed64a67a",
+     "section": "NSSDC Master Catalog spacecraft page: Launch Vehicle",
+     "source_original_text": "Launch Vehicle: Ariane 5",
+     "source_value": "Ariane 5",
+     "source_unit": "text",
+     "statement_type": "vehicle family match (variant letters/suffixes not always stated by the catalog)",
+     "tolerance_rel": 0.0,
+     "recalled_value": "Ariane 5 ECA",
+     "note": null
+    }
+   },
+   "verified_field_count": 2,
+   "unverified_fields": null,
+   "verification_scope": "partial: only the fields in field_verification were checked against a retrieved source; the record as a whole remains unverified"
   },
   {
    "id": "landsat8",
@@ -333,7 +608,42 @@
    "derived": {
     "dry_to_launch_mass": null,
     "propellant_plus_other_fraction": null
-   }
+   },
+   "field_verification": {
+    "launch_date": {
+     "status": "verified",
+     "source_id": "S49",
+     "source_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2013-008A",
+     "retrieved": "2026-11-06",
+     "source_sha256": "80345819acab6cad3d59f462ae59fd2d16494c230b39038cca25cb07afcb6e07",
+     "section": "NSSDC Master Catalog spacecraft page: Launch Date",
+     "source_original_text": "Launch Date: 2013-02-11",
+     "source_value": "2013-02-11",
+     "source_unit": "date",
+     "statement_type": "point value",
+     "tolerance_rel": 0.0,
+     "recalled_value": "2013-02-11",
+     "note": null
+    },
+    "launch_vehicle_note": {
+     "status": "verified",
+     "source_id": "S49",
+     "source_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2013-008A",
+     "retrieved": "2026-11-06",
+     "source_sha256": "80345819acab6cad3d59f462ae59fd2d16494c230b39038cca25cb07afcb6e07",
+     "section": "NSSDC Master Catalog spacecraft page: Launch Vehicle",
+     "source_original_text": "Launch Vehicle: Atlas V",
+     "source_value": "Atlas V",
+     "source_unit": "text",
+     "statement_type": "vehicle family match (variant letters/suffixes not always stated by the catalog)",
+     "tolerance_rel": 0.0,
+     "recalled_value": "Atlas V 401",
+     "note": null
+    }
+   },
+   "verified_field_count": 2,
+   "unverified_fields": null,
+   "verification_scope": "partial: only the fields in field_verification were checked against a retrieved source; the record as a whole remains unverified"
   },
   {
    "id": "sentinel2a",
@@ -393,7 +703,42 @@
    "derived": {
     "dry_to_launch_mass": null,
     "propellant_plus_other_fraction": null
-   }
+   },
+   "field_verification": {
+    "launch_date": {
+     "status": "verified",
+     "source_id": "S49",
+     "source_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2007-043A",
+     "retrieved": "2026-11-06",
+     "source_sha256": "2584f4361300471fd61c9914fe678c22aa5687f5a31c25f7673e101e4849c023",
+     "section": "NSSDC Master Catalog spacecraft page: Launch Date",
+     "source_original_text": "Launch Date: 2007-09-27",
+     "source_value": "2007-09-27",
+     "source_unit": "date",
+     "statement_type": "point value",
+     "tolerance_rel": 0.0,
+     "recalled_value": "2007-09-27",
+     "note": null
+    },
+    "launch_vehicle_note": {
+     "status": "verified",
+     "source_id": "S49",
+     "source_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2007-043A",
+     "retrieved": "2026-11-06",
+     "source_sha256": "2584f4361300471fd61c9914fe678c22aa5687f5a31c25f7673e101e4849c023",
+     "section": "NSSDC Master Catalog spacecraft page: Launch Vehicle",
+     "source_original_text": "Launch Vehicle: Delta II 7925",
+     "source_value": "Delta II 7925",
+     "source_unit": "text",
+     "statement_type": "vehicle family match (variant letters/suffixes not always stated by the catalog)",
+     "tolerance_rel": 0.0,
+     "recalled_value": "Delta II 7925H",
+     "note": null
+    }
+   },
+   "verified_field_count": 2,
+   "unverified_fields": null,
+   "verification_scope": "partial: only the fields in field_verification were checked against a retrieved source; the record as a whole remains unverified"
   },
   {
    "id": "osiris_rex",
@@ -422,7 +767,42 @@
    "derived": {
     "dry_to_launch_mass": null,
     "propellant_plus_other_fraction": null
-   }
+   },
+   "field_verification": {
+    "launch_date": {
+     "status": "verified",
+     "source_id": "S49",
+     "source_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2016-055A",
+     "retrieved": "2026-11-06",
+     "source_sha256": "447db5b5b091c9d40f28a74f94a9b3e86cec4a75e3525ce0e847478b1a8dbebe",
+     "section": "NSSDC Master Catalog spacecraft page: Launch Date",
+     "source_original_text": "Launch Date: 2016-09-08",
+     "source_value": "2016-09-08",
+     "source_unit": "date",
+     "statement_type": "point value",
+     "tolerance_rel": 0.0,
+     "recalled_value": "2016-09-08",
+     "note": null
+    },
+    "launch_vehicle_note": {
+     "status": "verified",
+     "source_id": "S49",
+     "source_url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2016-055A",
+     "retrieved": "2026-11-06",
+     "source_sha256": "447db5b5b091c9d40f28a74f94a9b3e86cec4a75e3525ce0e847478b1a8dbebe",
+     "section": "NSSDC Master Catalog spacecraft page: Launch Vehicle",
+     "source_original_text": "Launch Vehicle: Atlas V",
+     "source_value": "Atlas V",
+     "source_unit": "text",
+     "statement_type": "vehicle family match (variant letters/suffixes not always stated by the catalog)",
+     "tolerance_rel": 0.0,
+     "recalled_value": "Atlas V 411",
+     "note": null
+    }
+   },
+   "verified_field_count": 2,
+   "unverified_fields": null,
+   "verification_scope": "partial: only the fields in field_verification were checked against a retrieved source; the record as a whole remains unverified"
   },
   {
    "id": "marco",

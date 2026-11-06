@@ -42,6 +42,83 @@
   "retrieved": "2026-11-06"
  },
  {
+  "file": "data_raw/retrieved/nmc/nmc_1969-059A.html",
+  "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-059A",
+  "bytes": 16547,
+  "sha256": "0fcc4dc45fd17dab302d98514ac3a52ce6432411bb54ebfe09a7bc829218f4a4",
+  "retrieved": "2026-11-06"
+ },
+ {
+  "file": "data_raw/retrieved/nmc/nmc_1977-076A.html",
+  "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1977-076A",
+  "bytes": 18570,
+  "sha256": "3a0d986206bc8a0df877d9b16a1ee1ddfcad38ea8e5b16254f03ec5099751602",
+  "retrieved": "2026-11-06"
+ },
+ {
+  "file": "data_raw/retrieved/nmc/nmc_2005-029A.html",
+  "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2005-029A",
+  "bytes": 14148,
+  "sha256": "d5103ce693552d6a06b74d41d699940a27045fcc4978b20e1fa87ea21ffe1391",
+  "retrieved": "2026-11-06"
+ },
+ {
+  "file": "data_raw/retrieved/nmc/nmc_2006-001A.html",
+  "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2006-001A",
+  "bytes": 15270,
+  "sha256": "2d248ace1e7ae3f2239e45c3c98623a320be7050457e24a4052079d4a9ff5d20",
+  "retrieved": "2026-11-06"
+ },
+ {
+  "file": "data_raw/retrieved/nmc/nmc_2007-043A.html",
+  "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2007-043A",
+  "bytes": 12685,
+  "sha256": "2584f4361300471fd61c9914fe678c22aa5687f5a31c25f7673e101e4849c023",
+  "retrieved": "2026-11-06"
+ },
+ {
+  "file": "data_raw/retrieved/nmc/nmc_2009-031A.html",
+  "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2009-031A",
+  "bytes": 13053,
+  "sha256": "331911babce15cb3b278dbc51b6ec96d63abcf76f216a188573fd36467bb3946",
+  "retrieved": "2026-11-06"
+ },
+ {
+  "file": "data_raw/retrieved/nmc/nmc_2011-040A.html",
+  "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2011-040A",
+  "bytes": 10951,
+  "sha256": "0cb4c192aeb43428db709e6763e3d80e176869ffd787f5104f22f2db88f1ed49",
+  "retrieved": "2026-11-06"
+ },
+ {
+  "file": "data_raw/retrieved/nmc/nmc_2011-070A.html",
+  "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2011-070A",
+  "bytes": 9794,
+  "sha256": "aab40fec9ab3ed4fc79763b417dada7a52e5c66d9c6653febda08d2937d9f554",
+  "retrieved": "2026-11-06"
+ },
+ {
+  "file": "data_raw/retrieved/nmc/nmc_2013-008A.html",
+  "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2013-008A",
+  "bytes": 5503,
+  "sha256": "80345819acab6cad3d59f462ae59fd2d16494c230b39038cca25cb07afcb6e07",
+  "retrieved": "2026-11-06"
+ },
+ {
+  "file": "data_raw/retrieved/nmc/nmc_2016-055A.html",
+  "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2016-055A",
+  "bytes": 12175,
+  "sha256": "447db5b5b091c9d40f28a74f94a9b3e86cec4a75e3525ce0e847478b1a8dbebe",
+  "retrieved": "2026-11-06"
+ },
+ {
+  "file": "data_raw/retrieved/nmc/nmc_2021-130A.html",
+  "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2021-130A",
+  "bytes": 9019,
+  "sha256": "9a7263c80f76894cb9780e5d1a2faed295a6e4ac4739c127806d3c43ed64a67a",
+  "retrieved": "2026-11-06"
+ },
+ {
   "file": "data_raw/retrieved/nssdc_earth.html",
   "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
   "bytes": 5490,

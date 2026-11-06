@@ -121,16 +121,16 @@
   {
    "id": "c_payload_vulcan_vc6_GTO_expended",
    "type": "mass",
-   "statement": "Payload to GTO <= 14500.0 kg on Vulcan Centaur VC6 (expended)",
-   "bound_kg": 14500.0,
+   "statement": "Payload to GTO <= 14500 kg on Vulcan Centaur VC6 (expended)",
+   "bound_kg": 14500,
    "conditions_complete": false,
    "data_class": "unverified"
   },
   {
    "id": "c_payload_vulcan_vc6_TLI_expended",
    "type": "mass",
-   "statement": "Payload to TLI <= 11500.0 kg on Vulcan Centaur VC6 (expended)",
-   "bound_kg": 11500.0,
+   "statement": "Payload to TLI <= 11500 kg on Vulcan Centaur VC6 (expended)",
+   "bound_kg": 11500,
    "conditions_complete": false,
    "data_class": "unverified"
   },

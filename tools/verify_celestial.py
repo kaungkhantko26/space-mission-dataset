@@ -32,6 +32,7 @@ URLS={"jpl_planets_phys_par.html":"https://ssd.jpl.nasa.gov/planets/phys_par.htm
 URLS["nasa_sls_reference.html"]="https://www.nasa.gov/reference/space-launch-system/"
 URLS.update({"ula_atlas_v.html":"https://www.ulalaunch.com/rockets/atlas-v","ula_vulcan.html":"https://www.ulalaunch.com/rockets/vulcan-centaur","esa_vega_c.html":"https://www.esa.int/Enabling_Support/Space_Transportation/Launch_vehicles/Vega-C",
  "esa_ariane6_overview.html":"https://www.esa.int/Enabling_Support/Space_Transportation/Launch_vehicles/Ariane_6_overview"})
+for _n in ("1969-059A","1977-076A","2009-031A","2005-029A","2006-001A","2011-040A","2011-070A","2021-130A","2013-008A","2007-043A","2016-055A"): URLS[f"nmc/nmc_{_n}.html"]=f"https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id={_n}"
 for _id in ("19690022248","19980017550","20090004685","20060051789"): URLS[f"ntrs_{_id}.pdf"]=f"https://ntrs.nasa.gov/api/citations/{_id}/downloads/{_id}.pdf"
 for p in "mercury venus earth mars jupiter saturn uranus neptune".split(): URLS[f"nssdc_{p}.html"]=f"https://nssdc.gsfc.nasa.gov/planetary/factsheet/{p}fact.html"
 SRCID={"jpl_planets_phys_par.html":"S02","jpl_sats_phys_par.html":"S03","jpl_approx_pos.html":"S04","sbdb":"S40"}
