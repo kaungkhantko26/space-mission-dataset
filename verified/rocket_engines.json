@@ -1,0 +1,196 @@
+{
+ "collection": "rocket_engines",
+ "count": 5,
+ "mode": "STRICT: verified data only",
+ "records": [
+  {
+   "id": "rs25d",
+   "name": "RS-25D (SSME)",
+   "thrust_vac_n": 2279000,
+   "field_verification": {
+    "thrust_vac_n": {
+     "status": "verified",
+     "source_id": "S41",
+     "source_url": "https://www.nasa.gov/reference/space-launch-system/",
+     "retrieved": "2026-11-06",
+     "source_sha256": "dacd12643163e96a6ca709bd11270edc6ba8c81fc8a0ce8694fb8e9e3dbd6193",
+     "section": "NASA SLS reference page: RS-25 required operation at a maximum of 512,000 lbs of thrust (matches recorded RS-25D 109% vacuum thrust)",
+     "source_original_text": "maximum of 512,000 lbs. of thrust",
+     "source_value": 2277489.467013376,
+     "source_unit": "lbf→N",
+     "statement_type": "point value",
+     "tolerance_rel": 0.005,
+     "recalled_value": 2279000,
+     "note": null
+    }
+   },
+   "verified_fields": [
+    "thrust_vac_n"
+   ],
+   "data_class": "verified",
+   "confidence": "high",
+   "source_ids": [
+    "S41"
+   ],
+   "retrieval_status": "retrieved"
+  },
+  {
+   "id": "f1",
+   "name": "F-1",
+   "thrust_sl_n": 6770000,
+   "field_verification": {
+    "thrust_sl_n": {
+     "status": "verified",
+     "source_id": "S44",
+     "source_url": "https://ntrs.nasa.gov/api/citations/19690022248/downloads/19690022248.pdf",
+     "retrieved": "2026-11-06",
+     "source_sha256": "3cce3b01294e90bedf9af742124ef657ffdf27536921ef50464cc34836526898",
+     "section": "NASA Apollo 11 Press Kit (NTRS 19690022248), 'Saturn V Launch Vehicle' table: nominal Apollo 11 configuration: S-IC thrust ÷ five F-1 engines (derived by division)",
+     "source_original_text": "THRUST 7,653,854 LBS AT LIFTOFF",
+     "source_value": 6809207.760569608,
+     "source_unit": "lbf→N, S-IC total ÷ 5 engines",
+     "statement_type": "point value",
+     "tolerance_rel": 0.01,
+     "recalled_value": 6770000,
+     "note": null
+    }
+   },
+   "verified_fields": [
+    "thrust_sl_n"
+   ],
+   "data_class": "verified",
+   "confidence": "high",
+   "source_ids": [
+    "S44"
+   ],
+   "retrieval_status": "retrieved"
+  },
+  {
+   "id": "j2",
+   "name": "J-2",
+   "thrust_vac_n": 1033000,
+   "field_verification": {
+    "thrust_vac_n": {
+     "status": "verified",
+     "source_id": "S44",
+     "source_url": "https://ntrs.nasa.gov/api/citations/19690022248/downloads/19690022248.pdf",
+     "retrieved": "2026-11-06",
+     "source_sha256": "3cce3b01294e90bedf9af742124ef657ffdf27536921ef50464cc34836526898",
+     "section": "NASA Apollo 11 Press Kit (NTRS 19690022248), 'Saturn V Launch Vehicle' table: nominal Apollo 11 configuration: S-II thrust range (five J-2); the S-IVB single J-2 ran 178,161-203,779 lbf on this mission",
+     "source_original_text": "THRUST 1,120,216 TO 1,157,707 LBS",
+     "source_value": 1029947.4603076775,
+     "source_unit": "lbf→N, S-II maximum total ÷ 5 J-2 engines",
+     "statement_type": "derived by division",
+     "tolerance_rel": 0.01,
+     "recalled_value": 1033000,
+     "note": null
+    }
+   },
+   "verified_fields": [
+    "thrust_vac_n"
+   ],
+   "data_class": "verified",
+   "confidence": "high",
+   "source_ids": [
+    "S44"
+   ],
+   "retrieval_status": "retrieved"
+  },
+  {
+   "id": "rd180",
+   "name": "RD-180",
+   "thrust_sl_n": 3830000,
+   "isp_sl_s": 311,
+   "dry_mass_kg": 5479.849421970001,
+   "field_verification": {
+    "thrust_sl_n": {
+     "status": "verified",
+     "source_id": "S42",
+     "source_url": "https://www.ulalaunch.com/rockets/atlas-v",
+     "retrieved": "2026-11-06",
+     "source_sha256": "47ae205afab17a45780756ae4d42322c2be1d8e7620676b9bc4c7eb6e84aa975",
+     "section": "ULA Atlas V page, RD-180 specification",
+     "source_original_text": "Nominal Thrust (sea level): 860,300 lbs",
+     "source_value": 3826805.055608608,
+     "source_unit": "lbf→N",
+     "statement_type": "point value",
+     "tolerance_rel": 0.005,
+     "recalled_value": 3830000,
+     "note": null
+    },
+    "isp_sl_s": {
+     "status": "verified",
+     "source_id": "S42",
+     "source_url": "https://www.ulalaunch.com/rockets/atlas-v",
+     "retrieved": "2026-11-06",
+     "source_sha256": "47ae205afab17a45780756ae4d42322c2be1d8e7620676b9bc4c7eb6e84aa975",
+     "section": "ULA Atlas V page, RD-180 specification",
+     "source_original_text": "Specific Impulse (sea level): 311 seconds",
+     "source_value": 311.0,
+     "source_unit": "s",
+     "statement_type": "point value",
+     "tolerance_rel": 1e-06,
+     "recalled_value": 311,
+     "note": null
+    },
+    "dry_mass_kg": {
+     "status": "conflict_resolved_to_source",
+     "source_id": "S42",
+     "source_url": "https://www.ulalaunch.com/rockets/atlas-v",
+     "retrieved": "2026-11-06",
+     "source_sha256": "47ae205afab17a45780756ae4d42322c2be1d8e7620676b9bc4c7eb6e84aa975",
+     "section": "ULA Atlas V page, RD-180 specification (weight)",
+     "source_original_text": "Length: 140 in Weight: 12,081 lbs",
+     "source_value": 5479.849421970001,
+     "source_unit": "lb→kg",
+     "statement_type": "point value",
+     "tolerance_rel": 0.005,
+     "recalled_value": 5393,
+     "note": null
+    }
+   },
+   "verified_fields": [
+    "dry_mass_kg",
+    "isp_sl_s",
+    "thrust_sl_n"
+   ],
+   "data_class": "verified",
+   "confidence": "high",
+   "source_ids": [
+    "S42"
+   ],
+   "retrieval_status": "retrieved"
+  },
+  {
+   "id": "be4",
+   "name": "BE-4",
+   "thrust_sl_n": 2446521.888393275,
+   "field_verification": {
+    "thrust_sl_n": {
+     "status": "conflict_resolved_to_source",
+     "source_id": "S42",
+     "source_url": "https://www.ulalaunch.com/rockets/vulcan-centaur",
+     "retrieved": "2026-11-06",
+     "source_sha256": "187fad654295e684f50f4b40899a476ab7583d2bcb66905aaeb3ec27571c2426",
+     "section": "ULA Vulcan page, BE-4 engine specification",
+     "source_original_text": "Nominal Thrust (sea level): 550,000 lbs",
+     "source_value": 2446521.888393275,
+     "source_unit": "lbf→N",
+     "statement_type": "point value",
+     "tolerance_rel": 0.005,
+     "recalled_value": 2400000,
+     "note": null
+    }
+   },
+   "verified_fields": [
+    "thrust_sl_n"
+   ],
+   "data_class": "verified",
+   "confidence": "high",
+   "source_ids": [
+    "S42"
+   ],
+   "retrieval_status": "retrieved"
+  }
+ ]
+}

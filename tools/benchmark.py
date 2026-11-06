@@ -124,7 +124,7 @@ for n in (6,8,10,12,14,16):
         t=time.perf_counter(); D=O.enumerate_designs(G,sc,cat); O.solve(D,"max_science"); ts=time.perf_counter()-t
     out["scaling"].append(dict(instruments=n,designs=designs,vectorized_exact_solve_s=tv,scalar_exact_solve_s=ts,optimum_science=(r[0] if r else None),note="synthetic instrument clones (not real data)"))
 json.dump(out,open(ROOT+"/analysis/benchmark_results.json","w"),indent=1)
-import shutil; shutil.copy(ROOT+"/analysis/benchmark_results.json",ROOT+"/../docs/data/benchmark_results.json")
+
 print(json.dumps(out["equivalence"])); print(json.dumps(out["timing"],indent=0)[:900]); print(json.dumps(out["scaling"]))
 for h in out["heuristics"]:
     if h["evaluations"]==2000: print(h["scenario_id"],h["objective"],h["solver"],f'{h["runs_found_exact_optimum"]}/{h["runs"]} exact, feas {h["runs_feasible"]}, med gap {h["median_gap_pct"]}')

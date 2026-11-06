@@ -3,63 +3,53 @@
 <title>Space Mission Data API</title><link rel="stylesheet" href="style.css">
 <style>pre{background:var(--card);border:1px solid var(--bd);border-radius:8px;padding:10px 12px;overflow:auto;font-size:.82rem}main h2{margin-top:22px}td code{white-space:normal}</style></head>
 <body>
-<header><h1>Space Mission Data API</h1><p class="sub">Read-only, versioned, static JSON. Everything in the Explorer is available here. <a href="index.html">← back to the explorer</a></p></header>
-<div class="banner"><b>Data status:</b> the 25 celestial records (Sun, planets, dwarf planets, moons, small bodies) are <code>verified</code> at core level against retrieved JPL/NASA pages (see <code>field_verification</code> and <code>unverified_fields</code>); six SLS/RS-25 launch fields are verified individually; all other launch, engine, spacecraft, instrument and mission figures are <code>unverified</code>; optimizer catalog values are <code>estimated</code>, credits are <code>fictional</code>; the SpaceX/NASA-facility tables are user-supplied files whose origin and license are unverified. Every record carries <code>data_class</code>, <code>confidence</code> and <code>source_ids</code> — please keep them when you reuse data.</div>
+<header><h1>Space Mission Data API</h1><p class="sub">Read-only, versioned, static JSON — <b>verified data only</b>. <a href="index.html">← back to the explorer</a></p></header>
+<div class="banner"><b>Strict mode:</b> every record was compared with, or ingested directly from, a retrieved authoritative source (JPL SSD/SBDB/NHATS, NASA NSSDC, NTRS, NASA SLS page, Apollo 11 press kit, ULA, ESA, data.nasa.gov). Unverified, estimated and fictional values were removed. Records contain only their verified fields; each carries <code>data_class: "verified"</code>, <code>source_ids</code> and provenance (<code>field_verification</code> or a collection-level <code>provenance</code> with URL, retrieval date, SHA-256). Keep that visible when you reuse it.</div>
 <main>
 <div class="card"><h2 style="margin-top:0">Quick start</h2>
-<p>Base URL: <code id="base">https://kaungkhantko26.github.io/space-mission-dataset/api/v1</code>. Every endpoint is a plain <code>GET</code> of a <code>.json</code> file. No keys, no rate limit beyond GitHub Pages' own, and CORS is open (<code>Access-Control-Allow-Origin: *</code>), so browsers can call it directly.</p>
+<p>Base URL: <code>https://kaungkhantko26.github.io/space-mission-dataset/api/v1</code>. Plain <code>GET</code> of <code>.json</code> files; no keys; CORS open.</p>
 <pre>curl https://kaungkhantko26.github.io/space-mission-dataset/api/v1/index.json
-curl https://kaungkhantko26.github.io/space-mission-dataset/api/v1/launch_vehicles/falcon_heavy.json
-curl -s https://kaungkhantko26.github.io/space-mission-dataset/api/v1/rocket_engines.json | jq '.records[] | {id, isp_vac_s, thrust_vac_n}'</pre></div>
+curl https://kaungkhantko26.github.io/space-mission-dataset/api/v1/planets/mars.json
+curl -s https://kaungkhantko26.github.io/space-mission-dataset/api/v1/electric_propulsion.json | jq '.records[] | {id, isp_vac_s, thrust_vac_n}'</pre>
+<p>Need filtering, NHATS search, Hohmann or Δv? Run the local backend: <code>python3 tools/serve_api.py</code> (see <code>HACKATHON.md</code>).</p></div>
 
 <div class="card"><h2 style="margin-top:0">Endpoints</h2>
 <table><thead><tr><th>Endpoint</th><th>Returns</th></tr></thead><tbody>
-<tr><td><code>/index.json</code></td><td>API description, every collection with count and URL template, data-status banner, conventions</td></tr>
-<tr><td><code>/{collection}.json</code></td><td><code>{collection, description, count, data_status, records[]}</code></td></tr>
-<tr><td><code>/{collection}/{id}.json</code></td><td><code>{collection, data_status, record}</code> — 404 if the id does not exist</td></tr>
-<tr><td><code>/search-index.json</code></td><td>Lightweight <code>{c, id, name}</code> list for client-side search</td></tr>
-<tr><td><code>/optimization/scenarios.json</code></td><td>Scenarios, global design parameters and the component catalog used by the optimizer</td></tr>
-<tr><td><code>/optimization/pareto/{scenario_id}.json</code></td><td>Pareto-front designs (mass, cost, science) for <code>leo_eo</code>, <code>lunar_orbiter</code>, <code>mars_orbiter</code></td></tr>
-<tr><td><code>/optimization/sensitivity.json</code>, <code>/optimization/uncertainty.json</code>, <code>/optimization/models.json</code></td><td>Sensitivity results, Monte Carlo results, equations and assumptions</td></tr>
-<tr><td><code>/analysis/{name}.json</code></td><td><code>mass, propulsion, power, communications, feasibility, spacex_launch, nasa_facilities, benchmark</code>-style analysis files (see index)</td></tr>
-<tr><td><code>/missions/trajectory_reference.json</code>, <code>/quality.json</code></td><td>Derived Δv/transfer references; quality, completeness and known conflicts</td></tr>
-<tr><td><code>/openapi.json</code></td><td>OpenAPI 3.0.3 description of all of the above</td></tr></tbody></table>
-<p>Collections: <code>planets, moons, asteroids, orbital_elements, atmospheres, rocket_engines, electric_propulsion, propellants, launch_vehicles, rocket_stages, boosters, components, ground_stations, instruments, missions, mission_profiles, engineering_constraints, experiments, spacex_launches, launch_sites, nasa_facilities, sources</code>. The explorer's <b>API</b> tab lets you try them live.</p></div>
+<tr><td><code>/index.json</code></td><td>collections with counts and URL templates, status banner, conventions</td></tr>
+<tr><td><code>/{collection}.json</code></td><td><code>{collection, count, data_status, provenance?, records[]}</code></td></tr>
+<tr><td><code>/{collection}/{id}.json</code></td><td>one record (collections up to 800 records; larger ones only as collection files)</td></tr>
+<tr><td><code>/search-index.json</code></td><td>id/name list for client-side search</td></tr>
+<tr><td><code>/analysis/light_time.json</code>, <code>/analysis/nhats_lowest_delta_v.json</code>, <code>/missions/trajectory_reference.json</code></td><td>values derived only from verified inputs</td></tr>
+<tr><td><code>/quality.json</code>, <code>/validation.json</code>, <code>/openapi.json</code></td><td>quality report, validation results, OpenAPI 3.0.3 spec</td></tr></tbody></table>
+<p>Collections: <code>planets, moons, asteroids, orbital_elements, moon_mean_elements, rocket_engines, electric_propulsion, launch_vehicles, rocket_stages, boosters, payload_capabilities, missions, nasa_facilities, nhats_targets, neo_catalog, sources</code>. <code>nhats_targets</code> (7,185) and <code>neo_catalog</code> (1,265) are large: use the collection file.</p></div>
 
 <div class="card"><h2 style="margin-top:0">Conventions</h2><ul>
-<li>SI units; unit is in the field name (<code>_kg</code>, <code>_n</code>, <code>_w</code>, <code>_m_s</code>, <code>_km3_s2</code>…). <code>null</code> means <em>not recorded</em> — never zero.</li>
-<li>Ids are lowercase snake_case and unique within a collection. Foreign keys: <code>engine_id, vehicle_id, launch_vehicle_id, instrument_ids, parent_id, body_id, launch_site_id, source_ids, scenario_id</code>.</li>
-<li>Responses may gain new fields in <code>v1</code>; existing fields will not change meaning. Breaking changes ship as <code>v2</code>.</li>
-<li>The API is regenerated by <code>python3 tools/make_api.py</code> after every build; it is a snapshot, not a live service. Optimization is not exposed as an endpoint — use the client libraries below (they run the same model in your process).</li></ul></div>
+<li>SI units unless the field name says otherwise. NHATS: delta-v in km/s, durations in days, sizes in m. SBDB: <code>a</code> in AU, diameter in km, rotation period in h. JPL moon elements: km, degrees, days.</li>
+<li>A field that is absent was not verified — it is never zero-filled. <code>verified_fields</code> lists what was checked.</li>
+<li>Ids are unique within a collection. Foreign keys: <code>vehicle_id, engine_id, parent_id, body_id</code>.</li>
+<li>Static snapshot regenerated by <code>python3 tools/make_api.py</code>; v1 may gain fields but existing fields will not change meaning.</li></ul></div>
 
 <div class="card"><h2 style="margin-top:0">JavaScript (browser or Node 18+)</h2>
 <pre>&lt;script src="https://kaungkhantko26.github.io/space-mission-dataset/client.js"&gt;&lt;/script&gt;
 &lt;script&gt;
   const api = new SpaceMissionAPI("https://kaungkhantko26.github.io/space-mission-dataset/api/v1");
   const mars = await api.get("planets", "mars");
-  const stage = await api.expand(await api.get("rocket_stages", "f9_s1"));   // follows engine_id / vehicle_id / source_ids
-  console.log(stage._linked.engine_id.record.name, stage._linked.vehicle_id.record.name);
-  const hits = await api.search("falcon");
-  const front = await api.pareto("lunar_orbiter");
-&lt;/script&gt;</pre>
-<p>Re-running the optimizer yourself: load <code>model.js</code> (<code>enumerate, solve, balanced, pareto</code>) and pass it <code>(await api.scenarios())</code> — see <code>tools/parity_check.js</code> for a complete example.</p></div>
+  const nhats = await api.list("nhats_targets");            // 7,185 real JPL records
+  const best = nhats.filter(r =&gt; r.min_delta_v_km_s &lt; 6 &amp;&amp; r.size_max_m &gt; 100);
+&lt;/script&gt;</pre></div>
 
 <div class="card"><h2 style="margin-top:0">Python (standard library only)</h2>
 <pre>from spacemission_client import SpaceMissionAPI      # tools/spacemission_client.py
-api = SpaceMissionAPI()                              # live site
-# api = SpaceMissionAPI("docs/api/v1")               # offline, from a local checkout
-engines = api.list("rocket_engines")
-best = max((e for e in engines if e["isp_vac_s"]), key=lambda e: e["isp_vac_s"])
-print(best["name"], best["isp_vac_s"], best["data_class"])
-print(api.ideal_delta_v(best, m0=1000, mf=400))      # Tsiolkovsky; None if Isp not recorded</pre>
-<p>With pandas: <code>pd.DataFrame(api.list("nasa_facilities"))</code>.</p></div>
+api = SpaceMissionAPI()                              # live site; or SpaceMissionAPI("docs/api/v1") offline
+thrusters = api.list("electric_propulsion")
+print(max(thrusters, key=lambda e: e["isp_vac_s"])["name"])
+print(api.ideal_delta_v(thrusters[0], m0=1000, mf=400))</pre>
+<p>With pandas: <code>pd.DataFrame(api.list("neo_catalog"))</code>, or read <code>exports/csv/*.csv</code>.</p></div>
 
-<div class="card"><h2 style="margin-top:0">Using it from another project (e.g. a simulator)</h2><ol>
-<li>Fetch <code>index.json</code> once and cache; it lists collections and counts.</li>
-<li>Load the records you need and <b>filter by <code>data_class</code></b> — treat anything not <code>verified</code> as teaching data.</li>
-<li>Show <code>data_status</code> or the record's <code>data_class</code> in your UI; do not present it as official NASA/SpaceX specifications.</li>
-<li>Pin to <code>api/v1</code>. If you need a frozen copy, download the files from the repository's <code>docs/api/v1</code> folder or the combined file <code>docs/data/all_space_mission_data.json</code>.</li></ol>
-<p class="mut">Licensing: no license file is set yet; the uploaded SpaceX and NASA-facility files have unverified licenses, so check before redistributing those collections.</p></div>
+<div class="card"><h2 style="margin-top:0">Reuse rules</h2><ol>
+<li>Show <code>data_class</code>/provenance in your UI; do not present results as official NASA/JPL/ESA/ULA output.</li>
+<li>Do not fill missing fields with guesses — treat absence as "unknown".</li>
+<li>Licences: see <code>LICENSE-DATA.md</code> (NASA/JPL public data; the NASA Facilities table lists its licence as "not specified").</li></ol></div>
 </main>
 <footer><a href="api/v1/openapi.json">openapi.json</a> · <a href="api/v1/index.json">index.json</a> · <a href="client.js">client.js</a></footer>
 </body></html>

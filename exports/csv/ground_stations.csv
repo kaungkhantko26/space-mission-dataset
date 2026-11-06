@@ -1,9 +1,0 @@
-id,name,operator,lat,lon,antenna_m,gain_dbi.S,gain_dbi.X,bands,tx_power_w_max,note,data_class,confidence,source_ids,retrieval_status,gain_dbi.Ka
-dsn_goldstone_dss14,DSN Goldstone DSS-14 (70 m),NASA DSN,35.4259,-116.89,70.0,63.0,74.0,"[""S"", ""X""]",20000,Gains approximate (DSN 810-005 expected).,unverified,low,"[""S26""]",not_retrieved,
-dsn_canberra_dss43,DSN Canberra DSS-43 (70 m),NASA DSN,-35.4014,148.9817,70.0,63.0,74.0,"[""S"", ""X""]",20000,Gains approximate.,unverified,low,"[""S26""]",not_retrieved,
-dsn_madrid_dss63,DSN Madrid DSS-63 (70 m),NASA DSN,40.4314,-4.2481,70.0,63.0,74.0,"[""S"", ""X""]",20000,Gains approximate.,unverified,low,"[""S26""]",not_retrieved,
-dsn_34m_bwg,DSN 34 m beam-waveguide (generic),NASA DSN,,,34.0,,68.0,"[""X"", ""Ka""]",,Gains approximate.,unverified,low,"[""S26""]",not_retrieved,79.0
-estrack_new_norcia,ESTRACK New Norcia (35 m),ESA,-31.048,116.191,35.0,,,"[""S"", ""X""]",,Gain not recorded.,unverified,low,"[""S27""]",not_retrieved,
-estrack_cebreros,ESTRACK Cebreros (35 m),ESA,40.4528,-4.3675,35.0,,,"[""X"", ""Ka""]",,Gain not recorded.,unverified,low,"[""S27""]",not_retrieved,
-estrack_malargue,ESTRACK Malargue (35 m),ESA,-35.776,-69.398,35.0,,,"[""X"", ""Ka""]",,Gain not recorded.,unverified,low,"[""S27""]",not_retrieved,
-ksat_svalbard,KSAT Svalbard (SvalSat),KSAT,78.23,15.39,,,,"[""S"", ""X""]",,Polar site: many passes per day for SSO satellites.,unverified,low,"[""S28""]",not_retrieved,

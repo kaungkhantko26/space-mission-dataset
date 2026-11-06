@@ -1,5 +1,5 @@
 // Verifies docs/model.js reproduces the Python optimizer results stored in the dataset.
-const M=require("../docs/model.js"), D=require("../space-mission-research/combined/all_space_mission_data.json");
+const M=require("../labs/model.js"), D=require("../space-mission-research/combined/all_space_mission_data.json");
 const cons=D.optimization.constraints; let bad=0,n=0;
 for(const sc of cons.scenarios){
   const des=M.enumerate(cons.global_parameters,sc,cons.catalog);

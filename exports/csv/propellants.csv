@@ -1,9 +1,0 @@
-id,name,density_kg_m3,condition,data_class,confidence,source_ids,retrieval_status
-lox,Liquid oxygen,1141,"boiling point 90 K, 1 atm",unverified,medium,"[""S15""]",not_retrieved
-lh2,Liquid hydrogen,70.85,"boiling point 20 K, 1 atm",unverified,medium,"[""S15""]",not_retrieved
-lch4,Liquid methane,422.6,"boiling point 111 K, 1 atm",unverified,medium,"[""S15""]",not_retrieved
-rp1,RP-1 kerosene,820,~15-20 C; varies 800-820,unverified,medium,"[""S15""]",not_retrieved
-n2o4,Nitrogen tetroxide (NTO),1443,20 C,unverified,medium,"[""S15""]",not_retrieved
-mmh,Monomethylhydrazine (MMH),878,20 C,unverified,medium,"[""S15""]",not_retrieved
-n2h4,Hydrazine,1004,~25 C,unverified,medium,"[""S15""]",not_retrieved
-xe,Xenon (stored supercritical),1600,typical tank storage; varies with pressure/temperature,unverified,low,"[""S14""]",not_retrieved

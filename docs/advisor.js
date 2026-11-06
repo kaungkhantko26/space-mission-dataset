@@ -1,17 +1,9 @@
-// Mission-fit advisor. Pure functions (browser + node). All rules are transparent heuristics layered on UNVERIFIED data;
-// relevance weights are fictional educational values. See docs: "Mission fit" tab.
+// Mission-fit advisor (strict mode). Pure functions (browser + node). Uses ONLY verified fields; thresholds (restart, 0.02-5 g, 20x overkill, 10% launch margin, Isp 310 s reference) are teaching heuristics, not data.
 const G0a=9.80665;
 const MISSIONS={
- leo:{name:"Earth-observation satellite (LEO)",dv:150,dv_basis:"estimated drag make-up + deorbit",isp_ref:310,orbit:"LEO",scenario:"leo_eo",multi_burn:true,electric_ok:true},
- gto:{name:"Geostationary comsat (via GTO)",dv:1457,dv_basis:"derived: GTO→GEO circularisation ≈ LEO-GEO Hohmann second burn (no plane change)",isp_ref:310,orbit:"GTO",scenario:null,multi_burn:true,electric_ok:true},
- moon:{name:"Moon orbiter (100 km polar)",dv:4005,dv_after_tli:921,dv_basis:"derived: TLI 3084 + LOI 821 + 100 ops (from 400 km LEO)",isp_ref:310,orbit:"Moon",scenario:"lunar_orbiter",multi_burn:true,electric_ok:false},
- mars:{name:"Mars orbiter (400 km × 1 sol)",dv:1064,dv_basis:"derived: MOI 914 + 150 ops; launcher supplies departure",isp_ref:310,orbit:"Mars",scenario:"mars_orbiter",multi_burn:true,electric_ok:false}};
-// educational relevance 0-3 by instrument type and mission (FICTIONAL weights; orbiter missions)
-const REL={
- leo:{multispectral_camera:3,thermal_imager:3,optical_camera:2,imaging_spectrometer:2,multispectral_imager_spectrometer:2,particle_detector:1,radio_science:1,uv_spectrometer:1,lidar_altimeter:1,sounding_radar:1,dust_detector:0,mass_spectrometer_gas_chromatograph:0},
- gto:{particle_detector:3,radio_science:1,optical_camera:1,uv_spectrometer:1,dust_detector:1,multispectral_camera:0,thermal_imager:0,imaging_spectrometer:0,multispectral_imager_spectrometer:0,lidar_altimeter:0,sounding_radar:0,mass_spectrometer_gas_chromatograph:0},
- moon:{optical_camera:3,lidar_altimeter:3,imaging_spectrometer:2,multispectral_imager_spectrometer:2,sounding_radar:2,uv_spectrometer:2,particle_detector:1,multispectral_camera:1,thermal_imager:1,radio_science:1,dust_detector:1,mass_spectrometer_gas_chromatograph:0},
- mars:{optical_camera:3,imaging_spectrometer:3,multispectral_imager_spectrometer:3,sounding_radar:3,lidar_altimeter:2,uv_spectrometer:2,particle_detector:1,multispectral_camera:1,thermal_imager:1,radio_science:1,dust_detector:1,mass_spectrometer_gas_chromatograph:0}};
+ gto:{name:"Geostationary comsat (via GTO)",dv:1457,dv_basis:"derived from verified Earth GM/radius: second burn of a LEO(400 km)-to-GEO Hohmann transfer, no plane change",isp_ref:310,orbit:"GTO",multi_burn:true,electric_ok:true},
+ moon:{name:"Moon orbiter (100 km circular)",dv:3905,dv_after_tli:821,dv_basis:"derived from verified Earth and Moon GM/radius: TLI 3084 + LOI 821 m/s (patched conic, from 400 km LEO)",isp_ref:310,orbit:"Moon",multi_burn:true,electric_ok:false},
+ mars:{name:"Mars orbiter (400 km x 1 sol)",dv:914,dv_basis:"derived from verified Sun/Earth/Mars constants: Mars orbit insertion from the Hohmann arrival v-infinity; launcher supplies departure",isp_ref:310,orbit:"Mars",multi_burn:true,electric_ok:false}};
 const payloadFor=(v,mission)=>{const P=v.payloads||[];const pick=(f)=>P.filter(f);
   const exp=(a)=>a.find(p=>/^expended/.test(p.mode))||a[0];
   if(mission==="leo"){const a=pick(p=>p.orbit==="LEO"||p.orbit==="SSO");return a.length?exp(a):null;}
@@ -53,20 +45,11 @@ function engineFit(e,mission,dry,opt={}){const M=MISSIONS[mission],electric=e.ty
   if(acc>5){r.verdict="Overpowered";r.reasons.push(`Acceleration ${acc.toFixed(1)} g > 5 g structural/pointing limit (assumption).`);return r;}
   if(acc<0.02){r.verdict="Marginal";r.reasons.push(`Acceleration only ${acc.toFixed(3)} g — long burns incur gravity losses on departure/capture burns.`);r.score=prop;return r;}
   r.verdict="Suitable";r.score=prop;return r;}
-function instrumentFit(i,mission){const rel=(REL[mission]||{})[i.instrument_type];const r={id:i.id,name:i.name,type:i.instrument_type,relevance:rel==null?null:rel,mass_kg:i.mass_kg,power_w:i.power_w,resource:null,verdict:"Not rated",score:null,reasons:[]};
-  if(rel==null){r.reasons.push("Instrument type has no relevance weight for this mission.");return r;}
-  r.resource=(i.mass_kg!=null&&i.power_w!=null)?i.mass_kg+i.power_w/10:null;
-  r.reasons.push(`Relevance ${rel}/3 for ${MISSIONS[mission].name} (fictional educational weight).`);
-  if(rel===0){r.verdict="Not useful";r.reasons.push("Not useful from orbit for this mission (e.g. surface-only instrument).");return r;}
-  if(r.resource==null){r.verdict=rel>=2?"Relevant (cost unknown)":"Marginal";r.reasons.push("Mass or power not recorded — resource cost cannot be computed.");r.score=-rel*1e3+1e6;return r;}
-  r.reasons.push(`Resource cost ≈ ${r.resource.toFixed(1)} (kg + W/10; assumption 10 W ≈ 1 kg). Value per resource = ${(rel/r.resource).toFixed(3)}.`);
-  r.verdict=rel>=2?"Good fit":"Marginal";r.score=-rel*1e3+r.resource;return r;}
 const VORDER={"Suitable":0,"Good fit":0,"Relevant (cost unknown)":1,"Marginal":1,"Unproven":2,"Historical":2,"Overkill":3,"Overpowered":4,"Not modeled":5,"Not rated":6,"Not useful":7,"Not suitable":8};
 function rankFits(list){return list.slice().sort((a,b)=>(VORDER[a.verdict]??9)-(VORDER[b.verdict]??9)||((a.score??1e18)-(b.score??1e18)));}
 function adviseAll(data,mission,dry){
   const veh=rankFits(data.launch.launch_vehicles.map(v=>vehicleFit(v,mission,dry)));
   const eng=rankFits(data.propulsion.rocket_engines.concat(data.propulsion.electric_propulsion).map(e=>engineFit(e,mission,dry)));
-  const ins=rankFits(data.instruments.map(i=>instrumentFit(i,mission)));
-  return {veh,eng,ins};}
-if(typeof module!=="undefined") module.exports={MISSIONS,REL,vehicleFit,engineFit,instrumentFit,rankFits,adviseAll,payloadFor};
-if(typeof window!=="undefined") window.ADV={MISSIONS,REL,vehicleFit,engineFit,instrumentFit,rankFits,adviseAll,payloadFor};
+  return {veh,eng,ins:[]};}
+if(typeof module!=="undefined") module.exports={MISSIONS,vehicleFit,engineFit,rankFits,adviseAll,payloadFor};
+if(typeof window!=="undefined") window.ADV={MISSIONS,vehicleFit,engineFit,rankFits,adviseAll,payloadFor};

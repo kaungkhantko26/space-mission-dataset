@@ -1,35 +1,36 @@
-.PHONY: setup all build schemas validate api export reports bench test verify fetch serve site clean
+.PHONY: setup all staging verified validate api export test verify fetch serve site clean
 PY ?= python3
 
 setup:
 	$(PY) -m pip install -r requirements.txt
 
-all: build schemas validate api export reports   ## full pipeline (no network needed)
+# Public dataset = verified/ (strict mode). `staging` is the internal build that still contains unverified/estimated values and is never served.
+all: staging verified validate api export     ## full pipeline (no network needed)
 
-build:
+staging:
 	$(PY) tools/build.py
-schemas:
 	$(PY) tools/make_schemas.py
-validate:
 	$(PY) tools/validate.py
+
+verified:
+	$(PY) tools/make_verified.py
+
+validate:
+	$(PY) tools/validate_verified.py
+
 api:
 	$(PY) tools/make_api.py
+
 export:
 	$(PY) tools/export_data.py
-reports:
-	$(PY) tools/make_reports.py
-bench:
-	$(PY) tools/benchmark.py
 
-test: validate                                       ## parity (JS vs Python), Monte Carlo cross-check, backend smoke test
-	node tools/parity_check.js
-	node tools/sim_check.js
+test: validate                                       ## backend smoke test (16 endpoint checks)
 	$(PY) tools/smoke_test.py
 
-fetch:                                               ## re-download source pages (needs network access to JPL/NASA/ULA/ESA)
+fetch:                                               ## re-download source pages (needs network access to JPL/NASA/ULA/ESA hosts)
 	bash tools/fetch_sources.sh
 
-verify:                                              ## re-run verification on cached pages, then rebuild
+verify:                                              ## re-run verification on cached pages, then rebuild everything
 	$(PY) -I tools/verify_celestial.py
 	$(PY) -I tools/verify_launch.py
 	$(MAKE) all

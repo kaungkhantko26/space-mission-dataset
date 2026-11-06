@@ -1,48 +1,43 @@
-# Space Mission Research Dataset & Analysis Explorer
+# Space Mission Dataset — verified-only backend
 
-Machine-readable engineering data, analysis, and optimization models for an educational space-mission-design simulator, plus a static web explorer.
+A hackathon-ready **backend dataset** for space-mission design projects. **Strict mode:** everything public here was compared with, or ingested directly from, a *retrieved* authoritative source (JPL, NASA, ULA, ESA). Unverified, estimated and fictional values were removed.
 
-> **Provenance status — please read.** 32 records are `verified` (25 celestial bodies at core level; the 3 Saturn V stages, NEXT, NSTAR, BPT-4000 and BE-4, whose core numeric fields were all checked) against **retrieved** primary pages: JPL SSD/SBDB, NASA NSSDC, NASA SLS page, NASA Apollo 11 press kit and NTRS papers, ULA and ESA. 29 recalled values (16 celestial, 13 launch/engine) were wrong or outdated and were replaced by the sourced value. Launch vehicles are verified field by field (`verified_field_count`). **Everything else is still `unverified`** — notably Falcon 9/Heavy, Starship, Merlin, Raptor, Electron, Ariane 5, most engines, spacecraft components, instruments and mission figures, whose sources could not be retrieved (JavaScript-only pages, HTTP 403/429/522, unreachable hosts). The optimizer catalog is `estimated`, credits are `fictional`, and the SpaceX/NASA-facility tables are user-supplied with unverified origin. See `space-mission-research/reports/VERIFICATION_REPORT.md`.
+**→ Start with [`HACKATHON.md`](HACKATHON.md).** Live site and API: https://kaungkhantko26.github.io/space-mission-dataset/
 
-## Start here (hackathon)
-**→ [`HACKATHON.md`](HACKATHON.md)** — 5-minute guide: live API, local backend (`python3 tools/serve_api.py`), CSV/SQLite exports, trust rules, project ideas.
 ```bash
-make all && make test     # rebuild everything and run 82 validation checks + parity + backend smoke tests
-python3 tools/serve_api.py   # http://127.0.0.1:8000  (filter, optimize, simulate, delta-v)
+python3 tools/serve_api.py          # local backend on http://127.0.0.1:8000 (stdlib only)
+make all && make test               # rebuild everything, 51 validation checks, 16 backend checks
 ```
 
-## Contents
+## What you get (all verified)
+| | Records | Source |
+|---|---:|---|
+| Sun, planets, dwarf planets, moons, asteroids (verified fields) | 40 | JPL SSD, JPL SBDB, NASA NSSDC |
+| Moon mean orbital elements | 461 | JPL (ingested directly) |
+| NHATS accessible near-Earth targets (min Δv, durations) | 7,185 | JPL NHATS API (ingested directly) |
+| Near-Earth objects with measured diameter | 1,265 | JPL SBDB (ingested directly) |
+| NASA facilities | 485 | official data.nasa.gov table (no contact data) |
+| Engines/thrusters, launch vehicles, Saturn V stages, payload capacities, missions — **verified fields only** | 41 | NTRS papers, Apollo 11 press kit, NASA SLS page, ULA, ESA, NSSDC catalog |
+
+Access: static JSON API (`docs/api/v1`), local backend (`tools/serve_api.py`), CSV + SQLite (`exports/`), one JSON (`verified/combined/`), website (`docs/`), JS and Python clients, OpenAPI spec.
+
+## Trust model
+* Records carry only their verified fields; each has `field_verification` (source text, URL, retrieval date, file SHA-256, tolerance) or a collection-level `provenance` block. A missing field means "not verified", never zero.
+* Where a recalled value disagreed with its source, the **sourced value replaced it** (29 corrections, e.g. Saturn V S-IC dry mass 137,000 → 130,975 kg, BPT-4000 Isp 1850 → 2150 s, Eris radius, Uranus gravity). See `verified/quality_report.json` and the site's Quality tab.
+* `validate_verified.py` re-reads values from the **raw retrieved files** and scans for any unverified/estimated/fictional marker.
+* Not included: instruments, spacecraft components, propellants, atmospheres, ground stations, Falcon/Starship/Electron and most engine specs, costs, the SpaceX launch table, and the cost/science optimizer (those need values that could not be verified).
+
+## Repository map
 | Path | What |
 |---|---|
-| `space-mission-research/` | JSON datasets (`celestial/ propulsion/ launch/ spacecraft/ instruments/ missions/`), `analysis/`, `optimization/`, `metadata/`, `schemas/`, `combined/all_space_mission_data.json`, `reports/*.md` |
+| `verified/` | **the dataset** (per-collection JSON, `combined/`, `quality_report.json`, `validation_report.json`) |
 | `exports/` | CSV per collection + `space_mission.sqlite` |
+| `docs/` | website + static API (`docs/api/v1`), `client.js`, `advisor.js` |
+| `data_raw/` | cached source pages (`retrieved/`, SHA-256 in `MANIFEST.json`) and two user-supplied files |
+| `tools/` | pipeline: `fetch_sources.sh`, `verify_celestial.py`, `verify_launch.py`, `make_verified.py`, `validate_verified.py`, `make_api.py`, `export_data.py`, `serve_api.py`, `smoke_test.py` |
+| `space-mission-research/` | **staging only** — maintainers' build containing unverified/estimated values; not served or exported (see its README) |
+| `labs/` | retired synthetic-optimizer experiments, not part of the dataset |
 | `examples/` | Python, Node and pandas quickstarts |
-| `tools/` | Reproducible pipeline: `ingest_external.py`, `make_api.py`, `build.py` (data → JSON, analysis, optimization), `validate.py` (56 checks), `make_schemas.py`, `make_reports.py`, `parity_check.js` |
-| `docs/` | Static website (GitHub Pages): explorer, comparison, calculators, optimizer with balance controls, sensitivity/risk, quality |
 
-## Run
-```bash
-bash tools/fetch_sources.sh                 # needs network access to JPL/NASA hosts; cached copies are committed in data_raw/retrieved/
-python3 -I tools/verify_celestial.py && python3 -I tools/verify_launch.py
-python3 tools/make_schemas.py && python3 tools/build.py && python3 tools/validate.py && python3 tools/make_api.py && python3 tools/make_reports.py
-node tools/parity_check.js          # JS optimizer == Python optimizer
-python3 tools/benchmark.py          # solver benchmarks (needs numpy), writes analysis/benchmark_results.json
-cd docs && python3 -m http.server   # open http://localhost:8000
-```
-Python 3.10+ standard library, plus `jsonschema` for validation. To publish the site: repo **Settings → Pages → Deploy from branch → `/docs`**.
-
-## External data and the API
-* `data_raw/` holds two user-supplied files (SpaceX launches 2010–2018, NASA facilities); see `space-mission-research/reports/EXTERNAL_DATA_REPORT.md`. Their origin and license are unverified — confirm before redistributing.
-* Static JSON API (`docs/api/v1/`, regenerated by `python3 tools/make_api.py`): guide at `docs/api.html`, spec `docs/api/v1/openapi.json`, clients `docs/client.js` and `tools/spacemission_client.py`.
-* Extra checks: `node tools/sim_check.js` compares the browser Monte Carlo with the stored Python results.
-
-## Using the website
-Live site (after enabling Pages on `main` → `/docs`): https://kaungkhantko26.github.io/space-mission-dataset/ — open the **Guide** tab for a walkthrough. In short: *Explorer* to browse/sort data, *Compare* to put 2–4 records side by side, *Calculators* for Δv/link/power sizing, *Optimizer* to move budget/margin/weight sliders and see the Pareto front, *Sensitivity & risk*, *Benchmarks*, *Quality*.
-
-## Benchmarks (see `space-mission-research/reports/BENCHMARK_REPORT.md`)
-A numpy-vectorized exact solver (`tools/vec_model.py`) matches the scalar optimizer on all 24 scenario-objective checks and is ~10–20× faster per pass; it solves a 15.7M-design space in ~1 s. Random search, hill-climbing and a genetic algorithm are benchmarked against the exact optimum; none finds it reliably, so exact search is preferred while the space is small enough.
-
-## Key conventions
-SI units with unit-suffixed names; `null` = not recorded (never zero); every record has `data_class`, `confidence`, `source_ids`, `retrieval_status`. Optimization = exhaustive enumeration, so "optimal" means optimal *within the stated catalog and model*.
-
-See `space-mission-research/reports/` for findings, `DATA_LIMITATIONS.md` for known conflicts, and the refresh procedure.
+## Licence
+Code MIT (`LICENSE`); compiled data CC BY 4.0 with third-party attributions in [`LICENSE-DATA.md`](LICENSE-DATA.md). NASA does not endorse this project.

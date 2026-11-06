@@ -1,0 +1,39 @@
+{
+ "collection": "boosters",
+ "count": 1,
+ "mode": "STRICT: verified data only",
+ "records": [
+  {
+   "id": "sls_srb",
+   "name": "SLS 5-segment solid rocket booster",
+   "vehicle_id": "sls_b1",
+   "thrust_sl_n": 16000000,
+   "field_verification": {
+    "thrust_sl_n": {
+     "status": "verified",
+     "source_id": "S41",
+     "source_url": "https://www.nasa.gov/reference/space-launch-system/",
+     "retrieved": "2026-11-06",
+     "source_sha256": "dacd12643163e96a6ca709bd11270edc6ba8c81fc8a0ce8694fb8e9e3dbd6193",
+     "section": "NASA SLS reference page: each five-segment booster, 3.6 million lbs of thrust",
+     "source_original_text": "produces a maximum of 3.6 million lbs. of thrust during launch",
+     "source_value": 16013597.814937798,
+     "source_unit": "million lbf→N",
+     "statement_type": "point value",
+     "tolerance_rel": 0.005,
+     "recalled_value": 16000000,
+     "note": null
+    }
+   },
+   "verified_fields": [
+    "thrust_sl_n"
+   ],
+   "data_class": "verified",
+   "confidence": "high",
+   "source_ids": [
+    "S41"
+   ],
+   "retrieval_status": "retrieved"
+  }
+ ]
+}
