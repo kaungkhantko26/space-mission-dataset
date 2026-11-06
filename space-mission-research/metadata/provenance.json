@@ -677,10 +677,10 @@
   {
    "record_id": "be4",
    "dataset": "propulsion",
-   "data_class": "unverified",
-   "confidence": "low",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
-    "S07"
+    "S42"
    ],
    "retrieval_status": "not_retrieved",
    "retrieval_date": null,
@@ -837,10 +837,10 @@
   {
    "record_id": "nstar",
    "dataset": "propulsion",
-   "data_class": "unverified",
-   "confidence": "medium",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
-    "S14"
+    "S46"
    ],
    "retrieval_status": "not_retrieved",
    "retrieval_date": null,
@@ -854,10 +854,10 @@
   {
    "record_id": "next",
    "dataset": "propulsion",
-   "data_class": "unverified",
-   "confidence": "medium",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
-    "S14"
+    "S45"
    ],
    "retrieval_status": "not_retrieved",
    "retrieval_date": null,
@@ -865,6 +865,7 @@
    "verification_status": "unverified",
    "derived_fields": [
     "mass_flow_vac_kg_s",
+    "engine_thrust_to_weight_vac",
     "thrust_per_power_mN_per_kW"
    ]
   },
@@ -888,10 +889,10 @@
   {
    "record_id": "bpt4000",
    "dataset": "propulsion",
-   "data_class": "unverified",
-   "confidence": "low",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
-    "S14"
+    "S47"
    ],
    "retrieval_status": "not_retrieved",
    "retrieval_date": null,
@@ -1180,10 +1181,10 @@
   {
    "record_id": "saturn_v_s1c",
    "dataset": "launch",
-   "data_class": "unverified",
-   "confidence": "medium",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
-    "S09"
+    "S44"
    ],
    "retrieval_status": "not_retrieved",
    "retrieval_date": null,
@@ -1199,10 +1200,10 @@
   {
    "record_id": "saturn_v_s2",
    "dataset": "launch",
-   "data_class": "unverified",
-   "confidence": "medium",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
-    "S09"
+    "S44"
    ],
    "retrieval_status": "not_retrieved",
    "retrieval_date": null,
@@ -1218,10 +1219,10 @@
   {
    "record_id": "saturn_v_s4b",
    "dataset": "launch",
-   "data_class": "unverified",
-   "confidence": "medium",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
-    "S09"
+    "S44"
    ],
    "retrieval_status": "not_retrieved",
    "retrieval_date": null,

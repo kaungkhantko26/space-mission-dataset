@@ -1,5 +1,5 @@
 # Data limitations
-> **Read first:** 25 celestial records (Sun, planets, dwarf planets, moons, small bodies) have their core physical fields verified against retrieved JPL/NASA pages (198 field checks matched; 16 conflicts were resolved to the sourced value). Six SLS/RS-25 launch figures were also verified against the NASA SLS page; all other launch-vehicle, engine, spacecraft, instrument and mission figures are still unverified (recalled values), as are two user-supplied tables (SpaceX launches 2010-2018, NASA facilities). Derived values inherit the status of their inputs. Optimization catalog values are estimated/fictional. Not retrieved: other launch-vehicle, engine, spacecraft-component, instrument and mission sources (spacex.com and api.spacexdata.com unreachable; others not attempted); those records remain unverified.
+> **Read first:** 32 records are verified (25 celestial bodies at core level; engines and stages whose core numeric fields were all checked) against retrieved JPL, NASA (NTRS, SLS page, Apollo 11 press kit), ULA and ESA pages. 198 celestial and 44 launch/engine field checks matched; 16 celestial and 13 launch/engine recalled values were wrong or outdated and were replaced by the sourced value. Launch vehicles are verified field by field only (see verified_field_count); everything not checked (e.g. Falcon, Starship, Electron, Ariane, most engines, spacecraft components, instruments, missions) is still unverified, as are two user-supplied tables. Derived values inherit the status of their inputs. Optimization catalog values are estimated/fictional. Not retrieved: Retrieved: JPL SSD planetary/satellite physical parameters, JPL approximate planet elements, JPL SBDB API, NASA NSSDC fact sheets, NASA SLS page, NASA Apollo 11 press kit and three NTRS electric-propulsion documents, ULA Atlas V/Vulcan pages and the ESA Vega-C page (see metadata/sources.json). Not retrievable or not stating the numbers: SpaceX pages (JavaScript-rendered), api.spacexdata.com (HTTP 522), Rocket Lab, Aerojet Rocketdyne (403), Blue Origin (429), Arianespace manual; those records remain unverified.
 
 
 ## Provenance
@@ -27,7 +27,7 @@ Records carry `source_ids` that point to the *expected* authoritative document o
 * per-field provenance with page numbers and original units/measurements (not available without retrieval)
 
 ## Completeness (% of records with non-null field)
-* **engines**: thrust_vac_n 83.3%, thrust_sl_n 41.7%, isp_vac_s 95.8%, isp_sl_s 33.3%, dry_mass_kg 45.8%, burn_s 16.7%
+* **engines**: thrust_vac_n 83.3%, thrust_sl_n 41.7%, isp_vac_s 95.8%, isp_sl_s 33.3%, dry_mass_kg 50.0%, burn_s 16.7%
 * **vehicles**: liftoff_mass_kg 75.0%, thrust_sl_n 50.0%, price_usd 12.5%, fairing_diam_m 81.2%, height_m 100.0%
 * **instruments**: mass_kg 75.0%, power_w 56.2%
 * **missions**: launch_mass_kg 100.0%, dry_mass_kg 21.4%, cost_musd_nominal 71.4%

@@ -1,5 +1,5 @@
 # Benchmark report
-> **Read first:** 25 celestial records (Sun, planets, dwarf planets, moons, small bodies) have their core physical fields verified against retrieved JPL/NASA pages (198 field checks matched; 16 conflicts were resolved to the sourced value). Six SLS/RS-25 launch figures were also verified against the NASA SLS page; all other launch-vehicle, engine, spacecraft, instrument and mission figures are still unverified (recalled values), as are two user-supplied tables (SpaceX launches 2010-2018, NASA facilities). Derived values inherit the status of their inputs. Optimization catalog values are estimated/fictional. Not retrieved: other launch-vehicle, engine, spacecraft-component, instrument and mission sources (spacex.com and api.spacexdata.com unreachable; others not attempted); those records remain unverified.
+> **Read first:** 32 records are verified (25 celestial bodies at core level; engines and stages whose core numeric fields were all checked) against retrieved JPL, NASA (NTRS, SLS page, Apollo 11 press kit), ULA and ESA pages. 198 celestial and 44 launch/engine field checks matched; 16 celestial and 13 launch/engine recalled values were wrong or outdated and were replaced by the sourced value. Launch vehicles are verified field by field only (see verified_field_count); everything not checked (e.g. Falcon, Starship, Electron, Ariane, most engines, spacecraft components, instruments, missions) is still unverified, as are two user-supplied tables. Derived values inherit the status of their inputs. Optimization catalog values are estimated/fictional. Not retrieved: Retrieved: JPL SSD planetary/satellite physical parameters, JPL approximate planet elements, JPL SBDB API, NASA NSSDC fact sheets, NASA SLS page, NASA Apollo 11 press kit and three NTRS electric-propulsion documents, ULA Atlas V/Vulcan pages and the ESA Vega-C page (see metadata/sources.json). Not retrievable or not stating the numbers: SpaceX pages (JavaScript-rendered), api.spacexdata.com (HTTP 522), Rocket Lab, Aerojet Rocketdyne (403), Blue Origin (429), Arianespace manual; those records remain unverified.
 
 
 All timings are single runs on the build sandbox (Python 3.13.18, numpy 2.5.3); relative speedups are meaningful, absolute seconds are not. Reproduce: `python3 tools/benchmark.py`. Heuristic runs use seeds 0-19.
@@ -14,19 +14,19 @@ All timings are single runs on the build sandbox (Python 3.13.18, numpy 2.5.3); 
 ## 2. Speed (one full pass over every design)
 | Scenario | Designs | Scalar Python (s) | Vectorized (s) | Speedup | JavaScript (s) |
 |---|---:|---:|---:|---:|---:|
-| leo_eo | 22,680 | 0.23 | 0.024 | 9x | 0.29 |
-| lunar_orbiter | 15,120 | 0.33 | 0.017 | 20x | 0.08 |
-| mars_orbiter | 7,560 | 0.07 | 0.012 | 6x | 0.08 |
+| leo_eo | 22,680 | 0.28 | 0.037 | 8x | 0.28 |
+| lunar_orbiter | 15,120 | 0.20 | 0.019 | 10x | 0.12 |
+| mars_orbiter | 7,560 | 0.07 | 0.007 | 10x | 0.08 |
 
 ## 3. Scaling with instrument count (lunar scenario, synthetic instrument clones, exact max-science)
 | Instruments | Designs | Vectorized (s) | Scalar (s) | Optimum science |
 |---|---:|---:|---:|---:|
-| 6 | 15,120 | 0.03 | 0.20 | 24 |
-| 8 | 61,200 | 0.03 | 0.96 | 33 |
+| 6 | 15,120 | 0.02 | 0.17 | 24 |
+| 8 | 61,200 | 0.02 | 0.93 | 33 |
 | 10 | 245,520 | 0.03 | — | 40 |
 | 12 | 982,800 | 0.08 | — | 46 |
-| 14 | 3,931,920 | 0.32 | — | 51 |
-| 16 | 15,728,400 | 1.16 | — | 56 |
+| 14 | 3,931,920 | 0.35 | — | 51 |
+| 16 | 15,728,400 | 1.33 | — | 56 |
 
 The design space doubles per added instrument; the vectorized exact solver stays under ~1.2 s up to 15,728,400 designs. Clones are synthetic (perturbed copies) and used only to test scaling.
 

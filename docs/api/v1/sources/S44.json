@@ -1,0 +1,23 @@
+{
+ "collection": "sources",
+ "data_status": "32 records are verified (25 celestial bodies at core level; engines and stages whose core numeric fields were all checked) against retrieved JPL, NASA (NTRS, SLS page, Apollo 11 press kit), ULA and ESA pages. 198 celestial and 44 launch/engine field checks matched; 16 celestial and 13 launch/engine recalled values were wrong or outdated and were replaced by the sourced value. Launch vehicles are verified field by field only (see verified_field_count); everything not checked (e.g. Falcon, Starship, Electron, Ariane, most engines, spacecraft components, instruments, missions) is still unverified, as are two user-supplied tables. Derived values inherit the status of their inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "S44",
+  "title": "NASA Apollo 11 Press Kit (NTRS 19690022248)",
+  "organization": "NASA",
+  "url": "https://ntrs.nasa.gov/citations/19690022248",
+  "covers": "Saturn V stage masses, propellants, thrust, vehicle weight, launch date",
+  "retrieved": true,
+  "retrieval_date": "2026-11-06",
+  "page_or_section": "see field_verification on each record",
+  "note": "Pages retrieved and parsed; each value comparison is stored in metadata/verification_celestial.json and in the record's field_verification.",
+  "used_by_records": true,
+  "retrieved_pages": [
+   {
+    "url": "https://ntrs.nasa.gov/api/citations/19690022248/downloads/19690022248.pdf",
+    "retrieved": "2026-11-06",
+    "sha256": "3cce3b01294e90bedf9af742124ef657ffdf27536921ef50464cc34836526898"
+   }
+  ]
+ }
+}

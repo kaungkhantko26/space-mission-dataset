@@ -1,0 +1,6673 @@
+NASA
+
+Technical
+
+Memorandum
+
+113129
+
+AIAA-97-2778
+
+Development
+of an Ion Thruster
+Processor
+for New Millennium's
+Deep
+
+James
+Todd
+
+Space
+
+1 Mission
+
+S. Sovey, John A. Hamley,
+T. Peterson,
+Luis R. Pinero,
+
+NASA
+
+Lewis
+
+John
+
+R. Anderson,
+
+Research
+
+Center,
+
+Raymond
+
+Thomas
+W. Haag,
+Michael
+J. Patterson,
+John L. Power,
+Vincent
+K. Rawlin,
+and
+Cleveland,
+
+A. Becker,
+
+John
+
+R. Brophy,
+
+Laboratory,
+
+Gerald
+
+Benson,
+
+Thomas
+
+A. Bond,
+
+G. I. Cardwell,
+
+David
+
+J. Hamel,
+
+Stephen
+
+L. Hart,
+
+John
+
+Solis,
+
+Hughes
+
+Electron
+
+Michael
+
+Matranga
+
+Spectrum
+
+Astro
+
+Prepared
+
+for the
+
+33rd
+
+Propulsion
+
+Joint
+
+cosponsored
+
+and
+
+Pasadena,
+
+Harold
+
+Dynamics
+
+by AIAA,
+
+Washington,
+
+July
+
+National
+
+Aeronautics
+
+and
+
+Space
+
+Administration
+
+Lewis
+
+Research
+
+Center
+
+1997
+
+McDowell,
+
+6-9,
+
+Torrance,
+
+Gilbert,
+
+Arizona
+
+and
+
+Exhibit
+
+Conference
+
+Seattle,
+
+December
+
+Division,
+
+ASME,
+
+and
+
+James
+
+E. Polk
+
+California
+Jon A. Christensen,
+Kirk
+
+Yost
+
+Incorporated,
+
+Eric J. Pencil,
+Charles
+J. Sarmiento
+
+Ohio
+
+Jet Propulsion
+
+Ezequiel
+
+and Power
+
+SAE,
+1997
+
+and
+
+ASEE
+
+California
+
+A. Norenberg,
+
+Kenneth
+T. Keith
+
+J. Freick,
+Phelps,
+
+This report contains preliminary
+findings,
+subject to revision as
+analysis proceeds.
+
+Available
+NASA Center for Aerospace
+Information
+800 Elkridge Landing Road
+Linthicum
+Heights,
+MD 21090-2934
+Price Code: A03
+
+from
+National
+
+Technical
+
+Information
+
+Service
+
+5287 Port Royal Road
+Springfield,
+VA 22100
+Price Code: A03
+
+DEVELOPMENT OF AN ION THRUSTER AND POWER PROCESSOR FOR
+NEW MILLENNIUM'S DEEP SPACE 1 MISSION
+James S. Sovey, John A. Hamley, Thomas W. Haag, Michael J Patterson,
+Eric J. Pencil,
+Todd T. Peterson, Luis R. Pinero, John L. Power, Vincent K. Rawlin, and Charles J. Sarmiento
+NASA Lewis Research
+Center
+Cleveland,
+Ohio
+and
+John R. Anderson,
+
+Gerald
+David
+
+Raymond A. Becker, John R. Brophy, and James E. Polk
+Jet Propulsion
+Laboratory
+Pasadena,
+California
+and
+Benson, Thomas A. Bond, G. I. Cardweil, Jon A. Christensen,
+Kenneth J. Freick,
+J. Hamel, Stephen L. Hart, John McDowell,
+Kirk A. Norenberg,
+T. Keith Phelps,
+Ezequiel Solis, and Harold Yost
+Hughes Electron Dynamics
+Division
+Torrance, California
+and
+Michael Matranga
+Spectrum Astro Incorporated
+Gilbert, Arizona
+CMOS
+
+Abstract
+
+CSVS
+The NASA Solar Electric
+Propulsion
+Technology Applications
+Readiness
+Program (NSTAR)
+will provide a single-string
+primary propulsion
+system
+to NASA's
+New
+Millennium
+Deep
+Space 1 Mission which will perform comet and
+asteroid flybys in the years 1999 and 2000.
+The
+propulsion
+system includes
+a 30-cm diameter
+ion thruster,
+a xenon
+feed system,
+a power
+processing
+unit, and a digital control and interface unit. A total of four engineering
+model ion
+thrusters,
+three breadboard
+power
+processors,
+and a controller have been built, integrated,
+and
+tested.
+An extensive
+set of development
+tests
+has been completed
+along with thruster
+design
+verification
+tests of 2000 h and 1000 h.
+An
+8000 h Life Demonstration
+Test is ongoing and
+has successfully
+demonstrated
+more than 6000 h
+of operation.
+In situ measurements
+of accelerator grid wear are consistent
+with grid lifetimes
+well in excess of the 12,000 h qualification
+test
+requirement.
+Flight hardware
+is now being assembled
+in preparation
+for integration,
+functional, and acceptance
+tests.
+
+DCIU
+DSI
+EMDCIU
+EMI
+EMT
+FT
+GN&C
+HBBPPU
+HEDD
+
+I&T
+JPL
+LeRC
+LDT
+NASA
+NSTAR
+PAT
+PPU
+PWM
+SIC
+T'IT
+VF5
+VME
+
+Nomenclature
+
+BOL
+BBPPU
+
+NASA
+
+Beginning-of-Life
+Breadboard
+Power
+
+TM-113129
+
+Processing
+
+Unit
+
+1
+
+Complementary
+Metal Oxide Semiconductor
+Component
+and Spacecraft
+Verification Specification
+(for Deep Space
+1)
+Digital Control and Interface Unit
+Deep Space 1
+Engineering
+Model
+Digital
+Control
+and Interface Unit
+Electromagnetic
+Interference
+Engineering
+Model Thruster
+Flight Thruster
+Guidance
+Navigation and Control
+Hughes
+Breadboard
+Power Processing Unit
+Hughes Electron
+Dynamics
+Division
+of the Hughes
+Telecommunications
+and Space Company
+Integration and Test
+Jet Propulsion
+Laboratory
+Lewis Research Center
+Life Demonstration
+Test
+National
+Aeronautics
+and
+Space
+Administration
+NASA
+Solar
+Electric
+Propulsion
+Technology
+Applications
+Readiness
+Performance
+Acceptance
+Test
+Power Processing Unit
+Pulse-Width
+Modulated
+Spacecraft
+Thruster Throttling Test
+Vacuum Facility 5 (at LeRC)
+Versa Module Eurocard
+
+XEM
+XFS
+
+Engineering
+System
+Xenon Feed
+
+Model
+
+Xenon
+
+Feed
+
+processor
+integration
+technology,
+and wear-test
+experience
+from previous NASA research
+and
+technology
+programs.
+Hollow
+cathode
+electrodes, ion optics, and propellant
+electrical
+isolator
+designs
+were
+derived
+from
+the Solar
+Electric Propulsion
+System Demonstration
+Project 3 and subsequent
+work under NASA's
+Research
+and Technology
+Program.
+NSTAR
+discharge
+chamber design and wear-test
+experiences with xenon ion thrusters
+were obtained
+
+System
+
+Introduction
+
+Xenon ion propulsion
+systems
+are attractive
+candidates
+for use on planetary
+and Earthorbital
+spacecraft,
+and development
+of these
+systems has been ongoing in the United States
+and abroad over the last ten years.
+NASA's
+focus has been on kilowatt-class
+ion propulsion
+systems which can deliver more spacecraft
+payload to comets and asteroids
+in a shorter period
+of time than chemical
+propulsion
+systems _. Ion
+propulsion
+systems
+are appropriate
+for a large
+range
+of exploration
+missions
+because
+they
+make the spacecraft
+less massive and less expensive. Near-term
+development
+of 2 to 3 kWclass power processor/thruster
+subsystems
+will
+provide modular elements to respond to mission
+total impulse and reliability requirements.
+
+from technology
+programs at NASA Lewis Research Center 4, the Jet Propulsion
+Laboratory 5,
+and the Hughes Telecommunications
+and Space
+Company 6. Hollow cathode handling,
+test, and
+storage procedures
+were obtained
+directly
+from
+methods
+reported
+by NASA's
+Space
+Station
+Plasma
+Contactor
+Program 7. This component
+technology
+base was the foundation
+for the design and development
+of kW-class
+engineering
+model xenon ion thrusters,
+breadboard
+PPUs,
+and finally flight hardware.
+This
+paper
+will
+describe
+the
+NSTAR
+Thruster/Power
+Processor
+Element
+ground and
+in-space program.
+Results of engineering
+model
+development
+tests, environmental,
+and weartests are synopsized.
+The flight hardware
+requirements
+and the basic designs of the thruster,
+PPU, and the DCIU are described
+along with
+design drivers related
+to spacecraft
+integration
+and space environment.
+
+The NSTAR Project was organized
+to validate
+ion propulsion
+technology
+for a wide class of
+planetary
+missions
+including
+flybys,
+rendezvous, and sample/returns.
+The objective
+of the
+project
+is to obtain
+sufficient
+information
+needed to allow a Project Manager
+to baseline
+solar electric
+propulsion
+on a spacecraft
+and
+also develop
+industrial
+sources for the ion propulsion technology.
+The NSTAR project
+will
+use ground testing to validate
+lifetime
+and performance,
+and in-space operation
+will measure
+interactions
+between the ion propulsion
+system
+and the spacecraft.
+NSTAR will provide a single-string
+ion propulsion system to New Millennium's
+Deep
+Space
+1 Mission
+which
+will
+perform comet and asteroid flybys in the years
+1999 and 20002 . Preliminary
+targets
+are the
+asteroid 3352 McAuliffe
+and comet 76P/WestKohoutek-Ikemura.
+Launch
+is scheduled
+for
+
+The NSTAR
+
+The NSTAR Project
+is comprised
+of six elements
+as shown
+in Figure
+1: Mission
+Design/Requirements,
+Thruster/Power
+Processor,
+Feed
+System,
+Diagnostics,
+Integration,
+and
+User Validation
+Assessment.
+The focus of this
+paper is on the Thruster/power
+Processor
+Element.
+Figure 2 shows a breakout
+of major elements
+of the NSTAR
+ground
+and in-space
+portions of the program.
+
+July 1998. The ion propulsion
+system will be
+powered from a solar concentrator
+array which
+has 2.6 kW at beginning-of-life.
+The propulsion
+system includes
+a 30-cm diameter
+ion thruster,
+a xenon feed system, a power processing
+unit,
+and a digital control and interface
+unit.
+Continuous throttling
+of the ion thruster is possible
+over a 0.5 kW to 2.3 kW range.
+At full-power,
+the total propellant
+flow rate is 2.9 mg/s, the
+thrust is 92 mN, and the specific
+impulse
+is
+about 3300 s. Deep Space 1 will validate
+the
+ion propulsion
+technology
+for use on the next
+century's
+demanding
+planetary
+science
+missions.
+
+NASA's
+research
+and technology
+programs
+in
+the 1988 to 1993 period lead to the development of mature laboratory-class,
+30 cm diameter, xenon ion thl'usters
+4.
+The NSTAR ground
+test program
+advanced
+the thruster
+design
+to
+engineering
+model
+level
+where
+the thruster
+weight was reduced in a flight-like
+design.
+Four
+EMTs were built and were dedicated
+to PPU
+integration,
+development,
+and
+wear-tests
+to
+demonstrate
+the performance
+and service
+life
+needed
+for a variety of demanding
+missions.
+NASA built two breadboard
+PPUs and HEDD
+built one, all of which were designed to operate
+over a wide range of bus voltages and produce a
+4.6:! power throttling capability
+while providing
+
+The NSTAR
+Project
+inherited
+a significant
+amount of expertise,
+thruster technology,
+power
+
+NASA
+
+TM-113129
+
+Project
+
+2
+
+a specificmassof less
+
+than 5 kg/kW and an
+efficiency
+in excess
+of 0.92 at full-power.
+One
+of the important
+ground test program goals was
+to demonstrate
+successful
+integration
+of the
+DCIU, BBPPU,
+and the EMT.
+The design of
+the thruster and BBPPUs
+was validated
+through
+a series of development
+and wear-tests.
+A subset of these tests is identified
+in Table 1. Two
+wear-tests
+(NPT1,DT15)
+and two major
+life
+demonstration
+tests (LDT, TTT) are the focal
+point of the ground test program.
+The first three
+tests employ EMTs and BBPPUs while the final
+life and throttling
+demonstration
+will use hardware, fabicated by HEDD, that will have undergone
+protoflight
+qualification
+environmental
+tests.
+
+The Ion Propulsion
+
+on DS 1
+
+Thruster
+
+System
+
+pro-
+
+Element
+
+Ground
+
+Test Program
+
+The NSTAR
+ground
+test program
+included
+NASA's
+development
+of engineering
+model
+thrusters and breadboard
+PPUs prior to initiating
+a contract for flight hardware.
+The purpose of
+the preflight
+activity
+was to clearly
+define
+thruster and PPU operational,
+performance,
+and
+lifetime
+requirements.
+EMTs
+were evaluated
+during the course of design verification,
+wear,
+and environmental
+tests.
+BBPPUs
+were formally integrated
+with EMTs and were
+the 8000 hour Life Demonstration
+Test.
+Engineering
+
+Model
+
+used
+
+in
+
+Thruster
+
+Figure 5 is a schematic
+of the 30 cm diameter
+EMT used in the ground
+test program.
+The
+thruster is comprised
+of four major subassemblies: the discharge
+cathode-keeper
+electrode
+assembly,
+the discharge
+chamber
+which is at
+anode potential,
+the ion optics comprised
+of a
+positive screen grid and a negative
+accelerator
+grid, and the neutralizer
+assembly.
+The basic
+development
+of the thruster is described
+in References 4, 9, and 10. The discharge
+chamber of
+
+The NSTAR schedule (Figure 3) shows that the
+breadboard
+PPUs and EMTs
+were built
+and
+functionally
+tested over the 1993-1997
+period.
+Random vibration, thermal-vacuum,
+plume, and
+communication
+impact
+tests were also conducted over that period.
+Wear- and life-tests
+are ongoing throughout
+the program.
+As shown
+in the schedule,
+the flight hardware
+will be
+
+TM-113129
+
+and test
+
+The NSTAR hardware will provide primary propulsion for the Deep Space 1 spacecraft.
+Figure
+4 shows a schematic
+of the DS 1 spacecraft
+with
+the approximate
+location
+of the ion thruster
+mounted in a double-ring
+gimbal assembly.
+The
+thruster is recessed
+within the conic-section
+of
+the spacecraft
+structure
+and is thermally
+isolated from the spacecraft.
+The NSTAR PPU is
+located on the opposite
+end of the spacecraft.
+The PPU wall thickness
+is sized to minimize
+the risk of micrometeroid
+penetration.
+As indicated in Figure 4, the DCIU and the xenon feed
+system
+are located
+on the outside
+of the
+spacecraft
+structure.
+The power cable has ringterminals
+at the PPU and thruster and intermediate connectors
+are used to simplify both the
+installation
+and testing procedures.
+The overall
+NSTAR subsystem
+dry mass, including
+thruster,
+PPU, DCIU, cables, and the xenon storage/feed
+system, is about 47 kg including
+contingency.
+The maximum
+tankange
+capability
+for the xenon propellant
+is about 81 kg. The DS1 spacecraft wet mass is expected
+to be approximately
+500 kg.
+
+Based on the experience
+gained in the ground
+test program,
+the
+in-space
+segment
+of the
+NSTAR Thruster/Power
+Processor
+Element
+involves
+the
+HEDD
+build
+of a Pathfinder
+(precursor)
+thruster,
+two each
+of flight
+ion
+thrusters,
+PPUs, DCIUs,
+and cable
+harnesses.
+Flight ion thruster design is derived
+from the
+second EMT which is now in the Life Demonstration Test.
+The flight thruster
+design
+was
+driven primarily
+by the structural
+and thermal
+requirements.
+The flight PPU design, driven by
+high efficiency
+requirements
+for solar array bus
+voltages from 80 V to 160 V, has slightly different requirements
+than the initial
+breadboard
+PPU whose development
+started in 1993.
+The
+DCIU provides for initiation
+of thruster operation, throttling,
+xenon flow control,
+data, and
+recovery
+from fault conditions.
+The flight
+thruster, PPU, and DCIU will be integrated
+and
+will undergo acceptance
+tests prior to delivery
+to DS1 facility
+where the PPU,
+DCIU,
+and
+Pathfinder
+Thruster will be
+acceptance
+tested
+at the spacecraft level.
+During the course of the
+DS1 mission, a diagnostics
+package
+will use a
+quartz crystal microbalance,
+solar absorptance
+measurements,
+plasma probes, magnetometers,
+and a plasma
+wave
+antenna
+to document
+NSTAR system contamination,
+communications
+impacts,
+and
+electromagnetic
+interference 8.
+DSI spacecraft
+systems will provide propulsion
+subsystem
+information
+related
+to thrust, thrustvector,
+and
+compatibility
+with
+spacecraft
+systems.
+
+NASA
+
+delivered
+to the DS1 integration
+gram in October 1997.
+
+3
+
+the first EMT was primarily
+fabricated
+from
+spun-formed
+aluminum
+except
+for the downstream piece which was formed from titanium
+in order to adequately
+support the ion optical
+system.
+Ion optics and hollow cathode
+heritage
+was basically derived from the 30 cm diameter
+mercury thruster development
+program 3. Cathode and heater designs
+were developed
+under
+the NASA Research
+and Technology
+Program,
+and protocols
+for cathode
+flight hardware
+were
+strongly based on the work of the Plasma Contactor Development
+Program 7 for the International Space
+Station.
+A ring-cusp
+magnetic
+circuit was used in the EMT 4. Samarium-cobalt
+
+functions
+including the microcontroller,
+and an
+80 to 120 VDC high-power
+bus which supplied
+power to the four power converters
+which operated the thruster.
+The discharge
+and neutralizer
+power supplies employed a dual-use topology to
+allow the cathode heater powers to be derived
+from the same converter
+which supplied
+power
+to the main and neutralizer
+keeper discharges,
+respectively.
+The discharge
+and neutralizer
+power supplies had maximum
+current capabilities of about 15 A and 9 A, respectively.
+The
+beam
+and accelerator
+power
+supplies
+were
+separate
+physically
+but were controlled
+in unison during thruster operation.
+The beam power
+supply had a 1100 VDC, 1.8 A capability.
+For a
+given throttle setpoint,
+the beam current was
+controlled
+via a closed-loop
+to the main discharge current.
+Flow rates were fixed for a
+given throttle setpoint.
+A microcontroller
+was
+used to automate
+the cathode
+conditioning,
+thruster start, and steady-state
+operation
+of the
+thruster.
+Fifteen pre-programmed
+throttle levels
+were available
+for thruster operation
+and were
+stored internal to the microcontroller.
+A single
+command was available to start the thruster and
+
+magnets
+form of rings of alternating
+polarity
+along the discharge
+chamber.
+There are three
+magnet
+rings, one in the region of the main
+cathode, one ring at the conic-cylinder
+intersection, and one at the ion optics end. The overall
+mass of the first EMT was about 6.4 kg, much
+of which was the 1.9 kg ion optical
+system.
+Thruster mass did not include high-voltage
+propellant electrical
+isolators,
+wire-mesh
+for sputtered material
+control,
+or an electric
+terminal
+assembly.
+
+maintain
+steady-state
+operation
+at any of these
+power levels.
+The data in the throttling
+table
+were modifiable
+by another
+command.
+Controlled parameters and five thruster power levels
+used in the throttle table for functional
+tests are
+shown in Table 3. Cathode
+and main flow rates
+ranged from 2.1 sccm to 3.7 sccm and 6.0 to
+23.5 sccm, respectively.
+If the flow rates were
+set to those used at the maximum
+power level,
+the thruster could be ramped from the lowest to
+the highest throttle level in less than 3 minutes.
+The microcontroller
+also digitized
+all analog
+power supply outputs and power supply status
+bits and transmitted
+the telemetry
+data over a
+RS-232 data link to a command
+and telemetry
+display terminal.
+A typical test configuration
+for the BBPPU is shown in Figure 7. The functional/integration
+tests
+validated
+that
+the
+BBPPU
+satisfactorily
+ignited discharges,
+controlled the thruster over 15 throttle levels with
+power over-shoot <1%, and performed
+all highvoltage fault-detection
+and recovery
+sequences
+as required.
+Two BBPPUs
+were built by
+NASA, integrated
+with EMTs, and made available for use in the LDT.
+
+Table 2 is a brief description
+of the evolution
+of
+the EMT design.
+Design changes were incorporated as a result of wear measurements
+made
+after the 2000 hour test.
+Additional
+thruster
+modifications
+were made to accommodate
+random vibration
+and thermal
+vacuum
+requirements.
+The first changes
+were made
+after
+screen
+grid (positive
+grid) and main
+hollow
+cathode assembly
+wear was experienced
+during
+the 2000 hour test.
+For subsequent
+tests, the
+screen grid was referenced
+to cathode potential,
+rather than floating, to control the potenial
+drop
+in the vicinity
+of the grid, a cathode
+keeper
+electrode
+was added to mitigate cathode
+orifice
+plate erosion,
+and discharge
+chamber
+surface
+treatments
+were added to retain sputtered
+material and control the size of flakes that might
+spall _°'" . EMT4 incorporated
+most of the important features
+that will be found in the flight
+thruster.
+EMT4 attributes
+include
+titanium
+internal
+to the discharge
+chamber,
+throughout
+the discharge
+chamber,
+keeper electrode,
+and grit-blasted
+to increase radiation
+heat transfer.
+The Breadboard
+
+Power
+
+wire-mesh
+a discharge
+components
+
+Processor
+
+Development
+
+The BBPPUs
+are comprised
+of four power supplies whose basic functions
+and operation
+are
+described in References
+12 and 13. The blockdiagram of Figure 6 illustrates
+the architecture
+of the BBPPU.
+Power was provided to the PPU
+via two separate
+power buses, a 28 VDC regulated
+bus which
+powered
+all housekeeping
+
+NASA
+
+TM-113129
+
+Tests
+
+Table 1 generally
+describes
+some of the major
+development
+and wear-tests
+conducted
+by the
+NSTAR Project to date. Only three of the most
+critical
+development
+tests will be described
+here.
+These tests were a part of the thruster
+design
+verification
+related
+to performance
+
+4
+
+characterization,
+structural
+integrity,validation
+of a thrusterthermalmodel,andtemperature
+marginsforthermallysensitivemagnets
+in the
+discharge
+chamber.
+ThePerformance
+Acceptance
+Testswereinitially performedin a largespacesimulation
+testbed
+9atLeRCto characterize
+BOLdataand
+laterto assess
+performance
+trendsduringthe
+courseof wear-tests.The PATdatasetconsistedof sixpowerlevelsranging
+from2.3kW
+downto about0.5kW14. Table4 summarizes
+the BOLPATtest resultsat 2.3kW andat
+minimumpowerlevels. At 2.3kW, the main
+discharge
+plenum,
+main cathode,
+and neutralizer xenon flow rates were 23.3 sccm, 3.0 sccm,
+and 3.0 scccm,
+respectively.
+The controlled
+parameters
+were beam power supply voltage,
+beam current with a feed-back
+loop to the discharge current, accelerator
+voltage,
+neutralizer
+keeper current,
+and the propellant
+flow rates.
+Thruster
+performance
+was determined
+using
+calculations
+described
+in Reference
+4.
+BOL
+performance
+data were obtained
+for the four
+EMTs.
+At full-power,
+the thrust and efficiency
+of the four EMTs varied by +1.1% and +2.9%,
+about the average,
+respectively.
+From PATs of
+EMT2 at LeRC and JPL, it was found that the
+thrust calculated
+from measurements
+at separate facilities
+differed by <0.5% at 2.3 kW and
+<2% at 0.5 kW. This indicates
+excellent
+transportability
+
+of thruster
+
+performance
+
+TM-113129
+
+The thruster
+
+was
+
+vibrated
+
+in all
+
+three
+
+axes, and diagnostic
+sine sweeps of 0.5 g amplitude were taken over the specified
+frequency
+range of 20 Hz to 2000 Hz before and after each
+test to determine
+any changes
+in the natural
+frequencies.
+The first six modes
+generally
+resulted in translation
+or rocking with frequencies
+from 77 Hz to 170 Hz. The EMT successfully
+completed
+the 13 g_ms random vibration
+tests.
+Pre- and post-random
+vibration test sine survey
+diagnostics
+indicated
+changes
+to the natural
+frequencies
+were <4%.
+Based
+on these test
+results, the basic thruster design was deemed
+to
+be acceptable.
+Because
+there was a change in
+the DS1 gimbal design and the thruster mounting struts or brackets, another series of vibration
+tests of EMTlc
+is planned
+prior to testing the
+flight thruster.
+The purpose of the DSI thermal simulation
+test
+(DT2d) was to thermally
+evaluate EMT4. EMT4
+had internal
+discharge
+chamber
+components
+which were fabricated
+from titanium,
+and the
+thruster had a flight-like,
+adiabatic
+thermal
+interface
+consistent
+with the DS1 configuration.
+Potential over-heating
+of the thruster samariumcobalt magnets was the major concern
+for this
+test. The thruster was mounted
+to a simulated
+gimbal assembly which in turn was attached
+to
+a cylindrical
+shroud simulating
+the DS1 spacecraft structure (Figure 8). The outer side of the
+base of a cylindrical
+can, which simulated
+the
+DS1 adiabatic
+interface,
+was blanketed
+with
+10layers of aluminized
+Mylar with fiber separators.
+There was a high-emissivity
+coating
+on
+the inner side of the can base.
+The outer surface of the shroud was enclosed
+in a coil circulating
+hot-water
+which
+simulated
+expected
+temperatures
+in the
+DS1
+cavity.
+Another
+10-layer thermal
+blanket
+was placed
+over this
+coil. A total of 26 thermocouples
+monitored
+the
+experiment
+which was conducted
+in LeRC's
+Vacuum
+Facility
+5 whose vacuum
+level was
+5 x 10 .6 Torr at full-power
+operation.
+With the
+thruster off, the shroud temperature
+was about
+53 °C which is the expected
+upper bound of the
+spacecraft
+outer surface temperature.
+The adiabatic can temperature
+was -36 °C. At the fullpower, 2.3 kW condition,
+the test yielded magnet temperatures
+of 288 °C, 250 °C, and 289 °C
+for the cathode,
+middle, and downstream
+magnet rings, respectively.
+These temperatures
+are
+considerably
+less than the upper limit magnet
+temperature
+of 350 °C. Even though the EMT4
+cathode
+assembly
+is less conductive
+thermally
+than the flight thruster, and the gimbal bracket
+assembly
+was stainless
+steel/polymer
+insulators
+versus titanium/alumina
+insulators
+for the flight
+design,
+the
+test
+results
+indicate
+there
+is
+
+data.
+
+Only
+two of the
+other
+development
+tests
+(Table 1), the random
+vibration
+test and the
+DSI thermal
+vacuum
+simulation
+test, will be
+described
+because
+they had significant
+influence on the EMT design.
+Random
+vibration
+tests of EMTlc
+were conducted
+by HE D to
+establish
+confidence
+in the EMT
+design
+approach.
+Based on earlier diagnostic
+sine vibration tests
+of EMTlb,
+and
+other
+structural
+considerations,
+the basic design of EMTlb was
+altered
+to include
+three
+aluminum
+gimbal
+brackets
+rather than two stainless
+steel brackets, a new neutralizer
+mounting
+bracket similar
+to the aluminum
+gimbal bracket,
+and a compression-loaded
+alumina-based
+electrical
+insulator assembly
+rather
+than
+polymer
+insulators
+which isolate the brackets from the high-voltage
+discharge
+chamber.
+These changes
+were incorporated into EMTlc.
+The thruster was mounted
+to the shaker
+table
+by a set of six struts.
+EMTIc
+was subjected
+to random vibration levels of -6 dB and -3 dB from protoflight levels for
+DS1 spacecraft
+hardware,
+and finally
+to the
+protoflight
+vibration
+input of 13 g_s.
+Table 5
+shows the random
+vibration
+test requirements
+for acceptance
+and protoflight
+qualification
+
+NASA
+
+tests 15.
+
+5
+
+considerable
+magnettemperature
+
+margin.
+A
+thruster thermal
+model,
+developed
+by R. A.
+Becker of JPL, is being used to assess impacts
+of EMT4 versus flight thruster design changes in
+the DS 1 environment.
+
+treatments
+in the form of wire mesh or gritblasted surfaces TM to securely
+retain sputtered
+films. A thruster perfomance
+augmentation
+option was also exercised
+at this point by reducing
+the diameter
+of the neutralizer
+hollow cathode
+
+Wear-Tests
+
+orifice
+range
+power
+
+A 2000 hour test of EMTla
+
+was
+
+conducted
+in a large space simulation
+facility
+at LeRC and three potential
+failure mechanisms
+of the EMT were identified 9. After a test interruption at 876 h, erosion of the main cathode
+orifice plate, heater,
+and radiation
+shield was
+observed.
+The main cathode
+assembly
+was
+replaced, and the test resumed until it was voluntarily terminated
+after a total time of 2030 h.
+In order to minimize
+ion erosion of the discharge cathode,
+it was decided
+to install a cylindrical keeper electrode for subsequent
+EMTs.
+A 1000 ohm resistor was connected between the
+keeper and the anode to preclude
+PPU design
+changes.
+At full-power the keeper operates
+at
+about 5 V above cathode potential.
+
+trapolate
+coating thickness
+to the qualification
+test life of 12,000 hours, the coating
+thickness
+would be well below 30 Ixm.
+
+Charge exchange
+ion erosion of the accelerator
+grid was of concern
+prior to the test, but extrapolated
+results indicated
+that the accelerator
+grid life was substantially
+greater
+than
+the
+12,000 h full-power
+qualification
+test requirement.
+Ion erosion of the center of the screen
+(positive)
+grid was ~100 I.tm which was about
+25% of the grid thickness.
+The high erosion
+was due to the fact that the screen grid was
+allowed to float electrically,
+and the discharge
+main flow rate was too low. This condition
+produced a higher discharge
+voltage,
+higher doubly-charged
+xenon ion production,
+and with the
+grid floating
+a few volts negative
+of cathode
+potential the high screen grid erosion rate could
+readily be explained.
+Subsequent
+EMTs have
+the screen grid electrically
+tied to cathode
+tential.
+Because
+of the relatively
+high molybdenum
+efflux
+from the
+screen
+grid,
+films
+deposited on surfaces in the vicinity of the grid
+were found to spall.
+In-space
+migration
+of
+flakes could cause internal
+thruster
+electrical
+shorts or defocussed
+ion beamlets
+which can
+produce accelerator
+grid erosion _6. Subsequent
+EMTs
+employ
+discharge
+chamber
+surface
+
+NASA
+
+TM-113129
+
+operating
+at low
+
+1000 Hour Test
+Thruster
+hardware
+changes
+were made
+to EMTla
+resulting
+in EMTlb
+(Table 2) which was put into a 1000 h revalidation test at JPL 1°. The test was operated
+at the
+full-power
+level of 2.3 kW. Table 6 shows the
+nominal thruster operating parameters.
+Figure 9
+shows that the average
+thruster
+performance
+showed very little variation with test time. The
+small, cyclic variations
+of the data are due to
+day/night
+temperature
+effects
+on flow rates.
+The discharge
+chamber
+propellant
+efficiency
+was 0.89, and this resulted
+in a low discharge
+voltage,
+low doubly-charged
+xenon ion production, and a maximum
+screen
+grid erosion
+on
+centerline
+of only 6 ktm/kh.
+This low screen
+grid erosion rate implies relatively
+thin molybdenum
+coatings
+on the discharge
+chamber
+walls. After the test, there was no evidence
+of
+spalled flakes. Independent
+thermal-cycling
+and
+stress tests of molybdenum
+coatings
+on treated
+discharge
+chamber material substrates
+indicated
+no spalling problems
+for film thicknesses
+up to
+30 I.tm. If the worst-case
+deposition
+rates observed in the 1000 hour test were used to ex-
+
+The NSTAR ground test program involves
+four
+long-term
+tests to validate
+the ion propulsion
+subsystem designs.
+Wear- and life-tests of 2000
+hours 9 and 1000 hours 1° have been completed,
+and an 8000 hour Life Demonstration
+Test is
+underway.
+All these tests were conducted
+at
+the full-power
+level of 2.3 kW.
+An extended
+Thruster Throttling Test is planned for CY1998.
+2000 Hour Test
+
+thereby
+extending
+the stable
+to lower flow rates especially
+levels _7.
+
+It was found that the main cathode orifice plate,
+heater
+and radiation
+shield
+were adequately
+protected
+by the keeper electrode
+which operated about 4.6 V above cathode potential.
+Erosion of the cathode
+assembly
+components
+were
+virtually undetectable
+using a micrometer
+and a
+scanning
+electron
+microscope
+measurements
+method.
+Average
+accelerator
+pit and groove
+erosion
+rates _°, in the
+center
+of the
+grid,
+were
+-77 _m/kh and 13 _tm/kh, respectively.
+These
+erosion rates include the effects of operating
+at
+non-space
+like vacuum conditions
+which could
+increase
+erosion rates TM and effects
+of carbon
+deposition
+on the accelerator
+grid from sputtered facility surfaces.
+The latter effect could
+also reduce erosion rates compared
+to in-space
+conditions.
+Given the magnitude
+of these erosion rates and the fact that the pit erosion rate
+will likely decrease
+with time because
+of molybdenum
+deposition
+on pit walls, it lends confidence
+that
+the accelerator
+grid
+structural
+
+6
+
+integritywill notbeanissueatthefull-power
+of
+2.3kWformuchmorethan12,000
+h_°.
+The Life Demonstration
+
+Test
+
+Because
+
+tested at low background
+pressures _4. This implies it is likely that charge exchange
+ion production rates in the vicinity
+of the accelerator
+grid are higher in this test than would be experienced in a space environment.
+Results of profilometer
+measurements,
+taken each
+1000 h,
+indicate
+the average
+accelerator
+grid pit and
+groove erosion rates at the center of the grid are
+about 30 _tm/kh and 6 _tm/kh, respectively.
+The
+"groove"
+erosion
+rate was derived
+from the
+minimum
+eroded depth
+in the bridges
+19"_° between
+two holes.
+Linear extrapolations
+of the
+profllometer
+data indicate
+the grid wear is acceptable to periods well in excess
+of the qualification
+test lifetime
+of 12,000
+h.
+These
+accelerator
+grid wear data are consistent
+with
+an empirical
+correlation
+of local erosion
+rate
+with thruster parameters 2°.
+
+accurate
+
+extrapolation
+of wear-rates
+and thuster reliability from the 2000 h and 1000 h tests to the fullpower service
+lifetime
+is difficult,
+an 8000 h
+LDT using EMT2 (Tables 1 and 2) was planned.
+Some of the major objectives
+of the test are to
+demonstrate
+8000 h of stable operation
+of the
+EMT, identify
+life-limiting
+phenomena,
+measure performance
+of EMT2 over the 0.5 kW to
+2.3 kW throttling
+range at 1000 h intervals,
+measure
+in situ wear rates of the accelerator
+grid,
+and verify
+earlier
+lifetime
+estimates.
+EMT2
+was operated
+at 2.3 kW using
+the
+BBPPU, a power console,
+and a laboratory
+xenon feed system.
+Test diagnostics
+included
+a
+direct thrust measurement,
+beam probes,
+two
+quartz crystal microbalances,
+a magnetometer,
+and EMI instrumentation.
+Also included
+was a
+laser profilometer
+which was used to obtain in
+situ measurements
+of the features of the accelerator grid's pit and groove erosion _°.
+
+LDT results to date indicate
+stable thruster operation over the 0.5 kW to 2.3 kW input power
+range,
+very small
+variations
+in performance
+parameters,
+and no evidence of phenomena
+that
+would preclude
+thruster lifetimes
+in excess
+of
+12,000 h at 2.3 kW.
+More detailed
+results of
+this test will be reported in August 1997.
+
+The LDT was initiated in June of 1996 at JPL's
+3 m diameter
+by l0 m long vacuum chamber _°.
+Hollow cathode
+and main plenum
+flow rates
+were held constant
+throughout
+the test. At this
+writing, EMT2 has accumulated
+over 6000 h of
+stable operation.
+The beam current has been
+controlled
+to ~1.76 A while the discharge
+current has increased from 12.5 A at BOL to about
+15.2 A at 6000 h to maintain
+the fixed beam
+current.
+Much of the discharge
+current increase
+can be attributed
+to accelerator
+grid aperture
+wear which increases
+the neutral losses,
+and
+thus higher discharge power is required to maintain the ion beam current at fixed flow rates.
+The slight opening of the accelerator
+grid apertures during the test is supported by a measured
+increase
+in ion optics
+perveance
+margin
+of
+160 V at full-power.
+Over the course of the test,
+the discharge
+voltage
+was in the 23.5 V to
+25.0 V range.
+The neutralizer
+keeper
+current
+was fixed at 1.5 A. Neutralizer
+keeper voltage
+and coupling
+voltage
+variations
+over the test
+were only 14.3 V to 13.0 V and 13.5 V to
+12.6 V, respectively.
+At the nominal
+2.3 kW
+input power level, the thrust was about 93 mN,
+and the specific impulse was 3160 s. The direct
+thrust measurements
+were usually
+1.00 to 1.02
+times the calculated
+values.
+
+Thruster Throttling
+Test
+The TTT is scheduled
+for CY1998 and will be the first extended test of
+the HEDD-built
+flight thruster, PPU, and DCIU.
+The objective
+of the test is to demonstrate
+150% of the required
+total impulse
+(2.7 x
+10 6 Ns)
+during the course of a throttling
+sequence which could simulate a suitable
+mission
+profile.
+The thrust subsystem
+will demonstrate
+stable, long-term
+operation at specified throttled
+conditions.
+In situ beam diagnostics
+and wear
+assessments
+will be made during the test. The
+hardware
+to be tested will be the second flight
+set which will have undergone
+protoflight
+qualification
+tests including
+functional,
+vibration,
+EMI, and thermal-vacuum
+tests.
+An engineering model xenon storage and feed system will
+be used in the TTT.
+
+NSTAR
+
+higher than the nominal 0.24% obtained
+when a
+30 cm diameter
+mercury ion thruster was life
+
+TM-113129
+
+Element
+
+Flight
+
+Hardware
+
+Figure
+10 shows a diagram
+of the principal
+elements
+of the thrust subsystem
+namely,
+the
+PPU, DCIU, the ion thruster,
+and the Xenon
+Feed System.
+The feed system has two pressure switch/valve/plenum
+legs from a common
+storage
+tank.
+One leg provides
+flow to the
+cathodes,
+and the other provides
+flow to the
+main discharge
+plenum 21. Three propellant
+feed
+lines and the power
+cables
+are terminated
+within the thruster plasma screen.
+Two avionics
+boxes,
+the PPU
+and DCIU,
+are shown
+in
+
+The accelerator
+grid current
+at BOL
+was
+-8.5 mA and dropped to an asymptotic
+level of
+about 6 mA after 1400 h. The ratio of accelerator to beam current was about 0.34% which is
+
+NASA
+
+Thruster
+
+7
+
+Figure10. TheDCIUprovides
+trol of the Thruster
+XFS and the PPU.
+
+supervisory
+Element,
+controlling
+The DCIU monitors
+
+conthe
+and
+
+The PPU is designed to operate
+from a 80 V to
+160 V high-power
+bus with control and telemetry functions
+powered
+from a 22 V to 34 V
+low-power bus. Minimum
+power processor
+efficiences at the output power extremes
+are specified as 0.90 at 2.3 kW and 0.84 at 0.5 kW. The
+
+regulates the pressures
+in the XFS plena, operating the valves as necessary
+to provide regulated xenon flow to the thruster.
+The power
+supplies in the PPU are also controlled
+by the
+DCIU, as the PPU contains
+only output fault
+protection
+logic and does not have automatic
+thruster control capability as a stand alone unit.
+The PPU enclosure
+houses three power supply
+modules
+which
+convert
+the
+spacecraft
+bus
+power to the levels necessary
+to operate
+the
+thruster. The PPU also has local analog to digital and digital
+to analog
+capability
+on the
+"slice" circuit board which is used for telemetry
+digitization
+and power supply control based on
+DCIU commands.
+These functions
+are powered
+from an auxiliary 22-34 VDC power bus, which
+allows for the acquisition
+of PPU
+telemetry
+while the PPU is in a standby mode, or is disconnected from the main power bus.
+
+low-power
+bus is expected to provide <20 W to
+the PPU and <30 to the DCIU.
+Many of the
+component
+requirements
+were driven
+by the
+New Millennium
+DS1 Component
+and Spacecraft Verification
+Specification _5.
+The thruster, DCIU, and PPU structural designs
+were guided by the random
+vibration
+profiles
+shown in Table 5. The overall random vibration
+level for the acceptance
+tests is 9.2 g_.
+Each
+component
+(e.g. thruster) will be vibrated at the
+component
+and spacecraft
+levels.
+The thruster
+random vibration test will employ a simulator of
+the DSI gimbal assembly.
+Flight acceptance
+shock requirements
+for the thruster,
+PPU and
+DCIU are ar 330, 1330, and 2500 g-peak,
+respectively,
+at frequencies
+of 1500 Hz and
+10,000 Hz.
+Significant
+attenuation
+of these
+levels is expected
+because
+of component
+location and mounting geometries.
+
+The contract
+with HEDD calls for the delivery
+of a Pathfinder thruster, two flight thrusters,
+two
+PPUs, 2 DCIUs, and two thruster/PPU
+wire harnesses. Prior to production
+of flight hardware,
+a
+HBBPPU and an EMDCIU
+were developed
+and
+integrated
+with other subsystems.
+The Pathfinder Thruster is a presursor
+to the flight units
+and is used to define assembly
+procedures,
+perform functional
+and thermal-vacuum
+tests, and
+also will go through
+the DS1 integration
+and
+environmental
+test program.
+The flight thruster
+is one of the last components
+integrated
+onto
+the DS 1 spacecraft.
+Major
+
+Design
+
+The flight allowable
+thermal
+requirements
+shown in Table 722. The thruster cold-soak
+
+perature is as low as -93 °(2. At full-power
+the
+thruster
+reference
+temperature
+at the mask,
+which is the downstream
+portion of the plasma
+screen is 138 °C, and the maximum
+temperature
+of the discharge
+chamber
+surface is typically
+-300 °C, but may range between
+values of and
+300 °C to 350 °(2.
+The maximum
+allowable
+temperature
+for the samarium-cobalt
+magnets
+is
+350 °(2. The DSI spacecraft
+will ensure
+the
+DCIU and PPU baseplate
+temperatures
+will be
+kept below 50 °C while the thruster is operating.
+Minimum
+flight allowable
+temperatures
+for the
+DCIU and PPU are -15 °C and -5 °C, respectively.
+The DCIU and PPU boxes were designed
+to a radiation
+hardening
+level
+of
+100kRad
+which
+is a maximum
+dose
+rate
+
+Requirements
+
+Thruster, PPU, and DCIU design requirements
+are described
+in detail in the NSTAR Thruster
+Element
+Technical
+Requirements
+Document 22,
+and only a few of the performance
+and environmental
+requirements
+will be summarized
+here. The thruster is designed for throttling
+over
+a 0.5 kW to 2.3 kW power range.
+Projected
+values
+of thrust
+and thruster
+efficiency
+at
+2.3 kW are 92 mN and 0.64, respectively.
+At
+0.5 kW, the values of thrust and efficiency
+are
+expected
+to be in excess of 19.5 mN and 0.38,
+respectively.
+The thruster will generate
+a total
+impulse of greater
+than 2.7 x 106 Ns for any
+mission power profile.
+This capability results in
+a xenon thoughput of approximately
+83 kg. The
+thruster mass is specified
+at less than 8.2 kg
+with a cylindrical
+envelope
+less than 50 cm
+diameter by 44 cm long. The thuster will have
+three gimbal pads, and the actual thrust vector
+alignment is expected
+to be within an 18 mrad
+tolerance.
+
+NASA
+
+TM-1
+
+13129
+
+are
+tem-
+
+imposed
+on many
+Earth-orbiting
+spacecraft
+electronic
+subsystems.
+This specification
+is
+much higher than radiation
+doses to be encountered during the DSI mission.
+Some of the
+more detailed
+functions
+of the DCIU and PPU
+are described
+
+in the following
+
+two paragraphs.
+
+DCIU Fun¢Iions
+The DCIU is the central
+data
+acquisition
+and control system for the thruster
+element. DCIU power is drawn from the spacecraft 22 to 34 VDC auxilary
+power bus.
+The
+primary DCIU functions are:
+• Execute
+stored operating
+sponse to ground commands
+
+8
+
+sequences
+
+in
+
+re-
+
+• Control
+
+XFS
+
+manded
+
+operating
+
+and PPU
+mode
+
+• Control
+
+XFS solenoid
+
+• Control
+
+PPU power
+
+and state
+
+transitions
+
+to the com-
+
+and the PPU contains
+all logic
+recover from thruster short circuits.
+
+and latch valves
+
+Flight
+
+supplies
+
+• Regulate thruster xenon flow and input
+to one of sixteen stored operating points
+
+store,
+
+and process
+
+power
+
+XFS telemetry
+
+• Provide a command
+via a MIL-STD-1553B
+
+and telemetry
+data bus
+
+interface
+
+• Provide
+PPU
+
+link for each
+
+connected
+
+a serial
+
+data
+
+• Support a maximum
+combinations
+• Detect
+and respond
+thruster fault types
+
+of
+
+eight
+
+to a limited
+
+thruster/PPU
+
+number
+
+of
+
+These functions
+are performed
+via DCIU hardware and software
+capability
+and will be discussed in the flight hardware
+design
+sections
+that follow.
+Table 8 lists the design resource
+allocations
+for the DCIU with regard to physical
+size and power.
+PPU Functions
+The PPU provides power to the
+thruster and the "slice" board.
+The "slice"
+circuit board is located in the PPU and is used for
+telemetry
+digitization
+and power supply control
+based on commands
+from the DCIU.
+Thruster
+power is derived from an 80 to 160 VDC bus,
+while housekeeping
+power is taken from the
+spacecraft
+22 to 34 VDC auxiliary
+power bus.
+PPU input power
+requirements
+are listed
+in
+Table 9. The wide range of PPU input voltage
+was selected
+to accommodate
+large variations
+in solar array power that are a result of the large
+variations in distance from the sun on planetary
+trajectories.
+The design resource allocations
+for
+the PPU are listed in Table 10. The number in
+parenthesis
+is the mass for the DS1 configuration.
+The additional
+1.7 kg is micrometeroid
+shielding
+required
+due to the location
+of the
+PPU on the ram side of the spacecraft.
+
+to complete
+
+TM-113129
+
+Design
+
+the power
+
+circuit.
+
+DCIUDesign
+The DCIU was implemented
+using half width VME bus circuit boards. Three
+boards are present in the DS 1 configuration,
+but
+the DCIU enclosure
+has capacity
+sufficient
+for
+up to five boards if necessary.
+The three boards
+used are a processor
+board, data acquisition
+board and a valve driver board.
+The processor
+board utilizes an 80C86 rad-hard
+microprocessor
+operating
+at a clock speed of
+4 Mhz. 64k of Electrically
+Eraseable
+Programmable Read Only Memory
+is present to store
+the flight software,
+and 64k of Static Random
+Access Memory
+is used for software execution.
+In addition to the microprocessor
+and memory,
+a MIL-STD-1553
+chip set is present to facilitate
+communication
+with the host spacecraft.
+RS422 drivers are also present for communication
+with up to eight PPUs.
+
+Thruster power is provided via six power supply
+outputs from three inverter modules.
+The output
+specifications
+are as listed in Table 11. The
+PPU is internally protected
+from input bus under
+and overvoltage
+conditions
+on both power busses. Output power ranges
+from 0.5 to 2.3 kW
+and is set via the DCIU through power supply
+setpoints
+and xenon flow rates to the thruster.
+All power supplies
+are short-circuit
+protected
+
+NASA
+
+to
+
+Thruster Design
+The NSTAR
+thruster
+design
+was derived
+from the EMT. Some changes
+in
+materials
+and geometry
+were made to accommodate
+specific
+structural
+and thermal
+design
+requirements.
+Items retained
+from the EMT
+were the basic main discharge
+and neutralizer
+hollow-cathodes,
+the ion optical
+system,
+the
+magnetic
+circuit,
+the plasma
+screen,
+and the
+spun-formed
+discharge
+chamber
+concept.
+The
+basic NSTAR thruster is shown in Figure 11. In
+the early EMTs (Table 1), five of the six discharge chamber
+structural elements
+were made
+from aluminum.
+For structural and thermal rea:
+sons, all discharge
+chamber
+sheet-metal
+parts,
+the three gimbal-brackets,
+and the neutralizer
+mounting
+bracket will now be made from titanium. Concerns
+about polymer
+creep resulted
+with a change of the polymer mounting insulators to an alumina-based
+mounting
+insulator
+design.
+Minor changes
+were made to the propellant isolator design to enhance
+the thermal
+and electrical
+integrity.
+The three internal propellant lines of the thruster will be completely
+welded
+construction
+except
+for three
+fittings
+that terminate
+them in the vicinity of the neutralizer assembly.
+A newly designed
+wire harness terminal
+assembly
+will be located
+in the
+neutralizer housing.
+The thruster power cables,
+in the form of two bundles, exit the neutralizer
+housing and are terminated
+at the DS1 gimbal
+bulkhead
+using two electrical
+connectors.
+A
+PPU cable harness is connected
+at the bulkhead
+
+• Receive,
+store, and process
+PPU telemetry
+data via the "slice" circuit board located within
+the PPU
+• Acquire,
+
+Hardware
+
+necessary
+
+9
+
+Thedata acquisition
+
+board provides for up to 64
+multiplexed
+analog inputs with 12 bit analog to
+digital
+conversion
+resolution.
+In addition,
+the
+board houses a precision
+1 mA current source
+for use with Resistance
+Thermometer
+Devices
+
+three inverters
+are completely
+
+The valve driver board contains
+14 optically
+isolated
+valve drivers which can be used with
+either solenoid or latching valves in the XFS. In
+addition to the valve drivers, a + 15 VDC and 5
+VDC output DC/DC converter
+is present to provide internal
+DCIU housekeeping
+power.
+As
+shown in Figure 10, XFS valve and pressure
+transducer power
+is also routed through the
+DCIU and is not counted
+in the DCIU power
+budget. Radiation
+hardened
+CMOS technology
+is used throughout the DCIU, with a minimum
+100 kRad(Si)
+specification
+for all parts, with
+spot shielding used where required.
+The flight
+software
+requirements
+are extensive.
+These
+requirements
+and the design execution
+will be
+synopsized
+in a later section
+
+100%
+
+duty
+
+cycle
+
+or
+
+The third and final inverter provides the cathode
+and neutralizer
+heater, accelerator,
+and neutralizer keeper outputs (Figure
+14).
+A novel HBridge arrangement
+is used where the two top
+transistors
+of the bridge are operated
+at 50%
+duty cycle. The four outputs are generated
+with
+separate
+transformers
+connected
+to the top two
+transistors
+through steering diodes.
+Pulse width
+modulation
+is accomplised
+via four separate
+sets of bridge transistors
+connected
+to the power
+transformers.
+Software
+
+The NSTAR
+
+thruster
+
+signed for autonomous
+operation
+software. The DCIU has several
+manual
+modes that are entered
+
+element
+
+is de-
+
+via the DCIU
+automatic
+and
+via commands
+
+received
+through the 1553 data bus.
+The primary automatic
+modes
+are standby,
+cathode
+conditioning,
+thruster ignition
+and steady-state
+operation,
+throttling,
+and grid clearing.
+During
+all thruster modes,
+telemetry
+is acquired
+and
+broadcast
+back to the spacecraft
+at the rate of
+1 frame/second.
+The telemetry list is too extensive for inclusion herein, but contains
+all power
+supply outputs, thruster floating potential,
+XFS
+temperatures
+and pressures,
+PPU temperatures,
+digital status words, and mode indicators.
+
+PPU Design
+Spacecraft
+power is input to the
+PPU via two power busses, an 80 to 160 VDC
+high power bus and a 22 to 34 VDC auxiliary or
+housekeeping
+bus as listed in Table 9. Both
+input busses have Electromagnetic
+Interference
+filters to ensure compliance
+with the conducted
+emission
+requirements
+of MIL-STD-461.
+The
+low power bus drives a housekeeping
+conveter
+which provides control power for the PPU power
+supplies and the "slice" board.
+The housekeeping converter has undervoltage
+lockout capability and can operate with input voltages
+as high
+as 60 VDC.
+
+Standby mode allows the PPU and DCIU to be
+powered
+and broadcasting
+telemetry,
+while not
+operating the thruster, for health and status purposes.
+The cathode conditioning
+mode is a onetime procedure
+used to prepare
+the thruster
+cathodes
+for operation
+after exposure to air or
+contaminating
+environments.
+This mode is entered into via command.
+Thruster ignition is an
+automatic procedure
+where the DCIU receives a
+command
+to operate the thruster at one of the
+sixteen programmed
+power levels.
+Upon receipt
+of the command the DCIU sets the feed system
+to supply flow to the thruster at the flow rate
+listed in the throttle table for that power level.
+Discharge
+cathode
+and neutralizer
+flows are
+raised for ignition and are adjusted to the values
+in the table after ignition.
+Flow rates are set
+based on flow control device temperature
+and a
+corresponding
+plenum
+pressure
+which is computed by the DCIU. After starting
+flow rates
+
+The 80 - 160 V bus is distributed
+from the input
+EMI filter to three inverters
+which provide the
+six power outputs needed for thruster operation
+as listed in Table 11. The final EMI filter capacitance
+is distributed
+among these three inverter inputs to improve EMI filter performance
+and reduce switching
+transients
+at the inverter
+power
+stages.
+The switching
+frequency
+for
+these three inverters is 20 kHz.
+The beam power supply is made up of four Hbridge stages with their outputs
+connected
+in
+series as shown in Figure
+12. Each stage is
+capable of 600 V output at 160 VDC input at an
+output power level of 1 kW. The four stages are
+controlled
+via a four-level
+pulse width modulation scheme
+where only one of the inverters
+operates at a reduced duty cycle while the other
+
+TM-113129
+
+at
+
+The discharge inverter also utilizes an H-Bridge
+power stage, and is comprised
+of a single stage
+as shown in Figure
+13. The output filter is a
+single inductor with a pulse generating
+winding.
+For cost control and manufacturability,
+the discharge power stage and the four beam supply
+inverters
+utilize
+identical
+transformer
+cores,
+transistors,
+and bracketry.
+
+in the xenon feed system.
+Precision,
+temperature compensated
+resistors are also present for
+self-calibration
+of the temperature
+readings and
+to detect any post-launch
+offsets that may occur
+in the circuitry.
+
+NASA
+
+operate
+off.
+
+10
+
+have been established,
+the thruster cathodes
+are
+heated and the neutralizer
+and main discharge
+are lit, followed by the application
+of the high
+voltage
+to the ion optics.
+Power supply setpoints at ignition are set to 4 ADC of discharge
+curent,
+and the accelerator
+and beam power
+supplies are set to 150 and 650 V, respectively.
+The resultant
+beam current is about 0.5 ADC.
+After the thruster is operational
+the beam and
+accelerator
+power supplies
+are ramped
+to the
+levels indicated
+in the throttle table and then
+the closed loop beam current algorithm
+is used
+to adjust the beam current to the level indicated
+in the table.
+The closed
+loop algorithm
+operates by varying the discharge
+current until the
+resulting beam current is desired. A simple proportional
+algorithm
+is used with a maximum
+allowable
+adjustment
+of discharge
+current
+of
+100 mA/second.
+Grid clearing,
+in the event a
+flake temporarily
+shorts the grids, is accomplished by the switching
+of the output of the
+discharge
+power supply to the ion optics
+via
+relays and commanding
+the discharge
+power
+supply on. Power is left on until the short is
+cleared or thirty seconds has elapsed.
+
+0.84 at output power
+0.5 kW, respectively.
+
+Stability
+test using a solar array
+HBBPPU, and EMT4 (JPL).
+
+•
+
+Integration
+test
+XEM (JPL).
+
+•
+
+An end-to-end
+tor, EMDCIU,
+EMT4 (JPL).
+
+•
+
+Thermal-vacuum
+
+of the
+
+kW
+
+and
+
+EMDCIU
+
+simulator,
+and
+
+the
+
+test of a solar array simulaHBBPPU,
+an XEM,
+and
+tests
+
+Thruster
+
+(LeRC).
+
+Random
+thruster
+(HEDD).
+
+vibration
+gimbal
+
+In-process
+tests
+flight
+hardware
+August/September
+
+of
+
+the
+
+Pathfinder
+
+tests of EMTlc
+with a
+assembly
+simulator
+
+and
+
+acceptance
+tests of
+are
+scheduled
+for
+1997 period.
+
+Concluding
+
+the
+the
+
+Remarks
+
+The NSTAR
+Project
+has demonstrated
+ion
+thruster life and reliability in ground tests and is
+in the process of assembling
+a flight qualified
+thruster, power processor and a controller for the
+Deep Space 1 spacecraft.
+As a part of the
+ground test program, NASA has built four engineering
+model
+thrusters
+and two breadboard
+power processing units.
+Thrusters and BBPPUs
+have been integrated,
+and an extensive
+set of
+development
+and characterization
+tests have
+been performed.
+Some of the development
+tests
+involved
+EMT performance
+sensitivity
+at various throttle
+setpoints,
+direct thrust measurements,
+measurement
+of external
+magnetic
+fields,
+ion beam
+impacts
+on communication
+signals,
+thruster
+cold-soak
+tests,
+and a high
+temperature
+test of EMT4 with a simulated DS 1
+spacecraft
+thermal
+interface.
+Additionally,
+an
+EMT successfully
+completed
+a random
+vibration test at protoflight
+qualification
+levels.
+The
+selection
+of the flight thruster discharge
+chamber material,
+and the design of the neutralizer
+mounting
+bracket
+and gimbal
+pad assembly
+were dictated
+by the results of the environmental developments
+tests. A significant
+number of components
+were grit-blasted
+to enhance
+radiation heat transfer.
+
+Testing
+
+TM-113129
+
+2.3
+
+•
+
+•
+
+A
+breadboard
+PPU
+with
+flight
+circuits
+(HBBPPU)
+was integrated
+with an engineering
+model thruster at LeRC.
+Thruster operation
+was
+stable over the full input voltage range and output power range.
+High voltage
+faults
+were
+simulated,
+and no anomalies
+were noted. PPU
+efficiency
+was measured
+and found to be in
+excess of the contract specifications
+of 0.90 and
+
+NASA
+
+of
+
+A number of development
+tests involving
+the
+HBBPPU,
+the EMDCIU,
+and an engineering
+model
+feed
+system
+are either
+ongoing
+or
+planned in the very near future.
+Such tests
+include:
+
+The flight software also allows for the manual
+operation of all power supplies and XFS valves.
+New flight code can be uploaded
+and the sixteen throttle
+table
+setpoints
+can be reprogrammed via command.
+All thruster parameters
+are subject to limit checking,
+and out of tolerance flags are set in the event of an out of limit
+excursion of a telemetry parameter.
+The thruster
+can also be throttled in real time via command,
+and a restart
+is not necessary.
+Thruster
+arc
+events,
+which result in momentarily
+reducing
+the discharge
+current and recycling
+the highvoltage
+power
+supplies,
+are
+automatically
+recovered
+from and counted. In the event continuous recycling
+is detected,
+the thruster discharge current is commanded
+to the 4 A level,
+and the system is allowed
+to return to low
+power operation
+via the closed-loop
+control algorithm.
+The thruster will then be slowly ramped to the previous
+throttle
+setpoint.
+In the
+event that the recycling
+continues,
+the thruster
+is shut down and an error flag set in telemetry
+which activates
+a ground alarm.
+Development
+
+levels
+
+11
+
+Designverificationtestsof 2000h and1000h
+havebeencompleted.Afterthe 2000h test,
+fourdesignchanges
+wererequired,namely,to
+electrically
+tie thescreen
+gridtocathode
+potential to reducegriderosion,to adda discharge
+keeperelectrode
+to reducecathodeerosion,to
+add dischargechambertreatmentsto retain
+sputtered
+films,andto reducethe diameterof
+the neutralizerhollowcathodeorificeto enhancepowerandpropellant
+efficiencies
+at low
+powerlevels.The1000h revalidation
+testgave
+confidence
+to ourestimates
+of wear-rates
+and
+lifetime projections. Further validationof
+thrusterlife is ongoingvia the 8000h Life
+Demonstration
+Test. As of this writing,more
+than6000h havebeensuccessfully
+demonstrated.Results
+to dateindicatestablethruster
+operation
+overthe throttlingrangewith small
+variationsin performance
+parameters.
+In situ
+acceleratorgrid erosionmeasurements
+were
+consistentwith earlier projectedwear-rates
+whichindicated
+gridlifetimeswellin excess
+of
+the12,000h qualification
+testrequirement.
+Detaileddesignrequirements
+for the flight
+thruster,
+PPU,andDCIUhavebeendeveloped
+to satisfypropulsion
+needsfor a wideclassof
+planetary
+spacecraft.
+Thethrusteris capable
+of
+beingthrottledovera 0.5kW to 2.3kW power
+range.Theflight thrusterdesignwasderived
+fromtheEMTandresultsof theEMTenvironmentaltests. TheDCIUprovides
+dataacquisition and systemcontrolvia processor,
+data
+acquisition,
+andvalvedriverboards.ThePPU
+will operate
+froma 80V to 160V powerbus. A
+breadboard
+PPU,whichis anelectricalequivalent of the flight unit, successfully
+completed
+anintegration
+testwithEMT3.Subsystem
+performanceand high voltagefault data were
+taken,andnoanomalies
+werenoted.Moreextensivestabilityandend-to-end
+testsarescheduled usinga solararraysimulatorwith the
+BBPPU,theEMDCIU,andEMT4. Theflight
+thruster,
+PPU,andDCIUarenowbeingassembledin preparation
+for integration,functional,
+andflight acceptance
+testsat the component
+level.
+Acknowledgements
+
+The authors would
+like to acknowledge
+the
+valuable
+fabrication
+and test support
+provided
+by LeRC's Test Installations
+Division as well as
+the support from the test installations
+staff at
+JPL. The support from NSTAR Project
+members including John Stocky (JPL), Frank Curran
+(LeRC),
+Michael
+Marcucci,
+David
+Brinza,
+Robert Gounley, Henrik Gronroos,
+Roy Kakuda,
+
+NASA
+
+TM-1
+
+13129
+
+Stan Krauthamer,
+pel, and James
+Parkes of NYMA,
+ously of NYMA
+edged.
+
+Sun Matsumoto,
+Marge RupTribbett
+all of JPL, James
+Inc., and Roger Myers previInc.
+is gratefully
+acknowl-
+
+References
+
+1. Kakuda, R., Sercel, J., and Lee, W., "Small
+Body Rendezvous
+Mission Using Solar Electric Ion Propulsion:
+Low Cost Mission Approach and Technology
+Requirements,"
+IAA
+Paper L-0710, April 1994.
+2.
+
+Burrows, W. E., "The New Millennium,"
+Air
+and Space, August/September
+1996, pp. 4453.
+
+3.
+
+Anon.,
+Design
+
+4.
+
+Patterson, M. J., Haag, T. W., and Hovan, S.
+A., "Performance
+of the NASA 30 cm Ion
+Thruster,"
+IEPC Paper 93-108, September
+1993.
+
+5.
+
+Brophy, J. R., et al., "Segmented
+Ion Engine
+Operation
+and Performance,"
+AIAA Paper
+94-2851, June 1994.
+
+6.
+
+Beattie, J. R., Williams, J. D., and Robson,
+R. R., "Flight Qualification
+of an 18-mN
+Xenon Ion Thruster," IEPC Paper 93-106.
+
+7.
+
+Patterson,
+M. J., et al., "Plasma
+Development
+for Space Station,"
+per 93-246, September
+1993.
+
+8.
+
+Brinza, D. E., Personal Communication,
+JPL, Pasadena, CA, November
+1996.
+
+9.
+
+Patterson, M. J., et al., "2.3 kW Ion
+Thruster Wear Test," AIAA Paper 95-2516,
+July 1995.
+
+"30-Centimeter
+Ion Thrust Subsystem
+Manual," NASA TM 79191, 1979.
+
+Contactor
+IEPC Pa-
+
+10. Polk, J. E., et al., "A 1000-Hour Wear Test
+of the NASA NSTAR Ion Thruster," AIAA
+Paper 96-2717, July 1996.
+l 1. Power, J. L. and Hiznay, D. J., "Solutions
+for Discharge Chamber Sputtering and Anode Deposit Spalling in Small Mercury Ion
+Thruster," NASA TM X-71675, March
+1975.
+12. Hamley, J. A., et al., "A 2.5 kW Power
+Processor for the NSTAR Ion Propulsion
+Experiment,"
+AIAA Paper 94-3305, July
+1994.
+13. Hamley, J. A., et al., "Development
+Status
+of the NSTAR Ion Propulsion
+System
+
+12
+
+Power
+July
+14.
+
+15.
+
+Processor,"
+
+Rawlin,
+
+V. K.,
+
+NSTAR
+
+Thruster,"
+
+July
+
+1995.
+
+Hall,
+
+W. T.,
+
+"Power
+
+18.
+
+95-2517,
+
+Throttling
+
+AIAA
+
+Rawlin,
+
+Specification
+
+trum
+
+Astro,
+
+Document
+
+Test,"
+
+Inc.
+
+Space
+
+Revision
+
+B, April
+
+C., et al.,
+
+"Thruster
+
+NASA
+
+Patterson,
+
+20.
+
+Millen1," Spec-
+
+1069-EW-
+
+1997.
+Endurance
+
+CR-135011,
+
+M. J. and
+
+No.
+No.
+
+May
+
+Mohajeri,
+
+"Neutralizer
+Optimization,"
+105578,
+October
+1991.
+
+"Characterization
+
+of Ion
+
+Systems
+on NASA's
+AIAA
+Paper 92-3827,
+
+Ion
+July
+
+V. K.,
+
+"Erosion
+
+Two-Grid
+
+Ion
+
+Accelerating
+
+K.,
+
+93-175,
+
+J., Haag,
+
+T. W.,
+
+M.
+
+Kussmaul,
+
+Rawlin,
+
+M. T., "NASA
+
+Thruster
+
+Development
+
+94-2849,
+
+June
+
+Status,"
+
+AIAA
+
+J. A.,
+
+"NSTAR
+
+Thruster
+
+Requirements
+
+JPL-D-13638,
+
+Element
+
+Document,"
+
+April
+
+ND-
+
+1997.
+
+and wear-tests.
+
+PATs
+
+Performance
+EMTs
+
+NPT1
+
+2000 hour wear-test
+
+EMT design verification
+
+DT9b
+
+Low power test
+1000 hour wear-test
+
+Demonstrate
+
+Purpose
+acceptance
+
+tests of 4
+
+Validation
+
+FITA
+
+Functional integration
+LeRC BBPPUs
+
+CT19
+
+Performance
+EMT2
+
+test of the
+
+sensitivity
+
+magnetic
+
+Obtain performance
+
+test of
+
+field
+
+Integrate
+EMT4
+
+sensitivity
+setpoints
+
+at selected
+magnetic
+
+DT5b
+
+Thrust measurement
+
+Direct
+
+CT6
+
+Single
+
+Characterize
+
+Functional integration
+HEDD BBPPU
+
+DTI4a
+
+Communication
+
+test of the
+
+impacts
+
+throttle
+
+tests
+
+to provide
+
+to
+
+and life at 2.3 kW for 8000
+
+thrust measurement
+thruster
+
+using EMT4
+
+performance
+
+using only one
+
+of the two XFS flow
+
+le_s.
+
+Integrate
+
+(flight circuits)
+
+the BBPPU
+
+with
+
+to allowed
+
+field measurements
+
+spacecraft personnel
+Validate performance
+h.
+
+test
+
+4.
+
+at 530 W
+
+with EMT2 and BBPPU2
+
+variations
+
+Life Demonstration
+
+DT3a
+
+870 h of stable operation
+
+Obtain thruster performance
+External
+
+Test
+
+data. See Table
+
+test of EMT2 after design chan_es
+
+LDT
+
+plenum
+
+dispersion
+
+BBPPUI
+
+Assess ion beam impacts
+
+with EMT3
+
+on communications
+
+signals
+DTIb
+
+Random
+
+vibration test
+
+Structural
+qualification
+
+DT2a, b
+DT2d
+
+Thruster
+
+TIT
+
+Thruster
+
+cold soak tests
+
+DSI thermal
+
+simulation
+
+integrity
+
+test of EMTIc
+
+to DSI
+
+test levels
+
+Cold soak EMT3 to DSI qualification
+test levels
+Thermal vacuum test of EMT4 with simulation of
+the DSI spacecraft.
+
+Throttling
+
+Test
+
+Use flight hardware
+over a given mission
+
+NASA
+
+TM-113129
+
+13
+
+Ion
+
+Paper
+
+1994.
+
+Hamley,
+310,
+
+V.
+
+30-cm
+
+22.
+
+Description
+
+External
+
+1993.
+
+K., and
+
+Test ID
+
+DT7b
+
+IEPC
+
+September
+
+Patterson,
+
+Technical
+
+characterization,
+
+of
+
+Systems,"
+
+Engelbrecht,
+C., Personal
+Communication,
+JPL, Pasadena,
+CA, November
+1996.
+
+TM-
+
+Table I. Major development,
+
+DT15
+
+1992.
+
+Characteristics
+
+21.
+
+1976.
+
+NASA
+
+Rawlin,
+Paper
+
+Spacecraft
+
+for New
+
+Deep
+
+19.
+
+95-2515,
+
+and
+
+Program's
+
+Collett,
+
+V. K.,
+
+the
+
+Paper
+
+"Component
+
+nium
+Q00108
+
+17.
+
+Paper
+
+Accelerating
+Thrusters,"
+
+Verification
+
+16.
+
+AIAA
+
+1995.
+
+to validate performance
+profile.
+
+and life
+
+Table 2. Evolution
+Major
+
+Features
+
+Major test
+Main cathode
+keeper electrode?
+Discharge chamber
+material (internal)
+Wire-mesh
+throughout
+discharh,, chamber?
+Gimbal bracket
+material
+Grit-blast
+components for
+emissivity control?
+Lightening holes in
+some discharge
+chamber
+
+of the EMT design.
+
+EMTla
+
+EMTlb
+
+EMTIe
+
+EMT2
+
+EMT3
+
+EMT4
+
+Flight
+
+2030 h
+
+1000 h
+
+8O0O h
+
+Thermal
+
+Thermal
+
+Flight
+
+vacuum
+
+vacuum
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+No
+
+Yes
+
+Random
+vibration
+Mass model
+
+Alfri
+
+A1/Ti
+
+AI/Ti
+
+AI/Ti
+
+AI/Ti
+
+Ti
+
+Ti
+
+No
+
+Partial
+
+Partial
+
+Partial
+
+Yes
+
+Yes
+
+Yes
+
+Stainless
+steel
+
+Stainless
+steel
+
+A!
+
+Stainless
+steel
+
+Stainless
+steel
+
+Stainless
+steel
+
+Ti
+
+No
+
+No
+
+No
+
+No
+
+Yes
+
+Yes
+
+Yes
+
+No
+
+No
+
+Yes
+
+No
+
+Yes
+
+Yes
+
+Yes
+
+components7
+
+Table 3. Thruster
+Power to thruster,
+
+parameters controlled
+
+kW
+
+Beam power supply voltage,
+
+V
+
+Accelerator power supply voltage,
+Beam current, A
+Discharge
+
+test throttling.
+
+2.31
+
+2.06
+
+1.48
+
+1.00
+
+0.49
+
+1100
+
+1100
+
+1100
+
+1100
+
+650
+
+180
+
+180
+
+180
+
+150
+
+150
+
+1.76
+
+1.58
+
+1.09
+
+0.72
+
+0.50
+
+flow, sccm
+
+23.5
+
+21.3
+
+14.3
+
+9.0
+
+6.0
+
+Discharge cathode flow, sccm
+Neutralizer flow, sccm
+
+3.00
+
+2.48
+
+2.10
+
+2.10
+
+2.10
+
+3.00
+
+2.48
+
+2.10
+
+2.10
+
+2.10
+
+Neutralizer
+
+keeper current, A
+
+Maximum
+
+discharge
+
+1.5
+28.0
+
+1.5
+28.0
+
+1.5
+28.0
+
+2.0
+29.0
+
+2.0
+30.0
+
+NASA
+
+plenum
+
+V
+
+during functional
+
+TM-113129
+
+voltage, V
+
+14
+
+Table4. Summary
+ofPerformance
+Acceptance
+TestdatafortheEMTsat2.3kWand0.5kW
+Parameter
+
+EMTlb EMTlb
+
+EMT2
+
+EMT2
+
+EMT3
+
+EMT3
+
+EMT4
+
+EMT4
+
+Power,
+
+2.30
+
+0.52
+
+2.27
+
+0.52
+
+2.24
+
+0.53
+
+2.31
+
+0.53
+
+2.90
+
+1.01
+
+2.87
+
+1.00
+
+2.87
+
+1.00
+
+2.89
+
+1.01
+
+Beam power supply
+
+1100
+
+650
+
+1100
+
+650
+
+1100
+
+65O
+
+1101
+
+650
+
+voltage, V
+Beam current, A
+
+1.78
+
+.54
+
+1.76
+
+.54
+
+1.75
+
+.55
+
+1.74
+
+0.53
+
+25.8
+
+28.5
+
+kW
+
+Flowrate,
+
+mg/s
+
+Discharge
+
+voltage,
+
+V
+
+24.9
+
+28.0
+
+25.8
+
+29.0
+
+26.0
+
+29.9
+
+Discharge
+
+current,
+
+A
+
+11.6
+
+4.5
+
+11.5
+
+4.9
+
+10.5
+
+4.7
+
+12.8
+
+4.8
+
+151
+
+181
+
+151
+
+15.3
+
+2.6 (1)
+
+Accelerator
+Accelerator
+
+voltage, V
+current, mA
+
+180
+8.3
+
+150
+1.4
+
+180
+7.3
+
+150
+1.3
+
+180
+7.0
+
+2.2
+
+Neutralizer
+
+keeper
+
+13.1
+
+18.0
+
+14.3
+
+19.7
+
+14.6
+
+20.7
+
+15.0
+
+24.5
+
+voltage, V
+Neutralizer keeper
+current, m
+
+2.0
+
+2.0
+
+1.5
+
+1.5
+
+1.5
+
+1.5
+
+1.5
+
+2.0
+
+-12.3
+
+-10.7
+
+-13.7
+
+-12.9
+
+-13.7
+
+-13.4
+
+-13.3
+
+-11.5
+
+94
+
+22
+
+92
+
+22
+
+92
+
+22
+
+92
+
+21
+
+3270
+0.658
+
+2240
+0.457
+
+3240
+0.630
+
+2140
+0.420
+
+(1)
+
+Coupling
+
+voltage,
+
+Thrust,
+
+V
+
+mN
+
+Specific impulse, s
+Thruster efficiency
+
+3300
+0.657
+
+2200
+0.455
+
+3270
+0.651
+
+chamber
+
+pressure.
+
+(1) Data were taken at higher vacuum
+
+Table 5. Random
+Conditions
+all axes
+
+for
+
+vibration
+
+requirements
+
+for the flight thrusters
+
+Hz
+
+Power spectral
+
+Slope.
+dB/octave
+
+density'. _-'/H z
+20-50
+50-500
+500-2000
+
+Protoflight
+
+Acceptance
+
+NASA
+
+Frequency.
+
+20-50
+50-500
+500-2000
+
+TM-113129
+
+2200
+0.446
+
+Overall
+
+g_
+
+Duration.
+s/axis
+
++6
+02
+-6
+
+13
+
+60
+
+9.2
+
+60
+
++6
+0.1
+-6
+
+15
+
+Table6. Average
+valueof operating and performance
+(Reference
+
+parameters
+
+during the 1000 h test.
+
+10)
+
+Parameter
+
+Average value
+
+Beam power
+
+supply
+
+Beam current,
+
+A
+
+voltage,
+
+V
+
+1103
+1.76
+
+Discharge
+
+voltage,
+
+V
+
+Discharge
+
+current, A
+
+24.3
+13.4 (1)
+180
+
+Accelerator
+
+power supply
+
+voltage, V
+
+Accelerator
+
+power supply current, mA
+
+7.76
+
+Neutralizer
+
+keeper voltage, V
+
+4.6
+1.51
+
+Neutralizer keeper current, A
+Coupling voltage, V
+Discharl_e plenum
+Discharge cathode
+Neutralizer
+
+flowrate,
+flowrate,
+
+flowrate,
+
+-13.3
+
+sccm
+sccm
+
+23.5
+3.75 (1)
+
+sccm
+
+3.70(1)
+
+Power, kW
+
+2.30
+
+Thrust,
+
+mN
+
+92.9
+
+Specific
+
+impulse,
+
+s
+
+3110
+
+Efficiency
+Estimated XeWXe + on centerline
+
+0.617
+0.21
+
+(1) During flowmeter calibration prior to the test, a silicone hose leaked xenon via diffusion resulting
+in higher flowrates than desired compared to the PAT setpoints of Table 4. This resulted in lower
+discharge voltage, higher discharge current, lower production of doubly charged xenon ions, and slightly
+lower efficiency and specific impulse compared to the 2000 h test and the PAT data.
+
+Table 7. Flight allowable reference
+(Temperatures
+in "C)
+
+Thruster
+temperature
+mask(l)
+
+temperatures
+
+for the thruster,
+
+PPU. and DCIU.
+
+Non-operating.
+cold
+
+Operating.
+
+-93
+
+-93
+
+138
+
+138
+
+-25
+-25
+
+-5 (2)
+- 15
+
+50
+50
+
+55
+55
+
+cold
+
+Operating,
+
+hot
+
+Non-operating,
+
+on the
+
+PPU baseplate
+DCIU baseplate
+
+(I) The mask is the downstream
+portion of the plasma screen. The mask covers the periphery
+accelerator grid.
+(2) DS I heater operation is required at the low throttle levels.
+Note also: (a) PPU and DCIU temperature
+transition rates will be less than I °C/rain.
+(b) Thruster non-operating
+hot temperatures
+are turn-off and not turn-on conditions.
+
+NASA
+
+TM-1
+
+13129
+
+16
+
+of the
+
+hot
+
+Table8. DCIUresource
+allocation.
+
+Mass,kg
+Envelope,
+cm
+Inputvoltaire,
+V
+Inputpower,
+W
+
+Specification
+
+Actual
+
+2.4
+15x 22x 13
+22to34
+< 30
+
+2.4
+14.6x 18.5x 12.7
+22Ito34
+<8
+
+Table9. PPUinputpowerrequirements.
+
+Inputvoltage,
+V
+Inputcurrent,
+A
+EMIspecification
+Inrushprotection
+Grounding
+Table
+
+Mass,
+
+kg
+
+Envelope,
+
+cm
+
+Output power,
+Efficiency
+
+NASA
+
+10. PPU resource
+
+W
+
+TM-113129
+
+Highpowerbus
+
+Lowpowerbus
+
+80to 160
+32maximum
+MIL-STD-461
+None
+Negative
+orfloatto<5 V from
+chassis
+
+22to34
+, 1nominal
+MIL-STD-461
+None
+
+Negative
+chassis
+
+or float to < 5 V from
+
+allocation.
+
+Specification
+
+Actual
+
+12 ( 13.7 with micrometeroid
+
+12 (13.7)
+
+protection)
+38x51
+x8
+
+38x51
+
+0.5 to 2.3
+
+0.5 to 2.3
+
+0.90 at 2.3 kW output
+0.84 at 0.5 kW
+
+0.92 at 2.3 kW
+0.86 at 0.5 kW
+
+17
+
+x8
+
+Table11.PPUoutputspecifications
+forthe flight hardware.
+Beam
+
+Accelerator
+
+Dischar[e
+
+Neutralizer
+
+Cathode heaters
+
+Output
+V
+
+voltage,
+
+650 to i 100
+
+150 to 250
+
+15 to 35
+
+8 to 32
+
+3 to 12
+
+Output
+A
+
+current,
+
+0.5 to 1.8
+
+0 to 0.2
+
+4 to 14
+
+1 to 2
+
+3.5 to 8.5
+
+Constant
+current
+< 5% of
+
+Constant
+
+Constant
+current
+
+Constant
+current
+
+Constant
+current
+
+< 5% of
+
+< 5% of
+
+< 5% of
+
+setpoint
+< 5%
+
+setpoint
+< 5%
+
+setpoint
+<5%
+
+setpoint
+< 5%
+
+setpoint
+< 5%
+
+>2kV
+
+>2kV
+
+>2
+
+>2kV
+
+>2kV
+
+Regulation
+Output
+
+ripple
+
+Line/Load
+regulation
+Isolation,
+
+V
+
+voit_e
+< 5% of
+
+kV
+
+Pulse i[nitors
+
+Peak voltage,
+Duration, Its
+
+(2)
+
+650
+
+V
+
+10
+
+Slew rate, V/its
+
+150
+
+Frequency',
+
+>10
+
+Hz
+
+NSTAR
+
+M_
+
+t)es_
+Opera.s
+Suppoe
+
+!
+
+I
+Power Proces=or/
+DCIU
+
+!
+
+I
+
+!1x-'-Ii Storage and
+Control System
+
+_ VsfKIdon
+_
+
+Figure 1.---NSTAR Project block diagram.
+
+NASA TM- 113129
+
+18
+
+I
+
+I
+Diagnostics
+
+Ground
+
+Tests to
+
+In-space Measurements
+to Assess Interactions
+Between the Ion
+
+Validate Life and
+Performance
+Design
+
+Verification
+2000
+
+Propulsion
+Spacecraft,
+
+Tests
+
+System, the
+and the
+
+hour test
+
+1000 hour
+
+Space
+
+test
+
+8000 hour Life Demonstration
+
+Prime
+
+Test
+
+Plasma
+
+propulsion
+
+on the Deep
+
+Space
+
+and comet
+
+flyby
+
+1 spacecraft
+Thruster
+
+Throttling
+
+Asteroid
+mission
+
+Test (> 4 X 10 6
+
+Ns)
+Direct
+Development
+validate
+
+and engineering
+
+measurements
+
+tests to
+
+Contamination,
+
+the design
+
+communications,
+
+Indirect
+
+measurements
+GN&C,
+
+Figure
+
+NASA
+
+TM-113129
+
+2._Major
+
+elements
+
+of the
+
+19
+
+NSTAR
+
+EMI
+
+program.
+
+mission
+
+operations
+
+N_TAR ACTIVITY SCHEDULE
+
+c__Icm,2
+] c_31c_,4 c_
+
+I0
+
+Tlmk
+
+1
+
+NErAR. ,'_T-_.._.
+
+Slwl
+
+Jo,z]_31_,,
+
+I Cltr 2 I O_ 3
+
+c_,,I CnrZ
+I o,_ t_r,
+
+r
+
+11_1
+
+II1_1
+
+_00
+Otr 1 I Qtr 2 I Qtr 3 t Qtr4
+
+i
+
+2
+3
+
+P,,_{)UNO TEST
+
+4
+
+EM Thn,Ul_rl
+
+S
+
+Smadboatd PPU
+
+i
+
+6
+
+ZO00 hour iN1 ol EMT
+
+i liiiiw
+
+7
+
+I000 ho.urtill10# EMT
+
+a
+
+8000 hour LDT
+
+9
+
+Dev JEnvzronrnl TI.I_$
+
+lo
+
+"i_nmer Th reXti_ Trot
+
+i
+
+]
+
+II I1[I
+I
+
+ililll
+
+I
+
+_
+
+W
+II
+
+I
+
+F
+
+:
+
+T
+
+_
+
+11
+12
+
+RIGHT
+
+13
+
+Contract I_an
+
+HARDWARE
+
+14
+
+COR
+
+1s
+
+INC. Pll;_ler
+
+15
+
+DI¢, IT, PPU. DCIU ill
+
+17
+
+DJ. F'T, PPU. OCIU e2
+
+Thrultlr
+
+18
+
+I
+
+to
+
+ik_e
+
+20
+
+IJmr, ch OG1
+
+S/¢ Mf.T
+
+•
+Figure 3.--_ISTAR
+
+i
+
+schedule.
+
+HORNS
+TELECOM
+
+SUN SENSOR
+
+SUN SENSOR
+
+X BAND
+
+ELECTRONICS
+
+24 A-Hr NIMH
+BATTERY
+
+DClU
+XENON FEED
+SYSTEM
+NSTAR
+
+ION THRUSTER
+
+DIAGNOSTICS
+
+Figure 4.--The
+
+NASA
+
+TM-113129
+
+DS1 spacecraft showing thruster location.
+
+20
+
+i
+
+Discharge
+keeper
+
+hollow
+electrode
+
+cathode-
+
+\
+
+assembly
+
+Neutralizer
+
+Ion
+
+Discharge
+
+chamber
+
+Figure 5.--Schematic
+
+NASA
+
+TM-113129
+
+optics:
+Positive
+Negative
+
+of the Engineering Model Thruster.
+
+21
+
+screen
+grid
+accelerator
+
+grid
+
+P4EUT
+80-_20
+V
+NEUT
+HEATI_
+MEUT
+
+O CC_M_
+CMDK)ATA
+WrERFACE
+
+CATH
+PEATI_
+
+cA'n.4ODE
+COVlM_
+
+Figure 6.--NSTAR
+
+Hat0
+
+Disk
+
+Comrnand/'r
+
+Breadboard Power Processor Block Diagram.
+
+elemet_
+
+88PP_
+":h;'_ster
+
+I
+
+v_c
+
+I
+
+I
+
+P'ower
+
+I
+
+Slnp
+
+Char{
+
+L
+
+Recorder
+
+p
+
+Figure 7.--Functional
+
+NAS
+
+A TM-
+
+113129
+
+IntegraUon Test setup for BBPPU and the EMT.
+
+22
+
+III
+Thermal
+
+Blanket
+
+48
+
+48
+
+31
+
+48
+
+79
+
+121
+32
+126
+80
+
+(1) All temperatures in '_C.
+] (2) Test data in rectangles.
+[ (3) Model data in ellipses.
+(4) Boundary. data in octagons.
+Figure 8.mThruster thermal vacuum test setup simulatingthe DS1 spacecraft configuration.
+
+NASA
+
+TM-113129
+
+23
+
+33o01
+
+J
+
+^ 32oo],.llJ,,.IL
+
+hJfi,.,
+
+i
+
+spe_r_lmw_.
+
+,'L "".J_,
+
+3ooo_LA.|*.,
+
+j
+
+j
+
+. I,
+
+, !, ,
+
+"1' '..i_,J_,'r.'l
+
+LJ,IAA/IA,.LJ_A.
+
+, tl o.6,
+
+.Iflo_
+
+,pl.L-i[°6'_
+
+,AI!LJ.A.
+
+j_l/o62g
+
+_ • z
+
+•
+_ ,,,,o,_o; i_°_
+
+28ooI
+
+i
+
+I
+
+i
+
+i
+
+0
+
+200
+
+400
+
+600
+
+8O0
+
+l
+
+Elapsed Time (flours)
+
+Figure 9.--EMT1 b performance versus test time in the 1000 hr test (Ref.lO).
+
+NASA
+
+TM-113129
+
+24
+
+l/o.s8
+1000
+
+DS-1
+
+J6
+
+J15
+
+Figure IO.---NSTAR Thruster Element block diagram.
+
+NASA TM-113129
+
+25
+
+Neutralizer
+
+optics
+
+Gimbal
+
+Figure 11.--Graphic
+
+NASA
+
+TM-
+
+113129
+
+bracket
+
+of the NSTAR ion thruster without the plasma screen.
+
+26
+
+BUS IN
+
+i#21
+
+i
+
+I
+
+Input
+filter
+
+BUS RI"N
+
+i
+8O
+
+four phase
+PWM
+
+160V_
+
+600-
+
+1100 Vout
+
+0.5 to 1.8 Aout
+94% eff'ciency
+Voltage
+
+Regulated
+
+Figure 12.mBeam
+
+power
+
+supply
+
+electrical
+
+schematic.
+
+1
+
+$
+
+5O%
+A
+
+w
+m
+
+Id
+I'1
+Full bridge
+
+PWM
+
+secondary
+
+Inductor
+
+with arc starter
+
+Pulse Wldm
+Modulated
+80-
+
+160V_
+
+15 - 35 Voul
+4to 14 AOut
+92% efficiency
+Current Regulated
+
+ii
+Figure 13.---Discharge
+
+NASA
+
+TM-113129
+
+power
+
+supply
+
+27
+
+electrical
+
+schematic.
+
+on
+
+±
+
+$
+
+m
+
+To o_m" PWM
+
+Iv
+
+mgm
+
+Smoothing inductor
+
+r
+
+T1 Prlnwy
+
+IIJ
+
+wl
+
+IiJ
+
+irl
+
+T1 Secondary
+
+J_
+
+Pulle Width
+Modulated
+
+_L_
+
+80- 160 Vin
+15 - 35 Vout
+4 to 14 Aout
+Neut is Cunant Regulated
+Htr and Accel are Voltage
+
+Regu_ted
+
+VIgure 14._Elecb'ical
+
+NASA
+
+TM-113129
+
+schematic of the neutralizer, heaters, and accelerator power supplies.
+
+28
+
+REPORT
+Public
+
+reporting
+
+gathering
+collection
+Davis
+
+burden
+
+for
+
+and maintaining
+of information,
+
+Highway,
+
+Suite
+
+this
+
+DOCUMENTATION
+
+collection
+
+of
+
+information
+
+the data
+needed,
+including
+suggestions
+
+1204.
+
+Arlington,
+
+VA
+
+is
+
+estimated
+
+and completing
+for reducing
+22202-4302,
+
+to average
+
+1 hour
+
+and reviewing
+the collection
+this burden,
+to Washington
+
+and
+
+1. AGENCY USE ONLY (Leave b/ank)
+
+to
+
+the
+
+Office
+
+Form Approved
+OMB NO. 0704-0188
+
+PAGE
+per
+
+response,
+
+including
+
+of information.
+Headquarters
+
+ot Management
+
+and
+
+Budget,
+
+2, REPORT DATE
+
+time
+
+for
+
+comments
+Directorate
+
+Paperwork
+
+3.
+
+December
+
+the
+
+Send
+Services,
+
+reviewing
+
+Deep
+6.
+
+existing
+
+data
+
+sources,
+
+Reduction
+
+Project
+
+(0704-0188),
+
+Washington,
+
+DC
+
+20503.
+
+1997
+
+Technical
+
+Memorandum
+
+5. FUNDING NUMBERS
+
+of an Ion Thruster
+
+Space
+
+searching
+
+REPORT TYPE AND DATES COVERED
+
+i 4. TITLE AND SUBTITLE
+Development
+
+instructions,
+
+regarding
+this burden
+estimate
+or any other
+aspect
+of this
+for Information
+Operations
+and Reports,
+1215
+Jefferson
+
+and Power
+
+Processor
+
+for New
+
+Millennium's
+
+1 Mission
+
+AUTHORIS)
+J.S. Sovey, J.A. Hamley,
+
+T.W. Haag,
+
+J.L. Power,
+
+C.J. Sarmiento,
+
+V.K. Rawlin,
+
+Polk, G. Benson,
+
+T.A. Bond,
+
+Hart, J. McDowell,
+
+M.J. Patterson,
+
+G.I. Cardwell,
+
+K.A. Norenberg,
+
+E.J. Pencil, T.T. Peterson,
+
+J.R. Anderson,
+
+R.A. Becket,
+
+J.A. Christensen,
+
+T.K. Phelps,
+
+L.R. Pinero,
+
+J.R. Brophy,
+
+K.J. Freick,
+
+WU-242-70-01--00
+
+J.E.
+
+D.J. Hamel,
+
+S.L.
+
+E. Solis, H. Yost, and M Matranga
+8. PERFORMING ORGANIZATION
+REPORT NUMBER
+
+7. PERFORMING ORGANIZATION NAME(S) AND ADDRESS(ES)
+National
+
+Aeronautics
+
+Lewis
+
+Research
+
+Cleveland,
+
+and Space
+
+Ohio
+
+E-10899
+
+44135-3191
+
+9. SPONSORING/MONITORING
+
+National
+
+AGENCY NAME(S) AND ADDRESS(ES)
+
+Aeronautics
+
+Washington,
+
+Administration
+
+Center
+
+DC
+
+and Space
+
+10.
+
+SPONSORING/MONITORING
+
+Administration
+
+20546-0001
+
+AGENCY
+
+REPORT
+
+NUMBER
+
+NASA
+
+TM-II3129
+
+AIAA-97-2778
+
+11. SUPPLEMENTARY NOTES
+Prepared
+
+for the 33rd
+
+Seattle,
+
+Washington,
+
+Pencil,
+
+Todd
+
+Joint
+July
+
+T. Peterson,
+
+Research
+
+Center;
+
+Pasadena,
+
+California
+
+John
+
+Propulsion
+1997.
+
+Luis
+
+R. Pinero,
+
+R. Anderson,
+91109;
+
+Stephen
+
+Electron
+
+Dynamics
+
+DivisionTorrance,
+
+Arizona
+
+85233.
+
+Responsible
+
+person,
+
+Subject
+
+NASA
+
+in the
+
+Kirk
+
+California
+
+James
+
+S. Sovey,
+
+K. Rawlin,
+R. Brophy,
+
+W. Haag,
+and Charles
+
+and James
+
+G. I. Cardwell,
+
+A. Norenberg,
+Michael
+
+organization
+
+code
+
+SAE,
+
+J. Patterson,
+
+E. Polk,
+
+Phelps,
+
+Matranga,
+5430,
+
+Eric
+
+NASA
+
+Laboratory,
+
+Kenneth
+
+Ezequiel
+
+Solis,
+Astro
+
+J.
+
+Lewis
+
+Jet Propulsion
+
+Spectrum
+
+(216)
+
+and ASEE,
+
+J. Sarmiento,
+
+J. Freick,
+
+and Harold
+
+Incorporated
+
+Yost,
+Gilbert,
+
+977-7454.
+12b.
+
+from the NASA Center
+
+200
+
+DISTRIBUTION
+
+CODE
+
+Nonstandard
+
+for AeroSpace
+
+Information.
+
+Propulsion
+
+Technology
+
+to NASA's
+
+New
+
+Millennium
+
+Deep
+
+and 2000.
+
+The
+
+propulsion
+
+system
+
+includes
+
+1999
+unit,
+
+and
+
+along
+
+grid lifetimes
+
+in preparation
+
+a digital
+
+control
+
+thruster
+
+have
+
+design
+
+demonstrated
+
+been
+
+more
+
+unit.
+
+built,
+
+verification
+
+well in excess
+
+for integration,
+
+Applications
+
+and interface
+
+and a controller
+with
+
+(301 ) 621-0390.
+
+words)
+
+system
+
+and has successfully
+
+Readiness
+Space
+
+a 30-cm
+
+A total
+
+integrated,
+
+tests
+
+Program
+
+1 Mission
+diameter
+
+of four
+
+h and
+
+propulsion;
+
+1000
+
+h. An 8000
+
+than 6000
+
+h of operation.
+
+In situ measurements
+
+h qualification
+
+test requirement.
+
+and acceptance
+
+Plasma
+
+provide
+
+comet
+
+a xenon
+
+model
+
+An extensive
+
+will
+
+perform
+
+ion thruster,
+
+of the 12,000
+
+functional,
+
+Ion propulsion;
+
+will
+
+engineering
+
+and tested.
+
+of 2000
+
+(NSTAR)
+
+which
+
+ion
+
+a single-string
+
+and asteroid
+
+feed
+
+thrusters,
+
+system,
+three
+
+set of development
+h Life
+
+Flight
+
+Demonstration
+
+breadboard
+
+tests
+
+has been
+
+Test
+
+is ongoing
+
+grid
+
+wear
+
+are consis-
+
+is now
+
+being
+
+assembled
+
+of accelerator
+hardware
+
+flybys
+a power
+
+tests.
+15. NUMBER OFPAGES
+34
+
+TERMS
+
+Electric
+
+ASME,
+Michael
+
+Jon A. Christensen,
+
+T. Keith
+
+90509;
+
+Electric
+
+completed
+
+SUBJECT
+
+McDowell,
+
+Distribution:
+
+is available
+
+processors,
+
+with
+
+John
+
+A. Bond,
+
+Solar
+
+processing
+
+tent
+
+A. Becker,
+
+propulsion
+years
+
+power
+
+Vincent
+
+Thomas
+
+20
+
+(Maximum
+
+primary
+
+L. Power,
+
+by the AIAA,
+
+Thomas
+
+- Unlimited
+
+ABSTRACT
+
+The
+
+John
+
+cosponsored
+
+John A. Hamley,
+
+STATEMENT
+
+Category
+
+This publication
+
+14.
+
+Benson,
+
+J. Hamel,
+
+Unclassified
+
+13.
+
+John
+
+Hughes
+
+and Exhibit
+
+S. Sovey,
+
+Raymond
+
+Gerald
+
+L. Hart,
+
+James
+
+David
+
+DISTRIBUTION/AVAILABILITY
+
+12a.
+
+Conference
+
+6-9,
+
+applications
+
+16.
+
+PRICE
+
+CODE
+
+20.
+
+LIMITATION
+
+A03
+17. SECURITY CLASSIFICATION
+OF REPORT
+Unclassified
+NSN 7540-01-280-5500
+
+18.
+
+SECURITY
+OF
+
+THIS
+
+CLASSIFICATION
+PAGE
+
+Unclassified
+
+19.
+
+SECURITY
+OF
+
+CLASSIFICATION
+
+OF
+
+ABSTRACT
+
+ABSTRACT
+
+Unclassified
+Standard
+
+Form
+
+Prescribed
+298-102
+
+by
+
+ANSI
+
+298
+
+(Rev.
+Std.
+
+Z39-18
+
+2-89)
+
+

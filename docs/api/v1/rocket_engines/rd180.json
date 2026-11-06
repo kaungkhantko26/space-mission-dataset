@@ -1,6 +1,6 @@
 {
  "collection": "rocket_engines",
- "data_status": "25 celestial records (Sun, planets, dwarf planets, moons, small bodies) have their core physical fields verified against retrieved JPL/NASA pages (198 field checks matched; 16 conflicts were resolved to the sourced value). Six SLS/RS-25 launch figures were also verified against the NASA SLS page; all other launch-vehicle, engine, spacecraft, instrument and mission figures are still unverified (recalled values), as are two user-supplied tables (SpaceX launches 2010-2018, NASA facilities). Derived values inherit the status of their inputs. Optimization catalog values are estimated/fictional.",
+ "data_status": "32 records are verified (25 celestial bodies at core level; engines and stages whose core numeric fields were all checked) against retrieved JPL, NASA (NTRS, SLS page, Apollo 11 press kit), ULA and ESA pages. 198 celestial and 44 launch/engine field checks matched; 16 celestial and 13 launch/engine recalled values were wrong or outdated and were replaced by the sourced value. Launch vehicles are verified field by field only (see verified_field_count); everything not checked (e.g. Falcon, Starship, Electron, Ariane, most engines, spacecraft components, instruments, missions) is still unverified, as are two user-supplied tables. Derived values inherit the status of their inputs. Optimization catalog values are estimated/fictional.",
  "record": {
   "id": "rd180",
   "name": "RD-180",
@@ -11,7 +11,7 @@
   "thrust_sl_n": 3830000,
   "isp_vac_s": 338,
   "isp_sl_s": 311,
-  "dry_mass_kg": 5393,
+  "dry_mass_kg": 5479.849421970001,
   "burn_s": null,
   "restart": false,
   "status": "operational_legacy",
@@ -25,9 +25,62 @@
   "retrieval_status": "not_retrieved",
   "derived": {
    "mass_flow_vac_kg_s": 1252.018427177042,
-   "engine_thrust_to_weight_vac": 78.4687981431189,
+   "engine_thrust_to_weight_vac": 77.22515634995435,
    "mass_flow_sl_kg_s": 1255.7919921882526
   },
-  "derived_from": "mdot=F/(Isp*g0); TWR=F/(m*g0); thrust/power"
+  "derived_from": "mdot=F/(Isp*g0); TWR=F/(m*g0); thrust/power",
+  "field_verification": {
+   "thrust_sl_n": {
+    "status": "verified",
+    "source_id": "S42",
+    "source_url": "https://www.ulalaunch.com/rockets/atlas-v",
+    "retrieved": "2026-11-06",
+    "source_sha256": "47ae205afab17a45780756ae4d42322c2be1d8e7620676b9bc4c7eb6e84aa975",
+    "section": "ULA Atlas V page, RD-180 specification",
+    "source_original_text": "Nominal Thrust (sea level): 860,300 lbs",
+    "source_value": 3826805.055608608,
+    "source_unit": "lbf→N",
+    "statement_type": "point value",
+    "tolerance_rel": 0.005,
+    "recalled_value": 3830000,
+    "note": null
+   },
+   "isp_sl_s": {
+    "status": "verified",
+    "source_id": "S42",
+    "source_url": "https://www.ulalaunch.com/rockets/atlas-v",
+    "retrieved": "2026-11-06",
+    "source_sha256": "47ae205afab17a45780756ae4d42322c2be1d8e7620676b9bc4c7eb6e84aa975",
+    "section": "ULA Atlas V page, RD-180 specification",
+    "source_original_text": "Specific Impulse (sea level): 311 seconds",
+    "source_value": 311.0,
+    "source_unit": "s",
+    "statement_type": "point value",
+    "tolerance_rel": 1e-06,
+    "recalled_value": 311,
+    "note": null
+   },
+   "dry_mass_kg": {
+    "status": "conflict_resolved_to_source",
+    "source_id": "S42",
+    "source_url": "https://www.ulalaunch.com/rockets/atlas-v",
+    "retrieved": "2026-11-06",
+    "source_sha256": "47ae205afab17a45780756ae4d42322c2be1d8e7620676b9bc4c7eb6e84aa975",
+    "section": "ULA Atlas V page, RD-180 specification (weight)",
+    "source_original_text": "Length: 140 in Weight: 12,081 lbs",
+    "source_value": 5479.849421970001,
+    "source_unit": "lb→kg",
+    "statement_type": "point value",
+    "tolerance_rel": 0.005,
+    "recalled_value": 5393,
+    "note": null
+   }
+  },
+  "verified_field_count": 3,
+  "unverified_fields": [
+   "thrust_vac_n",
+   "isp_vac_s"
+  ],
+  "verification_scope": "partial: only the fields in field_verification were checked against a retrieved source; the record as a whole remains unverified"
  }
 }

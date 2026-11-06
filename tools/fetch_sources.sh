@@ -16,3 +16,11 @@ get "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=4&phys-par=1"      sbdb_vesta.js
 get "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=134340&phys-par=1" sbdb_pluto.json
 get "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=136199&phys-par=1" sbdb_eris.json
 get https://www.nasa.gov/reference/space-launch-system/        nasa_sls_reference.html
+get https://www.ulalaunch.com/rockets/atlas-v                  ula_atlas_v.html
+get https://www.ulalaunch.com/rockets/vulcan-centaur          ula_vulcan.html
+get https://www.esa.int/Enabling_Support/Space_Transportation/Launch_vehicles/Vega-C                esa_vega_c.html
+get https://www.esa.int/Enabling_Support/Space_Transportation/Launch_vehicles/Ariane_6_overview    esa_ariane6_overview.html
+for id in 19690022248 19980017550 20090004685 20060051789; do
+  get "https://ntrs.nasa.gov/api/citations/$id/downloads/$id.pdf" "ntrs_$id.pdf"
+  pdftotext -layout "ntrs_$id.pdf" "ntrs_$id.txt"; pdftotext "ntrs_$id.pdf" "ntrs_${id}_raw.txt"
+done

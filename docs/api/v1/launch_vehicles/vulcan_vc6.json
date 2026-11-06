@@ -1,6 +1,6 @@
 {
  "collection": "launch_vehicles",
- "data_status": "25 celestial records (Sun, planets, dwarf planets, moons, small bodies) have their core physical fields verified against retrieved JPL/NASA pages (198 field checks matched; 16 conflicts were resolved to the sourced value). Six SLS/RS-25 launch figures were also verified against the NASA SLS page; all other launch-vehicle, engine, spacecraft, instrument and mission figures are still unverified (recalled values), as are two user-supplied tables (SpaceX launches 2010-2018, NASA facilities). Derived values inherit the status of their inputs. Optimization catalog values are estimated/fictional.",
+ "data_status": "32 records are verified (25 celestial bodies at core level; engines and stages whose core numeric fields were all checked) against retrieved JPL, NASA (NTRS, SLS page, Apollo 11 press kit), ULA and ESA pages. 198 celestial and 44 launch/engine field checks matched; 16 celestial and 13 launch/engine recalled values were wrong or outdated and were replaced by the sourced value. Launch vehicles are verified field by field only (see verified_field_count); everything not checked (e.g. Falcon, Starship, Electron, Ariane, most engines, spacecraft components, instruments, missions) is still unverified, as are two user-supplied tables. Derived values inherit the status of their inputs. Optimization catalog values are estimated/fictional.",
  "record": {
   "id": "vulcan_vc6",
   "name": "Vulcan Centaur VC6",
@@ -21,18 +21,26 @@
    {
     "orbit": "LEO",
     "payload_kg": 27200,
-    "altitude_km": null,
-    "inclination_deg": null,
+    "altitude_km": 200.0,
+    "inclination_deg": 28.7,
     "mode": "expended",
     "assumption": ""
    },
    {
     "orbit": "GTO",
-    "payload_kg": 14400,
+    "payload_kg": 14500.0,
+    "altitude_km": null,
+    "inclination_deg": 27.0,
+    "mode": "expended",
+    "assumption": ""
+   },
+   {
+    "orbit": "TLI",
+    "payload_kg": 11500.0,
     "altitude_km": null,
     "inclination_deg": null,
     "mode": "expended",
-    "assumption": ""
+    "assumption": "C3 = -2 km2/s2 (ULA definition)"
    }
   ],
   "sites": [
@@ -46,6 +54,116 @@
   "data_class": "unverified",
   "retrieval_status": "not_retrieved",
   "derived": {},
-  "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)"
+  "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)",
+  "field_verification": {
+   "payloads[GTO].payload_kg": {
+    "status": "conflict_resolved_to_source",
+    "source_id": "S42",
+    "source_url": "https://www.ulalaunch.com/rockets/vulcan-centaur",
+    "retrieved": "2026-11-06",
+    "source_sha256": "187fad654295e684f50f4b40899a476ab7583d2bcb66905aaeb3ec27571c2426",
+    "section": "ULA Vulcan performance table, row '6 Solids' (columns GEO | GTO | LEO-REF | LEO-ISS | LEO-POLAR | MEO | TLI)",
+    "source_original_text": "6 Solids 6,500 kg 14,300 lb 14,500 kg 32,000 lbs 27,200 kg 60,000 lbs 25,800 kg 56,900 lbs 23,900 kg 52,700 lb ...",
+    "source_value": 14500.0,
+    "source_unit": "kg",
+    "statement_type": "point value",
+    "tolerance_rel": 1e-06,
+    "recalled_value": 14400,
+    "note": null
+   },
+   "payloads[LEO].payload_kg": {
+    "status": "verified",
+    "source_id": "S42",
+    "source_url": "https://www.ulalaunch.com/rockets/vulcan-centaur",
+    "retrieved": "2026-11-06",
+    "source_sha256": "187fad654295e684f50f4b40899a476ab7583d2bcb66905aaeb3ec27571c2426",
+    "section": "ULA Vulcan performance table, row '6 Solids' (columns GEO | GTO | LEO-REF | LEO-ISS | LEO-POLAR | MEO | TLI)",
+    "source_original_text": "6 Solids 6,500 kg 14,300 lb 14,500 kg 32,000 lbs 27,200 kg 60,000 lbs 25,800 kg 56,900 lbs 23,900 kg 52,700 lb ...",
+    "source_value": 27200.0,
+    "source_unit": "kg",
+    "statement_type": "point value",
+    "tolerance_rel": 1e-06,
+    "recalled_value": 27200,
+    "note": null
+   },
+   "payloads[TLI].payload_kg": {
+    "status": "added_from_source",
+    "source_id": "S42",
+    "source_url": "https://www.ulalaunch.com/rockets/vulcan-centaur",
+    "retrieved": "2026-11-06",
+    "source_sha256": "187fad654295e684f50f4b40899a476ab7583d2bcb66905aaeb3ec27571c2426",
+    "section": "ULA Vulcan performance table, row '6 Solids' (columns GEO | GTO | LEO-REF | LEO-ISS | LEO-POLAR | MEO | TLI)",
+    "source_original_text": "6 Solids 6,500 kg 14,300 lb 14,500 kg 32,000 lbs 27,200 kg 60,000 lbs 25,800 kg 56,900 lbs 23,900 kg 52,700 lb ...",
+    "source_value": 11500.0,
+    "source_unit": "kg",
+    "statement_type": "point value",
+    "tolerance_rel": 1e-06,
+    "recalled_value": null,
+    "note": null
+   },
+   "payloads[LEO].altitude_km": {
+    "status": "added_from_source",
+    "source_id": "S42",
+    "source_url": "https://www.ulalaunch.com/rockets/vulcan-centaur",
+    "retrieved": "2026-11-06",
+    "source_sha256": "187fad654295e684f50f4b40899a476ab7583d2bcb66905aaeb3ec27571c2426",
+    "section": "ULA Vulcan performance table footnotes (reference orbit definitions)",
+    "source_original_text": "LEO-Reference = 200 km circular at 28.7 deg",
+    "source_value": 200.0,
+    "source_unit": "km",
+    "statement_type": "reference-orbit definition",
+    "tolerance_rel": 1e-06,
+    "recalled_value": null,
+    "note": null
+   },
+   "payloads[LEO].inclination_deg": {
+    "status": "added_from_source",
+    "source_id": "S42",
+    "source_url": "https://www.ulalaunch.com/rockets/vulcan-centaur",
+    "retrieved": "2026-11-06",
+    "source_sha256": "187fad654295e684f50f4b40899a476ab7583d2bcb66905aaeb3ec27571c2426",
+    "section": "ULA Vulcan performance table footnotes (reference orbit definitions)",
+    "source_original_text": "LEO-Reference = 200 km circular at 28.7 deg",
+    "source_value": 28.7,
+    "source_unit": "deg",
+    "statement_type": "reference-orbit definition",
+    "tolerance_rel": 1e-06,
+    "recalled_value": null,
+    "note": null
+   },
+   "payloads[GTO].inclination_deg": {
+    "status": "added_from_source",
+    "source_id": "S42",
+    "source_url": "https://www.ulalaunch.com/rockets/vulcan-centaur",
+    "retrieved": "2026-11-06",
+    "source_sha256": "187fad654295e684f50f4b40899a476ab7583d2bcb66905aaeb3ec27571c2426",
+    "section": "ULA Vulcan performance table footnotes (reference orbit definitions)",
+    "source_original_text": "GTO = 35,786 km x 185 km at 27.0 deg",
+    "source_value": 27.0,
+    "source_unit": "deg",
+    "statement_type": "reference-orbit definition",
+    "tolerance_rel": 1e-06,
+    "recalled_value": null,
+    "note": null
+   },
+   "fairing_diam_m": {
+    "status": "verified",
+    "source_id": "S42",
+    "source_url": "https://www.ulalaunch.com/rockets/vulcan-centaur",
+    "retrieved": "2026-11-06",
+    "source_sha256": "187fad654295e684f50f4b40899a476ab7583d2bcb66905aaeb3ec27571c2426",
+    "section": "ULA Vulcan page, payload fairings",
+    "source_original_text": "5.4-m- (17.7-ft-) diameter payload fairing",
+    "source_value": 5.4,
+    "source_unit": "m",
+    "statement_type": "point value",
+    "tolerance_rel": 0.005,
+    "recalled_value": 5.4,
+    "note": null
+   }
+  },
+  "verified_field_count": 7,
+  "unverified_fields": null,
+  "verification_scope": "partial: only the fields in field_verification were checked against a retrieved source; the record as a whole remains unverified"
  }
 }

@@ -1,5 +1,5 @@
 # Engineering analysis
-> **Read first:** 25 celestial records (Sun, planets, dwarf planets, moons, small bodies) have their core physical fields verified against retrieved JPL/NASA pages (198 field checks matched; 16 conflicts were resolved to the sourced value). Six SLS/RS-25 launch figures were also verified against the NASA SLS page; all other launch-vehicle, engine, spacecraft, instrument and mission figures are still unverified (recalled values), as are two user-supplied tables (SpaceX launches 2010-2018, NASA facilities). Derived values inherit the status of their inputs. Optimization catalog values are estimated/fictional. Not retrieved: other launch-vehicle, engine, spacecraft-component, instrument and mission sources (spacex.com and api.spacexdata.com unreachable; others not attempted); those records remain unverified.
+> **Read first:** 32 records are verified (25 celestial bodies at core level; engines and stages whose core numeric fields were all checked) against retrieved JPL, NASA (NTRS, SLS page, Apollo 11 press kit), ULA and ESA pages. 198 celestial and 44 launch/engine field checks matched; 16 celestial and 13 launch/engine recalled values were wrong or outdated and were replaced by the sourced value. Launch vehicles are verified field by field only (see verified_field_count); everything not checked (e.g. Falcon, Starship, Electron, Ariane, most engines, spacecraft components, instruments, missions) is still unverified, as are two user-supplied tables. Derived values inherit the status of their inputs. Optimization catalog values are estimated/fictional. Not retrieved: Retrieved: JPL SSD planetary/satellite physical parameters, JPL approximate planet elements, JPL SBDB API, NASA NSSDC fact sheets, NASA SLS page, NASA Apollo 11 press kit and three NTRS electric-propulsion documents, ULA Atlas V/Vulcan pages and the ESA Vega-C page (see metadata/sources.json). Not retrievable or not stating the numbers: SpaceX pages (JavaScript-rendered), api.spacexdata.com (HTTP 522), Rocket Lab, Aerojet Rocketdyne (403), Blue Origin (429), Arianespace manual; those records remain unverified.
 
 
 Methods: two-body/patched-conic orbital mechanics, Tsiolkovsky rocket equation, Friis link budget, inverse-square solar flux (`tools/astro.py`). All approximations are idealizations (impulsive burns, circular coplanar orbits, no losses) and are labelled as such in the JSON.
@@ -9,7 +9,7 @@ Ideal Δv ignores gravity, drag and steering losses, so it must not be read as o
 
 | Vehicle | Ideal Δv, low (m/s) | Ideal Δv, high (m/s) |
 |---|---:|---:|
-| saturn_v | 9,132 | 9,615 |
+| saturn_v | 11,586 | 12,113 |
 | sls_b1 | 1,707 | 2,108 |
 | falcon9_b5 | 7,938 | 8,300 |
 | electron | 11,573 | 11,996 |
@@ -19,7 +19,7 @@ Ideal Δv ignores gravity, drag and steering losses, so it must not be read as o
 ## Mass accounting check (liftoff − Σ recorded stage masses)
 | Vehicle | Liftoff (kg) | Σ stages (kg) | Residual (kg) |
 |---|---:|---:|---:|
-| saturn_v | 2,970,000 | 2,826,400 | 143,600 |
+| saturn_v | 2,941,220 | 2,876,795 | 64,425 |
 | sls_b1 | 2,608,000 | 1,072,300 | 1,535,700 |
 | falcon9_b5 | 549,054 | 517,970 | 31,084 |
 | electron | 12,500 | 12,500 | 0 |

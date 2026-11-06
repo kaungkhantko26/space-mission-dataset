@@ -33,7 +33,27 @@
    "derived": {
     "dry_to_launch_mass": null,
     "propellant_plus_other_fraction": null
-   }
+   },
+   "field_verification": {
+    "launch_date": {
+     "status": "verified",
+     "source_id": "S44",
+     "source_url": "https://ntrs.nasa.gov/api/citations/19690022248/downloads/19690022248.pdf",
+     "retrieved": "2026-11-06",
+     "source_sha256": "3cce3b01294e90bedf9af742124ef657ffdf27536921ef50464cc34836526898",
+     "section": "NASA Apollo 11 Press Kit, launch schedule",
+     "source_original_text": "Apollo 11 is scheduled for launch at 9:32 a.m. EDT July 16",
+     "source_value": "1969-07-16",
+     "source_unit": "date",
+     "statement_type": "point value",
+     "tolerance_rel": 0.0,
+     "recalled_value": "1969-07-16",
+     "note": null
+    }
+   },
+   "verified_field_count": 1,
+   "unverified_fields": null,
+   "verification_scope": "partial: only the fields in field_verification were checked against a retrieved source; the record as a whole remains unverified"
   },
   {
    "id": "voyager2",

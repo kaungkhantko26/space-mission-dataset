@@ -1,0 +1,867 @@
+ <!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> <meta charset="utf-8" /> <meta content="width=device-width,initial-scale=1" name=viewport> <title>
+	Vulcan
+</title> <link rel="shortcut icon" href="/favicon.png?v=3" /> <!-- Minified Jquery Include --> <script src="/ScriptResource.axd?d=agwj-qG4Oi7k9hkvkRq2GWLafyRZG_3zG5wdkTgRtz5WuaYfsRrYd3fbRQD7ZL5zpEVV9mKfAs22LK9mAOa3jm68vJ5LI7YsptRD1Sg2w05JPkgZj9PQavcOAdO0pCVcUhSCKo9B3fLwtR2fAigRXPvMtExH1bAhJuhp696Bxnn3RzC6AWwRiQCgjAM4SapC0&amp;t=fffffffffbcbeef8" type="text/javascript"></script><script src="/ScriptResource.axd?d=ePnjFy9PuY6CB3GWMX-b_6CWmAKFlgWfwGGz0_U4jYJvh-Gk0oc9hmHtF-qeYPosOX0fXdIJvFUkwed-_pwBRzVt5uiE_OQsJVxPUEKQy7j4_6URDD3cqsOja9ltP8JKyN2YgYVUzUyKd4cH0mEOS8LXdfvAqjpItRtJoQjbC24VUtEYZVg2wSCkIQ7dijF00&amp;t=fffffffffbcbeef8" type="text/javascript"></script> <!-- Bootstrap Includes --> <!-- Latest compiled and minified CSS --> <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> <!-- Optional theme --> <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> <!-- Latest compiled and minified JavaScript --> <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> <!-- End Bootstrap includes --> <link href="/css/owl.carousel.css?package=Bootstrap" rel="stylesheet" type="text/css" /><link href="/css/owl.theme.css?package=Bootstrap" rel="stylesheet" type="text/css" /><link href="/css/owl.transitions.css?package=Bootstrap" rel="stylesheet" type="text/css" /><link href="/css/customstyles1.css?package=Bootstrap" rel="stylesheet" type="text/css" /><link href="/css/normalize.min.css?package=Bootstrap" rel="stylesheet" type="text/css" /> <!-- TypeFace Includes --> <link href="https://fonts.googleapis.com/css?family=Hind:400,500,600,700|Source+Sans+Pro:400,600,700" rel="stylesheet"> <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"> <!-- Owl Carousel Includes --> <!-- JS --> <script src="/js/js.cookie.js"></script> <script src="/js/owl.carousel.js"></script> <script src="/js/functions.js"></script> <!-- CSS --> <!-- END Owl Carousel Includes --> <!-- Custom CSS include --> <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]--> <!-- Google Tag Manager --> <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TRPDQHT');</script> <!-- End Google Tag Manager --> <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8831714-2"></script> <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-8831714-2');
+        gtag('config', 'UA-8831714-15');
+    </script> <script type="module" src="https://cdn.ai12z.net/pkg/ai12z@latest/dist/esm/library.js"></script> <link rel="stylesheet" href="https://cdn.ai12z.net/pkg/ai12z@latest/dist/library/library.css" /> <style type="text/css" media="all">@media screen and (max-width:349px){
+        .content-space-one.autoHeight
+		{
+			margin-top: 75px;
+		}
+}
+@media screen and (max-width: 500px) {
+        html, body.subpage{
+            overflow-x:hidden;
+        }
+	.subpage .textArea h2.mainSubTitle
+        {
+            font-size: 40px;
+        }
+}
+@media screen and (max-width: 768px) {
+    .logoBox {
+        top: unset;
+        bottom: auto;
+    }
+}
+
+</style><style type="text/css" media="all">.caption {
+  display: table;
+}
+.caption p {
+    display: table-caption;
+    caption-side: bottom;
+  padding: 0 30px;
+  font-size: 13px;
+}
+</style><style type="text/css" media="all">table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    border: none;
+    text-align: left;
+    padding: 8px;
+}
+.subpage table p {
+    margin-bottom: 0;
+}
+tr:nth-child(even){background-color: #f2f2f2}
+.centeredImg {
+    max-width: 100%;
+}</style><meta name="Generator" content="Sitefinity 15.0.8235.0 DX" /><link rel="canonical" href="https://www.ulalaunch.com/rockets/vulcan-centaur" /></head> <body class="subpage simpleHeader"> <div> <ai12z-bot data-key="591c11a4963ca9010dd1690a9b766ff2012d5580341dc445123b5da424643f41"></ai12z-bot> </div> <script src="/js/ai12z-badactor.js"></script> <!-- Google Tag Manager (noscript) --> <noscript> <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TRPDQHT" height="0" width="0" style="display:none;visibility:hidden"></iframe> </noscript> <!-- End Google Tag Manager (noscript) --> <script src="/ScriptResource.axd?d=agwj-qG4Oi7k9hkvkRq2GWLafyRZG_3zG5wdkTgRtz5WuaYfsRrYd3fbRQD7ZL5zpEVV9mKfAs22LK9mAOa3jm68vJ5LI7YsptRD1Sg2w05JPkgZj9PQavcOAdO0pCVcUhSCKo9B3fLwtR2fAigRXPvMtExH1bAhJuhp696Bxnn3RzC6AWwRiQCgjAM4SapC0&amp;t=fffffffffbcbeef8" type="text/javascript"></script><script src="/ScriptResource.axd?d=ePnjFy9PuY6CB3GWMX-b_6CWmAKFlgWfwGGz0_U4jYJvh-Gk0oc9hmHtF-qeYPosOX0fXdIJvFUkwed-_pwBRzVt5uiE_OQsJVxPUEKQy7j4_6URDD3cqsOja9ltP8JKyN2YgYVUzUyKd4cH0mEOS8LXdfvAqjpItRtJoQjbC24VUtEYZVg2wSCkIQ7dijF00&amp;t=fffffffffbcbeef8" type="text/javascript"></script><script src="/Frontend-Assembly/Telerik.Sitefinity.Frontend/Mvc/Scripts/Bootstrap/js/bootstrap.min.js?package=Bootstrap&amp;v=MTUuMC44MjM1LjA%3d" type="text/javascript"></script><script src="/ScriptResource.axd?d=Uf8BQcxRshYGUr_fjsqPCBz9Km73l67sLxeQSaRSV8xVS0SVsepQlmoWhebk_R1InUUeL04i1cBAKXFyN3E8NGm0gUWe4o690mEfztyrEzA4kqcZ1jNXEV0oVboa4ofCeVNw1ztoPit0JxKgmb14axkd7x9KGi2deXWlk73CUt1EjIkZv8djIMseB27Ae0tP0&amp;t=fffffffffbcbeef8" type="text/javascript"></script> <div class="sfPublicWrapper" id="PublicWrapper"> 
+
+
+
+
+<!-- Owl Carousel Includes -->
+<!-- JS -->
+<script src="/js/owl.carousel.js"></script>
+
+<div class="">
+    <header>
+        <div class="navTray">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="recentNewSlider">
+                            <div class="owl-carousel owl-theme recentNewSliderSection" id="recentNewsBox">
+
+                            </div>
+                        </div>
+
+                        <ul class="mainNavBox">
+        <li class="topLevelNav col-lg-2 col-md-3 col-sm-4 col-xs-12"><a href="/" target="_self" class="topLevelNavItem">Home</a></li>
+        <li role="presentation" data-title="missions" class="topLevelNav col-lg-2 col-md-3 col-sm-4 col-xs-12">
+            <a href="/missions" class="topLevelNavItem" target="_self">Missions</a>
+            <ul class="subNavLink">
+                            <li>
+                <a tabindex="-1" href="/missions/next-launch" target="_self">
+                    Next Launch
+                </a>
+                <ul class="dropdown-menu">
+                                <li><a tabindex="-1" class="" href="/missions/next-launch/vulcan-leo-1" target="_self">Vulcan Leo 1</a></li>
+
+                </ul>
+            </li>
+            <li><a tabindex="-1" class="" href="/missions/commercial-crew" target="_self">Commercial Crew</a></li>
+
+            </ul>
+        </li>
+        <li role="presentation" data-title="rockets" class="topLevelNav col-lg-2 col-md-3 col-sm-4 col-xs-12">
+            <a href="/rockets" class="topLevelNavItem" target="_self">Rockets</a>
+            <ul class="subNavLink">
+                            <li><a tabindex="-1" class="active" href="/rockets/vulcan-centaur" target="_self">Vulcan</a></li>
+            <li><a tabindex="-1" class="" href="/rockets/atlas-v" target="_self">Atlas V</a></li>
+
+            </ul>
+        </li>
+        <li role="presentation" data-title="explore" class="topLevelNav col-lg-2 col-md-3 col-sm-4 col-xs-12">
+            <a href="/explore" class="topLevelNavItem" target="_self">Explore</a>
+            <ul class="subNavLink">
+                            <li><a tabindex="-1" class="" href="https://blog.ulalaunch.com/blog" target="_self">Blog</a></li>
+            <li><a tabindex="-1" class="" href="/explore/downloads" target="_self">Downloads </a></li>
+            <li><a tabindex="-1" class="" href="https://www.flickr.com/photos/ulalaunch/" target="_blank">Photos </a></li>
+            <li><a tabindex="-1" class="" href="https://www.youtube.com/unitedlaunchalliance" target="_blank">Videos </a></li>
+            <li><a tabindex="-1" class="" href="/explore/podcasts" target="_self">Podcasts </a></li>
+            <li><a tabindex="-1" class="" href="/explore/rocket-science" target="_self">Rocket Science</a></li>
+            <li><a tabindex="-1" class="" href="/explore/intern-rockets" target="_self">Intern Rockets</a></li>
+
+            </ul>
+        </li>
+        <li class="topLevelNav col-lg-2 col-md-3 col-sm-4 col-xs-12"><a href="/launch-services" target="_self" class="topLevelNavItem">Launch Services</a></li>
+        <li role="presentation" data-title="about ula" class="topLevelNav col-lg-2 col-md-3 col-sm-4 col-xs-12">
+            <a href="/about" class="topLevelNavItem" target="_self">About ULA</a>
+            <ul class="subNavLink">
+                            <li><a tabindex="-1" class="" href="/about/leadership" target="_self">Leadership</a></li>
+            <li><a tabindex="-1" class="" href="/about/launch-partners" target="_self">Launch Partners</a></li>
+            <li><a tabindex="-1" class="" href="https://newsroom.ulalaunch.com/" target="_self">Newsroom</a></li>
+            <li><a tabindex="-1" class="" href="/about/rocketship" target="_self">RocketShip</a></li>
+            <li>
+                <a tabindex="-1" href="/about/heritage-rockets" target="_self">
+                    Heritage Rockets
+                </a>
+                <ul class="dropdown-menu">
+                                <li><a tabindex="-1" class="" href="/about/heritage-rockets/delta-iv" target="_self">Delta IV</a></li>
+            <li><a tabindex="-1" class="" href="/about/heritage-rockets/delta-ii" target="_self">Delta II</a></li>
+
+                </ul>
+            </li>
+
+            </ul>
+        </li>
+        <li role="presentation" data-title="careers" class="topLevelNav col-lg-2 col-md-3 col-sm-4 col-xs-12">
+            <a href="https://jobs.ulalaunch.com/?utm_source=careersite" class="topLevelNavItem" target="_blank">Careers</a>
+            <ul class="subNavLink">
+                            <li><a tabindex="-1" class="" href="/careers/internships" target="_self">Internships</a></li>
+            <li><a tabindex="-1" class="" href="/careers/military-and-veterans" target="_self">Military and Veterans</a></li>
+
+            </ul>
+        </li>
+        <li role="presentation" data-title="resources" class="topLevelNav col-lg-2 col-md-3 col-sm-4 col-xs-12">
+            <a href="/resources" class="topLevelNavItem" target="_self">Resources</a>
+            <ul class="subNavLink">
+                            <li><a tabindex="-1" class="" href="/resources/doing-business-with-ula" target="_self">Doing Business with ULA</a></li>
+            <li><a tabindex="-1" class="" href="/resources/benefits-contacts" target="_self">Benefits Contacts </a></li>
+            <li><a tabindex="-1" class="" href="https://ula.motivelms.com/" target="_blank">Customer Training</a></li>
+
+            </ul>
+        </li>
+        <li class="topLevelNav col-lg-2 col-md-3 col-sm-4 col-xs-12"><a href="/shop" target="_self" class="topLevelNavItem">Shop </a></li>
+        <li class="topLevelNav col-lg-2 col-md-3 col-sm-4 col-xs-12"><a href="/contact-ula" target="_self" class="topLevelNavItem">Contact ULA</a></li>
+                            <li class="topLevelNav col-lg-2 col-md-3 col-sm-4 col-xs-12">
+                                <div class="social-links">
+                                    <a class="social-links__link" href="https://www.youtube.com/unitedlaunchalliance" target="_blank" rel="noopener">
+                                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" aria-labelledby="Link to Youtube" role="img"><title id="youtube1">Follow us on Facebook</title><g id="youtube1_layer"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></g></svg>
+                                    </a>
+                                    <a class="social-links__link" href="https://www.instagram.com/ulalaunch/" target="_blank" rel="noopener">
+                                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-labelledby="Link to Instagram" role="img"><title id="instagram2">Follow us on Instagram</title><g id="instagram2_layer"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></g></svg>
+                                    </a>
+                                    <a class="social-links__link" href="https://www.linkedin.com/company/ulalaunch/" target="_blank" rel="noopener">
+                                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-labelledby="Link to Linkedin" role="img"><title id="linkedin-in3">Follow us on LinkedIn</title><g id="linkedin-in3_layer"><path d="M100.3 480H7.4V180.9h92.9V480zM53.8 140.1C24.1 140.1 0 115.5 0 85.8 0 56.1 24.1 32 53.8 32c29.7 0 53.8 24.1 53.8 53.8 0 29.7-24.1 54.3-53.8 54.3zM448 480h-92.7V334.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V480h-92.8V180.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V480z"></path></g></svg>
+                                    </a>
+                                    <a class="social-links__link custom-image" href="https://x.com/ulalaunch" target="_blank" rel="noopener">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-twitter-x" height="25" width="25" viewBox="0 0 16 16" aria-label="Link to X (formerly Twitter)">
+                                            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"></path>
+                                        </svg>
+                                    </a>
+                                    <a class="social-links__link" href="https://www.facebook.com/ulalaunch" target="_blank" rel="noopener">
+                                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 512" aria-labelledby="Link to Facebook" role="img"><title id="facebook-f4">Follow us on Facebook</title><g id="facebook-f4_layer"><path d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229"></path></g></svg>
+                                    </a>
+                                    <a class="social-links__link" href="https://flickr.com/photos/ulalaunch/" target="_blank" rel="noopener">
+                                        <svg class="svg-icon" style="width: 2em; height: 2em;vertical-align: middle;fill: #002F6C;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M512 996.693333C245.76 996.693333 27.306667 778.24 27.306667 512 27.306667 245.76 245.76 27.306667 512 27.306667c266.24 0 484.693333 218.453333 484.693333 484.693333C996.693333 778.24 778.24 996.693333 512 996.693333zM512 78.506667C273.066667 78.506667 78.506667 273.066667 78.506667 512S273.066667 945.493333 512 945.493333 945.493333 750.933333 945.493333 512 750.933333 78.506667 512 78.506667z" /><path d="M655.36 512m-129.706667 0a3.8 3.8 0 1 0 259.413333 0 3.8 3.8 0 1 0-259.413333 0Z" /><path d="M368.64 512m-129.706667 0a3.8 3.8 0 1 0 259.413333 0 3.8 3.8 0 1 0-259.413333 0Z" /></svg>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" style="padding: 0;">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="outer-container">
+                        <div id="nav-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <div class="title">MENU</div>
+                        </div>
+
+                        <div class="searchIcon">
+                            <a href="javascript:;" class="searchToggle">
+                                <span><i class="fa fa-search fa-3x" aria-hidden="true"></i></span>
+                                <span class="title">Search</span>
+                            </a>
+                        </div>                    
+                    </div>
+
+                    <div class="searchBox" id="searchBoxContainer">                   
+                    </div>
+
+                    <a href="#" class="scrollup"><img src="/img/arrow_up.png" alt="scroll to top icon" style="display:block;" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="gradientBox bottom"></div>
+    </header>    
+</div>
+
+
+
+
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$('#nav-icon').click(function(){
+		$(this).toggleClass('open');
+		$(".navTray").toggleClass('open');
+		$("header").toggleClass('open');
+		$(".logoBox").toggleClass('closed');
+		easeMenu();
+	});
+
+	$('.searchToggle').click(function(){
+		$("header").toggleClass('search');
+		easeSearch();
+	});
+
+    $(window).scroll(function () {
+    	var scrollTop = $(this).scrollTop();
+
+    	if ($(".staticScrollWatch").length) {
+    	    if ($(window).width() > 350) {
+    	        $('.background1, .logoBox.header').each(function () {
+    	            var topDistance = $(this).offset().top;
+    	            var top2Distance = $(".staticScrollWatch").offset().top;
+    	            var distanceAdjust = parseInt(top2Distance) - 100;
+
+    	            if (distanceAdjust < scrollTop) {
+    	                if ($(".fixed").length) {
+    	                    //Do Nothing
+    	                } else {
+    	                    $(".logoBox.header").addClass("fixed");
+    	                    //console.log("fix added")
+    	                }
+    	            }
+
+    	            if (distanceAdjust > scrollTop) {
+    	                if ($(".fixed").length) {
+    	                    $(".logoBox.header").removeClass("fixed");
+    	                } else {
+    	                    //Do Nothing
+    	                }
+    	            }
+    	            // staticScrollWatch
+    	        });
+    	    }
+    	}
+
+	    if ($(".fixed").length) {
+	        $('.scrollup').fadeIn();
+	        $("header").addClass("scrolledHeader");
+	    } else {
+	        $('.scrollup').fadeOut();
+	        $("header").removeClass("scrolledHeader");
+	    }
+    });
+
+    if ($(window).width() < 350) {
+        $(".logoBox.header").addClass("fixed");
+        $("header").addClass("scrolledHeader");
+    }
+    $(window).resize(function () {
+        if ($(window).width() < 350) {
+            $(".logoBox.header").addClass("fixed");
+            $("header").addClass("scrolledHeader");
+        }
+        else {
+            $(".logoBox.header").removeClass("fixed");
+            $("header").removeClass("scrolledHeader");
+        }
+    });
+
+	$('.scrollup').click(function () {
+	    $("html, body").animate({
+	        scrollTop: 0
+	    }, 600);
+	    return false;
+	});
+
+    updateHeaderNews();
+});
+
+//Misc Function Declarations
+var incrementerCheck = 0;
+function easeMenu() {
+	if($('.navTray').css('opacity') == 0) {
+    	$('.navTray').css( 'opacity', "1" );
+	}else{
+		$('.navTray').css( 'opacity', "0" );
+	}
+}
+
+function easeSearch() {
+	if($('.searchBox').css('opacity') == 0) {
+    	$('.searchBox').css( 'opacity', "1" );
+	}else{
+		$('.searchBox').css( 'opacity', "0" );
+	}
+}
+
+function updateHeaderNews() {
+	incrementerCheck++;
+
+    if ($("#headerNavigationLinkElements").length) {
+        var NewsContentPull = $("#headerNavigationLinkElements>div").detach();
+
+        NewsContentPull.appendTo("#recentNewsBox");
+    } else {
+        if(incrementerCheck < 6) {
+            console.log("entered increment check if " + incrementerCheck);
+        	setTimeout(function(){updateHeaderNews()},500);
+        }
+    }
+
+    if ($("#headerNavigationLinkSearch").length) {
+        var SearchContentPull = $("#headerNavigationLinkSearch").detach();
+
+        SearchContentPull.appendTo("#searchBoxContainer");
+    }
+}
+
+function runOwlCarousel() {
+    if ($('.recentNewSliderSection').length) {
+        $('.recentNewSliderSection').owlCarousel({
+            loop: true,
+            margin: 0,
+            nav: true,
+            autoplay: true,
+            autoplayHoverPause: true,
+            singleItem: true
+        });
+    }
+}
+
+$.when(updateHeaderNews()).done(function () {
+    setTimeout(function () { runOwlCarousel() }, 500);
+});
+
+$(function () {
+    /*
+	--------------------------------------------------------------------------------
+		Floating Labels
+	--------------------------------------------------------------------------------
+	*/
+
+    $('input, select, textarea').bind('checkval', function () {
+
+        var floatLabel = $(this).parent('.float-field');
+
+        if (this.value !== '') {
+            floatLabel.addClass('active');
+        } else {
+            floatLabel.removeClass('active');
+        }
+
+    }).on('change', function () {
+
+        $(this).trigger('checkval');
+
+    }).on('keyup', function () {
+
+        $(this).trigger('checkval');
+
+    }).on('focus', function () {
+
+        $(this).parent('.float-field').addClass('on');
+
+    }).on('blur', function () {
+
+        $(this).parent('.float-field').removeClass('on');
+
+    }).trigger('checkval');
+
+    /*
+	--------------------------------------------------------------------------------
+		Auto expanding Textarea
+	--------------------------------------------------------------------------------
+	*/
+
+
+    $('.float-textarea').each(function () {
+        var floatarea = $(this), textarea = floatarea.children('textarea');
+
+        textarea.on('input', function () {
+            floatarea.css('min-height', this.scrollHeight);
+            this.rows = 1;
+            rows = this.scrollHeight / parseInt(textarea.css('line-height'));
+            this.rows = rows;
+            floatarea.css('min-height', 0);
+        });
+
+        $(window).resize(function () {
+            textarea.trigger('input');
+        });
+    });
+});
+
+</script>
+
+ 
+
+
+<div class="content-space-one autoHeight" style="background: url('/images/default-source/default-album/vc_cert1_l13.jpg') no-repeat center center; background-size: cover;">
+        <video autoplay muted loop playsinline class="position-absolute w-100 h-100 object-fit-cover" style="top: 0; left: 0; z-index: 0;">
+            <source src="/videos/default-source/default-video-library/250818_vulcanvideo_website_2.mp4?sfvrsn=668c4efa_0" type="video/mp4" />
+        </video>
+    <div class="text-center">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="hpContentBox col-lg-6 col-md-8 col-sm-10 col-xs-12" style="background: transparent;">
+
+                        <h1>Vulcan</h1>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="logoBox header">
+    <div class="gradientBox top"></div>
+    <a href="/">
+        <img src="/img/ULA_Logo.png" alt="logo">
+    </a>
+    <div class="gradientBox bottom"></div>
+</div>
+<div class="content-block-one staticScrollWatch"></div><div class="outer-container mainContent">
+    <div class="container">
+        <div id="Body_C004_Col00" class="sf_colsIn row" data-sf-element="Container Row" data-placeholder-label="Container Row"><div id="Body_C006_Col00" class="sf_colsIn textArea col-md-6 col-sm-6 col-xs-12" data-sf-element="50% Column" data-placeholder-label="50% Column">
+
+
+
+<h2 class="mainSubTitle">Innovative.<br />Performance.<br />Precision.</h2> <div class="row" data-sf-element="Row">
+    <div id="Body_C145_Col00" class="sf_colsIn col-xs-3" data-sf-element="Column 1" data-placeholder-label="Column 1">
+
+        <img loading="lazy" src="/images/default-source/default-album/vulcan_art_nowords.jpg?sfvrsn=4474ba8a_4" title="Vulcan_ART_nowords" alt="Vulcan_ART_nowords"
+         
+          />
+
+    </div>
+    <div id="Body_C145_Col01" class="sf_colsIn col-xs-9" data-sf-element="Column 2" data-placeholder-label="Column 2">
+    </div>
+</div>
+<div class="row" data-sf-element="Row">
+    <div id="Body_C143_Col00" class="sf_colsIn col-md-4" data-sf-element="Column 1" data-placeholder-label="Column 1">
+    </div>
+    <div id="Body_C143_Col01" class="sf_colsIn col-md-8" data-sf-element="Column 2" data-placeholder-label="Column 2">
+    </div>
+</div>
+
+
+</div>
+
+<div id="Body_C006_Col01" class="sf_colsIn textArea col-md-6 col-sm-6 col-xs-12" data-sf-element="50% Column" data-placeholder-label="50% Column">
+
+
+
+<h2>Vulcan &ndash; redefining what is possible in space.  <br></h2><ul style="padding:30px 0px 0px 20px;"><li><p>Provides higher performance and greater accessibility while continuing to deliver unmatched reliability and precision across national security, civil and commercial markets.  <br></p></li><li><p>Vulcan&rsquo;s Centaur V upper stage offers flexibility and extreme endurance enabling the most complex orbital insertions to the most challenging and exotic orbits.</p></li><li><p>Evolutionary design coupled with innovative technology provides one scalable system for all missions.</p></li><li style="list-style:none;"><p><a style="margin-top:0;" href="https://www.flickr.com/photos/ulalaunch/albums/72157700232931891" class="btnDisplay" data-sf-ec-immutable="">Vulcan Photos</a></p><p>&nbsp;</p></li></ul> 
+    
+</div>
+        
+        </div>
+    </div>
+</div>
+<div class="outer-container mainContent">
+    <div class="container">
+        <div id="Body_C030_Col00" class="sf_colsIn row" data-sf-element="Container Row" data-placeholder-label="Container Row"><div id="Body_C031_Col00" class="sf_colsIn textArea col-md-12 col-sm-12 col-xs-12" data-sf-element="100% Column" data-placeholder-label="100% Column">
+
+
+
+<span class="decLine"></span><h2 style="color:#002F6C;">CONFIGURATIONS <br /></h2> 
+
+
+
+<p>Vulcan is available in four standard offering configurations including zero, two, four and six solid rocket booster (SRB) variants.</p> 
+
+        <img loading="lazy" class="centeredImg" src="/images/default-source/default-album/vulcan_expanded-2022.jpg?sfvrsn=6e460292_2" title="Vulcan Centaur Expanded View" alt="Vulcan Centaur Expanded View"
+         
+          />
+<div id="Body_C089_Col00" class="sf_colsIn textArea col-md-12 col-sm-12 col-xs-12" data-sf-element="100% Column" data-placeholder-label="100% Column">
+
+</div>
+
+</div>
+        
+        </div>
+    </div>
+</div>
+<div class="outer-container mainContent">
+    <div class="container">
+        <div id="Body_C041_Col00" class="sf_colsIn row" data-sf-element="Container Row" data-placeholder-label="Container Row"><div id="Body_C042_Col00" class="sf_colsIn textArea col-md-12 col-sm-12 col-xs-12" data-sf-element="100% Column" data-placeholder-label="100% Column">
+
+
+
+<span class="decLine"></span><h2 style="color:#002F6C;">PERFORMANCE <br /></h2> 
+
+
+
+<p>Optimal orbit for each customer, delivering industry best spacecraft orbital insertion accuracy.</p> 
+
+
+
+<div style="overflow-x:auto;padding:20px 0px;"><table style="width:838px;"><tbody><tr style="height:16.666666666666668%;"><td style="width:86px;">&nbsp;</td><td style="width:12.6794%;"><p style="text-align:center;"><strong>GEO</strong><strong><br /></strong></p></td><td style="width:12.9187%;"><p style="text-align:center;"><strong>GTO</strong><strong><br /></strong></p></td><td style="width:13.2775%;"><p style="text-align:center;"><strong>LEO</strong><strong>-REF<br /></strong></p></td><td style="width:13.6364%;"><p style="text-align:center;"><strong>LEO-ISS</strong><strong></strong></p></td><td style="width:14.1148%;"><p style="text-align:center;"><strong>LEO-POLAR</strong><strong></strong></p></td><td style="width:11.0048%;"><p style="text-align:center;"><strong>MEO</strong><strong></strong></p></td><td style="width:12.0813%;"><p style="text-align:center;"><strong>TLI</strong><strong></strong></p></td></tr><tr style="height:16.6268%;"><td style="width:10.2871%;"><p style="text-align:center;"><strong>0 Solids <br /></strong></p><br /></td><td style="width:106px;text-align:center;"><p>N/A</p></td><td style="width:12.9187%;text-align:center;"><p>3,500 kg<br />7,700 lbs<br /></p></td><td style="width:13.2775%;text-align:center;"><p>10,800 kg <br />23,800 lbs</p></td><td style="width:13.6364%;text-align:center;"><p>9,200 kg<br />20,300 lbs </p></td><td style="width:14.1148%;text-align:center;"><p>8,500 kg</p><p>18,700 lbs</p></td><td style="width:11.0048%;text-align:center;"><p>N/A</p><p>&nbsp;</p></td><td style="width:12.0813%;text-align:center;"><p>2,300 kg</p><p>5,100 lbs</p></td></tr><tr style="height:16.6268%;"><td style="width:10.2871%;text-align:center;"><p style="text-align:center;"><strong>2 Solids <br /></strong></p></td><td style="width:12.6794%;text-align:center;"><p>2,600 kg<br />5,700 lbs<br /></p></td><td style="width:12.9187%;text-align:center;"><p>8,400 kg<br />18,500 lbs<br /></p></td><td style="width:13.2775%;text-align:center;"><p>19,000 kg<br />41,900 lbs</p></td><td style="width:13.6364%;text-align:center;"><p>16,300 kg<br />35,900 lbs</p></td><td style="width:14.1148%;text-align:center;"><p>15,200 kg<br />33,500 lbs<br /></p></td><td style="width:11.0048%;text-align:center;"><p>3,900 kg</p><p>8,600 lbs</p></td><td style="width:12.0813%;text-align:center;"><p>6,300 kg</p><p>13,900 lbs</p></td></tr><tr style="height:16.6268%;"><td style="width:10.2871%;text-align:center;"><p style="text-align:center;"><strong>4 Solids <br /></strong></p></td><td style="width:12.6794%;text-align:center;"><p>4,900 kg<br />10,800 lbs<br /></p></td><td style="width:12.9187%;text-align:center;"><p>11,700 kg<br />25,800 lbs<br /></p></td><td style="width:13.2775%;text-align:center;"><p>24,600 kg<br />54,200 lbs</p></td><td style="width:13.6364%;text-align:center;"><p>21,600 kg<br />47,600 lbs</p></td><td style="width:14.1148%;text-align:center;"><p>20,000 kg<br />44,100 lbs<br /></p></td><td style="width:11.0048%;text-align:center;"><p>6,200 kg</p><p>13,700 lbs</p></td><td style="width:12.0813%;text-align:center;"><p>9,200 kg</p><p>20,300 lbs</p></td></tr><tr style="height:16.6268%;"><td style="width:10.2871%;text-align:center;"><p style="text-align:center;"><strong>6 Solids<br /></strong></p></td><td style="width:12.6794%;text-align:center;"><p>6,500 kg<br />14,300 lb <br <="" p="" /></p></td><td style="width:12.9187%;text-align:center;"><p>14,500 kg<br />32,000 lbs</p></td><td style="width:13.2775%;text-align:center;"><p>27,200 kg<br />60,000 lbs</p></td><td style="width:13.6364%;text-align:center;"><p>25,800 kg <br />56,900 lbs</p></td><td style="width:14.1148%;text-align:center;"><p>23,900 kg<br />52,700 lbs</p></td><td style="width:11.0048%;text-align:center;"><p>8,100 kg</p><p>17,900 lbs</p></td><td style="width:12.0813%;text-align:center;"><p>11,500 kg</p><p>25,400 lbs</p></td></tr><tr style="height:16.6268%;"><td style="width:10.2871%;text-align:center;"><p style="text-align:center;"><strong>Upgrade<br /></strong></p></td><td style="width:12.6794%;text-align:center;"><p>7,000 kg<br />15,400 lbs<br /></p></td><td style="width:12.9187%;text-align:center;"><p>15,300 kg<br />33,700 lbs</p></td><td style="width:13.2775%;text-align:center;"><p>27,200 kg<br />60,000 lbs<br /></p></td><td style="width:13.6364%;text-align:center;"><p>26,900 kg<br />59,300 lbs </p></td><td style="width:14.1148%;text-align:center;"><p>24,900 kg<br />54,900 lbs<br /></p></td><td style="width:11.0048%;text-align:center;"><p>8,600 kg</p><p>19,000 lbs</p></td><td style="width:12.0813%;text-align:center;"><p>12,100 kg</p><p>26,700 lbs</p></td></tr></tbody></table><p>GEO (Geosynchronous Earth Orbit) = 35,786 km circular at 0 deg <br />GTO (Geosynchronous Transfer Orbit) = 35,786 km x 185 km at 27.0 deg <br />LEO-Reference (Low Earth Orbit-Reference) = 200 km circular at 28.7 deg <br />LEO-ISS (Low Earth Orbit-International
+        Space Station) = 407 km circular at 51.6 deg <br />LEO-Polar (Low Earth Orbit-Polar) = 200 km circular at 90 deg<br />MEO (Medium Earth Orbit) = 20,368 km circular at 55 deg <br />TLI (Trans-lunar Injection) = C3: -2 km2/sec2</p><p>&nbsp;</p></div> 
+
+        <img loading="lazy" class="centeredImg" src="/images/default-source/default-album/vc_flightconfig.jpg?sfvrsn=83b9a5df_0" title="VC_FlightConfig" alt="Vulcan Centaur Flight Configuration Key"
+         
+          />
+
+
+
+
+ 
+
+</div>
+        
+        </div>
+    </div>
+</div>
+<div class="outer-container mainContent">
+    <div class="container">
+        <div id="Body_C096_Col00" class="sf_colsIn row" data-sf-element="Container Row" data-placeholder-label="Container Row"><div id="Body_C097_Col00" class="sf_colsIn textArea col-md-12 col-sm-12 col-xs-12" data-sf-element="100% Column" data-placeholder-label="100% Column">
+
+
+
+<span class="decLine"></span><h2 style="color:#002F6C;">PAYLOAD FAIRINGS<br /></h2> 
+
+
+
+<p>The payload fairing (PLF) provides a controlled, safe environment for spacecraft during ascent. All ULA PLFs are configured for off-pad payload encapsulation to enhance payload safety and security and minimize on-pad time.<br /><br />The spacecraft is
+    encapsulated in a 5.4-m- (17.7-ft-) diameter payload fairing (PLF), a sandwich composite structure made with a vented aluminum-honeycomb core and graphite-epoxy face sheets. The bisector (two-piece shell) PLF encapsulates the spacecraft. The payload
+    attach fitting (PAF) is a similar sandwich composite structure creating the mating interface from spacecraft to second stage and payload fairing. The PLF separates using a debris-free horizontal and vertical separation system with spring packs and
+    frangible joint assembly. The payload fairing is available in the 15.5-m (51-ft) standard and 21.3-m (70-ft) long configurations.<strong><br /><br />Multi-Manifest </strong><br />Access to orbit remains a critical hurdle for many missions. However, ULA provides&nbsp;flexible and cost-effective&nbsp;multi-manifest solutions to overcome this barrier. With multi-manifest, two or more spacecraft are integrated on a launch vehicle using available performance and volume margin that would otherwise go unused &mdash; optimizing mass to orbit and enabling missions. Multi-Manifest on a Vulcan rocket provides a highly reliable and schedule certain launch solution for spacecraft ranging from CubeSats to small sats and beyond.<br /><br />Dependent on the size of the spacecraft, multi-manifesting on a Vulcan can be done in several ways. The Aft Bulkhead Carrier (ABC) interfaces at the aft end of the Centaur upper stage and can carry up to 24U CubeSats weighing 80 kg each. The Secondary Payload Adapter (ESPA Ring) is located between the upper stage and the primary payload and can accommodate 4-6 payload modules weighing up to 318 kg each. Finally, for small satellites exceeding the mass of an ESPA capability, the Multi-Payload Canister System is a load-bearing separating canister that can be utilized to enclose an aft small satellite while supporting a forward traditional large satellite.<br /></p> 
+
+        <img loading="lazy" class="centeredImg" src="/images/default-source/default-album/201020_multilaunchdiagramulalaunchwebsite-01e1e648006ba646259b2ca60dddb96fe6.jpg?sfvrsn=2c400ec3_4" title="Vulcan Centaur Multi Launch Diagram" alt="Vulcan Centaur Multi Launch Diagram"
+         
+          />
+
+
+</div>
+        
+        </div>
+    </div>
+</div>
+<div class="outer-container mainContent">
+    <div class="container">
+        <div id="Body_C103_Col00" class="sf_colsIn row" data-sf-element="Container Row" data-placeholder-label="Container Row"><div id="Body_C104_Col00" class="sf_colsIn textArea col-md-12 col-sm-12 col-xs-12" data-sf-element="100% Column" data-placeholder-label="100% Column">
+
+
+
+<span class="decLine"></span><h2 style="color:#002F6C;">PROPULSION <br /></h2> 
+
+</div>
+
+
+
+<div class="col-md-8 col-sm-8 col-xs-12"><h3>Main Engine</h3><p>Booster propulsion is provided by a pair of BE-4 engines, manufactured by Blue Origin. <br /></p></div><div class="specDetails col-md-4 col-sm-4 col-xs-12"><ul style="padding:55px 0px 30px;"><li><p style="margin-bottom:0px;"><strong>Nominal Thrust (sea level):</strong> 550,000 lbs<strong></strong></p></li><li><p style="margin-bottom:0px;"><strong>Fuel/Oxidizer:</strong> Liquefied Natural Gas (LNG)/Liquid Oxygen (LO2)</p></li></ul></div><div class="col-md-8 col-sm-8 col-xs-12"><h3>Solid Rocket Boosters</h3><p>Vulcan integrates up to six Northrop Grumman Graphite Epoxy Motor (GEM) 63XL Solid Rocket Boosters (SRBs). They are constructed out of a graphite-epoxy composite with the throttle profile designed into the propellant grain. <br /></p></div><div class="specDetails col-md-4 col-sm-4 col-xs-12"><ul style="padding:55px 0px 30px;"><li><p style="margin-bottom:0px;"><strong>Peak Vacuum Thrust:</strong> 459,600 lbs<strong></strong><br /></p></li><li><p style="margin-bottom:0px;"><strong>Length:&nbsp;</strong>71.8 ft <br /><strong></strong></p></li><li><p style="margin-bottom:0px;"><strong>Nominal Burn Time:</strong> 90 seconds</p></li></ul></div><div class="col-md-8 col-sm-8 col-xs-12"><h3>Upper Stage</h3><p>Vulcan relies on two RL10C engines to power its second stage. Logging an impressive record of over 500 successful flights and more than 800 firings in space, RL10 engines, manufactured by L3Harris harness the power of high-energy liquid hydrogen. The RL10 boasts a precision control system and restart capability to accurately place payloads into orbit.
+ <br /><br /></p></div><div class="specDetails col-md-4 col-sm-4 col-xs-12"><ul style="padding:55px 0px 30px;"><li><p style="margin-bottom:0px;"><strong>Nominal Thrust:</strong> 24,000 lbs<strong></strong><br /></p></li><li><p style="margin-bottom:0px;"><strong>Fuel/Oxidizer:</strong> Liquid Hydrogen/Liquid Oxygen<strong></strong></p></li></ul></div> 
+        
+        </div>
+    </div>
+</div>
+<div class="outer-container mainContent">
+    <div class="container">
+        <div id="Body_C106_Col00" class="sf_colsIn row" data-sf-element="Container Row" data-placeholder-label="Container Row"><div id="Body_C107_Col00" class="sf_colsIn textArea col-md-12 col-sm-12 col-xs-12" data-sf-element="100% Column" data-placeholder-label="100% Column">
+
+
+
+ 
+
+
+
+ 
+
+</div>
+        
+        </div>
+    </div>
+</div>
+<div class="outer-container mainContent">
+    <div class="container">
+        <div id="Body_C060_Col00" class="sf_colsIn row" data-sf-element="Container Row" data-placeholder-label="Container Row"><div class="outer-container mainContent">
+    <div class="container">
+        <div class="row highlightArea">
+            <div id="Body_C083_Col00" class="sf_colsIn col-md-12 col-sm-12 col-xs-12" data-sf-element="Section Title" data-placeholder-label="Section Title">
+
+
+
+<span class="decLine"></span><h2 style="color:#002F6C;">Downloads</h2> 
+                
+            </div>
+            <div id="Body_C083_Col01" class="sf_colsIn textArea col-md-4 col-sm-4 col-xs-12" data-sf-element="33% Column" data-placeholder-label="33% Column">
+
+
+
+<p><a href="https://www.ulalaunch.com/docs/default-source/default-document-library/2023_vulcan_user_guide.pdf?sfvrsn=37856b50_1" title="2023_vulcan_user_guide" data-sf-ec-document-immutable="true" target="_blank">Vulcan User's Guide</a></p> 
+
+
+
+<p><a target="_blank" href="https://www.ulalaunch.com/docs/default-source/rockets/commericalvulcan.pdf?sfvrsn=95a92aaf_7">Vulcan Commercial Launch Services</a> </p> 
+
+            </div>
+            <div id="Body_C083_Col02" class="sf_colsIn textArea col-md-4 col-sm-4 col-xs-12" data-sf-element="33% Column" data-placeholder-label="33% Column">
+
+
+
+<p><a href="https://www.ulalaunch.com/docs/default-source/rockets/atlas-v-and-delta-iv-technical-summary.pdf" target="_blank">ULA Rocket Rundown</a></p> 
+
+            </div>
+            <div id="Body_C083_Col03" class="sf_colsIn textArea col-md-4 col-sm-4 col-xs-12" data-sf-element="33% Column" data-placeholder-label="33% Column">
+
+
+
+<p><a target="_blank" href="https://www.ulalaunch.com/docs/default-source/rockets/vulcancentaur.pdf?sfvrsn=10d7f58f_10">Vulcan Cutaway Poster</a></p><br> 
+
+            </div>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    </div>
+</div>
+<div class="outer-container mainContent">
+    <div class="container">
+        <div class="row highlightArea">
+            <div id="Body_C021_Col00" class="sf_colsIn col-md-12 col-sm-12 col-xs-12" data-sf-element="Section Title" data-placeholder-label="Section Title">
+                
+            </div>
+            <div id="Body_C021_Col01" class="sf_colsIn textArea col-md-4 col-sm-4 col-xs-12" data-sf-element="33% Column" data-placeholder-label="33% Column">
+
+
+
+<h2 style="color:#002F6C;">Atlas V</h2> 
+
+        <img loading="lazy" src="/images/default-source/default-album/atlasv_header.jpg?sfvrsn=c33425cf_0" title="LaunchVehicles_AtlasVLargeHeader" alt="LaunchVehicles_AtlasVLargeHeader"
+         
+          />
+
+
+
+
+<a href="https://www.ulalaunch.com/rockets/atlas-v" target="_blank" data-sf-ec-immutable="" class="btnDisplay">Learn more</a> 
+
+            </div>
+            <div id="Body_C021_Col02" class="sf_colsIn textArea col-md-4 col-sm-4 col-xs-12" data-sf-element="33% Column" data-placeholder-label="33% Column">
+
+
+
+<h2 style="color:#002F6C;">Delta IV</h2> 
+
+        <img loading="lazy" src="/images/default-source/default-album/rockets_deltaiv_header.jpg?sfvrsn=a64a895e_0" title="LaunchVehicles_DIVLargeHeader" alt="LaunchVehicles_DIVLargeHeader"
+         
+          />
+
+
+
+
+<a href="https://www.ulalaunch.com/rockets/delta-iv" target="_blank" data-sf-ec-immutable="" class="btnDisplay">Learn more</a> 
+
+            </div>
+            <div id="Body_C021_Col03" class="sf_colsIn textArea col-md-4 col-sm-4 col-xs-12" data-sf-element="33% Column" data-placeholder-label="33% Column">
+
+
+
+<h2 style="color:#002F6C;">Delta II</h2> 
+
+        <img loading="lazy" src="/images/default-source/default-album/launchvehicles_diilargeheader.jpg?sfvrsn=6f1242b7_2" title="LaunchVehicles_DIILargeHeader" alt="LaunchVehicles_DIILargeHeader"
+         
+          />
+
+
+
+
+<a href="https://www.ulalaunch.com/rockets/delta-ii" target="_blank" data-sf-ec-immutable="" class="btnDisplay">Learn more</a> 
+
+            </div>
+        </div>
+    </div>
+</div><div class="outer-container mainContent" id="supportBox">
+    <div class="container">
+        <div id="Body_C080_Col00" class="sf_colsIn row" data-sf-element="Container Row" data-placeholder-label="Container Row">
+
+
+<div id="headerNavigationLinkSearch" class="form-inline">
+    <div class="form-group">
+        <input type="search" title="Search input" placeholder="Search" id="528cb920-6993-4722-98b2-3cef2b8980b6" class="form-control" value=""/>
+    </div>
+    <button type="button" class="btnDisplay" id="b1dc649e-31f6-4506-95f3-d5679bcfb6bb">Search</button>
+	
+	<input type="hidden" data-sf-role="resultsUrl" value="/search-results" />
+    <input type="hidden" data-sf-role="indexCatalogue" value="all-search" />
+    <input type="hidden" data-sf-role="wordsMode" value="AllWords" />
+    <input type="hidden" data-sf-role="disableSuggestions" value='false' />
+    <input type="hidden" data-sf-role="minSuggestionLength" value="3" />
+    <input type="hidden" data-sf-role="suggestionFields" value="Title,Content" />
+    <input type="hidden" data-sf-role="language" value="en" />
+    <input type="hidden" data-sf-role="suggestionsRoute" value="/restapi/search/suggestions" />
+    <input type="hidden" data-sf-role="searchTextBoxId" value='#528cb920-6993-4722-98b2-3cef2b8980b6' />
+    <input type="hidden" data-sf-role="searchButtonId" value='#b1dc649e-31f6-4506-95f3-d5679bcfb6bb' />
+</div>
+<script src="/Frontend-Assembly/Telerik.Sitefinity.Frontend.Search/Mvc/Scripts/SearchBox/Search-box.js"></script>
+
+
+
+
+
+
+
+
+<div id="headerNavigationLinkElements">
+</div>
+
+        </div>
+    </div>
+</div>
+<section class="cookieconsent" style="display: none;">
+    <div class="cookiecontainer">
+        <p>This website uses cookies. By continuing to use this site, you accept our use of cookies.</p>
+        <div class="consent-buttons">
+            <a href="/terms-and-conditions#anchor11.6">Cookies Policy</a> <a href="#" class="consent-close">Accept & Close</a>
+        </div>
+    </div>
+</section> 
+
+
+
+
+
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+            <ul class="footerLinks col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <li class="col-lg-2 col-md-3 col-sm-6 col-xs-12"><a href="/" target="_self">Home</a></li>
+    <li class="col-lg-2 col-md-3 col-sm-6 col-xs-12"><a href="/missions" target="_self">Missions</a></li>
+    <li class="col-lg-2 col-md-3 col-sm-6 col-xs-12"><a href="/rockets" target="_self">Rockets</a></li>
+    <li class="col-lg-2 col-md-3 col-sm-6 col-xs-12"><a href="/explore" target="_self">Explore</a></li>
+    <li class="col-lg-2 col-md-3 col-sm-6 col-xs-12"><a href="/launch-services" target="_self">Launch Services</a></li>
+    <li class="col-lg-2 col-md-3 col-sm-6 col-xs-12"><a href="/about" target="_self">About ULA</a></li>
+    <li class="col-lg-2 col-md-3 col-sm-6 col-xs-12"><a href="https://jobs.ulalaunch.com/?utm_source=careersite" target="_blank">Careers</a></li>
+    <li class="col-lg-2 col-md-3 col-sm-6 col-xs-12"><a href="/resources" target="_self">Resources</a></li>
+    <li class="col-lg-2 col-md-3 col-sm-6 col-xs-12"><a href="/shop" target="_self">Shop </a></li>
+    <li class="col-lg-2 col-md-3 col-sm-6 col-xs-12"><a href="/contact-ula" target="_self">Contact ULA</a></li>
+            </ul>
+
+            <div class="sub-footer">
+                <div>
+                    <ul class="socialLinks appStore">
+                        <li><a href="https://apps.apple.com/us/app/ula-anywhere-ar/id1454852470" target="_blank"><img src="/img/App_Store_Badge.svg" class="appleApp" alt="Apple App Store Badge" /></a></li>
+                        <li><a href="https://play.google.com/store/apps/details?id=com.ula.anywherear&hl=en" target="_blank"><img src="/img/google-play-badge.svg" class="googleApp" alt="Google Play Store Badge" /></a></li>
+                    </ul>
+
+                    <p class="copyright">
+                        Copyright &copy; <span class="get-year">2019</span> United Launch Alliance, LLC. All Rights Reserved. <a href="/terms-and-conditions#anchor11">Privacy</a> | <a href="/terms-and-conditions">Terms of Use</a>
+                    </p>
+                </div>
+                <div class="social-links">
+                    <a class="social-links__link" href="https://www.youtube.com/unitedlaunchalliance" target="_blank" rel="noopener">
+                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" aria-labelledby="Link to Youtube" role="img"><title id="youtube1">Follow us on Facebook</title><g id="youtube1_layer"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></g></svg>
+                    </a>
+                    <a class="social-links__link" href="https://www.instagram.com/ulalaunch/" target="_blank" rel="noopener">
+                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-labelledby="Link to Instagram" role="img"><title id="instagram2">Follow us on Instagram</title><g id="instagram2_layer"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></g></svg>
+                    </a>
+                    <a class="social-links__link" href="https://www.linkedin.com/company/ulalaunch/" target="_blank" rel="noopener">
+                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-labelledby="Link to Linkedin" role="img"><title id="linkedin-in3">Follow us on LinkedIn</title><g id="linkedin-in3_layer"><path d="M100.3 480H7.4V180.9h92.9V480zM53.8 140.1C24.1 140.1 0 115.5 0 85.8 0 56.1 24.1 32 53.8 32c29.7 0 53.8 24.1 53.8 53.8 0 29.7-24.1 54.3-53.8 54.3zM448 480h-92.7V334.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V480h-92.8V180.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V480z"></path></g></svg>
+                    </a>
+                    <a class="social-links__link custom-image" href="https://x.com/ulalaunch" target="_blank" rel="noopener">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-twitter-x" height="25" width="25" viewBox="0 0 16 16" aria-label="Link to X (formerly Twitter)">
+                            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"></path>
+                        </svg>
+                    </a>
+                    <a class="social-links__link" href="https://www.facebook.com/ulalaunch" target="_blank" rel="noopener">
+                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 512" aria-labelledby="Link to Facebook" role="img"><title id="facebook-f4">Follow us on Facebook</title><g id="facebook-f4_layer"><path d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229"></path></g></svg>
+                    </a>
+                    <a class="social-links__link" href="https://flickr.com/photos/ulalaunch/" target="_blank" rel="noopener">
+                        <svg class="svg-icon" style="width: 2em; height: 2em;vertical-align: middle;fill: #fff;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M512 996.693333C245.76 996.693333 27.306667 778.24 27.306667 512 27.306667 245.76 245.76 27.306667 512 27.306667c266.24 0 484.693333 218.453333 484.693333 484.693333C996.693333 778.24 778.24 996.693333 512 996.693333zM512 78.506667C273.066667 78.506667 78.506667 273.066667 78.506667 512S273.066667 945.493333 512 945.493333 945.493333 750.933333 945.493333 512 750.933333 78.506667 512 78.506667z" /><path d="M655.36 512m-129.706667 0a3.8 3.8 0 1 0 259.413333 0 3.8 3.8 0 1 0-259.413333 0Z" /><path d="M368.64 512m-129.706667 0a3.8 3.8 0 1 0 259.413333 0 3.8 3.8 0 1 0-259.413333 0Z" /></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript">
+    $(document).ready(function () {
+        //Get Current Date
+        var tdate = new Date();
+        var dd = (tdate.getDate() < 10 ? '0' : '') + tdate.getDate();; //yields day
+        var MM = ((tdate.getMonth() + 1) < 10 ? '0' : '') + (tdate.getMonth() + 1);
+        var yyyy = tdate.getFullYear(); //yields year
+        var currentDate = MM + "/" + dd + "/" + yyyy;
+
+        $('.get-date').text(currentDate);
+        $('.get-year').text(yyyy);
+    })
+</script>
+
+
+
+
+
+
+<section class="cookieconsent" style="display: none;">
+    <div class="cookiecontainer">
+        <p>This website uses cookies. By continuing to use this site, you accept our use of cookies.</p>
+        <div class="consent-buttons">
+            <a href="/terms-and-conditions#anchor11.6">Cookies Policy</a> <a href="#" class="consent-close">Accept & Close</a>
+        </div>
+    </div>
+</section><section class="cookieconsent" style="display: none;">
+    <div class="cookiecontainer">
+        <p>This website uses cookies. By continuing to use this site, you accept our use of cookies.</p>
+        <div class="consent-buttons">
+            <a href="/terms-and-conditions#anchor11.6">Cookies Policy</a> <a href="#" class="consent-close">Accept & Close</a>
+        </div>
+    </div>
+</section><div class="row" data-sf-element="Row">
+    <div id="Footer_TAAF3C60C006_Col00" class="sf_colsIn col-md-12" data-sf-element="Column 1" data-placeholder-label="Column 1">
+    </div>
+</div>
+<section class="cookieconsent" style="display: none;">
+    <div class="cookiecontainer">
+        <p>This website uses cookies. By continuing to use this site, you accept our use of cookies.</p>
+        <div class="consent-buttons">
+            <a href="/terms-and-conditions#anchor11.6">Cookies Policy</a> <a href="#" class="consent-close">Accept & Close</a>
+        </div>
+    </div>
+</section><section class="cookieconsent" style="display: none;">
+    <div class="cookiecontainer">
+        <p>This website uses cookies. By continuing to use this site, you accept our use of cookies.</p>
+        <div class="consent-buttons">
+            <a href="/terms-and-conditions#anchor11.6">Cookies Policy</a> <a href="#" class="consent-close">Accept & Close</a>
+        </div>
+    </div>
+</section> </div>  <script src="/js/Customscripts.js"></script> </body> </html>

@@ -1,5 +1,5 @@
 {
- "count": 875,
+ "count": 884,
  "items": [
   {
    "c": "planets",
@@ -994,7 +994,12 @@
   {
    "c": "engineering_constraints",
    "id": "c_payload_vulcan_vc6_GTO_expended",
-   "name": "Payload to GTO <= 14400 kg on Vulcan Centaur VC6 (expended)"
+   "name": "Payload to GTO <= 14500.0 kg on Vulcan Centaur VC6 (expended)"
+  },
+  {
+   "c": "engineering_constraints",
+   "id": "c_payload_vulcan_vc6_TLI_expended",
+   "name": "Payload to TLI <= 11500.0 kg on Vulcan Centaur VC6 (expended)"
   },
   {
    "c": "engineering_constraints",
@@ -1094,7 +1099,7 @@
   {
    "c": "engineering_constraints",
    "id": "c_twr_rd180",
-   "name": "RD-180 engine thrust/weight (vac) = 78.5"
+   "name": "RD-180 engine thrust/weight (vac) = 77.2"
   },
   {
    "c": "engineering_constraints",
@@ -1110,6 +1115,11 @@
    "c": "engineering_constraints",
    "id": "c_twr_aj10_190",
    "name": "AJ10-190 (Shuttle OMS) engine thrust/weight (vac) = 23.1"
+  },
+  {
+   "c": "engineering_constraints",
+   "id": "c_twr_next",
+   "name": "NEXT ion thruster engine thrust/weight (vac) = 0.0"
   },
   {
    "c": "engineering_constraints",
@@ -4355,6 +4365,41 @@
    "c": "sources",
    "id": "S41",
    "name": "S41"
+  },
+  {
+   "c": "sources",
+   "id": "S42",
+   "name": "S42"
+  },
+  {
+   "c": "sources",
+   "id": "S43",
+   "name": "S43"
+  },
+  {
+   "c": "sources",
+   "id": "S44",
+   "name": "S44"
+  },
+  {
+   "c": "sources",
+   "id": "S45",
+   "name": "S45"
+  },
+  {
+   "c": "sources",
+   "id": "S46",
+   "name": "S46"
+  },
+  {
+   "c": "sources",
+   "id": "S47",
+   "name": "S47"
+  },
+  {
+   "c": "sources",
+   "id": "S48",
+   "name": "S48"
   },
   {
    "c": "sources",

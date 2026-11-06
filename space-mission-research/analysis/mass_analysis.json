@@ -2,9 +2,9 @@
  "vehicle_stack_accounting": [
   {
    "vehicle_id": "saturn_v",
-   "liftoff_mass_kg": 2970000,
-   "sum_of_recorded_stage_masses_kg": 2826400,
-   "residual_kg": 143600,
+   "liftoff_mass_kg": 2941219.9329436,
+   "sum_of_recorded_stage_masses_kg": 2876795.0015828,
+   "residual_kg": 64424.931360800285,
    "residual_meaning": "payload + fairing + interstages + strap-on boosters + any propellant not in stage record; large/negative residual flags inconsistent inputs",
    "note": "",
    "data_class": "derived"

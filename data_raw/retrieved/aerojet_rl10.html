@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rocket Mortgage - Unable to Process Request</title>
+  <style>
+    /* ─── RDS Design Tokens (inlined) ─────────────────────────────────────── */
+    :root {
+      --rkt-color-black:        #000000;
+      --rkt-color-white:        #ffffff;
+      --rkt-color-gray-50:      #f9f9f9;
+      --rkt-color-gray-100:     #f3f3f3;
+      --rkt-color-gray-200:     #e8e8e8;
+      --rkt-color-gray-500:     #767676;
+      --rkt-color-gray-700:     #444444;
+      --rkt-color-gray-900:     #1a1a1a;
+      --rkt-color-red-50:       #fff2f2;
+      --rkt-color-red-500:      #de3341;
+      --rkt-color-red-700:      #c12a36;
+      --rkt-color-blue-600:     #0a6ebd;
+      --rkt-color-blue-700:     #085a9a;
+
+      --rkt-font-family:        'Rocket Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      --rkt-font-size-12:       0.75rem;
+      --rkt-font-size-14:       0.875rem;
+      --rkt-font-size-16:       1rem;
+      --rkt-font-size-18:       1.125rem;
+      --rkt-font-size-24:       1.5rem;
+      --rkt-font-size-32:       2rem;
+      --rkt-line-height-body:   1.5;
+      --rkt-line-height-heading: 1.25;
+      --rkt-font-weight-normal: 400;
+      --rkt-font-weight-bold:   700;
+
+      --rkt-spacing-4:  4px;
+      --rkt-spacing-8:  8px;
+      --rkt-spacing-12: 12px;
+      --rkt-spacing-16: 16px;
+      --rkt-spacing-24: 24px;
+      --rkt-spacing-32: 32px;
+      --rkt-spacing-40: 40px;
+      --rkt-spacing-48: 48px;
+      --rkt-spacing-64: 64px;
+
+      --rkt-border-radius: 8px;
+      --rkt-max-width: 640px;
+    }
+
+    /* ─── Reset ───────────────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ─── Base ────────────────────────────────────────────────────────────── */
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      font-family: var(--rkt-font-family);
+      font-size: var(--rkt-font-size-16);
+      line-height: var(--rkt-line-height-body);
+      color: var(--rkt-color-gray-900);
+      background-color: var(--rkt-color-gray-50);
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    /* ─── Layout ──────────────────────────────────────────────────────────── */
+    .page-wrapper {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: var(--rkt-spacing-48) var(--rkt-spacing-16);
+    }
+
+    .card {
+      background-color: var(--rkt-color-white);
+      border-radius: var(--rkt-border-radius);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08), 0 0 1px rgba(0,0,0,0.06);
+      padding: var(--rkt-spacing-40);
+      width: 100%;
+      max-width: var(--rkt-max-width);
+    }
+
+    /* ─── Logo ────────────────────────────────────────────────────────────── */
+    .logo-wrap {
+      margin-bottom: var(--rkt-spacing-32);
+    }
+
+    .logo-wrap svg {
+      display: block;
+      height: 28px;
+      width: auto;
+    }
+
+    /* ─── Alert banner ────────────────────────────────────────────────────── */
+    .alert {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--rkt-spacing-12);
+      background-color: var(--rkt-color-red-50);
+      border-left: 4px solid var(--rkt-color-red-500);
+      border-radius: var(--rkt-border-radius);
+      padding: var(--rkt-spacing-16);
+      margin-bottom: var(--rkt-spacing-32);
+    }
+
+    .alert-icon {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      color: var(--rkt-color-red-500);
+      margin-top: 1px;
+    }
+
+    .alert-body {
+      flex: 1;
+    }
+
+    .alert-title {
+      font-size: var(--rkt-font-size-18);
+      font-weight: var(--rkt-font-weight-bold);
+      line-height: var(--rkt-line-height-heading);
+      color: var(--rkt-color-gray-900);
+    }
+
+    /* ─── Section headings ────────────────────────────────────────────────── */
+    .section-heading {
+      font-size: var(--rkt-font-size-16);
+      font-weight: var(--rkt-font-weight-bold);
+      color: var(--rkt-color-gray-900);
+      margin-bottom: var(--rkt-spacing-12);
+    }
+
+    /* ─── Lists ───────────────────────────────────────────────────────────── */
+    .try-list,
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 var(--rkt-spacing-32) 0;
+      display: flex;
+      flex-direction: column;
+      gap: var(--rkt-spacing-8);
+    }
+
+    .try-list li,
+    .contact-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--rkt-spacing-8);
+      font-size: var(--rkt-font-size-16);
+      color: var(--rkt-color-gray-700);
+      line-height: var(--rkt-line-height-body);
+    }
+
+    .list-bullet {
+      flex-shrink: 0;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: var(--rkt-color-gray-500);
+      margin-top: 10px;
+    }
+
+    /* ─── Divider ─────────────────────────────────────────────────────────── */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--rkt-color-gray-200);
+      margin: 0 0 var(--rkt-spacing-32) 0;
+    }
+
+    /* ─── Support section ─────────────────────────────────────────────────── */
+    .support-prompt {
+      font-size: var(--rkt-font-size-16);
+      color: var(--rkt-color-gray-700);
+      margin-bottom: var(--rkt-spacing-16);
+    }
+
+    /* ─── Reference code block ────────────────────────────────────────────── */
+    .reference-block {
+      background-color: var(--rkt-color-gray-100);
+      border-radius: var(--rkt-border-radius);
+      padding: var(--rkt-spacing-16);
+      margin-top: var(--rkt-spacing-8);
+    }
+
+    .reference-label {
+      font-size: var(--rkt-font-size-14);
+      color: var(--rkt-color-gray-500);
+      margin-bottom: var(--rkt-spacing-4);
+    }
+
+    .reference-code {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: var(--rkt-font-size-14);
+      font-weight: var(--rkt-font-weight-bold);
+      color: var(--rkt-color-gray-900);
+      word-break: break-all;
+    }
+
+    /* ─── Links ───────────────────────────────────────────────────────────── */
+    a {
+      color: var(--rkt-color-blue-600);
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: var(--rkt-color-blue-700);
+    }
+
+    /* ─── Footer ──────────────────────────────────────────────────────────── */
+    .footer {
+      text-align: center;
+      padding: var(--rkt-spacing-24) var(--rkt-spacing-16);
+      font-size: var(--rkt-font-size-12);
+      color: var(--rkt-color-gray-500);
+    }
+
+    /* ─── Responsive ──────────────────────────────────────────────────────── */
+    @media (max-width: 480px) {
+      .card {
+        padding: var(--rkt-spacing-24) var(--rkt-spacing-16);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="page-wrapper" role="main">
+    <div class="card">
+
+      <!-- Rocket Logo -->
+      <div class="logo-wrap">
+        <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 445.316 79.88" role="img" aria-label="Rocket" focusable="false">
+          <path d="M85.765,42.9c0,15.636-8.369,29.315-20.871,36.808-.477.286-1.092.192-1.473-.213l-14.392-15.317c-.592-.63-.336-1.659.482-1.94,8.034-2.753,13.81-10.371,13.81-19.338,0-11.404-9.34-20.627-20.788-20.436-11.207.187-20.09,9.564-20.09,20.773v35.311c0,.935-1.023,1.498-1.822,1.012C8.402,72.123.193,58.749.003,43.444-.289,19.902,18.73.35,42.272.022c23.963-.333,43.493,18.992,43.493,42.878ZM259.215,30.944c7.1,0,13.216,4.207,16,10.264.226.492.72.806,1.262.806h11.848c.782,0,1.355-.738,1.161-1.496-.112-.439-.204-.782-.204-.782-3.803-13.014-15.823-22.521-30.068-22.521-17.46,0-31.584,14.281-31.329,31.799.248,17.038,14.768,31.116,31.806,30.862,14.143-.211,26.002-9.792,29.672-22.813.215-.761-.367-1.516-1.158-1.516h-11.956c-.528,0-1.012.299-1.246.773-2.869,5.824-8.858,9.832-15.789,9.832-9.725,0-17.604-7.883-17.604-17.604s7.879-17.604,17.604-17.604ZM223.298,47.953c.329,17.776-14.146,32.251-31.922,31.921-16.752-.31-30.422-13.98-30.732-30.732-.329-17.776,14.146-32.251,31.922-31.921,16.752.31,30.422,13.98,30.732,30.733ZM191.395,30.954c-9.217.294-16.724,7.801-17.018,17.018-.325,10.178,7.991,18.494,18.169,18.169,9.217-.294,16.724-7.801,17.018-17.018.325-10.178-7.991-18.494-18.169-18.169ZM323.201,48.548l23.921-28.314c.658-.779.104-1.972-.916-1.972h-14.946c-.414,0-.807.183-1.072.501l-19.58,23.401h-.869V1.203c0-.941-1.035-1.515-1.834-1.017l-12.932,8.077c-.351.219-.564.603-.564,1.017v68.262c0,.662.537,1.199,1.199,1.199h12.932c.662,0,1.199-.537,1.199-1.199v-22.93h.709l21.613,23.866c.152.167.367.263.592.263h16.005c1.049,0,1.592-1.251.876-2.017l-26.334-28.175ZM161.917,76.721c.719.765.177,2.02-.873,2.02h-15.468c-.392,0-.766-.165-1.031-.454l-27.239-29.738h-.751v28.997c0,.662-.537,1.199-1.199,1.199h-12.998c-.662,0-1.199-.537-1.199-1.199V1.214c0-.662.537-1.199,1.199-1.199h33.343c8.283-.044,23.674,5.789,23.674,24.297,0,12.81-8.24,23.059-23.946,24.233l26.488,28.176ZM129.88,36.346c4.894,0,8.582-1.039,11.068-3.093,2.481-2.058,3.724-4.903,3.724-8.519,0-3.48-1.131-6.221-3.384-8.211-2.262-1.982-5.53-2.989-9.825-2.989h-14.907v22.811h13.325ZM443.854,66.784c-4.002.93-12.772.939-12.772-9.703v-26.932h13.036c.662,0,1.198-.537,1.198-1.199v-9.488c0-.662-.537-1.199-1.198-1.199h-13.036V1.201c0-.941-1.034-1.515-1.832-1.017l-12.93,8.058c-.351.219-.565.603-.565,1.017v9.005h-8.32c-.662,0-1.199.537-1.199,1.199v9.488c0,.662.537,1.199,1.199,1.199h8.303v28.041c0,18.566,15.742,21.691,21.814,21.691,2.847,0,5.024-.592,6.829-.992.547-.121.935-.608.935-1.169v-9.767c0-.769-.713-1.342-1.462-1.168ZM401.928,32.003c1.131,1.896,5.109,9.096,3.963,18.29-.167,1.341-.416,2.502-.659,3.435-.137.528-.614.892-1.159.892h-45.744c.791,2.994,4.185,12.823,16.918,12.823,6.128,0,10.804-2.623,12.961-5.068.268-.304.648-.482,1.053-.482h12.553c.897,0,1.486.953,1.069,1.748-2.743,5.233-7.803,10.436-14.932,13.63-3.862,1.73-8.094,2.608-12.577,2.608-5.841,0-11.267-1.395-16.134-4.137-8.304-4.678-15.896-13.876-15.896-27.197l.009.003-.009-.004c.015-2.546.376-10.697,6.074-18.409.769-1.04,4.079-5.37,9.944-8.721,4.872-2.784,10.214-4.198,15.884-4.198,12.427,0,21.855,6.699,26.682,14.787ZM391.653,43.361c-.49-2.374-3.943-13.816-16.405-13.816-8.731,0-15.325,5.723-17.168,13.816h33.574Z" fill="#de3341"/>
+        </svg>
+      </div>
+
+      <!-- Alert banner -->
+      <div class="alert" role="alert">
+        <svg class="alert-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z" fill="currentColor"/>
+        </svg>
+        <div class="alert-body">
+          <p class="alert-title">Unfortunately, we detected something unusual and were unable to process your request.</p>
+        </div>
+      </div>
+
+      <!-- What you can try -->
+      <h2 class="section-heading">What you can try:</h2>
+      <ul class="try-list">
+        <li><span class="list-bullet" aria-hidden="true"></span><span>Ensure you are using an up-to-date browser</span></li>
+        <li><span class="list-bullet" aria-hidden="true"></span><span>Enable support for JavaScript and Cookies</span></li>
+        <li><span class="list-bullet" aria-hidden="true"></span><span>Temporarily disable browser extensions and try again</span></li>
+        <li><span class="list-bullet" aria-hidden="true"></span><span>Try making your requests from a different device or network</span></li>
+      </ul>
+
+      <hr class="divider">
+
+      <!-- Error Information -->
+
+      <h2 class="section-heading">Additional Information</h2>
+      <ul class="contact-list">
+        <li>
+          <span class="list-bullet" aria-hidden="true"></span>
+          <span>
+            Your IP Address:
+            <div class="reference-block">
+              <p class="reference-code">160.79.106.17</p>
+            </div>
+          </span>
+        </li>
+        <li>
+          <span class="list-bullet" aria-hidden="true"></span>
+          <span>
+            Reference code:
+            <div class="reference-block">
+              <p class="reference-code">0.4e18d017.1793971461.78e332c0</p>
+            </div>
+          </span>
+        </li>
+      </ul>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Rocket Mortgage, LLC. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

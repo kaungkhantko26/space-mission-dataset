@@ -15,8 +15,8 @@
    "height_m": 110.6,
    "diameter_m": 10.1,
    "stages": 3,
-   "liftoff_mass_kg": 2970000,
-   "thrust_sl_n": 33400000,
+   "liftoff_mass_kg": 2941219.9329436,
+   "thrust_sl_n": 34046038.80284803,
    "reusable": false,
    "fairing_diam_m": null,
    "fairing_height_m": null,
@@ -51,21 +51,86 @@
    "data_class": "unverified",
    "retrieval_status": "not_retrieved",
    "derived": {
-    "liftoff_thrust_to_weight": 1.1467515661098586,
+    "liftoff_thrust_to_weight": 1.1803706810933516,
     "payload_fraction_by_orbit": [
      {
       "orbit": "LEO",
       "mode": "expended",
-      "payload_to_liftoff": 0.04713804713804714
+      "payload_to_liftoff": 0.04759929661563483
      },
      {
       "orbit": "TLI",
       "mode": "expended",
-      "payload_to_liftoff": 0.016363636363636365
+      "payload_to_liftoff": 0.016523755825141803
      }
     ]
    },
-   "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)"
+   "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)",
+   "field_verification": {
+    "liftoff_mass_kg": {
+     "status": "conflict_resolved_to_source",
+     "source_id": "S44",
+     "source_url": "https://ntrs.nasa.gov/api/citations/19690022248/downloads/19690022248.pdf",
+     "retrieved": "2026-11-06",
+     "source_sha256": "3cce3b01294e90bedf9af742124ef657ffdf27536921ef50464cc34836526898",
+     "section": "NASA Apollo 11 Press Kit, space vehicle weight summary: weight at ignition (Apollo 11 vehicle)",
+     "source_original_text": "A t ignition 6,484,280",
+     "source_value": 2941219.9329436,
+     "source_unit": "lb→kg",
+     "statement_type": "point value",
+     "tolerance_rel": 0.005,
+     "recalled_value": 2970000,
+     "note": null
+    },
+    "thrust_sl_n": {
+     "status": "conflict_resolved_to_source",
+     "source_id": "S44",
+     "source_url": "https://ntrs.nasa.gov/api/citations/19690022248/downloads/19690022248.pdf",
+     "retrieved": "2026-11-06",
+     "source_sha256": "3cce3b01294e90bedf9af742124ef657ffdf27536921ef50464cc34836526898",
+     "section": "NASA Apollo 11 Press Kit (NTRS 19690022248), 'Saturn V Launch Vehicle' table: nominal Apollo 11 configuration: S-IC thrust at liftoff",
+     "source_original_text": "THRUST 7,653,854 LBS AT LIFTOFF",
+     "source_value": 34046038.80284803,
+     "source_unit": "lbf→N",
+     "statement_type": "point value",
+     "tolerance_rel": 0.005,
+     "recalled_value": 33400000,
+     "note": null
+    },
+    "height_m": {
+     "status": "verified",
+     "source_id": "S44",
+     "source_url": "https://ntrs.nasa.gov/api/citations/19690022248/downloads/19690022248.pdf",
+     "retrieved": "2026-11-06",
+     "source_sha256": "3cce3b01294e90bedf9af742124ef657ffdf27536921ef50464cc34836526898",
+     "section": "NASA Apollo 11 Press Kit, Vehicle Assembly Building section: 363-foot-tall space vehicle (with spacecraft)",
+     "source_original_text": "the 363-foot-tall space vehicle",
+     "source_value": 110.64240000000001,
+     "source_unit": "ft→m",
+     "statement_type": "point value",
+     "tolerance_rel": 0.005,
+     "recalled_value": 110.6,
+     "note": null
+    },
+    "diameter_m": {
+     "status": "verified",
+     "source_id": "S44",
+     "source_url": "https://ntrs.nasa.gov/api/citations/19690022248/downloads/19690022248.pdf",
+     "retrieved": "2026-11-06",
+     "source_sha256": "3cce3b01294e90bedf9af742124ef657ffdf27536921ef50464cc34836526898",
+     "section": "NASA Apollo 11 Press Kit (NTRS 19690022248), 'Saturn V Launch Vehicle' table: nominal Apollo 11 configuration: S-IC diameter 33 ft",
+     "source_original_text": "DIAMETER-33 FEET",
+     "source_value": 10.0584,
+     "source_unit": "ft→m",
+     "statement_type": "point value",
+     "tolerance_rel": 0.01,
+     "recalled_value": 10.1,
+     "note": null
+    }
+   },
+   "verified_field_count": 4,
+   "unverified_fields": null,
+   "verification_scope": "partial: only the fields in field_verification were checked against a retrieved source; the record as a whole remains unverified"
   },
   {
    "id": "sls_b1",
@@ -134,13 +199,14 @@
      "source_url": "https://www.nasa.gov/reference/space-launch-system/",
      "retrieved": "2026-11-06",
      "source_sha256": "dacd12643163e96a6ca709bd11270edc6ba8c81fc8a0ce8694fb8e9e3dbd6193",
-     "section": "SLS reference page: Artemis I configuration stands 322 ft",
+     "section": "NASA SLS reference page: Artemis I configuration stands 322 ft",
      "source_original_text": "stands 322 ft",
      "source_value": 98.1456,
      "source_unit": "ft→m",
      "statement_type": "point value",
      "tolerance_rel": 0.005,
-     "recalled_value": 98.0
+     "recalled_value": 98.0,
+     "note": null
     },
     "liftoff_mass_kg": {
      "status": "verified",
@@ -148,13 +214,14 @@
      "source_url": "https://www.nasa.gov/reference/space-launch-system/",
      "retrieved": "2026-11-06",
      "source_sha256": "dacd12643163e96a6ca709bd11270edc6ba8c81fc8a0ce8694fb8e9e3dbd6193",
-     "section": "SLS reference page: weighs 5.75 million lbs fueled",
+     "section": "NASA SLS reference page: weighs 5.75 million lbs fueled",
      "source_original_text": "weighs 5.75 million lbs. fueled",
      "source_value": 2608156.1275,
      "source_unit": "million lb→kg",
      "statement_type": "point value",
      "tolerance_rel": 0.005,
-     "recalled_value": 2608000
+     "recalled_value": 2608000,
+     "note": null
     },
     "thrust_sl_n": {
      "status": "verified",
@@ -162,13 +229,14 @@
      "source_url": "https://www.nasa.gov/reference/space-launch-system/",
      "retrieved": "2026-11-06",
      "source_sha256": "dacd12643163e96a6ca709bd11270edc6ba8c81fc8a0ce8694fb8e9e3dbd6193",
-     "section": "SLS reference page: 8.8 million lbs of maximum thrust",
+     "section": "NASA SLS reference page: 8.8 million lbs of maximum thrust",
      "source_original_text": "produces 8.8 million lbs. of maximum thrust",
      "source_value": 39144350.2142924,
      "source_unit": "million lbf→N",
      "statement_type": "point value",
      "tolerance_rel": 0.005,
-     "recalled_value": 39100000
+     "recalled_value": 39100000,
+     "note": null
     },
     "payloads[TLI].payload_kg": {
      "status": "verified",
@@ -176,17 +244,19 @@
      "source_url": "https://www.nasa.gov/reference/space-launch-system/",
      "retrieved": "2026-11-06",
      "source_sha256": "dacd12643163e96a6ca709bd11270edc6ba8c81fc8a0ce8694fb8e9e3dbd6193",
-     "section": "SLS reference page: Block 1 can send more than 27 metric tons to the Moon",
+     "section": "NASA SLS reference page: Block 1 can send more than 27 metric tons to the Moon",
      "source_original_text": "can send more than 27 metric tons",
      "source_value": 27000.0,
      "source_unit": "t→kg",
-     "statement_type": "lower bound ('more than')",
+     "statement_type": "lower bound",
      "tolerance_rel": 1e-06,
-     "recalled_value": 27000
+     "recalled_value": 27000,
+     "note": null
     }
    },
    "verified_field_count": 4,
-   "verification_scope": "partial: only the fields in field_verification were checked against a retrieved page; the record as a whole remains unverified"
+   "unverified_fields": null,
+   "verification_scope": "partial: only the fields in field_verification were checked against a retrieved source; the record as a whole remains unverified"
   },
   {
    "id": "falcon9_b5",
@@ -407,7 +477,7 @@
     {
      "orbit": "LEO",
      "payload_kg": 18850,
-     "altitude_km": null,
+     "altitude_km": 200.0,
      "inclination_deg": 28.7,
      "mode": "expended",
      "assumption": ""
@@ -416,7 +486,7 @@
      "orbit": "GTO",
      "payload_kg": 8900,
      "altitude_km": null,
-     "inclination_deg": null,
+     "inclination_deg": 27.0,
      "mode": "expended",
      "assumption": ""
     }
@@ -446,7 +516,87 @@
      }
     ]
    },
-   "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)"
+   "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)",
+   "field_verification": {
+    "payloads[LEO].payload_kg": {
+     "status": "verified",
+     "source_id": "S42",
+     "source_url": "https://www.ulalaunch.com/rockets/atlas-v",
+     "retrieved": "2026-11-06",
+     "source_sha256": "47ae205afab17a45780756ae4d42322c2be1d8e7620676b9bc4c7eb6e84aa975",
+     "section": "ULA Atlas V performance table, row 551 (columns GEO 0.0 deg | GTO 27.0 deg | LEO 28.7 deg | LEO 90 deg | LEO-ISS 51.6 deg); LEO 28.7 deg",
+     "source_original_text": "551 3,850 kg 8,500 lbs 8,900 kg 19,620 lbs 18,850 kg 41,570 lbs 15,760 kg 34,750 lbs 17,720 kg ...",
+     "source_value": 18850.0,
+     "source_unit": "kg",
+     "statement_type": "point value",
+     "tolerance_rel": 1e-06,
+     "recalled_value": 18850,
+     "note": null
+    },
+    "payloads[GTO].payload_kg": {
+     "status": "verified",
+     "source_id": "S42",
+     "source_url": "https://www.ulalaunch.com/rockets/atlas-v",
+     "retrieved": "2026-11-06",
+     "source_sha256": "47ae205afab17a45780756ae4d42322c2be1d8e7620676b9bc4c7eb6e84aa975",
+     "section": "ULA Atlas V performance table, row 551 (columns GEO 0.0 deg | GTO 27.0 deg | LEO 28.7 deg | LEO 90 deg | LEO-ISS 51.6 deg); GTO 27.0 deg",
+     "source_original_text": "551 3,850 kg 8,500 lbs 8,900 kg 19,620 lbs 18,850 kg 41,570 lbs 15,760 kg 34,750 lbs 17,720 kg ...",
+     "source_value": 8900.0,
+     "source_unit": "kg",
+     "statement_type": "point value",
+     "tolerance_rel": 1e-06,
+     "recalled_value": 8900,
+     "note": null
+    },
+    "payloads[LEO].altitude_km": {
+     "status": "added_from_source",
+     "source_id": "S42",
+     "source_url": "https://www.ulalaunch.com/rockets/atlas-v",
+     "retrieved": "2026-11-06",
+     "source_sha256": "47ae205afab17a45780756ae4d42322c2be1d8e7620676b9bc4c7eb6e84aa975",
+     "section": "ULA Atlas V performance table footnotes (reference orbit definitions)",
+     "source_original_text": "LEO-Reference (Low Earth Orbit-Reference) =200 km circular at 28.7 deg or 90 deg",
+     "source_value": 200.0,
+     "source_unit": "km",
+     "statement_type": "reference-orbit definition",
+     "tolerance_rel": 1e-06,
+     "recalled_value": null,
+     "note": null
+    },
+    "payloads[LEO].inclination_deg": {
+     "status": "verified",
+     "source_id": "S42",
+     "source_url": "https://www.ulalaunch.com/rockets/atlas-v",
+     "retrieved": "2026-11-06",
+     "source_sha256": "47ae205afab17a45780756ae4d42322c2be1d8e7620676b9bc4c7eb6e84aa975",
+     "section": "ULA Atlas V performance table footnotes (reference orbit definitions)",
+     "source_original_text": "200 km circular at 28.7 deg",
+     "source_value": 28.7,
+     "source_unit": "deg",
+     "statement_type": "reference-orbit definition",
+     "tolerance_rel": 1e-06,
+     "recalled_value": 28.7,
+     "note": null
+    },
+    "payloads[GTO].inclination_deg": {
+     "status": "added_from_source",
+     "source_id": "S42",
+     "source_url": "https://www.ulalaunch.com/rockets/atlas-v",
+     "retrieved": "2026-11-06",
+     "source_sha256": "47ae205afab17a45780756ae4d42322c2be1d8e7620676b9bc4c7eb6e84aa975",
+     "section": "ULA Atlas V performance table footnotes (reference orbit definitions)",
+     "source_original_text": "GTO (Geosynchronous Transfer Orbit)=35,786 km x 185 km at 27.0 deg",
+     "source_value": 27.0,
+     "source_unit": "deg",
+     "statement_type": "reference-orbit definition",
+     "tolerance_rel": 1e-06,
+     "recalled_value": null,
+     "note": null
+    }
+   },
+   "verified_field_count": 5,
+   "unverified_fields": null,
+   "verification_scope": "partial: only the fields in field_verification were checked against a retrieved source; the record as a whole remains unverified"
   },
   {
    "id": "vulcan_vc6",
@@ -468,18 +618,26 @@
     {
      "orbit": "LEO",
      "payload_kg": 27200,
-     "altitude_km": null,
-     "inclination_deg": null,
+     "altitude_km": 200.0,
+     "inclination_deg": 28.7,
      "mode": "expended",
      "assumption": ""
     },
     {
      "orbit": "GTO",
-     "payload_kg": 14400,
+     "payload_kg": 14500.0,
+     "altitude_km": null,
+     "inclination_deg": 27.0,
+     "mode": "expended",
+     "assumption": ""
+    },
+    {
+     "orbit": "TLI",
+     "payload_kg": 11500.0,
      "altitude_km": null,
      "inclination_deg": null,
      "mode": "expended",
-     "assumption": ""
+     "assumption": "C3 = -2 km2/s2 (ULA definition)"
     }
    ],
    "sites": [
@@ -493,7 +651,117 @@
    "data_class": "unverified",
    "retrieval_status": "not_retrieved",
    "derived": {},
-   "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)"
+   "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)",
+   "field_verification": {
+    "payloads[GTO].payload_kg": {
+     "status": "conflict_resolved_to_source",
+     "source_id": "S42",
+     "source_url": "https://www.ulalaunch.com/rockets/vulcan-centaur",
+     "retrieved": "2026-11-06",
+     "source_sha256": "187fad654295e684f50f4b40899a476ab7583d2bcb66905aaeb3ec27571c2426",
+     "section": "ULA Vulcan performance table, row '6 Solids' (columns GEO | GTO | LEO-REF | LEO-ISS | LEO-POLAR | MEO | TLI)",
+     "source_original_text": "6 Solids 6,500 kg 14,300 lb 14,500 kg 32,000 lbs 27,200 kg 60,000 lbs 25,800 kg 56,900 lbs 23,900 kg 52,700 lb ...",
+     "source_value": 14500.0,
+     "source_unit": "kg",
+     "statement_type": "point value",
+     "tolerance_rel": 1e-06,
+     "recalled_value": 14400,
+     "note": null
+    },
+    "payloads[LEO].payload_kg": {
+     "status": "verified",
+     "source_id": "S42",
+     "source_url": "https://www.ulalaunch.com/rockets/vulcan-centaur",
+     "retrieved": "2026-11-06",
+     "source_sha256": "187fad654295e684f50f4b40899a476ab7583d2bcb66905aaeb3ec27571c2426",
+     "section": "ULA Vulcan performance table, row '6 Solids' (columns GEO | GTO | LEO-REF | LEO-ISS | LEO-POLAR | MEO | TLI)",
+     "source_original_text": "6 Solids 6,500 kg 14,300 lb 14,500 kg 32,000 lbs 27,200 kg 60,000 lbs 25,800 kg 56,900 lbs 23,900 kg 52,700 lb ...",
+     "source_value": 27200.0,
+     "source_unit": "kg",
+     "statement_type": "point value",
+     "tolerance_rel": 1e-06,
+     "recalled_value": 27200,
+     "note": null
+    },
+    "payloads[TLI].payload_kg": {
+     "status": "added_from_source",
+     "source_id": "S42",
+     "source_url": "https://www.ulalaunch.com/rockets/vulcan-centaur",
+     "retrieved": "2026-11-06",
+     "source_sha256": "187fad654295e684f50f4b40899a476ab7583d2bcb66905aaeb3ec27571c2426",
+     "section": "ULA Vulcan performance table, row '6 Solids' (columns GEO | GTO | LEO-REF | LEO-ISS | LEO-POLAR | MEO | TLI)",
+     "source_original_text": "6 Solids 6,500 kg 14,300 lb 14,500 kg 32,000 lbs 27,200 kg 60,000 lbs 25,800 kg 56,900 lbs 23,900 kg 52,700 lb ...",
+     "source_value": 11500.0,
+     "source_unit": "kg",
+     "statement_type": "point value",
+     "tolerance_rel": 1e-06,
+     "recalled_value": null,
+     "note": null
+    },
+    "payloads[LEO].altitude_km": {
+     "status": "added_from_source",
+     "source_id": "S42",
+     "source_url": "https://www.ulalaunch.com/rockets/vulcan-centaur",
+     "retrieved": "2026-11-06",
+     "source_sha256": "187fad654295e684f50f4b40899a476ab7583d2bcb66905aaeb3ec27571c2426",
+     "section": "ULA Vulcan performance table footnotes (reference orbit definitions)",
+     "source_original_text": "LEO-Reference = 200 km circular at 28.7 deg",
+     "source_value": 200.0,
+     "source_unit": "km",
+     "statement_type": "reference-orbit definition",
+     "tolerance_rel": 1e-06,
+     "recalled_value": null,
+     "note": null
+    },
+    "payloads[LEO].inclination_deg": {
+     "status": "added_from_source",
+     "source_id": "S42",
+     "source_url": "https://www.ulalaunch.com/rockets/vulcan-centaur",
+     "retrieved": "2026-11-06",
+     "source_sha256": "187fad654295e684f50f4b40899a476ab7583d2bcb66905aaeb3ec27571c2426",
+     "section": "ULA Vulcan performance table footnotes (reference orbit definitions)",
+     "source_original_text": "LEO-Reference = 200 km circular at 28.7 deg",
+     "source_value": 28.7,
+     "source_unit": "deg",
+     "statement_type": "reference-orbit definition",
+     "tolerance_rel": 1e-06,
+     "recalled_value": null,
+     "note": null
+    },
+    "payloads[GTO].inclination_deg": {
+     "status": "added_from_source",
+     "source_id": "S42",
+     "source_url": "https://www.ulalaunch.com/rockets/vulcan-centaur",
+     "retrieved": "2026-11-06",
+     "source_sha256": "187fad654295e684f50f4b40899a476ab7583d2bcb66905aaeb3ec27571c2426",
+     "section": "ULA Vulcan performance table footnotes (reference orbit definitions)",
+     "source_original_text": "GTO = 35,786 km x 185 km at 27.0 deg",
+     "source_value": 27.0,
+     "source_unit": "deg",
+     "statement_type": "reference-orbit definition",
+     "tolerance_rel": 1e-06,
+     "recalled_value": null,
+     "note": null
+    },
+    "fairing_diam_m": {
+     "status": "verified",
+     "source_id": "S42",
+     "source_url": "https://www.ulalaunch.com/rockets/vulcan-centaur",
+     "retrieved": "2026-11-06",
+     "source_sha256": "187fad654295e684f50f4b40899a476ab7583d2bcb66905aaeb3ec27571c2426",
+     "section": "ULA Vulcan page, payload fairings",
+     "source_original_text": "5.4-m- (17.7-ft-) diameter payload fairing",
+     "source_value": 5.4,
+     "source_unit": "m",
+     "statement_type": "point value",
+     "tolerance_rel": 0.005,
+     "recalled_value": 5.4,
+     "note": null
+    }
+   },
+   "verified_field_count": 7,
+   "unverified_fields": null,
+   "verification_scope": "partial: only the fields in field_verification were checked against a retrieved source; the record as a whole remains unverified"
   },
   {
    "id": "electron",
@@ -637,7 +905,87 @@
    "data_class": "unverified",
    "retrieval_status": "not_retrieved",
    "derived": {},
-   "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)"
+   "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)",
+   "field_verification": {
+    "payloads[GTO].payload_kg": {
+     "status": "verified",
+     "source_id": "S48",
+     "source_url": "https://www.esa.int/Enabling_Support/Space_Transportation/Launch_vehicles/Ariane_6_overview",
+     "retrieved": "2026-11-06",
+     "source_sha256": "232128d5a239e3e9a1c3d816d256ae8e37a65581ee47924de0d3f440a4d5b066",
+     "section": "ESA Ariane 6 overview page: 'approximately' value, tolerance 1%",
+     "source_original_text": "Ariane 64 can launch payloads of approximately 11.5 tonnes into geostationary transfer orbit",
+     "source_value": 11500.0,
+     "source_unit": "t→kg",
+     "statement_type": "point value",
+     "tolerance_rel": 0.01,
+     "recalled_value": 11500,
+     "note": null
+    },
+    "payloads[LEO].payload_kg": {
+     "status": "verified",
+     "source_id": "S48",
+     "source_url": "https://www.esa.int/Enabling_Support/Space_Transportation/Launch_vehicles/Ariane_6_overview",
+     "retrieved": "2026-11-06",
+     "source_sha256": "232128d5a239e3e9a1c3d816d256ae8e37a65581ee47924de0d3f440a4d5b066",
+     "section": "ESA Ariane 6 overview page: value quoted to 0.1 t (orbit conditions not stated, so none are added)",
+     "source_original_text": "Ariane 64 can launch payloads of approximately 11.5 tonnes into geostationary transfer orbit and 21.6 tonnes into low Earth orbit",
+     "source_value": 21600.0,
+     "source_unit": "t→kg",
+     "statement_type": "point value",
+     "tolerance_rel": 0.01,
+     "recalled_value": 21650,
+     "note": null
+    },
+    "fairing_diam_m": {
+     "status": "verified",
+     "source_id": "S48",
+     "source_url": "https://www.esa.int/Enabling_Support/Space_Transportation/Launch_vehicles/Ariane_6_overview",
+     "retrieved": "2026-11-06",
+     "source_sha256": "232128d5a239e3e9a1c3d816d256ae8e37a65581ee47924de0d3f440a4d5b066",
+     "section": "ESA Ariane 6 overview page: fairing 5.4 m diameter",
+     "source_original_text": "Both are 5.4 m in diameter",
+     "source_value": 5.4,
+     "source_unit": "m",
+     "statement_type": "point value",
+     "tolerance_rel": 0.005,
+     "recalled_value": 5.4,
+     "note": null
+    },
+    "fairing_height_m": {
+     "status": "verified",
+     "source_id": "S48",
+     "source_url": "https://www.esa.int/Enabling_Support/Space_Transportation/Launch_vehicles/Ariane_6_overview",
+     "retrieved": "2026-11-06",
+     "source_sha256": "232128d5a239e3e9a1c3d816d256ae8e37a65581ee47924de0d3f440a4d5b066",
+     "section": "ESA Ariane 6 overview page: fairing comes in 20 m and 14 m versions; the recalled value is the long version",
+     "source_original_text": "two sizes: 20 m and a shorter",
+     "source_value": 20.0,
+     "source_unit": "m (longer of two available sizes)",
+     "statement_type": "point value",
+     "tolerance_rel": 1e-06,
+     "recalled_value": 20.0,
+     "note": null
+    },
+    "height_m": {
+     "status": "verified",
+     "source_id": "S48",
+     "source_url": "https://www.esa.int/Enabling_Support/Space_Transportation/Launch_vehicles/Ariane_6_overview",
+     "retrieved": "2026-11-06",
+     "source_sha256": "232128d5a239e3e9a1c3d816d256ae8e37a65581ee47924de0d3f440a4d5b066",
+     "section": "ESA Ariane 6 overview page: 'over 60 metres tall'",
+     "source_original_text": "At over 60 metres tall",
+     "source_value": 60.0,
+     "source_unit": "m (lower bound 'over 60')",
+     "statement_type": "lower bound",
+     "tolerance_rel": 0.0,
+     "recalled_value": 62.0,
+     "note": null
+    }
+   },
+   "verified_field_count": 5,
+   "unverified_fields": null,
+   "verification_scope": "partial: only the fields in field_verification were checked against a retrieved source; the record as a whole remains unverified"
   },
   {
    "id": "ariane62",
@@ -684,7 +1032,87 @@
    "data_class": "unverified",
    "retrieval_status": "not_retrieved",
    "derived": {},
-   "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)"
+   "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)",
+   "field_verification": {
+    "payloads[GTO].payload_kg": {
+     "status": "verified",
+     "source_id": "S48",
+     "source_url": "https://www.esa.int/Enabling_Support/Space_Transportation/Launch_vehicles/Ariane_6_overview",
+     "retrieved": "2026-11-06",
+     "source_sha256": "232128d5a239e3e9a1c3d816d256ae8e37a65581ee47924de0d3f440a4d5b066",
+     "section": "ESA Ariane 6 overview page: 'approximately' value, tolerance 1%",
+     "source_original_text": "Ariane 62 can launch payloads of approximately 4.5 tonnes into geostationary transfer orbit",
+     "source_value": 4500.0,
+     "source_unit": "t→kg",
+     "statement_type": "point value",
+     "tolerance_rel": 0.01,
+     "recalled_value": 4500,
+     "note": null
+    },
+    "payloads[LEO].payload_kg": {
+     "status": "verified",
+     "source_id": "S48",
+     "source_url": "https://www.esa.int/Enabling_Support/Space_Transportation/Launch_vehicles/Ariane_6_overview",
+     "retrieved": "2026-11-06",
+     "source_sha256": "232128d5a239e3e9a1c3d816d256ae8e37a65581ee47924de0d3f440a4d5b066",
+     "section": "ESA Ariane 6 overview page: value quoted to 0.1 t (orbit conditions not stated, so none are added)",
+     "source_original_text": "Ariane 62 can launch payloads of approximately 4.5 tonnes into geostationary transfer orbit or 10.3 tonnes into low Earth orbit",
+     "source_value": 10300.0,
+     "source_unit": "t→kg",
+     "statement_type": "point value",
+     "tolerance_rel": 0.01,
+     "recalled_value": 10350,
+     "note": null
+    },
+    "fairing_diam_m": {
+     "status": "verified",
+     "source_id": "S48",
+     "source_url": "https://www.esa.int/Enabling_Support/Space_Transportation/Launch_vehicles/Ariane_6_overview",
+     "retrieved": "2026-11-06",
+     "source_sha256": "232128d5a239e3e9a1c3d816d256ae8e37a65581ee47924de0d3f440a4d5b066",
+     "section": "ESA Ariane 6 overview page: fairing 5.4 m diameter",
+     "source_original_text": "Both are 5.4 m in diameter",
+     "source_value": 5.4,
+     "source_unit": "m",
+     "statement_type": "point value",
+     "tolerance_rel": 0.005,
+     "recalled_value": 5.4,
+     "note": null
+    },
+    "fairing_height_m": {
+     "status": "verified",
+     "source_id": "S48",
+     "source_url": "https://www.esa.int/Enabling_Support/Space_Transportation/Launch_vehicles/Ariane_6_overview",
+     "retrieved": "2026-11-06",
+     "source_sha256": "232128d5a239e3e9a1c3d816d256ae8e37a65581ee47924de0d3f440a4d5b066",
+     "section": "ESA Ariane 6 overview page: fairing comes in 20 m and 14 m versions; the recalled value is the long version",
+     "source_original_text": "two sizes: 20 m and a shorter",
+     "source_value": 20.0,
+     "source_unit": "m (longer of two available sizes)",
+     "statement_type": "point value",
+     "tolerance_rel": 1e-06,
+     "recalled_value": 20.0,
+     "note": null
+    },
+    "height_m": {
+     "status": "verified",
+     "source_id": "S48",
+     "source_url": "https://www.esa.int/Enabling_Support/Space_Transportation/Launch_vehicles/Ariane_6_overview",
+     "retrieved": "2026-11-06",
+     "source_sha256": "232128d5a239e3e9a1c3d816d256ae8e37a65581ee47924de0d3f440a4d5b066",
+     "section": "ESA Ariane 6 overview page: 'over 60 metres tall'",
+     "source_original_text": "At over 60 metres tall",
+     "source_value": 60.0,
+     "source_unit": "m (lower bound 'over 60')",
+     "statement_type": "lower bound",
+     "tolerance_rel": 0.0,
+     "recalled_value": 62.0,
+     "note": null
+    }
+   },
+   "verified_field_count": 5,
+   "unverified_fields": null,
+   "verification_scope": "partial: only the fields in field_verification were checked against a retrieved source; the record as a whole remains unverified"
   },
   {
    "id": "delta4_heavy",
@@ -807,7 +1235,7 @@
    "thrust_sl_n": null,
    "reusable": false,
    "fairing_diam_m": 3.3,
-   "fairing_height_m": 8.1,
+   "fairing_height_m": 9.0,
    "price_usd": null,
    "price_year": null,
    "payloads": [
@@ -839,7 +1267,102 @@
      }
     ]
    },
-   "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)"
+   "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)",
+   "field_verification": {
+    "height_m": {
+     "status": "verified",
+     "source_id": "S43",
+     "source_url": "https://www.esa.int/Enabling_Support/Space_Transportation/Launch_vehicles/Vega-C",
+     "retrieved": "2026-11-06",
+     "source_sha256": "623c5d122bda2a21f650b5cc3db02c9828d2678759b713f794e029859428e938",
+     "section": "ESA Vega-C page: 'nearly 35 m high'",
+     "source_original_text": "nearly 35 m high",
+     "source_value": 35.0,
+     "source_unit": "m",
+     "statement_type": "point value",
+     "tolerance_rel": 0.03,
+     "recalled_value": 35.0,
+     "note": null
+    },
+    "liftoff_mass_kg": {
+     "status": "verified",
+     "source_id": "S43",
+     "source_url": "https://www.esa.int/Enabling_Support/Space_Transportation/Launch_vehicles/Vega-C",
+     "retrieved": "2026-11-06",
+     "source_sha256": "623c5d122bda2a21f650b5cc3db02c9828d2678759b713f794e029859428e938",
+     "section": "ESA Vega-C page",
+     "source_original_text": "weighs 210 tonnes on the launch pad",
+     "source_value": 210000.0,
+     "source_unit": "t→kg",
+     "statement_type": "point value",
+     "tolerance_rel": 1e-06,
+     "recalled_value": 210000,
+     "note": null
+    },
+    "payloads[SSO].payload_kg": {
+     "status": "verified",
+     "source_id": "S43",
+     "source_url": "https://www.esa.int/Enabling_Support/Space_Transportation/Launch_vehicles/Vega-C",
+     "retrieved": "2026-11-06",
+     "source_sha256": "623c5d122bda2a21f650b5cc3db02c9828d2678759b713f794e029859428e938",
+     "section": "ESA Vega-C page (orbit altitude not stated, so the recalled 700 km stays unverified)",
+     "source_original_text": "can launch 2.3 tonnes to a Sun-synchronous orbit",
+     "source_value": 2300.0,
+     "source_unit": "t→kg",
+     "statement_type": "point value",
+     "tolerance_rel": 1e-06,
+     "recalled_value": 2300,
+     "note": null
+    },
+    "fairing_diam_m": {
+     "status": "verified",
+     "source_id": "S43",
+     "source_url": "https://www.esa.int/Enabling_Support/Space_Transportation/Launch_vehicles/Vega-C",
+     "retrieved": "2026-11-06",
+     "source_sha256": "623c5d122bda2a21f650b5cc3db02c9828d2678759b713f794e029859428e938",
+     "section": "ESA Vega-C page, Vega-C elements",
+     "source_original_text": "fairing at the top of Vega-C is 3.3 m in diameter",
+     "source_value": 3.3,
+     "source_unit": "m",
+     "statement_type": "point value",
+     "tolerance_rel": 0.005,
+     "recalled_value": 3.3,
+     "note": null
+    },
+    "fairing_height_m": {
+     "status": "conflict_resolved_to_source",
+     "source_id": "S43",
+     "source_url": "https://www.esa.int/Enabling_Support/Space_Transportation/Launch_vehicles/Vega-C",
+     "retrieved": "2026-11-06",
+     "source_sha256": "623c5d122bda2a21f650b5cc3db02c9828d2678759b713f794e029859428e938",
+     "section": "ESA Vega-C page, Vega-C elements",
+     "source_original_text": "in diameter and over 9 m tall",
+     "source_value": 9.0,
+     "source_unit": "m (lower bound 'over 9 m')",
+     "statement_type": "lower bound",
+     "tolerance_rel": 0.0,
+     "recalled_value": 8.1,
+     "note": null
+    },
+    "stages": {
+     "status": "verified",
+     "source_id": "S43",
+     "source_url": "https://www.esa.int/Enabling_Support/Space_Transportation/Launch_vehicles/Vega-C",
+     "retrieved": "2026-11-06",
+     "source_sha256": "623c5d122bda2a21f650b5cc3db02c9828d2678759b713f794e029859428e938",
+     "section": "ESA Vega-C page, Vega-C elements",
+     "source_original_text": "main elements are three solid-propellant stages, an upper stage powered by a reignitable liquid-propellant engine",
+     "source_value": 4,
+     "source_unit": "count",
+     "statement_type": "point value (3 solid + 1 upper)",
+     "tolerance_rel": 0.0,
+     "recalled_value": 4,
+     "note": null
+    }
+   },
+   "verified_field_count": 6,
+   "unverified_fields": null,
+   "verification_scope": "partial: only the fields in field_verification were checked against a retrieved source; the record as a whole remains unverified"
   },
   {
    "id": "soyuz_21b",

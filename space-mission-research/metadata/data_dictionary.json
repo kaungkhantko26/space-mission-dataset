@@ -87,6 +87,7 @@
    "thrust_sl_n",
    "thrust_vac_n",
    "type",
+   "unverified_fields",
    "verification_scope",
    "verified_field_count"
   ],
@@ -97,6 +98,7 @@
    "derived",
    "derived_from",
    "dry_mass_kg",
+   "field_verification",
    "id",
    "isp_sl_s",
    "isp_vac_s",
@@ -111,7 +113,10 @@
    "status",
    "thrust_sl_n",
    "thrust_vac_n",
-   "type"
+   "type",
+   "unverified_fields",
+   "verification_scope",
+   "verified_field_count"
   ],
   "launch_vehicles": [
    "confidence",
@@ -139,6 +144,7 @@
    "stages",
    "status",
    "thrust_sl_n",
+   "unverified_fields",
    "verification_scope",
    "verified_field_count"
   ],
@@ -148,6 +154,7 @@
    "derived",
    "dry_mass_kg",
    "engine_id",
+   "field_verification",
    "id",
    "n_engines",
    "note",
@@ -155,7 +162,10 @@
    "retrieval_status",
    "source_ids",
    "stage",
-   "vehicle_id"
+   "unverified_fields",
+   "vehicle_id",
+   "verification_scope",
+   "verified_field_count"
   ],
   "components": [
    "category",
@@ -198,6 +208,7 @@
    "derived",
    "destination",
    "dry_mass_kg",
+   "field_verification",
    "id",
    "instrument_ids",
    "launch_date",
@@ -210,7 +221,10 @@
    "power_system",
    "record_type",
    "retrieval_status",
-   "source_ids"
+   "source_ids",
+   "unverified_fields",
+   "verification_scope",
+   "verified_field_count"
   ]
  }
 }

@@ -4,7 +4,7 @@
  "description": "Constraint statements derived from the datasets and scenarios",
  "generated": "2026-11-06",
  "retrieval_status": "NOT_RETRIEVED: values recalled from published references; network access to source hosts was blocked in the build environment. See metadata/quality_report.json.",
- "record_count": 78,
+ "record_count": 80,
  "records": [
   {
    "id": "c_payload_saturn_v_LEO_expended",
@@ -99,7 +99,7 @@
    "type": "mass",
    "statement": "Payload to LEO <= 18850 kg on Atlas V 551 (expended)",
    "bound_kg": 18850,
-   "conditions_complete": false,
+   "conditions_complete": true,
    "data_class": "unverified"
   },
   {
@@ -115,14 +115,22 @@
    "type": "mass",
    "statement": "Payload to LEO <= 27200 kg on Vulcan Centaur VC6 (expended)",
    "bound_kg": 27200,
-   "conditions_complete": false,
+   "conditions_complete": true,
    "data_class": "unverified"
   },
   {
    "id": "c_payload_vulcan_vc6_GTO_expended",
    "type": "mass",
-   "statement": "Payload to GTO <= 14400 kg on Vulcan Centaur VC6 (expended)",
-   "bound_kg": 14400,
+   "statement": "Payload to GTO <= 14500.0 kg on Vulcan Centaur VC6 (expended)",
+   "bound_kg": 14500.0,
+   "conditions_complete": false,
+   "data_class": "unverified"
+  },
+  {
+   "id": "c_payload_vulcan_vc6_TLI_expended",
+   "type": "mass",
+   "statement": "Payload to TLI <= 11500.0 kg on Vulcan Centaur VC6 (expended)",
+   "bound_kg": 11500.0,
    "conditions_complete": false,
    "data_class": "unverified"
   },
@@ -271,7 +279,7 @@
   {
    "id": "c_twr_rd180",
    "type": "propulsion",
-   "statement": "RD-180 engine thrust/weight (vac) = 78.5",
+   "statement": "RD-180 engine thrust/weight (vac) = 77.2",
    "data_class": "derived"
   },
   {
@@ -290,6 +298,12 @@
    "id": "c_twr_aj10_190",
    "type": "propulsion",
    "statement": "AJ10-190 (Shuttle OMS) engine thrust/weight (vac) = 23.1",
+   "data_class": "derived"
+  },
+  {
+   "id": "c_twr_next",
+   "type": "propulsion",
+   "statement": "NEXT ion thruster engine thrust/weight (vac) = 0.0",
    "data_class": "derived"
   },
   {

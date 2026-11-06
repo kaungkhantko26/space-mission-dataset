@@ -1,5 +1,19 @@
 [
  {
+  "file": "data_raw/retrieved/esa_ariane6_overview.html",
+  "url": "https://www.esa.int/Enabling_Support/Space_Transportation/Launch_vehicles/Ariane_6_overview",
+  "bytes": 262771,
+  "sha256": "232128d5a239e3e9a1c3d816d256ae8e37a65581ee47924de0d3f440a4d5b066",
+  "retrieved": "2026-11-06"
+ },
+ {
+  "file": "data_raw/retrieved/esa_vega_c.html",
+  "url": "https://www.esa.int/Enabling_Support/Space_Transportation/Launch_vehicles/Vega-C",
+  "bytes": 231364,
+  "sha256": "623c5d122bda2a21f650b5cc3db02c9828d2678759b713f794e029859428e938",
+  "retrieved": "2026-11-06"
+ },
+ {
   "file": "data_raw/retrieved/jpl_approx_pos.html",
   "url": "https://ssd.jpl.nasa.gov/planets/approx_pos.html",
   "bytes": 29585,
@@ -105,6 +119,34 @@
   "retrieved": "2026-11-06"
  },
  {
+  "file": "data_raw/retrieved/ntrs_19690022248.pdf",
+  "url": "https://ntrs.nasa.gov/api/citations/19690022248/downloads/19690022248.pdf",
+  "bytes": 28028612,
+  "sha256": "3cce3b01294e90bedf9af742124ef657ffdf27536921ef50464cc34836526898",
+  "retrieved": "2026-11-06"
+ },
+ {
+  "file": "data_raw/retrieved/ntrs_19980017550.pdf",
+  "url": "https://ntrs.nasa.gov/api/citations/19980017550/downloads/19980017550.pdf",
+  "bytes": 1636917,
+  "sha256": "b2d854d8930a9257f30eeb0cd73658b889ec51cdf5f3747d13195f48628fe5c2",
+  "retrieved": "2026-11-06"
+ },
+ {
+  "file": "data_raw/retrieved/ntrs_20060051789.pdf",
+  "url": "https://ntrs.nasa.gov/api/citations/20060051789/downloads/20060051789.pdf",
+  "bytes": 579120,
+  "sha256": "e1925304ce7ccb65e5a67e2d66a49e767f8b7a11f84cd62380b5935e09d029f4",
+  "retrieved": "2026-11-06"
+ },
+ {
+  "file": "data_raw/retrieved/ntrs_20090004685.pdf",
+  "url": "https://ntrs.nasa.gov/api/citations/20090004685/downloads/20090004685.pdf",
+  "bytes": 1153765,
+  "sha256": "d8c4e650599e2278acbc8305f234bb638e48ee1175a801af124fa18cf5953ff7",
+  "retrieved": "2026-11-06"
+ },
+ {
   "file": "data_raw/retrieved/sbdb_bennu.json",
   "url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=101955&phys-par=1",
   "bytes": 5546,
@@ -137,6 +179,20 @@
   "url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=4&phys-par=1",
   "bytes": 5024,
   "sha256": "78b6e24f9d6564aa49a074b66dacbb785a89a96c9adc9c23d8ffe296eae3d9d6",
+  "retrieved": "2026-11-06"
+ },
+ {
+  "file": "data_raw/retrieved/ula_atlas_v.html",
+  "url": "https://www.ulalaunch.com/rockets/atlas-v",
+  "bytes": 60112,
+  "sha256": "47ae205afab17a45780756ae4d42322c2be1d8e7620676b9bc4c7eb6e84aa975",
+  "retrieved": "2026-11-06"
+ },
+ {
+  "file": "data_raw/retrieved/ula_vulcan.html",
+  "url": "https://www.ulalaunch.com/rockets/vulcan-centaur",
+  "bytes": 57237,
+  "sha256": "187fad654295e684f50f4b40899a476ab7583d2bcb66905aaeb3ec27571c2426",
   "retrieved": "2026-11-06"
  }
 ]

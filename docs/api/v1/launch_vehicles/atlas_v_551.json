@@ -1,6 +1,6 @@
 {
  "collection": "launch_vehicles",
- "data_status": "25 celestial records (Sun, planets, dwarf planets, moons, small bodies) have their core physical fields verified against retrieved JPL/NASA pages (198 field checks matched; 16 conflicts were resolved to the sourced value). Six SLS/RS-25 launch figures were also verified against the NASA SLS page; all other launch-vehicle, engine, spacecraft, instrument and mission figures are still unverified (recalled values), as are two user-supplied tables (SpaceX launches 2010-2018, NASA facilities). Derived values inherit the status of their inputs. Optimization catalog values are estimated/fictional.",
+ "data_status": "32 records are verified (25 celestial bodies at core level; engines and stages whose core numeric fields were all checked) against retrieved JPL, NASA (NTRS, SLS page, Apollo 11 press kit), ULA and ESA pages. 198 celestial and 44 launch/engine field checks matched; 16 celestial and 13 launch/engine recalled values were wrong or outdated and were replaced by the sourced value. Launch vehicles are verified field by field only (see verified_field_count); everything not checked (e.g. Falcon, Starship, Electron, Ariane, most engines, spacecraft components, instruments, missions) is still unverified, as are two user-supplied tables. Derived values inherit the status of their inputs. Optimization catalog values are estimated/fictional.",
  "record": {
   "id": "atlas_v_551",
   "name": "Atlas V 551",
@@ -21,7 +21,7 @@
    {
     "orbit": "LEO",
     "payload_kg": 18850,
-    "altitude_km": null,
+    "altitude_km": 200.0,
     "inclination_deg": 28.7,
     "mode": "expended",
     "assumption": ""
@@ -30,7 +30,7 @@
     "orbit": "GTO",
     "payload_kg": 8900,
     "altitude_km": null,
-    "inclination_deg": null,
+    "inclination_deg": 27.0,
     "mode": "expended",
     "assumption": ""
    }
@@ -60,6 +60,86 @@
     }
    ]
   },
-  "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)"
+  "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)",
+  "field_verification": {
+   "payloads[LEO].payload_kg": {
+    "status": "verified",
+    "source_id": "S42",
+    "source_url": "https://www.ulalaunch.com/rockets/atlas-v",
+    "retrieved": "2026-11-06",
+    "source_sha256": "47ae205afab17a45780756ae4d42322c2be1d8e7620676b9bc4c7eb6e84aa975",
+    "section": "ULA Atlas V performance table, row 551 (columns GEO 0.0 deg | GTO 27.0 deg | LEO 28.7 deg | LEO 90 deg | LEO-ISS 51.6 deg); LEO 28.7 deg",
+    "source_original_text": "551 3,850 kg 8,500 lbs 8,900 kg 19,620 lbs 18,850 kg 41,570 lbs 15,760 kg 34,750 lbs 17,720 kg ...",
+    "source_value": 18850.0,
+    "source_unit": "kg",
+    "statement_type": "point value",
+    "tolerance_rel": 1e-06,
+    "recalled_value": 18850,
+    "note": null
+   },
+   "payloads[GTO].payload_kg": {
+    "status": "verified",
+    "source_id": "S42",
+    "source_url": "https://www.ulalaunch.com/rockets/atlas-v",
+    "retrieved": "2026-11-06",
+    "source_sha256": "47ae205afab17a45780756ae4d42322c2be1d8e7620676b9bc4c7eb6e84aa975",
+    "section": "ULA Atlas V performance table, row 551 (columns GEO 0.0 deg | GTO 27.0 deg | LEO 28.7 deg | LEO 90 deg | LEO-ISS 51.6 deg); GTO 27.0 deg",
+    "source_original_text": "551 3,850 kg 8,500 lbs 8,900 kg 19,620 lbs 18,850 kg 41,570 lbs 15,760 kg 34,750 lbs 17,720 kg ...",
+    "source_value": 8900.0,
+    "source_unit": "kg",
+    "statement_type": "point value",
+    "tolerance_rel": 1e-06,
+    "recalled_value": 8900,
+    "note": null
+   },
+   "payloads[LEO].altitude_km": {
+    "status": "added_from_source",
+    "source_id": "S42",
+    "source_url": "https://www.ulalaunch.com/rockets/atlas-v",
+    "retrieved": "2026-11-06",
+    "source_sha256": "47ae205afab17a45780756ae4d42322c2be1d8e7620676b9bc4c7eb6e84aa975",
+    "section": "ULA Atlas V performance table footnotes (reference orbit definitions)",
+    "source_original_text": "LEO-Reference (Low Earth Orbit-Reference) =200 km circular at 28.7 deg or 90 deg",
+    "source_value": 200.0,
+    "source_unit": "km",
+    "statement_type": "reference-orbit definition",
+    "tolerance_rel": 1e-06,
+    "recalled_value": null,
+    "note": null
+   },
+   "payloads[LEO].inclination_deg": {
+    "status": "verified",
+    "source_id": "S42",
+    "source_url": "https://www.ulalaunch.com/rockets/atlas-v",
+    "retrieved": "2026-11-06",
+    "source_sha256": "47ae205afab17a45780756ae4d42322c2be1d8e7620676b9bc4c7eb6e84aa975",
+    "section": "ULA Atlas V performance table footnotes (reference orbit definitions)",
+    "source_original_text": "200 km circular at 28.7 deg",
+    "source_value": 28.7,
+    "source_unit": "deg",
+    "statement_type": "reference-orbit definition",
+    "tolerance_rel": 1e-06,
+    "recalled_value": 28.7,
+    "note": null
+   },
+   "payloads[GTO].inclination_deg": {
+    "status": "added_from_source",
+    "source_id": "S42",
+    "source_url": "https://www.ulalaunch.com/rockets/atlas-v",
+    "retrieved": "2026-11-06",
+    "source_sha256": "47ae205afab17a45780756ae4d42322c2be1d8e7620676b9bc4c7eb6e84aa975",
+    "section": "ULA Atlas V performance table footnotes (reference orbit definitions)",
+    "source_original_text": "GTO (Geosynchronous Transfer Orbit)=35,786 km x 185 km at 27.0 deg",
+    "source_value": 27.0,
+    "source_unit": "deg",
+    "statement_type": "reference-orbit definition",
+    "tolerance_rel": 1e-06,
+    "recalled_value": null,
+    "note": null
+   }
+  },
+  "verified_field_count": 5,
+  "unverified_fields": null,
+  "verification_scope": "partial: only the fields in field_verification were checked against a retrieved source; the record as a whole remains unverified"
  }
 }

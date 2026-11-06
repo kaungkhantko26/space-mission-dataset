@@ -1,6 +1,6 @@
 {
  "collection": "rocket_engines",
- "data_status": "25 celestial records (Sun, planets, dwarf planets, moons, small bodies) have their core physical fields verified against retrieved JPL/NASA pages (198 field checks matched; 16 conflicts were resolved to the sourced value). Six SLS/RS-25 launch figures were also verified against the NASA SLS page; all other launch-vehicle, engine, spacecraft, instrument and mission figures are still unverified (recalled values), as are two user-supplied tables (SpaceX launches 2010-2018, NASA facilities). Derived values inherit the status of their inputs. Optimization catalog values are estimated/fictional.",
+ "data_status": "32 records are verified (25 celestial bodies at core level; engines and stages whose core numeric fields were all checked) against retrieved JPL, NASA (NTRS, SLS page, Apollo 11 press kit), ULA and ESA pages. 198 celestial and 44 launch/engine field checks matched; 16 celestial and 13 launch/engine recalled values were wrong or outdated and were replaced by the sourced value. Launch vehicles are verified field by field only (see verified_field_count); everything not checked (e.g. Falcon, Starship, Electron, Ariane, most engines, spacecraft components, instruments, missions) is still unverified, as are two user-supplied tables. Derived values inherit the status of their inputs. Optimization catalog values are estimated/fictional.",
  "record": {
   "id": "j2",
   "name": "J-2",
@@ -27,6 +27,29 @@
    "mass_flow_vac_kg_s": 250.20590213923987,
    "engine_thrust_to_weight_vac": 58.91313467596196
   },
-  "derived_from": "mdot=F/(Isp*g0); TWR=F/(m*g0); thrust/power"
+  "derived_from": "mdot=F/(Isp*g0); TWR=F/(m*g0); thrust/power",
+  "field_verification": {
+   "thrust_vac_n": {
+    "status": "verified",
+    "source_id": "S44",
+    "source_url": "https://ntrs.nasa.gov/api/citations/19690022248/downloads/19690022248.pdf",
+    "retrieved": "2026-11-06",
+    "source_sha256": "3cce3b01294e90bedf9af742124ef657ffdf27536921ef50464cc34836526898",
+    "section": "NASA Apollo 11 Press Kit (NTRS 19690022248), 'Saturn V Launch Vehicle' table: nominal Apollo 11 configuration: S-II thrust range (five J-2); the S-IVB single J-2 ran 178,161-203,779 lbf on this mission",
+    "source_original_text": "THRUST 1,120,216 TO 1,157,707 LBS",
+    "source_value": 1029947.4603076775,
+    "source_unit": "lbf→N, S-II maximum total ÷ 5 J-2 engines",
+    "statement_type": "derived by division",
+    "tolerance_rel": 0.01,
+    "recalled_value": 1033000,
+    "note": null
+   }
+  },
+  "verified_field_count": 1,
+  "unverified_fields": [
+   "isp_vac_s",
+   "dry_mass_kg"
+  ],
+  "verification_scope": "partial: only the fields in field_verification were checked against a retrieved source; the record as a whole remains unverified"
  }
 }

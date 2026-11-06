@@ -1,0 +1,484 @@
+NASA/TM—2006-214453                                     AIAA–2006–5263
+
+
+
+
+Life and Operating Range Extension of the
+BPT–4000 Qualification Model Hall Thruster
+Ben Welander, Christian Carpenter, and Kristi de Grys
+Aerojet General, Redmond, Washington
+
+Richard R. Hofer and Thomas M. Randolph
+Jet Propulsion Laboratory, Pasadena, California
+
+David H. Manzella
+Glenn Research Center, Cleveland, Ohio
+
+
+
+
+October 2006
+                                        NASA STI Program . . . in Profile
+
+
+
+Since its founding, NASA has been dedicated to the            •   CONFERENCE PUBLICATION. Collected
+advancement of aeronautics and space science. The                 papers from scientific and technical
+NASA Scientific and Technical Information (STI)                   conferences, symposia, seminars, or other
+program plays a key part in helping NASA maintain                 meetings sponsored or cosponsored by NASA.
+this important role.
+                                                              •   SPECIAL PUBLICATION. Scientific,
+The NASA STI Program operates under the auspices                  technical, or historical information from
+of the Agency Chief Information Officer. It collects,             NASA programs, projects, and missions, often
+organizes, provides for archiving, and disseminates               concerned with subjects having substantial
+NASA’s STI. The NASA STI program provides access                  public interest.
+to the NASA Aeronautics and Space Database and its
+public interface, the NASA Technical Reports Server,          •   TECHNICAL TRANSLATION. English-
+thus providing one of the largest collections of                  language translations of foreign scientific and
+aeronautical and space science STI in the world.                  technical material pertinent to NASA’s mission.
+Results are published in both non-NASA channels and
+by NASA in the NASA STI Report Series, which                  Specialized services also include creating custom
+includes the following report types:                          thesauri, building customized databases, organizing
+                                                              and publishing research results.
+•   TECHNICAL PUBLICATION. Reports of
+    completed research or a major significant phase           For more information about the NASA STI
+    of research that present the results of NASA              program, see the following:
+    programs and include extensive data or theoretical
+    analysis. Includes compilations of significant            •   Access the NASA STI program home page at
+    scientific and technical data and information                 http://www.sti.nasa.gov
+    deemed to be of continuing reference value.
+    NASA counterpart of peer-reviewed formal                  •   E-mail your question via the Internet to
+    professional papers but has less stringent                    [email removed]
+    limitations on manuscript length and extent of
+    graphic presentations.                                    •   Fax your question to the NASA STI Help Desk
+                                                                  at 301–621–0134
+•   TECHNICAL MEMORANDUM. Scientific
+    and technical findings that are preliminary or            •   Telephone the NASA STI Help Desk at
+    of specialized interest, e.g., quick release                  301–621–0390
+    reports, working papers, and bibliographies that
+    contain minimal annotation. Does not contain              •   Write to:
+    extensive analysis.                                           NASA STI Help Desk
+                                                                  NASA Center for AeroSpace Information
+•   CONTRACTOR REPORT. Scientific and                             7121 Standard Drive
+    technical findings by NASA-sponsored                          Hanover, MD 21076–1320
+    contractors and grantees.
+NASA/TM—2006-214453                                     AIAA–2006–5263
+
+
+
+
+Life and Operating Range Extension of the
+BPT–4000 Qualification Model Hall Thruster
+Ben Welander, Christian Carpenter, and Kristi de Grys
+Aerojet General, Redmond, Washington
+
+Richard R. Hofer and Thomas M. Randolph
+Jet Propulsion Laboratory, Pasadena, California
+
+David H. Manzella
+Glenn Research Center, Cleveland, Ohio
+
+
+
+
+Prepared for the
+42nd Joint Propulsion Conference and Exhibit
+cosponsored by the AIAA, ASME, SAE, and ASEE
+Sacramento, California, July 9–12, 2006
+
+
+
+
+National Aeronautics and
+Space Administration
+
+
+Glenn Research Center
+Cleveland, Ohio 44135
+
+
+
+
+October 2006
+                                                 Acknowledgments
+
+
+
+
+  Work performed at Aerojet is supported by the NASA Glenn Research Center under contract NNC04CB14C. The authors
+       thank Mr. Doug Ley for his support of the testing described in this paper. The authors gratefully acknowledge
+                            Mr. Robert Kay for providing the PPU efficiency data and insight.
+
+
+
+
+                 Level of Review: This material has been technically reviewed by technical management.
+
+
+
+                                                     Available from
+NASA Center for Aerospace Information                                                 National Technical Information Service
+7121 Standard Drive                                                                                   5285 Port Royal Road
+Hanover, MD 21076–1320                                                                                Springfield, VA 22161
+
+
+                                   Available electronically at http://gltrs.grc.nasa.gov
+            Life and Operating Range Extension of the BPT–4000
+                     Qualification Model Hall Thruster
+                               Ben Welander, Christian Carpenter, and Kristi de Grys
+                                               Aeroject General
+                                         Redmond, Washington 98052
+
+                                   Richard R. Hofer and Thomas M. Randolph
+                                  National Aeronautics and Space Administration
+                                             Jet Propulsion Laboratory
+                                            Pasadena, California 91109
+
+                                               David H. Manzella
+                                  National Aeronautics and Space Administration
+                                             Glenn Research Center
+                                             Cleveland, Ohio 44135
+
+                                                      Abstract
+           Following completion of the 5,600 hour qualification life test of the BPT–4000 4.5 kW
+        Hall Thruster Propulsion System, NASA and Aerojet have undertaken efforts to extend the
+        qualified operating range and lifetime of the thruster to support a wider range of NASA
+        missions. The system was originally designed for orbit raising and stationkeeping
+        applications on military and commercial geostationary satellites. As such, it was designed to
+        operate over a range of power levels from 3 to 4.5 kW. Studies of robotic exploration
+        applications have shown that the cost savings provided by utilizing commercial technology
+        that can operate over a wider range of power levels provides significant mission benefits.
+        The testing reported on here shows that the 4.5 kW thruster as designed has the capability to
+        operate efficiently down to power levels as low as 1 kW. At the time of writing, the BPT–
+        4000 qualification thruster and cathode have accumulated over 400 hours of operation
+        between 1 kW–2 kW with an additional 600 hours currently planned. The thruster has
+        demonstrated no issues with longer duration operation at low power.
+
+
+                                                    Nomenclature
+Id            discharge current
+ISP           specific impulse
+Pd            discharge power
+T             thrust
+Vd            discharge voltage
+
+                                               I.    Introduction
+
+H    all thrusters have provided station-keeping on Russian spacecraft for decades and have more recently been
+     demonstrated on Western geosynchronous (GEO) communications satellites1,2. Additionally, SMART–1
+successfully demonstrated the use of Hall thrusters as primary propulsion systems for orbit transfer and capture on a
+science mission3. As Hall thrusters continue to gain acceptance in the commercial marketplace, NASA has begun
+considering them more broadly based on their lower system cost compared to other electric propulsion systems with
+
+
+
+
+NASA/TM—2006-214453                                      1
+similar performance. JPL has recently conducted studies for cost-capped science missions such as those conducted
+under the NASA Discovery Program and found that several missions could benefit from a commercially-available
+electric propulsion system with wide power and throttling capabilities4. NASA GRC and Aerojet have over the past
+several years been developing Hall thruster technology to provide enhanced throttle range and higher specific
+impulse capability than state-of-the-art Hall thrusters to maximize interplanetary mission benefits5.
+    The BPT–4000 Hall thruster propulsion system (HTPS) was developed through a joint effort between Lockheed
+Martin Space Systems and Aerojet-General as a 4.5 kW electric propulsion system for GEO satellite applications. In
+2005, Aerojet successfully completed the planned qualification of this system6,7. During qualification, the BPT–
+4000 demonstrated >6700 starts, >5800 hours of operation, >4.9x106 N-s of total impulse, and >250 kg of xenon
+throughput. Test firings varied in duration from 5 minutes to over 200 hours, covered a power range from 3 to 4.5
+kW, and discharge voltages from 300 to 400 V.
+    After firing for 5800 hours, the BPT–4000 operated more efficiently than during any previous period and erosion
+was slowed significantly7. Measurements of the insulator ring erosion and the cathode health showed the thruster
+had significantly more life capability. Figure 1 displays the thruster condition at the end of commercial qualification
+(EOT). The image on the left shows the extent of erosion to the thruster downstream surfaces and cathode keeper
+shell after 23 megawatt-hours (i.e., after 5800 hours). Although the erosion of the insulator rings is extensive, the
+dielectric coating on the pole pieces still retains about half of its original thickness near the channel. Deposition has
+been removed from cathode keeper surfaces with direct view of the annulus but the shell has no signs of
+degradation.
+
+
+
+
+            Figure 1. The BPT-4000 showing 5800 hours of wear (left) and 1 kW operation (right).
+
+    NASA has funded Aerojet to assess the performance of the BPT–4000 down to the 1 kW power level and
+demonstrate extended duration operation to characterize erosion rates and cathode operation at low power. This
+paper documents this effort. Sections II and III describe the objectives of the qualification extension and provide a
+brief description of the facility and setup. Subsequent sections present results of blow-down testing, low-power
+performance of the thruster and PPU and discuss the first 400 hours of low-power operation.
+
+
+
+
+NASA/TM—2006-214453                                        2
+                                              II.    Test Objectives
+    NASA and Aerojet partnered to conduct additional qualification that stretched both the lifetime and the throttle
+range of the thruster. The qualification extension consists of three sections including a blow-down test, performance
+characterization, and a life test extension (LTE). The objective of the blow-down test is to demonstrate the capability
+of the HTPS to operate in an unregulated pressure mode. The objectives of thruster characterizations are to measure
+erosion and map the performance of the thruster between 1 and 2 kW. The objective of the LTE is to demonstrate
+sustained operation at low power and extend the qualified life of the BPT–4000.
+    The extended qualification test plan started with a
+thruster characterization followed by blow-down testing.
+After quantifying low-power performance, the thruster                    Pd       Segment Cycles Total Hours
+entered the first of two 500-hour life test blocks of
+sustained low-power operation. The test plan was specified            2.00 kW            4               100
+to ensure that testing was conducted to maximize data                          1.75 kW            4              200
+return with the lowest possible risk to the test hardware.
+The first 500-hour test block consists of five segments at                     1.50 kW            4              300
+currents of 5 A, conducted at successively lower powers as                     1.25 kW            4              400
+shown in Table 1. The intent of each segment is to
+demonstrate stable, sustained operation at powers as low                       1.00 kW            4              500
+as 1 kW. The thruster characterization is repeated before
+starting the second test block, where the thruster will        Table 1. Block 1 of the BPT-4000 life test extension.
+accumulate hours exclusively at 1.5 kW–300 V.
+
+                                       III.     Facility and Test Setup
+    Both the original life test and the low-power LTE were conducted in Aerojet’s Chamber 2 facility, which is
+described in detail in previous publications8. The BPT–4000 sits on an inverted pendulum thrust stand inside a 2.1-m
+diameter by 7.2-m stainless steel vacuum chamber. Throughout qualification and the life test extension, a
+qualification model XFC delivered propellant to the BPT–4000 and a development model PPU powered both the
+thruster and the XFC. The flight model PPU has upgraded components for improved tolerance to thermal variations,
+flash X-ray, and electromagnetic interference but it is electrically and functionally equivalent to the unit used to
+qualify the BPT–4000.
+
+                                          IV.       Blow-down Testing
+    During nominal operation, the XFC receives propellant at feed pressures between 34 and 40 psia (235–275 kPa).
+In order to minimize ullage propellant, a test was designed to demonstrate operation at lower feed pressures. The
+thruster was started normally at 4.5 kW–400 V with 38 psia feed pressure. After reaching steady state, the xenon
+supply bottle was closed and the feed pressure was allowed to drop. To slow the rate of pressure decline, a volume
+was added to the feed system and filled with xenon at the nominal feed pressure.
+    During the first several hours of testing, the feed         140                                          14
+pressure dropped without affecting thruster performance.
+The mass flow rate and discharge current remained steady        120                                          12
+                                                                                                                            Flow Rate and Current
+
+because the proportional flow control valve in the XFC
+                                                                100                                          10
+                                                               Feed Pressure
+
+
+
+
+gradually opened as commanded by the PPU loop
+control. As shown in Figure 2, the PFCV reached full
+                                                                 80                                          8
+open about an hour before test shutdown. After this point,
+the declining feed pressure began to decrease flow rate.         60                                          6
+Discharge current followed flow rate until a lower limit
+of 5 A was reached and the test was voluntarily                  40         Feed Pressure (kPa)              4
+terminated. The thruster operated stably down to the 5 A                    Flow Rate (mg/s)
+limit with no increases in discharge current or voltage          20                                          2
+                                                                            Discharge Current (A)
+oscillations. By demonstrating operation at less than 25%
+nominal feed pressure, the HTPS can facilitate either a            0                                         0
+propellant mass savings or extended mission duration.                0       1000      2000       3000   4000
+                                                                                               Time (s)
+                                                                                Figure 2. Feed pressure, flow rate and Id
+                                                                               during the last hour of blow-down testing.
+
+
+NASA/TM—2006-214453                                       3
+                                         V.      BPT–4000 Thruster Performance at Low Power
+    After blow-down testing, the BPT–4000 began low-power testing.
+Starting at 2 kW, the HTPS demonstrated steady operation at                                                                       T (mN)     ISP (s)
+successively decreasing power. Performance results from thruster                                              4.5 kW–400 V          254       2150
+characterizations and the first 400 hours of extended testing are shown in                                    4.5 kW–300 V          278       1960
+Table 2. Thrust values are the difference between a measurement taken at
+                                                                                                              3.0 kW–400 V          171       2010
+the end of each cycle and a tare measurement taken one minute after
+shutdown. Specific impulse includes flow rate to the thruster and cathode                                     3.0 kW–300 V          190       1840
+and is corrected for the finite chamber pressure.
+    Figure 3 shows thruster efficiency measurements taken at the end of                                       2.00 kW–400 V         115      1860
+the BPT-4000 qualification and during the life test extension. Efficiency
+                                                                                                              1.75 kW–350 V         107      1740
+is calculated using T and ISP calculated above and Pd. These
+measurements are graphed along with reported data from the end of the                                         1.50 kW–300 V         103      1610
+SPT–100 cyclic endurance test9 and the PPS–1350–G qualification10 for                                         1.25 kW–250 V         92       1440
+comparison. Although the BPT–4000 was optimized for 4.5 kW, it                                                1.00 kW–200 V         79       1220
+operates with greater efficiency than the SPT–100 and PPS–1350–G at
+similar power levels. The graph shows that, while BPT–4000                                                        Table 2. Performance
+performance does decrease with power level, the efficiency remains                                                map of the BPT–4000.
+above 50% for Pd as low as 1.25 kW.
+                            0.62
+
+                             0.6
+
+                            0.58
+      Thruster Efficiency
+
+
+
+
+                            0.56
+
+                            0.54
+
+                            0.52
+                                                                                                                          BPT-4000 Qual EOT
+                             0.5
+                                                                                                                          BPT-4000 ELT
+                            0.48
+                                                                      7500 hrs                                            SPT-100
+                            0.46
+                                                                                                                          PPS-1350-G
+                                                                      5730 hrs
+                            0.44
+                                   0   500       1000      1500    2000        2500                  3000      3500      4000       4500       5000
+                                                                    Discharge Power (W)
+
+                                             Figure 3. BPT-4000 thruster efficiency vs. discharge power.
+
+                                                  VI.   System Performance at Low Power
+    The LTE also demonstrated operation of the system at                                    1
+lower power levels. The PPU has two 2.5-kW anode
+supply modules (ASMs) capable of providing the BPT–
+                                                                              Efficiency
+
+
+
+
+4000 with up to 5 kW of discharge power. By
+demonstrating low-power operation on one anode supply                                      0.9
+module, the HTPS increases the range of missions that it
+may support. This capability adds increased system
+efficiency during low power operation and provides risk
+reduction since a single string HTPS may still be                                          0.8
+operational if there is a loss of an ASM. All life test                                          0      500       1000     1500       2000      2500
+extension cycles at 5 A used a start sequence with only                                                     ASM Output Power (W)
+one powered ASM in which the start-up powers never
+exceeded the nominal operating power levels (Table 1).                                           Figure 4. Efficiency of the PPU ASM.
+
+
+NASA/TM—2006-214453                                                       4
+                        VII.     Health and Stability during Extended Life Testing
+    The test program has included operation at lower power levels for given specific impulse than have been
+previously tested with this engine. Although designed for discharge currents as high as 15 A, the BPT–4000 has
+operated almost exclusively at 5 A for over 400 hours. The thruster and cathode have operated without stability
+issues at all power levels tested. Peak-to-peak current (Id) oscillations were 10 +/- 3 A at the end of qualification
+testing and have remained in this range throughout low power testing. Similarly, voltage oscillation amplitudes
+measured during the LTE are comparable to those from 3 and 4.5 kW operations. Cathode ignition voltages have
+remained below 20 V and temperatures have remained nominal. The cathode floating potential has been less than 14
+V with respect to ground and stable throughout testing. This demonstrates both excellent cathode health and cathode
+coupling to the thruster despite the low flow rate, current, and voltage. No appreciable wear has been measured
+suggesting that low-power operation does not significantly change erosion rates, but detailed analysis of erosion data
+is still pending. When the life test extension is complete, the BPT–4000 will demonstrate a throughput capability
+greater than 285 kg and a total impulse greater than 5.4x106 N-s.
+
+                                                VIII.     Conclusion
+    Aerojet’s commercially available BPT–4000 Hall thruster has demonstrated increased life and an expanded
+operating range as part of a life test extension funded by NASA. Although designed for 4.5-kW operation, the
+thruster’s performance exceeds 50% for discharge powers as low as 1.25 kW. At the time of writing, the
+qualification thruster and cathode have accumulated over 400 hours of stable, low-power operation. When the LTE
+is completed, the BPT–4000 will have accumulated 5.4x106 N-s of impulse, processed 285 kg of xenon propellant
+and operated for more than 1000 hours below 2 kW. Future work includes characterizing erosion rates at low power
+for model correlation and more accurate predictions of thruster life. The lower power limit for the LTE was
+arbitrarily set at 1 kW. Based on the positive test results, additional BPT–4000 testing may be performed to
+demonstrate both extended life and operational capability below 1 kW.
+
+                                                        References
+   1
+      Day, M., Naslennikov, N., Randolph, T., and Rogers, W., “SPT-100 Subsystem Qualification Status,” AIAA-95-2666, 31st
+AIAA/ASME/SAE/ASEE Joint Propulsion Conference, San Diego, CA, July 10-12, 1995.
+    2
+      Duchemin, O., Cornu, N., Darnon, F., and Estublier, D., “Endurance Test at High Voltage of the PPSX000 Hall-Effect
+Thruster,” AIAA-2005-4050, 41st AIAA/ASME/SAE/ASEE Joint Propulsion Conference and Exhibit, Tucson, AZ, July 10-13,
+2005.
+    3
+      Koppel, C. R. and Estublier, D., “The SMART-1 Hall Effect Thruster Around the Moon: In Flight Experience,” IEPC-2005-
+119, 29th International Electric Propulsion Conference, Princeton University, October 31–November 4, 2005.
+    4
+      Hofer, R. R., Randolph, T. M., Oh, D. Y., Snyder, J. S., de Grys, K. H., "Evaluation of a 4.5 kW Commercial Hall Thruster
+System for NASA Science Missions," AIAA-2006-4469, 42nd Joint Propulsion Conference, Sacramento, CA, July 9-12, 2006.
+    5
+      Manzella, D., Oh, D., Aadland, R., “Hall Thruster Technology for NASA Science Missions,” AIAA-2005-3675, 41st
+AIAA/ASME/SAE/ASEE Joint Propulsion Conference and Exhibit, Tucson, AZ, July 10-13, 2005.
+    6
+      de Grys, K., Welander, B., Dimicco, J., Wenzel, S., Kay, B., Kayms, V., Paisley, J., “4.5 kW Hall Thruster System
+Qualification Status,” AIAA-2005-3682, 41st AIAA/ASME/SAE/ASEE Joint Propulsion Conference and Exhibit, Tucson, AZ,
+July 10-13, 2005.
+    7Welander, B. and de Grys, K., “Completion of the BPT-4000 Hall Thruster Qualification,” 53rd JANNAF Propulsion
+Meeting / 2nd Liquid Propulsion Subcommittee Meeting / 1st Spacecraft Propulsion Subcommittee Meeting, Monterey, CA,
+December 5-8, 2005.
+    8
+      de Grys, K., Meckel, N., Callis, G., Greisen, D., Hoskins, A., King, D., Wilson, F., Werthman, L., Kayms, V.,
+“Development and Testing of a 4500 Watt Flight Type Hall Thruster and Cathode,” IEPC-01-011, 27th International Electric
+Propulsion Conference, Pasadena, CA, Octobter 15-19, 2001.
+    9
+      Garner, C. E., Brophy, J. R., Polk, J. E., and Pless, L. C., “A 5730-Hr Cyclic Endurance Test of the SPT-100,” AIAA-95-
+2667, 31st AIAA/ASME/SAE/ASEE Joint Propulsion Conference, San Diego, CA, July 10-12, 1995.
+    10
+       Marchandise, F., Biron, J., Gambon, M., Cornu, N., Darnon, F., and Estublier, D., “The PPS 1350 Qualification
+Demonstration 7500h on Ground, about 5000h in Flight,” IEPC-2005-209, 29th International Electric Propulsion Conference,
+Princeton University, October 31–November 4, 2005.
+
+
+
+
+NASA/TM—2006-214453                                           5
+                                                                                                                                               Form Approved
+                       REPORT DOCUMENTATION PAGE                                                                                               OMB No. 0704-0188
+Public reporting burden for this collection of information is estimated to average 1 hour per response, including the time for reviewing instructions, searching existing data sources,
+gathering and maintaining the data needed, and completing and reviewing the collection of information. Send comments regarding this burden estimate or any other aspect of this
+collection of information, including suggestions for reducing this burden, to Washington Headquarters Services, Directorate for Information Operations and Reports, 1215 Jefferson
+Davis Highway, Suite 1204, Arlington, VA 22202-4302, and to the Office of Management and Budget, Paperwork Reduction Project (0704-0188), Washington, DC 20503.
+1. AGENCY USE ONLY (Leave blank)                        2. REPORT DATE                               3. REPORT TYPE AND DATES COVERED
+                                                                   October 2006                                               Technical Memorandum
+4. TITLE AND SUBTITLE                                                                                                             5. FUNDING NUMBERS
+
+       Life and Operating Range Extension of the BPT–4000 Qualification
+       Model Hall Thruster
+                                                                                                                                       WBS 346620.04.05.03.04
+6. AUTHOR(S)
+       Ben Welander, Christian Carpenter, Kristi de Grys, Richard R. Hofer,
+       Thomas M. Randolph, and David H. Manzella
+
+7. PERFORMING ORGANIZATION NAME(S) AND ADDRESS(ES)                                                                                8. PERFORMING ORGANIZATION
+                                                                                                                                     REPORT NUMBER
+       National Aeronautics and Space Administration
+       John H. Glenn Research Center at Lewis Field                                                                                    E–15717
+       Cleveland, Ohio 44135 – 3191
+
+9. SPONSORING/MONITORING AGENCY NAME(S) AND ADDRESS(ES)                                                                           10. SPONSORING/MONITORING
+                                                                                                                                      AGENCY REPORT NUMBER
+       National Aeronautics and Space Administration
+       Washington, DC 20546– 0001                                                                                                      NASA TM—2006-214453
+                                                                                                                                       AIAA–2006–5263
+
+11. SUPPLEMENTARY NOTES
+       Prepared for the 42nd Joint Propulsion Conference and Exhibit cosponsored by the AIAA, ASME, SAE, and ASEE,
+       Sacramento, California, July 9–12, 2006. Ben Welander, Christian Carpenter, and Kristi de Grys, Aerojet General,
+       11411 139th Place N.E., Redmond, Washington, 98052; Richard R. Hofer and Thomas M. Randolph, NASA Jet
+       Propulsion Laboratory, 4800 Oak Grove Drive, Pasadena, California 91109; David H. Manzella, NASA Glenn
+       Research Center. Responsible person, David H. Manzella, organization code RPP, 216–977–7432.
+12a. DISTRIBUTION/AVAILABILITY STATEMENT                                                                                          12b. DISTRIBUTION CODE
+
+       Unclassified - Unlimited
+       Subject Category: 20
+       Available electronically at http://gltrs.grc.nasa.gov
+       This publication is available from the NASA Center for AeroSpace Information, 301–621–0390.
+13. ABSTRACT (Maximum 200 words)
+       Following completion of the 5,600 hr qualification life test of the BPT–4000 4.5 kW Hall Thruster Propulsion System,
+       NASA and Aerojet have undertaken efforts to extend the qualified operating range and lifetime of the thruster to support
+       a wider range of NASA missions. The system was originally designed for orbit raising and stationkeeping applications on
+       military and commercial geostationary satellites. As such, it was designed to operate over a range of power levels from
+       3 to 4.5 kW. Studies of robotic exploration applications have shown that the cost savings provided by utilizing commer-
+       cial technology that can operate over a wider range of power levels provides significant mission benefits. The testing
+       reported on here shows that the 4.5 kW thruster as designed has the capability to operate efficiently down to power levels
+       as low as 1 kW. At the time of writing, the BPT–4000 qualification thruster and cathode have accumulated over 400 hr of
+       operation between 1 to 2 kW with an additional 600 hr currently planned. The thruster has demonstrated no issues with
+       longer duration operation at low power.
+
+
+
+
+14. SUBJECT TERMS                                                                                                                             15. NUMBER OF PAGES
+                                                                                                                                                                   11
+       Electric propulsion; Hall thruster                                                                                                     16. PRICE CODE
+
+
+17. SECURITY CLASSIFICATION                    18. SECURITY CLASSIFICATION                      19. SECURITY CLASSIFICATION                    20. LIMITATION OF ABSTRACT
+    OF REPORT                                      OF THIS PAGE                                     OF ABSTRACT
+             Unclassified                                    Unclassified                                    Unclassified
+NSN 7540-01-280-5500                                                                                                                      Standard Form 298 (Rev. 2-89)
+                                                                                                                                          Prescribed by ANSI Std. Z39-18
+                                                                                                                                          298-102
+

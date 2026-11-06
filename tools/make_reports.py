@@ -163,7 +163,8 @@ Records carry `source_ids` that point to the *expected* authoritative document o
 VC=L("metadata/verification_celestial.json")["checks"]; VLn=L("metadata/verification_launch.json")["checks"]
 conf=Q["conflicts_resolved"]
 cr="\n".join(f"| {c['record_id']} | {c['field']} | {c['recalled_value']} | {c['source_value']} | {c['source_text']} | {c['source_id']} |" for c in conf)
-lv="\n".join(f"| {c['record_id']} | {c['field']} | {c['mine_original']:,} | {c['source_value']:,.0f} | {c['source_original_text']} | {c['statement_type']} |" for c in VLn)
+fmtv=lambda x: "—" if x is None else (f"{x:,.4g}" if isinstance(x,float) and abs(x)<1000 else (f"{x:,.0f}" if isinstance(x,(int,float)) else str(x)))
+lv="\n".join(f"| {c['collection']}/{c['record_id']} | {c['field']} | {fmtv(c.get('mine_original'))} | {fmtv(c.get('source_value'))} | {c['status']} | {str(c.get('source_original_text',''))[:70].replace('|','/')} | {c['source_id']} |" for c in VLn)
 files="\n".join(f"* `{f['file']}` — {f['url']} (retrieved {f['retrieved']}, sha256 `{f['sha256'][:12]}…`)" for f in J_MAN)
 W("VERIFICATION_REPORT.md",f"""# Verification report
 {BANNER}
@@ -173,7 +174,7 @@ A **celestial record** is classed `verified` when its GM and mean radius are ver
 
 ## Coverage
 * Celestial: {sum(1 for c in VC if c['status']=='verified')} field checks matched; {len(conf)} recalled values disagreed and were replaced by the sourced value (table below). 25 of 25 celestial records verified at core level.
-* Launch: {sum(1 for c in VLn if c['status']=='verified')}/{len(VLn)} checks against the NASA SLS page matched (table below). All other launch vehicles, engines, spacecraft components, instruments, missions, propellants and atmospheres remain **unverified**. spacex.com and api.spacexdata.com were not reachable.
+* Launch vehicles, stages, boosters, engines and the Apollo 11 launch date: {len(VLn)} checks against NASA (SLS page, Apollo 11 press kit, NTRS electric-propulsion papers), ULA and ESA pages — {sum(1 for c in VLn if c['status']=='verified')} matched, {sum(1 for c in VLn if c['status']=='conflict')} recalled values were wrong/outdated and replaced by the sourced value, {sum(1 for c in VLn if c['status']=='added_from_source')} previously empty fields were filled from the source (table below). A record is classed `verified` only if **all** of its populated core numeric fields were checked: the 3 Saturn V stages, NEXT, NSTAR, BPT-4000 and BE-4. Vehicles are verified field by field. **Not verifiable with the retrieved material (still unverified):** Falcon 9/Heavy, Starship, Merlin, Raptor, Rutherford, Electron, Ariane 5, Delta IV, New Glenn, Soyuz, Long March 5, RL10, Vinci, Vulcain 2, Star 48B, MR-103, AJ10, Draco, T6, SPT-100, RSRM; most spacecraft components, instruments, propellants, atmospheres and mission figures. Reasons: SpaceX pages are JavaScript-rendered, api.spacexdata.com returned HTTP 522, Rocket Lab was unreachable, Aerojet Rocketdyne returned 403, Blue Origin returned 429, and no retrievable document gave the numbers.
 
 ## Recalled values that were wrong or outdated (now replaced)
 | Record | Field | Recalled | Source | Source text | Source id |
@@ -182,13 +183,21 @@ A **celestial record** is classed `verified` when its GM and mean radius are ver
 
 Notes: JPL gives Eris mean radius 1200±50 km (no diameter in SBDB); a more precise occultation-based figure (~1163 km) exists in the literature but was not retrieved, so it is not used. Small-body elements from SBDB are osculating at the stated epoch, so they differ from older mean values.
 
-## SLS-related launch checks
-| Record | Field | Recalled | Source | Source text | Statement |
-|---|---|---:|---:|---|---|
+## Launch / engine / stage checks
+| Record | Field | Recalled | Source | Status | Source text | Source id |
+|---|---|---:|---:|---|---|---|
 {lv}
 
 ## Retrieved files
 {files}
+
+## Notes on specific findings
+* Saturn V: the Apollo 11 press kit shows my recalled S-IC dry mass (137,000 kg), S-IC and S-II/S-IVB propellant, S-IVB dry mass, liftoff mass and liftoff thrust were off by 1–7%; the document's values (nominal Apollo 11 vehicle) are now used. The old 33.4 vs 34.5-35.1 MN thrust conflict is resolved by the source: 7,653,854 lbf = 34.05 MN.
+* NSTAR: the retrieved paper is a 1998 pre-flight document (Isp 'about 3300 s'); flight-measured Isp was not retrieved, so the sourced value is used with that caveat.
+* BPT-4000: NASA/TM-2006-214453 Table 2 gives 254 mN and 2150 s at 4.5 kW-400 V (my recalled 1850 s was wrong).
+* ULA: Atlas V 551 LEO/GTO capacities matched; reference orbits were filled in (200 km, 28.7 deg; GTO at 27 deg). Vulcan VC6 GTO is 14,500 kg (not 14,400) and TLI is 11,500 kg (added). RD-180 weight is 12,081 lb (5,480 kg); BE-4 sea-level thrust is 550,000 lbf (2.45 MN).
+* ESA: Ariane 62/64 GTO/LEO capacities, fairing and height match the ESA overview page (LEO figures are quoted to 0.1 t, so they are verified within 1%).
+* ESA: Vega-C fairing is 'over 9 m' tall (recalled 8.1 m was wrong).
 
 ## How to extend
 Run `tools/fetch_sources.sh`, add parsers following `tools/verify_celestial.py`, and re-run the pipeline in `README.md`. Candidate next sources: NTRS documents for Saturn V stages and engines, manufacturer user guides (PDF) for Falcon, Atlas, Ariane and Electron once their hosts are allowed.

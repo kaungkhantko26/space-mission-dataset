@@ -1,7 +1,7 @@
 {
  "run_date": "2026-11-06",
- "passed": 80,
- "total": 80,
+ "passed": 82,
+ "total": 82,
  "checks": [
   {
    "check": "json_syntax_all_files",
@@ -361,12 +361,12 @@
   {
    "check": "verification:retrieved_files_match_manifest_sha256",
    "passed": true,
-   "detail": "20 files"
+   "detail": "28 files"
   },
   {
-   "check": "verification:verified_records_only_in_celestial",
+   "check": "verification:verified_records_celestial_or_checked_engines_stages",
    "passed": true,
-   "detail": "25 verified"
+   "detail": "32 verified"
   },
   {
    "check": "verification:verified_records_have_complete_field_provenance",
@@ -389,9 +389,19 @@
    "detail": ""
   },
   {
+   "check": "verification:launch_record_values_agree_with_retrieved_source_values",
+   "passed": true,
+   "detail": "[]"
+  },
+  {
    "check": "verification:launch_verified_fields_recorded_on_records",
    "passed": true,
    "detail": ""
+  },
+  {
+   "check": "verification:verified_engine_and_stage_records_have_all_core_fields_checked",
+   "passed": true,
+   "detail": "[]"
   },
   {
    "check": "verification:recheck_matches_source_text",

@@ -5,34 +5,34 @@
    "stages": [
     {
      "stage": "S-IC",
-     "m0_kg": 2970000,
-     "mf_kg": 893000,
-     "mass_ratio": 3.325867861142217,
-     "dv_vac_isp_m_s": 3582.6253739054982,
-     "dv_sl_isp_m_s": 3099.4423465037694,
-     "burn_time_s_est": 159.38216893693692
+     "m0_kg": 2941219.9329436,
+     "mf_kg": 793948.12638372,
+     "mass_ratio": 3.7045492459819607,
+     "dv_vac_isp_m_s": 3904.0932996615907,
+     "dv_sl_isp_m_s": 3377.5544006940736,
+     "burn_time_s_est": 164.77459693146298
     },
     {
      "stage": "S-II",
-     "m0_kg": 756000,
-     "mf_kg": 299900,
-     "mass_ratio": 2.5208402800933642,
-     "dv_vac_isp_m_s": 3817.271406639576,
-     "dv_sl_isp_m_s": 3817.271406639576,
-     "burn_time_s_est": 364.57972901548885
+     "m0_kg": 662973.3295462199,
+     "mf_kg": 218796.1763703099,
+     "mass_ratio": 3.030095591908999,
+     "dv_vac_isp_m_s": 4576.94149196744,
+     "dv_sl_isp_m_s": 4576.94149196744,
+     "burn_time_s_est": 355.04930089836563
     },
     {
      "stage": "S-IVB",
-     "m0_kg": 263700,
-     "mf_kg": 154200,
-     "mass_ratio": 1.7101167315175096,
-     "dv_vac_isp_m_s": 2215.248167028256,
-     "dv_sl_isp_m_s": 2215.248167028256,
-     "burn_time_s_est": 437.63955631655375
+     "m0_kg": 182596.1763703099,
+     "mf_kg": 75764.7406107999,
+     "mass_ratio": 2.4100415958433534,
+     "dv_vac_isp_m_s": 3631.69793958852,
+     "dv_sl_isp_m_s": 3631.69793958852,
+     "burn_time_s_est": 426.9740835292454
     }
    ],
-   "total_ideal_dv_low_m_s": 9131.961920171601,
-   "total_ideal_dv_high_m_s": 9615.14494757333,
+   "total_ideal_dv_low_m_s": 11586.193832250034,
+   "total_ideal_dv_high_m_s": 12112.732731217551,
    "assumptions": "Liftoff mass is the recorded value; payload+fairing+interstage mass stays in m0 (not dropped); strap-on boosters ignored (ideal dv understated for SLS/FH if boosters not modeled); uses recorded stage masses (see mass accounting residual).",
    "data_class": "derived",
    "inputs_data_class": "unverified"
@@ -192,7 +192,7 @@
    "propellant": "LOX/RP-1",
    "isp_vac_s": 338,
    "thrust_vac_n": 4150000,
-   "engine_twr_vac": 78.4687981431189,
+   "engine_twr_vac": 77.22515634995435,
    "status": "operational_legacy"
   },
   {
@@ -289,7 +289,7 @@
    "id": "nstar",
    "type": "ion",
    "propellant": "Xe",
-   "isp_vac_s": 3100,
+   "isp_vac_s": 3300.0,
    "thrust_vac_n": 0.092,
    "engine_twr_vac": null,
    "status": "operational_historical"
@@ -300,7 +300,7 @@
    "propellant": "Xe",
    "isp_vac_s": 4190,
    "thrust_vac_n": 0.236,
-   "engine_twr_vac": null,
+   "engine_twr_vac": 0.001782615009354008,
    "status": "developmental_ground_tested"
   },
   {
@@ -316,7 +316,7 @@
    "id": "bpt4000",
    "type": "hall_effect",
    "propellant": "Xe",
-   "isp_vac_s": 1850,
+   "isp_vac_s": 2150.0,
    "thrust_vac_n": 0.254,
    "engine_twr_vac": null,
    "status": "operational"

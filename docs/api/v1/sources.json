@@ -1,8 +1,8 @@
 {
  "collection": "sources",
  "description": "Source catalog (none retrieved)",
- "count": 41,
- "data_status": "25 celestial records (Sun, planets, dwarf planets, moons, small bodies) have their core physical fields verified against retrieved JPL/NASA pages (198 field checks matched; 16 conflicts were resolved to the sourced value). Six SLS/RS-25 launch figures were also verified against the NASA SLS page; all other launch-vehicle, engine, spacecraft, instrument and mission figures are still unverified (recalled values), as are two user-supplied tables (SpaceX launches 2010-2018, NASA facilities). Derived values inherit the status of their inputs. Optimization catalog values are estimated/fictional.",
+ "count": 48,
+ "data_status": "32 records are verified (25 celestial bodies at core level; engines and stages whose core numeric fields were all checked) against retrieved JPL, NASA (NTRS, SLS page, Apollo 11 press kit), ULA and ESA pages. 198 celestial and 44 launch/engine field checks matched; 16 celestial and 13 launch/engine recalled values were wrong or outdated and were replaced by the sourced value. Launch vehicles are verified field by field only (see verified_field_count); everything not checked (e.g. Falcon, Starship, Electron, Ariane, most engines, spacecraft components, instruments, missions) is still unverified, as are two user-supplied tables. Derived values inherit the status of their inputs. Optimization catalog values are estimated/fictional.",
  "records": [
   {
    "id": "S01",
@@ -547,6 +547,144 @@
      "url": "https://www.nasa.gov/reference/space-launch-system/",
      "retrieved": "2026-11-06",
      "sha256": "dacd12643163e96a6ca709bd11270edc6ba8c81fc8a0ce8694fb8e9e3dbd6193"
+    }
+   ]
+  },
+  {
+   "id": "S42",
+   "title": "ULA Atlas V and Vulcan Centaur web pages (performance tables, engine specifications)",
+   "organization": "United Launch Alliance",
+   "url": "https://www.ulalaunch.com/rockets/atlas-v",
+   "covers": "Atlas V 551 and Vulcan VC6 payload capability with reference orbits; RD-180 and BE-4 specifications",
+   "retrieved": true,
+   "retrieval_date": "2026-11-06",
+   "page_or_section": "see field_verification on each record",
+   "note": "Pages retrieved and parsed; each value comparison is stored in metadata/verification_celestial.json and in the record's field_verification.",
+   "used_by_records": true,
+   "retrieved_pages": [
+    {
+     "url": "https://www.ulalaunch.com/rockets/atlas-v",
+     "retrieved": "2026-11-06",
+     "sha256": "47ae205afab17a45780756ae4d42322c2be1d8e7620676b9bc4c7eb6e84aa975"
+    },
+    {
+     "url": "https://www.ulalaunch.com/rockets/vulcan-centaur",
+     "retrieved": "2026-11-06",
+     "sha256": "187fad654295e684f50f4b40899a476ab7583d2bcb66905aaeb3ec27571c2426"
+    }
+   ]
+  },
+  {
+   "id": "S43",
+   "title": "ESA Vega-C launcher page",
+   "organization": "ESA",
+   "url": "https://www.esa.int/Enabling_Support/Space_Transportation/Launch_vehicles/Vega-C",
+   "covers": "Vega-C height, mass, SSO payload, fairing, stage count",
+   "retrieved": true,
+   "retrieval_date": "2026-11-06",
+   "page_or_section": "see field_verification on each record",
+   "note": "Pages retrieved and parsed; each value comparison is stored in metadata/verification_celestial.json and in the record's field_verification.",
+   "used_by_records": false,
+   "retrieved_pages": [
+    {
+     "url": "https://www.esa.int/Enabling_Support/Space_Transportation/Launch_vehicles/Vega-C",
+     "retrieved": "2026-11-06",
+     "sha256": "623c5d122bda2a21f650b5cc3db02c9828d2678759b713f794e029859428e938"
+    }
+   ]
+  },
+  {
+   "id": "S44",
+   "title": "NASA Apollo 11 Press Kit (NTRS 19690022248)",
+   "organization": "NASA",
+   "url": "https://ntrs.nasa.gov/citations/19690022248",
+   "covers": "Saturn V stage masses, propellants, thrust, vehicle weight, launch date",
+   "retrieved": true,
+   "retrieval_date": "2026-11-06",
+   "page_or_section": "see field_verification on each record",
+   "note": "Pages retrieved and parsed; each value comparison is stored in metadata/verification_celestial.json and in the record's field_verification.",
+   "used_by_records": true,
+   "retrieved_pages": [
+    {
+     "url": "https://ntrs.nasa.gov/api/citations/19690022248/downloads/19690022248.pdf",
+     "retrieved": "2026-11-06",
+     "sha256": "3cce3b01294e90bedf9af742124ef657ffdf27536921ef50464cc34836526898"
+    }
+   ]
+  },
+  {
+   "id": "S45",
+   "title": "NEXT Ion Propulsion System Information Summary (NTRS 20090004685)",
+   "organization": "NASA GRC",
+   "url": "https://ntrs.nasa.gov/citations/20090004685",
+   "covers": "NEXT thruster data sheet",
+   "retrieved": true,
+   "retrieval_date": "2026-11-06",
+   "page_or_section": "see field_verification on each record",
+   "note": "Pages retrieved and parsed; each value comparison is stored in metadata/verification_celestial.json and in the record's field_verification.",
+   "used_by_records": true,
+   "retrieved_pages": [
+    {
+     "url": "https://ntrs.nasa.gov/api/citations/20090004685/downloads/20090004685.pdf",
+     "retrieved": "2026-11-06",
+     "sha256": "d8c4e650599e2278acbc8305f234bb638e48ee1175a801af124fa18cf5953ff7"
+    }
+   ]
+  },
+  {
+   "id": "S46",
+   "title": "NSTAR ion thruster and power processor paper (NTRS 19980017550)",
+   "organization": "NASA GRC / Hughes",
+   "url": "https://ntrs.nasa.gov/citations/19980017550",
+   "covers": "NSTAR thrust, power, Isp (pre-flight)",
+   "retrieved": true,
+   "retrieval_date": "2026-11-06",
+   "page_or_section": "see field_verification on each record",
+   "note": "Pages retrieved and parsed; each value comparison is stored in metadata/verification_celestial.json and in the record's field_verification.",
+   "used_by_records": true,
+   "retrieved_pages": [
+    {
+     "url": "https://ntrs.nasa.gov/api/citations/19980017550/downloads/19980017550.pdf",
+     "retrieved": "2026-11-06",
+     "sha256": "b2d854d8930a9257f30eeb0cd73658b889ec51cdf5f3747d13195f48628fe5c2"
+    }
+   ]
+  },
+  {
+   "id": "S47",
+   "title": "BPT-4000 Hall thruster NASA/TM-2006-214453 (NTRS 20060051789)",
+   "organization": "NASA GRC / Aerojet",
+   "url": "https://ntrs.nasa.gov/citations/20060051789",
+   "covers": "BPT-4000 thrust, Isp, power",
+   "retrieved": true,
+   "retrieval_date": "2026-11-06",
+   "page_or_section": "see field_verification on each record",
+   "note": "Pages retrieved and parsed; each value comparison is stored in metadata/verification_celestial.json and in the record's field_verification.",
+   "used_by_records": true,
+   "retrieved_pages": [
+    {
+     "url": "https://ntrs.nasa.gov/api/citations/20060051789/downloads/20060051789.pdf",
+     "retrieved": "2026-11-06",
+     "sha256": "e1925304ce7ccb65e5a67e2d66a49e767f8b7a11f84cd62380b5935e09d029f4"
+    }
+   ]
+  },
+  {
+   "id": "S48",
+   "title": "ESA Ariane 6 overview page",
+   "organization": "ESA",
+   "url": "https://www.esa.int/Enabling_Support/Space_Transportation/Launch_vehicles/Ariane_6_overview",
+   "covers": "Ariane 62/64 GTO and LEO capability, fairing, height",
+   "retrieved": true,
+   "retrieval_date": "2026-11-06",
+   "page_or_section": "see field_verification on each record",
+   "note": "Pages retrieved and parsed; each value comparison is stored in metadata/verification_celestial.json and in the record's field_verification.",
+   "used_by_records": false,
+   "retrieved_pages": [
+    {
+     "url": "https://www.esa.int/Enabling_Support/Space_Transportation/Launch_vehicles/Ariane_6_overview",
+     "retrieved": "2026-11-06",
+     "sha256": "232128d5a239e3e9a1c3d816d256ae8e37a65581ee47924de0d3f440a4d5b066"
     }
    ]
   },

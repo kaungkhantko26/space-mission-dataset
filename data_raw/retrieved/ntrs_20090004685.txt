@@ -1,0 +1,1042 @@
+                                 NASA’s Evolutionary Xenon Thruster (NEXT)
+                                 Ion Propulsion System Information Summary
+                                                 August 2008
+
+
+                1.   NEXT INTRODUCTION                               NEXT is an advanced ion propulsion system oriented
+                                                                     towards robotic exploration of the solar system using solar
+This document is a guide to New Frontiers mission proposal           electric power. It is based on an evolution design, which has
+teams. The document describes the development and status             strong heritage to the NSTAR (NASA’s Solar Electric
+of the NASA’s Evolutionary Xenon Thruster (NEXT) ion                 Propulsion Application Readiness) IPS that is currently
+propulsion system (IPS) technology, its application to               flying on the Dawn spacecraft.             Potential mission
+planetary missions, and the process anticipated to transition        destinations that can benefit from a NEXT Solar Electric
+NEXT to the first flight mission.                                    Propulsion (SEP) system include inner planets, small bodies,
+                                                                     as well as outer planets and their moons when chemical or
+1.1 Background                                                       aerocapture approaches are used to capture the destination
+The NEXT ion propulsion system is an advanced technology             body. This range of robotic exploration missions generally
+development under the NASA Science Mission Directorate               calls for ion propulsion systems with deep throttling
+In-Space Propulsion Technology project since 2001. The               capability and system input power ranging from 5 to 25 kW,
+primary objective of Next Generation Ion is to increase              as referenced to solar array output at one Astronomical Unit
+significantly performance for primary propulsion to                  (AU).
+planetary bodies by leveraging NASA’s very successful ion
+propulsion program for low-thrust applications. The project          1.2 System Summary
+was awarded through the ROSS 2001 NASA Research                      The NEXT technology development project focuses on those
+Announcement (NRA), A.9.2 “Next Generation Ion Engine                elements of an ion propulsion system that are most
+Technology”.      The NEXT technology was developed                  applicable to a range of mission concepts and have the
+through a two-phase project. The first phase, demonstrating          greatest technology development risks. Figure 1 illustrates
+proof-of-concept at the breadboard level, was successfully           the NEXT project products in a representative, simplified,
+completed in 2003.         This led to the second phase,             system configuration. This figure represents the subset of an
+development to Technology Readiness Level (TRL) 5/6.                 overall ion propulsion system that the NEXT project team
+The government/industry team completed the highest                   addressed. The NASA Procedural Requirements (NPR)
+fidelity hardware planned, including a flight prototype              7120.8 NASA Research and Technology Program and
+model (PM) thruster, an engineering model (EM) power                 Project Managements Requirements provides in Appendix J
+processing unit, EM propellant management assemblies, a              the definition of technology hardware maturity. Table 1
+breadboard gimbal, and control unit simulators. Subsystem            describes the various major subsystems of a flight ion
+and system level technology validation testing is nearing            propulsion system (IPS), the technology level reached, and
+completion. To achieve the objective Technology Readiness            the hardware maturity (per NPR 7120.8) achieved on the
+Level 6, the team is conducting environmental testing to             NEXT project. This document retains the hardware maturity
+qualification levels in ground facilities simulating the space       terminology used in prior NEXT publications, as shown in
+environment.                                                         Table 1.
+
+
+
+
+                                     Figure 1. NEXT ion propulsion system elements
+
+
+
+
+NEXT Document for New Frontiers Library                          1                                                   08/15/08
+                                                 Table 1: NEXT Subsystems
+        IPS Subsystem                       Function                        NEXT Hardware               NEXT Hardware
+                                                                          Maturity (per project        Maturity (per NPR
+                                                                              terminology)                   7120.8)
+    Ion Thruster               Provide thrust                            Prototype Model             Engineering Unit
+    Power Processing Unit      Converts solar array power to             Engineering Model           Engineering Unit
+                               thruster input power
+    Propellant Tank            Xenon storage                             Not addressed on NEXT       Not addressed on NEXT
+    High Pressure              Control xenon pressure to LPA             Engineering Model           Engineering Unit
+    Assembly
+    Low Pressure               Control xenon flow to thruster            Engineering Model           Engineering Unit
+    Assembly
+    Miscellaneous valves,      Xenon loading, isolation control          Not addressed on NEXT       Not addressed on NEXT
+    tubing and fitting         and purge flow
+    Gimbal                     Point thruster to desired vector          Breadboard                  Brassboard
+    Control/Interface Unit     Control/data interface to                 Simulator only, with        Simulator only, with
+                               spacecraft, PPU and xenon feed            brassboard xenon flow       brassboard xenon flow
+                               system                                    control cards               control cards
+
+
+1.3 Subsystem Summaries                                               the NEXT project. This modular PPU is capable of
+The following subsections provide a summary description of            processing from 0.5 to 7.0 kW of output power for the
+the NEXT subsystems.          The specification sheets in             operating the NEXT ion thruster. Its design includes many
+Appendix A include additional information such as key                 significant improvements for better performance over the
+performance characteristics, mass, dimensions, etc..                  state-of-the-art NSTAR PPU.          The most significant
+                                                                      difference is the beam supply that is comprised of six
+1.3.1 Ion Thruster                                                    modules and is capable of very efficient operation through a
+The NEXT ion thruster was developed through a two-phase               wide voltage range. The previously validated NSTAR PPU
+approach. NASA Glenn Research Center (GRC) developed                  provided the basis for the low voltage power supplies. The
+the initial design concept and validated it through fabrication       modular construction of the PPU resulted in improved
+and test of five Engineering Model (EM) thrusters. GRC                manufacturability and simpler scalability.
+transferred the thruster concept to Aerojet for
+implementation in the PM thruster design and hardware.
+Aerojet delivered the first thruster article, PM1, to NASA
+GRC in January 2006. Key validation activities include
+performance acceptance testing, environmental analysis and
+testing, and life analysis and testing.
+
+
+
+
+                                                                                      Figure 3. NEXT EM PPU
+
+         .                                                            1.3.3 Propellant Management System
+    Figure 2. NEXT PM thruster during performance                     Aerojet designed and fabricated the NEXT EM high
+                  acceptance testing                                  pressure and low pressure assemblies (HPA, LPA) and the
+                                                                      primary flow control components of an overall xenon feed
+1.3.2 Power Processing Unit                                           system.    The HPA, composed of parallel redundant
+L-3 Communications designed and fabricated the                        proportional flow control valves (PFCV) and pressure
+engineering model (EM) power-processing unit (PPU) for                transducers, steps the xenon pressure from tank pressure to a
+
+
+
+NEXT Document for New Frontiers Library                           2                                                     08/15/08
+nominal regulated LPA inlet pressure of 35 psia, as well as
+unregulated pressure below 35 psia. The LPA consists of
+three flow-control kernels to supply throttled xenon flow to
+the thruster main plenum, discharge cathode and neutralizer
+cathode. The composition of each kernel consists of a
+PFCV, pressure transducer and thermal throttle. Latch
+valves between each kernel provide the capability to operate
+the thruster with a failed-closed PFCV, as well as provide
+pressure transducer cross-calibration capability. Initial
+validation of the propellant management system (PMS)
+technology was accomplished during breadboard system
+integration testing in the first NEXT project phase in 2003.
+EM assemblies were fabricated and tested in the project             Figure 5. Low Pressure Assembly from the Propellant
+phase 2. Key PMS validation activities include performance                         Management System
+acceptance and environmental testing, all of which were
+completed.                                                                       2.   PERFORMANCE SUMMARY
+
+1.3.4 Gimbal                                                       2.1 Performance Characteristics
+ATK (then Swales Aerospace), under contract to the Jet             The NEXT ion propulsion system can be tailored to a wide
+Propulsion Laboratory (JPL), designed and fabricated the           range of mission applications. The following attributes are
+NEXT gimbal. Swales delivered one complete gimbal                  the primary contributors to ion propulsion system
+assembly with sufficient parts for a second assembly. The          performance.
+design of the gimbal was as a flight-packaged unit without
+substantive thermal analysis. Therefore, only functional           2.1.1 Thruster Performance
+testing and structural dynamic analyses and testing were           Thrust and specific impulse are the primary measures of
+performed on the gimbal. The gimbal provides maximum               effective conversion of power and propellant to mission
+authority of ±19° and ±17° about the primary gimbal axes           change in orbital velocity, delta velocity (ΔV). A summary
+and a rough cone about the thruster centerline within those        of the NEXT thruster performance is in the specification
+boundaries.                                                        sheet found in Appendix A. Additional detailed throttle
+                                                                   table data is available upon request.
+1.3.5 Digital Control Interface Unit
+The NEXT project developed a simulator for the system              2.1.2 Thruster Lifetime
+Digital Control Interface Unit (DCIU), providing the               Xenon throughput is the primary measure of thruster
+capability to operate the key technology products in an            lifetime. Specific thruster wear-out modes exist that relate
+integrated system. The primary functions of the DCIU is to         directly to throughput. Projection of the first wear-out
+interface to the spacecraft flight processor for high level        failure of the NEXT thruster is to occur at greater than 750
+commands and telemetry, and to control the PPU and PMS             kg xenon throughput for the majority of the throttle table.
+assemblies, effectively throttling the ion thruster(s). The        This provides a qualified capability of greater than 500 kg
+NEXT DCIU simulator contains the brassboard-level analog           throughput. The NEXT project requirement, based on a
+cards that control the HPA and LPA pressure control loops.         range of mission analyses, is for a qualified throughput of
+                                                                   300 kg per thruster.
+
+                                                                   Thruster lifetime in throughput is equal to total impulse by
+                                                                   considering average-mission thruster power, as depicted in
+                                                                   Figure 6. For example, assuming the projected thruster
+                                                                   throughput rating of 500-kg xenon, a single thruster can
+                                                                   provide approximately 1.3–2.1 x 107 N-s total impulse, the
+                                                                   range being a function of input power and throttling
+                                                                   approach. Increased total impulse per thruster provides the
+                                                                   capability to do higher ΔV missions with fewer thrusters.
+Figure 4. NEXT EM High Pressure Assembly from the
+           Propellant Management System
+
+
+
+
+NEXT Document for New Frontiers Library                        3                                                  08/15/08
+                                                       Total Impulse Capability per NEXT Thruster
+
+
+             3.5E+07                                                                                                 Projected NEXT First
+                                                                                                                        Failure at 750 kg
+
+
+             3.0E+07
+                                                                                   Projected NEXT
+                                                                                  Rated Capability
+             2.5E+07
+
+                                                        Current Demonstrated
+                                                          Capability at 340 kg                           NEXT capability over
+             2.0E+07                                                                                     thruster input power
+                                            NEXT Rated Throughput                                        range of 2 - 7 kW
+                                                      Requirement
+             1.5E+07
+
+
+
+
+             1.0E+07
+
+                                         NSTAR Rated
+                                          Throughput
+                           Deep Space1
+             5.0E+06        Throughput
+                                                          NSTAR Demonstrated in
+                                                          Extended Life Test
+
+             0.0E+00
+                       0           100            200             300            400            500            600              700         800
+                                                                Rated Xenon Throughput Capability (kg)
+
+
+
+
+                                         Figure 6. NEXT Thruster Total Impulse Capability
+
+2.1.3    Ion Propulsion System Input Power                                       flexible throttling capability at a given input power to
+The sizing of the solar arrays, and the resulting power                          control the thruster operations in a high thrust-to-power
+dedicated to propulsion, is a primary factor in system                           mode or a high specific impulse mode. This provides
+performance optimization.                                                        additional flexibility in achieving challenging missions with
+                                                                                 optimum performance. Throttle range data is included in
+2.1.4    PPU Efficiency                                                          Appendix A. Finally, adding multiple thruster/PPU/LPA
+Efficient conversion of array power to thruster power is                         strings expands the ion propulsion system throttle range by
+important in achieving overall IPS performance.          A                       permitting simultaneous operation of multiple thrusters to
+summary of the PPU efficiency over the power throttle range                      affect the optimum ΔV..
+is in the attached spec sheet found in Appendix A. The
+NEXT PPU accepts unregulated primary power over a range                          2.1.6    IPS Dry Mass
+of 80-160V. This eliminates power losses associated with                         Electric propulsion systems have greater system dry mass,
+an external power regulation unit.                                               which partially offsets the significant benefits of EP.
+                                                                                 Tabulation of the NEXT mass characteristics is in Table 2.
+2.1.5 IPS Throttle-ability
+NEXT supports throttling of a thruster over a power range of                     The optimum NEXT ion propulsion system configuration
+540 W to 6.9 kW. This provides an important capability to                        and performance is established through low thrust trajectory
+operate in single thruster mode over a large range of                            analysis, which must be conducted for specific mission
+heliocentric distances. The thruster and PPU also provide a                      concepts and constraints.
+
+
+
+
+NEXT Document for New Frontiers Library                                      4                                                                08/15/08
+              Table 2. Representative Component List for NEXT Characteristics for Saturn Mission
+
+
+
+
+NEXT Document for New Frontiers Library               5                                            08/15/08
+2.2   Summary: Application to missions in this AO               A summary of the application of the NEXT Thruster on
+                                                                future missions is in Table 3.
+
+
+                            Table 3: NEXT’s Applicability to Candidate NF Missions
+
+                                NEXT Benefits
+                                • Small body rendezvous and sample return missions have significant ∆V requirements.
+                                  Chemical propulsion has many limitations alleviated by electric propulsion:
+                                • Electric propulsion improves:
+                                   • Total Spacecraft Mass
+                                   • Propellant Mass Fraction
+                                   • Launch, mission flexibility
+CSSR                               • Enables additional targets
+                                • NEXT is ideal for CSSR
+                                • NEXT could perform significant drag makeup for lower altitude or potentially tethered sensor
+                                  operation.
+                                • Returning atmospheric samples to Earth could be enabled by electric propulsion. NEXT can
+                                  best use the available solar power.
+                                • Limited VISE Applicability
+
+VISE
+                                • Similar to SMART, NEXT could enable a low-thrust transfer from LEO to LLO enabling
+                                   considerable launch vehicle savings.
+                                 • Studies have also illustrated the advantages of landing and leveraging SEP power for Aitken
+                                   Basin exploration.
+                                • Limited ABSR Applicability
+ABSR
+                                • Small body rendezvous and sample return missions have significant ∆V requirements.
+                                  Chemical propulsion has many limitations alleviated by electric propulsion:
+                                • Electric propulsion improves:
+                                   • Total Spacecraft Mass
+                                   • Propellant Mass Fraction
+Asteroid                           • Launch, mission flexibility
+SR                                 • Enables additional targets
+                                • NEXT is ideal for Asteroid SR
+                                • Orbiter missions to Ganymede and Io are propulsive challenges that could benefit from electric
+                                  propulsion. The required gravity assists to allow the mission chemically may exceed New
+                                  Frontiers mission operations cost limitation.
+                                • Limited published analyses on Ganymede and Io Mission architectures. Analysis needed.
+                                • NEXT has potential for Observers
+Ganymede or Io
+Observer
+                                • The use of NEXT for a Trojan and Centaur flyby would only allow for added velocity prior to
+                                  the steep power decline as the vehicle travels further from the sun.
+                                • If the mission were attempted with nuclear power, EP would be appropriate.
+                                • Only limited applicability
+Trojan/ Centaur
+                                • The applicability of NEXT for Mars Network Science is largely dependent on the deployment
+                                  and implementation architecture. NEXT has potential for large plane planet-centric maneuvers
+                                  chemically challenging. Direct entry is likely sufficient.
+                                • Only limited applicability
+
+Network Science
+
+
+
+
+NEXT Document for New Frontiers Library                     6                                                       08/15/08
+       3.   DEVELOPMENT SUMMARY (UNDER ISPT)                         were completed to qualification levels with a lower
+                                                                     temperature limit set < -120ºC (cold), and an upper
+3.1 Approach/Strategy                                                temperature limit set > 215ºC (hot). The thruster was
+The motivation of the NEXT project is to develop a highly            subjected to three cycles with hot and cold dwell and was
+capable, ion propulsion system. The objectives were to               started at both hot and cold temperature limits. PM1R is
+develop an evolutionary design with strong heritage to               integrated into the System Integration Tests with the
+flight-demonstrated IPS. Advancements would address key              potential to be incorporated into a life validation test
+limitations to SOA design (NSTAR), namely by increased               following the SIT.
+throughput, increased power throttle range, increase
+performance and improved system mass.                                All PM thruster drawings and work instruction were updated
+                                                                     to incorporate all redlines and to reflect PM1R as-built
+The overall aim is to advance the NEXT IPS components                configuration and were released to development level. PM2
+from TRL 3 (analytical and experimental critical function            parts and subassemblies are in controlled storage for future
+and/or characteristic proof-of-concept) to TRL 6                     use.
+(system/subsystem model or prototype demonstration in a
+relevant environment – ground or space. Then the goal is to          3.2.2 Power processing unit (PPU)
+complete a full system-level demonstration of an end-to-end          L-3 Communications completed the engineering model PPU.
+string of IPS components operated in a relevant                      Performance/functional testing at vacuum conditions was
+environment.                                                         completed successfully. Integration testing is continuing at
+                                                                     GRC. Operation with an elevated baseplate temperature
+The component development consists of design, fabrication            demonstrated thermal margin capabilities of the design. A
+and testing the engineering/prototype model hardware.                comprehensive series of environmental tests at JPL will
+Component testing includes performance characterization              follow system integration tests. The environmental tests
+tests, vibration test, thermal-vacuum, and thermal cycle tests       include qualification-level vibration tests with post-vibration
+with performance verification tests intermittently performed.        functionality test, qualification-level thermal/vacuum test
+                                                                     with post-thermal/vacuum functionality test, and
+3.2 Hardware Status                                                  electromagnetic interference/electromagnetic compatibility
+The status of the individual components is provided as well          (EMI/EMC) tests. PPU environmental testing is planned to
+as the status of the system level demonstrations.                    be complete in CY2008.
+
+3.2.1 Thruster                                                       3.2.3 Propellant Management System (PMS)
+A laboratory model 40-cm diameter ion thruster developed             Aerojet completed all engineering model PMS assemblies,
+in 2001 provided the basis for the engineering and                   including two High Pressure Assemblies (HPAs), with one
+prototype-model ion thruster designs. GRC subsequently               flight-like assembly, and three Low Pressure Assemblies
+developed the EM design. Aerojet developed the PM                    (LPAs) with one flight-like assembly. The non-flight
+design, under contract to GRC, with the objective to mature          assemblies are identical except for use of lower-cost
+NEXT thruster design to ensure full-compliance with                  equivalent parts. All assemblies completed functionality
+structural and thermal requirements and to improve thruster          tests. Flight-like LPA and HPA successfully completed
+manufacturability. Aerojet delivered the PM1 thruster to             qualification-level environmental tests. The environmental
+GRC following flight-level design and fabrication processes.         tests included qualification-level vibration tests (at 14.1 Grms
+                                                                     for 2 minutes in each axis) and post-vibration functionality
+GRC successfully completed performance acceptance testing            tests as well as qualification-level thermal/vacuum tests
+followed by a comprehensive environmental test sequence at           (+12º to +70ºC temperature range for three cycles). The EM
+JPL. GRC and JPL completed two cycles of acceptance and              PMS was delivered to NASA for use in system integration
+environmental tests in order to resolve minor design issues          tests.
+with thruster rework. The reworked thruster used in the
+second cycle of environmental tests was designated PM1R.             3.2.4 Digital Control Interface Unit (DCIU)
+Thruster environmental test included thermal balance test to         DCIU simulators were completed and are used in system-
+gather key thruster temperature maps over a wide range of            level tests. The simulator is a laptop-based test equipment
+operating and environmental conditions. Information was              with EM-level PMS pressure loop control cards. The
+used to develop and validate thruster thermal model and              simulator is capable of operating a three-thruster string
+demonstrate temperature margins over a large temperature             system. The DCIU simulator operator validates control
+range.     Vibration of the thruster/gimbal assembly to              algorithms and PMS control card and supports PPU
+qualification-level vibration environments (10.0 Grms for two        input/output tests, PMS control during test, single-string and
+minutes in each axis) was completed with no changes in               multi-string integration tests.
+thruster performance functionality. Thermal-vacuum tests
+
+
+NEXT Document for New Frontiers Library                          7                                                      08/15/08
+3.2.5 Gimbal                                                          indicate expected thruster performance was achieved and
+Swales Aerospace designed and fabricated the breadboard               thruster operations were understood without significant
+gimbal. It is a flight-like design using JPL-approved                 sensitivity to system configuration.
+materials with certifications. Stepper motors have a space-
+rated option.       The gimbal successfully completed                 The scope of the Single-String Integration Test (SSIT) is to
+functionality tests with the PM1R engine. The gimbal                  verify that the integrated system of NEXT components
+passed two qualification-level vibration tests and low-level          meets the project requirements in a relevant environment.
+shock tests with minor issues. This establishes a baseline            The primary objectives are to demonstrate:
+design, with few modifications needed to move into a                       • operation of the thruster over the throttle table with
+qualification program.                                                         PPU and PMS,
+                                                                           • operation of system at off-nominal conditions, and
+3.3 Key activities (Summary)                                               • recycle and fault protection operation.
+3.3.1 Thruster Life Validation activities                             The test configuration includes the PM thruster, EM PPU,
+The NEXT thruster life validation is completed through a              the EM PMS as well as the DCIU simulator. The test started
+combination of test and analysis. An engineering model                in May 2008, and it will continue though August 2008. One
+thruster (EM3) operates in a Long Duration Test (LDT) in              hundred four separate requirements flagged for validation
+Vacuum Facility 16 at GRC. The thruster has a high degree             include:
+of similarity to the Aerojet PM thruster in elements related               • component functional requirements,
+to thruster wear mechanisms. Aerojet manufactured the                      • performance requirements,
+prototype-model hardware ion thruster.          The cathode                • environmental requirements,
+assemblies replicate the geometry and materials of the
+                                                                           • interface requirements, and
+elements of the PM units that are exposed to wear. The
+                                                                           • power allocations.
+discharge chamber is geometrically identical and has the
+                                                                      The multi-thruster integration test (MTIT) immediately
+same magnetic circuit design.          This supports direct
+                                                                      follows the SSIT and adds one EM thruster operated with
+translation of LDT results to the flight-build thrusters. The
+                                                                      laboratory power consoles.
+thruster demonstrated over 16,300 hours of operation or over
+334 kg of xenon throughput as of June 28, 2008. This
+                                                                      3.4 Planned ISPT tasks
+represents a total impulse >13.2 x 106 N-s.               The
+                                                                      The planned ISPT tasks remaining for NEXT development
+demonstration exceeded project design goal of 300 kg in
+                                                                      include the on-going tasks described elsewhere, such as
+March 2008, but plans to continue to 450 kg by the end of
+                                                                      Long Duration Test, System Integration Tests, etc. Beyond
+FY10. The thruster operates at different throttle conditions
+                                                                      the on-going tasks a Performance Evaluation Review (PER)
+to characterize erosion rates over the entire range of the
+                                                                      is planned in late CY08. A group of peers will present and
+throttle table.
+                                                                      review the entirety of the Phase 2 development activities to
+                                                                      establish the TRL of the system. In addition, the group will
+In parallel to the tests, computational models were
+                                                                      identify, assess and prioritize any perceived high-risk items
+developed, incorporating LDT data, to predict total xenon
+                                                                      so that the balance of project resources, available after the
+throughput capabilities of the thruster design. The models
+                                                                      completion of all Phase 2 tasks, will be applied to risk
+simulate wear patterns and rates of critical thruster
+                                                                      reduction activities in FY09/FY10.
+components, such as ion optics, discharge keeper, etc. These
+models are continually updated with the latest experimental
+                                                                      3.5 Timetable for Completing TRL 6
+data as it is collected. The predicted capability of the
+                                                                      Programmed FY08 In-Space activities brings NEXT to a
+thruster exceeds 750 kg of xenon throughput.
+                                                                      high state of readiness for FY08/FY09 AOs. By that time, it
+                                                                      is planned that functional and qualification environmental
+3.3.2 System/Integration Tests
+                                                                      tests of key system elements will be completed. The thruster
+The three test activities categorized as system-level tests are
+                                                                      Long Duration Test continues to increase throughput beyond
+multi-thruster array tests, single-string integration tests
+                                                                      the project design goal of 300 kg. A system integration test
+(SSIT) and multi-thruster integration tests (MTIT). The
+                                                                      will be completed. NEXT is approaching TRL 6 in CY
+objective of the multi-thruster array test was to assess
+                                                                      2008, which is a key proposal requirement in the
+thruster and plasma interactions with sensitivities to thruster
+                                                                      Announcement of Opportunity guidance.
+spacing, gimbaled thrusters and neutralizer operating modes.
+The configuration included four GRC EM thrusters; three
+                                                                      3.6 Dawn lessons learned/Independent Review
+operating and one instrumented non-operating as well as an
+                                                                      One of the primary concerns that users have with new
+extensive suite of diagnostics to collect data for multi-
+                                                                      technology is cost growth in mission implementation. This
+thruster system modeling and analyses. The multi-thruster
+                                                                      is especially relevant for the potential users of electric
+array test was completed in December 2005 and included
+                                                                      propulsion given the cost growth experienced by Dawn.
+single, dual, and triple thruster operations. Initial data
+
+
+NEXT Document for New Frontiers Library                           8                                                   08/15/08
+Project activities conducted to increase the likelihood of
+transitioning the NEXT IPS technology to flight in the near              4.   NEW FRONTIERS MISSION IMPLEMENTATION
+term were:
+1. reviewing a compilation of lessons learned from the              4.1 NEXT system definition for your mission concept
+     Dawn experience and developing strategies to mitigate          A NEXT-based ion propulsion system is designed around
+     the likelihood of experiencing similar difficulties,           thruster strings, each composed of a thruster, a gimbal, a
+2. conducting independent reviews of NEXT technology                PPU and a feed system LPA. Mission performance
+     status with representation from the user community and         optimization and failure tolerance determines the number of
+     incorporating the feedback into the development plan,          thruster strings. Low thrust trajectory optimization is
+     and                                                            performed to determine the desired number of thruster
+3. identifying additional technology development and                strings to achieve the objective balance of performance and
+     validation activities which may be of value in                 cost. In many cases, mission analysis results determines that
+     transitioning the TRL-6 IPS technology to flight and           multiple thruster strings, running in parallel, is the optimum
+     reduce barriers to first-user implementation by reducing       approach. A thruster string is also added as a redundant
+     non-recurring costs, etc.                                      string, to prevent exposure to single point failures. In
+The NEXT project team placed particular emphasis on key             addition to the thruster strings required, the system is
+aspects of IPS development with the intention of avoiding           completed with the xenon tank(s), the internally redundant
+the difficulties experienced by the Dawn mission in                 feed system HPA, and the DCIU function. An example ion
+transitioning the NSTAR-based technology to an operational          propulsion system Product Breakdown Structure is shown in
+IPS.                                                                Table 5. Selection characteristics for each of these are
+                                                                    discussed in more detail below. Information sheets for the
+Specific examples of Dawn lessons learned are in Table 4.           thruster, PPU, PMS assemblies and gimbal are also provided
+                                                                    in Appendix A.
+       Table 4. Lessons learned from Dawn Mission
+Dawn Problem             NEXT Mitigation Strategy                   4.1.1 Ion Thruster
+Documentation --         EM PPU manufactured by flight              The ion thruster is one of the two key elements of the NEXT
+Inadequate thruster      production group with all                  IPS. The proposer should plan to implement the baseline
+and PPU                  documentation (manufacturing               NEXT thruster produced by Aerojet. The flight build will
+documentation            drawings and assembly                      have a very high degree of similarity to the PM thruster
+                         instructions) under configuration          fabricated and tested under the NEXT project. There are
+                         control. NEXT PM thruster                  limited elements under consideration for modification
+                         design and assembly                        without diverging from the TRL validation already achieved.
+                         documentation updated with                 The number of thrusters planned should consider the total
+                         PM1R changes and placed under              xenon propellant throughput required by the mission.
+                         design control for future build            Assumptions made are minimum per-thruster capability of
+                         cycles.                                    300 kg throughput and greater throughput capability up to
+Propellant               DS-1 and Dawn feed-system                  500 kg based on life validation to date, with minor increase
+management --            engineers heavily involved in              in risk. Strategies using the spare thruster string, sharing the
+complex, bulky, and      design from project initiation;            overall mission throughput requirement, increase margins as
+required extensive       PMS design incorporates a                  employed on the Dawn mission.
+modification to satisfy lightweight, compact design.
+requirements.
+Thruster -- complex      Thruster designed for
+design elements,         manufacturability and assembly;
+difficult to             extensive testing to evaluate
+manufacture and          erosion mechanisms conducted on
+assemble, long           EM hardware, resulting in
+duration test. results,  modifications on both EM and PM
+impacted flight          hardware and under extensive
+configuration            evaluations prior to committing to
+                         qualification build
+
+
+
+
+NEXT Document for New Frontiers Library                         9                                                      08/15/08
+        Table 5. IPS Product Breakdown Structure                                NEXT thruster without significant modification and
+1. Spacecraft                                                                   development risk. A single PPU is required for each thruster
+     1.1 Ion Propulsion System (IPS)                                            that operates in parallel, i.e. a PPU cannot operate multiple
+            1.1.1 Ion Thruster
+                     1.1.1.1 Discharge Chamber                                  thrusters simultaneously. The NEXT PPU has an output
+                     1.1.1.2 Ion Optics                                         relay module that directs the power output to one of two
+                     1.1.1.3 Discharge Cathode                                  thrusters. This provides higher IPS reliability, depending on
+                     1.1.1.4 Neutralizer Cathode                                overall IPS implementation. In addition, in the unlikely
+                     1.1.1.5 Plasma Screen
+                     1.1.1.6 High Voltage propellant Isolator                   event that a mission requires serial use of multiple thrusters
+                     1.1.1.7 Wiring & tubing                                    due to thruster throughput limitations, this cross strapping
+            1.1.2 Power Processing Unit                                         allows an architecture in which there are less PPUs than
+                     1.1.2.1 Beam Supply                                        thrusters, as on the Dawn mission. The PPU/thruster harness
+                     1.1.2.2 Discharge Supply
+                     1.1.2.3 Quad Supply                                        interface implementing this cross-strapping approach
+                     1.1.2.4 Housekeeping Supply                                requires further engineering, as was completed on the Dawn
+                     1.1.2.5 Output Relay Module                                mission.
+                     1.1.2.6 Input Filter
+                     1.1.2.7 Structure
+                     1.1.2.8 Internal Harness/Connectors                        The NEXT project team identified some design changes that
+            1.1.3 Xenon Propellant System (XPS)                                 can improve the overall PPU that need consideration in the
+                     1.1.3.1 Xenon Tank                                         flight-system development project. These primarily relate to
+                     1.1.3.2 High pressure Assembly                             housekeeping and fault protection functions, have minimal
+                                   1.1.3.2.1 Flow Control Valve
+                                   1.1.3.2.2 Pressure Transducer                development risk, and do not affect the primary power
+                                   1.1.3.2.3 Tubing & Fittings                  processing functions.
+                                   1.1.3.2.4 Structure
+                                   1.1.3.2.5 Internal Harness/Connectors        Finally, the implementation of the DCIU functionality
+                     1.1.3.3 Low Pressure Assembly
+                                   1.1.3.3.1 Flow Control Valve                 affects the PPU, as described below.
+                                   1.1.3.3.2 Thermal Throttle
+                                   1.1.3.3.3 Pressure Transducer                4.1.3 Propellant Management System
+                                   1.1.3.3.4 Latch Valve                        The NEXT project developed a xenon-flow control
+                                   1.1.3.3.5 Tubing & Fittings
+                                   1.1.3.3.6 Structure                          technology approach that differs significantly from the
+                                   1.1.3.3.7 Internal Harness/Connectors        NSTAR state-of-art. Its implementation is on NEXT in
+                     1.1.3.4 XPS Isolation Valves                               specific system architecture. The resulting HPA and LPA
+                     1.1.3.5 XPS Service Valves                                 provide a demonstrated baseline for the key elements of a
+                     1.1.3.6 XPS Tubing & Fittings
+                     1.1.3.7 Xenon Loading Equipment                            flight system design. A NEXT IPS, however, can be
+            1.1.4 Digital control Interface unit                                successfully implemented with other xenon feed system
+                     1.1.4.1 HPA/LPA Interface                                  approaches. The PMS HPA and LPA approach is a
+                     1.1.4.2 PPU Interface                                      recommended option.
+                     1.1.4.3 Spacecraft Interface
+            1.1.5 DCIU Software
+            1.1.6 Gimbal                                                        4.1.4 Tank-to-thruster PMS Implementation
+                     1.1.6.1 StepperMotor/Feedback                              Tank sizing and selection are a function of the specific
+                     1.1.6.2 Flexures                                           mission     requirements    and    spacecraft-bus-interface
+                     1.1.6.3 Pin Puller
+                     1.1.6.4 Structure                                          considerations. They are the responsibility of the proposing
+                     1.1.6.5 Harness and Connectors                             team.
+                     1.1.6.6 Xenon Tubing & Fittings
+                     1.1.6.7 Mechanical Support equipment                       Provisions for xenon tank loading are through a service port
+            1.1.7 Thermal Control
+                     1.1.7.1 Multi-layer Insulation                             access between the tanks and the HPA.
+                     1.1.7.2 Heaters
+            1.1.8 IPS Integration Hardware                                      The HPA is a single, internally redundant, unit to regulate
+                     1.1.8.1 PPU/Thruster Harness                               xenon from the tank pressure to the desired LPA inlet
+                     1.1.8.2 DCIU/PPU Harness
+                     1.1.8.3 DCIU/XPS Harness                                   pressure. The HPA implementation, per the current design,
+                     1.1.8.4 Gimbal/Thruster Fasteners                          represents the simplest PFCV-based approach.         Other
+                     1.1.8.5 XPS/Thruster Fittings                              approaches are possible to accomplish this function.
+
+4.1.2 Power Processing Unit                                                     The mission development team may elect to install isolation
+The PPU is the other key element of the NEXT IPS. The                           latch valves between the HPA and each LPA. This provides
+PPU design is specifically for the NEXT thruster. A NEXT                        a means to mitigate an LPA external leak, as well as
+PPU can run other ion thrusters, such as NSTAR; but other                       providing another level of isolation of high-pressure xenon
+ion propulsion power processing units cannot operate a                          gas during ground operations. Using the thruster string
+
+
+NEXT Document for New Frontiers Library                                    10                                                    08/15/08
+associated with that LPA will mitigate the LPA internal               into the NEXT PPU. This would likely require a design
+leaks. An isolation latch valve can be added though either            change to the PPU, with associated development. If the
+an LPA design change or as a separate component.                      mission implementation team elects to execute a PPU
+                                                                      qualification build and test cycle, this would be a good
+Each thruster requires a dedicated LPA to control the three           opportunity to incorporate this change. Finally, the mission
+xenon flows to the thruster. The NEXT LPA provides an                 implementation team may consider allocating DCIU
+internally redundant, robust approach, and can accommodate            functions to the spacecraft processor.
+a single internal failure of a PFCV-closed or thermal throttle
+temperature sensor or heater. The mission implementation              As the DCIU interfaces to the PPU and PMS, the design of
+team can elect to simplify the LPA through one of the                 the unit is a function of the selection of the other elements of
+following approaches:                                                 the NEXT IPS.          Selection of the NEXT HPA/LPA
+• elimination of a PFCV, while retaining thermal throttle             architecture allows use of the control card designs
+     capability to run both cathodes from a single PFCV               implemented in the project DCIU simulator. Use of the
+• replacement of the thermal throttles with passive-                  NEXT PPU allows use of PPU-interface-card brassboard
+     thermal-control flow control devices                             design currently in progress within ISPT.
+• possible elimination of internal latch valves with
+     modifications to other elements of the flow control              4.2 Transition to Mission Development
+     kernel                                                           The NEXT project made substantial progress towards TRL
+These simplifications can reduce recurring cost, but may              6. The ISPT project intends to continue funding the NEXT
+increase PMS non-recurring costs due to divergence from               project in FY09 and FY10, with resources primarily focused
+the NEXT validated configuration. There is no capability for          on continuation of thruster life validation testing and
+cross-strapped flow between a single LPA and multiple                 analysis, but with some resources available for other risk
+thrusters. This is feasible, but represents a significant             reduction tasks.
+increase in PMS and control system complexity.
+                                                                      4.3 Class B rating approach
+NEXT ion thrusters require purge gas flow through the                 The New Frontiers mission class is Class B. The NEXT IPS
+hollow cathodes during all ground operations. Purge ports             approach is compliant with Class B guidelines, as defined in
+and service valves installed between each LPA and thruster            NPR 8705.4 Appendix B. Assessment of specific guidelines
+will satisfy the purge requirements.                                  follows.
+
+In addition to the primary functional elements above, the             4.3.1 Single Point Failures
+overall PMS will include tubing, fittings, line heaters, and          1. A spare thruster string included in the IPS to provide
+other purge/service ports to support overall system                        functional redundancy avoids single point failures.
+processing and operations.                                            2. The PMS HPA provides that redundancy internal to the
+                                                                           assembly.
+4.1.5 Gimbal                                                          3. The DCIU function implementation must be compliant
+The NEXT project developed a gimbal concept that differs                   with this guidance.
+significantly from the NSTAR state-of-art. The NEXT                   4. The PMS LPA and gimbal both have provisions for
+gimbal provides a demonstrated baseline for the flight                     partial redundancy and graceful degradation.
+system design. However, other gimbal approaches can meet              5. The LPA can maintain the full nominal throttle table
+the requirements of the NEXT IPS. The NEXT gimbal                          flow rates with a PFCV failed-closed, a thermal-throttle-
+approach is the recommended option.                                        temperature sensor failure or a thermal throttle heater
+                                                                           failure.
+Spacecraft equipment powers and controls the gimbal                   6. The gimbal has a degraded range of motion capability
+interfaces to the spacecraft GN&C system. The NEXT                         with one of the three-stepper motors failed, and allows
+gimbal design can be further tailored to specific mission                  for thruster operation in the launch-stowed position if
+needs, as appropriate.                                                     necessary.
+
+4.1.6 Digital Control Interface Unit                                  4.3.2 Engineering Models, Prototype, Flight and Spare
+The mission development team designs the digital control              Hardware
+interface function for the first flight of a NEXT IPS. In past        The NEXT project completed fabrication of engineering
+NASA missions (Deep Space 1 and Dawn), this function                  model-level hardware for the thruster, PPU and PMS
+was installed in a separate unit, the DCIU. The Dawn IPS              assemblies, and a high-fidelity breadboard gimbal.
+includes a primary and redundant spare DCIU. The In-                  Substantial qualification-level testing of these elements was
+Space Propulsion Technology project and NEXT project                  completed as described in previous sections. The proposal
+teams considered the possibility of integrating this function         team develops the strategy for protoflight versus
+
+
+NEXT Document for New Frontiers Library                          11                                                      08/15/08
+qualification testing, and for spare hardware. NEXT                   waste heat. The spacecraft thermal control system must
+subsystem sparing is done at the component, subassembly,              accommodate an interface design to accomodate the
+or top assembly level.                                                projected thermal load profile.
+
+4.3.3 Qualification, Acceptance, and Protoflight Test                 The desired thrust vector drives the spacecraft attitude,
+Program                                                               during long-duration propulsive arcs, which the
+Success of the NEXT development activities, including                 trajectory/mission optimization process defines. The overall
+completed qualification-level testing of the thruster and PMS         spacecraft thermal design should consider this effect.
+assemblies, provides the opportunity for the mission
+development team to initiate protoflight verification                 5.2 Spacecraft Power
+strategies.    This is in place of extensive and schedule-            The IPS uses unregulated 80-160V power for the primary
+demanding       qualification   programs.           Successful        propulsion capability, as well as 28V housekeeping power
+environmental testing of the EM PPU in 2008 provides                  for selected functions. Depending on the trajectory chosen,
+similar opportunities. An integrated end-to-end test of a             the IPS may not use the full high-voltage power generated
+single string of the thruster, PPU, HPA and LPA is in                 by the solar arrays at any given heliocentric distance. The
+progress. This will further reduce the risks to the flight            spacecraft electrical power system design should allow for
+program. The IPS development planning must include the                full/partial/nil use of high voltage power during the mission.
+qualification of the DCIU and its associated software.
+
+4.3.4   EEE Parts                                                     5.3 Plume Impingement
+The NEXT PPU is compliant with EEE parts requirements.                The spacecraft layout should preclude direct impingement of
+The EM PPU uses only parts that have space-rated                      the thruster ion beam on other spacecraft surfaces.
+equivalents available.
+                                                                      5.4 Attitude Control
+4.3.5 Reviews, Safety, Materials, Mishaps, Reliability,               Depending on the number of thrusters operating, and the
+Fault Tree Analysis, Probabilistic Risk Assessment,                   placement of the thrusters, the gimbaled thrust is used to
+Maintainability, Quality Assurance, Software, Risk                    provide partial or full attitude control during propulsive
+Management, Telemetry Coverage                                        operations. The spacecraft control system powers and
+ The NEXT IPS is inherently compatible with these analysis            controls the gimbals.
+and development processes and objectives. The NEXT
+technology project team put into practice the elements of             5.5 Guidance and Navigation
+these processes to varying degrees. These include formal              The long duration propulsive thrust arcs dictate changes in
+project reviews, safety planning, materials assessments,              guidance and navigation software design from approaches
+reliability analyses, etc.. They are available to support             used for chemical propulsion missions.
+transition to a flight project.
+                                                                      5.6 Mission Operations
+4.4 Mission Success                                                   NEXT mission analyses generally assume a 90 percent duty
+Overall success of the mission determines the success of the          cycle for propulsive arcs. The other 10 percent is allocated
+NEXT IPS. The NEXT IPS is considered as any other                     to non-propulsion spacecraft functions. The overall concept
+element of the spacecraft bus, and has no less-demanding              of operations considers the effects of propulsive duty cycle
+success criteria.                                                     and incorporates that into the trajectory analyses and mission
+                                                                      operations planning as appropriate.
+ 5.   KEY SPACECRAFT INTEGRATION CONSIDERATIONS
+                                                                                     6.   CONTACT INFORMATION
+Inherent characteristics of electric propulsion systems result
+in spacecraft integration and interface considerations that           Please direct all inquiries and requests related to the NEXT
+vary significantly from standard chemical propulsion                  engine to the following individual:
+systems. In particular, the long duration propulsive arcs
+associated with electric-propulsion drive mission operations          David J. Anderson
+and aspects of spacecraft design. A summary follows for               NASA In-Space Propulsion Technologies Project Office
+consideration in the mission-concept development process,             NASA John H. Glenn Research Center
+but the NEXT project team studied these topics in detail.             21000 Brookpark Road, Mail Stop: 77-4
+                                                                      Cleveland, OH 44135
+5.1 Thermal Control and Design                                        (216) 433-8709
+The NEXT PPU efficiently processes over 7 kW of power at              [email removed]
+full power operations. This generates a maximum 350 W of
+
+
+NEXT Document for New Frontiers Library                          12                                                    08/15/08
+                                                     REFERENCES
+
+[1] Van Noord, J. and Herman, D. “Application of the
+    NEXT Ion Thruster Lifetime Assessment to Thruster              [10] Herman, D., Soulas, G. and Patterson, M. “Performance
+    Throttling Strategies” AIAA-2008-4526, 44th                         Evaluation of the 40-cm NEXT Prototype Model Ion
+    AIAA/ASME/SAE/ASEE Joint Propulsion Conference                      Thruster”, AIAA-2007-5212, 43rd
+    and Exhibit (JPC), Hartford, CT, July 2008.                         AIAA/ASME/SAE/ASEEJPC, Cincinnati, OH, July
+                                                                        2007.
+[2] Herman, D., Patterson, M., and Soulas, G., “Performance
+    Characteristics of the NEXT Long-Duration Test After           [11] Soulas, G., Patterson, M. Van Noord, J., “NEXT Ion
+    17,200 hours of Operation and 352 kg of Xenon                       Thruster Performance Dispersion Analyses”, AIAA-
+    Processed” AIAA-2008-4527, 44th                                     2007-5213, 43rd AIAA/ASME/SAE/ASEE JPC,
+    AIAA/ASME/SAE/ASEE JPC, Hartford, CT, July 2008.                    Cincinnati, OH, July 2007.
+
+[3] Benson, S., Patterson, and Snyder, J., “NEXT Ion               [12] Van Noord, J. and Williams, G., “Lifetime Assessment
+    Propulsion System Progress Towards Technology                       of the NEXT Ion Thruster”, AIAA-2007-5274, 43rd
+    Readiness,” AIAA-2008-5285, 44th                                    AIAA/ASME/SAE/ASEE JPC, Cincinnati, OH, July
+    AIAA/ASME/SAE/ASEE JPC, Hartford, CT, July 2008.                    2007.
+
+[4] Herman, D. and Pinero, L., “NASA’s Evolutionary                [13] Herman, D., Soulas, G., and Patterson, M., “Status of
+    Xenon Thruster (NEXT) Component Verification                        the NEXT Ion Thruster Long-Duration Test”, AIAA-
+    Testing” AIAA-2008-4812, 44th                                       2007-5272, 43rd AIAA/ASME/SAE/ASEE JPC,
+    AIAA/ASME/SAE/ASEEJPC, Hartford, CT, July 2008.                     Cincinnati, OH, July 2007.
+
+[5a] Herman, D., Patterson, M., and Soulas, G. “NEXT               [14] Snyder J., Anderson, J., Soulas, G., Van Noord, J.,
+   Long-Duration Test Plume and Wear Characteristics                    “Environmental Testing of the NEXT PM1 Ion Engine”,
+   After 17,200 hours of Operation and 352 kg of Xenon                  AIAA-2007-5275, 43rd AIAA/ASME/SAE/ASEE JPC,
+   Processed,” AIAA-2008-4919, 44th                                     Cincinnati, OH, July 2007.
+   AIAA/ASME/SAE/ASEE JPC, Hartford, CT, July 2008.
+                                                                   [15] Anderson, J., Snyder, J., Van Noord, J., and Soulas, G.,
+[5b] Patterson, M. and Benson, S., “NEXT Ion Propulsion                 “Thermal Development Test of the NEXT PM1 Ion
+   System Development Status and Performance”, AIAA-                    Engine”, AIAA-2007-5217, 43rd
+   2007-5199, 43rd AIAA/ASME/SAE/ASEE JPC,                              AIAA/ASME/SAE/ASEE JPC, Cincinnati, OH, July
+   Cincinnati, OH, July 2007.                                           2007.
+
+[6] Benson, S., Riehl, J., Oleson, S., “NEXT Ion Propulsion        [16] Van Noord, J., “NEXT Ion Thruster Thermal Model”,
+    System Configurations and Performance for Saturn                    AIAA-2007-5218, 43rd AIAA/ASME/SAE/ASEE JPC,
+    System Exploration”, AIAA-2007-5230, 43rd JPC,                      Cincinnati, OH, July 2007.
+    Cincinnati, OH, July 2007.
+                                                                   [17] Pinero, L., Todd, P. and Hopson, M. “Integration and
+[7] Benson, S. and Patterson, M., “Technology Readiness of              Qualification of the NEXT Power Processing Unit”,
+    the NEXT Ion Propulsion System”, 2008 IEEE                          AIAA-2007-5214, 43rd AIAA/ASME/SAE/ASEE JPC,
+    Aerospace Conference, IEEEAC Paper #1479, Big Sky,                  Cincinnati, OH, July 2007.
+    MT, March 2008.
+                                                                   [18] Pinero, L., Patterson, M., and Sovey, J., “NEXT
+[8] Monheiser, J., Aadland, R. and Wilson, A.,                          Thruster Component Verification Testing” AIAA-2007-
+    "Development of a Ground Based Digital Control                      5276, 43rd AIAA/ASME/SAE/ASEE JPC, Cincinnati,
+    Interface Unit (DCIU) for the NEXT Propulsion                       OH, July 2007.
+    System," AIAA-2004-4112, 40th JPC, Fort Lauderdale,
+    FL, July 2004.                                                 [19] Patterson, M., Foster, J., McEwen, H., Pencil, E., Van
+                                                                        Noord, J. and Herman, D., "NEXT Multi-Thruster
+[9] Aadland, R., Monheise, J., Driscoll, E., Wilson, F.,                Array Test - Engineering Demonstration," AIAA-2006-
+    Benson, S., “Development Status of NEXT Propellant                  5180, 42nd JPC, Sacramento, CA, July 2006.
+    Management System,” AIAA-2004-3974, 40th JPC, Fort
+    Lauderdale, FL, July 2004.
+
+
+NEXT Document for New Frontiers Library                       13                                                    08/15/08
+[20] Pencil, E., Foster, J., Patterson, M., Van Noord, J.,
+     McEwen, H., Diaz, E., “Ion Beam Characterization of
+     the NEXT Multi-Thruster Array Plume,” AIAA-2006-
+     5182, 42nd JPC, Sacramento, CA, July 2006.
+
+[21] McEwen, H., Foster, J., Pencil, E., Patterson, M., Diaz,
+     E. and Van Noord, J., "Characterization of Plasma Flux
+     Incident on a Multi-Thruster Array, " AIAA-2006-5183,
+     42nd Joint Propulsion Conference, Sacramento, CA,
+     July 2006.
+
+[22] Foster, J., Patterson, M., Pencil, E., McEwen, H., Diaz,
+     E. and Van Noord, J., "Plasma Characteristics Measured
+     in the Plume of a NEXT Multi-Thruster Array," AIAA-
+     2006-5184, 42nd Joint Propulsion Conference,
+     Sacramento, CA, July 2006.
+
+[23] Foster, J., Pencil, E., McEwen, H. Patterson, M., Diaz,
+     E. and Van Noord, J., "Neutralizer Plasma Coupling in a
+     NEXT Multi-Thruster Array," AIAA-2006-5184, 42nd
+     Joint Propulsion Conference, Sacramento, CA, July
+     2006.
+
+[24] Aadland, R. S., Frederick, H., Benson, S. W., and
+     Malone, S. P., Development Results of the NEXT
+     Propellant Management System, 54th JANNAF
+     Propulsion Meeting, (Dec 2005).
+
+
+
+
+NEXT Document for New Frontiers Library                         14   08/15/08
+                                                      APPENDIX A
+
+Specification sheets on the components of the Ion Propulsion system follow.
+
+Thruster Data Sheet
+
+Power Processing Unit Data Sheet
+
+Propellant Management system Assemblies Data Sheet
+
+Gimbal Data Sheet
+
+
+
+
+NEXT Document for New Frontiers Library                     15                08/15/08
+NEXT Document for New Frontiers Library   16   08/15/08
+NEXT ― Thruster Data Sheet
+                                                           Performance Characteristics
+                                                     Thruster Power Range, kW                              0.5-6.9
+                                                     Max. Specific Impulse, sec                              4190
+                                                     Thrust, mN                                            26-236
+                                                     Max. Thruster Efficiency                                 71%
+                                                     Beam Diameter, cm                                          36
+                                                     Max. Beam Current, A                                     3.52
+                                                     Max. Beam Voltage, V                                    1800
+                                                     Mass (with harness), kg                                  13.5
+                                                     Beam Divergence (95 %),                                  24.5
+     PM1― Flight Prototype Thruster                  Degrees
+
+    Tested to Qualification-Level                                            43.5 cm
+           Environments
+Vibration                 10 Grms
+                          2 min/axis
+Thermal/Vacuum            -120 to +215ºC
+                          3 full cycles
+                                                              58.0 cm
+
+
+
+
+                                                                                                             52.5 cm ø
+                          3 hot and 3 cold
+                          Thruster start 24 h
+                          dwell at +215ºC
+
+
+
+
+                                                                                 37.6 cm
+                                                                        Thruster Envelope
+                                                                        Lifetime Capability
+                                                          •    Projected first failure:
+                                                               o >750 kg xenon throughput (worst-case
+                                                                   condition > 1 kW input power)
+                                                               o >37,600 hr operation
+                                                          •    Projected thruster rated capability:
+                                                               o 500 kg throughput
+                                                               o >25,000 h operation
+                                                          •    Project requirement:
+                                                               o 300 kg throughput
+                                                               o Exceeded in long duration testing
+                                                     Lifetime projections based on modeling, analysis and test results
+                                                     to date.
+                                                     Extended operations (>24% of mission) at input power less than 1
+                                                     kW requires additional analysis.
+
+
+
+
+NEXT Document for New Frontiers Library         17                                                      08/15/08
+                          NEXT Throttle Table (Beginning-of-Life)
+                       Beam          Thrust,    Isp,        Efficiency   Input Power,
+                     Voltage, V       mN         s               %           kW
+                             Xenon Flow = 5.76 mg/sec; Beam Current = 3.52 A
+                             1800       236     4190         0.71                6.860
+                             1567       221     3910         0.70                6.052
+                             1396       208     3690         0.69                5.459
+                             1179       192     3395         0.68                4.707
+                             Xenon Flow = 5.12 mg/sec; Beam Current = 3.10 A
+                             1800       208     4150         0.70                6.057
+                             1567       194     3875         0.69                5.346
+                             1396       184     3660         0.68                4.842
+                             1179       169     3360         0.67                4.161
+                             Xenon Flow = 4.46 mg/sec; Beam Current = 2.70A
+                             1800       181     4150         0.70                5.290
+                             1567       169     3875         0.69                4.671
+                             1396       160     3660         0.68                4.216
+                             1179       147     3360         0.67                3.639
+                             1021       137     3125         0.65                3.220
+                             Xenon Flow = 3.92 mg/sec; Beam Current = 2.35 A
+                             1800       158     4100         0.69                4.618
+                             1567       147     3830         0.68                4.079
+                             1396       139     3615         0.67                3.683
+                             1179       128     3325         0.66                3.181
+                             1021       119     3090         0.64                2.816
+                             Xenon Flow = 3.16 mg/sec; Beam Current =2.00 A
+                             1800       134     4310         0.71                4.006
+                             1567       125     4025         0.70                3.544
+                             1396       118     3800         0.69                3.207
+                             1179       108     3490         0.67                2.780
+                             1021       101     3250         0.65                2.472
+                             Xenon Flow = 2.60 mg/sec; Beam Current =1.60 A
+                             1800     107.0     4190         0.68                3.247
+                             1567      99.9     3910         0.67                2.878
+                             1396      94.3     3690         0.65                2.608
+                             1179      86.7     3395         0.64                2.267
+                             1021      80.6     3155         0.62                2.020
+                             Xenon Flow = 2.05 mg/sec; Beam Current =1.20 A
+                             1800      80.2     4000         0.65                2.349
+                             1567      74.9     3735         0.63                2.162
+                             1396      70.7     3525         0.62                1.960
+                             1179      65.0     3240         0.61                1.704
+                             1021      60.4     3015         0.59                1.519
+                              936      57.8     2885         0.58                1.420
+                              850      55.1     2745         0.56                1.320
+                              679      49.2     2450         0.53                1.121
+                              650      48.1     2400         0.52                1.086
+                              400      37.2     1855         0.43                0.786
+                              300      31.8     1585         0.37                0.665
+                             Xenon Flow = 1.85 mg/sec; Beam Current =1.00 A
+                              275      25.5     1400         0.33                0.538
+
+
+
+
+NEXT Document for New Frontiers Library                18                                08/15/08
+NEXT ― Power Processing Unit Data Sheet
+
+                                                               Performance Characteristics
+                                                          Input Power Range, W                        250-7200
+                                                          Peak Efficiency                                 95%
+                                                          Primary Power Input Voltage
+                                                          Range, V                                         80-160
+                                                          Housekeeping Power Input
+                                                          Voltage, V                                            28
+                                                          Housekeeping Power, W                              16-28
+                                                          Mass, kg                                            33.9
+
+
+
+   Environmental Requirements                                  42 cm                             53 cm
+  Vibration                          14.1 Grms
+  Thermal
+     Operating
+     temperature*                -15 to +50ºC
+     Survival                                                                                                       14 cm
+     temperature*                -40 to +70ºC
+*Allowable temperatures at the baseplate
+interface to the spacecraft
+
+
+
+                                                                               PPU Envelope
+
+
+                                                   Power Efficiency
+
+                     0.96
+
+
+                     0.94
+
+
+                     0.92
+
+                                                                                                    80V
+                     0.90                                                                           100V
+                                                                                                    160V
+
+                     0.88
+
+
+                     0.86
+
+
+                     0.84
+                            0    1,000    2,000   3,000     4,000      5,000     6,000   7,000
+                                                  Output Power (W)
+
+
+
+
+NEXT Document for New Frontiers Library              19                                                  08/15/08
+NEXT Document for New Frontiers Library   20   08/15/08
+NEXT ― Propellant Management System
+       Assemblies Data Sheet
+High Pressure Assembly (HPA): Pressure
+stepdown from tank pressure to nominal
+operating pressure
+
+
+
+
+Low Pressure Assembly: Xenon flow control to
+the three inlets on the NEXT thruster
+
+
+
+
+                                                                          Schematic
+
+
+                                                            Performance Characteristics
+                                                        HPA Mass, kg                                1.9
+                                                        LPA Mass, kg                                3.1
+                                                        HPA Dimensions, cm                     33x18x7
+    Tested to Qualification-Level
+                                                        LPA Dimensions, cm                     44x28x7
+           Environments                                 HPA Power Consumption, W                    4.3
+Vibration                 14.1 Grms                     LPA Power Consumption, W                   15.9
+                          2 min/axis                    Flow Rate Accuracy                        <3%
+Thermal/Vacuum            -12 to +70ºC                  HPA Inlet Pressure, psia                 <2700
+                          3 full cycles
+                                                        Tank unusable residual xenon              <1%
+                          24 h of operations
+                          at -12 ºC and +7ºC
+
+LPA Operating Modes
+ Nominal:
+   • Pressure Control Loop
+     o Fixed thermal throttle temperature
+     o Variable PFCV orifice to control pressure and calibrated flow rate
+ Fault Mode
+   • Thermal Control Loop
+     o Fixed PFCV orifice and internal pressure
+     o Variable thermal throttle temperature to control flow rate
+     o Allows control of multiple thruster flows with one or two PFCVs by opening cross-over latch
+       valves.
+
+
+
+NEXT Document for New Frontiers Library            21                                         08/15/08
+NEXT Document for New Frontiers Library   22   08/15/08
+NEXT ―Gimbal Data Sheet
+
+                                                    Performance Characteristics
+                                                 Mass, kg                                   6
+                                                 Y-Axis Range of Motion, Degrees          ±19
+                                                 Y-Axis Range of Motion, Degrees          ±17
+                                                 Slew rate, degrees/sec                  >0.6
+
+
+
+
+ – Three strut attachment to spacecraft
+ – Thruster retention in launch position
+ – Thruster deployed to raised operation
+   position after launch.
+
+
+
+    Tested to Qualification-Level
+           Environments
+Vibration                 10 Grms
+(in thruster/gimbal       2 min/axis
+assembly)
+
+                                                         Gimbal mounting envelope
+
+
+
+
+        Post-vibration functional testing
+
+
+
+
+NEXT Document for New Frontiers Library     23                                      08/15/08
+

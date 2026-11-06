@@ -30,6 +30,9 @@ URLS={"jpl_planets_phys_par.html":"https://ssd.jpl.nasa.gov/planets/phys_par.htm
  "sbdb_bennu.json":"https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=101955&phys-par=1","sbdb_ceres.json":"https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=1&phys-par=1","sbdb_vesta.json":"https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=4&phys-par=1",
  "sbdb_pluto.json":"https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=134340&phys-par=1","sbdb_eris.json":"https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=136199&phys-par=1"}
 URLS["nasa_sls_reference.html"]="https://www.nasa.gov/reference/space-launch-system/"
+URLS.update({"ula_atlas_v.html":"https://www.ulalaunch.com/rockets/atlas-v","ula_vulcan.html":"https://www.ulalaunch.com/rockets/vulcan-centaur","esa_vega_c.html":"https://www.esa.int/Enabling_Support/Space_Transportation/Launch_vehicles/Vega-C",
+ "esa_ariane6_overview.html":"https://www.esa.int/Enabling_Support/Space_Transportation/Launch_vehicles/Ariane_6_overview"})
+for _id in ("19690022248","19980017550","20090004685","20060051789"): URLS[f"ntrs_{_id}.pdf"]=f"https://ntrs.nasa.gov/api/citations/{_id}/downloads/{_id}.pdf"
 for p in "mercury venus earth mars jupiter saturn uranus neptune".split(): URLS[f"nssdc_{p}.html"]=f"https://nssdc.gsfc.nasa.gov/planetary/factsheet/{p}fact.html"
 SRCID={"jpl_planets_phys_par.html":"S02","jpl_sats_phys_par.html":"S03","jpl_approx_pos.html":"S04","sbdb":"S40"}
 man=[]
