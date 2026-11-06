@@ -1,0 +1,171 @@
+{
+ "schema_version": "0.1.0",
+ "dataset": "instrument_comparison",
+ "description": "Comparison table; null = not recorded",
+ "generated": "2026-11-06",
+ "retrieval_status": "NOT_RETRIEVED: values recalled from published references; network access to source hosts was blocked in the build environment. See metadata/quality_report.json.",
+ "record_count": 16,
+ "records": [
+  {
+   "id": "lorri",
+   "name": "LORRI",
+   "type": "optical_camera",
+   "mission": "New Horizons",
+   "mass_kg": 8.8,
+   "power_w": 5.8,
+   "w_per_kg": 0.6590909090909091
+  },
+  {
+   "id": "ralph",
+   "name": "Ralph (MVIC + LEISA)",
+   "type": "multispectral_imager_spectrometer",
+   "mission": "New Horizons",
+   "mass_kg": 10.5,
+   "power_w": 6.3,
+   "w_per_kg": 0.6
+  },
+  {
+   "id": "alice",
+   "name": "Alice",
+   "type": "uv_spectrometer",
+   "mission": "New Horizons",
+   "mass_kg": 4.4,
+   "power_w": 4.4,
+   "w_per_kg": 1.0
+  },
+  {
+   "id": "rex",
+   "name": "REX",
+   "type": "radio_science",
+   "mission": "New Horizons",
+   "mass_kg": 0.1,
+   "power_w": 2.1,
+   "w_per_kg": 21.0
+  },
+  {
+   "id": "swap",
+   "name": "SWAP",
+   "type": "particle_detector",
+   "mission": "New Horizons",
+   "mass_kg": 3.3,
+   "power_w": 2.3,
+   "w_per_kg": 0.6969696969696969
+  },
+  {
+   "id": "pepssi",
+   "name": "PEPSSI",
+   "type": "particle_detector",
+   "mission": "New Horizons",
+   "mass_kg": 1.5,
+   "power_w": 2.5,
+   "w_per_kg": 1.6666666666666667
+  },
+  {
+   "id": "sdc",
+   "name": "Student Dust Counter",
+   "type": "dust_detector",
+   "mission": "New Horizons",
+   "mass_kg": 1.9,
+   "power_w": 5.0,
+   "w_per_kg": 2.6315789473684212
+  },
+  {
+   "id": "hirise",
+   "name": "HiRISE",
+   "type": "optical_camera",
+   "mission": "Mars Reconnaissance Orbiter",
+   "mass_kg": 65.0,
+   "power_w": 60.0,
+   "w_per_kg": 0.9230769230769231
+  },
+  {
+   "id": "crism",
+   "name": "CRISM",
+   "type": "imaging_spectrometer",
+   "mission": "Mars Reconnaissance Orbiter",
+   "mass_kg": 32.9,
+   "power_w": null,
+   "w_per_kg": null
+  },
+  {
+   "id": "sharad",
+   "name": "SHARAD",
+   "type": "sounding_radar",
+   "mission": "Mars Reconnaissance Orbiter",
+   "mass_kg": 17.0,
+   "power_w": null,
+   "w_per_kg": null
+  },
+  {
+   "id": "mola",
+   "name": "MOLA",
+   "type": "lidar_altimeter",
+   "mission": "Mars Global Surveyor",
+   "mass_kg": 25.9,
+   "power_w": 34.2,
+   "w_per_kg": 1.3204633204633207
+  },
+  {
+   "id": "lroc_nac",
+   "name": "LROC NAC",
+   "type": "optical_camera",
+   "mission": "Lunar Reconnaissance Orbiter",
+   "mass_kg": null,
+   "power_w": null,
+   "w_per_kg": null
+  },
+  {
+   "id": "sam",
+   "name": "SAM",
+   "type": "mass_spectrometer_gas_chromatograph",
+   "mission": "Mars Science Laboratory",
+   "mass_kg": 40.0,
+   "power_w": null,
+   "w_per_kg": null
+  },
+  {
+   "id": "oli",
+   "name": "OLI",
+   "type": "multispectral_camera",
+   "mission": "Landsat 8",
+   "mass_kg": null,
+   "power_w": null,
+   "w_per_kg": null
+  },
+  {
+   "id": "tirs",
+   "name": "TIRS",
+   "type": "thermal_imager",
+   "mission": "Landsat 8",
+   "mass_kg": null,
+   "power_w": null,
+   "w_per_kg": null
+  },
+  {
+   "id": "msi",
+   "name": "MSI",
+   "type": "multispectral_camera",
+   "mission": "Sentinel-2",
+   "mass_kg": null,
+   "power_w": null,
+   "w_per_kg": null
+  }
+ ],
+ "case_study_new_horizons_payload": {
+  "instruments": [
+   "lorri",
+   "ralph",
+   "alice",
+   "rex",
+   "swap",
+   "pepssi",
+   "sdc"
+  ],
+  "payload_mass_kg": 30.5,
+  "payload_power_w": 28.4,
+  "spacecraft_launch_mass_kg": 478,
+  "payload_mass_fraction": 0.06380753138075314,
+  "data_class": "derived",
+  "derived_from": "sum of recorded instrument masses/powers; launch mass from missions dataset (all inputs unverified)"
+ }
+}

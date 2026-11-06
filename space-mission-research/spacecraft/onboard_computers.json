@@ -1,0 +1,77 @@
+{
+ "schema_version": "0.1.0",
+ "dataset": "onboard_computers",
+ "description": "Flight computers",
+ "generated": "2026-11-06",
+ "retrieval_status": "NOT_RETRIEVED: values recalled from published references; network access to source hosts was blocked in the build environment. See metadata/quality_report.json.",
+ "record_count": 3,
+ "records": [
+  {
+   "id": "cpu_rad750",
+   "name": "RAD750 flight computer (processor)",
+   "category": "onboard_computer",
+   "record_kind": "named_item",
+   "mass_kg": null,
+   "power_consumption_w": 5.0,
+   "power_generation_w": null,
+   "energy_capacity_wh": null,
+   "params": {
+    "clock_mhz": 200,
+    "rad_tolerance_krad_si": [
+     200,
+     1000
+    ]
+   },
+   "data_class": "unverified",
+   "confidence": "medium",
+   "note": "Processor-only power figure approximate; board-level power higher.",
+   "source_ids": [
+    "S18"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "cpu_leon3",
+   "name": "LEON3-FT class processor",
+   "category": "onboard_computer",
+   "record_kind": "technology_class",
+   "mass_kg": null,
+   "power_consumption_w": null,
+   "power_generation_w": null,
+   "energy_capacity_wh": null,
+   "params": {
+    "clock_mhz": [
+     50,
+     100
+    ]
+   },
+   "data_class": "estimated",
+   "confidence": "low",
+   "note": "Fault-tolerant SPARC V8; mass/power not recorded.",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "cpu_cots",
+   "name": "Commercial off-the-shelf SoC (class)",
+   "category": "onboard_computer",
+   "record_kind": "technology_class",
+   "mass_kg": null,
+   "power_consumption_w": null,
+   "power_generation_w": null,
+   "energy_capacity_wh": null,
+   "params": {
+    "radiation_note": "Limited tolerance; suited to LEO short missions or with mitigation"
+   },
+   "data_class": "estimated",
+   "confidence": "low",
+   "note": "Small-sat practice.",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved"
+  }
+ ]
+}

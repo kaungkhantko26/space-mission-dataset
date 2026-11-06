@@ -1,0 +1,115 @@
+{
+ "schema_version": "0.1.0",
+ "dataset": "attitude_control",
+ "description": "ADCS hardware classes",
+ "generated": "2026-11-06",
+ "retrieval_status": "NOT_RETRIEVED: values recalled from published references; network access to source hosts was blocked in the build environment. See metadata/quality_report.json.",
+ "record_count": 4,
+ "records": [
+  {
+   "id": "rw_small",
+   "name": "Small reaction wheel (CubeSat class)",
+   "category": "attitude_control",
+   "record_kind": "technology_class",
+   "mass_kg": 0.1,
+   "power_consumption_w": null,
+   "power_generation_w": null,
+   "energy_capacity_wh": null,
+   "params": {
+    "momentum_storage_nms": [
+     0.001,
+     0.02
+    ],
+    "mass_kg_range": [
+     0.05,
+     0.3
+    ]
+   },
+   "data_class": "estimated",
+   "confidence": "low",
+   "note": "Order-of-magnitude class record; mass shown is representative midpoint-ish and ESTIMATED.",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "rw_large",
+   "name": "Large reaction wheel (large satellite class)",
+   "category": "attitude_control",
+   "record_kind": "technology_class",
+   "mass_kg": null,
+   "power_consumption_w": null,
+   "power_generation_w": null,
+   "energy_capacity_wh": null,
+   "params": {
+    "momentum_storage_nms": [
+     10,
+     200
+    ],
+    "mass_kg_range": [
+     5,
+     20
+    ]
+   },
+   "data_class": "estimated",
+   "confidence": "low",
+   "note": "Order-of-magnitude.",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "st_star",
+   "name": "Star tracker (class)",
+   "category": "attitude_control",
+   "record_kind": "technology_class",
+   "mass_kg": null,
+   "power_consumption_w": null,
+   "power_generation_w": null,
+   "energy_capacity_wh": null,
+   "params": {
+    "accuracy_arcsec_1sigma": [
+     1,
+     30
+    ],
+    "mass_kg_range": [
+     0.2,
+     3.0
+    ],
+    "power_w_range": [
+     0.5,
+     10
+    ]
+   },
+   "data_class": "estimated",
+   "confidence": "low",
+   "note": "Wide range across small-sat to large-sat units.",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "mtq",
+   "name": "Magnetorquer (class)",
+   "category": "attitude_control",
+   "record_kind": "technology_class",
+   "mass_kg": null,
+   "power_consumption_w": null,
+   "power_generation_w": null,
+   "energy_capacity_wh": null,
+   "params": {
+    "usable_only_in": "low planetary orbit with magnetic field"
+   },
+   "data_class": "estimated",
+   "confidence": "low",
+   "note": "Not usable in interplanetary cruise.",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved"
+  }
+ ]
+}

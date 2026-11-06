@@ -1,0 +1,51 @@
+{
+ "schema_version": "0.1.0",
+ "dataset": "mission_requirements",
+ "description": "Scenario requirements (synthetic)",
+ "generated": "2026-11-06",
+ "retrieval_status": "NOT_RETRIEVED: values recalled from published references; network access to source hosts was blocked in the build environment. See metadata/quality_report.json.",
+ "record_count": 3,
+ "records": [
+  {
+   "id": "req_leo_eo",
+   "scenario_id": "leo_eo",
+   "budget_credits": 12000,
+   "min_science_points": 12,
+   "radiation_dose_krad": 8,
+   "radiation_dose_basis": "estimated",
+   "launch_vehicle_options": [
+    "electron",
+    "f9_class"
+   ],
+   "data_class": "fictional",
+   "note": "Budget (credits) and science weights are fictional educational values; see optimization_constraints.json"
+  },
+  {
+   "id": "req_lunar_orbiter",
+   "scenario_id": "lunar_orbiter",
+   "budget_credits": 30000,
+   "min_science_points": 15,
+   "radiation_dose_krad": 15,
+   "radiation_dose_basis": "estimated",
+   "launch_vehicle_options": [
+    "f9_class",
+    "falcon_heavy"
+   ],
+   "data_class": "fictional",
+   "note": "Budget (credits) and science weights are fictional educational values; see optimization_constraints.json"
+  },
+  {
+   "id": "req_mars_orbiter",
+   "scenario_id": "mars_orbiter",
+   "budget_credits": 90000,
+   "min_science_points": 20,
+   "radiation_dose_krad": 20,
+   "radiation_dose_basis": "estimated",
+   "launch_vehicle_options": [
+    "falcon_heavy"
+   ],
+   "data_class": "fictional",
+   "note": "Budget (credits) and science weights are fictional educational values; see optimization_constraints.json"
+  }
+ ]
+}

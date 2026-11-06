@@ -1,0 +1,151 @@
+{
+ "schema_version": "0.1.0",
+ "dataset": "electric_propulsion",
+ "description": "Ion and Hall thrusters at recorded operating point (SI)",
+ "generated": "2026-11-06",
+ "retrieval_status": "NOT_RETRIEVED: values recalled from published references; network access to source hosts was blocked in the build environment. See metadata/quality_report.json.",
+ "record_count": 5,
+ "records": [
+  {
+   "id": "nstar",
+   "name": "NSTAR ion thruster",
+   "maker": "NASA JPL/Hughes",
+   "type": "ion",
+   "propellant": "Xe",
+   "thrust_vac_n": 0.092,
+   "thrust_sl_n": null,
+   "isp_vac_s": 3100,
+   "isp_sl_s": null,
+   "dry_mass_kg": null,
+   "burn_s": null,
+   "restart": true,
+   "status": "operational_historical",
+   "power_w": 2300,
+   "note": "Max throttle level (2.3 kW, 92 mN, ~3100 s); min ~0.5 kW/19 mN/~1900 s. Flown on DS1 and Dawn.",
+   "source_ids": [
+    "S14"
+   ],
+   "confidence": "medium",
+   "data_class": "unverified",
+   "retrieval_status": "not_retrieved",
+   "derived": {
+    "mass_flow_vac_kg_s": 3.0262545675474e-06,
+    "thrust_per_power_mN_per_kW": 40.0
+   },
+   "derived_from": "mdot=F/(Isp*g0); TWR=F/(m*g0); thrust/power"
+  },
+  {
+   "id": "next",
+   "name": "NEXT ion thruster",
+   "maker": "NASA GRC/Aerojet",
+   "type": "ion",
+   "propellant": "Xe",
+   "thrust_vac_n": 0.236,
+   "thrust_sl_n": null,
+   "isp_vac_s": 4190,
+   "isp_sl_s": null,
+   "dry_mass_kg": null,
+   "burn_s": null,
+   "restart": true,
+   "status": "developmental_ground_tested",
+   "power_w": 6900,
+   "note": "Peak throttle point; flight use of this thruster not recorded.",
+   "source_ids": [
+    "S14"
+   ],
+   "confidence": "medium",
+   "data_class": "unverified",
+   "retrieval_status": "not_retrieved",
+   "derived": {
+    "mass_flow_vac_kg_s": 5.74350898001888e-06,
+    "thrust_per_power_mN_per_kW": 34.20289855072463
+   },
+   "derived_from": "mdot=F/(Isp*g0); TWR=F/(m*g0); thrust/power"
+  },
+  {
+   "id": "t6",
+   "name": "T6 gridded ion thruster",
+   "maker": "QinetiQ",
+   "type": "ion",
+   "propellant": "Xe",
+   "thrust_vac_n": 0.145,
+   "thrust_sl_n": null,
+   "isp_vac_s": 4300,
+   "isp_sl_s": null,
+   "dry_mass_kg": null,
+   "burn_s": null,
+   "restart": true,
+   "status": "operational",
+   "power_w": 4500,
+   "note": "BepiColombo MPO-MTM; peak point approximate.",
+   "source_ids": [
+    "S14"
+   ],
+   "confidence": "low",
+   "data_class": "unverified",
+   "retrieval_status": "not_retrieved",
+   "derived": {
+    "mass_flow_vac_kg_s": 3.438577927483712e-06,
+    "thrust_per_power_mN_per_kW": 32.22222222222222
+   },
+   "derived_from": "mdot=F/(Isp*g0); TWR=F/(m*g0); thrust/power"
+  },
+  {
+   "id": "bpt4000",
+   "name": "BPT-4000 Hall thruster",
+   "maker": "Aerojet Rocketdyne",
+   "type": "hall_effect",
+   "propellant": "Xe",
+   "thrust_vac_n": 0.254,
+   "thrust_sl_n": null,
+   "isp_vac_s": 1850,
+   "isp_sl_s": null,
+   "dry_mass_kg": null,
+   "burn_s": null,
+   "restart": true,
+   "status": "operational",
+   "power_w": 4500,
+   "note": "Approximate; dual-mode variants exist.",
+   "source_ids": [
+    "S14"
+   ],
+   "confidence": "low",
+   "data_class": "unverified",
+   "retrieval_status": "not_retrieved",
+   "derived": {
+    "mass_flow_vac_kg_s": 1.4000428005210476e-05,
+    "thrust_per_power_mN_per_kW": 56.44444444444444
+   },
+   "derived_from": "mdot=F/(Isp*g0); TWR=F/(m*g0); thrust/power"
+  },
+  {
+   "id": "spt100",
+   "name": "SPT-100 Hall thruster",
+   "maker": "Fakel",
+   "type": "hall_effect",
+   "propellant": "Xe",
+   "thrust_vac_n": 0.083,
+   "thrust_sl_n": null,
+   "isp_vac_s": 1600,
+   "isp_sl_s": null,
+   "dry_mass_kg": 3.5,
+   "burn_s": null,
+   "restart": true,
+   "status": "operational",
+   "power_w": 1350,
+   "note": "Approximate.",
+   "source_ids": [
+    "S14"
+   ],
+   "confidence": "low",
+   "data_class": "unverified",
+   "retrieval_status": "not_retrieved",
+   "derived": {
+    "mass_flow_vac_kg_s": 5.2897778548230035e-06,
+    "engine_thrust_to_weight_vac": 0.0024181841622048015,
+    "thrust_per_power_mN_per_kW": 61.48148148148148
+   },
+   "derived_from": "mdot=F/(Isp*g0); TWR=F/(m*g0); thrust/power"
+  }
+ ]
+}

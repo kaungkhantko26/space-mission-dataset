@@ -1,0 +1,194 @@
+{
+ "schema_version": "0.1.0",
+ "dataset": "atmospheres",
+ "description": "Atmosphere summaries; gas giants at the 1-bar reference level. Not altitude profiles.",
+ "generated": "2026-11-06",
+ "retrieval_status": "NOT_RETRIEVED: values recalled from published references; network access to source hosts was blocked in the build environment. See metadata/quality_report.json.",
+ "record_count": 11,
+ "records": [
+  {
+   "id": "venus",
+   "surface_pressure_pa": 9200000.0,
+   "temp_k": 737,
+   "scale_height_km": 15.9,
+   "composition_vol_pct": {
+    "CO2": 96.5,
+    "N2": 3.5
+   },
+   "note": "Surface values (mean).",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S01"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "earth",
+   "surface_pressure_pa": 101325,
+   "temp_k": 288,
+   "scale_height_km": 8.5,
+   "composition_vol_pct": {
+    "N2": 78.08,
+    "O2": 20.95,
+    "Ar": 0.93
+   },
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S01"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "mars",
+   "surface_pressure_pa": 636,
+   "temp_k": 210,
+   "scale_height_km": 11.1,
+   "composition_vol_pct": {
+    "CO2": 95.3,
+    "N2": 2.7,
+    "Ar": 1.6
+   },
+   "note": "Pressure varies ~30% seasonally and with elevation.",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S01"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "titan",
+   "surface_pressure_pa": 146700,
+   "temp_k": 93.7,
+   "scale_height_km": 21.0,
+   "composition_vol_pct": {
+    "N2": 95.0,
+    "CH4": 5.0
+   },
+   "note": "Composition approximate (CH4 ~1.4% stratosphere, higher near surface).",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S01"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "jupiter",
+   "surface_pressure_pa": 100000,
+   "temp_k": 165,
+   "scale_height_km": 27.0,
+   "composition_vol_pct": {
+    "H2": 89.8,
+    "He": 10.2
+   },
+   "note": "Reference 1-bar level, no solid surface.",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S01"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "saturn",
+   "surface_pressure_pa": 100000,
+   "temp_k": 134,
+   "scale_height_km": 59.5,
+   "composition_vol_pct": {
+    "H2": 96.3,
+    "He": 3.25
+   },
+   "note": "Reference 1-bar level, no solid surface.",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S01"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "uranus",
+   "surface_pressure_pa": 100000,
+   "temp_k": 76,
+   "scale_height_km": 27.7,
+   "composition_vol_pct": {
+    "H2": 82.5,
+    "He": 15.2,
+    "CH4": 2.3
+   },
+   "note": "Reference 1-bar level.",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S01"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "neptune",
+   "surface_pressure_pa": 100000,
+   "temp_k": 72,
+   "scale_height_km": 19.7,
+   "composition_vol_pct": {
+    "H2": 80.0,
+    "He": 19.0,
+    "CH4": 1.5
+   },
+   "note": "Reference 1-bar level.",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S01"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "pluto",
+   "surface_pressure_pa": 1.0,
+   "temp_k": null,
+   "scale_height_km": null,
+   "composition_vol_pct": {
+    "N2": null,
+    "CH4": null
+   },
+   "note": "Tenuous N2 atmosphere ~1 Pa (order of magnitude); fractions not recorded.",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S01"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "mercury",
+   "surface_pressure_pa": null,
+   "temp_k": null,
+   "scale_height_km": null,
+   "composition_vol_pct": {},
+   "note": "Surface-bounded exosphere; no meaningful pressure recorded.",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S01"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "moon",
+   "surface_pressure_pa": null,
+   "temp_k": null,
+   "scale_height_km": null,
+   "composition_vol_pct": {},
+   "note": "Negligible exosphere.",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S01"
+   ],
+   "retrieval_status": "not_retrieved"
+  }
+ ]
+}

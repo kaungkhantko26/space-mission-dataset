@@ -1,0 +1,182 @@
+{
+ "schema_version": "0.1.0",
+ "dataset": "cameras",
+ "description": "Optical/multispectral/thermal imagers",
+ "generated": "2026-11-06",
+ "retrieval_status": "NOT_RETRIEVED: values recalled from published references; network access to source hosts was blocked in the build environment. See metadata/quality_report.json.",
+ "record_count": 7,
+ "records": [
+  {
+   "id": "lorri",
+   "name": "LORRI",
+   "instrument_type": "optical_camera",
+   "heritage_mission": "New Horizons",
+   "mass_kg": 8.8,
+   "power_w": 5.8,
+   "params": {
+    "aperture_cm": 20.8,
+    "ifov_urad": 4.97,
+    "fov_deg": 0.29,
+    "pixels": "1024x1024"
+   },
+   "data_class": "unverified",
+   "confidence": "medium",
+   "note": "",
+   "source_ids": [
+    "S19"
+   ],
+   "retrieval_status": "not_retrieved",
+   "derived": {
+    "power_to_mass_w_per_kg": 0.6590909090909091
+   }
+  },
+  {
+   "id": "ralph",
+   "name": "Ralph (MVIC + LEISA)",
+   "instrument_type": "multispectral_imager_spectrometer",
+   "heritage_mission": "New Horizons",
+   "mass_kg": 10.5,
+   "power_w": 6.3,
+   "params": {
+    "mvic_bands": "4 color + 2 panchromatic",
+    "leisa_range_um": [
+     1.25,
+     2.5
+    ]
+   },
+   "data_class": "unverified",
+   "confidence": "medium",
+   "note": "",
+   "source_ids": [
+    "S19"
+   ],
+   "retrieval_status": "not_retrieved",
+   "derived": {
+    "power_to_mass_w_per_kg": 0.6
+   }
+  },
+  {
+   "id": "hirise",
+   "name": "HiRISE",
+   "instrument_type": "optical_camera",
+   "heritage_mission": "Mars Reconnaissance Orbiter",
+   "mass_kg": 65.0,
+   "power_w": 60.0,
+   "params": {
+    "aperture_m": 0.5,
+    "gsd_m_at_300km": 0.3,
+    "swath_km": 6
+   },
+   "data_class": "unverified",
+   "confidence": "medium",
+   "note": "Mass/power approximate.",
+   "source_ids": [
+    "S20"
+   ],
+   "retrieval_status": "not_retrieved",
+   "derived": {
+    "power_to_mass_w_per_kg": 0.9230769230769231
+   }
+  },
+  {
+   "id": "lroc_nac",
+   "name": "LROC NAC",
+   "instrument_type": "optical_camera",
+   "heritage_mission": "Lunar Reconnaissance Orbiter",
+   "mass_kg": null,
+   "power_w": null,
+   "params": {
+    "gsd_m_at_50km": 0.5,
+    "pixels_across": 5064,
+    "fov_deg": 2.86
+   },
+   "data_class": "unverified",
+   "confidence": "medium",
+   "note": "",
+   "source_ids": [
+    "S22"
+   ],
+   "retrieval_status": "not_retrieved",
+   "derived": {
+    "power_to_mass_w_per_kg": null
+   }
+  },
+  {
+   "id": "oli",
+   "name": "OLI",
+   "instrument_type": "multispectral_camera",
+   "heritage_mission": "Landsat 8",
+   "mass_kg": null,
+   "power_w": null,
+   "params": {
+    "gsd_m": 30,
+    "pan_gsd_m": 15,
+    "bands": 9,
+    "swath_km": 185
+   },
+   "data_class": "unverified",
+   "confidence": "medium",
+   "note": "",
+   "source_ids": [
+    "S24"
+   ],
+   "retrieval_status": "not_retrieved",
+   "derived": {
+    "power_to_mass_w_per_kg": null
+   }
+  },
+  {
+   "id": "tirs",
+   "name": "TIRS",
+   "instrument_type": "thermal_imager",
+   "heritage_mission": "Landsat 8",
+   "mass_kg": null,
+   "power_w": null,
+   "params": {
+    "gsd_m": 100,
+    "bands_um": [
+     10.9,
+     12.0
+    ],
+    "swath_km": 185
+   },
+   "data_class": "unverified",
+   "confidence": "medium",
+   "note": "",
+   "source_ids": [
+    "S24"
+   ],
+   "retrieval_status": "not_retrieved",
+   "derived": {
+    "power_to_mass_w_per_kg": null
+   }
+  },
+  {
+   "id": "msi",
+   "name": "MSI",
+   "instrument_type": "multispectral_camera",
+   "heritage_mission": "Sentinel-2",
+   "mass_kg": null,
+   "power_w": null,
+   "params": {
+    "gsd_m": [
+     10,
+     20,
+     60
+    ],
+    "bands": 13,
+    "swath_km": 290
+   },
+   "data_class": "unverified",
+   "confidence": "medium",
+   "note": "",
+   "source_ids": [
+    "S25"
+   ],
+   "retrieval_status": "not_retrieved",
+   "derived": {
+    "power_to_mass_w_per_kg": null
+   }
+  }
+ ]
+}

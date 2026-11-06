@@ -1,0 +1,319 @@
+{
+ "schema_version": "0.1.0",
+ "dataset": "communications",
+ "description": "Spacecraft comm hardware classes, ground stations, optical demonstrations",
+ "generated": "2026-11-06",
+ "retrieval_status": "NOT_RETRIEVED: values recalled from published references; network access to source hosts was blocked in the build environment. See metadata/quality_report.json.",
+ "record_count": 4,
+ "records": [
+  {
+   "id": "ant_patch",
+   "name": "Patch antenna (S-band, class)",
+   "category": "communications",
+   "record_kind": "technology_class",
+   "mass_kg": null,
+   "power_consumption_w": null,
+   "power_generation_w": null,
+   "energy_capacity_wh": null,
+   "params": {
+    "gain_dbi": [
+     5,
+     9
+    ],
+    "band": "S"
+   },
+   "data_class": "estimated",
+   "confidence": "low",
+   "note": "Low gain; LEO/near-Earth.",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "ant_hga_1m",
+   "name": "1 m parabolic HGA (X-band class)",
+   "category": "communications",
+   "record_kind": "technology_class",
+   "mass_kg": null,
+   "power_consumption_w": null,
+   "power_generation_w": null,
+   "energy_capacity_wh": null,
+   "params": {
+    "diameter_m": 1.0,
+    "band": "X",
+    "efficiency": 0.55
+   },
+   "data_class": "estimated",
+   "confidence": "low",
+   "note": "Gain derived from aperture in analysis files.",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "ant_hga_3m",
+   "name": "3 m parabolic HGA (X/Ka-band class)",
+   "category": "communications",
+   "record_kind": "technology_class",
+   "mass_kg": null,
+   "power_consumption_w": null,
+   "power_generation_w": null,
+   "energy_capacity_wh": null,
+   "params": {
+    "diameter_m": 3.0,
+    "efficiency": 0.55
+   },
+   "data_class": "estimated",
+   "confidence": "low",
+   "note": "Typical outer-planet class size.",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "xpdr_deep_space",
+   "name": "Deep-space transponder (class)",
+   "category": "communications",
+   "record_kind": "technology_class",
+   "mass_kg": null,
+   "power_consumption_w": null,
+   "power_generation_w": null,
+   "energy_capacity_wh": null,
+   "params": {
+    "bands": [
+     "S",
+     "X",
+     "Ka"
+    ],
+    "tx_power_w": [
+     5,
+     100
+    ]
+   },
+   "data_class": "estimated",
+   "confidence": "low",
+   "note": "Examples: NASA/JPL Small Deep Space Transponder family.",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved"
+  }
+ ],
+ "ground_stations": [
+  {
+   "id": "dsn_goldstone_dss14",
+   "name": "DSN Goldstone DSS-14 (70 m)",
+   "operator": "NASA DSN",
+   "lat": 35.4259,
+   "lon": -116.89,
+   "antenna_m": 70.0,
+   "gain_dbi": {
+    "S": 63.0,
+    "X": 74.0
+   },
+   "bands": [
+    "S",
+    "X"
+   ],
+   "tx_power_w_max": 20000,
+   "note": "Gains approximate (DSN 810-005 expected).",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S26"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "dsn_canberra_dss43",
+   "name": "DSN Canberra DSS-43 (70 m)",
+   "operator": "NASA DSN",
+   "lat": -35.4014,
+   "lon": 148.9817,
+   "antenna_m": 70.0,
+   "gain_dbi": {
+    "S": 63.0,
+    "X": 74.0
+   },
+   "bands": [
+    "S",
+    "X"
+   ],
+   "tx_power_w_max": 20000,
+   "note": "Gains approximate.",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S26"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "dsn_madrid_dss63",
+   "name": "DSN Madrid DSS-63 (70 m)",
+   "operator": "NASA DSN",
+   "lat": 40.4314,
+   "lon": -4.2481,
+   "antenna_m": 70.0,
+   "gain_dbi": {
+    "S": 63.0,
+    "X": 74.0
+   },
+   "bands": [
+    "S",
+    "X"
+   ],
+   "tx_power_w_max": 20000,
+   "note": "Gains approximate.",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S26"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "dsn_34m_bwg",
+   "name": "DSN 34 m beam-waveguide (generic)",
+   "operator": "NASA DSN",
+   "lat": null,
+   "lon": null,
+   "antenna_m": 34.0,
+   "gain_dbi": {
+    "X": 68.0,
+    "Ka": 79.0
+   },
+   "bands": [
+    "X",
+    "Ka"
+   ],
+   "tx_power_w_max": null,
+   "note": "Gains approximate.",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S26"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "estrack_new_norcia",
+   "name": "ESTRACK New Norcia (35 m)",
+   "operator": "ESA",
+   "lat": -31.048,
+   "lon": 116.191,
+   "antenna_m": 35.0,
+   "gain_dbi": {},
+   "bands": [
+    "S",
+    "X"
+   ],
+   "tx_power_w_max": null,
+   "note": "Gain not recorded.",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S27"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "estrack_cebreros",
+   "name": "ESTRACK Cebreros (35 m)",
+   "operator": "ESA",
+   "lat": 40.4528,
+   "lon": -4.3675,
+   "antenna_m": 35.0,
+   "gain_dbi": {},
+   "bands": [
+    "X",
+    "Ka"
+   ],
+   "tx_power_w_max": null,
+   "note": "Gain not recorded.",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S27"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "estrack_malargue",
+   "name": "ESTRACK Malargue (35 m)",
+   "operator": "ESA",
+   "lat": -35.776,
+   "lon": -69.398,
+   "antenna_m": 35.0,
+   "gain_dbi": {},
+   "bands": [
+    "X",
+    "Ka"
+   ],
+   "tx_power_w_max": null,
+   "note": "Gain not recorded.",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S27"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "ksat_svalbard",
+   "name": "KSAT Svalbard (SvalSat)",
+   "operator": "KSAT",
+   "lat": 78.23,
+   "lon": 15.39,
+   "antenna_m": null,
+   "gain_dbi": {},
+   "bands": [
+    "S",
+    "X"
+   ],
+   "tx_power_w_max": null,
+   "note": "Polar site: many passes per day for SSO satellites.",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S28"
+   ],
+   "retrieval_status": "not_retrieved"
+  }
+ ],
+ "optical_demonstrations": [
+  {
+   "id": "llcd",
+   "name": "LLCD (LADEE, lunar distance)",
+   "downlink_mbps": 622,
+   "uplink_mbps": 20,
+   "distance_km": 384400,
+   "year": 2013,
+   "note": "Demonstration.",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S29"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "dsoc",
+   "name": "DSOC (Psyche)",
+   "downlink_mbps": 267,
+   "uplink_mbps": null,
+   "distance_km": 33000000.0,
+   "year": 2023,
+   "note": "Peak demonstrated at ~0.2 AU; rate falls ~1/d^2.",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S29"
+   ],
+   "retrieval_status": "not_retrieved"
+  }
+ ]
+}

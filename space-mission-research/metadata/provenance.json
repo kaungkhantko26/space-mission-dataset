@@ -1,0 +1,2205 @@
+{
+ "schema_version": "0.1.0",
+ "dataset": "provenance",
+ "description": "Record-level provenance",
+ "generated": "2026-11-06",
+ "retrieval_status": "NOT_RETRIEVED: values recalled from published references; network access to source hosts was blocked in the build environment. See metadata/quality_report.json.",
+ "record_count": 130,
+ "records": [
+  {
+   "record_id": "sun",
+   "dataset": "celestial",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S05",
+    "S01"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "escape_velocity_m_s",
+    "solar_constant_1au_w_m2",
+    "derived_from"
+   ]
+  },
+  {
+   "record_id": "mercury",
+   "dataset": "celestial",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S01",
+    "S02"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "escape_velocity_m_s",
+    "circular_velocity_surface_m_s",
+    "gravity_from_mu_m_s2",
+    "derived_from",
+    "solar_irradiance_w_m2"
+   ]
+  },
+  {
+   "record_id": "venus",
+   "dataset": "celestial",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S01",
+    "S02"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "escape_velocity_m_s",
+    "circular_velocity_surface_m_s",
+    "gravity_from_mu_m_s2",
+    "derived_from",
+    "solar_irradiance_w_m2"
+   ]
+  },
+  {
+   "record_id": "earth",
+   "dataset": "celestial",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S01",
+    "S02"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "escape_velocity_m_s",
+    "circular_velocity_surface_m_s",
+    "gravity_from_mu_m_s2",
+    "derived_from",
+    "solar_irradiance_w_m2"
+   ]
+  },
+  {
+   "record_id": "mars",
+   "dataset": "celestial",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S01",
+    "S02"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "escape_velocity_m_s",
+    "circular_velocity_surface_m_s",
+    "gravity_from_mu_m_s2",
+    "derived_from",
+    "solar_irradiance_w_m2"
+   ]
+  },
+  {
+   "record_id": "jupiter",
+   "dataset": "celestial",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S01",
+    "S02"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "escape_velocity_m_s",
+    "circular_velocity_surface_m_s",
+    "gravity_from_mu_m_s2",
+    "derived_from",
+    "solar_irradiance_w_m2"
+   ]
+  },
+  {
+   "record_id": "saturn",
+   "dataset": "celestial",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S01",
+    "S02"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "escape_velocity_m_s",
+    "circular_velocity_surface_m_s",
+    "gravity_from_mu_m_s2",
+    "derived_from",
+    "solar_irradiance_w_m2"
+   ]
+  },
+  {
+   "record_id": "uranus",
+   "dataset": "celestial",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S01",
+    "S02"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "escape_velocity_m_s",
+    "circular_velocity_surface_m_s",
+    "gravity_from_mu_m_s2",
+    "derived_from",
+    "solar_irradiance_w_m2"
+   ]
+  },
+  {
+   "record_id": "neptune",
+   "dataset": "celestial",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S01",
+    "S02"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "escape_velocity_m_s",
+    "circular_velocity_surface_m_s",
+    "gravity_from_mu_m_s2",
+    "derived_from",
+    "solar_irradiance_w_m2"
+   ]
+  },
+  {
+   "record_id": "pluto",
+   "dataset": "celestial",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S01",
+    "S03"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "escape_velocity_m_s",
+    "circular_velocity_surface_m_s",
+    "gravity_from_mu_m_s2",
+    "derived_from",
+    "solar_irradiance_w_m2"
+   ]
+  },
+  {
+   "record_id": "ceres",
+   "dataset": "celestial",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S01",
+    "S03"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "escape_velocity_m_s",
+    "circular_velocity_surface_m_s",
+    "gravity_from_mu_m_s2",
+    "derived_from",
+    "solar_irradiance_w_m2"
+   ]
+  },
+  {
+   "record_id": "eris",
+   "dataset": "celestial",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S01",
+    "S03"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "escape_velocity_m_s",
+    "circular_velocity_surface_m_s",
+    "gravity_from_mu_m_s2",
+    "derived_from",
+    "solar_irradiance_w_m2"
+   ]
+  },
+  {
+   "record_id": "moon",
+   "dataset": "celestial",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S03"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "escape_velocity_m_s",
+    "circular_velocity_surface_m_s",
+    "gravity_from_mu_m_s2",
+    "derived_from",
+    "solar_irradiance_w_m2"
+   ]
+  },
+  {
+   "record_id": "phobos",
+   "dataset": "celestial",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S03"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "escape_velocity_m_s",
+    "circular_velocity_surface_m_s",
+    "gravity_from_mu_m_s2",
+    "derived_from",
+    "solar_irradiance_w_m2"
+   ]
+  },
+  {
+   "record_id": "deimos",
+   "dataset": "celestial",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S03"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "escape_velocity_m_s",
+    "circular_velocity_surface_m_s",
+    "gravity_from_mu_m_s2",
+    "derived_from",
+    "solar_irradiance_w_m2"
+   ]
+  },
+  {
+   "record_id": "io",
+   "dataset": "celestial",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S03"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "escape_velocity_m_s",
+    "circular_velocity_surface_m_s",
+    "gravity_from_mu_m_s2",
+    "derived_from",
+    "solar_irradiance_w_m2"
+   ]
+  },
+  {
+   "record_id": "europa",
+   "dataset": "celestial",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S03"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "escape_velocity_m_s",
+    "circular_velocity_surface_m_s",
+    "gravity_from_mu_m_s2",
+    "derived_from",
+    "solar_irradiance_w_m2"
+   ]
+  },
+  {
+   "record_id": "ganymede",
+   "dataset": "celestial",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S03"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "escape_velocity_m_s",
+    "circular_velocity_surface_m_s",
+    "gravity_from_mu_m_s2",
+    "derived_from",
+    "solar_irradiance_w_m2"
+   ]
+  },
+  {
+   "record_id": "callisto",
+   "dataset": "celestial",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S03"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "escape_velocity_m_s",
+    "circular_velocity_surface_m_s",
+    "gravity_from_mu_m_s2",
+    "derived_from",
+    "solar_irradiance_w_m2"
+   ]
+  },
+  {
+   "record_id": "titan",
+   "dataset": "celestial",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S03"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "escape_velocity_m_s",
+    "circular_velocity_surface_m_s",
+    "gravity_from_mu_m_s2",
+    "derived_from",
+    "solar_irradiance_w_m2"
+   ]
+  },
+  {
+   "record_id": "enceladus",
+   "dataset": "celestial",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S03"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "escape_velocity_m_s",
+    "circular_velocity_surface_m_s",
+    "gravity_from_mu_m_s2",
+    "derived_from",
+    "solar_irradiance_w_m2"
+   ]
+  },
+  {
+   "record_id": "triton",
+   "dataset": "celestial",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S03"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "escape_velocity_m_s",
+    "circular_velocity_surface_m_s",
+    "gravity_from_mu_m_s2",
+    "derived_from",
+    "solar_irradiance_w_m2"
+   ]
+  },
+  {
+   "record_id": "charon",
+   "dataset": "celestial",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S03"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "escape_velocity_m_s",
+    "circular_velocity_surface_m_s",
+    "gravity_from_mu_m_s2",
+    "derived_from",
+    "solar_irradiance_w_m2"
+   ]
+  },
+  {
+   "record_id": "vesta",
+   "dataset": "celestial",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S01",
+    "S03"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "escape_velocity_m_s",
+    "circular_velocity_surface_m_s",
+    "gravity_from_mu_m_s2",
+    "derived_from",
+    "solar_irradiance_w_m2"
+   ]
+  },
+  {
+   "record_id": "bennu",
+   "dataset": "celestial",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S01",
+    "S03"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "escape_velocity_m_s",
+    "circular_velocity_surface_m_s",
+    "gravity_from_mu_m_s2",
+    "derived_from",
+    "solar_irradiance_w_m2"
+   ]
+  },
+  {
+   "record_id": "rs25d",
+   "dataset": "propulsion",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S12"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "mass_flow_vac_kg_s",
+    "engine_thrust_to_weight_vac",
+    "mass_flow_sl_kg_s"
+   ]
+  },
+  {
+   "record_id": "rl10c1",
+   "dataset": "propulsion",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S13"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "mass_flow_vac_kg_s",
+    "engine_thrust_to_weight_vac"
+   ]
+  },
+  {
+   "record_id": "merlin1d",
+   "dataset": "propulsion",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S06"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "mass_flow_vac_kg_s",
+    "mass_flow_sl_kg_s"
+   ]
+  },
+  {
+   "record_id": "mvac",
+   "dataset": "propulsion",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S06"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "mass_flow_vac_kg_s"
+   ]
+  },
+  {
+   "record_id": "raptor2",
+   "dataset": "propulsion",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S06"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "mass_flow_sl_kg_s",
+    "engine_thrust_to_weight_sl"
+   ]
+  },
+  {
+   "record_id": "rutherford",
+   "dataset": "propulsion",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S10"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "mass_flow_vac_kg_s",
+    "engine_thrust_to_weight_vac",
+    "mass_flow_sl_kg_s"
+   ]
+  },
+  {
+   "record_id": "f1",
+   "dataset": "propulsion",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S09"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "mass_flow_vac_kg_s",
+    "engine_thrust_to_weight_vac",
+    "mass_flow_sl_kg_s"
+   ]
+  },
+  {
+   "record_id": "j2",
+   "dataset": "propulsion",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S09"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "mass_flow_vac_kg_s",
+    "engine_thrust_to_weight_vac"
+   ]
+  },
+  {
+   "record_id": "rd180",
+   "dataset": "propulsion",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S07"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "mass_flow_vac_kg_s",
+    "engine_thrust_to_weight_vac",
+    "mass_flow_sl_kg_s"
+   ]
+  },
+  {
+   "record_id": "be4",
+   "dataset": "propulsion",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S07"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": []
+  },
+  {
+   "record_id": "vinci",
+   "dataset": "propulsion",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S11"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "mass_flow_vac_kg_s",
+    "engine_thrust_to_weight_vac"
+   ]
+  },
+  {
+   "record_id": "vulcain2",
+   "dataset": "propulsion",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S11"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "mass_flow_vac_kg_s",
+    "mass_flow_sl_kg_s"
+   ]
+  },
+  {
+   "record_id": "rsrm",
+   "dataset": "propulsion",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S08"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "mass_flow_sl_kg_s"
+   ]
+  },
+  {
+   "record_id": "srb5",
+   "dataset": "propulsion",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S08"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": []
+  },
+  {
+   "record_id": "star48b",
+   "dataset": "propulsion",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S12"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "mass_flow_vac_kg_s"
+   ]
+  },
+  {
+   "record_id": "mr103",
+   "dataset": "propulsion",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S12"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "mass_flow_vac_kg_s",
+    "engine_thrust_to_weight_vac"
+   ]
+  },
+  {
+   "record_id": "aj10_190",
+   "dataset": "propulsion",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S12"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "mass_flow_vac_kg_s",
+    "engine_thrust_to_weight_vac"
+   ]
+  },
+  {
+   "record_id": "aj10_137",
+   "dataset": "propulsion",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S09"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "mass_flow_vac_kg_s"
+   ]
+  },
+  {
+   "record_id": "draco",
+   "dataset": "propulsion",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S06"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "mass_flow_vac_kg_s"
+   ]
+  },
+  {
+   "record_id": "nstar",
+   "dataset": "propulsion",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S14"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "mass_flow_vac_kg_s",
+    "thrust_per_power_mN_per_kW"
+   ]
+  },
+  {
+   "record_id": "next",
+   "dataset": "propulsion",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S14"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "mass_flow_vac_kg_s",
+    "thrust_per_power_mN_per_kW"
+   ]
+  },
+  {
+   "record_id": "t6",
+   "dataset": "propulsion",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S14"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "mass_flow_vac_kg_s",
+    "thrust_per_power_mN_per_kW"
+   ]
+  },
+  {
+   "record_id": "bpt4000",
+   "dataset": "propulsion",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S14"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "mass_flow_vac_kg_s",
+    "thrust_per_power_mN_per_kW"
+   ]
+  },
+  {
+   "record_id": "spt100",
+   "dataset": "propulsion",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S14"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "mass_flow_vac_kg_s",
+    "engine_thrust_to_weight_vac",
+    "thrust_per_power_mN_per_kW"
+   ]
+  },
+  {
+   "record_id": "saturn_v",
+   "dataset": "launch",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S09"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "liftoff_thrust_to_weight",
+    "payload_fraction_by_orbit"
+   ]
+  },
+  {
+   "record_id": "sls_b1",
+   "dataset": "launch",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S08"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "liftoff_thrust_to_weight",
+    "payload_fraction_by_orbit"
+   ]
+  },
+  {
+   "record_id": "falcon9_b5",
+   "dataset": "launch",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S06"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "liftoff_thrust_to_weight",
+    "payload_fraction_by_orbit"
+   ]
+  },
+  {
+   "record_id": "falcon_heavy",
+   "dataset": "launch",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S06"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "liftoff_thrust_to_weight",
+    "payload_fraction_by_orbit",
+    "usd_per_kg_leo_expended"
+   ]
+  },
+  {
+   "record_id": "starship",
+   "dataset": "launch",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S06"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "liftoff_thrust_to_weight",
+    "payload_fraction_by_orbit"
+   ]
+  },
+  {
+   "record_id": "atlas_v_551",
+   "dataset": "launch",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S07"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "payload_fraction_by_orbit"
+   ]
+  },
+  {
+   "record_id": "vulcan_vc6",
+   "dataset": "launch",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S07"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": []
+  },
+  {
+   "record_id": "electron",
+   "dataset": "launch",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S10"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "liftoff_thrust_to_weight",
+    "payload_fraction_by_orbit",
+    "usd_per_kg_sso_expended"
+   ]
+  },
+  {
+   "record_id": "ariane5_eca",
+   "dataset": "launch",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S11"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "payload_fraction_by_orbit"
+   ]
+  },
+  {
+   "record_id": "ariane64",
+   "dataset": "launch",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S11"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": []
+  },
+  {
+   "record_id": "ariane62",
+   "dataset": "launch",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S11"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": []
+  },
+  {
+   "record_id": "delta4_heavy",
+   "dataset": "launch",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S07"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "payload_fraction_by_orbit"
+   ]
+  },
+  {
+   "record_id": "new_glenn",
+   "dataset": "launch",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S07"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": []
+  },
+  {
+   "record_id": "vega_c",
+   "dataset": "launch",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S11"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "payload_fraction_by_orbit"
+   ]
+  },
+  {
+   "record_id": "soyuz_21b",
+   "dataset": "launch",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S12"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "payload_fraction_by_orbit"
+   ]
+  },
+  {
+   "record_id": "cz5",
+   "dataset": "launch",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S12"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "liftoff_thrust_to_weight",
+    "payload_fraction_by_orbit"
+   ]
+  },
+  {
+   "record_id": "saturn_v_s1c",
+   "dataset": "launch",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S09"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "inert_mass_fraction",
+    "stage_thrust_vac_n",
+    "stage_thrust_sl_n",
+    "isp_vac_s"
+   ]
+  },
+  {
+   "record_id": "saturn_v_s2",
+   "dataset": "launch",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S09"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "inert_mass_fraction",
+    "stage_thrust_vac_n",
+    "stage_thrust_sl_n",
+    "isp_vac_s"
+   ]
+  },
+  {
+   "record_id": "saturn_v_s4b",
+   "dataset": "launch",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S09"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "inert_mass_fraction",
+    "stage_thrust_vac_n",
+    "stage_thrust_sl_n",
+    "isp_vac_s"
+   ]
+  },
+  {
+   "record_id": "sls_core",
+   "dataset": "launch",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S08"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "inert_mass_fraction",
+    "stage_thrust_vac_n",
+    "stage_thrust_sl_n",
+    "isp_vac_s"
+   ]
+  },
+  {
+   "record_id": "f9_s1",
+   "dataset": "launch",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S06"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "inert_mass_fraction",
+    "stage_thrust_vac_n",
+    "stage_thrust_sl_n",
+    "isp_vac_s"
+   ]
+  },
+  {
+   "record_id": "f9_s2",
+   "dataset": "launch",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S06"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "inert_mass_fraction",
+    "stage_thrust_vac_n",
+    "stage_thrust_sl_n",
+    "isp_vac_s"
+   ]
+  },
+  {
+   "record_id": "electron_s1",
+   "dataset": "launch",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S10"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "inert_mass_fraction",
+    "stage_thrust_vac_n",
+    "stage_thrust_sl_n",
+    "isp_vac_s"
+   ]
+  },
+  {
+   "record_id": "electron_s2",
+   "dataset": "launch",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S10"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "inert_mass_fraction",
+    "stage_thrust_vac_n",
+    "stage_thrust_sl_n",
+    "isp_vac_s"
+   ]
+  },
+  {
+   "record_id": "sls_srb",
+   "dataset": "launch",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S08"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": []
+  },
+  {
+   "record_id": "stg_rsrm",
+   "dataset": "launch",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S08"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": []
+  },
+  {
+   "record_id": "ariane5_eap",
+   "dataset": "launch",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S11"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": []
+  },
+  {
+   "record_id": "fh_side",
+   "dataset": "launch",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S06"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": []
+  },
+  {
+   "record_id": "sa_si",
+   "dataset": "spacecraft",
+   "data_class": "estimated",
+   "confidence": "low",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "estimated",
+   "derived_fields": []
+  },
+  {
+   "record_id": "sa_3j_gaas",
+   "dataset": "spacecraft",
+   "data_class": "estimated",
+   "confidence": "low",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "estimated",
+   "derived_fields": []
+  },
+  {
+   "record_id": "sa_body",
+   "dataset": "spacecraft",
+   "data_class": "estimated",
+   "confidence": "low",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "estimated",
+   "derived_fields": []
+  },
+  {
+   "record_id": "bat_li_ion",
+   "dataset": "spacecraft",
+   "data_class": "estimated",
+   "confidence": "low",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "estimated",
+   "derived_fields": []
+  },
+  {
+   "record_id": "bat_nih2",
+   "dataset": "spacecraft",
+   "data_class": "estimated",
+   "confidence": "low",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "estimated",
+   "derived_fields": []
+  },
+  {
+   "record_id": "rtg_mmrtg",
+   "dataset": "spacecraft",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S17"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": []
+  },
+  {
+   "record_id": "rtg_gphs",
+   "dataset": "spacecraft",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S17"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": []
+  },
+  {
+   "record_id": "cpu_rad750",
+   "dataset": "spacecraft",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S18"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": []
+  },
+  {
+   "record_id": "cpu_leon3",
+   "dataset": "spacecraft",
+   "data_class": "estimated",
+   "confidence": "low",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "estimated",
+   "derived_fields": []
+  },
+  {
+   "record_id": "cpu_cots",
+   "dataset": "spacecraft",
+   "data_class": "estimated",
+   "confidence": "low",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "estimated",
+   "derived_fields": []
+  },
+  {
+   "record_id": "rw_small",
+   "dataset": "spacecraft",
+   "data_class": "estimated",
+   "confidence": "low",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "estimated",
+   "derived_fields": []
+  },
+  {
+   "record_id": "rw_large",
+   "dataset": "spacecraft",
+   "data_class": "estimated",
+   "confidence": "low",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "estimated",
+   "derived_fields": []
+  },
+  {
+   "record_id": "st_star",
+   "dataset": "spacecraft",
+   "data_class": "estimated",
+   "confidence": "low",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "estimated",
+   "derived_fields": []
+  },
+  {
+   "record_id": "mtq",
+   "dataset": "spacecraft",
+   "data_class": "estimated",
+   "confidence": "low",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "estimated",
+   "derived_fields": []
+  },
+  {
+   "record_id": "rad_heater",
+   "dataset": "spacecraft",
+   "data_class": "estimated",
+   "confidence": "low",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "estimated",
+   "derived_fields": []
+  },
+  {
+   "record_id": "rad_radiator",
+   "dataset": "spacecraft",
+   "data_class": "estimated",
+   "confidence": "low",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "estimated",
+   "derived_fields": []
+  },
+  {
+   "record_id": "ant_patch",
+   "dataset": "spacecraft",
+   "data_class": "estimated",
+   "confidence": "low",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "estimated",
+   "derived_fields": []
+  },
+  {
+   "record_id": "ant_hga_1m",
+   "dataset": "spacecraft",
+   "data_class": "estimated",
+   "confidence": "low",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "estimated",
+   "derived_fields": []
+  },
+  {
+   "record_id": "ant_hga_3m",
+   "dataset": "spacecraft",
+   "data_class": "estimated",
+   "confidence": "low",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "estimated",
+   "derived_fields": []
+  },
+  {
+   "record_id": "xpdr_deep_space",
+   "dataset": "spacecraft",
+   "data_class": "estimated",
+   "confidence": "low",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "estimated",
+   "derived_fields": []
+  },
+  {
+   "record_id": "tank_ti",
+   "dataset": "spacecraft",
+   "data_class": "estimated",
+   "confidence": "low",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "estimated",
+   "derived_fields": []
+  },
+  {
+   "record_id": "struct_bus",
+   "dataset": "spacecraft",
+   "data_class": "estimated",
+   "confidence": "low",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "estimated",
+   "derived_fields": []
+  },
+  {
+   "record_id": "shield_rad",
+   "dataset": "spacecraft",
+   "data_class": "estimated",
+   "confidence": "low",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "estimated",
+   "derived_fields": []
+  },
+  {
+   "record_id": "lorri",
+   "dataset": "instruments",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S19"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "power_to_mass_w_per_kg"
+   ]
+  },
+  {
+   "record_id": "ralph",
+   "dataset": "instruments",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S19"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "power_to_mass_w_per_kg"
+   ]
+  },
+  {
+   "record_id": "alice",
+   "dataset": "instruments",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S19"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "power_to_mass_w_per_kg"
+   ]
+  },
+  {
+   "record_id": "rex",
+   "dataset": "instruments",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S19"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "power_to_mass_w_per_kg"
+   ]
+  },
+  {
+   "record_id": "swap",
+   "dataset": "instruments",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S19"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "power_to_mass_w_per_kg"
+   ]
+  },
+  {
+   "record_id": "pepssi",
+   "dataset": "instruments",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S19"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "power_to_mass_w_per_kg"
+   ]
+  },
+  {
+   "record_id": "sdc",
+   "dataset": "instruments",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S19"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "power_to_mass_w_per_kg"
+   ]
+  },
+  {
+   "record_id": "hirise",
+   "dataset": "instruments",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S20"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "power_to_mass_w_per_kg"
+   ]
+  },
+  {
+   "record_id": "crism",
+   "dataset": "instruments",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S20"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "power_to_mass_w_per_kg"
+   ]
+  },
+  {
+   "record_id": "sharad",
+   "dataset": "instruments",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S20"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "power_to_mass_w_per_kg"
+   ]
+  },
+  {
+   "record_id": "mola",
+   "dataset": "instruments",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S21"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "power_to_mass_w_per_kg"
+   ]
+  },
+  {
+   "record_id": "lroc_nac",
+   "dataset": "instruments",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S22"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "power_to_mass_w_per_kg"
+   ]
+  },
+  {
+   "record_id": "sam",
+   "dataset": "instruments",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S23"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "power_to_mass_w_per_kg"
+   ]
+  },
+  {
+   "record_id": "oli",
+   "dataset": "instruments",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S24"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "power_to_mass_w_per_kg"
+   ]
+  },
+  {
+   "record_id": "tirs",
+   "dataset": "instruments",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S24"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "power_to_mass_w_per_kg"
+   ]
+  },
+  {
+   "record_id": "msi",
+   "dataset": "instruments",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S25"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "power_to_mass_w_per_kg"
+   ]
+  },
+  {
+   "record_id": "apollo11",
+   "dataset": "missions",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S09"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "dry_to_launch_mass",
+    "propellant_plus_other_fraction"
+   ]
+  },
+  {
+   "record_id": "voyager2",
+   "dataset": "missions",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S30"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "dry_to_launch_mass",
+    "propellant_plus_other_fraction"
+   ]
+  },
+  {
+   "record_id": "cassini",
+   "dataset": "missions",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S31"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "dry_to_launch_mass",
+    "propellant_plus_other_fraction"
+   ]
+  },
+  {
+   "record_id": "lro",
+   "dataset": "missions",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S22"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "dry_to_launch_mass",
+    "propellant_plus_other_fraction"
+   ]
+  },
+  {
+   "record_id": "mro",
+   "dataset": "missions",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S20"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "dry_to_launch_mass",
+    "propellant_plus_other_fraction"
+   ]
+  },
+  {
+   "record_id": "new_horizons",
+   "dataset": "missions",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S19"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "dry_to_launch_mass",
+    "propellant_plus_other_fraction"
+   ]
+  },
+  {
+   "record_id": "juno",
+   "dataset": "missions",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S32"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "dry_to_launch_mass",
+    "propellant_plus_other_fraction"
+   ]
+  },
+  {
+   "record_id": "curiosity",
+   "dataset": "missions",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S23"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "dry_to_launch_mass",
+    "propellant_plus_other_fraction"
+   ]
+  },
+  {
+   "record_id": "jwst",
+   "dataset": "missions",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S33"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "dry_to_launch_mass",
+    "propellant_plus_other_fraction"
+   ]
+  },
+  {
+   "record_id": "landsat8",
+   "dataset": "missions",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S24"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "dry_to_launch_mass",
+    "propellant_plus_other_fraction"
+   ]
+  },
+  {
+   "record_id": "sentinel2a",
+   "dataset": "missions",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S25"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "dry_to_launch_mass",
+    "propellant_plus_other_fraction"
+   ]
+  },
+  {
+   "record_id": "dawn",
+   "dataset": "missions",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S14"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "dry_to_launch_mass",
+    "propellant_plus_other_fraction"
+   ]
+  },
+  {
+   "record_id": "osiris_rex",
+   "dataset": "missions",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S34"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "dry_to_launch_mass",
+    "propellant_plus_other_fraction"
+   ]
+  },
+  {
+   "record_id": "marco",
+   "dataset": "missions",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S35"
+   ],
+   "retrieval_status": "not_retrieved",
+   "retrieval_date": null,
+   "original_value": "not separately stored (recalled; SI-converted at write time)",
+   "verification_status": "unverified",
+   "derived_fields": [
+    "dry_to_launch_mass",
+    "propellant_plus_other_fraction"
+   ]
+  }
+ ]
+}

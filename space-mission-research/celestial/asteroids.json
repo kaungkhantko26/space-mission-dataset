@@ -1,0 +1,76 @@
+{
+ "schema_version": "0.1.0",
+ "dataset": "asteroids",
+ "description": "Selected small bodies (SI)",
+ "generated": "2026-11-06",
+ "retrieval_status": "NOT_RETRIEVED: values recalled from published references; network access to source hosts was blocked in the build environment. See metadata/quality_report.json.",
+ "record_count": 2,
+ "records": [
+  {
+   "id": "vesta",
+   "name": "4 Vesta",
+   "category": "asteroid",
+   "parent_id": "sun",
+   "mu_m3_s2": 17288000000.0,
+   "gravitational_parameter_km3_s2": 17.288,
+   "mean_radius_m": 262700.0,
+   "equatorial_radius_m": null,
+   "mass_kg": 2.59e+20,
+   "surface_gravity_m_s2": 0.25,
+   "rotation_period_h": 5.342,
+   "semi_major_axis_m": 353275371658.0499,
+   "eccentricity": 0.0887,
+   "inclination_deg": 7.14,
+   "orbital_period_days": 1325.7,
+   "mean_surface_temperature_k": null,
+   "equatorial_magnetic_field_t": null,
+   "derived": {
+    "escape_velocity_m_s": 362.79169642936523,
+    "circular_velocity_surface_m_s": 256.5324687033755,
+    "gravity_from_mu_m_s2": 0.25050973543604244,
+    "derived_from": "v_esc=sqrt(2*mu/R_mean); v_circ=sqrt(mu/R_mean); g=mu/R^2 (spherical, non-rotating approximation)",
+    "solar_irradiance_w_m2": 244.05191814541706
+   },
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S01",
+    "S03"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "bennu",
+   "name": "101955 Bennu",
+   "category": "asteroid",
+   "parent_id": "sun",
+   "mu_m3_s2": 4.892,
+   "gravitational_parameter_km3_s2": 4.892e-09,
+   "mean_radius_m": 245.5,
+   "equatorial_radius_m": null,
+   "mass_kg": 73290000000.0,
+   "surface_gravity_m_s2": 8e-05,
+   "rotation_period_h": 4.296,
+   "semi_major_axis_m": 168507041556.47998,
+   "eccentricity": 0.2037,
+   "inclination_deg": 6.035,
+   "orbital_period_days": 436.6,
+   "mean_surface_temperature_k": null,
+   "equatorial_magnetic_field_t": null,
+   "derived": {
+    "escape_velocity_m_s": 0.19963306461805963,
+    "circular_velocity_surface_m_s": 0.1411618937404822,
+    "gravity_from_mu_m_s2": 8.116774030305168e-05,
+    "derived_from": "v_esc=sqrt(2*mu/R_mean); v_circ=sqrt(mu/R_mean); g=mu/R^2 (spherical, non-rotating approximation)",
+    "solar_irradiance_w_m2": 1072.6865658090135
+   },
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S01",
+    "S03"
+   ],
+   "retrieval_status": "not_retrieved"
+  }
+ ]
+}

@@ -1,0 +1,137 @@
+{
+ "schema_version": "0.1.0",
+ "dataset": "power_systems",
+ "description": "Power sources/generation",
+ "generated": "2026-11-06",
+ "retrieval_status": "NOT_RETRIEVED: values recalled from published references; network access to source hosts was blocked in the build environment. See metadata/quality_report.json.",
+ "record_count": 5,
+ "records": [
+  {
+   "id": "rtg_mmrtg",
+   "name": "MMRTG (Multi-Mission RTG)",
+   "category": "power_source",
+   "record_kind": "named_item",
+   "mass_kg": 45.0,
+   "power_consumption_w": null,
+   "power_generation_w": 110.0,
+   "energy_capacity_wh": null,
+   "params": {
+    "thermal_power_w": 2000,
+    "fuel": "Pu-238 (GPHS modules)",
+    "power_decay_per_year": 0.04
+   },
+   "data_class": "unverified",
+   "confidence": "medium",
+   "note": "~110 W electrical at BOL; flown on MSL and Mars 2020.",
+   "source_ids": [
+    "S17"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "rtg_gphs",
+   "name": "GPHS-RTG",
+   "category": "power_source",
+   "record_kind": "named_item",
+   "mass_kg": 55.9,
+   "power_consumption_w": null,
+   "power_generation_w": 300.0,
+   "energy_capacity_wh": null,
+   "params": {
+    "thermal_power_w": 4400
+   },
+   "data_class": "unverified",
+   "confidence": "medium",
+   "note": "Flown on Cassini, New Horizons (~245 W at launch for NH unit), others.",
+   "source_ids": [
+    "S17"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "sa_si",
+   "name": "Silicon cell array (class)",
+   "category": "solar_array",
+   "record_kind": "technology_class",
+   "mass_kg": null,
+   "power_consumption_w": null,
+   "power_generation_w": null,
+   "energy_capacity_wh": null,
+   "params": {
+    "cell_efficiency_bol": [
+     0.14,
+     0.17
+    ],
+    "array_specific_power_w_per_kg": [
+     30,
+     60
+    ],
+    "degradation_per_year": [
+     0.02,
+     0.04
+    ]
+   },
+   "data_class": "estimated",
+   "confidence": "low",
+   "note": "Typical ranges; legacy technology.",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "sa_3j_gaas",
+   "name": "Triple-junction GaAs array (class)",
+   "category": "solar_array",
+   "record_kind": "technology_class",
+   "mass_kg": null,
+   "power_consumption_w": null,
+   "power_generation_w": null,
+   "energy_capacity_wh": null,
+   "params": {
+    "cell_efficiency_bol": [
+     0.28,
+     0.3
+    ],
+    "array_specific_power_w_per_kg": [
+     60,
+     120
+    ],
+    "degradation_per_year": [
+     0.01,
+     0.03
+    ]
+   },
+   "data_class": "estimated",
+   "confidence": "low",
+   "note": "Cell efficiency ~28-30% (BOL) is typical for flight triple-junction cells.",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "sa_body",
+   "name": "Body-mounted cells on 6U CubeSat (class)",
+   "category": "solar_array",
+   "record_kind": "technology_class",
+   "mass_kg": null,
+   "power_consumption_w": null,
+   "power_generation_w": null,
+   "energy_capacity_wh": null,
+   "params": {
+    "typical_orbit_avg_power_w": [
+     5,
+     20
+    ]
+   },
+   "data_class": "estimated",
+   "confidence": "low",
+   "note": "Small-sat scale.",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved"
+  }
+ ]
+}

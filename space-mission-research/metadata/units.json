@@ -1,0 +1,23 @@
+{
+ "si_base": {
+  "mass": "kg",
+  "length": "m",
+  "time": "s",
+  "force": "N",
+  "power": "W",
+  "energy": "J (or Wh where named)",
+  "temperature": "K",
+  "velocity": "m/s",
+  "isp": "s",
+  "mu": "m^3/s^2 (also km^3/s^2 in gravitational_parameter_km3_s2)",
+  "irradiance": "W/m^2",
+  "magnetic_field": "T",
+  "pressure": "Pa"
+ },
+ "conventions": [
+  "Field names carry unit suffixes (_kg, _m, _n, _w, _s, _m_s, _km3_s2).",
+  "null means not recorded; never zero-filled.",
+  "Angles in degrees.",
+  "credits = fictional game currency."
+ ]
+}

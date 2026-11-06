@@ -1,0 +1,56 @@
+{
+ "schema_version": "0.1.0",
+ "dataset": "thermal_control",
+ "description": "Thermal hardware classes",
+ "generated": "2026-11-06",
+ "retrieval_status": "NOT_RETRIEVED: values recalled from published references; network access to source hosts was blocked in the build environment. See metadata/quality_report.json.",
+ "record_count": 2,
+ "records": [
+  {
+   "id": "rad_heater",
+   "name": "Heaters & MLI thermal control (class)",
+   "category": "thermal_control",
+   "record_kind": "technology_class",
+   "mass_kg": null,
+   "power_consumption_w": null,
+   "power_generation_w": null,
+   "energy_capacity_wh": null,
+   "params": {
+    "mli_areal_density_kg_m2": [
+     0.05,
+     0.5
+    ]
+   },
+   "data_class": "estimated",
+   "confidence": "low",
+   "note": "Deep-space missions need more heater power; cold-case driver.",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "rad_radiator",
+   "name": "Radiator panel (class)",
+   "category": "thermal_control",
+   "record_kind": "technology_class",
+   "mass_kg": null,
+   "power_consumption_w": null,
+   "power_generation_w": null,
+   "energy_capacity_wh": null,
+   "params": {
+    "areal_density_kg_m2": [
+     2,
+     10
+    ]
+   },
+   "data_class": "estimated",
+   "confidence": "low",
+   "note": "Heat rejection scales with T^4 (Stefan-Boltzmann).",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved"
+  }
+ ]
+}

@@ -1,0 +1,68 @@
+{
+ "schema_version": "0.1.0",
+ "dataset": "batteries",
+ "description": "Energy storage classes",
+ "generated": "2026-11-06",
+ "retrieval_status": "NOT_RETRIEVED: values recalled from published references; network access to source hosts was blocked in the build environment. See metadata/quality_report.json.",
+ "record_count": 2,
+ "records": [
+  {
+   "id": "bat_li_ion",
+   "name": "Li-ion battery (class)",
+   "category": "battery",
+   "record_kind": "technology_class",
+   "mass_kg": null,
+   "power_consumption_w": null,
+   "power_generation_w": null,
+   "energy_capacity_wh": null,
+   "params": {
+    "specific_energy_wh_per_kg": [
+     120,
+     200
+    ],
+    "max_dod_leo": [
+     0.2,
+     0.4
+    ],
+    "round_trip_efficiency": [
+     0.9,
+     0.95
+    ]
+   },
+   "data_class": "estimated",
+   "confidence": "low",
+   "note": "Cell-to-pack ranges; LEO DoD limits drive life.",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "bat_nih2",
+   "name": "NiH2 battery (class)",
+   "category": "battery",
+   "record_kind": "technology_class",
+   "mass_kg": null,
+   "power_consumption_w": null,
+   "power_generation_w": null,
+   "energy_capacity_wh": null,
+   "params": {
+    "specific_energy_wh_per_kg": [
+     30,
+     60
+    ],
+    "max_dod_leo": [
+     0.3,
+     0.4
+    ]
+   },
+   "data_class": "estimated",
+   "confidence": "low",
+   "note": "Legacy, e.g. long-life GEO/ISS-era.",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved"
+  }
+ ]
+}

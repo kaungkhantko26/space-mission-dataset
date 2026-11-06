@@ -1,0 +1,56 @@
+{
+ "schema_version": "0.1.0",
+ "dataset": "radar",
+ "description": "Radar/lidar",
+ "generated": "2026-11-06",
+ "retrieval_status": "NOT_RETRIEVED: values recalled from published references; network access to source hosts was blocked in the build environment. See metadata/quality_report.json.",
+ "record_count": 2,
+ "records": [
+  {
+   "id": "sharad",
+   "name": "SHARAD",
+   "instrument_type": "sounding_radar",
+   "heritage_mission": "Mars Reconnaissance Orbiter",
+   "mass_kg": 17.0,
+   "power_w": null,
+   "params": {
+    "center_freq_mhz": 20,
+    "bandwidth_mhz": 10,
+    "vertical_resolution_m_free_space": 15
+   },
+   "data_class": "unverified",
+   "confidence": "low",
+   "note": "",
+   "source_ids": [
+    "S20"
+   ],
+   "retrieval_status": "not_retrieved",
+   "derived": {
+    "power_to_mass_w_per_kg": null
+   }
+  },
+  {
+   "id": "mola",
+   "name": "MOLA",
+   "instrument_type": "lidar_altimeter",
+   "heritage_mission": "Mars Global Surveyor",
+   "mass_kg": 25.9,
+   "power_w": 34.2,
+   "params": {
+    "wavelength_nm": 1064,
+    "rate_hz": 10,
+    "footprint_m": 160
+   },
+   "data_class": "unverified",
+   "confidence": "low",
+   "note": "",
+   "source_ids": [
+    "S21"
+   ],
+   "retrieval_status": "not_retrieved",
+   "derived": {
+    "power_to_mass_w_per_kg": 1.3204633204633207
+   }
+  }
+ ]
+}

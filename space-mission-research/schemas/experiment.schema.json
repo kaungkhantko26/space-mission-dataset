@@ -1,0 +1,44 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "type": "object",
+ "required": [
+  "schema_version",
+  "dataset",
+  "record_count",
+  "records"
+ ],
+ "properties": {
+  "schema_version": {
+   "type": "string"
+  },
+  "dataset": {
+   "type": "string"
+  },
+  "record_count": {
+   "type": "integer"
+  },
+  "records": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "scenario_id",
+     "objective",
+     "feasibility_status",
+     "solver",
+     "optimality_claim",
+     "selected_components"
+    ],
+    "properties": {
+     "feasibility_status": {
+      "enum": [
+       "feasible_optimum_found",
+       "infeasible"
+      ]
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,78 @@
+{
+ "schema_version": "0.1.0",
+ "dataset": "boosters",
+ "description": "Strap-on / solid boosters",
+ "generated": "2026-11-06",
+ "retrieval_status": "NOT_RETRIEVED: values recalled from published references; network access to source hosts was blocked in the build environment. See metadata/quality_report.json.",
+ "record_count": 4,
+ "records": [
+  {
+   "id": "sls_srb",
+   "name": "SLS 5-segment solid rocket booster",
+   "vehicle_id": "sls_b1",
+   "count": 2,
+   "thrust_sl_n": 16000000,
+   "propellant_mass_kg": 626400,
+   "burn_s": 126,
+   "engine_id": "srb5",
+   "note": "Approximate.",
+   "source_ids": [
+    "S08"
+   ],
+   "confidence": "medium",
+   "data_class": "unverified",
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "stg_rsrm",
+   "name": "Space Shuttle RSRM",
+   "vehicle_id": null,
+   "count": 2,
+   "thrust_sl_n": 12500000,
+   "propellant_mass_kg": 503500,
+   "burn_s": 123,
+   "engine_id": "rsrm",
+   "note": "Historical.",
+   "source_ids": [
+    "S08"
+   ],
+   "confidence": "medium",
+   "data_class": "unverified",
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "ariane5_eap",
+   "name": "Ariane 5 EAP (P241)",
+   "vehicle_id": "ariane5_eca",
+   "count": 2,
+   "thrust_sl_n": 7080000,
+   "propellant_mass_kg": 237000,
+   "burn_s": 130,
+   "engine_id": null,
+   "note": "Peak thrust; approximate.",
+   "source_ids": [
+    "S11"
+   ],
+   "confidence": "low",
+   "data_class": "unverified",
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "fh_side",
+   "name": "Falcon Heavy side booster (F9 core derivative)",
+   "vehicle_id": "falcon_heavy",
+   "count": 2,
+   "thrust_sl_n": 7607000,
+   "propellant_mass_kg": 395700,
+   "burn_s": null,
+   "engine_id": "merlin1d",
+   "note": "Equivalent to Falcon 9 stage 1.",
+   "source_ids": [
+    "S06"
+   ],
+   "confidence": "medium",
+   "data_class": "unverified",
+   "retrieval_status": "not_retrieved"
+  }
+ ]
+}

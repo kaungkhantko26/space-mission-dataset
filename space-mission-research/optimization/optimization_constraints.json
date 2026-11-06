@@ -1,0 +1,564 @@
+{
+ "global_parameters": {
+  "mga": 0.2,
+  "dv_margin": 0.05,
+  "power_margin": 0.15,
+  "launch_margin": 0.1,
+  "struct_frac": 0.25,
+  "thermal_frac": 0.04,
+  "bat_eta": 0.9,
+  "ebn0_req_db": 2.0,
+  "link_margin_req_db": 3.0,
+  "misc_loss_db": 2.0,
+  "tx_dc_eff": 0.35,
+  "tx_overhead_w": 5.0,
+  "integ_frac": 0.3,
+  "sa_pack": 0.85,
+  "dl_eff": 0.8,
+  "rad_design_margin": 2.0,
+  "max_electric_burn_days": 120.0,
+  "min_rate_bps": 1000.0,
+  "bat_min_wh": 10.0
+ },
+ "global_parameter_data_class": "estimated (design practice assumptions; margins are conventional values, not retrieved from a standard)",
+ "catalog": {
+  "arrays": [
+   {
+    "id": "sa_3j_gaas",
+    "name": "Triple-junction GaAs array",
+    "eff": 0.29,
+    "sp_w_per_kg": 80,
+    "deg_per_yr": 0.02,
+    "cost_per_w": 25,
+    "data_class": "estimated"
+   },
+   {
+    "id": "sa_si",
+    "name": "Silicon array",
+    "eff": 0.15,
+    "sp_w_per_kg": 40,
+    "deg_per_yr": 0.03,
+    "cost_per_w": 10,
+    "data_class": "estimated"
+   }
+  ],
+  "batteries": [
+   {
+    "id": "bat_li_ion",
+    "name": "Li-ion",
+    "spec_wh_per_kg": 160,
+    "dod_leo": 0.3,
+    "dod_deep": 0.6,
+    "cost_per_wh": 2.0,
+    "data_class": "estimated"
+   },
+   {
+    "id": "bat_nih2",
+    "name": "NiH2",
+    "spec_wh_per_kg": 45,
+    "dod_leo": 0.35,
+    "dod_deep": 0.6,
+    "cost_per_wh": 5.0,
+    "data_class": "estimated"
+   }
+  ],
+  "computers": [
+   {
+    "id": "cpu_cots",
+    "name": "COTS SoC",
+    "mass": 0.2,
+    "power": 3,
+    "cost": 50,
+    "tol_krad": 20,
+    "data_class": "estimated"
+   },
+   {
+    "id": "cpu_leon3",
+    "name": "LEON3-FT class",
+    "mass": 0.5,
+    "power": 4,
+    "cost": 400,
+    "tol_krad": 100,
+    "data_class": "estimated"
+   },
+   {
+    "id": "cpu_rad750",
+    "name": "RAD750 class",
+    "mass": 1.5,
+    "power": 10,
+    "cost": 2500,
+    "tol_krad": 200,
+    "data_class": "estimated"
+   }
+  ],
+  "comms": [
+   {
+    "id": "patch_s_5w",
+    "name": "S-band patch 5 W",
+    "band": "S",
+    "freq_hz": 2200000000.0,
+    "dish_m": null,
+    "gain_dbi": 7.0,
+    "tx_w": 5,
+    "mass": 1.2,
+    "cost": 150,
+    "max_rate_bps": 2000000.0,
+    "data_class": "estimated"
+   },
+   {
+    "id": "hga1_x_20w",
+    "name": "1 m HGA X-band 20 W",
+    "band": "X",
+    "freq_hz": 8400000000.0,
+    "dish_m": 1.0,
+    "gain_dbi": null,
+    "tx_w": 20,
+    "mass": 7.0,
+    "cost": 900,
+    "max_rate_bps": 100000000.0,
+    "data_class": "estimated"
+   },
+   {
+    "id": "hga1_x_50w",
+    "name": "1 m HGA X-band 50 W",
+    "band": "X",
+    "freq_hz": 8400000000.0,
+    "dish_m": 1.0,
+    "gain_dbi": null,
+    "tx_w": 50,
+    "mass": 8.5,
+    "cost": 1400,
+    "max_rate_bps": 100000000.0,
+    "data_class": "estimated"
+   },
+   {
+    "id": "hga3_x_20w",
+    "name": "3 m HGA X-band 20 W",
+    "band": "X",
+    "freq_hz": 8400000000.0,
+    "dish_m": 3.0,
+    "gain_dbi": null,
+    "tx_w": 20,
+    "mass": 18.0,
+    "cost": 3000,
+    "max_rate_bps": 100000000.0,
+    "data_class": "estimated"
+   },
+   {
+    "id": "hga3_x_100w",
+    "name": "3 m HGA X-band 100 W",
+    "band": "X",
+    "freq_hz": 8400000000.0,
+    "dish_m": 3.0,
+    "gain_dbi": null,
+    "tx_w": 100,
+    "mass": 22.0,
+    "cost": 4500,
+    "max_rate_bps": 100000000.0,
+    "data_class": "estimated"
+   }
+  ],
+  "propulsion": [
+   {
+    "id": "mono_n2h4",
+    "name": "Hydrazine monoprop",
+    "isp": 220,
+    "engine_mass": 2.0,
+    "tank_frac": 0.08,
+    "hw_cost": 400,
+    "prop_cost_per_kg": 1.0,
+    "power_w": 0,
+    "thrust_n": null,
+    "electric": false,
+    "data_class": "estimated"
+   },
+   {
+    "id": "bi_mmh_nto",
+    "name": "MMH/NTO biprop",
+    "isp": 310,
+    "engine_mass": 6.0,
+    "tank_frac": 0.1,
+    "hw_cost": 1800,
+    "prop_cost_per_kg": 1.0,
+    "power_w": 0,
+    "thrust_n": null,
+    "electric": false,
+    "data_class": "estimated"
+   },
+   {
+    "id": "hall_xe",
+    "name": "Low-power Hall (Xe)",
+    "isp": 1200,
+    "engine_mass": 4.0,
+    "tank_frac": 0.12,
+    "hw_cost": 3500,
+    "prop_cost_per_kg": 5.0,
+    "power_w": 200,
+    "thrust_n": 0.012,
+    "electric": true,
+    "data_class": "estimated"
+   }
+  ]
+ },
+ "scenarios": [
+  {
+   "id": "leo_eo",
+   "name": "Earth-observation satellite (500 km LEO)",
+   "body": "earth",
+   "sun_au": 1.0,
+   "period_s": 5668.144369061165,
+   "eclipse_s": 2141.523141222473,
+   "dv_ms": 150.0,
+   "dv_basis": "estimated: drag make-up + deorbit allowance (assumption)",
+   "life_yr": 2.0,
+   "dl_hours_per_day": 0.8,
+   "dist_m": 1500000.0,
+   "gt_db": {
+    "S": 30.0,
+    "X": 30.0
+   },
+   "gt_basis": "estimated ground G/T",
+   "rate_cap_bps": 100000000.0,
+   "bus_mass": 12.0,
+   "bus_power": 12.0,
+   "heater_w": 5.0,
+   "bus_cost": 800,
+   "budget": 12000,
+   "min_science": 12,
+   "dose_krad": 8,
+   "dose_basis": "estimated",
+   "allow_electric": true,
+   "vehicles": [
+    {
+     "id": "electron",
+     "name": "Electron",
+     "capacity_kg": 300,
+     "orbit": "SSO 500 km",
+     "cost": 750,
+     "cost_basis": "published ~7.5M USD (2021) /10k",
+     "ref": "launch_vehicles:electron"
+    },
+    {
+     "id": "f9_class",
+     "name": "Falcon 9 class (expended)",
+     "capacity_kg": 22800,
+     "orbit": "LEO (SSO figure not recorded)",
+     "cost": 6700,
+     "cost_basis": "fictional credit",
+     "ref": "launch_vehicles:falcon9_b5"
+    }
+   ],
+   "instruments": [
+    {
+     "id": "ms_imager",
+     "name": "Multispectral imager",
+     "analog": "OLI/MSI",
+     "mass": 18,
+     "power": 30,
+     "duty": 0.25,
+     "rate_kbps": 20000,
+     "value": 10,
+     "cost": 2500,
+     "mass_power_basis": "estimated"
+    },
+    {
+     "id": "thermal_imager",
+     "name": "Thermal imager",
+     "analog": "TIRS",
+     "mass": 12,
+     "power": 20,
+     "duty": 0.25,
+     "rate_kbps": 3000,
+     "value": 6,
+     "cost": 1800,
+     "mass_power_basis": "estimated"
+    },
+    {
+     "id": "gnss_ro",
+     "name": "GNSS radio occultation",
+     "analog": "-",
+     "mass": 1.5,
+     "power": 3,
+     "duty": 1.0,
+     "rate_kbps": 5,
+     "value": 3,
+     "cost": 400,
+     "mass_power_basis": "estimated"
+    },
+    {
+     "id": "small_cam",
+     "name": "Small optical camera",
+     "analog": "-",
+     "mass": 6,
+     "power": 12,
+     "duty": 0.2,
+     "rate_kbps": 8000,
+     "value": 5,
+     "cost": 900,
+     "mass_power_basis": "estimated"
+    },
+    {
+     "id": "magnetometer",
+     "name": "Magnetometer",
+     "analog": "-",
+     "mass": 1.2,
+     "power": 1.5,
+     "duty": 1.0,
+     "rate_kbps": 2,
+     "value": 2,
+     "cost": 300,
+     "mass_power_basis": "estimated"
+    },
+    {
+     "id": "rad_detector",
+     "name": "Radiation detector",
+     "analog": "-",
+     "mass": 0.8,
+     "power": 1.0,
+     "duty": 1.0,
+     "rate_kbps": 1,
+     "value": 2,
+     "cost": 250,
+     "mass_power_basis": "estimated"
+    }
+   ]
+  },
+  {
+   "id": "lunar_orbiter",
+   "name": "Lunar polar orbiter (100 km)",
+   "body": "moon",
+   "sun_au": 1.0,
+   "period_s": 7067.459813349092,
+   "eclipse_s": 2788.112107147338,
+   "dv_ms": 4004.580454794844,
+   "dv_basis": "derived: TLI 3084 m/s + LOI 821 m/s (patched conic, 400 km LEO to 100 km circular) + 100 m/s ops",
+   "life_yr": 1.0,
+   "dl_hours_per_day": 8.0,
+   "dist_m": 384400000.0,
+   "gt_db": {
+    "S": 45.0,
+    "X": 53.0
+   },
+   "gt_basis": "estimated DSN 34 m G/T",
+   "rate_cap_bps": 10000000.0,
+   "bus_mass": 30.0,
+   "bus_power": 35.0,
+   "heater_w": 15.0,
+   "bus_cost": 3000,
+   "budget": 30000,
+   "min_science": 15,
+   "dose_krad": 15,
+   "dose_basis": "estimated",
+   "allow_electric": false,
+   "vehicles": [
+    {
+     "id": "f9_class",
+     "name": "Falcon 9 class (expended)",
+     "capacity_kg": 22800,
+     "orbit": "LEO",
+     "cost": 6700,
+     "cost_basis": "fictional credit",
+     "ref": "launch_vehicles:falcon9_b5"
+    },
+    {
+     "id": "falcon_heavy",
+     "name": "Falcon Heavy (expended)",
+     "capacity_kg": 63800,
+     "orbit": "LEO",
+     "cost": 9700,
+     "cost_basis": "published ~97M USD (2022) /10k",
+     "ref": "launch_vehicles:falcon_heavy"
+    }
+   ],
+   "instruments": [
+    {
+     "id": "nac_cam",
+     "name": "Narrow-angle camera",
+     "analog": "LROC NAC",
+     "mass": 10,
+     "power": 20,
+     "duty": 0.2,
+     "rate_kbps": 6000,
+     "value": 8,
+     "cost": 3000,
+     "mass_power_basis": "estimated"
+    },
+    {
+     "id": "laser_alt",
+     "name": "Laser altimeter",
+     "analog": "MOLA",
+     "mass": 25.9,
+     "power": 34.2,
+     "duty": 1.0,
+     "rate_kbps": 0.62,
+     "value": 7,
+     "cost": 3500,
+     "mass_power_basis": "reference flight value (unverified)"
+    },
+    {
+     "id": "neutron_spec",
+     "name": "Neutron/gamma spectrometer",
+     "analog": "-",
+     "mass": 12,
+     "power": 15,
+     "duty": 1.0,
+     "rate_kbps": 1.5,
+     "value": 6,
+     "cost": 2000,
+     "mass_power_basis": "estimated"
+    },
+    {
+     "id": "uv_spec",
+     "name": "UV spectrometer",
+     "analog": "Alice",
+     "mass": 4.4,
+     "power": 4.4,
+     "duty": 0.5,
+     "rate_kbps": 5,
+     "value": 5,
+     "cost": 1500,
+     "mass_power_basis": "reference flight value (unverified)"
+    },
+    {
+     "id": "magnetometer",
+     "name": "Magnetometer",
+     "analog": "-",
+     "mass": 1.2,
+     "power": 1.5,
+     "duty": 1.0,
+     "rate_kbps": 2,
+     "value": 2,
+     "cost": 300,
+     "mass_power_basis": "estimated"
+    },
+    {
+     "id": "rad_detector",
+     "name": "Radiation detector",
+     "analog": "-",
+     "mass": 0.8,
+     "power": 1.0,
+     "duty": 1.0,
+     "rate_kbps": 1,
+     "value": 2,
+     "cost": 250,
+     "mass_power_basis": "estimated"
+    }
+   ]
+  },
+  {
+   "id": "mars_orbiter",
+   "name": "Mars science orbiter (400 km x 1 sol)",
+   "body": "mars",
+   "sun_au": 1.52371034,
+   "period_s": 88642.66,
+   "eclipse_s": 1496.9705928728897,
+   "dv_ms": 1064.0309953804904,
+   "dv_basis": "derived: MOI 914 m/s from Hohmann v_inf 2.65 km/s into 400 km x 1-sol orbit + 150 m/s ops; launcher supplies departure",
+   "life_yr": 2.0,
+   "dl_hours_per_day": 8.0,
+   "dist_m": 399426314768.99994,
+   "gt_db": {
+    "S": 45.0,
+    "X": 53.0
+   },
+   "gt_basis": "estimated DSN 34 m G/T",
+   "rate_cap_bps": 10000000.0,
+   "bus_mass": 60.0,
+   "bus_power": 70.0,
+   "heater_w": 30.0,
+   "bus_cost": 9000,
+   "budget": 90000,
+   "min_science": 20,
+   "dose_krad": 20,
+   "dose_basis": "estimated",
+   "allow_electric": false,
+   "vehicles": [
+    {
+     "id": "falcon_heavy",
+     "name": "Falcon Heavy (expended, Mars transfer)",
+     "capacity_kg": 16800,
+     "orbit": "Mars transfer",
+     "cost": 9700,
+     "cost_basis": "published ~97M USD (2022) /10k",
+     "ref": "launch_vehicles:falcon_heavy"
+    }
+   ],
+   "instruments": [
+    {
+     "id": "hirise_like",
+     "name": "High-res imager",
+     "analog": "HiRISE",
+     "mass": 65,
+     "power": 60,
+     "duty": 0.0015,
+     "rate_kbps": 100000,
+     "value": 10,
+     "cost": 9000,
+     "mass_power_basis": "reference flight value (unverified)"
+    },
+    {
+     "id": "crism_like",
+     "name": "Imaging spectrometer",
+     "analog": "CRISM",
+     "mass": 32.9,
+     "power": 50,
+     "duty": 0.02,
+     "rate_kbps": 5000,
+     "value": 8,
+     "cost": 6000,
+     "mass_power_basis": "estimated"
+    },
+    {
+     "id": "sharad_like",
+     "name": "Sounding radar",
+     "analog": "SHARAD",
+     "mass": 17,
+     "power": 40,
+     "duty": 0.1,
+     "rate_kbps": 1000,
+     "value": 7,
+     "cost": 5000,
+     "mass_power_basis": "estimated"
+    },
+    {
+     "id": "mola_like",
+     "name": "Laser altimeter",
+     "analog": "MOLA",
+     "mass": 25.9,
+     "power": 34.2,
+     "duty": 1.0,
+     "rate_kbps": 0.62,
+     "value": 6,
+     "cost": 4000,
+     "mass_power_basis": "reference flight value (unverified)"
+    },
+    {
+     "id": "uv_spec",
+     "name": "UV spectrometer",
+     "analog": "Alice",
+     "mass": 4.4,
+     "power": 4.4,
+     "duty": 0.3,
+     "rate_kbps": 3,
+     "value": 4,
+     "cost": 1500,
+     "mass_power_basis": "reference flight value (unverified)"
+    },
+    {
+     "id": "particles",
+     "name": "Particle/plasma package",
+     "analog": "SWAP+PEPSSI",
+     "mass": 4.8,
+     "power": 4.8,
+     "duty": 1.0,
+     "rate_kbps": 2,
+     "value": 3,
+     "cost": 1200,
+     "mass_power_basis": "reference flight value (unverified)"
+    }
+   ]
+  }
+ ],
+ "cost_note": "Costs in 'credits' are FICTIONAL, except launch costs where basis says published price/10,000 USD.",
+ "science_note": "Instrument 'value' is a fictional educational weight (1-10) expressing relative contribution to the scenario objective set; it is not a measured science metric."
+}

@@ -1,0 +1,394 @@
+{
+ "schema_version": "0.1.0",
+ "dataset": "orbital_elements",
+ "description": "Orbital elements with reference epochs where recorded",
+ "generated": "2026-11-06",
+ "retrieval_status": "NOT_RETRIEVED: values recalled from published references; network access to source hosts was blocked in the build environment. See metadata/quality_report.json.",
+ "record_count": 24,
+ "records": [
+  {
+   "body_id": "mercury",
+   "epoch": "J2000.0 (JD 2451545.0)",
+   "frame": "ecliptic of J2000, heliocentric mean elements (EM barycenter for Earth)",
+   "semi_major_axis_au": 0.38709927,
+   "eccentricity": 0.20563593,
+   "inclination_deg": 7.00497902,
+   "validity": "Standish approximate elements, nominal validity 1800-2050; secular rates NOT included here",
+   "time_dependence": "time-dependent (slow secular drift)",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S04"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "body_id": "venus",
+   "epoch": "J2000.0 (JD 2451545.0)",
+   "frame": "ecliptic of J2000, heliocentric mean elements (EM barycenter for Earth)",
+   "semi_major_axis_au": 0.72333566,
+   "eccentricity": 0.00677672,
+   "inclination_deg": 3.39467605,
+   "validity": "Standish approximate elements, nominal validity 1800-2050; secular rates NOT included here",
+   "time_dependence": "time-dependent (slow secular drift)",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S04"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "body_id": "earth",
+   "epoch": "J2000.0 (JD 2451545.0)",
+   "frame": "ecliptic of J2000, heliocentric mean elements (EM barycenter for Earth)",
+   "semi_major_axis_au": 1.00000261,
+   "eccentricity": 0.01671123,
+   "inclination_deg": -1.531e-05,
+   "validity": "Standish approximate elements, nominal validity 1800-2050; secular rates NOT included here",
+   "time_dependence": "time-dependent (slow secular drift)",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S04"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "body_id": "mars",
+   "epoch": "J2000.0 (JD 2451545.0)",
+   "frame": "ecliptic of J2000, heliocentric mean elements (EM barycenter for Earth)",
+   "semi_major_axis_au": 1.52371034,
+   "eccentricity": 0.0933941,
+   "inclination_deg": 1.84969142,
+   "validity": "Standish approximate elements, nominal validity 1800-2050; secular rates NOT included here",
+   "time_dependence": "time-dependent (slow secular drift)",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S04"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "body_id": "jupiter",
+   "epoch": "J2000.0 (JD 2451545.0)",
+   "frame": "ecliptic of J2000, heliocentric mean elements (EM barycenter for Earth)",
+   "semi_major_axis_au": 5.202887,
+   "eccentricity": 0.04838624,
+   "inclination_deg": 1.30439695,
+   "validity": "Standish approximate elements, nominal validity 1800-2050; secular rates NOT included here",
+   "time_dependence": "time-dependent (slow secular drift)",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S04"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "body_id": "saturn",
+   "epoch": "J2000.0 (JD 2451545.0)",
+   "frame": "ecliptic of J2000, heliocentric mean elements (EM barycenter for Earth)",
+   "semi_major_axis_au": 9.53667594,
+   "eccentricity": 0.05386179,
+   "inclination_deg": 2.48599187,
+   "validity": "Standish approximate elements, nominal validity 1800-2050; secular rates NOT included here",
+   "time_dependence": "time-dependent (slow secular drift)",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S04"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "body_id": "uranus",
+   "epoch": "J2000.0 (JD 2451545.0)",
+   "frame": "ecliptic of J2000, heliocentric mean elements (EM barycenter for Earth)",
+   "semi_major_axis_au": 19.18916464,
+   "eccentricity": 0.04725744,
+   "inclination_deg": 0.77263783,
+   "validity": "Standish approximate elements, nominal validity 1800-2050; secular rates NOT included here",
+   "time_dependence": "time-dependent (slow secular drift)",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S04"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "body_id": "neptune",
+   "epoch": "J2000.0 (JD 2451545.0)",
+   "frame": "ecliptic of J2000, heliocentric mean elements (EM barycenter for Earth)",
+   "semi_major_axis_au": 30.06992276,
+   "eccentricity": 0.00859048,
+   "inclination_deg": 1.77004347,
+   "validity": "Standish approximate elements, nominal validity 1800-2050; secular rates NOT included here",
+   "time_dependence": "time-dependent (slow secular drift)",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S04"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "body_id": "pluto",
+   "epoch": null,
+   "frame": "heliocentric ecliptic",
+   "semi_major_axis_au": 39.48,
+   "eccentricity": 0.2488,
+   "inclination_deg": 17.16,
+   "validity": "Approximate osculating/mean values; reference epoch not recorded",
+   "time_dependence": "time-dependent",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S03"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "body_id": "ceres",
+   "epoch": null,
+   "frame": "heliocentric ecliptic",
+   "semi_major_axis_au": 2.7675,
+   "eccentricity": 0.0758,
+   "inclination_deg": 10.59,
+   "validity": "Approximate osculating/mean values; reference epoch not recorded",
+   "time_dependence": "time-dependent",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S03"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "body_id": "eris",
+   "epoch": null,
+   "frame": "heliocentric ecliptic",
+   "semi_major_axis_au": 67.78,
+   "eccentricity": 0.4407,
+   "inclination_deg": 44.0,
+   "validity": "Approximate osculating/mean values; reference epoch not recorded",
+   "time_dependence": "time-dependent",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S03"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "body_id": "vesta",
+   "epoch": null,
+   "frame": "heliocentric ecliptic",
+   "semi_major_axis_au": 2.3615,
+   "eccentricity": 0.0887,
+   "inclination_deg": 7.14,
+   "validity": "Approximate osculating/mean values; reference epoch not recorded",
+   "time_dependence": "time-dependent",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S03"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "body_id": "bennu",
+   "epoch": null,
+   "frame": "heliocentric ecliptic",
+   "semi_major_axis_au": 1.1264,
+   "eccentricity": 0.2037,
+   "inclination_deg": 6.035,
+   "validity": "Approximate osculating/mean values; reference epoch not recorded",
+   "time_dependence": "time-dependent",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S03"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "body_id": "moon",
+   "epoch": null,
+   "frame": "parent-centric (parent equator or Laplace plane, not recorded per body)",
+   "semi_major_axis_km": 384400,
+   "eccentricity": 0.0549,
+   "inclination_deg": 5.145,
+   "validity": "Mean values",
+   "time_dependence": "time-dependent",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S03"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "body_id": "phobos",
+   "epoch": null,
+   "frame": "parent-centric (parent equator or Laplace plane, not recorded per body)",
+   "semi_major_axis_km": 9376,
+   "eccentricity": 0.0151,
+   "inclination_deg": 1.08,
+   "validity": "Mean values",
+   "time_dependence": "time-dependent",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S03"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "body_id": "deimos",
+   "epoch": null,
+   "frame": "parent-centric (parent equator or Laplace plane, not recorded per body)",
+   "semi_major_axis_km": 23463,
+   "eccentricity": 0.0005,
+   "inclination_deg": 1.79,
+   "validity": "Mean values",
+   "time_dependence": "time-dependent",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S03"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "body_id": "io",
+   "epoch": null,
+   "frame": "parent-centric (parent equator or Laplace plane, not recorded per body)",
+   "semi_major_axis_km": 421800,
+   "eccentricity": 0.0041,
+   "inclination_deg": 0.04,
+   "validity": "Mean values",
+   "time_dependence": "time-dependent",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S03"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "body_id": "europa",
+   "epoch": null,
+   "frame": "parent-centric (parent equator or Laplace plane, not recorded per body)",
+   "semi_major_axis_km": 671100,
+   "eccentricity": 0.0094,
+   "inclination_deg": 0.47,
+   "validity": "Mean values",
+   "time_dependence": "time-dependent",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S03"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "body_id": "ganymede",
+   "epoch": null,
+   "frame": "parent-centric (parent equator or Laplace plane, not recorded per body)",
+   "semi_major_axis_km": 1070400,
+   "eccentricity": 0.0013,
+   "inclination_deg": 0.2,
+   "validity": "Mean values",
+   "time_dependence": "time-dependent",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S03"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "body_id": "callisto",
+   "epoch": null,
+   "frame": "parent-centric (parent equator or Laplace plane, not recorded per body)",
+   "semi_major_axis_km": 1882700,
+   "eccentricity": 0.0074,
+   "inclination_deg": 0.19,
+   "validity": "Mean values",
+   "time_dependence": "time-dependent",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S03"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "body_id": "titan",
+   "epoch": null,
+   "frame": "parent-centric (parent equator or Laplace plane, not recorded per body)",
+   "semi_major_axis_km": 1221870,
+   "eccentricity": 0.0288,
+   "inclination_deg": 0.33,
+   "validity": "Mean values",
+   "time_dependence": "time-dependent",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S03"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "body_id": "enceladus",
+   "epoch": null,
+   "frame": "parent-centric (parent equator or Laplace plane, not recorded per body)",
+   "semi_major_axis_km": 238020,
+   "eccentricity": 0.0047,
+   "inclination_deg": 0.01,
+   "validity": "Mean values",
+   "time_dependence": "time-dependent",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S03"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "body_id": "triton",
+   "epoch": null,
+   "frame": "parent-centric (parent equator or Laplace plane, not recorded per body)",
+   "semi_major_axis_km": 354759,
+   "eccentricity": 0.0,
+   "inclination_deg": 156.9,
+   "validity": "Mean values",
+   "time_dependence": "time-dependent",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S03"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "body_id": "charon",
+   "epoch": null,
+   "frame": "parent-centric (parent equator or Laplace plane, not recorded per body)",
+   "semi_major_axis_km": 19591,
+   "eccentricity": 0.0002,
+   "inclination_deg": 0.0,
+   "validity": "Mean values",
+   "time_dependence": "time-dependent",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S03"
+   ],
+   "retrieval_status": "not_retrieved"
+  }
+ ]
+}

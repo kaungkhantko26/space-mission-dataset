@@ -1,0 +1,503 @@
+{
+ "schema_version": "0.1.0",
+ "dataset": "payload_capabilities",
+ "description": "Payload capability per reference orbit; missing conditions are null",
+ "generated": "2026-11-06",
+ "retrieval_status": "NOT_RETRIEVED: values recalled from published references; network access to source hosts was blocked in the build environment. See metadata/quality_report.json.",
+ "record_count": 29,
+ "records": [
+  {
+   "vehicle_id": "saturn_v",
+   "orbit": "LEO",
+   "payload_kg": 140000,
+   "altitude_km": 190,
+   "inclination_deg": 28.5,
+   "mode": "expended",
+   "assumption": "Apollo 17 class, incl. S-IVB",
+   "reference_conditions_complete": true,
+   "warning": "Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S09"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "vehicle_id": "saturn_v",
+   "orbit": "TLI",
+   "payload_kg": 48600,
+   "altitude_km": null,
+   "inclination_deg": null,
+   "mode": "expended",
+   "assumption": "Translunar injection",
+   "reference_conditions_complete": false,
+   "warning": "Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S09"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "vehicle_id": "sls_b1",
+   "orbit": "LEO",
+   "payload_kg": 95000,
+   "altitude_km": null,
+   "inclination_deg": null,
+   "mode": "expended",
+   "assumption": "Reference orbit not recorded",
+   "reference_conditions_complete": false,
+   "warning": "Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S08"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "vehicle_id": "sls_b1",
+   "orbit": "TLI",
+   "payload_kg": 27000,
+   "altitude_km": null,
+   "inclination_deg": null,
+   "mode": "expended",
+   "assumption": "",
+   "reference_conditions_complete": false,
+   "warning": "Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S08"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "vehicle_id": "falcon9_b5",
+   "orbit": "LEO",
+   "payload_kg": 22800,
+   "altitude_km": null,
+   "inclination_deg": null,
+   "mode": "expended",
+   "assumption": "Published figure; reference orbit details not recorded",
+   "reference_conditions_complete": false,
+   "warning": "Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S06"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "vehicle_id": "falcon9_b5",
+   "orbit": "GTO",
+   "payload_kg": 8300,
+   "altitude_km": null,
+   "inclination_deg": null,
+   "mode": "expended",
+   "assumption": "",
+   "reference_conditions_complete": false,
+   "warning": "Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S06"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "vehicle_id": "falcon9_b5",
+   "orbit": "GTO",
+   "payload_kg": 5500,
+   "altitude_km": null,
+   "inclination_deg": null,
+   "mode": "droneship recovery",
+   "assumption": "Reusable figure approximate",
+   "reference_conditions_complete": false,
+   "warning": "Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S06"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "vehicle_id": "falcon_heavy",
+   "orbit": "LEO",
+   "payload_kg": 63800,
+   "altitude_km": null,
+   "inclination_deg": null,
+   "mode": "expended",
+   "assumption": "",
+   "reference_conditions_complete": false,
+   "warning": "Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S06"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "vehicle_id": "falcon_heavy",
+   "orbit": "GTO",
+   "payload_kg": 26700,
+   "altitude_km": null,
+   "inclination_deg": null,
+   "mode": "expended",
+   "assumption": "",
+   "reference_conditions_complete": false,
+   "warning": "Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S06"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "vehicle_id": "falcon_heavy",
+   "orbit": "Mars transfer",
+   "payload_kg": 16800,
+   "altitude_km": null,
+   "inclination_deg": null,
+   "mode": "expended",
+   "assumption": "Direct transfer",
+   "reference_conditions_complete": false,
+   "warning": "Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S06"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "vehicle_id": "starship",
+   "orbit": "LEO",
+   "payload_kg": 100000,
+   "altitude_km": null,
+   "inclination_deg": null,
+   "mode": "fully reusable (target)",
+   "assumption": "Target 100-150 t; not demonstrated operationally",
+   "reference_conditions_complete": false,
+   "warning": "Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S06"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "vehicle_id": "atlas_v_551",
+   "orbit": "LEO",
+   "payload_kg": 18850,
+   "altitude_km": null,
+   "inclination_deg": 28.7,
+   "mode": "expended",
+   "assumption": "",
+   "reference_conditions_complete": false,
+   "warning": "Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S07"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "vehicle_id": "atlas_v_551",
+   "orbit": "GTO",
+   "payload_kg": 8900,
+   "altitude_km": null,
+   "inclination_deg": null,
+   "mode": "expended",
+   "assumption": "",
+   "reference_conditions_complete": false,
+   "warning": "Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S07"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "vehicle_id": "vulcan_vc6",
+   "orbit": "LEO",
+   "payload_kg": 27200,
+   "altitude_km": null,
+   "inclination_deg": null,
+   "mode": "expended",
+   "assumption": "",
+   "reference_conditions_complete": false,
+   "warning": "Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S07"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "vehicle_id": "vulcan_vc6",
+   "orbit": "GTO",
+   "payload_kg": 14400,
+   "altitude_km": null,
+   "inclination_deg": null,
+   "mode": "expended",
+   "assumption": "",
+   "reference_conditions_complete": false,
+   "warning": "Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S07"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "vehicle_id": "electron",
+   "orbit": "SSO",
+   "payload_kg": 300,
+   "altitude_km": 500,
+   "inclination_deg": 97.4,
+   "mode": "expended",
+   "assumption": "Published capability ~300 kg to 500 km SSO",
+   "reference_conditions_complete": true,
+   "warning": "Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S10"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "vehicle_id": "ariane5_eca",
+   "orbit": "GTO",
+   "payload_kg": 10500,
+   "altitude_km": null,
+   "inclination_deg": null,
+   "mode": "expended",
+   "assumption": "Dual-launch figure approximate",
+   "reference_conditions_complete": false,
+   "warning": "Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S11"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "vehicle_id": "ariane64",
+   "orbit": "LEO",
+   "payload_kg": 21650,
+   "altitude_km": null,
+   "inclination_deg": null,
+   "mode": "expended",
+   "assumption": "Reference orbit details not recorded",
+   "reference_conditions_complete": false,
+   "warning": "Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S11"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "vehicle_id": "ariane64",
+   "orbit": "GTO",
+   "payload_kg": 11500,
+   "altitude_km": null,
+   "inclination_deg": null,
+   "mode": "expended",
+   "assumption": "",
+   "reference_conditions_complete": false,
+   "warning": "Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S11"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "vehicle_id": "ariane62",
+   "orbit": "LEO",
+   "payload_kg": 10350,
+   "altitude_km": null,
+   "inclination_deg": null,
+   "mode": "expended",
+   "assumption": "",
+   "reference_conditions_complete": false,
+   "warning": "Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S11"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "vehicle_id": "ariane62",
+   "orbit": "GTO",
+   "payload_kg": 4500,
+   "altitude_km": null,
+   "inclination_deg": null,
+   "mode": "expended",
+   "assumption": "",
+   "reference_conditions_complete": false,
+   "warning": "Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S11"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "vehicle_id": "delta4_heavy",
+   "orbit": "LEO",
+   "payload_kg": 28790,
+   "altitude_km": null,
+   "inclination_deg": 28.7,
+   "mode": "expended",
+   "assumption": "",
+   "reference_conditions_complete": false,
+   "warning": "Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S07"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "vehicle_id": "delta4_heavy",
+   "orbit": "GTO",
+   "payload_kg": 14220,
+   "altitude_km": null,
+   "inclination_deg": null,
+   "mode": "expended",
+   "assumption": "",
+   "reference_conditions_complete": false,
+   "warning": "Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S07"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "vehicle_id": "new_glenn",
+   "orbit": "LEO",
+   "payload_kg": 45000,
+   "altitude_km": null,
+   "inclination_deg": null,
+   "mode": "booster recovery",
+   "assumption": "Published capability",
+   "reference_conditions_complete": false,
+   "warning": "Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S07"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "vehicle_id": "new_glenn",
+   "orbit": "GTO",
+   "payload_kg": 13600,
+   "altitude_km": null,
+   "inclination_deg": null,
+   "mode": "booster recovery",
+   "assumption": "",
+   "reference_conditions_complete": false,
+   "warning": "Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S07"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "vehicle_id": "vega_c",
+   "orbit": "SSO",
+   "payload_kg": 2300,
+   "altitude_km": 700,
+   "inclination_deg": null,
+   "mode": "expended",
+   "assumption": "",
+   "reference_conditions_complete": false,
+   "warning": "Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S11"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "vehicle_id": "soyuz_21b",
+   "orbit": "LEO",
+   "payload_kg": 8200,
+   "altitude_km": null,
+   "inclination_deg": null,
+   "mode": "expended",
+   "assumption": "",
+   "reference_conditions_complete": false,
+   "warning": "Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S12"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "vehicle_id": "cz5",
+   "orbit": "LEO",
+   "payload_kg": 25000,
+   "altitude_km": null,
+   "inclination_deg": null,
+   "mode": "expended",
+   "assumption": "",
+   "reference_conditions_complete": false,
+   "warning": "Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S12"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "vehicle_id": "cz5",
+   "orbit": "GTO",
+   "payload_kg": 14000,
+   "altitude_km": null,
+   "inclination_deg": null,
+   "mode": "expended",
+   "assumption": "",
+   "reference_conditions_complete": false,
+   "warning": "Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match.",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S12"
+   ],
+   "retrieval_status": "not_retrieved"
+  }
+ ]
+}

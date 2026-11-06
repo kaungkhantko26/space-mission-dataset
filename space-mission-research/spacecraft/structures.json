@@ -1,0 +1,76 @@
+{
+ "schema_version": "0.1.0",
+ "dataset": "structures",
+ "description": "Structure/tankage/shielding classes",
+ "generated": "2026-11-06",
+ "retrieval_status": "NOT_RETRIEVED: values recalled from published references; network access to source hosts was blocked in the build environment. See metadata/quality_report.json.",
+ "record_count": 3,
+ "records": [
+  {
+   "id": "tank_ti",
+   "name": "Titanium propellant tank (class)",
+   "category": "structure",
+   "record_kind": "technology_class",
+   "mass_kg": null,
+   "power_consumption_w": null,
+   "power_generation_w": null,
+   "energy_capacity_wh": null,
+   "params": {
+    "tank_mass_fraction_of_propellant": [
+     0.03,
+     0.1
+    ]
+   },
+   "data_class": "estimated",
+   "confidence": "low",
+   "note": "Pressurized tank plus pressurant system typically a few percent.",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "struct_bus",
+   "name": "Primary structure (class)",
+   "category": "structure",
+   "record_kind": "technology_class",
+   "mass_kg": null,
+   "power_consumption_w": null,
+   "power_generation_w": null,
+   "energy_capacity_wh": null,
+   "params": {
+    "structure_fraction_of_dry_mass": [
+     0.15,
+     0.3
+    ]
+   },
+   "data_class": "estimated",
+   "confidence": "low",
+   "note": "Wide range by mission class.",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "shield_rad",
+   "name": "Radiation shielding vault (class)",
+   "category": "radiation_protection",
+   "record_kind": "technology_class",
+   "mass_kg": null,
+   "power_consumption_w": null,
+   "power_generation_w": null,
+   "energy_capacity_wh": null,
+   "params": {
+    "note": "Juno used a titanium vault for electronics"
+   },
+   "data_class": "estimated",
+   "confidence": "low",
+   "note": "Mass scales with dose requirement; not quantified here.",
+   "source_ids": [
+    "S16"
+   ],
+   "retrieval_status": "not_retrieved"
+  }
+ ]
+}

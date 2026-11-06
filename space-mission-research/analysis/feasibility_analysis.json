@@ -1,0 +1,43 @@
+{
+ "scenarios": [
+  {
+   "scenario_id": "leo_eo",
+   "designs_evaluated": 22680,
+   "designs_feasible": 258,
+   "feasible_fraction": 0.011375661375661376,
+   "constraint_violation_counts_over_all_designs": {
+    "science_below_minimum": 20088,
+    "exceeds_budget": 19639
+   },
+   "delta_v_m_s": 150.0,
+   "note": "Counts overlap (one design may violate several constraints)."
+  },
+  {
+   "scenario_id": "lunar_orbiter",
+   "designs_evaluated": 15120,
+   "designs_feasible": 574,
+   "feasible_fraction": 0.03796296296296296,
+   "constraint_violation_counts_over_all_designs": {
+    "radiation_tolerance": 5040,
+    "science_below_minimum": 7968,
+    "exceeds_budget": 9237
+   },
+   "delta_v_m_s": 4004.580454794844,
+   "note": "Counts overlap (one design may violate several constraints)."
+  },
+  {
+   "scenario_id": "mars_orbiter",
+   "designs_evaluated": 7560,
+   "designs_feasible": 64,
+   "feasible_fraction": 0.008465608465608466,
+   "constraint_violation_counts_over_all_designs": {
+    "radiation_tolerance": 2520,
+    "link_rate_too_low": 1512,
+    "science_below_minimum": 7464
+   },
+   "delta_v_m_s": 1064.0309953804904,
+   "note": "Counts overlap (one design may violate several constraints)."
+  }
+ ],
+ "method": "exhaustive enumeration, see optimization/optimization_models.json"
+}

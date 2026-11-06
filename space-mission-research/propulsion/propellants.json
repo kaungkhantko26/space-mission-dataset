@@ -1,0 +1,106 @@
+{
+ "schema_version": "0.1.0",
+ "dataset": "propellants",
+ "description": "Propellant densities",
+ "generated": "2026-11-06",
+ "retrieval_status": "NOT_RETRIEVED: values recalled from published references; network access to source hosts was blocked in the build environment. See metadata/quality_report.json.",
+ "record_count": 8,
+ "records": [
+  {
+   "id": "lox",
+   "name": "Liquid oxygen",
+   "density_kg_m3": 1141,
+   "condition": "boiling point 90 K, 1 atm",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S15"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "lh2",
+   "name": "Liquid hydrogen",
+   "density_kg_m3": 70.85,
+   "condition": "boiling point 20 K, 1 atm",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S15"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "lch4",
+   "name": "Liquid methane",
+   "density_kg_m3": 422.6,
+   "condition": "boiling point 111 K, 1 atm",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S15"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "rp1",
+   "name": "RP-1 kerosene",
+   "density_kg_m3": 820,
+   "condition": "~15-20 C; varies 800-820",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S15"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "n2o4",
+   "name": "Nitrogen tetroxide (NTO)",
+   "density_kg_m3": 1443,
+   "condition": "20 C",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S15"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "mmh",
+   "name": "Monomethylhydrazine (MMH)",
+   "density_kg_m3": 878,
+   "condition": "20 C",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S15"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "n2h4",
+   "name": "Hydrazine",
+   "density_kg_m3": 1004,
+   "condition": "~25 C",
+   "data_class": "unverified",
+   "confidence": "medium",
+   "source_ids": [
+    "S15"
+   ],
+   "retrieval_status": "not_retrieved"
+  },
+  {
+   "id": "xe",
+   "name": "Xenon (stored supercritical)",
+   "density_kg_m3": 1600,
+   "condition": "typical tank storage; varies with pressure/temperature",
+   "data_class": "unverified",
+   "confidence": "low",
+   "source_ids": [
+    "S14"
+   ],
+   "retrieval_status": "not_retrieved"
+  }
+ ]
+}

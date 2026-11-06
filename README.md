@@ -1,0 +1,25 @@
+# Space Mission Research Dataset & Analysis Explorer
+
+Machine-readable engineering data, analysis, and optimization models for an educational space-mission-design simulator, plus a static web explorer.
+
+> **Provenance status — please read.** This build had no access to NASA/JPL/ESA hosts (egress proxy returned 403). **No source document was retrieved, so no record is `verified`.** External figures were written from recalled published values and tagged `unverified` with a subjective confidence level; technology-class spacecraft components and the optimization catalog are `estimated`; credits and budgets are `fictional`. Dataset sizes are well below the brief's targets (see `space-mission-research/metadata/quality_report.json`). Treat this as a structured, validated scaffold to be verified, not as NASA data.
+
+## Contents
+| Path | What |
+|---|---|
+| `space-mission-research/` | JSON datasets (`celestial/ propulsion/ launch/ spacecraft/ instruments/ missions/`), `analysis/`, `optimization/`, `metadata/`, `schemas/`, `combined/all_space_mission_data.json`, `reports/*.md` |
+| `tools/` | Reproducible pipeline: `build.py` (data → JSON, analysis, optimization), `validate.py` (56 checks), `make_schemas.py`, `make_reports.py`, `parity_check.js` |
+| `docs/` | Static website (GitHub Pages): explorer, comparison, calculators, optimizer with balance controls, sensitivity/risk, quality |
+
+## Run
+```bash
+python3 tools/make_schemas.py && python3 tools/build.py && python3 tools/validate.py && python3 tools/make_reports.py
+node tools/parity_check.js          # JS optimizer == Python optimizer
+cd docs && python3 -m http.server   # open http://localhost:8000
+```
+Python 3.10+ standard library, plus `jsonschema` for validation. To publish the site: repo **Settings → Pages → Deploy from branch → `/docs`**.
+
+## Key conventions
+SI units with unit-suffixed names; `null` = not recorded (never zero); every record has `data_class`, `confidence`, `source_ids`, `retrieval_status`. Optimization = exhaustive enumeration, so "optimal" means optimal *within the stated catalog and model*.
+
+See `space-mission-research/reports/` for findings, `DATA_LIMITATIONS.md` for known conflicts, and the refresh procedure.

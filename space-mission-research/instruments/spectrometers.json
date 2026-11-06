@@ -1,0 +1,82 @@
+{
+ "schema_version": "0.1.0",
+ "dataset": "spectrometers",
+ "description": "Spectrometers",
+ "generated": "2026-11-06",
+ "retrieval_status": "NOT_RETRIEVED: values recalled from published references; network access to source hosts was blocked in the build environment. See metadata/quality_report.json.",
+ "record_count": 3,
+ "records": [
+  {
+   "id": "alice",
+   "name": "Alice",
+   "instrument_type": "uv_spectrometer",
+   "heritage_mission": "New Horizons",
+   "mass_kg": 4.4,
+   "power_w": 4.4,
+   "params": {
+    "range_nm": [
+     52,
+     187
+    ]
+   },
+   "data_class": "unverified",
+   "confidence": "medium",
+   "note": "",
+   "source_ids": [
+    "S19"
+   ],
+   "retrieval_status": "not_retrieved",
+   "derived": {
+    "power_to_mass_w_per_kg": 1.0
+   }
+  },
+  {
+   "id": "crism",
+   "name": "CRISM",
+   "instrument_type": "imaging_spectrometer",
+   "heritage_mission": "Mars Reconnaissance Orbiter",
+   "mass_kg": 32.9,
+   "power_w": null,
+   "params": {
+    "range_nm": [
+     362,
+     3920
+    ],
+    "channels": 544,
+    "spectral_sampling_nm": 6.55,
+    "gsd_m_at_300km": 18
+   },
+   "data_class": "unverified",
+   "confidence": "medium",
+   "note": "",
+   "source_ids": [
+    "S20"
+   ],
+   "retrieval_status": "not_retrieved",
+   "derived": {
+    "power_to_mass_w_per_kg": null
+   }
+  },
+  {
+   "id": "sam",
+   "name": "SAM",
+   "instrument_type": "mass_spectrometer_gas_chromatograph",
+   "heritage_mission": "Mars Science Laboratory",
+   "mass_kg": 40.0,
+   "power_w": null,
+   "params": {
+    "target": "organics, volatiles"
+   },
+   "data_class": "unverified",
+   "confidence": "low",
+   "note": "",
+   "source_ids": [
+    "S23"
+   ],
+   "retrieval_status": "not_retrieved",
+   "derived": {
+    "power_to_mass_w_per_kg": null
+   }
+  }
+ ]
+}

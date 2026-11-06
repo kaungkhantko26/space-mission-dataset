@@ -1,0 +1,130 @@
+{
+ "solar_flux": [
+  {
+   "body_id": "mercury",
+   "distance_au": 0.38709927,
+   "flux_w_m2": 9082.667600845942,
+   "array_w_m2_3j_bol": 2238.8775636085243,
+   "array_w_m2_si_bol": 1158.0401191078577,
+   "array_w_per_kg_if_80w_kg_at_1au": 533.8820044582478,
+   "data_class": "derived"
+  },
+  {
+   "body_id": "venus",
+   "distance_au": 0.72333566,
+   "flux_w_m2": 2601.227717802834,
+   "array_w_m2_3j_bol": 641.2026324383985,
+   "array_w_m2_si_bol": 331.6565340198613,
+   "array_w_per_kg_if_80w_kg_at_1au": 152.90096798253248,
+   "data_class": "derived"
+  },
+  {
+   "body_id": "earth",
+   "distance_au": 1.00000261,
+   "flux_w_m2": 1360.992895607814,
+   "array_w_m2_3j_bol": 335.48474876732615,
+   "array_w_m2_si_bol": 173.52659418999627,
+   "array_w_per_kg_if_80w_kg_at_1au": 79.99958240163491,
+   "data_class": "derived"
+  },
+  {
+   "body_id": "mars",
+   "distance_au": 1.52371034,
+   "flux_w_m2": 586.2100986768297,
+   "array_w_m2_3j_bol": 144.50078932383852,
+   "array_w_m2_si_bol": 74.74178758129578,
+   "array_w_per_kg_if_80w_kg_at_1au": 34.45761050267919,
+   "data_class": "derived"
+  },
+  {
+   "body_id": "jupiter",
+   "distance_au": 5.202887,
+   "flux_w_m2": 50.276997934366,
+   "array_w_m2_3j_bol": 12.393279990821219,
+   "array_w_m2_si_bol": 6.410317236631665,
+   "array_w_per_kg_if_80w_kg_at_1au": 2.9552974538936665,
+   "data_class": "derived"
+  },
+  {
+   "body_id": "saturn",
+   "distance_au": 9.53667594,
+   "flux_w_m2": 14.964564222333161,
+   "array_w_m2_3j_bol": 3.688765080805124,
+   "array_w_m2_si_bol": 1.9079819383474779,
+   "array_w_per_kg_if_80w_kg_at_1au": 0.8796217030026839,
+   "data_class": "derived"
+  },
+  {
+   "body_id": "uranus",
+   "distance_au": 19.18916464,
+   "flux_w_m2": 3.6961193558915286,
+   "array_w_m2_3j_bol": 0.9110934212272618,
+   "array_w_m2_si_bol": 0.4712552178761699,
+   "array_w_per_kg_if_80w_kg_at_1au": 0.2172590363492449,
+   "data_class": "derived"
+  },
+  {
+   "body_id": "neptune",
+   "distance_au": 30.06992276,
+   "flux_w_m2": 1.5051975409059468,
+   "array_w_m2_3j_bol": 0.37103119383331584,
+   "array_w_m2_si_bol": 0.1919126864655082,
+   "array_w_per_kg_if_80w_kg_at_1au": 0.0884759759533253,
+   "data_class": "derived"
+  }
+ ],
+ "crossover": {
+  "solar_w_per_kg_at_1au": 80,
+  "mmrtg_w_per_kg": 2.4444444444444446,
+  "gphs_rtg_w_per_kg": 5.366726296958856,
+  "distance_au_mmrtg": 5.720775535473554,
+  "distance_au_gphs": 3.8609152628187355,
+  "caveat": "Compares array-only specific power to RTG unit specific power; ignores batteries, PMAD, degradation (RTG ~1.6%/yr for GPHS by Pu-238 decay + thermocouple), pointing, radiation environment and cost. Indicative only.",
+  "data_class": "estimated"
+ },
+ "eclipse": [
+  {
+   "orbit": "LEO 500 km",
+   "period_s": 5668.144369061165,
+   "max_eclipse_fraction": 0.3778173246453815,
+   "max_eclipse_s": 2141.523141222473,
+   "assumption": "Circular orbit, beta=0, cylindrical shadow; real max eclipse depends on season/beta angle; Earth penumbra neglected",
+   "data_class": "derived"
+  },
+  {
+   "orbit": "LEO 400 km",
+   "period_s": 5544.855095980793,
+   "max_eclipse_fraction": 0.39004113038253235,
+   "max_eclipse_s": 2162.721549443693,
+   "assumption": "Circular orbit, beta=0, cylindrical shadow; real max eclipse depends on season/beta angle; Earth penumbra neglected",
+   "data_class": "derived"
+  },
+  {
+   "orbit": "GEO",
+   "period_s": 86142.11433343086,
+   "max_eclipse_fraction": 0.04828977617783919,
+   "max_eclipse_s": 4159.783420647209,
+   "assumption": "Circular orbit, beta=0, cylindrical shadow; real max eclipse depends on season/beta angle; Earth penumbra neglected",
+   "data_class": "derived"
+  },
+  {
+   "orbit": "Lunar orbit 100 km",
+   "period_s": 7067.459813349092,
+   "max_eclipse_fraction": 0.3944998883306167,
+   "max_eclipse_s": 2788.112107147338,
+   "assumption": "Circular orbit, beta=0, cylindrical shadow; real max eclipse depends on season/beta angle; Earth penumbra neglected",
+   "data_class": "derived"
+  },
+  {
+   "orbit": "Mars orbit 400 km",
+   "period_s": 7082.505772139716,
+   "max_eclipse_fraction": 0.3524291849559543,
+   "max_eclipse_s": 2496.081736721042,
+   "assumption": "Circular orbit, beta=0, cylindrical shadow; real max eclipse depends on season/beta angle; Earth penumbra neglected",
+   "data_class": "derived"
+  }
+ ],
+ "assumptions": [
+  "Solar constant 1361 W/m2 at 1 AU; inverse-square scaling; panel packing 0.85; BOL cell efficiency per class record."
+ ]
+}

@@ -1,0 +1,90 @@
+{
+ "schema_version": "0.1.0",
+ "dataset": "sensors",
+ "description": "Particle/dust/radio science",
+ "generated": "2026-11-06",
+ "retrieval_status": "NOT_RETRIEVED: values recalled from published references; network access to source hosts was blocked in the build environment. See metadata/quality_report.json.",
+ "record_count": 4,
+ "records": [
+  {
+   "id": "rex",
+   "name": "REX",
+   "instrument_type": "radio_science",
+   "heritage_mission": "New Horizons",
+   "mass_kg": 0.1,
+   "power_w": 2.1,
+   "params": {},
+   "data_class": "unverified",
+   "confidence": "low",
+   "note": "",
+   "source_ids": [
+    "S19"
+   ],
+   "retrieval_status": "not_retrieved",
+   "derived": {
+    "power_to_mass_w_per_kg": 21.0
+   }
+  },
+  {
+   "id": "swap",
+   "name": "SWAP",
+   "instrument_type": "particle_detector",
+   "heritage_mission": "New Horizons",
+   "mass_kg": 3.3,
+   "power_w": 2.3,
+   "params": {
+    "measures": "solar wind plasma"
+   },
+   "data_class": "unverified",
+   "confidence": "medium",
+   "note": "",
+   "source_ids": [
+    "S19"
+   ],
+   "retrieval_status": "not_retrieved",
+   "derived": {
+    "power_to_mass_w_per_kg": 0.6969696969696969
+   }
+  },
+  {
+   "id": "pepssi",
+   "name": "PEPSSI",
+   "instrument_type": "particle_detector",
+   "heritage_mission": "New Horizons",
+   "mass_kg": 1.5,
+   "power_w": 2.5,
+   "params": {
+    "measures": "energetic particles"
+   },
+   "data_class": "unverified",
+   "confidence": "medium",
+   "note": "",
+   "source_ids": [
+    "S19"
+   ],
+   "retrieval_status": "not_retrieved",
+   "derived": {
+    "power_to_mass_w_per_kg": 1.6666666666666667
+   }
+  },
+  {
+   "id": "sdc",
+   "name": "Student Dust Counter",
+   "instrument_type": "dust_detector",
+   "heritage_mission": "New Horizons",
+   "mass_kg": 1.9,
+   "power_w": 5.0,
+   "params": {},
+   "data_class": "unverified",
+   "confidence": "medium",
+   "note": "",
+   "source_ids": [
+    "S19"
+   ],
+   "retrieval_status": "not_retrieved",
+   "derived": {
+    "power_to_mass_w_per_kg": 2.6315789473684212
+   }
+  }
+ ]
+}
