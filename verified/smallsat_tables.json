@@ -1,75 +1,10 @@
 {
  "collection": "smallsat_tables",
- "count": 99,
+ "count": 81,
  "mode": "STRICT: verified data only",
  "records": [
   {
    "id": "soa_table_000",
-   "domain": "deorbit",
-   "chapter": "deorbit-systems",
-   "table_id": "13-1",
-   "title": "Passive TechEdSat-N Spacecraft",
-   "columns": [
-    "TES-n mission (Volume)",
-    "Deployment (month, year)",
-    "Deorbit Duration Reentry Year",
-    "Nominal Drag Area (m 2 )",
-    "Deployed Orbit Alt. & Inc.",
-    "Technology Tested Notes (ref)"
-   ],
-   "rows": 9,
-   "data_class": "verified",
-   "source_ids": [
-    "S54"
-   ],
-   "retrieval_status": "retrieved"
-  },
-  {
-   "id": "soa_table_001",
-   "domain": "deorbit",
-   "chapter": "deorbit-systems",
-   "table_id": "13-2",
-   "title": "Drag Sail Missions",
-   "columns": [
-    "Product / Mission",
-    "Manufacturer",
-    "Mission host and launch mass",
-    "Device mass (kg)",
-    "Initial orbit (alt and inc.)",
-    "Launch Year",
-    "Deployment Year",
-    "Drag Area ( m 2 )"
-   ],
-   "rows": 30,
-   "data_class": "verified",
-   "source_ids": [
-    "S54"
-   ],
-   "retrieval_status": "retrieved"
-  },
-  {
-   "id": "soa_table_002",
-   "domain": "deorbit",
-   "chapter": "deorbit-systems",
-   "table_id": "13-3",
-   "title": "Active TechEdSat-N Spacecraft",
-   "columns": [
-    "TES-n mission (Volume)",
-    "Deployment (month, year)",
-    "Reentry (month, year)",
-    "Nominal Drag Area (m 2 )",
-    "Deployed Orbit Alt. & Inc.",
-    "Technology Tested Notes"
-   ],
-   "rows": 6,
-   "data_class": "verified",
-   "source_ids": [
-    "S54"
-   ],
-   "retrieval_status": "retrieved"
-  },
-  {
-   "id": "soa_table_003",
    "domain": "ground_systems",
    "chapter": "ground-data-systems-and-mission-operations",
    "table_id": "11-3",
@@ -87,7 +22,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_004",
+   "id": "soa_table_001",
    "domain": "ground_systems",
    "chapter": "ground-data-systems-and-mission-operations",
    "table_id": "11-4",
@@ -105,7 +40,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_005",
+   "id": "soa_table_002",
    "domain": "ground_systems",
    "chapter": "ground-data-systems-and-mission-operations",
    "table_id": "11-5",
@@ -123,7 +58,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_006",
+   "id": "soa_table_003",
    "domain": "ground_systems",
    "chapter": "ground-data-systems-and-mission-operations",
    "table_id": "11-7",
@@ -147,7 +82,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_007",
+   "id": "soa_table_004",
    "domain": "ground_systems",
    "chapter": "ground-data-systems-and-mission-operations",
    "table_id": "11-8",
@@ -169,7 +104,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_008",
+   "id": "soa_table_005",
    "domain": "ground_systems",
    "chapter": "ground-data-systems-and-mission-operations",
    "table_id": "11-9",
@@ -188,7 +123,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_009",
+   "id": "soa_table_006",
    "domain": "ground_systems",
    "chapter": "ground-data-systems-and-mission-operations",
    "table_id": "11-10",
@@ -206,26 +141,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_010",
-   "domain": "ground_systems",
-   "chapter": "ground-data-systems-and-mission-operations",
-   "table_id": "11-11",
-   "title": "Software for Ground Systems",
-   "columns": [
-    "Product",
-    "Manufacturer",
-    "TRL",
-    "Type of Product"
-   ],
-   "rows": 6,
-   "data_class": "verified",
-   "source_ids": [
-    "S54"
-   ],
-   "retrieval_status": "retrieved"
-  },
-  {
-   "id": "soa_table_011",
+   "id": "soa_table_007",
    "domain": "ground_systems",
    "chapter": "ground-data-systems-and-mission-operations",
    "table_id": "11-12",
@@ -243,7 +159,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_012",
+   "id": "soa_table_008",
    "domain": "ground_systems",
    "chapter": "ground-data-systems-and-mission-operations",
    "table_id": "11-13",
@@ -262,7 +178,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_013",
+   "id": "soa_table_009",
    "domain": "ground_systems",
    "chapter": "ground-data-systems-and-mission-operations",
    "table_id": "11-14",
@@ -281,7 +197,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_014",
+   "id": "soa_table_010",
    "domain": "ground_systems",
    "chapter": "ground-data-systems-and-mission-operations",
    "table_id": "11-15",
@@ -300,25 +216,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_015",
-   "domain": "ground_systems",
-   "chapter": "ground-data-systems-and-mission-operations",
-   "table_id": "11-16",
-   "title": "Mission Operations and Scheduling Software",
-   "columns": [
-    "Product",
-    "Manufacturer",
-    "Type of Product"
-   ],
-   "rows": 11,
-   "data_class": "verified",
-   "source_ids": [
-    "S54"
-   ],
-   "retrieval_status": "retrieved"
-  },
-  {
-   "id": "soa_table_016",
+   "id": "soa_table_011",
    "domain": "guidance_navigation_control",
    "chapter": "guidance-navigation-and-control",
    "table_id": "5-1",
@@ -336,7 +234,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_017",
+   "id": "soa_table_012",
    "domain": "guidance_navigation_control",
    "chapter": "guidance-navigation-and-control",
    "table_id": "5-2",
@@ -358,7 +256,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_018",
+   "id": "soa_table_013",
    "domain": "guidance_navigation_control",
    "chapter": "guidance-navigation-and-control",
    "table_id": "5-3",
@@ -381,7 +279,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_019",
+   "id": "soa_table_014",
    "domain": "guidance_navigation_control",
    "chapter": "guidance-navigation-and-control",
    "table_id": "5-4",
@@ -403,7 +301,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_020",
+   "id": "soa_table_015",
    "domain": "guidance_navigation_control",
    "chapter": "guidance-navigation-and-control",
    "table_id": "5-5",
@@ -426,7 +324,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_021",
+   "id": "soa_table_016",
    "domain": "guidance_navigation_control",
    "chapter": "guidance-navigation-and-control",
    "table_id": "5-6",
@@ -448,7 +346,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_022",
+   "id": "soa_table_017",
    "domain": "guidance_navigation_control",
    "chapter": "guidance-navigation-and-control",
    "table_id": "5-7",
@@ -473,7 +371,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_023",
+   "id": "soa_table_018",
    "domain": "guidance_navigation_control",
    "chapter": "guidance-navigation-and-control",
    "table_id": "5-8",
@@ -497,7 +395,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_024",
+   "id": "soa_table_019",
    "domain": "guidance_navigation_control",
    "chapter": "guidance-navigation-and-control",
    "table_id": "5-9",
@@ -526,7 +424,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_025",
+   "id": "soa_table_020",
    "domain": "guidance_navigation_control",
    "chapter": "guidance-navigation-and-control",
    "table_id": "5-10",
@@ -547,7 +445,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_026",
+   "id": "soa_table_021",
    "domain": "guidance_navigation_control",
    "chapter": "guidance-navigation-and-control",
    "table_id": "5-11",
@@ -568,7 +466,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_027",
+   "id": "soa_table_022",
    "domain": "guidance_navigation_control",
    "chapter": "guidance-navigation-and-control",
    "table_id": "5-12",
@@ -590,7 +488,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_028",
+   "id": "soa_table_023",
    "domain": "guidance_navigation_control",
    "chapter": "guidance-navigation-and-control",
    "table_id": "5-13",
@@ -611,7 +509,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_029",
+   "id": "soa_table_024",
    "domain": "guidance_navigation_control",
    "chapter": "guidance-navigation-and-control",
    "table_id": "5-14",
@@ -630,26 +528,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_030",
-   "domain": "tracking",
-   "chapter": "identification-and-tracking-systems",
-   "table_id": "12-1",
-   "title": "Types of Tracking Aids",
-   "columns": [
-    "Technology Scheme",
-    "Description and Reference Mission",
-    "TRL",
-    "Citation"
-   ],
-   "rows": 6,
-   "data_class": "verified",
-   "source_ids": [
-    "S54"
-   ],
-   "retrieval_status": "retrieved"
-  },
-  {
-   "id": "soa_table_031",
+   "id": "soa_table_025",
    "domain": "propulsion",
    "chapter": "in-space_propulsion",
    "table_id": "4-1",
@@ -667,7 +546,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_032",
+   "id": "soa_table_026",
    "domain": "propulsion",
    "chapter": "in-space_propulsion",
    "table_id": "4-1",
@@ -695,7 +574,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_033",
+   "id": "soa_table_027",
    "domain": "propulsion",
    "chapter": "in-space_propulsion",
    "table_id": "4-3",
@@ -723,7 +602,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_034",
+   "id": "soa_table_028",
    "domain": "propulsion",
    "chapter": "in-space_propulsion",
    "table_id": "4-3",
@@ -751,7 +630,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_035",
+   "id": "soa_table_029",
    "domain": "propulsion",
    "chapter": "in-space_propulsion",
    "table_id": "4-4",
@@ -779,7 +658,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_036",
+   "id": "soa_table_030",
    "domain": "propulsion",
    "chapter": "in-space_propulsion",
    "table_id": "4-5",
@@ -807,7 +686,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_037",
+   "id": "soa_table_031",
    "domain": "propulsion",
    "chapter": "in-space_propulsion",
    "table_id": "4-6",
@@ -835,7 +714,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_038",
+   "id": "soa_table_032",
    "domain": "propulsion",
    "chapter": "in-space_propulsion",
    "table_id": "4-7",
@@ -863,7 +742,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_039",
+   "id": "soa_table_033",
    "domain": "propulsion",
    "chapter": "in-space_propulsion",
    "table_id": "4-8",
@@ -891,7 +770,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_040",
+   "id": "soa_table_034",
    "domain": "propulsion",
    "chapter": "in-space_propulsion",
    "table_id": "4-9",
@@ -920,7 +799,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_041",
+   "id": "soa_table_035",
    "domain": "propulsion",
    "chapter": "in-space_propulsion",
    "table_id": "4-10",
@@ -948,7 +827,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_042",
+   "id": "soa_table_036",
    "domain": "propulsion",
    "chapter": "in-space_propulsion",
    "table_id": "4-10",
@@ -976,7 +855,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_043",
+   "id": "soa_table_037",
    "domain": "propulsion",
    "chapter": "in-space_propulsion",
    "table_id": "4-11",
@@ -1005,7 +884,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_044",
+   "id": "soa_table_038",
    "domain": "propulsion",
    "chapter": "in-space_propulsion",
    "table_id": "4-12",
@@ -1033,7 +912,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_045",
+   "id": "soa_table_039",
    "domain": "propulsion",
    "chapter": "in-space_propulsion",
    "table_id": "4-13",
@@ -1061,7 +940,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_046",
+   "id": "soa_table_040",
    "domain": "launch_integration_deployment",
    "chapter": "integration-launch-and-deployment",
    "table_id": "10-1",
@@ -1082,7 +961,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_047",
+   "id": "soa_table_041",
    "domain": "launch_integration_deployment",
    "chapter": "integration-launch-and-deployment",
    "table_id": "10-2",
@@ -1101,7 +980,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_048",
+   "id": "soa_table_042",
    "domain": "launch_integration_deployment",
    "chapter": "integration-launch-and-deployment",
    "table_id": "10-3",
@@ -1121,7 +1000,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_049",
+   "id": "soa_table_043",
    "domain": "launch_integration_deployment",
    "chapter": "integration-launch-and-deployment",
    "table_id": "10-4",
@@ -1142,7 +1021,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_050",
+   "id": "soa_table_044",
    "domain": "platforms",
    "chapter": "platforms",
    "table_id": "2-1",
@@ -1163,7 +1042,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_051",
+   "id": "soa_table_045",
    "domain": "platforms",
    "chapter": "platforms",
    "table_id": "2-2",
@@ -1185,7 +1064,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_052",
+   "id": "soa_table_046",
    "domain": "platforms",
    "chapter": "platforms",
    "table_id": "2-3",
@@ -1207,7 +1086,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_053",
+   "id": "soa_table_047",
    "domain": "platforms",
    "chapter": "platforms",
    "table_id": "2-4",
@@ -1229,7 +1108,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_054",
+   "id": "soa_table_048",
    "domain": "platforms",
    "chapter": "platforms",
    "table_id": "2-5",
@@ -1251,7 +1130,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_055",
+   "id": "soa_table_049",
    "domain": "platforms",
    "chapter": "platforms",
    "table_id": "2-6",
@@ -1274,7 +1153,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_056",
+   "id": "soa_table_050",
    "domain": "platforms",
    "chapter": "platforms",
    "table_id": "2-7",
@@ -1296,7 +1175,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_057",
+   "id": "soa_table_051",
    "domain": "platforms",
    "chapter": "platforms",
    "table_id": "2-8",
@@ -1315,7 +1194,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_058",
+   "id": "soa_table_052",
    "domain": "power",
    "chapter": "power-subsystems",
    "table_id": "3-1",
@@ -1338,7 +1217,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_059",
+   "id": "soa_table_053",
    "domain": "power",
    "chapter": "power-subsystems",
    "table_id": "3-2",
@@ -1358,7 +1237,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_060",
+   "id": "soa_table_054",
    "domain": "power",
    "chapter": "power-subsystems",
    "table_id": "3-3",
@@ -1377,7 +1256,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_061",
+   "id": "soa_table_055",
    "domain": "power",
    "chapter": "power-subsystems",
    "table_id": "3-4",
@@ -1395,7 +1274,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_062",
+   "id": "soa_table_056",
    "domain": "power",
    "chapter": "power-subsystems",
    "table_id": "3-5",
@@ -1417,7 +1296,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_063",
+   "id": "soa_table_057",
    "domain": "power",
    "chapter": "power-subsystems",
    "table_id": "3-6",
@@ -1435,7 +1314,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_064",
+   "id": "soa_table_058",
    "domain": "power",
    "chapter": "power-subsystems",
    "table_id": "3-7",
@@ -1454,7 +1333,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_065",
+   "id": "soa_table_059",
    "domain": "power",
    "chapter": "power-subsystems",
    "table_id": "3-8",
@@ -1477,47 +1356,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_066",
-   "domain": "avionics",
-   "chapter": "small-spacecraft-avionics",
-   "table_id": "8-1",
-   "title": "Comparison of Memory Types",
-   "columns": [
-    "Feature",
-    "SRAM",
-    "DRAM",
-    "Flash",
-    "MRAM",
-    "FERAM",
-    "PCM"
-   ],
-   "rows": 6,
-   "data_class": "verified",
-   "source_ids": [
-    "S54"
-   ],
-   "retrieval_status": "retrieved"
-  },
-  {
-   "id": "soa_table_067",
-   "domain": "avionics",
-   "chapter": "small-spacecraft-avionics",
-   "table_id": "8-3",
-   "title": "Examples of AI Space Applications",
-   "columns": [
-    "AI Space Application",
-    "Description",
-    "Example(s)"
-   ],
-   "rows": 7,
-   "data_class": "verified",
-   "source_ids": [
-    "S54"
-   ],
-   "retrieval_status": "retrieved"
-  },
-  {
-   "id": "soa_table_068",
+   "id": "soa_table_060",
    "domain": "avionics",
    "chapter": "small-spacecraft-avionics",
    "table_id": "8-4",
@@ -1539,49 +1378,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_069",
-   "domain": "avionics",
-   "chapter": "small-spacecraft-avionics",
-   "table_id": "8-5",
-   "title": "FSW comparison table",
-   "columns": [
-    "Framework",
-    "Primary purpose/ Scope",
-    "Core Language",
-    "Open-Source?",
-    "Modularity",
-    "CCSDS",
-    "Released Quarter"
-   ],
-   "rows": 9,
-   "data_class": "verified",
-   "source_ids": [
-    "S54"
-   ],
-   "retrieval_status": "retrieved"
-  },
-  {
-   "id": "soa_table_070",
-   "domain": "avionics",
-   "chapter": "small-spacecraft-avionics",
-   "table_id": "8-6",
-   "title": "Operating Systems",
-   "columns": [
-    "Name",
-    "Description",
-    "Real-time?",
-    "Implementation Language",
-    "Open-Source?"
-   ],
-   "rows": 5,
-   "data_class": "verified",
-   "source_ids": [
-    "S54"
-   ],
-   "retrieval_status": "retrieved"
-  },
-  {
-   "id": "soa_table_071",
+   "id": "soa_table_061",
    "domain": "communications",
    "chapter": "soa-communications",
    "table_id": "9-2",
@@ -1607,7 +1404,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_072",
+   "id": "soa_table_062",
    "domain": "communications",
    "chapter": "soa-communications",
    "table_id": "9-3",
@@ -1634,7 +1431,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_073",
+   "id": "soa_table_063",
    "domain": "communications",
    "chapter": "soa-communications",
    "table_id": "9-4",
@@ -1658,7 +1455,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_074",
+   "id": "soa_table_064",
    "domain": "communications",
    "chapter": "soa-communications",
    "table_id": "9-5",
@@ -1677,7 +1474,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_075",
+   "id": "soa_table_065",
    "domain": "structures_materials_mechanisms",
    "chapter": "structures-materials-and-mechanisms",
    "table_id": "6-1",
@@ -1695,7 +1492,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_076",
+   "id": "soa_table_066",
    "domain": "structures_materials_mechanisms",
    "chapter": "structures-materials-and-mechanisms",
    "table_id": "6-4",
@@ -1713,7 +1510,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_077",
+   "id": "soa_table_067",
    "domain": "structures_materials_mechanisms",
    "chapter": "structures-materials-and-mechanisms",
    "table_id": "6-5",
@@ -1734,7 +1531,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_078",
+   "id": "soa_table_068",
    "domain": "structures_materials_mechanisms",
    "chapter": "structures-materials-and-mechanisms",
    "table_id": "6-7",
@@ -1758,198 +1555,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_079",
-   "domain": "structures_materials_mechanisms",
-   "chapter": "structures-materials-and-mechanisms",
-   "table_id": "6-7",
-   "title": "Polylactic Acid Filaments",
-   "columns": [
-    "Filament Name (Citation)",
-    "ISO 75/ASTM D648 Deflection Temp (°C)",
-    "ISO 179-1 Hardness (kJ/m 2 ) or Izod D256-10A (J/m)",
-    "ISO 527-1/ASTM D638 ZX Tensile strength (MPa)",
-    "ASTM D790/ISO 178 Flexural strength (MPa)",
-    "Nozzle Temp (°C)",
-    "Bed Temp (°C)",
-    "Density (g/cc)",
-    "ESD Risk* (Ω-cm)"
-   ],
-   "rows": 5,
-   "data_class": "verified",
-   "source_ids": [
-    "S54"
-   ],
-   "retrieval_status": "retrieved"
-  },
-  {
-   "id": "soa_table_080",
-   "domain": "structures_materials_mechanisms",
-   "chapter": "structures-materials-and-mechanisms",
-   "table_id": "6-8",
-   "title": "ABS Filaments",
-   "columns": [
-    "Filament Name",
-    "ISO 75/ASTM D648 Deflection Temp (°C)",
-    "ISO 179-1 Hardness (kJ/m 2 ) or Izod D256-10A (J/m)",
-    "ISO 527-1/ASTM D638 Tensile strength (MPa)",
-    "ASTM D790/ISO 178 Flexural strength (MPa)",
-    "Nozzle Temp (°C)",
-    "Bed Temp (°C)",
-    "Density (g/cc)",
-    "ESD Risk (Ω-cm)"
-   ],
-   "rows": 5,
-   "data_class": "verified",
-   "source_ids": [
-    "S54"
-   ],
-   "retrieval_status": "retrieved"
-  },
-  {
-   "id": "soa_table_081",
-   "domain": "structures_materials_mechanisms",
-   "chapter": "structures-materials-and-mechanisms",
-   "table_id": "6-9",
-   "title": "Nylon Filaments",
-   "columns": [
-    "Filament Name (Citation)",
-    "ISO 75/ASTM D648 Deflection Temp (°C)",
-    "ISO 179-1 Hardness (kJ/m 2 ) or Izod D256-10A (J/m)",
-    "ISO 527-1/ASTM D638 ZX Tensile strength (MPa)",
-    "ASTM D790/ISO 178 Flexural strength (MPa)",
-    "Nozzle Temp (°C)",
-    "Bed Temp (°C)",
-    "Density (g/cc)",
-    "ESD Risk (Ω-cm)"
-   ],
-   "rows": 7,
-   "data_class": "verified",
-   "source_ids": [
-    "S54"
-   ],
-   "retrieval_status": "retrieved"
-  },
-  {
-   "id": "soa_table_082",
-   "domain": "structures_materials_mechanisms",
-   "chapter": "structures-materials-and-mechanisms",
-   "table_id": "6-10",
-   "title": "Polycarbonate Filaments",
-   "columns": [
-    "Filament Name (Citation)",
-    "ISO 75/ASTM D648 Deflection Temp (°C)",
-    "ISO 179-1 Hardness (kJ/m 2 ) or Izod D256-10A (J/m)",
-    "ISO 527-1/ASTM D638 ZX Tensile strength (MPa)",
-    "ASTM D790/ISO 178 Flexural strength (MPa)",
-    "Nozzle Temp (°C)",
-    "Bed Temp (°C)",
-    "Density (g/cc)",
-    "ESD Risk (Ω-cm)"
-   ],
-   "rows": 7,
-   "data_class": "verified",
-   "source_ids": [
-    "S54"
-   ],
-   "retrieval_status": "retrieved"
-  },
-  {
-   "id": "soa_table_083",
-   "domain": "structures_materials_mechanisms",
-   "chapter": "structures-materials-and-mechanisms",
-   "table_id": "6-11",
-   "title": "CRP Windform",
-   "columns": [
-    "Filament Name (Citation)",
-    "ISO 75/ASTM D648 Deflection Temp (°C)",
-    "ISO 179-1 Hardness (kJ/m 2 ) or Izod D256-10A (J/m)",
-    "ISO 527-1/ASTM D638 ZX Tensile strength (MPa)",
-    "ASTM D790/ISO 178 Flexural strength (MPa)",
-    "Manufacturing process",
-    "Bed Temp (°C)",
-    "Density (g/cc)",
-    "ESD Risk (Ω-cm)"
-   ],
-   "rows": 3,
-   "data_class": "verified",
-   "source_ids": [
-    "S54"
-   ],
-   "retrieval_status": "retrieved"
-  },
-  {
-   "id": "soa_table_084",
-   "domain": "structures_materials_mechanisms",
-   "chapter": "structures-materials-and-mechanisms",
-   "table_id": "6-12",
-   "title": "PEI Filaments",
-   "columns": [
-    "Filament Name (Citation)",
-    "ISO 75/ASTM D648 Deflection Temp (°C)",
-    "ISO 179-1 Hardness (kJ/m 2 ) or Izod D256-10A (J/m)",
-    "ISO 527-1/ASTM D638 ZX Tensile strength (MPa)",
-    "ASTM D790/ISO 178 Flexural strength (MPa)",
-    "Nozzle Temp (°C)",
-    "Bed Temp (°C)",
-    "Density (g/cc)",
-    "ESD Risk"
-   ],
-   "rows": 8,
-   "data_class": "verified",
-   "source_ids": [
-    "S54"
-   ],
-   "retrieval_status": "retrieved"
-  },
-  {
-   "id": "soa_table_085",
-   "domain": "structures_materials_mechanisms",
-   "chapter": "structures-materials-and-mechanisms",
-   "table_id": "6-13",
-   "title": "PAEK-based Filaments",
-   "columns": [
-    "Filament Name (Citation)",
-    "ISO 75/ASTM D648 Deflection Temp (°C)",
-    "ISO 179-1 Hardness (kJ/m 2 ) or Izod D256-10A (J/m)",
-    "ISO 527-1/ASTM D638 ZX Tensile strength (MPa)",
-    "ASTM D790/ISO 178 Flexural strength (MPa)",
-    "Nozzle Temp (°C)",
-    "Bed Temp (°C)",
-    "Density (g/cc)",
-    "ESD Risk (Ω-cm)"
-   ],
-   "rows": 10,
-   "data_class": "verified",
-   "source_ids": [
-    "S54"
-   ],
-   "retrieval_status": "retrieved"
-  },
-  {
-   "id": "soa_table_086",
-   "domain": "structures_materials_mechanisms",
-   "chapter": "structures-materials-and-mechanisms",
-   "table_id": "6-14",
-   "title": "Photopolymers",
-   "columns": [
-    "Photopolymer Name (Citation)",
-    "ISO 75/ASTM D648 HDT (°C)",
-    "ISO 179-1/ASTM D256-10A (J/m)",
-    "ISO 527-1/ASTM D638 Tensile (MPa)",
-    "ASTM D790 Flexural (MPa)",
-    "Density (g/cc) at 25°C",
-    "ESD Risk (Ω-cm)",
-    "Manufacturing and/or Machine Type"
-   ],
-   "rows": 6,
-   "data_class": "verified",
-   "source_ids": [
-    "S54"
-   ],
-   "retrieval_status": "retrieved"
-  },
-  {
-   "id": "soa_table_087",
+   "id": "soa_table_069",
    "domain": "structures_materials_mechanisms",
    "chapter": "structures-materials-and-mechanisms",
    "table_id": "6-15",
@@ -1969,7 +1575,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_088",
+   "id": "soa_table_070",
    "domain": "thermal_control",
    "chapter": "thermal-control",
    "table_id": "7-3",
@@ -1990,7 +1596,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_089",
+   "id": "soa_table_071",
    "domain": "thermal_control",
    "chapter": "thermal-control",
    "table_id": "7-4",
@@ -2008,7 +1614,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_090",
+   "id": "soa_table_072",
    "domain": "thermal_control",
    "chapter": "thermal-control",
    "table_id": "7-5",
@@ -2026,7 +1632,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_091",
+   "id": "soa_table_073",
    "domain": "thermal_control",
    "chapter": "thermal-control",
    "table_id": "7-6",
@@ -2044,7 +1650,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_092",
+   "id": "soa_table_074",
    "domain": "thermal_control",
    "chapter": "thermal-control",
    "table_id": "7-7",
@@ -2062,7 +1668,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_093",
+   "id": "soa_table_075",
    "domain": "thermal_control",
    "chapter": "thermal-control",
    "table_id": "7-8",
@@ -2080,7 +1686,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_094",
+   "id": "soa_table_076",
    "domain": "thermal_control",
    "chapter": "thermal-control",
    "table_id": "7-9",
@@ -2103,7 +1709,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_095",
+   "id": "soa_table_077",
    "domain": "thermal_control",
    "chapter": "thermal-control",
    "table_id": "7-11",
@@ -2124,7 +1730,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_096",
+   "id": "soa_table_078",
    "domain": "thermal_control",
    "chapter": "thermal-control",
    "table_id": "7-12",
@@ -2147,7 +1753,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_097",
+   "id": "soa_table_079",
    "domain": "thermal_control",
    "chapter": "thermal-control",
    "table_id": "7-13",
@@ -2168,7 +1774,7 @@
    "retrieval_status": "retrieved"
   },
   {
-   "id": "soa_table_098",
+   "id": "soa_table_080",
    "domain": "thermal_control",
    "chapter": "thermal-control",
    "table_id": "7-14",

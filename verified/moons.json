@@ -105,7 +105,56 @@
     "circular_velocity_surface_m_s": 1679.8564844114449,
     "gravity_from_mu_m_s2": 1.6242188374693094
    },
-   "derived_note": "computed from the verified GM, radius and semi-major axis; not independently sourced"
+   "derived_note": "computed from the verified GM, radius and semi-major axis; not independently sourced",
+   "nssdc_fact_sheet": {
+    "published": {
+     "Equatorial radius (km)": "1738.1",
+     "Polar radius (km)": "1736.0",
+     "Ellipticity (Flattening)": "0.0012",
+     "Mean density (kg/m 3 )": "3344",
+     "Escape velocity (km/s)": "2.38",
+     "Bond albedo": "0.11",
+     "Geometric albedo": "0.12",
+     "Solar irradiance (W/m 2 )": "1361.0",
+     "Black-body temperature (K)": "270.4",
+     "Topographic range (km)": "13",
+     "Moment of inertia (I/MR 2 )": "0.394",
+     "J 2 (x 10 -6 )": "202.7",
+     "Synodic period (days)": "29.53",
+     "Mean orbital velocity (km/s)": "1.022",
+     "Max. orbital velocity (km/s)": "1.082",
+     "Min. orbital velocity (km/s)": "0.970",
+     "Sidereal rotation period (hrs)": "655.720",
+     "Obliquity to orbit (deg)": "6.68"
+    },
+    "numeric": {
+     "Equatorial radius (km)": 1738.1,
+     "Polar radius (km)": 1736.0,
+     "Ellipticity (Flattening)": 0.0012,
+     "Mean density (kg/m 3 )": 3344.0,
+     "Escape velocity (km/s)": 2.38,
+     "Bond albedo": 0.11,
+     "Geometric albedo": 0.12,
+     "Solar irradiance (W/m 2 )": 1361.0,
+     "Black-body temperature (K)": 270.4,
+     "Topographic range (km)": 13.0,
+     "Moment of inertia (I/MR 2 )": 0.394,
+     "J 2 (x 10 -6 )": 202.7,
+     "Synodic period (days)": 29.53,
+     "Mean orbital velocity (km/s)": 1.022,
+     "Max. orbital velocity (km/s)": 1.082,
+     "Min. orbital velocity (km/s)": 0.97,
+     "Sidereal rotation period (hrs)": 655.72,
+     "Obliquity to orbit (deg)": 6.68
+    },
+    "provenance": {
+     "file": "data_raw/retrieved/nssdc_moon.html",
+     "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html",
+     "source_sha256": "38941ca49aa6283a849a4fd8d5aad1e420d5a3e9e962925fb6bc36cbea6d6f8f",
+     "retrieved": "2026-11-06"
+    },
+    "note": "rows of the NASA NSSDC fact sheet exactly as published (planet column)"
+   }
   },
   {
    "id": "phobos",

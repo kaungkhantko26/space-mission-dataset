@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.2.0 — game-scoped dataset
+* Scope check against the Space Mission Design Game brief (spacecraft, instruments, launch vehicle, budget, mass, power, communication, orbit). Removed data the game does not use: asteroids/dwarf planets, JPL NHATS (7,185) and NEO (1,265) lists, NASA facilities (485), 450 moon-element rows for non-game moons, and irrelevant SoA tables (3D printing, software, tracking, deorbit…). 12,830 → 3,250 records.
+* Added from real sources: NSSDC fact-sheet values on planets/moons (solar irradiance, J2, day length…), instrument mass/power and mission cost statements parsed from NASA text with the source sentence kept.
+* New `GAME_DATA_GUIDE.md` mapping each game mechanic to collections and formulas, with honest gaps; examples rewritten for the game; 64 validation checks, 22 backend checks.
+
 ## v2.1.0 — real data for the gaps
 * **New verified collections:** NASA SoA small-spacecraft components (1,724 rows), Launch Library 2 launcher configurations (532) and SpaceX launch record (743), NASA NSSDC missions (39) and instruments (181), NSSDC atmospheres (10), NIST fluid properties (6).
 * Source authority labels (`vendor-reported`, `aggregator`); 77 strict validation checks (every published value re-found in the raw source pages, no personal data, NIST physics sanity checks); 23 backend checks.

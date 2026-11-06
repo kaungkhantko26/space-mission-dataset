@@ -5,7 +5,7 @@
 | You want… | Do this | Needs |
 |---|---|---|
 | **A live API** (any language, CORS open) | `GET https://kaungkhantko26.github.io/space-mission-dataset/api/v1/index.json` — guide: [`docs/api.html`](docs/api.html) | internet |
-| **A local backend** with filtering, NHATS search, Hohmann and Δv | `python3 tools/serve_api.py` → http://127.0.0.1:8000 | Python 3.10+ only |
+| **A local backend** with filtering, Hohmann and Δv | `python3 tools/serve_api.py` → http://127.0.0.1:8000 | Python 3.10+ only |
 | **Spreadsheets / pandas / SQL** | `exports/csv/*.csv` or `exports/space_mission.sqlite` | nothing |
 | **One JSON file** | `verified/combined/verified_space_mission_data.json` (1 MB) | nothing |
 | **Browser app** | the site (`docs/index.html`) or `make site` | a browser |
@@ -14,7 +14,6 @@
 ```bash
 python3 tools/serve_api.py &
 curl "localhost:8000/collections"
-curl "localhost:8000/nhats/best?max_delta_v=6&min_size_m=100&limit=10"        # real JPL NHATS asteroid targets, lowest delta-v first
 curl "localhost:8000/collections/moon_mean_elements?satellite=Io"             # JPL mean elements
 curl "localhost:8000/collections/electric_propulsion?sort=-isp_vac_s&fields=id,name,isp_vac_s,thrust_vac_n,power_w"
 curl "localhost:8000/collections/launch_vehicle_configs?leo_capacity_kg_gte=15000&active=true&sort=-leo_capacity_kg&fields=full_name,leo_capacity_kg,launch_cost_usd"
@@ -25,48 +24,44 @@ curl "localhost:8000/light-time?target=mars"
 ```
 Examples: [`examples/python_quickstart.py`](examples/python_quickstart.py), [`examples/node_quickstart.mjs`](examples/node_quickstart.mjs), [`examples/pandas_demo.py`](examples/pandas_demo.py).
 
-## What is in the dataset (all verified; 12,830 records)
+## What is in the dataset (all verified; 3,250 records) — game guide: [`GAME_DATA_GUIDE.md`](GAME_DATA_GUIDE.md)
 | Collection | Records | Source |
 |---|---:|---|
-| `planets`, `moons`, `asteroids`, `orbital_elements`, `atmospheres` | 12 / 11 / 2 / 13 / 10 | JPL SSD/SBDB, NASA NSSDC (field-by-field checks) |
-| `moon_mean_elements` | 461 | JPL satellite mean elements |
-| `nhats_targets`, `neo_catalog` | 7,185 / 1,265 | JPL NHATS API, JPL SBDB query |
-| `smallsat_components` (+ `smallsat_tables` index) | 1,724 (99 tables) | NASA SoA 2026: propulsion, power, GNC, comms, avionics, thermal, structures, platforms, launch integration, ground — **vendor-reported**, strings as published, `numeric` parsed where units are in the header |
+| `planets` (Sun + 8), `moons`, `orbital_elements`, `atmospheres`, `moon_mean_elements` | 9 / 11 / 8 / 10 / 11 | JPL SSD, NASA NSSDC (field-by-field checks; planets carry `nssdc_fact_sheet`) |
+| `smallsat_components` (+ `smallsat_tables` index) | 1,578 (81 tables) | NASA SoA 2026: propulsion, power, GNC, comms, avionics, thermal, structures, platforms, launch integration, ground — **vendor-reported**, strings as published, `numeric` parsed where units are in the header |
 | `launch_vehicle_configs` | 532 | Launch Library 2 — **aggregator**; capacities don't state reference orbits |
 | `spacex_launch_history` | 743 | Launch Library 2 — aggregator |
-| `nasa_missions`, `nasa_instruments` | 39 / 181 | NASA NSSDC Master Catalog (prose descriptions; no structured instrument mass/power) |
+| `nasa_missions`, `nasa_instruments` | 39 / 181 | NASA NSSDC Master Catalog (prose; stated mass/power/cost parsed with the source sentence) |
 | `fluid_properties` | 6 | NIST Chemistry WebBook (O₂, H₂, CH₄, Xe, N₂, He) |
-| `nasa_facilities` | 485 | official data.nasa.gov table (contacts not ingested) |
 | `rocket_engines` (5), `electric_propulsion` (3), `launch_vehicles` (7), `rocket_stages` (3), `boosters`, `payload_capabilities` (11), `missions` (11) | verified fields only | NTRS, Apollo 11 press kit, NASA SLS page, ULA, ESA, NSSDC |
 
 Records contain **only their verified fields**; absent = not verified (never zero).
 
 ## ⚠ What is deliberately not here
-Structured instrument mass/power specs (NASA's catalog gives prose only), storable-propellant properties (RP-1, hydrazine, MMH, NTO), costs, manufacturer-confirmed specs for most engines, and the cost/science optimizer (it needed estimated and fictional values). Aggregator and vendor-reported sources are labelled (`source_authority`). Say so on your slide: *"verified-only; partial by design."* The staging build (`space-mission-research/`) still contains those values for maintainers, but nothing there is served or exported.
+Structured instrument mass/power specs (NASA's catalog gives prose only), storable-propellant properties (RP-1, hydrazine, MMH, NTO), component prices, manufacturer-confirmed specs for most engines, and the cost/science optimizer (it needed estimated and fictional values). Aggregator and vendor-reported sources are labelled (`source_authority`). Say so on your slide: *"verified-only; partial by design."* The staging build (`space-mission-research/`) still contains those values for maintainers, but nothing there is served or exported.
 
 ## Local backend endpoints
 | Endpoint | What |
 |---|---|
-| `GET /collections` | 16 collections and counts |
+| `GET /collections` | 20 collections and counts |
 | `GET /collections/{c}?q=&field=value&field_gte=&field_lte=&sort=-field&limit=&offset=&fields=a,b` | search / filter / sort / project (dotted paths allowed, e.g. `derived.escape_velocity_m_s_gte=5000`) |
 | `GET /collections/{c}/{id}` | one record (with `field_verification`) |
-| `GET /nhats/best?max_delta_v=&min_size_m=&limit=` | NHATS targets, lowest delta-v first |
 | `GET /light-time?target=` | one-way light-time range from verified orbits (derived) |
 | `POST /delta-v` | rocket equation (ideal) |
 | `POST /hohmann` | Hohmann transfer around any verified body (verified GM + radius) |
 
 ## Project ideas that fit this data
-* **Asteroid mission picker:** NHATS delta-v vs trip time vs size, with SBDB diameters; add rocket-equation propellant using verified Isp values (NEXT 4190 s, BPT-4000 2150 s, NSTAR ≈3300 s).
+* **Mission budget game:** pick a launcher ($/kg from `launch_vehicle_configs`), thruster (rocket equation with verified Isp: NEXT 4190 s, BPT-4000 2150 s, NSTAR ≈3300 s), power (NSSDC irradiance × array area) and radio (SoA data rate) and score mass/power/comm margins.
 * **Moon/Mars transfer planner:** Hohmann and light-time from verified constants; show Saturn V stage masses and verified launch capacities.
-* **Moon explorer:** all JPL satellite mean elements with orbit visualizations.
-* **Ground-infrastructure map:** official NASA facilities by center/status.
+* **Moon explorer:** JPL mean elements for 11 moons with orbit visualizations.
+* **Launch-risk meter:** success rate from `spacex_launch_history` and per-vehicle launch counts.
 * **Trust UI:** show `field_verification` source text and file hash for each number.
 
 ## Rebuild / extend
 ```bash
 make setup    # pip install -r requirements.txt (jsonschema, numpy)
-make all      # staging build -> strict verified dataset -> 77 validation checks -> API -> CSV/SQLite
-make test     # + backend smoke test (23 endpoint checks)
+make all      # staging build -> strict verified dataset -> 64 validation checks -> API -> CSV/SQLite
+make test     # + backend smoke test (22 endpoint checks)
 make fetch    # re-download source pages (needs network access to JPL/NASA/ULA/ESA)
 make verify   # re-run verification on cached pages, then make all
 ```

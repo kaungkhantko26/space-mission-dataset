@@ -6,7 +6,7 @@
   // foreign-key fields -> collections they point to (the API's "linkage")
   const LINKS = {
     engine_id: ["rocket_engines", "electric_propulsion"], vehicle_id: ["launch_vehicles"], launch_vehicle_id: ["launch_vehicles"],
-    instrument_ids: ["instruments"], parent_id: ["planets", "moons", "asteroids"], body_id: ["planets", "moons", "asteroids"],
+    instrument_ids: ["instruments"], parent_id: ["planets", "moons"], body_id: ["planets", "moons"],
     launch_site_id: ["launch_sites"], source_ids: ["sources"], scenario_id: ["mission_profiles"]
   };
   class SpaceMissionAPI {

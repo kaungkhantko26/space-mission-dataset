@@ -6,6 +6,8 @@
   {
    "id": "nmc_1968_118a",
    "cospar_id": "1968-118A",
+   "cost_mentions_in_text": [],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "Apollo 8",
    "launch_date": "1968-12-21",
    "launch_vehicle": "Saturn 5",
@@ -32,6 +34,8 @@
   {
    "id": "nmc_1969_059a",
    "cospar_id": "1969-059A",
+   "cost_mentions_in_text": [],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "Apollo 11 Command and Service Module (CSM)",
    "launch_date": "1969-07-16",
    "launch_vehicle": "Saturn 5",
@@ -58,6 +62,8 @@
   {
    "id": "nmc_1972_012a",
    "cospar_id": "1972-012A",
+   "cost_mentions_in_text": [],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "Pioneer 10",
    "launch_date": "1972-03-03",
    "launch_vehicle": "Atlas-Centaur",
@@ -84,6 +90,8 @@
   {
    "id": "nmc_1972_097a",
    "cospar_id": "1972-097A",
+   "cost_mentions_in_text": [],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "Nimbus 5",
    "launch_date": "1972-12-11",
    "launch_vehicle": "Delta",
@@ -110,6 +118,8 @@
   {
    "id": "nmc_1973_019a",
    "cospar_id": "1973-019A",
+   "cost_mentions_in_text": [],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "Pioneer 11",
    "launch_date": "1973-04-06",
    "launch_vehicle": "Atlas-Centaur",
@@ -136,6 +146,19 @@
   {
    "id": "nmc_1973_085a",
    "cospar_id": "1973-085A",
+   "cost_mentions_in_text": [
+    {
+     "sentence": "The total research, development, launch, and support costs for the Mariner series of spacecraft (Mariners 1 through 10) was approximately $554 million.",
+     "amount": 554.0,
+     "unit": "million"
+    },
+    {
+     "sentence": "The total cost of the Mariner 10 mission was roughly $100 million.",
+     "amount": 100.0,
+     "unit": "million"
+    }
+   ],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "Mariner 10",
    "launch_date": "1973-11-03",
    "launch_vehicle": "Atlas-Centaur",
@@ -162,6 +185,8 @@
   {
    "id": "nmc_1975_075a",
    "cospar_id": "1975-075A",
+   "cost_mentions_in_text": [],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "Viking 1 Orbiter",
    "launch_date": "1975-08-20",
    "launch_vehicle": "Titan IIIE-Centaur",
@@ -188,6 +213,8 @@
   {
    "id": "nmc_1975_083a",
    "cospar_id": "1975-083A",
+   "cost_mentions_in_text": [],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "Viking 2 Orbiter",
    "launch_date": "1975-09-09",
    "launch_vehicle": "Titan IIIE-Centaur",
@@ -214,6 +241,24 @@
   {
    "id": "nmc_1977_076a",
    "cospar_id": "1977-076A",
+   "cost_mentions_in_text": [
+    {
+     "sentence": "The rescoped mission was estimated to cost $250 million (through the end of Saturn operations), only a third of what the Grand Tour design would have cost.",
+     "amount": 250.0,
+     "unit": "million"
+    },
+    {
+     "sentence": "Through the end of the Neptune phase of the Voyager project, a total of $875 million had been expended for the construction, launch, and operations of both Voyager spacecraft.",
+     "amount": 875.0,
+     "unit": "million"
+    },
+    {
+     "sentence": "An additional $30 million was allocated for the first two years of VIM.",
+     "amount": 30.0,
+     "unit": "million"
+    }
+   ],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "Voyager 2",
    "launch_date": "1977-08-20",
    "launch_vehicle": "Titan IIIE-Centaur",
@@ -240,6 +285,24 @@
   {
    "id": "nmc_1977_084a",
    "cospar_id": "1977-084A",
+   "cost_mentions_in_text": [
+    {
+     "sentence": "The rescoped mission was estimated to cost $250 million (through the end of Saturn operations), only a third of what the Grand Tour design would have cost.",
+     "amount": 250.0,
+     "unit": "million"
+    },
+    {
+     "sentence": "Through the end of the Neptune phase of the Voyager project, a total of $875 million had been expended for the construction, launch, and operations of both Voyager spacecraft.",
+     "amount": 875.0,
+     "unit": "million"
+    },
+    {
+     "sentence": "An additional $30 million was allocated for the first two years of VIM.",
+     "amount": 30.0,
+     "unit": "million"
+    }
+   ],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "Voyager 1",
    "launch_date": "1977-09-05",
    "launch_vehicle": "Titan IIIE-Centaur",
@@ -266,6 +329,14 @@
   {
    "id": "nmc_1978_051a",
    "cospar_id": "1978-051A",
+   "cost_mentions_in_text": [
+    {
+     "sentence": "The orbiter cost $125 million to build and operate for the first 10 years.",
+     "amount": 125.0,
+     "unit": "million"
+    }
+   ],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "Pioneer Venus Orbiter",
    "launch_date": "1978-05-20",
    "launch_vehicle": "Atlas-Centaur",
@@ -292,6 +363,19 @@
   {
    "id": "nmc_1996_062a",
    "cospar_id": "1996-062A",
+   "cost_mentions_in_text": [
+    {
+     "sentence": "The Mars Global Surveyor mission cost about $154 million to develop and build and $65 million to launch.",
+     "amount": 154.0,
+     "unit": "million"
+    },
+    {
+     "sentence": "Mission operations and data analysis cost approximately $20 million/year.",
+     "amount": 20.0,
+     "unit": "million"
+    }
+   ],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "Mars Global Surveyor",
    "launch_date": "1996-11-07",
    "launch_vehicle": "Delta II 7925",
@@ -318,6 +402,19 @@
   {
    "id": "nmc_1996_068a",
    "cospar_id": "1996-068A",
+   "cost_mentions_in_text": [
+    {
+     "sentence": "The Mars Pathfinder mission cost approximately $265 million including launch and operations.",
+     "amount": 265.0,
+     "unit": "million"
+    },
+    {
+     "sentence": "Development and construction of the lander cost $150 million and the rover about $25 million.",
+     "amount": 150.0,
+     "unit": "million"
+    }
+   ],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "Mars Pathfinder",
    "launch_date": "1996-12-04",
    "launch_vehicle": "Delta II 7925",
@@ -344,6 +441,14 @@
   {
    "id": "nmc_1998_001a",
    "cospar_id": "1998-001A",
+   "cost_mentions_in_text": [
+    {
+     "sentence": "Total cost for the mission was $62.8 million including development ($34 million), launch vehicle (~$25 million) and operations (~$4 million).",
+     "amount": 62.8,
+     "unit": "million"
+    }
+   ],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "Lunar Prospector",
    "launch_date": "1998-01-07",
    "launch_vehicle": "Athena 2",
@@ -370,6 +475,14 @@
   {
    "id": "nmc_1999_003a",
    "cospar_id": "1999-003A",
+   "cost_mentions_in_text": [
+    {
+     "sentence": "The total mission cost of Stardust was approximately $199.6 million, of which roughly $128.4 million was the cost of development and construction of the spacecraft and $40 million was for mission operations.",
+     "amount": 199.6,
+     "unit": "million"
+    }
+   ],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "Stardust/NExT",
    "launch_date": "1999-02-07",
    "launch_vehicle": "Delta II 7426",
@@ -396,6 +509,8 @@
   {
    "id": "nmc_2001_013a",
    "cospar_id": "2001-013A",
+   "cost_mentions_in_text": [],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "2001 Mars Odyssey",
    "launch_date": "2001-04-07",
    "launch_vehicle": "Delta II 7425",
@@ -422,6 +537,8 @@
   {
    "id": "nmc_2003_027a",
    "cospar_id": "2003-027A",
+   "cost_mentions_in_text": [],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "Spirit",
    "launch_date": "2003-06-10",
    "launch_vehicle": "Delta II 7925",
@@ -448,6 +565,8 @@
   {
    "id": "nmc_2003_032a",
    "cospar_id": "2003-032A",
+   "cost_mentions_in_text": [],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "Opportunity",
    "launch_date": "2003-07-08",
    "launch_vehicle": "Delta II 7925",
@@ -474,6 +593,8 @@
   {
    "id": "nmc_2004_030a",
    "cospar_id": "2004-030A",
+   "cost_mentions_in_text": [],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "MESSENGER",
    "launch_date": "2004-08-03",
    "launch_vehicle": "Delta II 7925",
@@ -500,6 +621,19 @@
   {
    "id": "nmc_2005_001a",
    "cospar_id": "2005-001A",
+   "cost_mentions_in_text": [
+    {
+     "sentence": "The total budget for the primary mission was $240 million.",
+     "amount": 240.0,
+     "unit": "million"
+    },
+    {
+     "sentence": "Total cost of the extended mission is $40 million.",
+     "amount": 40.0,
+     "unit": "million"
+    }
+   ],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "Deep Impact/EPOXI",
    "launch_date": "2005-01-12",
    "launch_vehicle": "Delta II",
@@ -526,6 +660,14 @@
   {
    "id": "nmc_2005_029a",
    "cospar_id": "2005-029A",
+   "cost_mentions_in_text": [
+    {
+     "sentence": "Total cost of the mission is estimated at about $720 million.",
+     "amount": 720.0,
+     "unit": "million"
+    }
+   ],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "Mars Reconnaissance Orbiter",
    "launch_date": "2005-08-12",
    "launch_vehicle": "Atlas V 401",
@@ -552,6 +694,14 @@
   {
    "id": "nmc_2006_001a",
    "cospar_id": "2006-001A",
+   "cost_mentions_in_text": [
+    {
+     "sentence": "Total mission cost is planned to be under $550 million.",
+     "amount": 550.0,
+     "unit": "million"
+    }
+   ],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "New Horizons Pluto Kuiper Belt Flyby",
    "launch_date": "2006-01-19",
    "launch_vehicle": "Atlas V",
@@ -578,6 +728,14 @@
   {
    "id": "nmc_2007_034a",
    "cospar_id": "2007-034A",
+   "cost_mentions_in_text": [
+    {
+     "sentence": "Cost of the mission is estimated at $417 million.",
+     "amount": 417.0,
+     "unit": "million"
+    }
+   ],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "Phoenix Mars Lander",
    "launch_date": "2007-08-04",
    "launch_vehicle": "Delta II",
@@ -604,6 +762,14 @@
   {
    "id": "nmc_2007_043a",
    "cospar_id": "2007-043A",
+   "cost_mentions_in_text": [
+    {
+     "sentence": "The total cost for the mission is estimated to be $446 million.",
+     "amount": 446.0,
+     "unit": "million"
+    }
+   ],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "Dawn",
    "launch_date": "2007-09-27",
    "launch_vehicle": "Delta II 7925",
@@ -630,6 +796,8 @@
   {
    "id": "nmc_2009_011a",
    "cospar_id": "2009-011A",
+   "cost_mentions_in_text": [],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "Kepler",
    "launch_date": "2009-03-07",
    "launch_vehicle": "Delta II",
@@ -656,6 +824,14 @@
   {
    "id": "nmc_2009_031a",
    "cospar_id": "2009-031A",
+   "cost_mentions_in_text": [
+    {
+     "sentence": "The total estimated total cost for the mission is roughly $460 million.",
+     "amount": 460.0,
+     "unit": "million"
+    }
+   ],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "Lunar Reconnaissance Orbiter (LRO)",
    "launch_date": "2009-06-18",
    "launch_vehicle": "Atlas V 401",
@@ -682,6 +858,8 @@
   {
    "id": "nmc_2011_040a",
    "cospar_id": "2011-040A",
+   "cost_mentions_in_text": [],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "Juno",
    "launch_date": "2011-08-05",
    "launch_vehicle": "Atlas V",
@@ -708,6 +886,14 @@
   {
    "id": "nmc_2011_046a",
    "cospar_id": "2011-046A",
+   "cost_mentions_in_text": [
+    {
+     "sentence": "The estimated cost of the mission is $375 million.",
+     "amount": 375.0,
+     "unit": "million"
+    }
+   ],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "Gravity Recovery And Interior Laboratory-A (GRAIL)",
    "launch_date": "2011-09-10",
    "launch_vehicle": "Delta II",
@@ -734,6 +920,8 @@
   {
    "id": "nmc_2011_070a",
    "cospar_id": "2011-070A",
+   "cost_mentions_in_text": [],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "Mars Science Laboratory (MSL)",
    "launch_date": "2011-11-26",
    "launch_vehicle": "Atlas V",
@@ -760,6 +948,8 @@
   {
    "id": "nmc_2013_008a",
    "cospar_id": "2013-008A",
+   "cost_mentions_in_text": [],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "Landsat 8",
    "launch_date": "2013-02-11",
    "launch_vehicle": "Atlas V",
@@ -786,6 +976,14 @@
   {
    "id": "nmc_2013_047a",
    "cospar_id": "2013-047A",
+   "cost_mentions_in_text": [
+    {
+     "sentence": "Total lifetime cost of the mission is approximately $263 million.",
+     "amount": 263.0,
+     "unit": "million"
+    }
+   ],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "Lunar Atmosphere and Dust Environment Explorer (LADEE)",
    "launch_date": "2013-09-07",
    "launch_vehicle": "Minotaur 5",
@@ -812,6 +1010,8 @@
   {
    "id": "nmc_2013_063a",
    "cospar_id": "2013-063A",
+   "cost_mentions_in_text": [],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "Mars Atmosphere and Volatile EvolutioN (MAVEN)",
    "launch_date": "2013-11-18",
    "launch_vehicle": "Atlas V 401",
@@ -838,6 +1038,8 @@
   {
    "id": "nmc_2016_055a",
    "cospar_id": "2016-055A",
+   "cost_mentions_in_text": [],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "OSIRIS-REx",
    "launch_date": "2016-09-08",
    "launch_vehicle": "Atlas V",
@@ -864,6 +1066,8 @@
   {
    "id": "nmc_2018_038a",
    "cospar_id": "2018-038A",
+   "cost_mentions_in_text": [],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "Transiting Exoplanet Survey Satellite",
    "launch_date": "2018-04-18",
    "launch_vehicle": "Falcon 9 Full Thrust",
@@ -890,6 +1094,8 @@
   {
    "id": "nmc_2018_042a",
    "cospar_id": "2018-042A",
+   "cost_mentions_in_text": [],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "InSight",
    "launch_date": "2018-05-05",
    "launch_vehicle": "Atlas V 401",
@@ -916,6 +1122,8 @@
   {
    "id": "nmc_2018_065a",
    "cospar_id": "2018-065A",
+   "cost_mentions_in_text": [],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "Parker Solar Probe",
    "launch_date": "2018-08-12",
    "launch_vehicle": "Delta IV",
@@ -942,6 +1150,8 @@
   {
    "id": "nmc_2020_052a",
    "cospar_id": "2020-052A",
+   "cost_mentions_in_text": [],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "MARS 2020",
    "launch_date": "2020-07-30",
    "launch_vehicle": "Atlas V",
@@ -968,6 +1178,8 @@
   {
    "id": "nmc_2021_093a",
    "cospar_id": "2021-093A",
+   "cost_mentions_in_text": [],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "Lucy",
    "launch_date": "2021-10-16",
    "launch_vehicle": "Atlas V 401",
@@ -994,6 +1206,8 @@
   {
    "id": "nmc_2021_130a",
    "cospar_id": "2021-130A",
+   "cost_mentions_in_text": [],
+   "cost_note": "cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",
    "name": "James Webb Space Telescope",
    "launch_date": "2021-12-25",
    "launch_vehicle": "Ariane 5",

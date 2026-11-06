@@ -83,7 +83,8 @@ def nmc_missions():
         g=lambda lab,end: (re.search(lab+r":\s*(.*?)\s*(?:"+end+")",s) or [None,None])[1]
         desc=re.search(r"NSSDCA/COSPAR ID:\s*"+re.escape(cid)+r"\s*(.*?)\s*Alternate Names",s)
         mass=re.search(r"Mass:\s*([\d,.]+)\s*kg",s); power=re.search(r"Nominal Power:\s*([\d,.]+)\s*W",s)
-        rec=dict(id="nmc_"+cid.lower().replace("-","_"),cospar_id=cid,name=nm.group(1).strip() if nm else None,launch_date=g("Launch Date","Launch Vehicle"),launch_vehicle=g("Launch Vehicle","Launch Site"),launch_site=g("Launch Site","Mass:|Nominal Power|Funding"),
+        costs=[dict(sentence=x.strip(),amount=float(m_.group(1).replace(",","")),unit=m_.group(2)) for x in re.split(r"(?<=[.!?])\s+",desc.group(1) if desc else "") for m_ in [re.search(r"\$\s?([\d.,]+)\s*(million|billion)",x)] if m_]
+        rec=dict(id="nmc_"+cid.lower().replace("-","_"),cospar_id=cid,cost_mentions_in_text=costs,cost_note="cost_mentions_in_text are sentences from the NASA catalog description that state a dollar amount (planned, estimated or total); the scope and year are whatever the sentence says.",name=nm.group(1).strip() if nm else None,launch_date=g("Launch Date","Launch Vehicle"),launch_vehicle=g("Launch Vehicle","Launch Site"),launch_site=g("Launch Site","Mass:|Nominal Power|Funding"),
                  catalog_mass_kg=float(mass.group(1).replace(",","")) if mass else None,nominal_power_w=float(power.group(1).replace(",","")) if power else None,funding_agency=g("Funding Agency","Discipline|Additional"),discipline=g("Discipline","Additional Information|Launch"),
                  description=EMAIL.sub("[email removed]",desc.group(1))[:4000] if desc else None,mass_note="catalog_mass_kg is the value printed in the NSSDC catalog; the catalog does not say whether it is dry, launch or payload mass, and its meaning differs between missions.",
                  data_class="verified",confidence="high",source_ids=["S49"],retrieval_status="retrieved",provenance=fileinfo(f,f"https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id={cid}"))
@@ -94,12 +95,36 @@ def nmc_missions():
         d=re.search(r"Description\s+(.*?)(?:\s+Alternate Names|\s+Questions and comments|\s+NSSDCA Master Catalog Search)",s)
         text=EMAIL.sub("[email removed]",d.group(1)) if d else None
         if not nm: continue
-        exps.append(dict(id="nmc_exp_"+eid.lower().replace("-","_"),nssdca_id=eid,spacecraft_cospar_id=sc,spacecraft_id="nmc_"+sc.lower().replace("-","_"),name=nm.group(1).strip(),mission_name=mn.group(1).strip() if mn else None,description=text[:6000] if text else None,
+        sent=[x.strip() for x in re.split(r"(?<=[.!?])\s+",text or "")]
+        mass_s=[(x,re.search(r"(\d+(?:\.\d+)?)\s*kg",x)) for x in sent if re.search(r"\b(mass|weigh\w*)\b",x,flags=re.I) and re.search(r"\d\s*kg",x)]
+        pow_s=[(x,re.search(r"(\d+(?:\.\d+)?)\s*(?:W|watts?)\b",x)) for x in sent if re.search(r"\b(power|consum\w*)\b",x,flags=re.I) and re.search(r"\d\s*(?:W|watts?)\b",x)]
+        exps.append(dict(id="nmc_exp_"+eid.lower().replace("-","_"),mass_kg_from_text=(float(mass_s[0][1].group(1)) if mass_s else None),mass_sentence=(mass_s[0][0][:400] if mass_s else None),power_w_from_text=(float(pow_s[0][1].group(1)) if pow_s else None),power_sentence=(pow_s[0][0][:400] if pow_s else None),
+                 spec_note="mass/power fields are taken from the first sentence in the NASA description that states a mass in kg or a power in W; they may describe a sub-unit or a mode. Read the sentence.",nssdca_id=eid,spacecraft_cospar_id=sc,spacecraft_id="nmc_"+sc.lower().replace("-","_"),name=nm.group(1).strip(),mission_name=mn.group(1).strip() if mn else None,description=text[:6000] if text else None,
                  numeric_mentions_in_text=[dict(value=float(v),unit=u,context=text[max(0,m.start()-50):m.end()+20]) for m in MENT.finditer(text or "") for v,u in [m.groups()]][:25],
                  text_extraction_note="numeric_mentions_in_text are regex matches of 'number unit' in the catalog prose, with context; they are not structured specifications.",
                  data_class="verified",confidence="high",source_ids=["S49"],retrieval_status="retrieved",provenance=fileinfo(f,f"https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id={eid}")))
     return ms,exps
 ATM_FIELDS=[("surface_pressure","Surface pressure"),("surface_density","Surface density"),("scale_height","Scale height"),("total_atmosphere_mass","Total mass of atmosphere"),("average_temperature","Average temperature"),("diurnal_temperature_range","Diurnal temperature range"),("wind_speeds","Wind speeds"),("mean_molecular_weight","Mean molecular weight")]
+NSSDC_LABELS=["Solar irradiance","J 2","Bond albedo","Geometric albedo","Black-body temperature","Obliquity to orbit","Length of day","Sidereal rotation period","Mean density","Surface gravity (mean)","Surface acceleration (eq)","Escape velocity","Ellipticity","Moment of inertia","Number of natural satellites","Planetary ring system","Synodic period","Mean orbital velocity","Min. orbital velocity","Max. orbital velocity","Perihelion","Aphelion","Equatorial radius","Polar radius","Core radius","Topographic range"]
+def nssdc_params():
+    """Rows of the NASA NSSDC planetary fact sheets for the Sun-orbiting planets and the Moon, exactly as published (planet column only)."""
+    out={}
+    for body in ("mercury","venus","earth","mars","jupiter","saturn","uranus","neptune","moon"):
+        f=os.path.join(RET,f"nssdc_{body}.html")
+        if not os.path.exists(f): continue
+        t=open(f,encoding="utf-8",errors="replace").read(); pub={}
+        for tb in re.findall(r"<table.*?</table>",t,flags=re.S|re.I):
+            for tr in re.findall(r"<tr.*?</tr>",tb,flags=re.S|re.I):
+                c=[clean(x) for x in re.findall(r"<t[dh].*?</t[dh]>",tr,flags=re.S|re.I)]
+                if len(c)>=2 and any(c[0].startswith(l) for l in NSSDC_LABELS) and c[0] not in pub and c[1]: pub[c[0]]=c[1]
+        if not pub:   # plain-text layout (e.g. Earth sheet): "<label> <value>" pairs in reading order
+            txt=page_text(f)
+            for l in NSSDC_LABELS:
+                m=re.search(r"("+re.escape(l)+r"(?:\s*\([^)]*\))*)\s+(-?\d[\d,]*\.?\d*)\b",txt)
+                if m and m.group(1).strip() not in pub: pub[m.group(1).strip()]=m.group(2)
+        num_=lambda v:(lambda m:float(m.group(0).replace(",","")) if m else None)(re.match(r"-?[\d,]*\.?\d+",v.replace("−","-")))
+        out[body]=dict(published=pub,numeric={k:num_(v) for k,v in pub.items() if num_(v) is not None},provenance=fileinfo(f,f"https://nssdc.gsfc.nasa.gov/planetary/factsheet/{body}fact.html"))
+    return out
 def atmospheres():
     out=[]
     for body in ("mercury","venus","earth","mars","jupiter","saturn","uranus","neptune","moon","pluto"):

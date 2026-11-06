@@ -21,11 +21,11 @@ for n in names:
     for r in recs: search.append(dict(c=n,id=r["id"],name=r.get("name") or r.get("full_name") or r.get("facility") or r.get("satellite") or r.get("designation") or r["id"]))
     idx.append(dict(collection=n,description=DESC.get(n,n),count=len(recs),url=f"{n}.json",record_url_template=(f"{n}/{{id}}.json" if per_record else None),note=(None if per_record else "large collection: use the collection file")))
 W("search-index.json",dict(count=len(search),items=search))
-W("analysis/light_time.json",dict(records=C["analysis"]["light_time"])); W("analysis/nhats_lowest_delta_v.json",dict(records=C["analysis"]["nhats_lowest_delta_v"]))
+W("analysis/light_time.json",dict(records=C["analysis"]["light_time"]))
 W("missions/trajectory_reference.json",dict(records=C["missions"]["trajectory_reference"])); W("quality.json",C["metadata"]["quality"])
 vr=os.path.join(V,"validation_report.json");
 if os.path.exists(vr): W("validation.json",json.load(open(vr)))
-extra=["search-index.json","analysis/light_time.json","analysis/nhats_lowest_delta_v.json","missions/trajectory_reference.json","quality.json","validation.json"]
+extra=["search-index.json","analysis/light_time.json","missions/trajectory_reference.json","quality.json","validation.json"]
 W("index.json",dict(api="Space Mission Research Data API (verified-only)",version="v1",mode="STRICT: verified data only",type="static JSON (read-only, CORS-enabled on GitHub Pages)",data_status=BANNER,openapi="openapi.json",collections=idx,other_endpoints=extra,
    conventions=["SI units unless the field name says otherwise (NHATS delta-v in km/s, durations in days; SBDB diameters in km; JPL satellite elements in km/deg/days)","null = not recorded","every record is verified against, or ingested directly from, a retrieved source","ids are unique within a collection"],license_note="See LICENSE-DATA.md"))
 rec={"type":"object","required":["id"],"properties":{"id":{"type":"string"},"data_class":{"const":"verified"},"source_ids":{"type":"array","items":{"type":"string"}},"retrieval_status":{"type":"string"}},"additionalProperties":True}
@@ -33,12 +33,12 @@ paths={"/index.json":{"get":{"summary":"API index","responses":{"200":{"descript
 for n in names:
     paths[f"/{n}.json"]={"get":{"summary":f"List {n}: {DESC.get(n,n)}","tags":[n],"responses":{"200":{"description":"Collection","content":{"application/json":{"schema":{"type":"object","properties":{"collection":{"type":"string"},"count":{"type":"integer"},"records":{"type":"array","items":{"$ref":"#/components/schemas/Record"}}}}}}}}}}
     if any(i["collection"]==n and i["record_url_template"] for i in idx): paths[f"/{n}/{{id}}.json"]={"get":{"summary":f"Get one {n} record","tags":[n],"parameters":[{"name":"id","in":"path","required":True,"schema":{"type":"string"}}],"responses":{"200":{"description":"Record"},"404":{"description":"Unknown id"}}}}
-for p,s in (("/analysis/light_time.json","One-way light-time ranges derived from verified orbits"),("/analysis/nhats_lowest_delta_v.json","25 lowest-delta-v NHATS targets"),("/missions/trajectory_reference.json","Delta-v and transfer references derived from verified constants")):
+for p,s in (("/analysis/light_time.json","One-way light-time ranges derived from verified orbits"),("/missions/trajectory_reference.json","Delta-v and transfer references derived from verified constants")):
     paths[p]={"get":{"summary":s,"tags":["analysis"],"responses":{"200":{"description":"OK"}}}}
 W("openapi.json",{"openapi":"3.0.3","info":{"title":"Space Mission Research Data API (verified-only)","version":"1.0.0","description":"Static read-only JSON API. "+BANNER},"servers":[{"url":"https://kaungkhantko26.github.io/space-mission-dataset/api/v1"},{"url":"http://localhost:8001/api/v1"}],"paths":paths,"components":{"schemas":{"Record":rec}}})
 # files the static site loads
 os.makedirs(os.path.join(ROOT,"docs","data"),exist_ok=True)
 shutil.copy(os.path.join(V,"combined","verified_space_mission_data.json"),os.path.join(ROOT,"docs","data","all_space_mission_data.json"))
-for f in ("nhats_targets.json","neo_catalog.json","smallsat_components.json","nasa_instruments.json","launch_vehicle_configs.json","spacex_launch_history.json"): shutil.copy(os.path.join(V,f),os.path.join(ROOT,"docs","data",f))
+for f in ("smallsat_components.json","nasa_instruments.json","launch_vehicle_configs.json","spacex_launch_history.json"): shutil.copy(os.path.join(V,f),os.path.join(ROOT,"docs","data",f))
 if os.path.exists(vr): shutil.copy(vr,os.path.join(ROOT,"docs","data","validation_report.json"))
 print("api built:",len(names),"collections,",sum(len(json.load(open(os.path.join(V,n+'.json')))['records']) for n in names),"records")

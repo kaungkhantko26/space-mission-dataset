@@ -6,7 +6,6 @@ GET  /health
 GET  /collections                                   -> names + counts
 GET  /collections/{c}?q=text&field=value&field_gte=&field_lte=&sort=-field&limit=20&offset=0&fields=id,name
 GET  /collections/{c}/{id}
-GET  /nhats/best?max_delta_v=6&min_size_m=100&limit=20   -> accessible near-Earth targets, lowest delta-v first (JPL NHATS data)
 GET  /light-time?target=mars                        -> one-way light-time range from verified orbits
 POST /delta-v   {"isp_s":310,"m0_kg":1000,"mf_kg":400}  or  {"isp_s":310,"delta_v_m_s":4000,"mf_kg":500}
 POST /hohmann   {"body":"earth","altitude1_km":400,"altitude2_km":35786}   (uses verified GM and radius)
@@ -23,7 +22,7 @@ def load():
     return cols
 RAW=load(); COL={k:v["records"] for k,v in RAW.items()}
 C=json.load(open(os.path.join(V,"combined","verified_space_mission_data.json"))); BANNER=C["metadata"]["quality"]["statement"]
-BODY={r["id"]:r for k in ("planets","moons","asteroids") for r in COL[k]}
+BODY={r["id"]:r for k in ("planets","moons") for r in COL[k]}
 def get(o,path):
     for k in path.split("."):
         if not isinstance(o,dict) or k not in o: return None
@@ -57,11 +56,6 @@ def query_collection(name,q):
     resp=dict(collection=name,total=total,offset=off,limit=lim,data_status=BANNER,records=out)
     if RAW[name].get("provenance"): resp["provenance"]=RAW[name]["provenance"]
     return resp
-def nhats_best(q):
-    f=lambda k,d=None: float(q[k][0]) if k in q else d
-    mx=f("max_delta_v"); ms=f("min_size_m"); lim=int(f("limit",20))
-    rs=[r for r in COL["nhats_targets"] if r["min_delta_v_km_s"] is not None and (mx is None or r["min_delta_v_km_s"]<=mx) and (ms is None or (r["size_max_m"] or 0)>=ms)]
-    rs.sort(key=lambda r:r["min_delta_v_km_s"]); return dict(total=len(rs),records=rs[:lim],provenance=RAW["nhats_targets"]["provenance"],note="delta-v in km/s, durations in days, as published by the JPL NHATS study; sizes are estimated by NHATS from H magnitude.")
 def delta_v(b):
     isp=float(b["isp_s"])
     if "delta_v_m_s" in b:
@@ -81,13 +75,12 @@ class H(BaseHTTPRequestHandler):
     def do_GET(self):
         u=urlparse(self.path); q=parse_qs(u.query); parts=[x for x in u.path.split("/") if x]
         try:
-            if not parts or parts==["health"]: return self.send(200,dict(status="ok",mode="STRICT: verified data only",data_status=BANNER,endpoints=["/collections","/collections/{c}","/collections/{c}/{id}","/nhats/best","/light-time","POST /delta-v","POST /hohmann"]))
+            if not parts or parts==["health"]: return self.send(200,dict(status="ok",mode="STRICT: verified data only",data_status=BANNER,endpoints=["/collections","/collections/{c}","/collections/{c}/{id}","/light-time","POST /delta-v","POST /hohmann"]))
             if parts==["collections"]: return self.send(200,{k:len(v) for k,v in COL.items()})
             if parts[0]=="collections" and len(parts)==2:
                 return self.send(200,query_collection(parts[1],q)) if parts[1] in COL else self.send(404,dict(error="unknown collection",collections=list(COL)))
             if parts[0]=="collections" and len(parts)==3:
                 r=[x for x in COL.get(parts[1],[]) if x.get("id")==parts[2]]; return self.send(200,dict(collection=parts[1],record=r[0],data_status=BANNER)) if r else self.send(404,dict(error="not found"))
-            if parts==["nhats","best"]: return self.send(200,nhats_best(q))
             if parts==["light-time"]:
                 t=(q.get("target") or [None])[0]; rs=[x for x in C["analysis"]["light_time"] if t is None or x["target"]==t]; return self.send(200,dict(records=rs)) if rs else self.send(404,dict(error="targets: "+", ".join(x["target"] for x in C["analysis"]["light_time"])))
             return self.send(404,dict(error="not found"))

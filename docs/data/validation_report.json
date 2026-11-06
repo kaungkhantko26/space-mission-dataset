@@ -1,12 +1,12 @@
 {
- "passed": 77,
- "total": 77,
+ "passed": 64,
+ "total": 64,
  "run_date": "2026-11-06",
  "checks": [
   {
    "check": "json_syntax_all_files",
    "passed": true,
-   "detail": "26 files"
+   "detail": "22 files"
   },
   {
    "check": "no_unverified_estimated_or_fictional_class_anywhere",
@@ -41,17 +41,12 @@
   {
    "check": "unique_ids:orbital_elements",
    "passed": true,
-   "detail": "13"
-  },
-  {
-   "check": "unique_ids:nasa_facilities",
-   "passed": true,
-   "detail": "485"
+   "detail": "8"
   },
   {
    "check": "unique_ids:smallsat_components",
    "passed": true,
-   "detail": "1724"
+   "detail": "1578"
   },
   {
    "check": "unique_ids:boosters",
@@ -76,22 +71,12 @@
   {
    "check": "unique_ids:smallsat_tables",
    "passed": true,
-   "detail": "99"
+   "detail": "81"
   },
   {
    "check": "unique_ids:moon_mean_elements",
    "passed": true,
-   "detail": "461"
-  },
-  {
-   "check": "unique_ids:nhats_targets",
-   "passed": true,
-   "detail": "7185"
-  },
-  {
-   "check": "unique_ids:neo_catalog",
-   "passed": true,
-   "detail": "1265"
+   "detail": "11"
   },
   {
    "check": "unique_ids:rocket_engines",
@@ -109,11 +94,6 @@
    "detail": "10"
   },
   {
-   "check": "unique_ids:asteroids",
-   "passed": true,
-   "detail": "2"
-  },
-  {
    "check": "unique_ids:missions",
    "passed": true,
    "detail": "11"
@@ -126,7 +106,7 @@
   {
    "check": "unique_ids:planets",
    "passed": true,
-   "detail": "12"
+   "detail": "9"
   },
   {
    "check": "unique_ids:rocket_stages",
@@ -140,11 +120,6 @@
   },
   {
    "check": "provenance_complete:moons",
-   "passed": true,
-   "detail": "[]"
-  },
-  {
-   "check": "provenance_complete:asteroids",
    "passed": true,
    "detail": "[]"
   },
@@ -179,77 +154,12 @@
    "detail": "[]"
   },
   {
-   "check": "collection_provenance:nhats_targets",
-   "passed": true,
-   "detail": ""
-  },
-  {
-   "check": "source_file_hash_matches:nhats_targets",
-   "passed": true,
-   "detail": ""
-  },
-  {
-   "check": "collection_provenance:neo_catalog",
-   "passed": true,
-   "detail": ""
-  },
-  {
-   "check": "source_file_hash_matches:neo_catalog",
-   "passed": true,
-   "detail": ""
-  },
-  {
    "check": "collection_provenance:moon_mean_elements",
    "passed": true,
    "detail": ""
   },
   {
    "check": "source_file_hash_matches:moon_mean_elements",
-   "passed": true,
-   "detail": ""
-  },
-  {
-   "check": "collection_provenance:nasa_facilities",
-   "passed": true,
-   "detail": ""
-  },
-  {
-   "check": "source_file_hash_matches:nasa_facilities",
-   "passed": true,
-   "detail": ""
-  },
-  {
-   "check": "nhats_count_equals_raw",
-   "passed": true,
-   "detail": "7185 vs 7185"
-  },
-  {
-   "check": "nhats_every_record_equals_raw_source",
-   "passed": true,
-   "detail": ""
-  },
-  {
-   "check": "neo_every_record_equals_raw_source",
-   "passed": true,
-   "detail": ""
-  },
-  {
-   "check": "neo_diameters_all_present",
-   "passed": true,
-   "detail": ""
-  },
-  {
-   "check": "facilities_equal_official_rows",
-   "passed": true,
-   "detail": ""
-  },
-  {
-   "check": "facilities_contain_no_personal_contact_data",
-   "passed": true,
-   "detail": ""
-  },
-  {
-   "check": "facility_coords_plausible",
    "passed": true,
    "detail": ""
   },
@@ -261,12 +171,12 @@
   {
    "check": "celestial_core_fields_present",
    "passed": true,
-   "detail": "25"
+   "detail": "20"
   },
   {
-   "check": "moon_element_rows_equal_raw_table",
+   "check": "moon_element_rows_found_in_raw_table",
    "passed": true,
-   "detail": "461 vs 461"
+   "detail": "11"
   },
   {
    "check": "vehicle_twr_in_1_to_2.5",
@@ -280,11 +190,6 @@
   },
   {
    "check": "payload_capacities_have_positive_mass",
-   "passed": true,
-   "detail": ""
-  },
-  {
-   "check": "nhats_dv_positive_and_sizes_ordered",
    "passed": true,
    "detail": ""
   },
@@ -311,7 +216,7 @@
   {
    "check": "soa_unique_ids_and_table_index",
    "passed": true,
-   "detail": "1724 records, 99 tables"
+   "detail": "1578 records, 81 tables"
   },
   {
    "check": "soa_covers_all_domains",
@@ -381,12 +286,42 @@
   {
    "check": "ll2_spacex_status_values_known",
    "passed": true,
-   "detail": "{'Launch was a Partial Failure', 'Launch Failure', 'Launch Successful'}"
+   "detail": "{'Launch Failure', 'Launch Successful', 'Launch was a Partial Failure'}"
   },
   {
    "check": "nist_boiling_points_and_liquid_densities_match_known_physics",
    "passed": true,
    "detail": "[]"
+  },
+  {
+   "check": "nssdc_params_present_for_all_planets",
+   "passed": true,
+   "detail": "solar irradiance published for every planet"
+  },
+  {
+   "check": "nssdc_irradiance_matches_inverse_square_of_verified_orbits",
+   "passed": true,
+   "detail": "derived 1361/a^2 vs published"
+  },
+  {
+   "check": "instrument_mass_power_sentences_found_in_raw_pages",
+   "passed": true,
+   "detail": "[]"
+  },
+  {
+   "check": "instrument_text_specs_count",
+   "passed": true,
+   "detail": "18 with mass, 17 with power"
+  },
+  {
+   "check": "mission_cost_sentences_found_in_raw_pages",
+   "passed": true,
+   "detail": "[]"
+  },
+  {
+   "check": "game_scope_no_asteroid_or_facility_collections",
+   "passed": true,
+   "detail": ""
   }
  ],
  "not_performed": [

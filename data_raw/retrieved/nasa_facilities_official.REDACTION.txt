@@ -1,3 +1,0 @@
-The Contact and Phone columns (personal names and phone numbers of NASA staff) were removed from nasa_facilities_official.csv before it was stored in this repository.
-SHA-256 of the original download: dc10864a161c48d49f71f028ce1ae6b1fcf888ac1f8307c82400444e792cf4cf
-Source: https://data.nasa.gov/docs/legacy/NASA_Facilities/NASA_Facilities_rows.csv
