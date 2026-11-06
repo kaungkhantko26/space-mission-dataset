@@ -33,7 +33,25 @@
     "engine_thrust_to_weight_vac": 73.14867010943338,
     "mass_flow_sl_kg_s": 517.9378251163849
    },
-   "derived_from": "mdot=F/(Isp*g0); TWR=F/(m*g0); thrust/power"
+   "derived_from": "mdot=F/(Isp*g0); TWR=F/(m*g0); thrust/power",
+   "field_verification": {
+    "thrust_vac_n": {
+     "status": "verified",
+     "source_id": "S41",
+     "source_url": "https://www.nasa.gov/reference/space-launch-system/",
+     "retrieved": "2026-11-06",
+     "source_sha256": "dacd12643163e96a6ca709bd11270edc6ba8c81fc8a0ce8694fb8e9e3dbd6193",
+     "section": "SLS reference page: RS-25 required operation at a maximum of 512,000 lbs of thrust (SLS RS-25 requirement; same level as the recorded RS-25D 109% vacuum thrust)",
+     "source_original_text": "maximum of 512,000 lbs. of thrust",
+     "source_value": 2277489.467013376,
+     "source_unit": "lbf→N",
+     "statement_type": "point value",
+     "tolerance_rel": 0.005,
+     "recalled_value": 2279000
+    }
+   },
+   "verified_field_count": 1,
+   "verification_scope": "partial: only the fields in field_verification were checked against a retrieved page; the record as a whole remains unverified"
   },
   {
    "id": "rl10c1",

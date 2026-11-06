@@ -1,21 +1,65 @@
 {
  "collection": "orbital_elements",
- "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "data_status": "25 celestial records (Sun, planets, dwarf planets, moons, small bodies) have their core physical fields verified against retrieved JPL/NASA pages (198 field checks matched; 16 conflicts were resolved to the sourced value). Six SLS/RS-25 launch figures were also verified against the NASA SLS page; all other launch-vehicle, engine, spacecraft, instrument and mission figures are still unverified (recalled values), as are two user-supplied tables (SpaceX launches 2010-2018, NASA facilities). Derived values inherit the status of their inputs. Optimization catalog values are estimated/fictional.",
  "record": {
   "body_id": "bennu",
-  "epoch": null,
+  "epoch": "JD 2455562.5 (osculating, SBDB)",
   "frame": "heliocentric ecliptic",
   "semi_major_axis_au": 1.1264,
   "eccentricity": 0.2037,
   "inclination_deg": 6.035,
-  "validity": "Approximate osculating/mean values; reference epoch not recorded",
+  "validity": "osculating elements at the stated epoch (JPL SBDB); time-dependent",
   "time_dependence": "time-dependent",
-  "data_class": "unverified",
-  "confidence": "low",
+  "data_class": "verified",
+  "confidence": "high",
   "source_ids": [
-   "S03"
+   "S40"
   ],
-  "retrieval_status": "not_retrieved",
+  "retrieval_status": "retrieved",
+  "field_verification": {
+   "semi_major_axis_au": {
+    "status": "verified",
+    "source_id": "S40",
+    "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=101955&phys-par=1",
+    "retrieved": "2026-11-06",
+    "source_sha256": "9b8fa7ba677fcf7962ceb2f2bf6074e9105cd6fdd55b90411bf0c25a6f7720de",
+    "section": "SBDB orbit.elements 'a' (osculating, epoch JD 2455562.5)",
+    "source_original_text": "1.13",
+    "source_value": 1.13,
+    "source_unit": "au",
+    "conversion": "compared at the source's printed precision (2 decimals)",
+    "tolerance_rel": null,
+    "recalled_value": 1.1264
+   },
+   "eccentricity": {
+    "status": "verified",
+    "source_id": "S40",
+    "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=101955&phys-par=1",
+    "retrieved": "2026-11-06",
+    "source_sha256": "9b8fa7ba677fcf7962ceb2f2bf6074e9105cd6fdd55b90411bf0c25a6f7720de",
+    "section": "SBDB orbit.elements 'e' (osculating, epoch JD 2455562.5)",
+    "source_original_text": "0.204",
+    "source_value": 0.204,
+    "source_unit": "",
+    "conversion": "compared at the source's printed precision (3 decimals)",
+    "tolerance_rel": null,
+    "recalled_value": 0.2037
+   },
+   "inclination_deg": {
+    "status": "verified",
+    "source_id": "S40",
+    "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=101955&phys-par=1",
+    "retrieved": "2026-11-06",
+    "source_sha256": "9b8fa7ba677fcf7962ceb2f2bf6074e9105cd6fdd55b90411bf0c25a6f7720de",
+    "section": "SBDB orbit.elements 'i' (osculating, epoch JD 2455562.5)",
+    "source_original_text": "6.03",
+    "source_value": 6.03,
+    "source_unit": "deg",
+    "conversion": "compared at the source's printed precision (2 decimals)",
+    "tolerance_rel": null,
+    "recalled_value": 6.035
+   }
+  },
   "id": "bennu"
  }
 }

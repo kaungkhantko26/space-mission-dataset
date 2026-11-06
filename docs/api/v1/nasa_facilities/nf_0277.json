@@ -1,6 +1,6 @@
 {
  "collection": "nasa_facilities",
- "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "data_status": "25 celestial records (Sun, planets, dwarf planets, moons, small bodies) have their core physical fields verified against retrieved JPL/NASA pages (198 field checks matched; 16 conflicts were resolved to the sourced value). Six SLS/RS-25 launch figures were also verified against the NASA SLS page; all other launch-vehicle, engine, spacecraft, instrument and mission figures are still unverified (recalled values), as are two user-supplied tables (SpaceX launches 2010-2018, NASA facilities). Derived values inherit the status of their inputs. Optimization catalog values are estimated/fictional.",
  "record": {
   "id": "nf_0277",
   "center": "Michoud Assembly Facility",

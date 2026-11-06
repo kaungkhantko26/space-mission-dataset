@@ -1,5 +1,5 @@
 # Data limitations
-> **Read first:** no source document was retrieved when this package was built (the sandbox proxy returned 403 for nasa.gov, jpl.nasa.gov and esa.int). Every external figure is therefore `unverified` (written from recalled published values with a subjective confidence tag). Derived results inherit that status. Optimization catalog values are `estimated`; credits are `fictional`.
+> **Read first:** 25 celestial records (Sun, planets, dwarf planets, moons, small bodies) have their core physical fields verified against retrieved JPL/NASA pages (198 field checks matched; 16 conflicts were resolved to the sourced value). Six SLS/RS-25 launch figures were also verified against the NASA SLS page; all other launch-vehicle, engine, spacecraft, instrument and mission figures are still unverified (recalled values), as are two user-supplied tables (SpaceX launches 2010-2018, NASA facilities). Derived values inherit the status of their inputs. Optimization catalog values are estimated/fictional. Not retrieved: other launch-vehicle, engine, spacecraft-component, instrument and mission sources (spacex.com and api.spacexdata.com unreachable; others not attempted); those records remain unverified.
 
 
 ## Provenance
@@ -10,7 +10,7 @@ Records carry `source_ids` that point to the *expected* authoritative document o
 * **NASA facilities table** — 86 rows lack a status, 1 status is the truncated value 'Under' (assumed Under Rehabilitation), 340 lack URLs, and 256 of 485 fall into the 'other' category of the keyword classifier (category is derived, unreviewed).
 * **CCAFS LC-40 vs SLC-40** — Launch-site strings differ across rows; treated as the same pad (assumption).
 * **Deimos GM vs mass** — Recorded GM (9.62e-5 km3/s2) and mass (1.4762e15 kg) disagree by ~2.4% via GM=G*M; both retained, GM preferred for orbital use; resolve against JPL SSD sat_phys_par.
-* **Small-body surface gravity** — For irregular bodies (Phobos, Deimos, Bennu, Enceladus) g=mu/R^2 is a spherical approximation; recorded g is a mean/typical value.
+* **Small-body surface gravity** — For irregular bodies (Phobos, Deimos, Bennu, Enceladus) g=mu/R^2 is a spherical approximation; recorded g is a mean/typical value and is not verified.
 * **Saturn V liftoff thrust** — ~33.4 MN (design) vs ~34.5-35.1 MN (flight-reported) — 33.4 MN design value recorded; flight values vary by mission
 * **Falcon 9 mass accounting** — Recorded liftoff mass minus recorded stage masses leaves ~31 t, more than payload+fairing implies; at least one input (stage dry mass or liftoff mass) is likely off. See analysis/mass_analysis.json.
 * **Electron stage masses** — Recorded stage dry+propellant masses sum exactly to liftoff mass, leaving no room for payload/fairing; ideal dv in propulsion_analysis (~11.6-12 km/s) is therefore an overestimate and not a credible ascent number. Needs retrieval of the payload user's guide.
@@ -40,5 +40,5 @@ Records carry `source_ids` that point to the *expected* authoritative document o
 ## Refresh methodology
 1. From a networked environment, fetch each source in `metadata/sources.json`; store original value/unit/page in `provenance.json`.
 2. Edit `tools/data_*.py`, set classes to `verified` only when matched to a retrieved document.
-3. `python3 tools/build.py && python3 tools/make_api.py && python3 tools/make_schemas.py && python3 tools/validate.py && python3 tools/make_reports.py && node tools/parity_check.js`.
+3. `python3 tools/build.py && python3 tools/make_schemas.py && python3 tools/validate.py && python3 tools/make_reports.py && node tools/parity_check.js`.
 4. Resolve entries in `known_conflicts` first (Electron/Falcon 9 stage masses, Deimos GM).

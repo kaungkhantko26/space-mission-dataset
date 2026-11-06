@@ -1,6 +1,6 @@
 {
  "collection": "planets",
- "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "data_status": "25 celestial records (Sun, planets, dwarf planets, moons, small bodies) have their core physical fields verified against retrieved JPL/NASA pages (198 field checks matched; 16 conflicts were resolved to the sourced value). Six SLS/RS-25 launch figures were also verified against the NASA SLS page; all other launch-vehicle, engine, spacecraft, instrument and mission figures are still unverified (recalled values), as are two user-supplied tables (SpaceX launches 2010-2018, NASA facilities). Derived values inherit the status of their inputs. Optimization catalog values are estimated/fictional.",
  "record": {
   "id": "sun",
   "name": "Sun",
@@ -19,12 +19,74 @@
    "solar_constant_1au_w_m2": 1361.0,
    "derived_from": "v_esc=sqrt(2mu/R)"
   },
-  "data_class": "unverified",
-  "confidence": "medium",
+  "data_class": "verified",
+  "confidence": "high",
   "source_ids": [
-   "S05",
    "S01"
   ],
-  "retrieval_status": "not_retrieved"
+  "retrieval_status": "retrieved",
+  "field_verification": {
+   "mass_kg": {
+    "status": "verified",
+    "source_id": "S01",
+    "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html",
+    "retrieved": "2026-11-06",
+    "source_sha256": "bcc186a518298636340e7975bf5a32da660cd656b90081f2e7c8aa7ec2b6561a",
+    "section": "Sun fact sheet: Mass",
+    "source_original_text": "1,988,400.",
+    "source_value": 1.9884e+30,
+    "source_unit": "×10^24 kg",
+    "conversion": null,
+    "tolerance_rel": 0.001,
+    "recalled_value": 1.9885e+30
+   },
+   "gravitational_parameter_km3_s2": {
+    "status": "verified",
+    "source_id": "S01",
+    "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html",
+    "retrieved": "2026-11-06",
+    "source_sha256": "bcc186a518298636340e7975bf5a32da660cd656b90081f2e7c8aa7ec2b6561a",
+    "section": "Sun fact sheet: GM",
+    "source_original_text": "132,712.",
+    "source_value": 132712000000.0,
+    "source_unit": "×10^6 km^3/s^2 (5 significant figures only)",
+    "conversion": "×1e6",
+    "tolerance_rel": 3.0000000000000004e-05,
+    "recalled_value": 132712440018.0
+   },
+   "mean_radius_m": {
+    "status": "verified",
+    "source_id": "S01",
+    "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html",
+    "retrieved": "2026-11-06",
+    "source_sha256": "bcc186a518298636340e7975bf5a32da660cd656b90081f2e7c8aa7ec2b6561a",
+    "section": "Sun fact sheet: Volumetric mean radius",
+    "source_original_text": "695,700.",
+    "source_value": 695700000.0,
+    "source_unit": "km",
+    "conversion": null,
+    "tolerance_rel": 0.0001,
+    "recalled_value": 695700000.0
+   },
+   "surface_gravity_m_s2": {
+    "status": "verified",
+    "source_id": "S01",
+    "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html",
+    "retrieved": "2026-11-06",
+    "source_sha256": "bcc186a518298636340e7975bf5a32da660cd656b90081f2e7c8aa7ec2b6561a",
+    "section": "Sun fact sheet: Surface gravity",
+    "source_original_text": "274.0",
+    "source_value": 274.0,
+    "source_unit": "m/s^2",
+    "conversion": null,
+    "tolerance_rel": 0.005,
+    "recalled_value": 274.0
+   }
+  },
+  "verification_scope": "core physical fields (GM, mean radius, and mass/gravity/rotation/orbit where listed in field_verification) were checked against retrieved JPL/NASA pages; fields in unverified_fields were NOT",
+  "unverified_fields": [
+   "rotation_period_h",
+   "mean_surface_temperature_k"
+  ]
  }
 }

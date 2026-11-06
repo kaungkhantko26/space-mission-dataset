@@ -31,26 +31,26 @@
   {
    "scenario_id": "leo_eo",
    "designs": 22680,
-   "scalar_python_enumerate_s": 0.4912574569998469,
-   "vectorized_one_full_pass_s": 0.03865507199998319,
-   "speedup": 12.708745103360835,
-   "js_enumerate_s": 0.173705878
+   "scalar_python_enumerate_s": 0.22802151799999137,
+   "vectorized_one_full_pass_s": 0.024462348999975347,
+   "speedup": 9.321325519483889,
+   "js_enumerate_s": 0.287386084
   },
   {
    "scenario_id": "lunar_orbiter",
    "designs": 15120,
-   "scalar_python_enumerate_s": 0.35042494800018176,
-   "vectorized_one_full_pass_s": 0.01639819800038822,
-   "speedup": 21.369722941013737,
-   "js_enumerate_s": 0.08453047
+   "scalar_python_enumerate_s": 0.3314775729999724,
+   "vectorized_one_full_pass_s": 0.01658722900003795,
+   "speedup": 19.983902856783008,
+   "js_enumerate_s": 0.081821161
   },
   {
    "scenario_id": "mars_orbiter",
    "designs": 7560,
-   "scalar_python_enumerate_s": 0.07970287099988127,
-   "vectorized_one_full_pass_s": 0.008071983999798249,
-   "speedup": 9.874012510663222,
-   "js_enumerate_s": 0.067448319
+   "scalar_python_enumerate_s": 0.06982048599996915,
+   "vectorized_one_full_pass_s": 0.011677431999999044,
+   "speedup": 5.979095917661937,
+   "js_enumerate_s": 0.081058237
   }
  ],
  "heuristics": [
@@ -761,23 +761,23 @@
   {
    "instruments": 6,
    "designs": 15120,
-   "vectorized_exact_solve_s": 0.024351022000246303,
-   "scalar_exact_solve_s": 0.2138372999997955,
+   "vectorized_exact_solve_s": 0.02769362200001524,
+   "scalar_exact_solve_s": 0.1963516400000458,
    "optimum_science": 24.0,
    "note": "synthetic instrument clones (not real data)"
   },
   {
    "instruments": 8,
    "designs": 61200,
-   "vectorized_exact_solve_s": 0.021770779000235052,
-   "scalar_exact_solve_s": 0.8860110270002224,
+   "vectorized_exact_solve_s": 0.025250023000012334,
+   "scalar_exact_solve_s": 0.9621428069999638,
    "optimum_science": 33.0,
    "note": "synthetic instrument clones (not real data)"
   },
   {
    "instruments": 10,
    "designs": 245520,
-   "vectorized_exact_solve_s": 0.03324977400006901,
+   "vectorized_exact_solve_s": 0.03164518099998759,
    "scalar_exact_solve_s": null,
    "optimum_science": 40.0,
    "note": "synthetic instrument clones (not real data)"
@@ -785,7 +785,7 @@
   {
    "instruments": 12,
    "designs": 982800,
-   "vectorized_exact_solve_s": 0.07881507699994472,
+   "vectorized_exact_solve_s": 0.07952903400001787,
    "scalar_exact_solve_s": null,
    "optimum_science": 46.0,
    "note": "synthetic instrument clones (not real data)"
@@ -793,7 +793,7 @@
   {
    "instruments": 14,
    "designs": 3931920,
-   "vectorized_exact_solve_s": 0.3626782579999599,
+   "vectorized_exact_solve_s": 0.31877540699997553,
    "scalar_exact_solve_s": null,
    "optimum_science": 51.0,
    "note": "synthetic instrument clones (not real data)"
@@ -801,7 +801,7 @@
   {
    "instruments": 16,
    "designs": 15728400,
-   "vectorized_exact_solve_s": 1.1196287379998466,
+   "vectorized_exact_solve_s": 1.1561100019999913,
    "scalar_exact_solve_s": null,
    "optimum_science": 56.0,
    "note": "synthetic instrument clones (not real data)"

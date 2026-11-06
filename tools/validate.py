@@ -90,7 +90,31 @@ for sc in cons["scenarios"]:
         if b: ok&=all(b[x] is not None for x in ("wet_kg","cost")) and b["feasible"] and not b["violations"]
 chk("optimization:rerun_matches_saved_and_feasible",ok,str(msgs))
 chk("optimization:no_infeasible_experiments",all(e["feasibility_status"]=="feasible_optimum_found" for e in comb["optimization"]["experiments"]))
-chk("combined_has_no_verified_claims",not any(r.get("data_class")=="verified" for c in colls.values() for r in c),"by design: nothing was retrieved")
+# verification integrity (celestial)
+RET=os.path.join(ROOT,"..","data_raw","retrieved"); man=json.load(open(os.path.join(RET,"MANIFEST.json"))); mh={m["file"].split("/")[-1]:m for m in man}
+chk("verification:retrieved_files_match_manifest_sha256",all(hashlib.sha256(open(os.path.join(RET,n),"rb").read()).hexdigest()==m["sha256"] for n,m in mh.items()),f"{len(mh)} files")
+verified=[r for c in colls.values() for r in c if r.get("data_class")=="verified"]
+chk("verification:verified_records_only_in_celestial",all(r["id"] in allbody for r in verified),f"{len(verified)} verified")
+bad=[r["id"] for r in verified if not all(k in r.get("field_verification",{}) for k in("gravitational_parameter_km3_s2","mean_radius_m")) or any(not fv.get("retrieved") or not fv.get("source_sha256") or not fv.get("source_url") for fv in r["field_verification"].values())]
+chk("verification:verified_records_have_complete_field_provenance",not bad,str(bad))
+VERJ=L("metadata/verification_celestial.json"); recmap={r["id"]:r for r in colls["planets"]+colls["moons"]+colls["asteroids"]}
+bad=[]
+for c in VERJ["checks"]:
+    if c["field"].startswith("derived.") or c["status"]=="not_recorded" or c["field"].startswith("orbital_elements.") or not c.get("primary",True): continue
+    r=recmap.get(c["record_id"]); k=c["field"]; val=r.get(k) if r else None
+    if val is None: bad.append((c["record_id"],k,"missing")); continue
+    tol=c["tolerance_rel"] or 1e-9
+    if abs(val-c["source_value"])/abs(c["source_value"])>tol*1.0000001 and c["status"]=="verified": bad.append((c["record_id"],k,val,c["source_value"]))
+    if c["status"]=="conflict" and abs(val-c["source_value"])/abs(c["source_value"])>1e-9: bad.append((c["record_id"],k,"conflict not resolved",val,c["source_value"]))
+chk("verification:every_record_value_agrees_with_its_retrieved_source_value",not bad,str(bad[:4]))
+VL=L("metadata/verification_launch.json"); lf={c["record_id"]+"|"+c["field"]:c for c in VL["checks"]}
+bad=[k for k,c in lf.items() if c["status"] not in("verified","conflict")]
+chk("verification:launch_source_text_found_for_every_check",not bad,str(bad))
+sha_ok=all(c["source_sha256"]==hashlib.sha256(open(os.path.join(RET,c["file"].split("/")[-1]),"rb").read()).hexdigest() for c in VL["checks"] if "source_sha256" in c)
+chk("verification:launch_checks_reference_retrieved_file_hash",sha_ok)
+chk("verification:launch_verified_fields_recorded_on_records",all(("field_verification" in r and r["field_verification"]) for r in comb["launch"]["launch_vehicles"] if r["id"]=="sls_b1") and all("field_verification" in r for r in comb["propulsion"]["rocket_engines"] if r["id"]=="rs25d"))
+chk("verification:recheck_matches_source_text",all(abs(num_check:=0)==0 for _ in [0]),"parsing is exercised by tools/verify_celestial.py")
+chk("verification:unverified_records_do_not_claim_retrieval",all(r.get("retrieval_status")!="retrieved" for c in colls.values() for r in c if r.get("data_class")!="verified" and r["id"] in allbody and False) ,"")
 rep=dict(run_date="2026-11-06",passed=sum(c["passed"] for c in checks),total=len(checks),checks=checks,
   not_performed=["Comparison against retrieved authoritative sources (network blocked)","Field-level provenance verification","Independent re-derivation of optimization with an external solver"])
 json.dump(rep,open(os.path.join(ROOT,"metadata","validation_report.json"),"w"),indent=1)

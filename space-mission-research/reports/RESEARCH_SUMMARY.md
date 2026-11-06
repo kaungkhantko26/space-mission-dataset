@@ -1,5 +1,5 @@
 # Research summary
-> **Read first:** no source document was retrieved when this package was built (the sandbox proxy returned 403 for nasa.gov, jpl.nasa.gov and esa.int). Every external figure is therefore `unverified` (written from recalled published values with a subjective confidence tag). Derived results inherit that status. Optimization catalog values are `estimated`; credits are `fictional`.
+> **Read first:** 25 celestial records (Sun, planets, dwarf planets, moons, small bodies) have their core physical fields verified against retrieved JPL/NASA pages (198 field checks matched; 16 conflicts were resolved to the sourced value). Six SLS/RS-25 launch figures were also verified against the NASA SLS page; all other launch-vehicle, engine, spacecraft, instrument and mission figures are still unverified (recalled values), as are two user-supplied tables (SpaceX launches 2010-2018, NASA facilities). Derived values inherit the status of their inputs. Optimization catalog values are estimated/fictional. Not retrieved: other launch-vehicle, engine, spacecraft-component, instrument and mission sources (spacex.com and api.spacexdata.com unreachable; others not attempted); those records remain unverified.
 
 
 ## Dataset overview
@@ -22,9 +22,9 @@
 
 Targets are goals from the brief, not quotas; no records were invented to reach them. Where attainment is low the shortfall is real.
 
-* Verified records: **0** · Data classes: unverified=663, estimated=20
-* Sources listed: 38 · retrieved: **0**
-* Automated validation: **72/72** checks pass (`metadata/validation_report.json`). Checks compare internal consistency and recompute textbook values (e.g. LEO→GEO Hohmann Δv, Earth escape velocity); they do **not** compare against retrieved authoritative data.
+* Verified records: **25** · Data classes: verified=25, unverified=638, estimated=20
+* Sources listed: 40 · retrieved: **6**
+* Automated validation: **80/80** checks pass (`metadata/validation_report.json`). Checks compare internal consistency and recompute textbook values (e.g. LEO→GEO Hohmann Δv, Earth escape velocity); they do **not** compare against retrieved authoritative data.
 
 ## Engineering findings (all derived from unverified inputs)
 * **Δv anchors:** 400 km LEO circular speed 7,673 m/s; LEO→GEO Hohmann 3,857 m/s (+1,514 m/s if a 28.5° plane change is done at GEO); LEO→100 km lunar orbit ≈ 3,905 m/s; Earth→Mars Hohmann v∞ 2,945 m/s, C3 8.7 km²/s², transfer 259 d, window every 780 d.

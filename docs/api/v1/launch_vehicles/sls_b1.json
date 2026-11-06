@@ -1,6 +1,6 @@
 {
  "collection": "launch_vehicles",
- "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "data_status": "25 celestial records (Sun, planets, dwarf planets, moons, small bodies) have their core physical fields verified against retrieved JPL/NASA pages (198 field checks matched; 16 conflicts were resolved to the sourced value). Six SLS/RS-25 launch figures were also verified against the NASA SLS page; all other launch-vehicle, engine, spacecraft, instrument and mission figures are still unverified (recalled values), as are two user-supplied tables (SpaceX launches 2010-2018, NASA facilities). Derived values inherit the status of their inputs. Optimization catalog values are estimated/fictional.",
  "record": {
   "id": "sls_b1",
   "name": "SLS Block 1",
@@ -60,6 +60,66 @@
     }
    ]
   },
-  "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)"
+  "derived_from": "T/W=F/(m g0); payload fraction; price/payload (price year in price_year)",
+  "field_verification": {
+   "height_m": {
+    "status": "verified",
+    "source_id": "S41",
+    "source_url": "https://www.nasa.gov/reference/space-launch-system/",
+    "retrieved": "2026-11-06",
+    "source_sha256": "dacd12643163e96a6ca709bd11270edc6ba8c81fc8a0ce8694fb8e9e3dbd6193",
+    "section": "SLS reference page: Artemis I configuration stands 322 ft",
+    "source_original_text": "stands 322 ft",
+    "source_value": 98.1456,
+    "source_unit": "ft→m",
+    "statement_type": "point value",
+    "tolerance_rel": 0.005,
+    "recalled_value": 98.0
+   },
+   "liftoff_mass_kg": {
+    "status": "verified",
+    "source_id": "S41",
+    "source_url": "https://www.nasa.gov/reference/space-launch-system/",
+    "retrieved": "2026-11-06",
+    "source_sha256": "dacd12643163e96a6ca709bd11270edc6ba8c81fc8a0ce8694fb8e9e3dbd6193",
+    "section": "SLS reference page: weighs 5.75 million lbs fueled",
+    "source_original_text": "weighs 5.75 million lbs. fueled",
+    "source_value": 2608156.1275,
+    "source_unit": "million lb→kg",
+    "statement_type": "point value",
+    "tolerance_rel": 0.005,
+    "recalled_value": 2608000
+   },
+   "thrust_sl_n": {
+    "status": "verified",
+    "source_id": "S41",
+    "source_url": "https://www.nasa.gov/reference/space-launch-system/",
+    "retrieved": "2026-11-06",
+    "source_sha256": "dacd12643163e96a6ca709bd11270edc6ba8c81fc8a0ce8694fb8e9e3dbd6193",
+    "section": "SLS reference page: 8.8 million lbs of maximum thrust",
+    "source_original_text": "produces 8.8 million lbs. of maximum thrust",
+    "source_value": 39144350.2142924,
+    "source_unit": "million lbf→N",
+    "statement_type": "point value",
+    "tolerance_rel": 0.005,
+    "recalled_value": 39100000
+   },
+   "payloads[TLI].payload_kg": {
+    "status": "verified",
+    "source_id": "S41",
+    "source_url": "https://www.nasa.gov/reference/space-launch-system/",
+    "retrieved": "2026-11-06",
+    "source_sha256": "dacd12643163e96a6ca709bd11270edc6ba8c81fc8a0ce8694fb8e9e3dbd6193",
+    "section": "SLS reference page: Block 1 can send more than 27 metric tons to the Moon",
+    "source_original_text": "can send more than 27 metric tons",
+    "source_value": 27000.0,
+    "source_unit": "t→kg",
+    "statement_type": "lower bound ('more than')",
+    "tolerance_rel": 1e-06,
+    "recalled_value": 27000
+   }
+  },
+  "verified_field_count": 4,
+  "verification_scope": "partial: only the fields in field_verification were checked against a retrieved page; the record as a whole remains unverified"
  }
 }

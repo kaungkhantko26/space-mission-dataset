@@ -4,7 +4,7 @@
  "description": "Source catalog (none retrieved this build)",
  "generated": "2026-11-06",
  "retrieval_status": "NOT_RETRIEVED: values recalled from published references; network access to source hosts was blocked in the build environment. See metadata/quality_report.json.",
- "record_count": 39,
+ "record_count": 41,
  "records": [
   {
    "id": "S01",
@@ -12,11 +12,58 @@
    "organization": "NASA GSFC NSSDC",
    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
    "covers": "Planet physical/orbital parameters",
-   "retrieved": false,
-   "retrieval_date": null,
-   "page_or_section": null,
-   "note": "Canonical landing page recorded for where to verify; the document was NOT opened in this build.",
-   "used_by_records": true
+   "retrieved": true,
+   "retrieval_date": "2026-11-06",
+   "page_or_section": "see field_verification on each record",
+   "note": "Pages retrieved and parsed; each value comparison is stored in metadata/verification_celestial.json and in the record's field_verification.",
+   "used_by_records": true,
+   "retrieved_pages": [
+    {
+     "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html",
+     "retrieved": "2026-11-06",
+     "sha256": "9ac7835ae5387261bc02019a641bbfc8450122ffebebffea5678c3de6c54d0cb"
+    },
+    {
+     "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+     "retrieved": "2026-11-06",
+     "sha256": "366b0ce9b69cbee370be904956748af954468a41b93dc71a796a986519aa8d74"
+    },
+    {
+     "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/mercuryfact.html",
+     "retrieved": "2026-11-06",
+     "sha256": "170d9f2d2ba7f7ae322c68d473ccb0b35ab94f4b4aca197bf74fe3b7e4e10f3f"
+    },
+    {
+     "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html",
+     "retrieved": "2026-11-06",
+     "sha256": "a468979dfb4179e36a3f6579cd2d1d4a475b5c6da29313fd470fa68ca1aa30c1"
+    },
+    {
+     "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/neptunefact.html",
+     "retrieved": "2026-11-06",
+     "sha256": "4b9166f959be2b507eea77a9eef56f4e5679b693ba75151072a28bb228f44328"
+    },
+    {
+     "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/saturnfact.html",
+     "retrieved": "2026-11-06",
+     "sha256": "6d09ba010cacef61c8ae1a1ff137b06e5464e99461faf8f32c107419c474d06d"
+    },
+    {
+     "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html",
+     "retrieved": "2026-11-06",
+     "sha256": "bcc186a518298636340e7975bf5a32da660cd656b90081f2e7c8aa7ec2b6561a"
+    },
+    {
+     "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/uranusfact.html",
+     "retrieved": "2026-11-06",
+     "sha256": "02389139f8345a4328fc8f8956012cb72f691c6c7c2854c03c0b2512a063de81"
+    },
+    {
+     "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/venusfact.html",
+     "retrieved": "2026-11-06",
+     "sha256": "473c61da0bf7188764ec8ae5b12c0fdc9f922bccd9e3f6b47c885fef0723541c"
+    }
+   ]
   },
   {
    "id": "S02",
@@ -24,11 +71,18 @@
    "organization": "NASA JPL SSD",
    "url": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
    "covers": "GM, radii, rotation",
-   "retrieved": false,
-   "retrieval_date": null,
-   "page_or_section": null,
-   "note": "Canonical landing page recorded for where to verify; the document was NOT opened in this build.",
-   "used_by_records": true
+   "retrieved": true,
+   "retrieval_date": "2026-11-06",
+   "page_or_section": "see field_verification on each record",
+   "note": "Pages retrieved and parsed; each value comparison is stored in metadata/verification_celestial.json and in the record's field_verification.",
+   "used_by_records": true,
+   "retrieved_pages": [
+    {
+     "url": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+     "retrieved": "2026-11-06",
+     "sha256": "e49a487947295c389ba6e5833dd8fb04b63e826d39f70c123881882096e5e68b"
+    }
+   ]
   },
   {
    "id": "S03",
@@ -36,11 +90,18 @@
    "organization": "NASA JPL SSD",
    "url": "https://ssd.jpl.nasa.gov/sats/phys_par/",
    "covers": "Moon GM, radii",
-   "retrieved": false,
-   "retrieval_date": null,
-   "page_or_section": null,
-   "note": "Canonical landing page recorded for where to verify; the document was NOT opened in this build.",
-   "used_by_records": true
+   "retrieved": true,
+   "retrieval_date": "2026-11-06",
+   "page_or_section": "see field_verification on each record",
+   "note": "Pages retrieved and parsed; each value comparison is stored in metadata/verification_celestial.json and in the record's field_verification.",
+   "used_by_records": true,
+   "retrieved_pages": [
+    {
+     "url": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+     "retrieved": "2026-11-06",
+     "sha256": "9a9c004d950923ea368a8c4815d813c9c232c332d1586402a23b15d9581370d1"
+    }
+   ]
   },
   {
    "id": "S04",
@@ -48,11 +109,18 @@
    "organization": "NASA JPL SSD",
    "url": "https://ssd.jpl.nasa.gov/planets/approx_pos.html",
    "covers": "J2000 mean elements, valid 1800-2050",
-   "retrieved": false,
-   "retrieval_date": null,
-   "page_or_section": null,
-   "note": "Canonical landing page recorded for where to verify; the document was NOT opened in this build.",
-   "used_by_records": true
+   "retrieved": true,
+   "retrieval_date": "2026-11-06",
+   "page_or_section": "see field_verification on each record",
+   "note": "Pages retrieved and parsed; each value comparison is stored in metadata/verification_celestial.json and in the record's field_verification.",
+   "used_by_records": true,
+   "retrieved_pages": [
+    {
+     "url": "https://ssd.jpl.nasa.gov/planets/approx_pos.html",
+     "retrieved": "2026-11-06",
+     "sha256": "9f7b30ca81cc548a879565bb3f70e6899a38ff5877cb1ff16bb04892f9c4d742"
+    }
+   ]
   },
   {
    "id": "S05",
@@ -64,7 +132,7 @@
    "retrieval_date": null,
    "page_or_section": null,
    "note": "Canonical landing page recorded for where to verify; the document was NOT opened in this build.",
-   "used_by_records": true
+   "used_by_records": false
   },
   {
    "id": "S06",
@@ -425,6 +493,64 @@
    "page_or_section": null,
    "note": "Canonical landing page recorded for where to verify; the document was NOT opened in this build.",
    "used_by_records": true
+  },
+  {
+   "id": "S40",
+   "title": "JPL Small-Body Database (SBDB) API",
+   "organization": "NASA JPL SSD",
+   "url": "https://ssd-api.jpl.nasa.gov/doc/sbdb.html",
+   "covers": "GM, diameter, rotation, osculating elements of Bennu, Ceres, Vesta, Pluto, Eris",
+   "retrieved": true,
+   "retrieval_date": "2026-11-06",
+   "page_or_section": "see field_verification on each record",
+   "note": "Pages retrieved and parsed; each value comparison is stored in metadata/verification_celestial.json and in the record's field_verification.",
+   "used_by_records": true,
+   "retrieved_pages": [
+    {
+     "url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=1&phys-par=1",
+     "retrieved": "2026-11-06",
+     "sha256": "c8d2c7b1d5f5fcb8a2cf25d409af83880378d13503fb664e9c99af4caf2095d7"
+    },
+    {
+     "url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=101955&phys-par=1",
+     "retrieved": "2026-11-06",
+     "sha256": "9b8fa7ba677fcf7962ceb2f2bf6074e9105cd6fdd55b90411bf0c25a6f7720de"
+    },
+    {
+     "url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=134340&phys-par=1",
+     "retrieved": "2026-11-06",
+     "sha256": "fe9a7fa6a2022d7097010a5a1ca57f5af1aa80d3be760c6fd3a13099845ac693"
+    },
+    {
+     "url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=136199&phys-par=1",
+     "retrieved": "2026-11-06",
+     "sha256": "569355f0b0753b837f41b8d1caad7e534747d0976b037a06414783c633dd5063"
+    },
+    {
+     "url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=4&phys-par=1",
+     "retrieved": "2026-11-06",
+     "sha256": "78b6e24f9d6564aa49a074b66dacbb785a89a96c9adc9c23d8ffe296eae3d9d6"
+    }
+   ]
+  },
+  {
+   "id": "S41",
+   "title": "NASA Space Launch System reference page",
+   "organization": "NASA",
+   "url": "https://www.nasa.gov/reference/space-launch-system/",
+   "covers": "SLS Block 1 height, fueled mass, thrust, TLI capacity; booster and RS-25 thrust",
+   "retrieved": true,
+   "retrieval_date": "2026-11-06",
+   "page_or_section": "see field_verification on each record",
+   "note": "Pages retrieved and parsed; each value comparison is stored in metadata/verification_celestial.json and in the record's field_verification.",
+   "used_by_records": false,
+   "retrieved_pages": [
+    {
+     "url": "https://www.nasa.gov/reference/space-launch-system/",
+     "retrieved": "2026-11-06",
+     "sha256": "dacd12643163e96a6ca709bd11270edc6ba8c81fc8a0ce8694fb8e9e3dbd6193"
+    }
+   ]
   },
   {
    "id": "S36",

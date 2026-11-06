@@ -31,14 +31,93 @@
     "derived_from": "v_esc=sqrt(2*mu/R_mean); v_circ=sqrt(mu/R_mean); g=mu/R^2 (spherical, non-rotating approximation)",
     "solar_irradiance_w_m2": null
    },
-   "data_class": "unverified",
-   "confidence": "medium",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
+    "S01",
     "S03"
    ],
-   "retrieval_status": "not_retrieved",
+   "retrieval_status": "retrieved",
    "retrograde_orbit": false,
-   "tidally_locked_assumed": true
+   "tidally_locked_assumed": true,
+   "field_verification": {
+    "gravitational_parameter_km3_s2": {
+     "status": "verified",
+     "source_id": "S03",
+     "source_url": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+     "retrieved": "2026-11-06",
+     "source_sha256": "9a9c004d950923ea368a8c4815d813c9c232c332d1586402a23b15d9581370d1",
+     "section": "Satellite physical parameters: GM",
+     "source_original_text": "4902.800 0.001 DE440",
+     "source_value": 4902.8,
+     "source_unit": "km^3/s^2",
+     "conversion": null,
+     "tolerance_rel": 0.0001,
+     "recalled_value": 4902.8
+    },
+    "mean_radius_m": {
+     "status": "verified",
+     "source_id": "S03",
+     "source_url": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+     "retrieved": "2026-11-06",
+     "source_sha256": "9a9c004d950923ea368a8c4815d813c9c232c332d1586402a23b15d9581370d1",
+     "section": "Satellite physical parameters: Mean Radius",
+     "source_original_text": "1737.4 0.1 1",
+     "source_value": 1737400.0,
+     "source_unit": "km",
+     "conversion": "km→m",
+     "tolerance_rel": 0.005,
+     "recalled_value": 1737400.0
+    },
+    "mass_kg": {
+     "status": "verified",
+     "source_id": "S03",
+     "source_url": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+     "retrieved": "2026-11-06",
+     "source_sha256": "9a9c004d950923ea368a8c4815d813c9c232c332d1586402a23b15d9581370d1",
+     "section": "Satellite physical parameters: GM",
+     "source_original_text": "4902.800 0.001 DE440",
+     "source_value": 7.3457890715131185e+22,
+     "source_unit": "derived: JPL GM / G (CODATA 2018)",
+     "conversion": "M = GM/G",
+     "tolerance_rel": 0.01,
+     "recalled_value": 7.346e+22
+    },
+    "semi_major_axis_m": {
+     "status": "verified",
+     "source_id": "S01",
+     "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html",
+     "retrieved": "2026-11-06",
+     "source_sha256": "a468979dfb4179e36a3f6579cd2d1d4a475b5c6da29313fd470fa68ca1aa30c1",
+     "section": "Moon fact sheet: Semimajor axis (10 6 km)",
+     "source_original_text": "0.3844",
+     "source_value": 384400000.0,
+     "source_unit": "Semimajor axis (10 6 km)",
+     "conversion": "→ m",
+     "tolerance_rel": 0.002,
+     "recalled_value": 384400000.0
+    },
+    "eccentricity": {
+     "status": "verified",
+     "source_id": "S01",
+     "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html",
+     "retrieved": "2026-11-06",
+     "source_sha256": "a468979dfb4179e36a3f6579cd2d1d4a475b5c6da29313fd470fa68ca1aa30c1",
+     "section": "Moon fact sheet: Orbit eccentricity",
+     "source_original_text": "0.0549",
+     "source_value": 0.0549,
+     "source_unit": "",
+     "conversion": null,
+     "tolerance_rel": 0.01,
+     "recalled_value": 0.0549
+    }
+   },
+   "verification_scope": "core physical fields (GM, mean radius, and mass/gravity/rotation/orbit where listed in field_verification) were checked against retrieved JPL/NASA pages; fields in unverified_fields were NOT",
+   "unverified_fields": [
+    "surface_gravity_m_s2",
+    "orbital_period_days",
+    "inclination_deg"
+   ]
   },
   {
    "id": "phobos",
@@ -65,14 +144,119 @@
     "derived_from": "v_esc=sqrt(2*mu/R_mean); v_circ=sqrt(mu/R_mean); g=mu/R^2 (spherical, non-rotating approximation)",
     "solar_irradiance_w_m2": null
    },
-   "data_class": "unverified",
-   "confidence": "medium",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
+    "S01",
     "S03"
    ],
-   "retrieval_status": "not_retrieved",
+   "retrieval_status": "retrieved",
    "retrograde_orbit": false,
-   "tidally_locked_assumed": true
+   "tidally_locked_assumed": true,
+   "field_verification": {
+    "gravitational_parameter_km3_s2": {
+     "status": "verified",
+     "source_id": "S03",
+     "source_url": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+     "retrieved": "2026-11-06",
+     "source_sha256": "9a9c004d950923ea368a8c4815d813c9c232c332d1586402a23b15d9581370d1",
+     "section": "Satellite physical parameters: GM",
+     "source_original_text": "0.0007087 0.0000006 MAR097",
+     "source_value": 0.0007087,
+     "source_unit": "km^3/s^2",
+     "conversion": null,
+     "tolerance_rel": 0.002,
+     "recalled_value": 0.0007087
+    },
+    "mean_radius_m": {
+     "status": "verified",
+     "source_id": "S03",
+     "source_url": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+     "retrieved": "2026-11-06",
+     "source_sha256": "9a9c004d950923ea368a8c4815d813c9c232c332d1586402a23b15d9581370d1",
+     "section": "Satellite physical parameters: Mean Radius",
+     "source_original_text": "11.08 0.04 1",
+     "source_value": 11080.0,
+     "source_unit": "km",
+     "conversion": "km→m",
+     "tolerance_rel": 0.005,
+     "recalled_value": 11100.0
+    },
+    "mass_kg": {
+     "status": "verified",
+     "source_id": "S03",
+     "source_url": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+     "retrieved": "2026-11-06",
+     "source_sha256": "9a9c004d950923ea368a8c4815d813c9c232c332d1586402a23b15d9581370d1",
+     "section": "Satellite physical parameters: GM",
+     "source_original_text": "0.0007087 0.0000006 MAR097",
+     "source_value": 1.061834199841182e+16,
+     "source_unit": "derived: JPL GM / G (CODATA 2018)",
+     "conversion": "M = GM/G",
+     "tolerance_rel": 0.01,
+     "recalled_value": 1.0659e+16
+    },
+    "semi_major_axis_m": {
+     "status": "verified",
+     "source_id": "S01",
+     "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+     "retrieved": "2026-11-06",
+     "source_sha256": "366b0ce9b69cbee370be904956748af954468a41b93dc71a796a986519aa8d74",
+     "section": "Mars fact sheet, satellites table: Semimajor axis",
+     "source_original_text": "9378",
+     "source_value": 9378000.0,
+     "source_unit": "km",
+     "conversion": "km→m",
+     "tolerance_rel": 0.001,
+     "recalled_value": 9376000.0
+    },
+    "orbital_period_days": {
+     "status": "verified",
+     "source_id": "S01",
+     "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+     "retrieved": "2026-11-06",
+     "source_sha256": "366b0ce9b69cbee370be904956748af954468a41b93dc71a796a986519aa8d74",
+     "section": "Mars fact sheet, satellites table: Sidereal orbit period",
+     "source_original_text": "0.31891",
+     "source_value": 0.31891,
+     "source_unit": "days",
+     "conversion": null,
+     "tolerance_rel": 0.001,
+     "recalled_value": 0.3189
+    },
+    "inclination_deg": {
+     "status": "verified",
+     "source_id": "S01",
+     "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+     "retrieved": "2026-11-06",
+     "source_sha256": "366b0ce9b69cbee370be904956748af954468a41b93dc71a796a986519aa8d74",
+     "section": "Mars fact sheet, satellites table: Orbital inclination",
+     "source_original_text": "1.08",
+     "source_value": 1.08,
+     "source_unit": "deg",
+     "conversion": null,
+     "tolerance_rel": 0.01,
+     "recalled_value": 1.08
+    },
+    "eccentricity": {
+     "status": "verified",
+     "source_id": "S01",
+     "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+     "retrieved": "2026-11-06",
+     "source_sha256": "366b0ce9b69cbee370be904956748af954468a41b93dc71a796a986519aa8d74",
+     "section": "Mars fact sheet, satellites table: Orbital eccentricity",
+     "source_original_text": "0.0151",
+     "source_value": 0.0151,
+     "source_unit": "",
+     "conversion": null,
+     "tolerance_rel": 0.05,
+     "recalled_value": 0.0151
+    }
+   },
+   "verification_scope": "core physical fields (GM, mean radius, and mass/gravity/rotation/orbit where listed in field_verification) were checked against retrieved JPL/NASA pages; fields in unverified_fields were NOT",
+   "unverified_fields": [
+    "surface_gravity_m_s2"
+   ]
   },
   {
    "id": "deimos",
@@ -83,7 +267,7 @@
    "gravitational_parameter_km3_s2": 9.62e-05,
    "mean_radius_m": 6200.0,
    "equatorial_radius_m": null,
-   "mass_kg": 1476200000000000.0,
+   "mass_kg": 1441349654645431.0,
    "surface_gravity_m_s2": 0.003,
    "rotation_period_h": null,
    "semi_major_axis_m": 23463000.0,
@@ -99,14 +283,119 @@
     "derived_from": "v_esc=sqrt(2*mu/R_mean); v_circ=sqrt(mu/R_mean); g=mu/R^2 (spherical, non-rotating approximation)",
     "solar_irradiance_w_m2": null
    },
-   "data_class": "unverified",
-   "confidence": "medium",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
+    "S01",
     "S03"
    ],
-   "retrieval_status": "not_retrieved",
+   "retrieval_status": "retrieved",
    "retrograde_orbit": false,
-   "tidally_locked_assumed": true
+   "tidally_locked_assumed": true,
+   "field_verification": {
+    "gravitational_parameter_km3_s2": {
+     "status": "verified",
+     "source_id": "S03",
+     "source_url": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+     "retrieved": "2026-11-06",
+     "source_sha256": "9a9c004d950923ea368a8c4815d813c9c232c332d1586402a23b15d9581370d1",
+     "section": "Satellite physical parameters: GM",
+     "source_original_text": "0.0000962 0.0000028 MAR097",
+     "source_value": 9.62e-05,
+     "source_unit": "km^3/s^2",
+     "conversion": null,
+     "tolerance_rel": 0.002,
+     "recalled_value": 9.62e-05
+    },
+    "mean_radius_m": {
+     "status": "verified",
+     "source_id": "S03",
+     "source_url": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+     "retrieved": "2026-11-06",
+     "source_sha256": "9a9c004d950923ea368a8c4815d813c9c232c332d1586402a23b15d9581370d1",
+     "section": "Satellite physical parameters: Mean Radius",
+     "source_original_text": "6.2 0.24 1",
+     "source_value": 6200.0,
+     "source_unit": "km",
+     "conversion": "km→m",
+     "tolerance_rel": 0.005,
+     "recalled_value": 6200.0
+    },
+    "mass_kg": {
+     "status": "conflict_resolved_to_source",
+     "source_id": "S03",
+     "source_url": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+     "retrieved": "2026-11-06",
+     "source_sha256": "9a9c004d950923ea368a8c4815d813c9c232c332d1586402a23b15d9581370d1",
+     "section": "Satellite physical parameters: GM",
+     "source_original_text": "0.0000962 0.0000028 MAR097",
+     "source_value": 1441349654645431.0,
+     "source_unit": "derived: JPL GM / G (CODATA 2018)",
+     "conversion": "M = GM/G",
+     "tolerance_rel": 0.01,
+     "recalled_value": 1476200000000000.0
+    },
+    "semi_major_axis_m": {
+     "status": "verified",
+     "source_id": "S01",
+     "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+     "retrieved": "2026-11-06",
+     "source_sha256": "366b0ce9b69cbee370be904956748af954468a41b93dc71a796a986519aa8d74",
+     "section": "Mars fact sheet, satellites table: Semimajor axis",
+     "source_original_text": "23459",
+     "source_value": 23459000.0,
+     "source_unit": "km",
+     "conversion": "km→m",
+     "tolerance_rel": 0.001,
+     "recalled_value": 23463000.0
+    },
+    "orbital_period_days": {
+     "status": "verified",
+     "source_id": "S01",
+     "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+     "retrieved": "2026-11-06",
+     "source_sha256": "366b0ce9b69cbee370be904956748af954468a41b93dc71a796a986519aa8d74",
+     "section": "Mars fact sheet, satellites table: Sidereal orbit period",
+     "source_original_text": "1.26244",
+     "source_value": 1.26244,
+     "source_unit": "days",
+     "conversion": null,
+     "tolerance_rel": 0.001,
+     "recalled_value": 1.263
+    },
+    "inclination_deg": {
+     "status": "verified",
+     "source_id": "S01",
+     "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+     "retrieved": "2026-11-06",
+     "source_sha256": "366b0ce9b69cbee370be904956748af954468a41b93dc71a796a986519aa8d74",
+     "section": "Mars fact sheet, satellites table: Orbital inclination",
+     "source_original_text": "1.79",
+     "source_value": 1.79,
+     "source_unit": "deg",
+     "conversion": null,
+     "tolerance_rel": 0.01,
+     "recalled_value": 1.79
+    },
+    "eccentricity": {
+     "status": "verified",
+     "source_id": "S01",
+     "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+     "retrieved": "2026-11-06",
+     "source_sha256": "366b0ce9b69cbee370be904956748af954468a41b93dc71a796a986519aa8d74",
+     "section": "Mars fact sheet, satellites table: Orbital eccentricity",
+     "source_original_text": "0.0005",
+     "source_value": 0.0005,
+     "source_unit": "",
+     "conversion": null,
+     "tolerance_rel": 0.05,
+     "recalled_value": 0.0005
+    }
+   },
+   "verification_scope": "core physical fields (GM, mean radius, and mass/gravity/rotation/orbit where listed in field_verification) were checked against retrieved JPL/NASA pages; fields in unverified_fields were NOT",
+   "unverified_fields": [
+    "surface_gravity_m_s2"
+   ]
   },
   {
    "id": "io",
@@ -133,14 +422,66 @@
     "derived_from": "v_esc=sqrt(2*mu/R_mean); v_circ=sqrt(mu/R_mean); g=mu/R^2 (spherical, non-rotating approximation)",
     "solar_irradiance_w_m2": null
    },
-   "data_class": "unverified",
-   "confidence": "medium",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
     "S03"
    ],
-   "retrieval_status": "not_retrieved",
+   "retrieval_status": "retrieved",
    "retrograde_orbit": false,
-   "tidally_locked_assumed": true
+   "tidally_locked_assumed": true,
+   "field_verification": {
+    "gravitational_parameter_km3_s2": {
+     "status": "verified",
+     "source_id": "S03",
+     "source_url": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+     "retrieved": "2026-11-06",
+     "source_sha256": "9a9c004d950923ea368a8c4815d813c9c232c332d1586402a23b15d9581370d1",
+     "section": "Satellite physical parameters: GM",
+     "source_original_text": "5959.91547 0.00135 JUP365",
+     "source_value": 5959.91547,
+     "source_unit": "km^3/s^2",
+     "conversion": null,
+     "tolerance_rel": 0.0001,
+     "recalled_value": 5959.916
+    },
+    "mean_radius_m": {
+     "status": "verified",
+     "source_id": "S03",
+     "source_url": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+     "retrieved": "2026-11-06",
+     "source_sha256": "9a9c004d950923ea368a8c4815d813c9c232c332d1586402a23b15d9581370d1",
+     "section": "Satellite physical parameters: Mean Radius",
+     "source_original_text": "1821.49 0.50 1",
+     "source_value": 1821490.0,
+     "source_unit": "km",
+     "conversion": "km→m",
+     "tolerance_rel": 0.005,
+     "recalled_value": 1821600.0
+    },
+    "mass_kg": {
+     "status": "verified",
+     "source_id": "S03",
+     "source_url": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+     "retrieved": "2026-11-06",
+     "source_sha256": "9a9c004d950923ea368a8c4815d813c9c232c332d1586402a23b15d9581370d1",
+     "section": "Satellite physical parameters: GM",
+     "source_original_text": "5959.91547 0.00135 JUP365",
+     "source_value": 8.929648757173038e+22,
+     "source_unit": "derived: JPL GM / G (CODATA 2018)",
+     "conversion": "M = GM/G",
+     "tolerance_rel": 0.01,
+     "recalled_value": 8.932e+22
+    }
+   },
+   "verification_scope": "core physical fields (GM, mean radius, and mass/gravity/rotation/orbit where listed in field_verification) were checked against retrieved JPL/NASA pages; fields in unverified_fields were NOT",
+   "unverified_fields": [
+    "surface_gravity_m_s2",
+    "orbital_period_days",
+    "semi_major_axis_m",
+    "eccentricity",
+    "inclination_deg"
+   ]
   },
   {
    "id": "europa",
@@ -167,14 +508,66 @@
     "derived_from": "v_esc=sqrt(2*mu/R_mean); v_circ=sqrt(mu/R_mean); g=mu/R^2 (spherical, non-rotating approximation)",
     "solar_irradiance_w_m2": null
    },
-   "data_class": "unverified",
-   "confidence": "medium",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
     "S03"
    ],
-   "retrieval_status": "not_retrieved",
+   "retrieval_status": "retrieved",
    "retrograde_orbit": false,
-   "tidally_locked_assumed": true
+   "tidally_locked_assumed": true,
+   "field_verification": {
+    "gravitational_parameter_km3_s2": {
+     "status": "verified",
+     "source_id": "S03",
+     "source_url": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+     "retrieved": "2026-11-06",
+     "source_sha256": "9a9c004d950923ea368a8c4815d813c9c232c332d1586402a23b15d9581370d1",
+     "section": "Satellite physical parameters: GM",
+     "source_original_text": "3202.71210 0.00181 JUP365",
+     "source_value": 3202.7121,
+     "source_unit": "km^3/s^2",
+     "conversion": null,
+     "tolerance_rel": 0.0001,
+     "recalled_value": 3202.739
+    },
+    "mean_radius_m": {
+     "status": "verified",
+     "source_id": "S03",
+     "source_url": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+     "retrieved": "2026-11-06",
+     "source_sha256": "9a9c004d950923ea368a8c4815d813c9c232c332d1586402a23b15d9581370d1",
+     "section": "Satellite physical parameters: Mean Radius",
+     "source_original_text": "1560.80 0.30 1",
+     "source_value": 1560800.0,
+     "source_unit": "km",
+     "conversion": "km→m",
+     "tolerance_rel": 0.005,
+     "recalled_value": 1560800.0
+    },
+    "mass_kg": {
+     "status": "verified",
+     "source_id": "S03",
+     "source_url": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+     "retrieved": "2026-11-06",
+     "source_sha256": "9a9c004d950923ea368a8c4815d813c9c232c332d1586402a23b15d9581370d1",
+     "section": "Satellite physical parameters: GM",
+     "source_original_text": "3202.71210 0.00181 JUP365",
+     "source_value": 4.7985737830184444e+22,
+     "source_unit": "derived: JPL GM / G (CODATA 2018)",
+     "conversion": "M = GM/G",
+     "tolerance_rel": 0.01,
+     "recalled_value": 4.8e+22
+    }
+   },
+   "verification_scope": "core physical fields (GM, mean radius, and mass/gravity/rotation/orbit where listed in field_verification) were checked against retrieved JPL/NASA pages; fields in unverified_fields were NOT",
+   "unverified_fields": [
+    "surface_gravity_m_s2",
+    "orbital_period_days",
+    "semi_major_axis_m",
+    "eccentricity",
+    "inclination_deg"
+   ]
   },
   {
    "id": "ganymede",
@@ -201,14 +594,66 @@
     "derived_from": "v_esc=sqrt(2*mu/R_mean); v_circ=sqrt(mu/R_mean); g=mu/R^2 (spherical, non-rotating approximation)",
     "solar_irradiance_w_m2": null
    },
-   "data_class": "unverified",
-   "confidence": "medium",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
     "S03"
    ],
-   "retrieval_status": "not_retrieved",
+   "retrieval_status": "retrieved",
    "retrograde_orbit": false,
-   "tidally_locked_assumed": true
+   "tidally_locked_assumed": true,
+   "field_verification": {
+    "gravitational_parameter_km3_s2": {
+     "status": "verified",
+     "source_id": "S03",
+     "source_url": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+     "retrieved": "2026-11-06",
+     "source_sha256": "9a9c004d950923ea368a8c4815d813c9c232c332d1586402a23b15d9581370d1",
+     "section": "Satellite physical parameters: GM",
+     "source_original_text": "9887.83275 0.00247 JUP365",
+     "source_value": 9887.83275,
+     "source_unit": "km^3/s^2",
+     "conversion": null,
+     "tolerance_rel": 0.0001,
+     "recalled_value": 9887.834
+    },
+    "mean_radius_m": {
+     "status": "verified",
+     "source_id": "S03",
+     "source_url": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+     "retrieved": "2026-11-06",
+     "source_sha256": "9a9c004d950923ea368a8c4815d813c9c232c332d1586402a23b15d9581370d1",
+     "section": "Satellite physical parameters: Mean Radius",
+     "source_original_text": "2631.20 1.70 1",
+     "source_value": 2631200.0,
+     "source_unit": "km",
+     "conversion": "km→m",
+     "tolerance_rel": 0.005,
+     "recalled_value": 2631200.0
+    },
+    "mass_kg": {
+     "status": "verified",
+     "source_id": "S03",
+     "source_url": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+     "retrieved": "2026-11-06",
+     "source_sha256": "9a9c004d950923ea368a8c4815d813c9c232c332d1586402a23b15d9581370d1",
+     "section": "Satellite physical parameters: GM",
+     "source_original_text": "9887.83275 0.00247 JUP365",
+     "source_value": 1.4814786194806948e+23,
+     "source_unit": "derived: JPL GM / G (CODATA 2018)",
+     "conversion": "M = GM/G",
+     "tolerance_rel": 0.01,
+     "recalled_value": 1.4819e+23
+    }
+   },
+   "verification_scope": "core physical fields (GM, mean radius, and mass/gravity/rotation/orbit where listed in field_verification) were checked against retrieved JPL/NASA pages; fields in unverified_fields were NOT",
+   "unverified_fields": [
+    "surface_gravity_m_s2",
+    "orbital_period_days",
+    "semi_major_axis_m",
+    "eccentricity",
+    "inclination_deg"
+   ]
   },
   {
    "id": "callisto",
@@ -235,14 +680,66 @@
     "derived_from": "v_esc=sqrt(2*mu/R_mean); v_circ=sqrt(mu/R_mean); g=mu/R^2 (spherical, non-rotating approximation)",
     "solar_irradiance_w_m2": null
    },
-   "data_class": "unverified",
-   "confidence": "medium",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
     "S03"
    ],
-   "retrieval_status": "not_retrieved",
+   "retrieval_status": "retrieved",
    "retrograde_orbit": false,
-   "tidally_locked_assumed": true
+   "tidally_locked_assumed": true,
+   "field_verification": {
+    "gravitational_parameter_km3_s2": {
+     "status": "verified",
+     "source_id": "S03",
+     "source_url": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+     "retrieved": "2026-11-06",
+     "source_sha256": "9a9c004d950923ea368a8c4815d813c9c232c332d1586402a23b15d9581370d1",
+     "section": "Satellite physical parameters: GM",
+     "source_original_text": "7179.28340 0.00324 JUP365",
+     "source_value": 7179.2834,
+     "source_unit": "km^3/s^2",
+     "conversion": null,
+     "tolerance_rel": 0.0001,
+     "recalled_value": 7179.289
+    },
+    "mean_radius_m": {
+     "status": "verified",
+     "source_id": "S03",
+     "source_url": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+     "retrieved": "2026-11-06",
+     "source_sha256": "9a9c004d950923ea368a8c4815d813c9c232c332d1586402a23b15d9581370d1",
+     "section": "Satellite physical parameters: Mean Radius",
+     "source_original_text": "2410.30 1.50 1",
+     "source_value": 2410300.0,
+     "source_unit": "km",
+     "conversion": "km→m",
+     "tolerance_rel": 0.005,
+     "recalled_value": 2410300.0
+    },
+    "mass_kg": {
+     "status": "verified",
+     "source_id": "S03",
+     "source_url": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+     "retrieved": "2026-11-06",
+     "source_sha256": "9a9c004d950923ea368a8c4815d813c9c232c332d1586402a23b15d9581370d1",
+     "section": "Satellite physical parameters: GM",
+     "source_original_text": "7179.28340 0.00324 JUP365",
+     "source_value": 1.075660878294353e+23,
+     "source_unit": "derived: JPL GM / G (CODATA 2018)",
+     "conversion": "M = GM/G",
+     "tolerance_rel": 0.01,
+     "recalled_value": 1.0759e+23
+    }
+   },
+   "verification_scope": "core physical fields (GM, mean radius, and mass/gravity/rotation/orbit where listed in field_verification) were checked against retrieved JPL/NASA pages; fields in unverified_fields were NOT",
+   "unverified_fields": [
+    "surface_gravity_m_s2",
+    "orbital_period_days",
+    "semi_major_axis_m",
+    "eccentricity",
+    "inclination_deg"
+   ]
   },
   {
    "id": "titan",
@@ -269,14 +766,66 @@
     "derived_from": "v_esc=sqrt(2*mu/R_mean); v_circ=sqrt(mu/R_mean); g=mu/R^2 (spherical, non-rotating approximation)",
     "solar_irradiance_w_m2": null
    },
-   "data_class": "unverified",
-   "confidence": "medium",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
     "S03"
    ],
-   "retrieval_status": "not_retrieved",
+   "retrieval_status": "retrieved",
    "retrograde_orbit": false,
-   "tidally_locked_assumed": true
+   "tidally_locked_assumed": true,
+   "field_verification": {
+    "gravitational_parameter_km3_s2": {
+     "status": "verified",
+     "source_id": "S03",
+     "source_url": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+     "retrieved": "2026-11-06",
+     "source_sha256": "9a9c004d950923ea368a8c4815d813c9c232c332d1586402a23b15d9581370d1",
+     "section": "Satellite physical parameters: GM",
+     "source_original_text": "8978.13710 0.00025 SAT441",
+     "source_value": 8978.1371,
+     "source_unit": "km^3/s^2",
+     "conversion": null,
+     "tolerance_rel": 0.0001,
+     "recalled_value": 8978.14
+    },
+    "mean_radius_m": {
+     "status": "verified",
+     "source_id": "S03",
+     "source_url": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+     "retrieved": "2026-11-06",
+     "source_sha256": "9a9c004d950923ea368a8c4815d813c9c232c332d1586402a23b15d9581370d1",
+     "section": "Satellite physical parameters: Mean Radius",
+     "source_original_text": "2574.76 0.02 1",
+     "source_value": 2574760.0,
+     "source_unit": "km",
+     "conversion": "km→m",
+     "tolerance_rel": 0.005,
+     "recalled_value": 2574700.0
+    },
+    "mass_kg": {
+     "status": "verified",
+     "source_id": "S03",
+     "source_url": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+     "retrieved": "2026-11-06",
+     "source_sha256": "9a9c004d950923ea368a8c4815d813c9c232c332d1586402a23b15d9581370d1",
+     "section": "Satellite physical parameters: GM",
+     "source_original_text": "8978.13710 0.00025 SAT441",
+     "source_value": 1.3451803335181219e+23,
+     "source_unit": "derived: JPL GM / G (CODATA 2018)",
+     "conversion": "M = GM/G",
+     "tolerance_rel": 0.01,
+     "recalled_value": 1.3452e+23
+    }
+   },
+   "verification_scope": "core physical fields (GM, mean radius, and mass/gravity/rotation/orbit where listed in field_verification) were checked against retrieved JPL/NASA pages; fields in unverified_fields were NOT",
+   "unverified_fields": [
+    "surface_gravity_m_s2",
+    "orbital_period_days",
+    "semi_major_axis_m",
+    "eccentricity",
+    "inclination_deg"
+   ]
   },
   {
    "id": "enceladus",
@@ -303,22 +852,74 @@
     "derived_from": "v_esc=sqrt(2*mu/R_mean); v_circ=sqrt(mu/R_mean); g=mu/R^2 (spherical, non-rotating approximation)",
     "solar_irradiance_w_m2": null
    },
-   "data_class": "unverified",
-   "confidence": "medium",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
     "S03"
    ],
-   "retrieval_status": "not_retrieved",
+   "retrieval_status": "retrieved",
    "retrograde_orbit": false,
-   "tidally_locked_assumed": true
+   "tidally_locked_assumed": true,
+   "field_verification": {
+    "gravitational_parameter_km3_s2": {
+     "status": "verified",
+     "source_id": "S03",
+     "source_url": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+     "retrieved": "2026-11-06",
+     "source_sha256": "9a9c004d950923ea368a8c4815d813c9c232c332d1586402a23b15d9581370d1",
+     "section": "Satellite physical parameters: GM",
+     "source_original_text": "7.21037 0.00009 SAT441",
+     "source_value": 7.21037,
+     "source_unit": "km^3/s^2",
+     "conversion": null,
+     "tolerance_rel": 0.0001,
+     "recalled_value": 7.2105
+    },
+    "mean_radius_m": {
+     "status": "verified",
+     "source_id": "S03",
+     "source_url": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+     "retrieved": "2026-11-06",
+     "source_sha256": "9a9c004d950923ea368a8c4815d813c9c232c332d1586402a23b15d9581370d1",
+     "section": "Satellite physical parameters: Mean Radius",
+     "source_original_text": "252.10 0.20 1",
+     "source_value": 252100.0,
+     "source_unit": "km",
+     "conversion": "km→m",
+     "tolerance_rel": 0.005,
+     "recalled_value": 252100.0
+    },
+    "mass_kg": {
+     "status": "verified",
+     "source_id": "S03",
+     "source_url": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+     "retrieved": "2026-11-06",
+     "source_sha256": "9a9c004d950923ea368a8c4815d813c9c232c332d1586402a23b15d9581370d1",
+     "section": "Satellite physical parameters: GM",
+     "source_original_text": "7.21037 0.00009 SAT441",
+     "source_value": 1.0803185352771078e+20,
+     "source_unit": "derived: JPL GM / G (CODATA 2018)",
+     "conversion": "M = GM/G",
+     "tolerance_rel": 0.01,
+     "recalled_value": 1.08e+20
+    }
+   },
+   "verification_scope": "core physical fields (GM, mean radius, and mass/gravity/rotation/orbit where listed in field_verification) were checked against retrieved JPL/NASA pages; fields in unverified_fields were NOT",
+   "unverified_fields": [
+    "surface_gravity_m_s2",
+    "orbital_period_days",
+    "semi_major_axis_m",
+    "eccentricity",
+    "inclination_deg"
+   ]
   },
   {
    "id": "triton",
    "name": "Triton",
    "category": "moon",
    "parent_id": "neptune",
-   "mu_m3_s2": 1427600000000.0,
-   "gravitational_parameter_km3_s2": 1427.6,
+   "mu_m3_s2": 1428495460000.0,
+   "gravitational_parameter_km3_s2": 1428.49546,
    "mean_radius_m": 1353400.0,
    "equatorial_radius_m": null,
    "mass_kg": 2.14e+22,
@@ -331,28 +932,80 @@
    "mean_surface_temperature_k": null,
    "equatorial_magnetic_field_t": null,
    "derived": {
-    "escape_velocity_m_s": 1452.4633458188346,
-    "circular_velocity_surface_m_s": 1027.0466812533994,
-    "gravity_from_mu_m_s2": 0.7793888617360883,
+    "escape_velocity_m_s": 1452.9188021574969,
+    "circular_velocity_surface_m_s": 1027.368737519002,
+    "gravity_from_mu_m_s2": 0.7798777322531311,
     "derived_from": "v_esc=sqrt(2*mu/R_mean); v_circ=sqrt(mu/R_mean); g=mu/R^2 (spherical, non-rotating approximation)",
     "solar_irradiance_w_m2": null
    },
-   "data_class": "unverified",
-   "confidence": "medium",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
     "S03"
    ],
-   "retrieval_status": "not_retrieved",
+   "retrieval_status": "retrieved",
    "retrograde_orbit": true,
-   "tidally_locked_assumed": true
+   "tidally_locked_assumed": true,
+   "field_verification": {
+    "gravitational_parameter_km3_s2": {
+     "status": "conflict_resolved_to_source",
+     "source_id": "S03",
+     "source_url": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+     "retrieved": "2026-11-06",
+     "source_sha256": "9a9c004d950923ea368a8c4815d813c9c232c332d1586402a23b15d9581370d1",
+     "section": "Satellite physical parameters: GM",
+     "source_original_text": "1428.49546 0.61603 NEP097",
+     "source_value": 1428.49546,
+     "source_unit": "km^3/s^2",
+     "conversion": null,
+     "tolerance_rel": 0.0001,
+     "recalled_value": 1427.6
+    },
+    "mean_radius_m": {
+     "status": "verified",
+     "source_id": "S03",
+     "source_url": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+     "retrieved": "2026-11-06",
+     "source_sha256": "9a9c004d950923ea368a8c4815d813c9c232c332d1586402a23b15d9581370d1",
+     "section": "Satellite physical parameters: Mean Radius",
+     "source_original_text": "1352.60 2.40 1",
+     "source_value": 1352600.0,
+     "source_unit": "km",
+     "conversion": "km→m",
+     "tolerance_rel": 0.005,
+     "recalled_value": 1353400.0
+    },
+    "mass_kg": {
+     "status": "verified",
+     "source_id": "S03",
+     "source_url": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+     "retrieved": "2026-11-06",
+     "source_sha256": "9a9c004d950923ea368a8c4815d813c9c232c332d1586402a23b15d9581370d1",
+     "section": "Satellite physical parameters: GM",
+     "source_original_text": "1428.49546 0.61603 NEP097",
+     "source_value": 2.1402925550244972e+22,
+     "source_unit": "derived: JPL GM / G (CODATA 2018)",
+     "conversion": "M = GM/G",
+     "tolerance_rel": 0.01,
+     "recalled_value": 2.14e+22
+    }
+   },
+   "verification_scope": "core physical fields (GM, mean radius, and mass/gravity/rotation/orbit where listed in field_verification) were checked against retrieved JPL/NASA pages; fields in unverified_fields were NOT",
+   "unverified_fields": [
+    "surface_gravity_m_s2",
+    "orbital_period_days",
+    "semi_major_axis_m",
+    "eccentricity",
+    "inclination_deg"
+   ]
   },
   {
    "id": "charon",
    "name": "Charon",
    "category": "moon",
    "parent_id": "pluto",
-   "mu_m3_s2": 105880000000.0,
-   "gravitational_parameter_km3_s2": 105.88,
+   "mu_m3_s2": 106100000000.0,
+   "gravitational_parameter_km3_s2": 106.1,
    "mean_radius_m": 606000.0,
    "equatorial_radius_m": null,
    "mass_kg": 1.586e+21,
@@ -365,20 +1018,72 @@
    "mean_surface_temperature_k": null,
    "equatorial_magnetic_field_t": null,
    "derived": {
-    "escape_velocity_m_s": 591.1336091734164,
-    "circular_velocity_surface_m_s": 417.994583633801,
-    "gravity_from_mu_m_s2": 0.28831596030890216,
+    "escape_velocity_m_s": 591.7474262737863,
+    "circular_velocity_surface_m_s": 418.42861786788086,
+    "gravity_from_mu_m_s2": 0.2889150301168731,
     "derived_from": "v_esc=sqrt(2*mu/R_mean); v_circ=sqrt(mu/R_mean); g=mu/R^2 (spherical, non-rotating approximation)",
     "solar_irradiance_w_m2": null
    },
-   "data_class": "unverified",
-   "confidence": "medium",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
     "S03"
    ],
-   "retrieval_status": "not_retrieved",
+   "retrieval_status": "retrieved",
    "retrograde_orbit": false,
-   "tidally_locked_assumed": true
+   "tidally_locked_assumed": true,
+   "field_verification": {
+    "gravitational_parameter_km3_s2": {
+     "status": "conflict_resolved_to_source",
+     "source_id": "S03",
+     "source_url": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+     "retrieved": "2026-11-06",
+     "source_sha256": "9a9c004d950923ea368a8c4815d813c9c232c332d1586402a23b15d9581370d1",
+     "section": "Satellite physical parameters: GM",
+     "source_original_text": "106.1 0.3 PLU060",
+     "source_value": 106.1,
+     "source_unit": "km^3/s^2",
+     "conversion": null,
+     "tolerance_rel": 0.0001,
+     "recalled_value": 105.88
+    },
+    "mean_radius_m": {
+     "status": "verified",
+     "source_id": "S03",
+     "source_url": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+     "retrieved": "2026-11-06",
+     "source_sha256": "9a9c004d950923ea368a8c4815d813c9c232c332d1586402a23b15d9581370d1",
+     "section": "Satellite physical parameters: Mean Radius",
+     "source_original_text": "606.0 0.5 2",
+     "source_value": 606000.0,
+     "source_unit": "km",
+     "conversion": "km→m",
+     "tolerance_rel": 0.005,
+     "recalled_value": 606000.0
+    },
+    "mass_kg": {
+     "status": "verified",
+     "source_id": "S03",
+     "source_url": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+     "retrieved": "2026-11-06",
+     "source_sha256": "9a9c004d950923ea368a8c4815d813c9c232c332d1586402a23b15d9581370d1",
+     "section": "Satellite physical parameters: GM",
+     "source_original_text": "106.1 0.3 PLU060",
+     "source_value": 1.5896798166099818e+21,
+     "source_unit": "derived: JPL GM / G (CODATA 2018)",
+     "conversion": "M = GM/G",
+     "tolerance_rel": 0.01,
+     "recalled_value": 1.586e+21
+    }
+   },
+   "verification_scope": "core physical fields (GM, mean radius, and mass/gravity/rotation/orbit where listed in field_verification) were checked against retrieved JPL/NASA pages; fields in unverified_fields were NOT",
+   "unverified_fields": [
+    "surface_gravity_m_s2",
+    "orbital_period_days",
+    "semi_major_axis_m",
+    "eccentricity",
+    "inclination_deg"
+   ]
   }
  ]
 }

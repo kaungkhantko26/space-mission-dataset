@@ -53,6 +53,8 @@ SRC = [
  ("S33","JWST mission references","NASA GSFC / STScI","https://science.nasa.gov/mission/webb/","JWST"),
  ("S34","OSIRIS-REx mission references","NASA GSFC / Univ. Arizona","https://www.nasa.gov/osiris-rex","OSIRIS-REx"),
  ("S35","MarCO mission references","NASA JPL","https://www.jpl.nasa.gov/missions/mars-cube-one-marco","MarCO"),
+ ("S40","JPL Small-Body Database (SBDB) API","NASA JPL SSD","https://ssd-api.jpl.nasa.gov/doc/sbdb.html","GM, diameter, rotation, osculating elements of Bennu, Ceres, Vesta, Pluto, Eris"),
+ ("S41","NASA Space Launch System reference page","NASA","https://www.nasa.gov/reference/space-launch-system/","SLS Block 1 height, fueled mass, thrust, TLI capacity; booster and RS-25 thrust"),
  ("S36","User-supplied SpaceX launch table (data_raw/spacex_launch_data.csv); user indicated Kaggle dataset scoleman/spacex-launch-data","user upload","https://www.kaggle.com/datasets/scoleman/spacex-launch-data","Falcon 9/Heavy launches 2010-06-04..2018-06-04; underlying origin and license NOT verified"),
  ("S37","User-supplied NASA Facilities table (data_raw/NASA_Facilities.csv)","user upload","https://data.nasa.gov/","485 NASA facilities with coordinates; appears to be the NASA open-data facilities table, not verified"),
  ("S39","Launch-pad coordinates recalled from public maps/references","recalled","https://www.nasa.gov/","3 launch sites, ~0.01 deg accuracy, not retrieved"),
@@ -93,6 +95,81 @@ for m in DC.MOONS:
     moons.append(r)
     elements.append(tag(dict(body_id=id,epoch=None,frame="parent-centric (parent equator or Laplace plane, not recorded per body)",semi_major_axis_km=a,eccentricity=e,inclination_deg=i,validity="Mean values",time_dependence="time-dependent"),"unverified","low",["S03"]))
 atm=[tag(dict(a),"unverified","low" if a["id"] in ("pluto","mercury","moon","titan") else "medium",["S01"]) for a in DC.ATMOS]
+
+# ---------------- apply retrieved-source verification (celestial) ----------------
+VERF = os.path.join(ROOT, "metadata", "verification_celestial.json")
+MANIFEST = os.path.join(ROOT, "..", "data_raw", "retrieved", "MANIFEST.json")
+VER = json.load(open(VERF)) if os.path.exists(VERF) else None
+VERL = json.load(open(os.path.join(ROOT, 'metadata', 'verification_launch.json'))) if os.path.exists(os.path.join(ROOT, 'metadata', 'verification_launch.json')) else None
+MAN = {m["file"]: m for m in json.load(open(MANIFEST))} if os.path.exists(MANIFEST) else {}
+verified_ids = set()
+def apply_verification():
+    import collections
+    allrecs = {b["id"]: b for b in planets + moons + asteroids}
+    elmap = {e["body_id"]: e for e in elements}
+    keymap = {"mean_radius_m":"mean_radius_m","equatorial_radius_m":"equatorial_radius_m","mass_kg":"mass_kg","gravitational_parameter_km3_s2":"gravitational_parameter_km3_s2",
+              "surface_gravity_m_s2":"surface_gravity_m_s2","rotation_period_h":"rotation_period_h","orbital_period_days":"orbital_period_days","semi_major_axis_m":"semi_major_axis_m","eccentricity":"eccentricity","inclination_deg":"inclination_deg"}
+    by = collections.defaultdict(list)
+    others = collections.defaultdict(list)
+    for c in VER["checks"]:
+        if c.get("primary", True): by[c["record_id"]].append(c)
+        else: others[(c["record_id"], c["field"])].append(dict(source_id=c["source_id"], source_url=c["url"], source_original_text=c["source_original_text"], source_value=c["source_value"], status_vs_recalled=c["status"], section=c["section"]))
+    for rid, cs in by.items():
+        rec = allrecs.get(rid)
+        if rec is None: continue
+        fv = rec.setdefault("field_verification", {}); elfv = {}
+        for c in cs:
+            f = c["field"]
+            if f.startswith("derived.") or c["status"] == "not_recorded": continue
+            m = MAN.get(c["file"], {})
+            info = dict(status="verified" if c["status"] == "verified" else "conflict_resolved_to_source", source_id=c["source_id"], source_url=c["url"], retrieved=c["retrieved"], source_sha256=m.get("sha256"),
+                        section=c["section"], source_original_text=c["source_original_text"], source_value=c["source_value"], source_unit=c["source_unit"], conversion=c.get("conversion"), tolerance_rel=c["tolerance_rel"], recalled_value=c["mine_original"])
+            if others.get((rid, f)): info["other_sources"] = others[(rid, f)]; info["sources_disagree"] = any(o["source_value"] != c["source_value"] and abs(o["source_value"] - c["source_value"]) > 1e-9 * abs(c["source_value"]) * 1e3 for o in others[(rid, f)]); info["selection_reason"] = c.get("selection_reason")
+            if f.startswith("orbital_elements."):
+                key = f.split(".", 1)[1]; el = elmap[rid]
+                if c["status"] == "conflict": el[key] = c["source_value"]
+                if c.get("source_epoch_jd"): el["epoch"] = f"JD {c['source_epoch_jd']} (osculating, SBDB)"; el["validity"] = "osculating elements at the stated epoch (JPL SBDB); time-dependent"
+                elfv[key] = info
+                bk = {"semi_major_axis_au": "semi_major_axis_m", "eccentricity": "eccentricity", "inclination_deg": "inclination_deg"}[key]
+                if c["status"] == "conflict": rec[bk] = c["source_value"] * AU_KM * 1e3 if key == "semi_major_axis_au" else c["source_value"]
+                fv[bk] = info
+                continue
+            key = keymap[f]
+            if c["status"] == "conflict":
+                rec[key] = c["source_value"]
+                if key == "gravitational_parameter_km3_s2": rec["mu_m3_s2"] = c["source_value"] * 1e9
+            fv[key] = info
+        # recompute derived values from (possibly corrected) verified inputs
+        mu = rec["gravitational_parameter_km3_s2"]; R = rec["mean_radius_m"] / 1e3
+        d = rec.setdefault("derived", {}); d["escape_velocity_m_s"] = v_esc(mu, R) * 1e3
+        if rec.get("category") != "star":
+            d["circular_velocity_surface_m_s"] = v_circ(mu, R) * 1e3; d["gravity_from_mu_m_s2"] = mu * 1e9 / (R * 1e3) ** 2
+            if rec.get("parent_id") in (None, "sun") and rec.get("semi_major_axis_m"): d["solar_irradiance_w_m2"] = 1361.0 / (rec["semi_major_axis_m"] / 1e3 / AU_KM) ** 2
+        if "mu" in rec["derived"]: pass
+        core = ["gravitational_parameter_km3_s2", "mean_radius_m"]
+        if all(k in fv for k in core):
+            rec["data_class"] = "verified"; rec["confidence"] = "high"; rec["retrieval_status"] = "retrieved"; verified_ids.add(rid)
+            rec["source_ids"] = sorted({i["source_id"] for i in fv.values()} | ({"S01"} if rid in ("sun",) else set()))
+            rec["verification_scope"] = "core physical fields (GM, mean radius, and mass/gravity/rotation/orbit where listed in field_verification) were checked against retrieved JPL/NASA pages; fields in unverified_fields were NOT"
+        cand = ["mass_kg", "surface_gravity_m_s2", "rotation_period_h", "orbital_period_days", "semi_major_axis_m", "eccentricity", "inclination_deg", "mean_surface_temperature_k", "equatorial_magnetic_field_t", "equatorial_radius_m"]
+        rec["unverified_fields"] = [k for k in cand if rec.get(k) is not None and k not in fv]
+        if rid in elmap and elfv:
+            el = elmap[rid]; el["field_verification"] = elfv
+            if all(k in elfv for k in ("semi_major_axis_au", "eccentricity", "inclination_deg")):
+                el["data_class"] = "verified"; el["confidence"] = "high"; el["retrieval_status"] = "retrieved"; el["source_ids"] = sorted({i["source_id"] for i in elfv.values()})
+if VER: apply_verification()
+def apply_launch(coll, recs):
+    if not VERL: return
+    byid = {r["id"]: r for r in recs}
+    for c in VERL["checks"]:
+        if c["collection"] != coll or c["status"] not in ("verified", "conflict") or c["record_id"] not in byid: continue
+        r = byid[c["record_id"]]; f = c["field"]
+        info = dict(status="verified" if c["status"] == "verified" else "conflict_resolved_to_source", source_id=c["source_id"], source_url=c["url"], retrieved=c["retrieved"], source_sha256=c["source_sha256"], section=c["section"],
+                    source_original_text=c["source_original_text"], source_value=c["source_value"], source_unit=c["source_unit"], statement_type=c["statement_type"], tolerance_rel=c["tolerance_rel"], recalled_value=c["mine_original"])
+        if c["status"] == "conflict" and "[" not in f: r[f] = c["source_value"]
+        r.setdefault("field_verification", {})[f] = info
+        r["verified_field_count"] = len(r["field_verification"])
+        r["verification_scope"] = "partial: only the fields in field_verification were checked against a retrieved page; the record as a whole remains unverified"
 W("celestial/planets.json",meta("planets","Sun, planets and dwarf planets (SI)",planets))
 W("celestial/moons.json",meta("moons","Major moons (SI)",moons))
 W("celestial/asteroids.json",meta("asteroids","Selected small bodies (SI)",asteroids))
@@ -120,7 +197,7 @@ if True:
 chem=[e for e in engines if e["type"] not in ("ion","hall_effect")]; elec=[e for e in engines if e["type"] in ("ion","hall_effect")]
 propellants=[tag(dict(p),"unverified",p["conf"],p["src"]) for p in DP.PROPELLANTS]
 for p in propellants: p.pop("conf",None); p.pop("src",None)
-W("propulsion/rocket_engines.json",meta("rocket_engines","Chemical engines/motors/thrusters (SI)",chem))
+apply_launch("rocket_engines", engines); W("propulsion/rocket_engines.json",meta("rocket_engines","Chemical engines/motors/thrusters (SI)",chem))
 W("propulsion/electric_propulsion.json",meta("electric_propulsion","Ion and Hall thrusters at recorded operating point (SI)",elec))
 W("propulsion/propellants.json",meta("propellants","Propellant densities",propellants))
 ENG={e["id"]:e for e in engines}
@@ -151,7 +228,7 @@ for v in vehicles:
     for p in v["payloads"]:
         payload_caps.append(tag(dict(vehicle_id=v["id"],**p,reference_conditions_complete=all(p[k] is not None for k in("altitude_km","inclination_deg")),
             warning="Capabilities are NOT directly comparable unless altitude, inclination, site and recovery mode match."),"unverified",v["confidence"],v["source_ids"]))
-W("launch/launch_vehicles.json",meta("launch_vehicles","Launch vehicles (SI)",vehicles))
+apply_launch("launch_vehicles", vehicles); apply_launch("boosters", boosters); W("launch/launch_vehicles.json",meta("launch_vehicles","Launch vehicles (SI)",vehicles))
 W("launch/rocket_stages.json",meta("rocket_stages","Stage masses; engine links to propulsion/",stages))
 W("launch/boosters.json",meta("boosters","Strap-on / solid boosters",boosters))
 W("launch/payload_capabilities.json",meta("payload_capabilities","Payload capability per reference orbit; missing conditions are null",payload_caps))
@@ -452,6 +529,15 @@ used=set()
 for coll in (spx,fac,launch_sites,planets,moons,asteroids,atm,engines,propellants,vehicles,stages,boosters,comps,ins,ground,optical,missions,payload_caps,elements): 
     for r in coll: used.update(r.get("source_ids",[]))
 for s in sources: s["used_by_records"]= s["id"] in used
+if VER:
+    import collections as _c
+    used_src=_c.defaultdict(set)
+    for c in VER["checks"]+[dict(x,file=x["file"]) for x in (VERL["checks"] if VERL else []) if x["status"] in ("verified","conflict")]:
+        if c["status"]!="not_recorded": used_src[c["source_id"]].add((c["url"],c["retrieved"],c.get("source_sha256") or MAN.get(c["file"],{}).get("sha256")))
+    for s in sources:
+        if s["id"] in used_src:
+            s["retrieved"]=True; s["retrieval_date"]=max(r for _,r,_ in used_src[s["id"]]); s["retrieved_pages"]=[dict(url=u,retrieved=r,sha256=h) for u,r,h in sorted(used_src[s["id"]])]
+            s["page_or_section"]="see field_verification on each record"; s["note"]="Pages retrieved and parsed; each value comparison is stored in metadata/verification_celestial.json and in the record's field_verification."
 W("metadata/sources.json",meta("sources","Source catalog (none retrieved this build)",sources))
 # units
 W("metadata/units.json",dict(si_base=dict(mass="kg",length="m",time="s",force="N",power="W",energy="J (or Wh where named)",temperature="K",velocity="m/s",isp="s",mu="m^3/s^2 (also km^3/s^2 in gravitational_parameter_km3_s2)",irradiance="W/m^2",magnetic_field="T",pressure="Pa"),
@@ -472,13 +558,14 @@ counts=dict(celestial_bodies=len(planets)+len(moons)+len(asteroids),engines_and_
 targets=dict(celestial_bodies=40,engines_and_propulsion=40,launch_vehicles=20,stages_and_boosters=40,spacecraft_components=100,instruments=50,historical_missions=30,ground_comm_systems=15,engineering_constraints=50,optimization_examples=20)
 all_recs=planets+moons+asteroids+chem+elec+vehicles+stages+boosters+comps+ins+missions+ground+spx+fac+launch_sites
 cls=collections.Counter(r.get("data_class") for r in all_recs)
-quality=dict(build_date=BUILD_DATE,version=VERSION,retrieval=dict(sources_listed=len(sources)-1,sources_retrieved=0,reason="HTTPS CONNECT to nasa.gov / jpl.nasa.gov / esa hosts returned 403 from the sandbox egress proxy; no source document was opened."),
+quality=dict(build_date=BUILD_DATE,version=VERSION,retrieval=dict(sources_listed=len(sources)-1,sources_retrieved=sum(1 for x in sources if x.get("retrieved") is True),reason="Retrieved: JPL SSD planetary/satellite physical parameters, JPL approximate planet elements, JPL SBDB API, and NASA NSSDC fact sheets (see metadata/sources.json). Launch vehicles/engines: only 6 SLS-related numbers were checked against the NASA SLS page. Not retrieved: other launch-vehicle, engine, spacecraft-component, instrument and mission sources (spacex.com and api.spacexdata.com unreachable; others not attempted); those records remain unverified."),
    record_counts=counts,targets=targets,target_attainment_pct={k:round(100*counts[k]/targets[k],1) for k in counts if k in targets},
-   data_class_counts=dict(cls),verified_records=0,
-   statement="NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+   data_class_counts=dict(cls),verified_records=cls.get("verified",0),launch_field_checks=(dict(total=len(VERL["checks"]),verified=sum(1 for c in VERL["checks"] if c["status"]=="verified"),conflicts=sum(1 for c in VERL["checks"] if c["status"]=="conflict")) if VERL else None),field_checks=(dict(total=len(VER["checks"]),verified=sum(1 for c in VER["checks"] if c["status"]=="verified"),conflicts_resolved_to_source=sum(1 for c in VER["checks"] if c["status"]=="conflict" and c.get("primary",True) and not c["field"].startswith("derived."))) if VER else None),
+   statement=(f"{cls.get('verified',0)} celestial records (Sun, planets, dwarf planets, moons, small bodies) have their core physical fields verified against retrieved JPL/NASA pages ({VER and sum(1 for c in VER['checks'] if c['status']=='verified')} field checks matched; {VER and sum(1 for c in VER['checks'] if c['status']=='conflict' and c.get('primary',True) and not c['field'].startswith('derived.'))} conflicts were resolved to the sourced value). Six SLS/RS-25 launch figures were also verified against the NASA SLS page; all other launch-vehicle, engine, spacecraft, instrument and mission figures are still unverified (recalled values), as are two user-supplied tables (SpaceX launches 2010-2018, NASA facilities). Derived values inherit the status of their inputs. Optimization catalog values are estimated/fictional.") if VER else "NO record is verified.",
    completeness_pct=dict(engines=completeness(engines,["thrust_vac_n","thrust_sl_n","isp_vac_s","isp_sl_s","dry_mass_kg","burn_s"]),vehicles=completeness(vehicles,["liftoff_mass_kg","thrust_sl_n","price_usd","fairing_diam_m","height_m"]),
         instruments=completeness(ins,["mass_kg","power_w"]),missions=completeness(missions,["launch_mass_kg","dry_mass_kg","cost_musd_nominal"]),moons=completeness(moons,["rotation_period_h"]),components=completeness(comps,["mass_kg","power_consumption_w","power_generation_w","energy_capacity_wh"])),
-   known_conflicts=[dict(topic="SpaceX launch table coverage",note="User-supplied file ends at flight 56 (2018-06-04); 57 rows. Reliability (56/57) and landing statistics describe the 2010-2018 development era only and must not be extrapolated to Block 5. Origin/license of the Kaggle-derived file is unverified."),dict(topic="NASA facilities table",note="86 rows lack a status, 1 status is the truncated value 'Under' (assumed Under Rehabilitation), 340 lack URLs, and 256 of 485 fall into the 'other' category of the keyword classifier (category is derived, unreviewed)."),dict(topic="CCAFS LC-40 vs SLC-40",note="Launch-site strings differ across rows; treated as the same pad (assumption)."),dict(topic="Deimos GM vs mass",note="Recorded GM (9.62e-5 km3/s2) and mass (1.4762e15 kg) disagree by ~2.4% via GM=G*M; both retained, GM preferred for orbital use; resolve against JPL SSD sat_phys_par."),dict(topic="Small-body surface gravity",note="For irregular bodies (Phobos, Deimos, Bennu, Enceladus) g=mu/R^2 is a spherical approximation; recorded g is a mean/typical value."),dict(topic="Saturn V liftoff thrust",values=["~33.4 MN (design)","~34.5-35.1 MN (flight-reported)"],preferred="33.4 MN design value recorded; flight values vary by mission"),
+   conflicts_resolved=[dict(record_id=c["record_id"],field=c["field"],recalled_value=c["mine_original"],source_value=c["source_value"],source_id=c["source_id"],source_text=c["source_original_text"],url=c["url"]) for c in (VER["checks"] if VER else []) if c["status"]=="conflict" and c.get("primary",True) and not c["field"].startswith("derived.")],
+   known_conflicts=[dict(topic="SpaceX launch table coverage",note="User-supplied file ends at flight 56 (2018-06-04); 57 rows. Reliability (56/57) and landing statistics describe the 2010-2018 development era only and must not be extrapolated to Block 5. Origin/license of the Kaggle-derived file is unverified."),dict(topic="NASA facilities table",note="86 rows lack a status, 1 status is the truncated value 'Under' (assumed Under Rehabilitation), 340 lack URLs, and 256 of 485 fall into the 'other' category of the keyword classifier (category is derived, unreviewed)."),dict(topic="CCAFS LC-40 vs SLC-40",note="Launch-site strings differ across rows; treated as the same pad (assumption)."),dict(topic="Deimos GM vs mass",note="Recorded GM (9.62e-5 km3/s2) and mass (1.4762e15 kg) disagree by ~2.4% via GM=G*M; both retained, GM preferred for orbital use; resolve against JPL SSD sat_phys_par."),dict(topic="Small-body surface gravity",note="For irregular bodies (Phobos, Deimos, Bennu, Enceladus) g=mu/R^2 is a spherical approximation; recorded g is a mean/typical value and is not verified."),dict(topic="Saturn V liftoff thrust",values=["~33.4 MN (design)","~34.5-35.1 MN (flight-reported)"],preferred="33.4 MN design value recorded; flight values vary by mission"),
         dict(topic="Falcon 9 mass accounting",note="Recorded liftoff mass minus recorded stage masses leaves ~31 t, more than payload+fairing implies; at least one input (stage dry mass or liftoff mass) is likely off. See analysis/mass_analysis.json."),
         dict(topic="Electron stage masses",note="Recorded stage dry+propellant masses sum exactly to liftoff mass, leaving no room for payload/fairing; ideal dv in propulsion_analysis (~11.6-12 km/s) is therefore an overestimate and not a credible ascent number. Needs retrieval of the payload user's guide."),
         dict(topic="SLS stack ideal delta-v",note="Core-stage-only accounting (boosters excluded); stack residual is dominated by booster/upper-stage mass, so the ideal-dv total is not a vehicle capability."),
@@ -504,6 +591,7 @@ combined=dict(schema_version=VERSION,generated=BUILD_DATE,note="Generated by too
   analysis=dict(mass=mass,propulsion=prop,power=power,communications=comm,feasibility=feas),
   optimization=dict(models=models,constraints=cons,experiments=exp,pareto=pareto_out,sensitivity=sens,uncertainty=mc),
   launch_history=dict(launches=spx,sites=launch_sites,analysis=spx_an),infrastructure=dict(nasa_facilities=fac,analysis=fac_an),
+  verification=dict(celestial=VER,launch=VERL,retrieved_files=list(MAN.values())),
   metadata=dict(sources=sources,quality=quality))
 W("combined/all_space_mission_data.json",combined)
 # website copy

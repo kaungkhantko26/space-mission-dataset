@@ -2,7 +2,7 @@
 
 Machine-readable engineering data, analysis, and optimization models for an educational space-mission-design simulator, plus a static web explorer.
 
-> **Provenance status — please read.** This build had no access to NASA/JPL/ESA hosts (egress proxy returned 403). **No source document was retrieved, so no record is `verified`.** External figures were written from recalled published values and tagged `unverified` with a subjective confidence level; technology-class spacecraft components and the optimization catalog are `estimated`; credits and budgets are `fictional`. Dataset sizes are well below the brief's targets (see `space-mission-research/metadata/quality_report.json`). Treat this as a structured, validated scaffold to be verified, not as NASA data.
+> **Provenance status — please read.** 25 celestial records (Sun, planets, dwarf planets, moons, small bodies) are `verified` at core level (GM, mean radius, and every other field listed in `field_verification`) against **retrieved** JPL SSD, JPL SBDB and NASA NSSDC pages; 16 recalled values were wrong or outdated and were replaced by the sourced value. Six SLS/RS-25 launch fields are verified against the NASA SLS page. **Everything else is still `unverified`** (recalled values: other launch vehicles, engines, spacecraft components, instruments, missions), the optimizer catalog is `estimated`, credits are `fictional`, and the SpaceX/NASA-facility tables are user-supplied with unverified origin. See `space-mission-research/reports/VERIFICATION_REPORT.md`.
 
 ## Contents
 | Path | What |
@@ -13,7 +13,9 @@ Machine-readable engineering data, analysis, and optimization models for an educ
 
 ## Run
 ```bash
-python3 tools/make_schemas.py && python3 tools/build.py && python3 tools/validate.py && python3 tools/make_reports.py
+bash tools/fetch_sources.sh                 # needs network access to JPL/NASA hosts; cached copies are committed in data_raw/retrieved/
+python3 -I tools/verify_celestial.py && python3 -I tools/verify_launch.py
+python3 tools/make_schemas.py && python3 tools/build.py && python3 tools/validate.py && python3 tools/make_api.py && python3 tools/make_reports.py
 node tools/parity_check.js          # JS optimizer == Python optimizer
 python3 tools/benchmark.py          # solver benchmarks (needs numpy), writes analysis/benchmark_results.json
 cd docs && python3 -m http.server   # open http://localhost:8000

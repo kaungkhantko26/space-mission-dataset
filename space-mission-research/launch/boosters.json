@@ -21,7 +21,25 @@
    ],
    "confidence": "medium",
    "data_class": "unverified",
-   "retrieval_status": "not_retrieved"
+   "retrieval_status": "not_retrieved",
+   "field_verification": {
+    "thrust_sl_n": {
+     "status": "verified",
+     "source_id": "S41",
+     "source_url": "https://www.nasa.gov/reference/space-launch-system/",
+     "retrieved": "2026-11-06",
+     "source_sha256": "dacd12643163e96a6ca709bd11270edc6ba8c81fc8a0ce8694fb8e9e3dbd6193",
+     "section": "SLS reference page: each five-segment booster produces a maximum of 3.6 million lbs of thrust",
+     "source_original_text": "produces a maximum of 3.6 million lbs. of thrust during launch",
+     "source_value": 16013597.814937798,
+     "source_unit": "million lbf→N",
+     "statement_type": "point value",
+     "tolerance_rel": 0.005,
+     "recalled_value": 16000000
+    }
+   },
+   "verified_field_count": 1,
+   "verification_scope": "partial: only the fields in field_verification were checked against a retrieved page; the record as a whole remains unverified"
   },
   {
    "id": "stg_rsrm",

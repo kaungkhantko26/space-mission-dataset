@@ -8,9 +8,9 @@ $("#banner").innerHTML=`<b>Data status:</b> ${Q.retrieval.sources_retrieved} of 
 const SETS={ // dataset -> [records, columns]
  "Planets & dwarf planets":[D.celestial.planets,["name","category","gravitational_parameter_km3_s2","mean_radius_m","mass_kg","surface_gravity_m_s2","derived.escape_velocity_m_s","derived.solar_irradiance_w_m2"]],
  "Moons":[D.celestial.moons,["name","parent_id","gravitational_parameter_km3_s2","mean_radius_m","surface_gravity_m_s2","semi_major_axis_m","orbital_period_days","derived.escape_velocity_m_s"]],
- "Chemical engines":[D.propulsion.rocket_engines,["name","type","propellant","thrust_vac_n","thrust_sl_n","isp_vac_s","isp_sl_s","dry_mass_kg","derived.engine_thrust_to_weight_vac","status"]],
+ "Chemical engines":[D.propulsion.rocket_engines,["name","type","propellant","thrust_vac_n","thrust_sl_n","isp_vac_s","isp_sl_s","dry_mass_kg","derived.engine_thrust_to_weight_vac","status","verified_field_count"]],
  "Electric propulsion":[D.propulsion.electric_propulsion,["name","type","thrust_vac_n","isp_vac_s","power_w","derived.thrust_per_power_mN_per_kW","status"]],
- "Launch vehicles":[D.launch.launch_vehicles,["name","status","height_m","liftoff_mass_kg","thrust_sl_n","derived.liftoff_thrust_to_weight","price_usd","reusable"]],
+ "Launch vehicles":[D.launch.launch_vehicles,["name","status","height_m","liftoff_mass_kg","thrust_sl_n","derived.liftoff_thrust_to_weight","price_usd","reusable","verified_field_count"]],
  "Payload capabilities":[D.launch.payload_capabilities,["vehicle_id","orbit","payload_kg","altitude_km","inclination_deg","mode","reference_conditions_complete"]],
  "Stages":[D.launch.rocket_stages,["vehicle_id","stage","dry_mass_kg","propellant_mass_kg","engine_id","n_engines","derived.inert_mass_fraction"]],
  "Instruments":[D.instruments,["name","instrument_type","heritage_mission","mass_kg","power_w","derived.power_to_mass_w_per_kg"]],
@@ -49,7 +49,7 @@ function table(rows,cols,opts={}){
   draw();return wrap;}
 let BM=null;
 function guide(v){v.append(el(`<div class="card"><h2>How to use this site</h2><ol>
-<li><b>Overview</b> – record counts vs the research targets and how many records are unverified (all of them).</li>
+<li><b>Overview</b> – record counts vs the research targets and how many records are verified (celestial bodies) vs unverified.</li>
 <li><b>Explorer</b> – pick a dataset, type to filter, click a column header to sort. “—” means not recorded.</li>
 <li><b>Compare</b> – choose a dataset (engines, vehicles, instruments, bodies, missions), tick 2–4 records; bars are scaled to the largest value per row.</li>
 <li><b>Calculators</b> – rocket equation, Hohmann transfer, link budget and solar/battery sizing; type in any box and results update.</li>
@@ -62,7 +62,7 @@ function guide(v){v.append(el(`<div class="card"><h2>How to use this site</h2><o
 <li><b>API</b> – try the JSON API live; <a href="api.html">api.html</a> has the full guide and JS/Python clients.</li>
 <li><b>Benchmarks</b> – solver speed and how well heuristic solvers match the exact optimum.</li>
 <li><b>Quality</b> – validation results, known conflicts and gaps.</li></ol>
-<p class="mut">Reading results: costs are fictional credits; science points are educational weights; component values are estimates. Use the site to learn trade-offs, not to size real hardware.</p></div>`));}
+<p class="mut">Reading results: celestial constants are verified against JPL/NASA; launch-vehicle, engine and instrument values are not yet; costs are fictional credits; science points are educational weights; component values are estimates. Use the site to learn trade-offs, not to size real hardware.</p></div>`));}
 async function benchmarks(v){
   if(!BM){try{BM=await (await fetch("data/benchmark_results.json")).json();}catch(e){v.append(el("<div class='card'>benchmark_results.json not found.</div>"));return;}}
   v.append(el(`<div class="card"><h2>Exactness &amp; speed</h2><div id="a"></div><p class="mut">Vectorized exact solver matches the scalar reference on every objective. Timings are single runs on the build machine.</p></div>`));
@@ -157,7 +157,7 @@ function simulator(v){
 function overview(v){
   const c=Q.record_counts,tg=Q.targets;
   v.append(el(`<div class="card"><h2>Dataset coverage vs targets</h2><div class="kpi">${Object.keys(c).map(k=>`<div><small>${k.replace(/_/g," ")}</small><div class="big">${c[k]}</div><small>${tg[k]!==undefined?`target ${tg[k]} · ${Q.target_attainment_pct[k]}%`:'user-supplied data'}</small></div>`).join("")}</div></div>`));
-  v.append(el(`<div class="card"><h2>Data classes</h2><p>${Object.entries(Q.data_class_counts).map(([k,n])=>`<span class="tag ${k}">${k}: ${n}</span>`).join(" ")}</p><p class="mut">“verified” requires a retrieved source. None were retrieved, so no record is marked verified. Counts are targets from the research brief, not quotas; no records were invented to hit them.</p></div>`));
+  v.append(el(`<div class="card"><h2>Data classes</h2><p>${Object.entries(Q.data_class_counts).map(([k,n])=>`<span class="tag ${k}">${k}: ${n}</span>`).join(" ")}</p><p class="mut">“verified” means the value was compared with a retrieved source page (see Quality → verification). Verified records list any fields still unverified. Everything else stays unverified until its source is retrieved. Counts are targets from the research brief, not quotas; no records were invented to hit them.</p></div>`));
   const ex=D.optimization.experiments.filter(e=>e.objective==="balanced");
   v.append(el(`<div class="card"><h2>What you can do here</h2><ul><li><b>Explorer</b> – sort every dataset.</li><li><b>Compare</b> – up to 4 engines, vehicles, instruments, bodies or missions side by side.</li><li><b>Calculators</b> – rocket equation, Hohmann transfer, link budget, solar/battery sizing.</li><li><b>Optimizer</b> – change budget, margins and objective weights; the optimizer re-searches all ${D.optimization.constraints.scenarios.map(s=>s.id).length} scenarios live in your browser.</li><li><b>Sensitivity &amp; risk</b> – stored one-at-a-time sensitivities and Monte Carlo feasibility.</li><li><b>Quality</b> – known conflicts, gaps and validation results.</li></ul></div>`));
 }
@@ -257,6 +257,10 @@ function sensitivity(v){
 }
 function quality(v){
   v.append(el(`<div class="card"><h2>Validation</h2>${VAL?`<p><b>${VAL.passed}/${VAL.total}</b> automated checks passed (${VAL.run_date}).</p><div class="tw"><table><tbody>${VAL.checks.map(c=>`<tr><td class="${c.passed?"ok":"bad"}">${c.passed?"PASS":"FAIL"}</td><td>${c.check}</td></tr>`).join("")}</tbody></table></div><h3>Not performed</h3><ul>${VAL.not_performed.map(x=>`<li>${x}</li>`).join("")}</ul>`:"<p class='mut'>validation_report.json not found.</p>"}</div>`));
+  const V=D.verification&&D.verification.celestial;
+  if(V){const ck=V.checks,nv=ck.filter(c=>c.status==="verified").length,nc=ck.filter(c=>c.status==="conflict"&&!c.field.startsWith("derived.")).length;
+   const card=el(`<div class="card"><h2>Verification against retrieved sources</h2><p><b>${nv}</b> field checks matched the retrieved JPL/NASA page; <b>${nc}</b> recalled values disagreed and were <b>replaced by the sourced value</b> (the old value is kept as <code>recalled_value</code>). Retrieved files: ${D.verification.retrieved_files.length} (SHA-256 stored).</p><div id="vc"></div><p class="mut">Scope: celestial bodies only. Launch vehicles, engines, spacecraft components, instruments and missions are not yet verified.</p></div>`);
+   card.querySelector("#vc").append(table(Q.conflicts_resolved.map(c=>({record:c.record_id,field:c.field,recalled_value:c.recalled_value,source_value:c.source_value,source_text:c.source_text,source:c.source_id})),["record","field","recalled_value","source_value","source_text","source"],{cls:false}));v.append(card);}
   v.append(el(`<div class="card"><h2>Known conflicts &amp; issues</h2><ul>${Q.known_conflicts.map(k=>`<li><b>${k.topic}</b>: ${k.note||k.values.join(" vs ")+" — "+k.preferred}</li>`).join("")}</ul></div>`));
   v.append(el(`<div class="card"><h2>Missing categories</h2><ul>${Q.missing_categories.map(x=>`<li>${x}</li>`).join("")}</ul></div>`));
   v.append(el(`<div class="card"><h2>Field completeness (% non-null)</h2>${Object.entries(Q.completeness_pct).map(([k,o])=>`<h3>${k}</h3><p>${Object.entries(o).map(([f,p])=>`<span class="tag">${f}: ${p}%</span>`).join(" ")}</p>`).join("")}</div>`));

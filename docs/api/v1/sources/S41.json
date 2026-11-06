@@ -1,0 +1,23 @@
+{
+ "collection": "sources",
+ "data_status": "25 celestial records (Sun, planets, dwarf planets, moons, small bodies) have their core physical fields verified against retrieved JPL/NASA pages (198 field checks matched; 16 conflicts were resolved to the sourced value). Six SLS/RS-25 launch figures were also verified against the NASA SLS page; all other launch-vehicle, engine, spacecraft, instrument and mission figures are still unverified (recalled values), as are two user-supplied tables (SpaceX launches 2010-2018, NASA facilities). Derived values inherit the status of their inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "S41",
+  "title": "NASA Space Launch System reference page",
+  "organization": "NASA",
+  "url": "https://www.nasa.gov/reference/space-launch-system/",
+  "covers": "SLS Block 1 height, fueled mass, thrust, TLI capacity; booster and RS-25 thrust",
+  "retrieved": true,
+  "retrieval_date": "2026-11-06",
+  "page_or_section": "see field_verification on each record",
+  "note": "Pages retrieved and parsed; each value comparison is stored in metadata/verification_celestial.json and in the record's field_verification.",
+  "used_by_records": false,
+  "retrieved_pages": [
+   {
+    "url": "https://www.nasa.gov/reference/space-launch-system/",
+    "retrieved": "2026-11-06",
+    "sha256": "dacd12643163e96a6ca709bd11270edc6ba8c81fc8a0ce8694fb8e9e3dbd6193"
+   }
+  ]
+ }
+}

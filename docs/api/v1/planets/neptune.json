@@ -1,6 +1,6 @@
 {
  "collection": "planets",
- "data_status": "NO record is classified 'verified'. Figures were written from recalled published values (plus two user-supplied tables: SpaceX launches 2010-2018 and NASA facilities, whose origin is unverified) and are 'unverified' with a subjective confidence tag. Derived values inherit unverified inputs. Optimization catalog values are estimated/fictional.",
+ "data_status": "25 celestial records (Sun, planets, dwarf planets, moons, small bodies) have their core physical fields verified against retrieved JPL/NASA pages (198 field checks matched; 16 conflicts were resolved to the sourced value). Six SLS/RS-25 launch figures were also verified against the NASA SLS page; all other launch-vehicle, engine, spacecraft, instrument and mission figures are still unverified (recalled values), as are two user-supplied tables (SpaceX launches 2010-2018, NASA facilities). Derived values inherit the status of their inputs. Optimization catalog values are estimated/fictional.",
  "record": {
   "id": "neptune",
   "name": "Neptune",
@@ -26,12 +26,219 @@
    "derived_from": "v_esc=sqrt(2*mu/R_mean); v_circ=sqrt(mu/R_mean); g=mu/R^2 (spherical, non-rotating approximation)",
    "solar_irradiance_w_m2": 1.5051975409059468
   },
-  "data_class": "unverified",
-  "confidence": "medium",
+  "data_class": "verified",
+  "confidence": "high",
   "source_ids": [
-   "S01",
-   "S02"
+   "S02",
+   "S04"
   ],
-  "retrieval_status": "not_retrieved"
+  "retrieval_status": "retrieved",
+  "field_verification": {
+   "mean_radius_m": {
+    "status": "verified",
+    "source_id": "S02",
+    "source_url": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+    "retrieved": "2026-11-06",
+    "source_sha256": "e49a487947295c389ba6e5833dd8fb04b63e826d39f70c123881882096e5e68b",
+    "section": "Table, row Neptune Mean Radius",
+    "source_original_text": "24622 [ D ] ±19",
+    "source_value": 24622000.0,
+    "source_unit": "km",
+    "conversion": "km→m",
+    "tolerance_rel": 0.0005,
+    "recalled_value": 24622000.0,
+    "other_sources": [
+     {
+      "source_id": "S01",
+      "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/neptunefact.html",
+      "source_original_text": "24,622",
+      "source_value": 24622000.0,
+      "status_vs_recalled": "verified",
+      "section": "Bulk parameters: Volumetric mean radius"
+     }
+    ],
+    "sources_disagree": false,
+    "selection_reason": null
+   },
+   "equatorial_radius_m": {
+    "status": "verified",
+    "source_id": "S02",
+    "source_url": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+    "retrieved": "2026-11-06",
+    "source_sha256": "e49a487947295c389ba6e5833dd8fb04b63e826d39f70c123881882096e5e68b",
+    "section": "Table, row Neptune Equatorial Radius",
+    "source_original_text": "24764 [ D ] ±15",
+    "source_value": 24764000.0,
+    "source_unit": "km",
+    "conversion": "km→m",
+    "tolerance_rel": 0.0005,
+    "recalled_value": 24764000.0
+   },
+   "mass_kg": {
+    "status": "verified",
+    "source_id": "S02",
+    "source_url": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+    "retrieved": "2026-11-06",
+    "source_sha256": "e49a487947295c389ba6e5833dd8fb04b63e826d39f70c123881882096e5e68b",
+    "section": "Table, row Neptune Mass",
+    "source_original_text": "102.4092 [ M ] ±0.0048",
+    "source_value": 1.024092e+26,
+    "source_unit": "×10^24 kg",
+    "conversion": null,
+    "tolerance_rel": 0.0005,
+    "recalled_value": 1.02413e+26,
+    "other_sources": [
+     {
+      "source_id": "S01",
+      "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/neptunefact.html",
+      "source_original_text": "102.409",
+      "source_value": 1.02409e+26,
+      "status_vs_recalled": "verified",
+      "section": "Bulk parameters: Mass"
+     }
+    ],
+    "sources_disagree": true,
+    "selection_reason": null
+   },
+   "gravitational_parameter_km3_s2": {
+    "status": "verified",
+    "source_id": "S02",
+    "source_url": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+    "retrieved": "2026-11-06",
+    "source_sha256": "e49a487947295c389ba6e5833dd8fb04b63e826d39f70c123881882096e5e68b",
+    "section": "Table, row Neptune Mass (JPL derives mass from GM with this G)",
+    "source_original_text": "102.4092 [ M ] ±0.0048",
+    "source_value": 6835097.235599999,
+    "source_unit": "derived: JPL mass × G (CODATA 2018 6.6743e-11)",
+    "conversion": "GM = M·G",
+    "tolerance_rel": 0.0001,
+    "recalled_value": 6835100.0,
+    "other_sources": [
+     {
+      "source_id": "S01",
+      "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/neptunefact.html",
+      "source_original_text": "6.8351",
+      "source_value": 6835100.0,
+      "status_vs_recalled": "verified",
+      "section": "Bulk parameters: GM"
+     }
+    ],
+    "sources_disagree": false,
+    "selection_reason": null
+   },
+   "surface_gravity_m_s2": {
+    "status": "verified",
+    "source_id": "S02",
+    "source_url": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+    "retrieved": "2026-11-06",
+    "source_sha256": "e49a487947295c389ba6e5833dd8fb04b63e826d39f70c123881882096e5e68b",
+    "section": "Table, row Neptune Equatorial Gravity",
+    "source_original_text": "11.15 [ * ]",
+    "source_value": 11.15,
+    "source_unit": "m/s^2 (equatorial)",
+    "conversion": null,
+    "tolerance_rel": 0.015,
+    "recalled_value": 11.15
+   },
+   "rotation_period_h": {
+    "status": "verified",
+    "source_id": "S02",
+    "source_url": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+    "retrieved": "2026-11-06",
+    "source_sha256": "e49a487947295c389ba6e5833dd8fb04b63e826d39f70c123881882096e5e68b",
+    "section": "Table, row Neptune Sidereal Rotation Period",
+    "source_original_text": "0.67125 [ C ]",
+    "source_value": 16.11,
+    "source_unit": "d→h (negative = retrograde)",
+    "conversion": "days×24",
+    "tolerance_rel": 0.002,
+    "recalled_value": 16.11,
+    "other_sources": [
+     {
+      "source_id": "S01",
+      "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/neptunefact.html",
+      "source_original_text": "16.11*",
+      "source_value": 16.11,
+      "status_vs_recalled": "verified",
+      "section": "Rotational: Sidereal rotation period"
+     }
+    ],
+    "sources_disagree": false,
+    "selection_reason": null
+   },
+   "orbital_period_days": {
+    "status": "verified",
+    "source_id": "S02",
+    "source_url": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+    "retrieved": "2026-11-06",
+    "source_sha256": "e49a487947295c389ba6e5833dd8fb04b63e826d39f70c123881882096e5e68b",
+    "section": "Table, row Neptune Sidereal Orbital Period",
+    "source_original_text": "164.79132 [ B ]",
+    "source_value": 60190.029630000005,
+    "source_unit": "y→d (Julian year)",
+    "conversion": "years×365.25",
+    "tolerance_rel": 0.002,
+    "recalled_value": 60182.0,
+    "other_sources": [
+     {
+      "source_id": "S01",
+      "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/neptunefact.html",
+      "source_original_text": "60,189.018",
+      "source_value": 60189.018,
+      "status_vs_recalled": "verified",
+      "section": "Orbital: Sidereal orbit period"
+     }
+    ],
+    "sources_disagree": true,
+    "selection_reason": null
+   },
+   "semi_major_axis_m": {
+    "status": "verified",
+    "source_id": "S04",
+    "source_url": "https://ssd.jpl.nasa.gov/planets/approx_pos.html",
+    "retrieved": "2026-11-06",
+    "source_sha256": "9f7b30ca81cc548a879565bb3f70e6899a38ff5877cb1ff16bb04892f9c4d742",
+    "section": "Table 1 Keplerian elements (J2000, valid 1800-2050)",
+    "source_original_text": "30.06992276",
+    "source_value": 30.06992276,
+    "source_unit": "au",
+    "conversion": null,
+    "tolerance_rel": 1e-09,
+    "recalled_value": 30.06992276
+   },
+   "eccentricity": {
+    "status": "verified",
+    "source_id": "S04",
+    "source_url": "https://ssd.jpl.nasa.gov/planets/approx_pos.html",
+    "retrieved": "2026-11-06",
+    "source_sha256": "9f7b30ca81cc548a879565bb3f70e6899a38ff5877cb1ff16bb04892f9c4d742",
+    "section": "Table 1 Keplerian elements (J2000, valid 1800-2050)",
+    "source_original_text": "0.00859048",
+    "source_value": 0.00859048,
+    "source_unit": "",
+    "conversion": null,
+    "tolerance_rel": 1e-09,
+    "recalled_value": 0.00859048
+   },
+   "inclination_deg": {
+    "status": "verified",
+    "source_id": "S04",
+    "source_url": "https://ssd.jpl.nasa.gov/planets/approx_pos.html",
+    "retrieved": "2026-11-06",
+    "source_sha256": "9f7b30ca81cc548a879565bb3f70e6899a38ff5877cb1ff16bb04892f9c4d742",
+    "section": "Table 1 Keplerian elements (J2000, valid 1800-2050)",
+    "source_original_text": "1.77004347",
+    "source_value": 1.77004347,
+    "source_unit": "deg",
+    "conversion": null,
+    "tolerance_rel": 1e-09,
+    "recalled_value": 1.77004347
+   }
+  },
+  "verification_scope": "core physical fields (GM, mean radius, and mass/gravity/rotation/orbit where listed in field_verification) were checked against retrieved JPL/NASA pages; fields in unverified_fields were NOT",
+  "unverified_fields": [
+   "mean_surface_temperature_k",
+   "equatorial_magnetic_field_t"
+  ]
  }
 }

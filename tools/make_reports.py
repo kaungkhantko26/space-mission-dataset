@@ -3,7 +3,7 @@
 import json, os
 R=os.path.join(os.path.dirname(os.path.abspath(__file__)),"..","space-mission-research")
 L=lambda p: json.load(open(os.path.join(R,p)))
-Q=L("metadata/quality_report.json"); V=L("metadata/validation_report.json"); comb=L("combined/all_space_mission_data.json")
+Q=L("metadata/quality_report.json"); J_MAN=json.load(open(os.path.join(R,"..","data_raw","retrieved","MANIFEST.json"))); V=L("metadata/validation_report.json"); comb=L("combined/all_space_mission_data.json")
 prop=L("analysis/propulsion_analysis.json"); mass=L("analysis/mass_analysis.json"); pw=L("analysis/power_analysis.json"); cm=L("analysis/communication_analysis.json")
 traj={t["id"]:t for t in L("missions/trajectory_reference.json")["records"]}
 ex=L("optimization/optimized_configurations.json")["records"]; par=L("optimization/pareto_frontiers.json")["results"]
@@ -11,7 +11,7 @@ sens=L("optimization/sensitivity_results.json")["results"]; mc=L("analysis/uncer
 f=lambda x,d=0: "—" if x is None else f"{x:,.{d}f}"
 os.makedirs(R+"/reports",exist_ok=True)
 W=lambda n,t: open(f"{R}/reports/{n}","w").write(t)
-BANNER="> **Read first:** no source document was retrieved when this package was built (the sandbox proxy returned 403 for nasa.gov, jpl.nasa.gov and esa.int). Every external figure is therefore `unverified` (written from recalled published values with a subjective confidence tag). Derived results inherit that status. Optimization catalog values are `estimated`; credits are `fictional`.\n\n"
+BANNER="> **Read first:** "+Q["statement"]+" Not retrieved: "+Q["retrieval"]["reason"].split("Not retrieved:")[-1].strip()+"\n\n"
 # ---- RESEARCH_SUMMARY
 c=Q["record_counts"]; t=Q["targets"]
 rows="\n".join(f"| {k.replace('_',' ')} | {c[k]} | {t.get(k,'n/a (external data)')} | {str(Q['target_attainment_pct'].get(k,'n/a'))+'%' if k in t else 'n/a'} |" for k in c)
@@ -159,6 +159,39 @@ Records carry `source_ids` that point to the *expected* authoritative document o
 2. Edit `tools/data_*.py`, set classes to `verified` only when matched to a retrieved document.
 3. `python3 tools/build.py && python3 tools/make_schemas.py && python3 tools/validate.py && python3 tools/make_reports.py && node tools/parity_check.js`.
 4. Resolve entries in `known_conflicts` first (Electron/Falcon 9 stage masses, Deimos GM).
+""")
+VC=L("metadata/verification_celestial.json")["checks"]; VLn=L("metadata/verification_launch.json")["checks"]
+conf=Q["conflicts_resolved"]
+cr="\n".join(f"| {c['record_id']} | {c['field']} | {c['recalled_value']} | {c['source_value']} | {c['source_text']} | {c['source_id']} |" for c in conf)
+lv="\n".join(f"| {c['record_id']} | {c['field']} | {c['mine_original']:,} | {c['source_value']:,.0f} | {c['source_original_text']} | {c['statement_type']} |" for c in VLn)
+files="\n".join(f"* `{f['file']}` — {f['url']} (retrieved {f['retrieved']}, sha256 `{f['sha256'][:12]}…`)" for f in J_MAN)
+W("VERIFICATION_REPORT.md",f"""# Verification report
+{BANNER}
+## What "verified" means here
+A value is `verified` only if it was compared with a value parsed from a **retrieved local copy** of the cited page (kept in `data_raw/retrieved/`, SHA-256 in `MANIFEST.json`) within a stated tolerance. Each check stores the original text, unit, conversion, URL, retrieval date, file hash and tolerance, in `metadata/verification_celestial.json`, `metadata/verification_launch.json` and in each record's `field_verification`.
+A **celestial record** is classed `verified` when its GM and mean radius are verified; its other fields are individually listed in `field_verification` or, if not checked, in `unverified_fields` (surface temperature, magnetic field, many moon orbits, ...). A **launch record** stays `unverified` as a whole; only the fields in its `field_verification` are verified (`verified_field_count`).
+
+## Coverage
+* Celestial: {sum(1 for c in VC if c['status']=='verified')} field checks matched; {len(conf)} recalled values disagreed and were replaced by the sourced value (table below). 25 of 25 celestial records verified at core level.
+* Launch: {sum(1 for c in VLn if c['status']=='verified')}/{len(VLn)} checks against the NASA SLS page matched (table below). All other launch vehicles, engines, spacecraft components, instruments, missions, propellants and atmospheres remain **unverified**. spacex.com and api.spacexdata.com were not reachable.
+
+## Recalled values that were wrong or outdated (now replaced)
+| Record | Field | Recalled | Source | Source text | Source id |
+|---|---|---:|---:|---|---|
+{cr}
+
+Notes: JPL gives Eris mean radius 1200±50 km (no diameter in SBDB); a more precise occultation-based figure (~1163 km) exists in the literature but was not retrieved, so it is not used. Small-body elements from SBDB are osculating at the stated epoch, so they differ from older mean values.
+
+## SLS-related launch checks
+| Record | Field | Recalled | Source | Source text | Statement |
+|---|---|---:|---:|---|---|
+{lv}
+
+## Retrieved files
+{files}
+
+## How to extend
+Run `tools/fetch_sources.sh`, add parsers following `tools/verify_celestial.py`, and re-run the pipeline in `README.md`. Candidate next sources: NTRS documents for Saturn V stages and engines, manufacturer user guides (PDF) for Falcon, Atlas, Ariane and Electron once their hosts are allowed.
 """)
 BM=L("analysis/benchmark_results.json")
 eq="\n".join(f"| {e['scenario_id']} | {e['designs']:,} | {'exact match' if e['exact_match'] else 'MISMATCH '+str(e['mismatches'])} |" for e in BM["equivalence"])

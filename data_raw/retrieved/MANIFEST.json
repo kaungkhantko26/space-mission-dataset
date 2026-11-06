@@ -1,0 +1,142 @@
+[
+ {
+  "file": "data_raw/retrieved/jpl_approx_pos.html",
+  "url": "https://ssd.jpl.nasa.gov/planets/approx_pos.html",
+  "bytes": 29585,
+  "sha256": "9f7b30ca81cc548a879565bb3f70e6899a38ff5877cb1ff16bb04892f9c4d742",
+  "retrieved": "2026-11-06"
+ },
+ {
+  "file": "data_raw/retrieved/jpl_planets_phys_par.html",
+  "url": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+  "bytes": 58244,
+  "sha256": "e49a487947295c389ba6e5833dd8fb04b63e826d39f70c123881882096e5e68b",
+  "retrieved": "2026-11-06"
+ },
+ {
+  "file": "data_raw/retrieved/jpl_sats_phys_par.html",
+  "url": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+  "bytes": 96641,
+  "sha256": "9a9c004d950923ea368a8c4815d813c9c232c332d1586402a23b15d9581370d1",
+  "retrieved": "2026-11-06"
+ },
+ {
+  "file": "data_raw/retrieved/nasa_sls_reference.html",
+  "url": "https://www.nasa.gov/reference/space-launch-system/",
+  "bytes": 311295,
+  "sha256": "dacd12643163e96a6ca709bd11270edc6ba8c81fc8a0ce8694fb8e9e3dbd6193",
+  "retrieved": "2026-11-06"
+ },
+ {
+  "file": "data_raw/retrieved/nssdc_earth.html",
+  "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
+  "bytes": 5490,
+  "sha256": "1b06e3ec31249d063d40d1b38837fac89ddcd2f4b25268b38e8a6d5f413e70ef",
+  "retrieved": "2026-11-06"
+ },
+ {
+  "file": "data_raw/retrieved/nssdc_jupiter.html",
+  "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html",
+  "bytes": 11195,
+  "sha256": "9ac7835ae5387261bc02019a641bbfc8450122ffebebffea5678c3de6c54d0cb",
+  "retrieved": "2026-11-06"
+ },
+ {
+  "file": "data_raw/retrieved/nssdc_mars.html",
+  "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+  "bytes": 13261,
+  "sha256": "366b0ce9b69cbee370be904956748af954468a41b93dc71a796a986519aa8d74",
+  "retrieved": "2026-11-06"
+ },
+ {
+  "file": "data_raw/retrieved/nssdc_mercury.html",
+  "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/mercuryfact.html",
+  "bytes": 10878,
+  "sha256": "170d9f2d2ba7f7ae322c68d473ccb0b35ab94f4b4aca197bf74fe3b7e4e10f3f",
+  "retrieved": "2026-11-06"
+ },
+ {
+  "file": "data_raw/retrieved/nssdc_moon.html",
+  "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html",
+  "bytes": 8980,
+  "sha256": "a468979dfb4179e36a3f6579cd2d1d4a475b5c6da29313fd470fa68ca1aa30c1",
+  "retrieved": "2026-11-06"
+ },
+ {
+  "file": "data_raw/retrieved/nssdc_neptune.html",
+  "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/neptunefact.html",
+  "bytes": 11071,
+  "sha256": "4b9166f959be2b507eea77a9eef56f4e5679b693ba75151072a28bb228f44328",
+  "retrieved": "2026-11-06"
+ },
+ {
+  "file": "data_raw/retrieved/nssdc_pluto.html",
+  "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/plutofact.html",
+  "bytes": 11594,
+  "sha256": "cdf13d454e44e0abf141389a1b0554c48b49fc7b46c9e1feea704b91db8e791f",
+  "retrieved": "2026-11-06"
+ },
+ {
+  "file": "data_raw/retrieved/nssdc_saturn.html",
+  "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/saturnfact.html",
+  "bytes": 11257,
+  "sha256": "6d09ba010cacef61c8ae1a1ff137b06e5464e99461faf8f32c107419c474d06d",
+  "retrieved": "2026-11-06"
+ },
+ {
+  "file": "data_raw/retrieved/nssdc_sun.html",
+  "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html",
+  "bytes": 7232,
+  "sha256": "bcc186a518298636340e7975bf5a32da660cd656b90081f2e7c8aa7ec2b6561a",
+  "retrieved": "2026-11-06"
+ },
+ {
+  "file": "data_raw/retrieved/nssdc_uranus.html",
+  "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/uranusfact.html",
+  "bytes": 10941,
+  "sha256": "02389139f8345a4328fc8f8956012cb72f691c6c7c2854c03c0b2512a063de81",
+  "retrieved": "2026-11-06"
+ },
+ {
+  "file": "data_raw/retrieved/nssdc_venus.html",
+  "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/venusfact.html",
+  "bytes": 10558,
+  "sha256": "473c61da0bf7188764ec8ae5b12c0fdc9f922bccd9e3f6b47c885fef0723541c",
+  "retrieved": "2026-11-06"
+ },
+ {
+  "file": "data_raw/retrieved/sbdb_bennu.json",
+  "url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=101955&phys-par=1",
+  "bytes": 5546,
+  "sha256": "9b8fa7ba677fcf7962ceb2f2bf6074e9105cd6fdd55b90411bf0c25a6f7720de",
+  "retrieved": "2026-11-06"
+ },
+ {
+  "file": "data_raw/retrieved/sbdb_ceres.json",
+  "url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=1&phys-par=1",
+  "bytes": 4915,
+  "sha256": "c8d2c7b1d5f5fcb8a2cf25d409af83880378d13503fb664e9c99af4caf2095d7",
+  "retrieved": "2026-11-06"
+ },
+ {
+  "file": "data_raw/retrieved/sbdb_eris.json",
+  "url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=136199&phys-par=1",
+  "bytes": 2570,
+  "sha256": "569355f0b0753b837f41b8d1caad7e534747d0976b037a06414783c633dd5063",
+  "retrieved": "2026-11-06"
+ },
+ {
+  "file": "data_raw/retrieved/sbdb_pluto.json",
+  "url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=134340&phys-par=1",
+  "bytes": 2534,
+  "sha256": "fe9a7fa6a2022d7097010a5a1ca57f5af1aa80d3be760c6fd3a13099845ac693",
+  "retrieved": "2026-11-06"
+ },
+ {
+  "file": "data_raw/retrieved/sbdb_vesta.json",
+  "url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=4&phys-par=1",
+  "bytes": 5024,
+  "sha256": "78b6e24f9d6564aa49a074b66dacbb785a89a96c9adc9c23d8ffe296eae3d9d6",
+  "retrieved": "2026-11-06"
+ }
+]

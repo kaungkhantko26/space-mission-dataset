@@ -9,10 +9,9 @@
   {
    "record_id": "sun",
    "dataset": "celestial",
-   "data_class": "unverified",
-   "confidence": "medium",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
-    "S05",
     "S01"
    ],
    "retrieval_status": "not_retrieved",
@@ -28,11 +27,11 @@
   {
    "record_id": "mercury",
    "dataset": "celestial",
-   "data_class": "unverified",
-   "confidence": "medium",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
-    "S01",
-    "S02"
+    "S02",
+    "S04"
    ],
    "retrieval_status": "not_retrieved",
    "retrieval_date": null,
@@ -49,11 +48,11 @@
   {
    "record_id": "venus",
    "dataset": "celestial",
-   "data_class": "unverified",
-   "confidence": "medium",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
-    "S01",
-    "S02"
+    "S02",
+    "S04"
    ],
    "retrieval_status": "not_retrieved",
    "retrieval_date": null,
@@ -70,11 +69,11 @@
   {
    "record_id": "earth",
    "dataset": "celestial",
-   "data_class": "unverified",
-   "confidence": "medium",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
-    "S01",
-    "S02"
+    "S02",
+    "S04"
    ],
    "retrieval_status": "not_retrieved",
    "retrieval_date": null,
@@ -91,11 +90,11 @@
   {
    "record_id": "mars",
    "dataset": "celestial",
-   "data_class": "unverified",
-   "confidence": "medium",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
-    "S01",
-    "S02"
+    "S02",
+    "S04"
    ],
    "retrieval_status": "not_retrieved",
    "retrieval_date": null,
@@ -112,11 +111,11 @@
   {
    "record_id": "jupiter",
    "dataset": "celestial",
-   "data_class": "unverified",
-   "confidence": "medium",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
-    "S01",
-    "S02"
+    "S02",
+    "S04"
    ],
    "retrieval_status": "not_retrieved",
    "retrieval_date": null,
@@ -133,11 +132,11 @@
   {
    "record_id": "saturn",
    "dataset": "celestial",
-   "data_class": "unverified",
-   "confidence": "medium",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
-    "S01",
-    "S02"
+    "S02",
+    "S04"
    ],
    "retrieval_status": "not_retrieved",
    "retrieval_date": null,
@@ -154,11 +153,11 @@
   {
    "record_id": "uranus",
    "dataset": "celestial",
-   "data_class": "unverified",
-   "confidence": "medium",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
-    "S01",
-    "S02"
+    "S02",
+    "S04"
    ],
    "retrieval_status": "not_retrieved",
    "retrieval_date": null,
@@ -175,11 +174,11 @@
   {
    "record_id": "neptune",
    "dataset": "celestial",
-   "data_class": "unverified",
-   "confidence": "medium",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
-    "S01",
-    "S02"
+    "S02",
+    "S04"
    ],
    "retrieval_status": "not_retrieved",
    "retrieval_date": null,
@@ -196,11 +195,11 @@
   {
    "record_id": "pluto",
    "dataset": "celestial",
-   "data_class": "unverified",
-   "confidence": "low",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
-    "S01",
-    "S03"
+    "S02",
+    "S40"
    ],
    "retrieval_status": "not_retrieved",
    "retrieval_date": null,
@@ -217,11 +216,11 @@
   {
    "record_id": "ceres",
    "dataset": "celestial",
-   "data_class": "unverified",
-   "confidence": "low",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
-    "S01",
-    "S03"
+    "S02",
+    "S40"
    ],
    "retrieval_status": "not_retrieved",
    "retrieval_date": null,
@@ -238,11 +237,11 @@
   {
    "record_id": "eris",
    "dataset": "celestial",
-   "data_class": "unverified",
-   "confidence": "low",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
-    "S01",
-    "S03"
+    "S02",
+    "S40"
    ],
    "retrieval_status": "not_retrieved",
    "retrieval_date": null,
@@ -259,9 +258,10 @@
   {
    "record_id": "moon",
    "dataset": "celestial",
-   "data_class": "unverified",
-   "confidence": "medium",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
+    "S01",
     "S03"
    ],
    "retrieval_status": "not_retrieved",
@@ -279,9 +279,10 @@
   {
    "record_id": "phobos",
    "dataset": "celestial",
-   "data_class": "unverified",
-   "confidence": "medium",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
+    "S01",
     "S03"
    ],
    "retrieval_status": "not_retrieved",
@@ -299,9 +300,10 @@
   {
    "record_id": "deimos",
    "dataset": "celestial",
-   "data_class": "unverified",
-   "confidence": "medium",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
+    "S01",
     "S03"
    ],
    "retrieval_status": "not_retrieved",
@@ -319,8 +321,8 @@
   {
    "record_id": "io",
    "dataset": "celestial",
-   "data_class": "unverified",
-   "confidence": "medium",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
     "S03"
    ],
@@ -339,8 +341,8 @@
   {
    "record_id": "europa",
    "dataset": "celestial",
-   "data_class": "unverified",
-   "confidence": "medium",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
     "S03"
    ],
@@ -359,8 +361,8 @@
   {
    "record_id": "ganymede",
    "dataset": "celestial",
-   "data_class": "unverified",
-   "confidence": "medium",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
     "S03"
    ],
@@ -379,8 +381,8 @@
   {
    "record_id": "callisto",
    "dataset": "celestial",
-   "data_class": "unverified",
-   "confidence": "medium",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
     "S03"
    ],
@@ -399,8 +401,8 @@
   {
    "record_id": "titan",
    "dataset": "celestial",
-   "data_class": "unverified",
-   "confidence": "medium",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
     "S03"
    ],
@@ -419,8 +421,8 @@
   {
    "record_id": "enceladus",
    "dataset": "celestial",
-   "data_class": "unverified",
-   "confidence": "medium",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
     "S03"
    ],
@@ -439,8 +441,8 @@
   {
    "record_id": "triton",
    "dataset": "celestial",
-   "data_class": "unverified",
-   "confidence": "medium",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
     "S03"
    ],
@@ -459,8 +461,8 @@
   {
    "record_id": "charon",
    "dataset": "celestial",
-   "data_class": "unverified",
-   "confidence": "medium",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
     "S03"
    ],
@@ -479,11 +481,10 @@
   {
    "record_id": "vesta",
    "dataset": "celestial",
-   "data_class": "unverified",
-   "confidence": "low",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
-    "S01",
-    "S03"
+    "S40"
    ],
    "retrieval_status": "not_retrieved",
    "retrieval_date": null,
@@ -500,11 +501,10 @@
   {
    "record_id": "bennu",
    "dataset": "celestial",
-   "data_class": "unverified",
-   "confidence": "low",
+   "data_class": "verified",
+   "confidence": "high",
    "source_ids": [
-    "S01",
-    "S03"
+    "S40"
    ],
    "retrieval_status": "not_retrieved",
    "retrieval_date": null,

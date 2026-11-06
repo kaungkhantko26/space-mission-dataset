@@ -15,6 +15,7 @@
    "eccentricity",
    "equatorial_magnetic_field_t",
    "equatorial_radius_m",
+   "field_verification",
    "gravitational_parameter_km3_s2",
    "id",
    "inclination_deg",
@@ -30,7 +31,9 @@
    "rotation_period_h",
    "semi_major_axis_m",
    "source_ids",
-   "surface_gravity_m_s2"
+   "surface_gravity_m_s2",
+   "unverified_fields",
+   "verification_scope"
   ],
   "moons": [
    "category",
@@ -40,6 +43,7 @@
    "eccentricity",
    "equatorial_magnetic_field_t",
    "equatorial_radius_m",
+   "field_verification",
    "gravitational_parameter_km3_s2",
    "id",
    "inclination_deg",
@@ -56,7 +60,9 @@
    "semi_major_axis_m",
    "source_ids",
    "surface_gravity_m_s2",
-   "tidally_locked_assumed"
+   "tidally_locked_assumed",
+   "unverified_fields",
+   "verification_scope"
   ],
   "rocket_engines": [
    "burn_s",
@@ -65,6 +71,7 @@
    "derived",
    "derived_from",
    "dry_mass_kg",
+   "field_verification",
    "id",
    "isp_sl_s",
    "isp_vac_s",
@@ -79,7 +86,9 @@
    "status",
    "thrust_sl_n",
    "thrust_vac_n",
-   "type"
+   "type",
+   "verification_scope",
+   "verified_field_count"
   ],
   "electric_propulsion": [
    "burn_s",
@@ -113,6 +122,7 @@
    "diameter_m",
    "fairing_diam_m",
    "fairing_height_m",
+   "field_verification",
    "height_m",
    "id",
    "liftoff_mass_kg",
@@ -128,7 +138,9 @@
    "source_ids",
    "stages",
    "status",
-   "thrust_sl_n"
+   "thrust_sl_n",
+   "verification_scope",
+   "verified_field_count"
   ],
   "rocket_stages": [
    "confidence",

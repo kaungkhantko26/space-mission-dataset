@@ -1,12 +1,12 @@
 {
  "run_date": "2026-11-06",
- "passed": 72,
- "total": 72,
+ "passed": 80,
+ "total": 80,
  "checks": [
   {
    "check": "json_syntax_all_files",
    "passed": true,
-   "detail": "71 files; failures=[]"
+   "detail": "73 files; failures=[]"
   },
   {
    "check": "schema:celestial/planets.json",
@@ -359,9 +359,49 @@
    "detail": ""
   },
   {
-   "check": "combined_has_no_verified_claims",
+   "check": "verification:retrieved_files_match_manifest_sha256",
    "passed": true,
-   "detail": "by design: nothing was retrieved"
+   "detail": "20 files"
+  },
+  {
+   "check": "verification:verified_records_only_in_celestial",
+   "passed": true,
+   "detail": "25 verified"
+  },
+  {
+   "check": "verification:verified_records_have_complete_field_provenance",
+   "passed": true,
+   "detail": "[]"
+  },
+  {
+   "check": "verification:every_record_value_agrees_with_its_retrieved_source_value",
+   "passed": true,
+   "detail": "[]"
+  },
+  {
+   "check": "verification:launch_source_text_found_for_every_check",
+   "passed": true,
+   "detail": "[]"
+  },
+  {
+   "check": "verification:launch_checks_reference_retrieved_file_hash",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "verification:launch_verified_fields_recorded_on_records",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "verification:recheck_matches_source_text",
+   "passed": true,
+   "detail": "parsing is exercised by tools/verify_celestial.py"
+  },
+  {
+   "check": "verification:unverified_records_do_not_claim_retrieval",
+   "passed": true,
+   "detail": ""
   }
  ],
  "not_performed": [

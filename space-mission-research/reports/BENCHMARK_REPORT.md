@@ -1,5 +1,5 @@
 # Benchmark report
-> **Read first:** no source document was retrieved when this package was built (the sandbox proxy returned 403 for nasa.gov, jpl.nasa.gov and esa.int). Every external figure is therefore `unverified` (written from recalled published values with a subjective confidence tag). Derived results inherit that status. Optimization catalog values are `estimated`; credits are `fictional`.
+> **Read first:** 25 celestial records (Sun, planets, dwarf planets, moons, small bodies) have their core physical fields verified against retrieved JPL/NASA pages (198 field checks matched; 16 conflicts were resolved to the sourced value). Six SLS/RS-25 launch figures were also verified against the NASA SLS page; all other launch-vehicle, engine, spacecraft, instrument and mission figures are still unverified (recalled values), as are two user-supplied tables (SpaceX launches 2010-2018, NASA facilities). Derived values inherit the status of their inputs. Optimization catalog values are estimated/fictional. Not retrieved: other launch-vehicle, engine, spacecraft-component, instrument and mission sources (spacex.com and api.spacexdata.com unreachable; others not attempted); those records remain unverified.
 
 
 All timings are single runs on the build sandbox (Python 3.13.18, numpy 2.5.3); relative speedups are meaningful, absolute seconds are not. Reproduce: `python3 tools/benchmark.py`. Heuristic runs use seeds 0-19.
@@ -14,19 +14,19 @@ All timings are single runs on the build sandbox (Python 3.13.18, numpy 2.5.3); 
 ## 2. Speed (one full pass over every design)
 | Scenario | Designs | Scalar Python (s) | Vectorized (s) | Speedup | JavaScript (s) |
 |---|---:|---:|---:|---:|---:|
-| leo_eo | 22,680 | 0.49 | 0.039 | 13x | 0.17 |
-| lunar_orbiter | 15,120 | 0.35 | 0.016 | 21x | 0.08 |
-| mars_orbiter | 7,560 | 0.08 | 0.008 | 10x | 0.07 |
+| leo_eo | 22,680 | 0.23 | 0.024 | 9x | 0.29 |
+| lunar_orbiter | 15,120 | 0.33 | 0.017 | 20x | 0.08 |
+| mars_orbiter | 7,560 | 0.07 | 0.012 | 6x | 0.08 |
 
 ## 3. Scaling with instrument count (lunar scenario, synthetic instrument clones, exact max-science)
 | Instruments | Designs | Vectorized (s) | Scalar (s) | Optimum science |
 |---|---:|---:|---:|---:|
-| 6 | 15,120 | 0.02 | 0.21 | 24 |
-| 8 | 61,200 | 0.02 | 0.89 | 33 |
+| 6 | 15,120 | 0.03 | 0.20 | 24 |
+| 8 | 61,200 | 0.03 | 0.96 | 33 |
 | 10 | 245,520 | 0.03 | — | 40 |
 | 12 | 982,800 | 0.08 | — | 46 |
-| 14 | 3,931,920 | 0.36 | — | 51 |
-| 16 | 15,728,400 | 1.12 | — | 56 |
+| 14 | 3,931,920 | 0.32 | — | 51 |
+| 16 | 15,728,400 | 1.16 | — | 56 |
 
 The design space doubles per added instrument; the vectorized exact solver stays under ~1.2 s up to 15,728,400 designs. Clones are synthetic (perturbed copies) and used only to test scaling.
 

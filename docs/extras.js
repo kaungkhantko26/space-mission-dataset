@@ -13,7 +13,7 @@ function fitTable(kind,rows,fmt,limit){return `<div class="tw"><table><thead><tr
 function controls(el){const A=ADV;const c=el(`<div class="row"><div><label>Mission<select id="ms"></select></label></div><div><label>Spacecraft dry mass (kg) – everything except propellant<input id="dm" type="number" min="1" value="${ST.dry}"></label></div></div>`);
   Object.entries(A.MISSIONS).forEach(([k,m])=>c.querySelector("#ms").append(new Option(m.name,k)));c.querySelector("#ms").value=ST.mission;return c;}
 function missionFit(v,UI){const {el,fmt,D}=UI,A=ADV;
-  const card=el(`<div class="card"><h2>Mission fit — which parts are better for which mission</h2><p class="mut">Pick a mission and a spacecraft dry mass. Launch vehicles, engines and instruments are scored with <b>transparent rules</b> (shown in the “why” column) applied to the unverified dataset. A part marked “Not rated” lacks the data needed — it is never guessed.</p></div>`);
+  const card=el(`<div class="card"><h2>Mission fit — which parts are better for which mission</h2><p class="mut">Pick a mission and a spacecraft dry mass. Launch vehicles, engines and instruments are scored with <b>transparent rules</b> (shown in the “why” column) applied to the dataset (celestial constants are verified; launch-vehicle, engine and instrument values mostly are not). A part marked “Not rated” lacks the data needed — it is never guessed.</p></div>`);
   const c=controls(el);card.append(c);const out=el("<div></div>");card.append(out);v.append(card);
   function run(){ST.mission=c.querySelector("#ms").value;ST.dry=Math.max(1,+c.querySelector("#dm").value||300);const M=A.MISSIONS[ST.mission],R=A.adviseAll(D,ST.mission,ST.dry);
     const ok=r=>["Suitable","Good fit","Marginal"].includes(r.verdict);

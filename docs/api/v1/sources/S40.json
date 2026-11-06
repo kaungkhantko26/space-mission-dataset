@@ -1,0 +1,43 @@
+{
+ "collection": "sources",
+ "data_status": "25 celestial records (Sun, planets, dwarf planets, moons, small bodies) have their core physical fields verified against retrieved JPL/NASA pages (198 field checks matched; 16 conflicts were resolved to the sourced value). Six SLS/RS-25 launch figures were also verified against the NASA SLS page; all other launch-vehicle, engine, spacecraft, instrument and mission figures are still unverified (recalled values), as are two user-supplied tables (SpaceX launches 2010-2018, NASA facilities). Derived values inherit the status of their inputs. Optimization catalog values are estimated/fictional.",
+ "record": {
+  "id": "S40",
+  "title": "JPL Small-Body Database (SBDB) API",
+  "organization": "NASA JPL SSD",
+  "url": "https://ssd-api.jpl.nasa.gov/doc/sbdb.html",
+  "covers": "GM, diameter, rotation, osculating elements of Bennu, Ceres, Vesta, Pluto, Eris",
+  "retrieved": true,
+  "retrieval_date": "2026-11-06",
+  "page_or_section": "see field_verification on each record",
+  "note": "Pages retrieved and parsed; each value comparison is stored in metadata/verification_celestial.json and in the record's field_verification.",
+  "used_by_records": true,
+  "retrieved_pages": [
+   {
+    "url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=1&phys-par=1",
+    "retrieved": "2026-11-06",
+    "sha256": "c8d2c7b1d5f5fcb8a2cf25d409af83880378d13503fb664e9c99af4caf2095d7"
+   },
+   {
+    "url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=101955&phys-par=1",
+    "retrieved": "2026-11-06",
+    "sha256": "9b8fa7ba677fcf7962ceb2f2bf6074e9105cd6fdd55b90411bf0c25a6f7720de"
+   },
+   {
+    "url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=134340&phys-par=1",
+    "retrieved": "2026-11-06",
+    "sha256": "fe9a7fa6a2022d7097010a5a1ca57f5af1aa80d3be760c6fd3a13099845ac693"
+   },
+   {
+    "url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=136199&phys-par=1",
+    "retrieved": "2026-11-06",
+    "sha256": "569355f0b0753b837f41b8d1caad7e534747d0976b037a06414783c633dd5063"
+   },
+   {
+    "url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=4&phys-par=1",
+    "retrieved": "2026-11-06",
+    "sha256": "78b6e24f9d6564aa49a074b66dacbb785a89a96c9adc9c23d8ffe296eae3d9d6"
+   }
+  ]
+ }
+}
