@@ -27,6 +27,8 @@ export:
 training:                                            ## ML-ready files in training/
 	$(PY) tools/make_training.py
 	$(PY) tools/validate_training.py
+	$(PY) tools/make_design_dataset.py
+	$(PY) tools/validate_design.py
 
 test: validate                                       ## backend smoke test (16 endpoint checks)
 	$(PY) tools/smoke_test.py

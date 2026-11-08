@@ -1,0 +1,62 @@
+{
+  "note": "Labels are rule-engine output. 'physics' rules use verified inputs; every constant in heuristics is a teaching assumption, not real data.",
+  "heuristics": {
+    "structure_overhead": 0.25,
+    "mass_margin": 0.9,
+    "dv_margin": 1.1,
+    "power_margin": 1.15,
+    "array_efficiency": 0.8,
+    "bus_base_load_w": 10.0,
+    "radio_load_w": 10.0,
+    "unknown_instrument_w": 5.0,
+    "unknown_chem_thruster_w": 10.0,
+    "tx_power_w": 5.0,
+    "ground_gain_dbi": 35.0,
+    "link_losses_db": 3.0,
+    "ebn0_db": 10.0,
+    "noise_temp_k": 290.0,
+    "link_margin_db": 3.0,
+    "max_transfer_s": 31557600.0,
+    "leo_station_keeping_dv": 100.0,
+    "default_freq_mhz": 2200.0,
+    "overkill_ratio": 50.0
+  },
+  "required_data_rate_kbps": {
+    "LEO": 500.0,
+    "GTO": 100.0,
+    "MOON": 100.0,
+    "MARS": 10.0
+  },
+  "derived_environment": {
+    "req_dv": {
+      "LEO": 100.0,
+      "GTO": 1478.0217750956085,
+      "MOON": 3133.144768957019,
+      "MARS": 3612.957019889418
+    },
+    "distance_m": {
+      "LEO": 1000000.0,
+      "GTO": 36000000.0,
+      "MOON": 384400000.0,
+      "MARS": 227943822427.57303
+    },
+    "irradiance": {
+      "LEO": 1361.0,
+      "GTO": 1361.0,
+      "MOON": 1361.0,
+      "MARS": 586.2
+    }
+  },
+  "rules": {
+    "MASS_OVER_CAPACITY": "total <= 0.9 x launcher capacity (LEO capacity; GTO capacity for GTO) [physics inputs verified, margin heuristic]",
+    "BUDGET_EXCEEDED": "launcher launch_cost_usd <= budget (cost verified from Launch Library; component prices unknown so excluded)",
+    "DELTA_V_SHORT": "Isp*g0*ln(m0/mf) >= 1.1 x required dv (rocket equation; required dv from Hohmann/escape on verified GM, radii, semi-major axes)",
+    "THRUST_TOO_LOW": "propellant needed for the required dv burned at total thrust must take <= 1 year",
+    "POWER_SHORT": "array BOL power x 0.8 x (destination irradiance / Earth irradiance) >= 1.15 x load (irradiance from NASA NSSDC fact sheets)",
+    "BAND_MISMATCH": "radio and antenna frequency bands must match when both known",
+    "DATA_RATE_LOW": "radio max data rate >= destination requirement (game parameter)",
+    "LINK_MARGIN_LOW": "Friis link margin >= 3 dB (5 W Tx, 35 dBi ground antenna, Eb/N0 10 dB are heuristics; frequency, gain, distance verified)",
+    "MISSING_*": "launcher, propulsion, solar array, radio, antenna and at least one instrument are required"
+  },
+  "not_modelled": "batteries/eclipse, thermal, attitude control, component prices, launch fairing size, mission duration, radiation, launch window"
+}
