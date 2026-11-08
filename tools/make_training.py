@@ -174,7 +174,7 @@ write_jsonl("physics_examples.jsonl", phys)
 # ---------- manifest ----------
 files = {}
 for fn in sorted(os.listdir(OUT)):
-    if fn.endswith((".csv", ".jsonl")):
+    if fn.endswith((".csv", ".jsonl")) and fn != "image_prompts.csv":
         p = os.path.join(OUT, fn)
         files[fn] = dict(sha256=hashlib.sha256(open(p, "rb").read()).hexdigest(), bytes=os.path.getsize(p))
 

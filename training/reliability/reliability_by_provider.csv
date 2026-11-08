@@ -1,0 +1,99 @@
+provider,launches,successes,failures,partial_failures,success_rate,ci95_low,ci95_high,low_sample_warning
+Soviet Space Program,2453,2285,168,0,0.9315,0.9208,0.9408,0
+United States Air Force,1078,972,102,4,0.9017,0.8824,0.918,0
+SpaceX,744,729,11,4,0.9798,0.967,0.9877,0
+China Aerospace Science and Technology Corporation,622,606,12,4,0.9743,0.9586,0.9841,0
+Russian Federal Space Agency (ROSCOSMOS),344,333,10,1,0.968,0.9437,0.9821,0
+Arianespace,328,313,12,3,0.9543,0.9259,0.9721,0
+Khrunichev State Research and Production Space Center,193,178,14,1,0.9223,0.8757,0.9523,0
+United Launch Alliance,175,175,0,0,1.0,0.9785,1,0
+Russian Space Forces,159,151,8,0,0.9497,0.9039,0.9743,0
+National Aeronautics and Space Administration,136,116,15,5,0.8529,0.7837,0.9027,0
+Indian Space Research Organization,101,86,15,0,0.8515,0.7693,0.9079,0
+Rocket Lab,99,95,4,0,0.9596,0.9007,0.9842,0
+Lockheed Martin,80,77,3,0,0.9625,0.8955,0.9872,0
+Orbital Sciences Corporation,72,65,7,0,0.9028,0.8126,0.9521,0
+Virgin Galactic,67,62,1,4,0.9254,0.8369,0.9677,0
+Lockheed Space Operations Company,65,64,1,0,0.9846,0.9179,0.9973,0
+Mitsubishi Heavy Industries,59,57,2,0,0.9661,0.8846,0.9907,0
+Production Corporation Polyot,57,55,2,0,0.9649,0.8808,0.9903,0
+United Space Alliance,51,50,1,0,0.9804,0.897,0.9965,0
+Progress Rocket Space Center,45,44,1,0,0.9778,0.8843,0.9961,0
+Sea Launch,43,40,3,0,0.9302,0.8139,0.976,0
+International Launch Services,42,40,1,1,0.9524,0.8421,0.9868,0
+Blue Origin,41,39,2,0,0.9512,0.8386,0.9865,0
+Japan Aerospace Exploration Agency,37,33,4,0,0.8919,0.7529,0.9571,0
+ExPace,35,31,4,0,0.8857,0.7405,0.9546,0
+Institute of Space and Astronautical Science,32,24,8,0,0.75,0.5789,0.8675,0
+China Aerospace Corporation,27,24,3,0,0.8889,0.7194,0.9615,0
+Galactic Energy,27,24,3,0,0.8889,0.7194,0.9615,0
+ISC Kosmotras,22,21,1,0,0.9545,0.782,0.9919,0
+Russian Aerospace Defence Forces,22,20,2,0,0.9091,0.7218,0.9747,0
+US Navy,18,3,15,0,0.1667,0.0584,0.3922,1
+CAS Space,18,17,1,0,0.9444,0.7424,0.9901,1
+Northrop Grumman Space Systems,17,17,0,0,1.0,0.8157,1,1
+Strategic Rocket Forces,15,12,3,0,0.8,0.5481,0.9295,1
+National Space Development Agency of Japan,15,14,1,0,0.9333,0.7018,0.9881,1
+Iranian Space Agency,15,6,9,0,0.4,0.1982,0.6425,1
+National Center of Space Research,14,12,2,0,0.8571,0.6006,0.9599,1
+Seventh Ministry of Machine Building Industry,14,9,5,0,0.6429,0.3876,0.8366,1
+Eurockot Launch Services,14,13,1,0,0.9286,0.6853,0.9873,1
+Ministry of Aerospace Industry,13,11,1,1,0.8462,0.5776,0.9567,1
+LandSpace,13,10,3,0,0.7692,0.4974,0.9182,1
+China Rocket Co. Ltd.,13,13,0,0,1.0,0.7719,1,1
+Army Ballistic Missile Agency,12,5,7,0,0.4167,0.1933,0.6805,1
+Ministry of Space Industry,11,10,0,1,0.9091,0.6226,0.9838,1
+General Dynamics,11,9,2,0,0.8182,0.523,0.9486,1
+Lockheed Martin Space Operations,9,9,0,0,1.0,0.7008,1,1
+Korea Aerospace Research Institute,9,6,3,0,0.6667,0.3542,0.8794,1
+Rockwell International,8,8,0,0,1.0,0.6756,1,1
+i-Space,8,4,4,0,0.5,0.2152,0.7848,1
+European Space Agency,7,6,1,0,0.8571,0.4869,0.9743,1
+Israeli Space Agency,7,5,2,0,0.7143,0.3589,0.9178,1
+Interstellar Technologies,7,3,4,0,0.4286,0.1582,0.7495,1
+Astra Space,7,2,5,0,0.2857,0.0822,0.6411,1
+Firefly Aerospace,7,4,2,1,0.5714,0.2505,0.8418,1
+Science and Engineering Research Council,6,6,0,0,1.0,0.6097,1.0,1
+Israel Aerospace Industries,6,6,0,0,1.0,0.6097,1.0,1
+Orbital ATK,6,6,0,0,1.0,0.6097,1.0,1
+Islamic Revolutionary Guard Corps Aerospace Force,6,5,1,0,0.8333,0.4365,0.9699,1
+Virgin Orbit,6,4,2,0,0.6667,0.3,0.9032,1
+European Space Research Organisation,5,4,1,0,0.8,0.3755,0.9638,1
+Starsem SA,5,5,0,0,1.0,0.5655,1,1
+China Aerospace Science and Industry Corporation,5,5,0,0,1.0,0.5655,1,1
+National Aerospace Development Administration,5,2,3,0,0.4,0.1176,0.7693,1
+European Launcher Development Organisation,4,0,4,0,0.0,0,0.4899,1
+Martin Marietta,4,4,0,0,1.0,0.5101,1,1
+Korean Committee of Space Technology,4,1,3,0,0.25,0.0456,0.6994,1
+Antrix Corporation Limited,4,4,0,0,1.0,0.5101,1,1
+EXOS Aerospace,4,0,1,3,0.0,0,0.4899,1
+Orienspace Technology,4,4,0,0,1.0,0.5101,1,1
+Italian Space Agency,3,3,0,0,1.0,0.4385,1,1
+Makeyev Rocket Design Bureau,3,2,1,0,0.6667,0.2077,0.9385,1
+Equatorial Launch Australia,3,3,0,0,1.0,0.4385,1,1
+Space One,3,0,3,0,0.0,0,0.5615,1
+National Research Council,2,2,0,0,1.0,0.3424,1,1
+Royal Aircraft Establishment,2,1,1,0,0.5,0.0945,0.9055,1
+Brazilian Space Agency,2,0,2,0,0.0,0,0.6576,1
+Boeing,2,1,0,1,0.5,0.0945,0.9055,1
+Innospace,2,1,1,0,0.5,0.0945,0.9055,1
+Space Pioneer,2,1,1,0,0.5,0.0945,0.9055,1
+Isar Aerospace,2,1,1,0,0.5,0.0945,0.9055,1
+Avio S.p.A,2,2,0,0,1.0,0.3424,1,1
+US Army,1,1,0,0,1.0,0.2065,1,1
+Weapons Research Establishment,1,1,0,0,1.0,0.2065,1,1
+German Aerospace Center,1,1,0,0,1.0,0.2065,1,1
+Convair,1,1,0,0,1.0,0.2065,1,1
+Space Services Inc.,1,0,1,0,0.0,0,0.7935,1
+Sandia National Laboratories,1,0,1,0,0.0,0,0.7935,1
+OneSpace,1,0,1,0,0.0,0,0.7935,1
+GK Launch Services,1,1,0,0,1.0,0.2065,1,1
+TiSPACE,1,0,1,0,0.0,0,0.7935,1
+Long Wall,1,0,1,0,0.0,0,0.7935,1
+Relativity Space,1,0,1,0,0.0,0,0.7935,1
+Payload Aerospace S.L.,1,1,0,0,1.0,0.2065,1,1
+Agency for Defense Development,1,1,0,0,1.0,0.2065,1,1
+HyImpulse,1,1,0,0,1.0,0.2065,1,1
+Gilmour Space Technologies,1,0,1,0,0.0,0,0.7935,1
+RKK Energiya,1,1,0,0,1.0,0.2065,1,1
+Skyroot Aerospace,1,1,0,0,1.0,0.2065,1,1

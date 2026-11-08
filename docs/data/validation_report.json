@@ -1,12 +1,12 @@
 {
- "passed": 64,
- "total": 64,
- "run_date": "2026-11-06",
+ "passed": 68,
+ "total": 68,
+ "run_date": "2026-11-08",
  "checks": [
   {
    "check": "json_syntax_all_files",
    "passed": true,
-   "detail": "22 files"
+   "detail": "24 files"
   },
   {
    "check": "no_unverified_estimated_or_fictional_class_anywhere",
@@ -27,6 +27,11 @@
    "check": "unique_ids:launch_vehicles",
    "passed": true,
    "detail": "7"
+  },
+  {
+   "check": "unique_ids:launch_history_all",
+   "passed": true,
+   "detail": "7657"
   },
   {
    "check": "unique_ids:nasa_missions",
@@ -269,6 +274,21 @@
    "detail": ""
   },
   {
+   "check": "ll2_all_count_equals_raw_unique_launches",
+   "passed": true,
+   "detail": "7657 vs 7657"
+  },
+  {
+   "check": "ll2_all_dated_sorted_unique",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "ll2_all_status_values_known",
+   "passed": true,
+   "detail": "{'Launch Failure', 'Launch was a Partial Failure', 'Launch Successful'}"
+  },
+  {
    "check": "ll2_spacex_count_equals_raw",
    "passed": true,
    "detail": "743 vs 743"
@@ -286,7 +306,7 @@
   {
    "check": "ll2_spacex_status_values_known",
    "passed": true,
-   "detail": "{'Launch Failure', 'Launch Successful', 'Launch was a Partial Failure'}"
+   "detail": "{'Launch Failure', 'Launch was a Partial Failure', 'Launch Successful'}"
   },
   {
    "check": "nist_boiling_points_and_liquid_densities_match_known_physics",

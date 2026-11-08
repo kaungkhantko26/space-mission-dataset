@@ -55,7 +55,7 @@ cat = {}
 def add(**kw):
     base = dict(id=None, type=None, name=None, vendor=None, mass_kg=None, thrust_n=None, isp_s=None, power_w=None,
                 rate_kbps=None, freq_mhz=None, gain_dbi=None, leo_capacity_kg=None, gto_capacity_kg=None,
-                launch_cost_usd=None, success_rate=None, total_launches=None, subtype=None, source_collection=None, source_id=None)
+                launch_cost_usd=None, est_cost_usd=None, est_cost_low_usd=None, est_cost_high_usd=None, cost_basis=None, success_rate=None, total_launches=None, subtype=None, source_collection=None, source_id=None)
     base.update(kw)
     cat[base["id"]] = base
 
@@ -95,6 +95,12 @@ for r in load("nasa_instruments"):
     if r.get("mass_kg_from_text"):
         add(id="I_" + r["id"], type="instrument", name=r["name"], vendor=r["mission_name"], mass_kg=r["mass_kg_from_text"],
             power_w=r.get("power_w_from_text"), subtype=(r.get("description") or "")[:120], source_collection="nasa_instruments", source_id=r["id"])
+for c in cat.values():
+    if c["type"] == "launcher":
+        c.update(est_cost_usd=c["launch_cost_usd"], est_cost_low_usd=c["launch_cost_usd"], est_cost_high_usd=c["launch_cost_usd"], cost_basis="published launch price (Launch Library 2)")
+    else:
+        c.update(est_cost_usd=round(DR.RATE_MID * c["mass_kg"]), est_cost_low_usd=round(DR.RATE_LOW * c["mass_kg"]), est_cost_high_usd=round(DR.RATE_HIGH * c["mass_kg"]),
+                 cost_basis="ESTIMATE: mass x NASA-anchored $/kg (see rules.json cost_model); not a real price")
 by = {t: [c for c in cat.values() if c["type"] == t] for t in ("launcher", "thruster", "solar_array", "radio", "antenna", "instrument")}
 cols = list(next(iter(cat.values())).keys())
 for c in cat.values():
@@ -145,8 +151,8 @@ def gen():
     if rep():
         ok = [l for l in by["launcher"] if l[key] and l[key] * DR.HEUR["mass_margin"] >= total]
         L = rng.choice(ok) if ok else L
-    budget = round(math.exp(rng.uniform(math.log(5e6), math.log(2e8))), -5)
-    if rep(): budget = round(L["launch_cost_usd"] * rng.uniform(1.0, 1.6), -5)
+    budget = round(math.exp(rng.uniform(math.log(5e6), math.log(6e8))), -5)
+    if rep(): budget = round((DR.RATE_MID * dry + L["launch_cost_usd"]) * rng.uniform(1.0, 1.6), -5)
     d = dict(dest=dest, budget_usd=budget, launcher=L["id"], thruster=T["id"], n_thr=n_thr, array=A["id"], n_arr=n_arr, radio=R["id"],
              antenna=N["id"], instruments=[i["id"] for i in insts], propellant_kg=prop)
     if rng.random() < .06:  # incomplete design (what NOT to do)
@@ -189,7 +195,7 @@ while len(rows) < N_DESIGNS and tries < N_DESIGNS * 400:
                primary_reason=failed[0] if failed else "ALL_CHECKS_PASS", all_reasons="|".join(failed),
                p_mission_success=round(m.get("p_launch_success") or 0, 4) if ok else 0.0, data_class="derived", label_source="rule_engine")
     for k in ("component_mass_kg", "dry_mass_kg", "total_mass_kg", "launcher_capacity_kg", "launch_cost_usd", "mass_margin_ratio",
-              "dv_available_m_s", "dv_required_m_s", "burn_time_days", "transfer_days", "total_mission_days", "one_way_light_time_min", "array_power_w", "load_w", "link_margin_db", "warn_launcher_overkill"):
+              "dv_available_m_s", "dv_required_m_s", "hardware_cost_usd", "total_cost_usd", "total_cost_low_usd", "total_cost_high_usd", "burn_time_days", "transfer_days", "total_mission_days", "one_way_light_time_min", "array_power_w", "load_w", "link_margin_db", "warn_launcher_overkill"):
         v = m.get(k)
         row[k] = round(v, 3) if isinstance(v, float) else v
     rows.append(row)
@@ -198,6 +204,9 @@ while len(rows) < N_DESIGNS and tries < N_DESIGNS * 400:
             f"{d['n_thr']}x {names([d['thruster']]) or 'none'}, propellant {d['propellant_kg']} kg. Power: {d['n_arr']}x {names([d['array']]) or 'none'}. "
             f"Radio: {names([d['radio']]) or 'none'}. Antenna: {names([d['antenna']]) or 'none'}. Instruments: {names(d['instruments'] or []) or 'none'}.")
     lines = [f"- {'OK ' if p else 'FAIL'} {c}: {t}" for c, p, t in chk]
+    if "cost_breakdown_usd" in m:
+        row["cost_breakdown_usd"] = json.dumps({k: round(v) for k, v in m["cost_breakdown_usd"].items()})
+        lines.append("- INFO BUDGET: " + ", ".join(f"{k} ${v/1e6:.2f}M" for k, v in m["cost_breakdown_usd"].items()) + f"; total ${m['total_cost_usd']/1e6:.1f}M (range ${m['total_cost_low_usd']/1e6:.1f}-{m['total_cost_high_usd']/1e6:.1f}M).")
     if "transfer_days" in m:
         lines.append(f"- INFO TRAJECTORY: Earth LEO -> {d['dest']}: burn {m['burn_time_days']:.0f} d + coast {m['transfer_days']:.1f} d (Hohmann) = {m['total_mission_days']:.0f} d; one-way light time {m['one_way_light_time_min']:.2f} min.")
     fix = "" if ok else " Fixes: " + "; ".join(sorted({FIX[c] for c in failed})) + "."
@@ -206,6 +215,7 @@ while len(rows) < N_DESIGNS and tries < N_DESIGNS * 400:
     chats.append(dict(id=did, split=row["split"], data_class="derived", label_source="rule_engine", outcome=row["outcome"], reasons=failed,
                       messages=[{"role": "user", "content": "Review this space mission design and tell me whether it succeeds and why. " + desc},
                                 {"role": "assistant", "content": "\n".join(lines) + "\n" + verdict + fix}]))
+for r_ in rows: r_.setdefault("cost_breakdown_usd", "")
 with open(os.path.join(OUT, "designs.csv"), "w", newline="") as f:
     w = csv.DictWriter(f, fieldnames=list(rows[0].keys())); w.writeheader(); w.writerows(rows)
 with open(os.path.join(OUT, "design_chat.jsonl"), "w") as f:
@@ -244,9 +254,10 @@ with open(os.path.join(OUT, "compatibility_pairs.csv"), "w", newline="") as f:
 # ---------------- rules.json ----------------
 json.dump(dict(
     note="Labels are rule-engine output. 'physics' rules use verified inputs; every constant in heuristics is a teaching assumption, not real data.",
-    heuristics=DR.HEUR, required_data_rate_kbps=DR.REQ_RATE_KBPS, derived_environment=env,
+    heuristics=DR.HEUR, required_data_rate_kbps=DR.REQ_RATE_KBPS, derived_environment=env, cost_model=dict(note="No source publishes component prices. Hardware cost = dry mass x USD/kg, with USD/kg taken from NASA-stated spacecraft development costs divided by catalog mass; a low/median/high band is carried through. Operations cost is excluded. These are estimates for game balance, NOT real prices.",
+          usd_per_kg=dict(low=DR.RATE_LOW, median=DR.RATE_MID, high=DR.RATE_HIGH), evidence=DR.cost_rates()[1], reference_prices=DR.REFERENCE_PRICES),
     rules={"MASS_OVER_CAPACITY": "total <= 0.9 x launcher capacity (LEO capacity; GTO capacity for GTO) [physics inputs verified, margin heuristic]",
-           "BUDGET_EXCEEDED": "launcher launch_cost_usd <= budget (cost verified from Launch Library; component prices unknown so excluded)",
+           "BUDGET_EXCEEDED": "hardware estimate (dry mass x NASA-anchored $/kg) + launch price <= budget; launch price verified (Launch Library), hardware is an ESTIMATE",
            "DELTA_V_SHORT": "Isp*g0*ln(m0/mf) >= 1.1 x required dv (rocket equation; required dv from Hohmann/escape on verified GM, radii, semi-major axes)",
            "THRUST_TOO_LOW": "propellant needed for the required dv burned at total thrust must take <= 1 year",
            "POWER_SHORT": "array BOL power x 0.8 x (destination irradiance / Earth irradiance) >= 1.15 x load (irradiance from NASA NSSDC fact sheets)",
@@ -270,7 +281,8 @@ ip = []
 
 
 def prompt(id_, cat_, name, ref, specs, text, ar="4:3"):
-    ip.append(dict(id=id_, category=cat_, display_name=name, reference_item=ref, key_specs=specs, prompt=text + ", " + STYLE,
+    c_ = cat.get(id_) or {}
+    ip.append(dict(id=id_, est_budget_usd=c_.get("est_cost_usd"), budget_basis=c_.get("cost_basis"), category=cat_, display_name=name, reference_item=ref, key_specs=specs, prompt=text + ", " + STYLE,
                    negative_prompt=NEG, aspect_ratio=ar, note="AI illustration of the component TYPE; not an accurate depiction of the named product."))
 
 

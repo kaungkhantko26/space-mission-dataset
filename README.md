@@ -2,14 +2,14 @@
 
 A hackathon-ready **backend dataset** for space-mission design projects. **Strict mode:** everything public here was compared with, or ingested directly from, a *retrieved* authoritative source (JPL, NASA, ULA, ESA). Unverified, estimated and fictional values were removed.
 
-**→ Start with [`HACKATHON.md`](HACKATHON.md).** Live site and API: https://kaungkhantko26.github.io/space-mission-dataset/
+**→ New here? Read the [User guide](USER_GUIDE.md) ([web version](https://kaungkhantko26.github.io/space-mission-dataset/guide.html)).** Hackathon quick start: [`HACKATHON.md`](HACKATHON.md). Live site and API: https://kaungkhantko26.github.io/space-mission-dataset/
 
 ```bash
 python3 tools/serve_api.py          # local backend on http://127.0.0.1:8000 (stdlib only)
-make all && make test               # rebuild everything, 64 validation checks, 22 backend checks
+make all && make test               # rebuild everything, 68 validation checks, 22 backend checks
 ```
 
-## What you get (3,250 verified records, scoped to the game)
+## What you get (10,925 verified records, scoped to the game)
 The game: design, manage and simulate a space mission balancing spacecraft, instruments, launch vehicle, budget, mass, power, communication and orbit. See **[`GAME_DATA_GUIDE.md`](GAME_DATA_GUIDE.md)** for which data feeds which game mechanic.
 
 | Game need | Records | Source |
@@ -17,7 +17,7 @@ The game: design, manage and simulate a space mission balancing spacecraft, inst
 | **Orbit / destinations:** Sun, 8 planets, 11 moons, planet orbital elements, moon mean elements, atmospheres, NSSDC fact-sheet values (solar irradiance, J2, day length…) | 9 / 11 / 8 / 11 / 10 | JPL SSD, NASA NSSDC |
 | **Spacecraft components** (thrusters, batteries, solar arrays, radios, antennas, reaction wheels, star trackers, computers, platforms, launch integration) | 1,578 rows / 81 tables | NASA Small Spacecraft SoA report 2026 (vendor-reported) |
 | **Launch vehicles** (dimensions, mass, thrust, capacities, cost, launch stats) | 532 configs | Launch Library 2 (aggregator) |
-| **Launch reliability** (SpaceX record) | 743 | Launch Library 2 (aggregator); your 2010-2018 file agrees on 57/57 dates |
+| **Launch reliability:** every launch of every provider since 1957 (outcome, rocket, pad, orbit, failure reason) + the SpaceX subset | 7,657 / 743 | Launch Library 2 (aggregator); cross-checked with Kaggle (97.6% outcome agreement) and your 2010-2018 file |
 | **Scientific instruments / missions** with NASA descriptions (mass/power/cost where stated) | 181 / 39 | NASA NSSDC Master Catalog |
 | **Propellant physics** (O₂, H₂, CH₄, Xe, N₂, He saturation) | 6 | NIST Chemistry WebBook |
 | Engines/thrusters, launch vehicles, Saturn V stages, payload capacities, missions (verified fields only) | 41 | NTRS, Apollo 11 press kit, NASA SLS page, ULA, ESA |

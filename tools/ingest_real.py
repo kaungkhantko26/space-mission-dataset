@@ -176,6 +176,23 @@ def ll2_spacex_launches():
                 pad=pad.get("name"),location=(pad.get("location") or {}).get("name"),launch_provider=(r.get("launch_service_provider") or {}).get("name"),
                 data_class="verified",source_authority="aggregator: The Space Devs Launch Library 2",confidence="medium",source_ids=["S55"],retrieval_status="retrieved",provenance=P))
     return out
+def ll2_all_launches():
+    """Every past orbital/suborbital launch of every provider from Launch Library 2 (aggregator)."""
+    out=[]
+    fs=sorted(glob.glob(os.path.join(RET,"ll2","all_*.json")),key=lambda x:int(re.search(r"all_(\d+)\.json",x).group(1)))
+    for f in fs:
+        d=_json.load(open(f)); P=fileinfo(f,"https://ll.thespacedevs.com/2.2.0/launch/previous/?limit=100&mode=normal")
+        for r in d["results"]:
+            rk=((r.get("rocket") or {}).get("configuration") or {}); ms=r.get("mission") or {}; pad=r.get("pad") or {}; orb=(ms.get("orbit") or {}); lsp=r.get("launch_service_provider") or {}
+            out.append(dict(id=f"ll2all_{r['id'][:8]}",ll2_uuid=r["id"],name=r["name"],date_utc=r.get("net"),status=(r.get("status") or {}).get("name"),failure_reason=r.get("failreason") or None,
+                vehicle=rk.get("full_name") or rk.get("name"),vehicle_family=rk.get("family"),vehicle_variant=rk.get("variant"),mission=ms.get("name"),mission_type=ms.get("type"),orbit=orb.get("name"),orbit_abbrev=orb.get("abbrev"),
+                pad=pad.get("name"),location=(pad.get("location") or {}).get("name"),country_code=(pad.get("location") or {}).get("country_code"),launch_provider=lsp.get("name"),provider_type=lsp.get("type"),
+                data_class="verified",source_authority="aggregator: The Space Devs Launch Library 2",confidence="medium",source_ids=["S55"],retrieval_status="retrieved",provenance=P))
+    seen=set(); res=[]
+    for r in sorted(out,key=lambda r:(r["date_utc"] or "",r["ll2_uuid"])):
+        if r["ll2_uuid"] in seen: continue
+        seen.add(r["ll2_uuid"]); res.append(r)
+    return res
 FLUIDS={"oxygen":("C7782447","O2"),"hydrogen":("C1333740","H2"),"methane":("C74828","CH4"),"xenon":("C7440633","Xe"),"nitrogen":("C7727379","N2"),"helium":("C7440597","He")}
 def fluids():
     out=[]

@@ -85,6 +85,11 @@ cfg=cols["launch_vehicle_configs"]["records"]; chk("ll2_config_count_equals_raw"
 f9=[c for c in cfg if c["full_name"]=="Falcon 9 Block 5"]; chk("ll2_falcon9_block5_values_plausible",bool(f9) and f9[0]["leo_capacity_kg"]==22800 and f9[0]["gto_capacity_kg"]==8300 and f9[0]["launch_mass_t"]==549 and f9[0]["liftoff_thrust_kn"]==7607)
 chk("ll2_configs_have_authority_label_and_provenance",all(c.get("source_authority") and c["provenance"]["source_sha256"] for c in cfg))
 raw_sx=sum(len(json.load(open(f))["results"]) for f in _g.glob(os.path.join(RET,"ll2","sx_*.json")))
+ha=cols["launch_history_all"]["records"]; raw_ids=set()
+for _f in glob.glob(os.path.join(RET,"ll2","all_*.json")): raw_ids|={x["id"] for x in json.load(open(_f))["results"]}
+chk("ll2_all_count_equals_raw_unique_launches",len(ha)==len(raw_ids)>=1000,f"{len(ha)} vs {len(raw_ids)}")
+chk("ll2_all_dated_sorted_unique",all(r["date_utc"] for r in ha) and [r["date_utc"] for r in ha]==sorted(r["date_utc"] for r in ha) and len({r["ll2_uuid"] for r in ha})==len(ha))
+chk("ll2_all_status_values_known",{r["status"] for r in ha}<={"Launch Successful","Launch Failure","Launch was a Partial Failure","Launch Partial Failure"},{r["status"] for r in ha})
 sx=cols["spacex_launch_history"]["records"]; chk("ll2_spacex_count_equals_raw",len(sx)==raw_sx>=700,f"{len(sx)} vs {raw_sx}")
 chk("ll2_spacex_all_provider_spacex_and_dated",all(r["launch_provider"]=="SpaceX" and r["date_utc"] for r in sx))
 chk("ll2_spacex_dates_sorted_ascending",[r["date_utc"] for r in sx]==sorted(r["date_utc"] for r in sx))

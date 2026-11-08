@@ -53,9 +53,44 @@
       "MARS": 586.2
     }
   },
+  "cost_model": {
+    "note": "No source publishes component prices. Hardware cost = dry mass x USD/kg, with USD/kg taken from NASA-stated spacecraft development costs divided by catalog mass; a low/median/high band is carried through. Operations cost is excluded. These are estimates for game balance, NOT real prices.",
+    "usd_per_kg": {
+      "low": 149442.01843765163,
+      "median": 214240.70573408948,
+      "high": 428000.0
+    },
+    "evidence": [
+      {
+        "mission": "Mars Global Surveyor",
+        "development_cost_usd": 154000000.0,
+        "catalog_mass_kg": 1030.5,
+        "usd_per_kg": 149442,
+        "nasa_sentence": "The Mars Global Surveyor mission cost about $154 million to develop and build and $65 million to launch."
+      },
+      {
+        "mission": "Lunar Prospector",
+        "development_cost_usd": 34000000.0,
+        "catalog_mass_kg": 158.7,
+        "usd_per_kg": 214241,
+        "nasa_sentence": "Total cost for the mission was $62.8 million including development ($34 million), launch vehicle (~$25 million) and operations (~$4 million)."
+      },
+      {
+        "mission": "Stardust/NExT",
+        "development_cost_usd": 128400000.0,
+        "catalog_mass_kg": 300.0,
+        "usd_per_kg": 428000,
+        "nasa_sentence": "The total mission cost of Stardust was approximately $199.6 million, of which roughly $128.4 million was the cost of development and construction of the spacecraft and $40 million was for mission operations."
+      }
+    ],
+    "reference_prices": {
+      "rideshare_usd_per_50kg": 350000.0,
+      "note": "SpaceX Transporter rideshare 'starting at $350k for ~50 kg' (NASA SoA report, integration chapter) = $7,000/kg; reference only"
+    }
+  },
   "rules": {
     "MASS_OVER_CAPACITY": "total <= 0.9 x launcher capacity (LEO capacity; GTO capacity for GTO) [physics inputs verified, margin heuristic]",
-    "BUDGET_EXCEEDED": "launcher launch_cost_usd <= budget (cost verified from Launch Library; component prices unknown so excluded)",
+    "BUDGET_EXCEEDED": "hardware estimate (dry mass x NASA-anchored $/kg) + launch price <= budget; launch price verified (Launch Library), hardware is an ESTIMATE",
     "DELTA_V_SHORT": "Isp*g0*ln(m0/mf) >= 1.1 x required dv (rocket equation; required dv from Hohmann/escape on verified GM, radii, semi-major axes)",
     "THRUST_TOO_LOW": "propellant needed for the required dv burned at total thrust must take <= 1 year",
     "POWER_SHORT": "array BOL power x 0.8 x (destination irradiance / Earth irradiance) >= 1.15 x load (irradiance from NASA NSSDC fact sheets)",

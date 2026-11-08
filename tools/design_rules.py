@@ -17,6 +17,29 @@ HEUR = dict(  # basis: game-heuristic
 REQ_RATE_KBPS = dict(LEO=500.0, GTO=100.0, MOON=100.0, MARS=10.0)  # game parameter per destination
 DESTS = ["LEO", "GTO", "MOON", "MARS"]
 
+# ---- hardware cost model: anchored to NASA-stated spacecraft DEVELOPMENT costs (NSSDC text) over catalog mass ----
+# (mission name, substring that must appear in a verified cost sentence, development cost in USD)
+COST_ANCHORS = [("Mars Global Surveyor", "cost about $154 million to develop and build", 154e6),
+                ("Lunar Prospector", "development ($34 million)", 34e6),
+                ("Stardust/NExT", "$128.4 million was the cost of development and construction", 128.4e6)]
+REFERENCE_PRICES = dict(rideshare_usd_per_50kg=350e3, note="SpaceX Transporter rideshare 'starting at $350k for ~50 kg' (NASA SoA report, integration chapter) = $7,000/kg; reference only")
+
+
+def cost_rates():
+    """USD per kg of spacecraft (low, median, high) from the anchors; also returns the evidence list."""
+    ms = {m["name"]: m for m in json.load(open(os.path.join(ROOT, "verified", "nasa_missions.json")))["records"]}
+    ev, rates = [], []
+    for name, sub, usd in COST_ANCHORS:
+        m = ms[name]
+        sent = next(c["sentence"] for c in m["cost_mentions_in_text"] if sub in c["sentence"])
+        rate = usd / m["catalog_mass_kg"]; rates.append(rate)
+        ev.append(dict(mission=name, development_cost_usd=usd, catalog_mass_kg=m["catalog_mass_kg"], usd_per_kg=round(rate), nasa_sentence=sent))
+    rates.sort()
+    return (rates[0], rates[1], rates[2]), ev
+
+
+RATE_LOW, RATE_MID, RATE_HIGH = cost_rates()[0]
+
 
 def _recs(c):
     return {r["id"]: r for r in json.load(open(os.path.join(ROOT, "verified", c + ".json")))["records"]}
@@ -74,11 +97,16 @@ def evaluate(d, cat, env):
     dry = comp * (1 + HEUR["structure_overhead"])
     total = dry + d["propellant_kg"]
     m.update(component_mass_kg=comp, dry_mass_kg=dry, total_mass_kg=total)
-    # budget
+    # budget: hardware (anchored estimate) + launch (verified price)
     cost = L["launch_cost_usd"]
-    m["launch_cost_usd"] = cost
-    chk.append(("BUDGET_EXCEEDED", cost <= d["budget_usd"],
-                f"Launch cost ${cost/1e6:.1f}M vs budget ${d['budget_usd']/1e6:.1f}M."))
+    hw = RATE_MID * dry
+    br = dict(instruments=RATE_MID * sum(i["mass_kg"] for i in I) * (1 + HEUR["structure_overhead"]), propulsion=RATE_MID * nt * T["mass_kg"] * (1 + HEUR["structure_overhead"]),
+              power=RATE_MID * na * A["mass_kg"] * (1 + HEUR["structure_overhead"]), communications=RATE_MID * (R["mass_kg"] + N["mass_kg"]) * (1 + HEUR["structure_overhead"]), launch=cost)
+    total_cost = hw + cost
+    m.update(launch_cost_usd=cost, hardware_cost_usd=hw, total_cost_usd=total_cost, total_cost_low_usd=RATE_LOW * dry + cost, total_cost_high_usd=RATE_HIGH * dry + cost,
+             cost_breakdown_usd=br)
+    chk.append(("BUDGET_EXCEEDED", total_cost <= d["budget_usd"],
+                f"Cost ${total_cost/1e6:.1f}M = hardware ${hw/1e6:.1f}M (estimate, {dry:.0f} kg x ${RATE_MID/1e3:.0f}k/kg) + launch ${cost/1e6:.1f}M (published price) vs budget ${d['budget_usd']/1e6:.1f}M."))
     # launcher mass
     cap = L["gto_capacity_kg"] if dest == "GTO" else L["leo_capacity_kg"]
     m["launcher_capacity_kg"] = cap

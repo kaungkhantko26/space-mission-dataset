@@ -1,0 +1,562 @@
+id,date_utc,outcome,vehicle,provider,orbit,pad,failure_reason_text,cause_category,category_source
+ll2all_535c1a09,1957-12-06,failure,Vanguard,US Navy,LEO,Launch Complex 18A,,not stated,keyword_rules_on_source_text
+ll2all_48bc7deb,1958-02-05,failure,Vanguard,US Navy,LEO,Launch Complex 18A,,not stated,keyword_rules_on_source_text
+ll2all_896e8af6,1958-03-05,failure,Juno-I,Army Ballistic Missile Agency,LEO,Launch Complex 26A,,not stated,keyword_rules_on_source_text
+ll2all_59d2de37,1958-04-27,failure,Sputnik 8A91,Soviet Space Program,LEO,1/5,,not stated,keyword_rules_on_source_text
+ll2all_de282e74,1958-04-29,failure,Vanguard,US Navy,LEO,Launch Complex 18A,,not stated,keyword_rules_on_source_text
+ll2all_a861fb4d,1958-05-28,failure,Vanguard,US Navy,LEO,Launch Complex 18A,,not stated,keyword_rules_on_source_text
+ll2all_57e64adf,1958-06-26,failure,Vanguard,US Navy,LEO,Launch Complex 18A,,not stated,keyword_rules_on_source_text
+ll2all_64da1836,1958-07-25,failure,Project Pilot,US Navy,LEO,Naval Air Weapons Station China Lake,,not stated,keyword_rules_on_source_text
+ll2all_ac4c0c44,1958-08-12,failure,Project Pilot,US Navy,LEO,Naval Air Weapons Station China Lake,,not stated,keyword_rules_on_source_text
+ll2all_5408eda7,1958-08-17,failure,Thor Able I,Army Ballistic Missile Agency,LO,Space Launch Complex 17A,,not stated,keyword_rules_on_source_text
+ll2all_ee6958bf,1958-08-22,failure,Project Pilot,US Navy,LEO,Naval Air Weapons Station China Lake,,not stated,keyword_rules_on_source_text
+ll2all_a17719ee,1958-08-24,failure,Juno-I,Army Ballistic Missile Agency,MEO,Launch Complex 5,,not stated,keyword_rules_on_source_text
+ll2all_31bcb852,1958-08-25,failure,Project Pilot,US Navy,LEO,Naval Air Weapons Station China Lake,,not stated,keyword_rules_on_source_text
+ll2all_46580acb,1958-08-26,failure,Project Pilot,US Navy,LEO,Naval Air Weapons Station China Lake,,not stated,keyword_rules_on_source_text
+ll2all_ba8f759d,1958-08-28,failure,Project Pilot,US Navy,LEO,Naval Air Weapons Station China Lake,,not stated,keyword_rules_on_source_text
+ll2all_b6141255,1958-09-23,failure,Vostok-L 8K72,Soviet Space Program,Lunar Impactor,1/5,,not stated,keyword_rules_on_source_text
+ll2all_3aec8a7e,1958-09-26,failure,Vanguard,US Navy,MEO,Launch Complex 18A,,not stated,keyword_rules_on_source_text
+ll2all_b9dfc9fc,1958-10-11,failure,Vostok-L 8K72,Soviet Space Program,Lunar Impactor,1/5,,not stated,keyword_rules_on_source_text
+ll2all_96c31f2e,1958-10-23,failure,Juno-I,Army Ballistic Missile Agency,LEO,Launch Complex 5,,not stated,keyword_rules_on_source_text
+ll2all_64ecf17b,1958-11-08,failure,Thor Able I,Army Ballistic Missile Agency,LO,Space Launch Complex 17A,,not stated,keyword_rules_on_source_text
+ll2all_3fabc98a,1958-12-04,failure,Vostok-L 8K72,Soviet Space Program,Lunar Impactor,1/5,,not stated,keyword_rules_on_source_text
+ll2all_2e03da7f,1959-02-28,failure,Thor Agena A,United States Air Force,PO,Space Launch Complex 1W,,not stated,keyword_rules_on_source_text
+ll2all_c3d28943,1959-04-14,failure,Vanguard,US Navy,LEO,Launch Complex 18A,,not stated,keyword_rules_on_source_text
+ll2all_c4ef4614,1959-06-03,failure,Thor Agena A,United States Air Force,PO,Space Launch Complex 1W,,not stated,keyword_rules_on_source_text
+ll2all_c5b416c9,1959-06-18,failure,Vostok-L 8K72,Soviet Space Program,Lunar Impactor,1/5,,not stated,keyword_rules_on_source_text
+ll2all_d00485ff,1959-06-22,failure,Vanguard,US Navy,LEO,Launch Complex 18A,,not stated,keyword_rules_on_source_text
+ll2all_dbe9a4b7,1959-06-25,failure,Thor Agena A,United States Air Force,PO,Space Launch Complex 1E,,not stated,keyword_rules_on_source_text
+ll2all_7e01bff4,1959-07-16,failure,Juno II,National Aeronautics and Space Administration,Elliptical,Launch Complex 5,,not stated,keyword_rules_on_source_text
+ll2all_13e39d5c,1959-08-15,failure,Juno II,National Aeronautics and Space Administration,LEO,Launch Complex 26B,,not stated,keyword_rules_on_source_text
+ll2all_fdb56feb,1959-08-21,failure,Little Joe,National Aeronautics and Space Administration,Sub,Launch Area 1,,not stated,keyword_rules_on_source_text
+ll2all_0640dd85,1959-09-09,partial_failure,Atlas LV-3B,National Aeronautics and Space Administration,Sub,Space Launch Complex 14,,not stated,keyword_rules_on_source_text
+ll2all_3587bc21,1959-09-17,failure,Thor Able II,United States Air Force,LEO,Space Launch Complex 17A,,not stated,keyword_rules_on_source_text
+ll2all_17e710c6,1959-10-04,partial_failure,Little Joe,National Aeronautics and Space Administration,Sub,Launch Area 1,,not stated,keyword_rules_on_source_text
+ll2all_3827a2c8,1959-11-04,partial_failure,Little Joe,National Aeronautics and Space Administration,Sub,Launch Area 1,,not stated,keyword_rules_on_source_text
+ll2all_f889bd5e,1959-11-26,failure,Atlas-Able,United States Air Force,LO,Space Launch Complex 14,,not stated,keyword_rules_on_source_text
+ll2all_05c21203,1960-02-04,failure,Thor Agena A,United States Air Force,LEO,Space Launch Complex 1W,,not stated,keyword_rules_on_source_text
+ll2all_7484048e,1960-02-19,failure,Thor Agena A,United States Air Force,LEO,Space Launch Complex 1E,,not stated,keyword_rules_on_source_text
+ll2all_258a4774,1960-02-26,failure,Atlas LV-3 Agena A,United States Air Force,LEO,Space Launch Complex 14,,not stated,keyword_rules_on_source_text
+ll2all_1bbd65cc,1960-03-23,failure,Juno II,National Aeronautics and Space Administration,MEO,Launch Complex 26B,,not stated,keyword_rules_on_source_text
+ll2all_ab42847c,1960-04-15,failure,Vostok-L 8K72,Soviet Space Program,Lunar flyby,1/5,,not stated,keyword_rules_on_source_text
+ll2all_620237e7,1960-04-16,failure,Vostok-L 8K72,Soviet Space Program,Lunar flyby,1/5,,not stated,keyword_rules_on_source_text
+ll2all_b4158c69,1960-05-13,failure,Thor Delta,United States Air Force,Elliptical,Space Launch Complex 17A,,not stated,keyword_rules_on_source_text
+ll2all_7c364234,1960-06-29,failure,Thor Agena A,United States Air Force,LEO,Space Launch Complex 1W,,not stated,keyword_rules_on_source_text
+ll2all_962f4ad2,1960-07-28,failure,Vostok 8K72,Soviet Space Program,LEO,1/5,,not stated,keyword_rules_on_source_text
+ll2all_0b722410,1960-07-29,failure,Atlas LV-3B,National Aeronautics and Space Administration,Sub,Space Launch Complex 14,,not stated,keyword_rules_on_source_text
+ll2all_d203ad0f,1960-08-18,failure,Thor DM-21 Ablestar,United States Air Force,LEO,Space Launch Complex 17B,,not stated,keyword_rules_on_source_text
+ll2all_23538a9d,1960-09-25,failure,Atlas-Able,United States Air Force,LO,Launch Complex 12,,not stated,keyword_rules_on_source_text
+ll2all_2b8ca24a,1960-10-10,failure,Molniya 8K78,Soviet Space Program,Mars flyby,1/5,,not stated,keyword_rules_on_source_text
+ll2all_d1d6a521,1960-10-11,failure,Atlas LV-3 Agena A,United States Air Force,LEO,Space Launch Complex 3W,,not stated,keyword_rules_on_source_text
+ll2all_ba2e283c,1960-10-14,failure,Molniya 8K78,Soviet Space Program,Mars flyby,1/5,,not stated,keyword_rules_on_source_text
+ll2all_adca914e,1960-10-26,failure,Thor DM-21 Agena-B,United States Air Force,LEO,Space Launch Complex 1W,,not stated,keyword_rules_on_source_text
+ll2all_bc401ea5,1960-11-08,failure,Little Joe,National Aeronautics and Space Administration,Sub,Launch Area 1,,not stated,keyword_rules_on_source_text
+ll2all_0abcc2bf,1960-11-21,failure,Redstone MRLV,National Aeronautics and Space Administration,Sub,Launch Complex 5,,not stated,keyword_rules_on_source_text
+ll2all_b5f0d805,1960-11-30,failure,Thor DM-21 Ablestar,United States Air Force,PO,Space Launch Complex 17B,,not stated,keyword_rules_on_source_text
+ll2all_83208857,1960-12-04,failure,Scout X-1,National Aeronautics and Space Administration,LEO,Launch Area 3,,not stated,keyword_rules_on_source_text
+ll2all_583b7dc8,1960-12-15,failure,Atlas-Able,United States Air Force,LO,Launch Complex 12,,not stated,keyword_rules_on_source_text
+ll2all_8050ce4c,1960-12-22,failure,Vostok-K,Soviet Space Program,LEO,1/5,,not stated,keyword_rules_on_source_text
+ll2all_c167fb61,1961-02-04,failure,Molniya 8K78,Soviet Space Program,,1/5,Upper stage failed.,upper stage/orbit insertion,keyword_rules_on_source_text
+ll2all_c90b2db4,1961-02-22,partial_failure,Thor DM-21 Ablestar,United States Air Force,,Space Launch Complex 17B,"Failed to seperate from upper stage, failed to place into correct orbit.",upper stage/orbit insertion,keyword_rules_on_source_text
+ll2all_9108d8aa,1961-02-25,failure,Juno II,Army Ballistic Missile Agency,,Launch Complex 26B,Third stage failed to ignite.,upper stage/orbit insertion,keyword_rules_on_source_text
+ll2all_73c17f58,1961-03-18,partial_failure,Little Joe,National Aeronautics and Space Administration,Sub,Launch Area 1,,not stated,keyword_rules_on_source_text
+ll2all_8f46f0c6,1961-03-30,failure,Thor DM-21 Agena-B,United States Air Force,,Space Launch Complex 1W,Second stage failed to achieve orbit.,upper stage/orbit insertion,keyword_rules_on_source_text
+ll2all_e1e4a144,1961-04-25,failure,Atlas LV-3B,National Aeronautics and Space Administration,Sub,Space Launch Complex 14,Pitch and roll sequence failed to initiate.,other/unclassified,keyword_rules_on_source_text
+ll2all_baf048e4,1961-05-24,failure,Juno II,Army Ballistic Missile Agency,,Launch Complex 26B,Second stage failed to achieve orbit.,upper stage/orbit insertion,keyword_rules_on_source_text
+ll2all_d94bf87d,1961-06-08,failure,Thor DM-21 Agena-B,United States Air Force,LEO,Space Launch Complex 1W,Power failure.,other/unclassified,keyword_rules_on_source_text
+ll2all_fb8235f4,1961-06-30,failure,Scout X-1,National Aeronautics and Space Administration,,Launch Area 3,Third stage failed to ignite.,upper stage/orbit insertion,keyword_rules_on_source_text
+ll2all_5c685372,1961-07-21,failure,Thor DM-21 Agena-B,United States Air Force,LEO,Space Launch Complex 1W,,not stated,keyword_rules_on_source_text
+ll2all_b7e331d8,1961-08-04,failure,Thor DM-21 Agena-B,United States Air Force,,Space Launch Complex 1W,Second stage control system malfunction.,guidance/control/software,keyword_rules_on_source_text
+ll2all_0590523c,1961-08-23,partial_failure,Atlas LV-3 Agena B,United States Air Force,,Launch Complex 12,,not stated,keyword_rules_on_source_text
+ll2all_eac7f345,1961-08-25,failure,Scout X-1,National Aeronautics and Space Administration,,Launch Area 3,,not stated,keyword_rules_on_source_text
+ll2all_f8025d66,1961-09-09,failure,Atlas LV-3 Agena B,United States Air Force,,Space Launch Complex 3W,,not stated,keyword_rules_on_source_text
+ll2all_da1cbbc4,1961-10-23,failure,Thor DM-21 Agena-B,United States Air Force,,Space Launch Complex 1E,Failed to reach orbit,upper stage/orbit insertion,keyword_rules_on_source_text
+ll2all_7cea9893,1961-10-27,failure,Kosmos-2I,Strategic Rocket Forces,,Mayak-2,Failed to reach orbit,upper stage/orbit insertion,keyword_rules_on_source_text
+ll2all_5b288b8a,1961-11-01,failure,Blue Scout II,National Aeronautics and Space Administration,LEO,Launch Complex 18B,,not stated,keyword_rules_on_source_text
+ll2all_b4fd8512,1961-11-05,partial_failure,Thor DM-21 Agena-B,United States Air Force,,Space Launch Complex 2E,,not stated,keyword_rules_on_source_text
+ll2all_aadc8a1d,1961-11-18,failure,Atlas LV-3 Agena B,United States Air Force,,Launch Complex 12,,not stated,keyword_rules_on_source_text
+ll2all_602ee780,1961-11-22,failure,Atlas LV-3 Agena B,United States Air Force,,Space Launch Complex 3W,Failed to reach orbit,upper stage/orbit insertion,keyword_rules_on_source_text
+ll2all_812ba1f4,1961-12-11,failure,Vostok-K,Soviet Space Program,LEO,1/5,Premature second stage cutoff,upper stage/orbit insertion,keyword_rules_on_source_text
+ll2all_84a7f81c,1961-12-21,failure,Kosmos-2I,Strategic Rocket Forces,,Mayak-2,Failed to reach orbit,upper stage/orbit insertion,keyword_rules_on_source_text
+ll2all_8dc32887,1961-12-22,partial_failure,Atlas LV-3 Agena B,United States Air Force,,Space Launch Complex 3E,,not stated,keyword_rules_on_source_text
+ll2all_83f07d31,1962-01-13,failure,Thor DM-21 Agena-B,United States Air Force,LEO,Space Launch Complex 1W,,not stated,keyword_rules_on_source_text
+ll2all_d5e7b928,1962-01-24,failure,Thor DM-21 Ablestar,United States Air Force,LEO,Space Launch Complex 17B,,not stated,keyword_rules_on_source_text
+ll2all_0e2da711,1962-04-26,failure,Scout X-2,US Navy,LEO,Space Launch Complex 5,,not stated,keyword_rules_on_source_text
+ll2all_4d464e6a,1962-05-10,failure,Thor DM-21 Ablestar,United States Air Force,LEO,Space Launch Complex 17B,,not stated,keyword_rules_on_source_text
+ll2all_c1037c28,1962-05-24,failure,Scout X-2M,United States Air Force,SSO,Space Launch Complex 5,,not stated,keyword_rules_on_source_text
+ll2all_d1542267,1962-06-01,failure,Vostok 8A92,Soviet Space Program,LEO,1/5,,not stated,keyword_rules_on_source_text
+ll2all_abf6d6dc,1962-07-22,failure,Atlas LV-3 Agena B,United States Air Force,Venus flyby,Launch Complex 12,,not stated,keyword_rules_on_source_text
+ll2all_8bceefa3,1962-08-25,failure,Molniya 8K78,Soviet Space Program,Helio-N/A,1/5,,not stated,keyword_rules_on_source_text
+ll2all_d72ee979,1962-09-01,failure,Molniya 8K78,Soviet Space Program,Helio-N/A,1/5,,not stated,keyword_rules_on_source_text
+ll2all_f7612657,1962-09-12,failure,Molniya 8K78,Soviet Space Program,Venus flyby,1/5,,not stated,keyword_rules_on_source_text
+ll2all_14d16669,1962-10-24,failure,Molniya 8K78,Soviet Space Program,Mars flyby,1/5,,not stated,keyword_rules_on_source_text
+ll2all_6fba6ed7,1962-10-25,failure,Kosmos-2I,Soviet Space Program,Elliptical,Mayak-2,,not stated,keyword_rules_on_source_text
+ll2all_f9c2aed4,1962-11-04,failure,Molniya 8K78,Soviet Space Program,Helio-N/A,1/5,,not stated,keyword_rules_on_source_text
+ll2all_796705f7,1962-12-17,failure,Atlas LV-3 Agena B,United States Air Force,MEO,Space Launch Complex 3E,,not stated,keyword_rules_on_source_text
+ll2all_9c4d22b1,1963-01-04,failure,Molniya 8K78,Soviet Space Program,LO,1/5,,not stated,keyword_rules_on_source_text
+ll2all_d3da5d57,1963-02-03,failure,Molniya 8K78,Soviet Space Program,LO,1/5,,not stated,keyword_rules_on_source_text
+ll2all_2d4f26c2,1963-02-28,failure,Thor SLV-2A Agena D,United States Air Force,LEO,Space Launch Complex 1E,,not stated,keyword_rules_on_source_text
+ll2all_fed8a0ba,1963-03-18,failure,Thor SLV-2A Agena D,United States Air Force,LEO,Space Launch Complex 1W,,not stated,keyword_rules_on_source_text
+ll2all_912ade71,1963-04-05,failure,Scout X-3,United States Air Force,PO,Space Launch Complex 5,,not stated,keyword_rules_on_source_text
+ll2all_d539dee0,1963-04-06,failure,Kosmos-2I,Soviet Space Program,LEO,Mayak-2,,not stated,keyword_rules_on_source_text
+ll2all_0cb6be02,1963-04-26,failure,Scout X-2M,United States Air Force,SSO,Space Launch Complex 5,,not stated,keyword_rules_on_source_text
+ll2all_15ae7452,1963-04-26,failure,Thor Agena D,United States Air Force,LEO,Space Launch Complex 2E,,not stated,keyword_rules_on_source_text
+ll2all_7e557987,1963-06-01,failure,Kosmos-2I,Soviet Space Program,LEO,Mayak-2,,not stated,keyword_rules_on_source_text
+ll2all_17412353,1963-06-12,failure,Atlas LV-3 Agena B,United States Air Force,MEO,Space Launch Complex 3E,,not stated,keyword_rules_on_source_text
+ll2all_de34a344,1963-06-15,failure,Thor Agena D,United States Air Force,LEO,Space Launch Complex 2E,,not stated,keyword_rules_on_source_text
+ll2all_3aad6df9,1963-08-22,failure,Kosmos-2I,Soviet Space Program,LEO,Mayak-2,,not stated,keyword_rules_on_source_text
+ll2all_864eb227,1963-09-27,failure,Scout X-2B,United States Air Force,SSO,Space Launch Complex 5,,not stated,keyword_rules_on_source_text
+ll2all_017dc750,1963-10-24,failure,Kosmos-2I,Soviet Space Program,LEO,Mayak-2,,not stated,keyword_rules_on_source_text
+ll2all_9b34964f,1963-11-09,failure,Thor SLV-2 Agena D,United States Air Force,LEO,Space Launch Complex 2W,,not stated,keyword_rules_on_source_text
+ll2all_7df3b943,1963-11-11,failure,Molniya 8K78,Soviet Space Program,Helio-N/A,1/5,,not stated,keyword_rules_on_source_text
+ll2all_41fc170a,1963-11-28,failure,Vostok 8A92,Soviet Space Program,LEO,1/5,,not stated,keyword_rules_on_source_text
+ll2all_5e36e73b,1964-02-19,failure,Molniya 8K78,Soviet Space Program,Venus flyby,1/5,,not stated,keyword_rules_on_source_text
+ll2all_bfb61041,1964-03-19,failure,Thor Delta B,United States Air Force,LEO,Space Launch Complex 17A,,not stated,keyword_rules_on_source_text
+ll2all_9f35e05d,1964-03-21,failure,Molniya 8K78,Soviet Space Program,LO,1/5,,not stated,keyword_rules_on_source_text
+ll2all_2ed49e78,1964-03-24,failure,Thor SLV-2A Agena D,United States Air Force,LEO,Space Launch Complex 3W,,not stated,keyword_rules_on_source_text
+ll2all_c28ee675,1964-03-27,failure,Molniya 8K78,Soviet Space Program,Venus flyby,1/5,,not stated,keyword_rules_on_source_text
+ll2all_79664d5f,1964-04-20,failure,Molniya 8K78,Soviet Space Program,LO,1/5,,not stated,keyword_rules_on_source_text
+ll2all_929aa6e9,1964-04-21,failure,Thor DM-21 Ablestar,United States Air Force,PO,Space Launch Complex 2E,,not stated,keyword_rules_on_source_text
+ll2all_cc53f001,1964-06-04,failure,Molniya 8K78,Soviet Space Program,Elliptical,1/5,,not stated,keyword_rules_on_source_text
+ll2all_70d3ee70,1964-06-25,failure,Scout X-4,United States Air Force,LEO,Space Launch Complex 5,,not stated,keyword_rules_on_source_text
+ll2all_ad230004,1964-06-30,failure,Atlas LV-3C Centaur,United States Air Force,LEO,Launch Complex 36A,,not stated,keyword_rules_on_source_text
+ll2all_c4688439,1964-09-01,failure,Titan IIIA,United States Air Force,LEO,Space Launch Complex 20,,not stated,keyword_rules_on_source_text
+ll2all_2a8809bf,1964-10-07,failure,Atlas SLV-3 Agena D,United States Air Force,SSO,Space Launch Complex 4E,,not stated,keyword_rules_on_source_text
+ll2all_8c558ab7,1964-10-23,failure,Kosmos 65S3,Soviet Space Program,LEO,41/15,,not stated,keyword_rules_on_source_text
+ll2all_eb4f9b48,1964-12-01,failure,Kosmos-2I,Soviet Space Program,LEO,86/1,,not stated,keyword_rules_on_source_text
+ll2all_be365316,1965-01-21,failure,SM-65D Atlas,United States Air Force,LEO,576B3,,not stated,keyword_rules_on_source_text
+ll2all_6f198812,1965-01-22,failure,Thor Delta C,United States Air Force,SSO,Space Launch Complex 17A,,not stated,keyword_rules_on_source_text
+ll2all_8d3959ea,1965-02-12,failure,Kosmos-2I,Soviet Space Program,LEO,86/1,,not stated,keyword_rules_on_source_text
+ll2all_201fecb7,1965-02-20,failure,Kosmos-2I,Soviet Space Program,LEO,86/1,,not stated,keyword_rules_on_source_text
+ll2all_f7b11b4e,1965-03-02,failure,Atlas LV-3C Centaur,United States Air Force,Elliptical,Launch Complex 36A,,not stated,keyword_rules_on_source_text
+ll2all_717fc939,1965-03-12,failure,Molniya 8K78,Soviet Space Program,LO,1/5,,not stated,keyword_rules_on_source_text
+ll2all_f9eb96a4,1965-04-10,failure,Molniya 8K78,Soviet Space Program,LO,1/5,,not stated,keyword_rules_on_source_text
+ll2all_80ae0917,1965-05-19,failure,Little Joe II,National Aeronautics and Space Administration,Sub,Launch Complex 36,,not stated,keyword_rules_on_source_text
+ll2all_dd9d41dc,1965-05-28,failure,SM-65D Atlas,United States Air Force,LEO,576B3,,not stated,keyword_rules_on_source_text
+ll2all_a5118c10,1965-07-12,failure,Atlas SLV-3 Agena D,United States Air Force,SSO,Space Launch Complex 4E,,not stated,keyword_rules_on_source_text
+ll2all_aed15eb2,1965-07-13,failure,Vostok 8A92,Soviet Space Program,LEO,31/6,,not stated,keyword_rules_on_source_text
+ll2all_f70762c1,1965-08-25,failure,Thor Delta C,United States Air Force,LEO,Space Launch Complex 17B,,not stated,keyword_rules_on_source_text
+ll2all_b02cce52,1965-09-02,failure,Thor SLV-2 Agena D,United States Air Force,LEO,Space Launch Complex 1E,,not stated,keyword_rules_on_source_text
+ll2all_d01e0c09,1965-10-25,failure,Atlas SLV-3 Agena D,United States Air Force,LEO,Space Launch Complex 14,,not stated,keyword_rules_on_source_text
+ll2all_f7f3be3e,1965-11-23,failure,Molniya 8K78,Soviet Space Program,Venus flyby,31/6,,not stated,keyword_rules_on_source_text
+ll2all_e6ecf05c,1965-12-28,failure,Kosmos-2I,Soviet Space Program,LEO,86/1,,not stated,keyword_rules_on_source_text
+ll2all_f419160c,1966-01-07,failure,Thor Burner 1,United States Air Force,SSO,Space Launch Complex 10W,,not stated,keyword_rules_on_source_text
+ll2all_48a83dec,1966-02-21,failure,Kosmos-2I,Soviet Space Program,LEO,86/1,,not stated,keyword_rules_on_source_text
+ll2all_9c99213a,1966-03-01,failure,Molniya-M 2BL,Soviet Space Program,LO,31/6,,not stated,keyword_rules_on_source_text
+ll2all_98c8001e,1966-03-24,failure,UR-500,Soviet Space Program,LEO,81/23 (81L),,not stated,keyword_rules_on_source_text
+ll2all_1ccf431a,1966-03-27,failure,Molniya 8K78,Soviet Space Program,Elliptical,31/6,,not stated,keyword_rules_on_source_text
+ll2all_e081ac5f,1966-05-03,failure,Thor SLV-2A Agena D,United States Air Force,LEO,Space Launch Complex 1E,,not stated,keyword_rules_on_source_text
+ll2all_755498a3,1966-05-17,failure,Voskhod,Soviet Space Program,LEO,41/1,,not stated,keyword_rules_on_source_text
+ll2all_2eeecb38,1966-05-17,failure,Atlas SLV-3 Agena D,United States Air Force,LEO,Space Launch Complex 14,,not stated,keyword_rules_on_source_text
+ll2all_ffa5b63e,1966-08-26,failure,Titan IIIC,United States Air Force,GSO,Space Launch Complex 41,,not stated,keyword_rules_on_source_text
+ll2all_17134ffb,1966-09-16,failure,Vostok 8A92,Soviet Space Program,LEO,31/6,,not stated,keyword_rules_on_source_text
+ll2all_82f5c49a,1966-09-26,failure,Lambda 4S,Institute of Space and Astronautical Science,LEO,KS Center,,not stated,keyword_rules_on_source_text
+ll2all_7ec54e6a,1966-11-02,failure,R-36O 8K69,Soviet Space Program,LEO,162/36,,not stated,keyword_rules_on_source_text
+ll2all_0064c2bc,1966-11-16,failure,Kosmos 11K65,Soviet Space Program,LEO,41/15,,not stated,keyword_rules_on_source_text
+ll2all_17fd69df,1966-12-14,failure,Soyuz,Soviet Space Program,,31/6,,not stated,keyword_rules_on_source_text
+ll2all_b3057913,1966-12-20,failure,Lambda 4S,Institute of Space and Astronautical Science,LEO,KS Center,,not stated,keyword_rules_on_source_text
+ll2all_a49d791b,1967-01-27,failure,Saturn IB,National Aeronautics and Space Administration,LEO,Launch Complex 34,"Crew and spacecraft lost due to a cabin fire that occurred during a launch rehearsal at Cape Kennedy Air Force Station Launch Complex 34 on January 27, 1967.",other/unclassified,keyword_rules_on_source_text
+ll2all_9c90ab75,1967-01-31,failure,Scout B,United States Air Force,PO,Space Launch Complex 5,,not stated,keyword_rules_on_source_text
+ll2all_9a68b171,1967-03-22,failure,R-36O 8K69,Soviet Space Program,LEO,161/35,,not stated,keyword_rules_on_source_text
+ll2all_81d3e09f,1967-04-08,failure,Proton / UR-500 K/D,Soviet Space Program,,81/23 (81L),,not stated,keyword_rules_on_source_text
+ll2all_0baae9ed,1967-04-13,failure,Lambda 4S,Institute of Space and Astronautical Science,LEO,KS Center,,not stated,keyword_rules_on_source_text
+ll2all_b9da175a,1967-04-26,failure,Titan IIIB,United States Air Force,LEO,Space Launch Complex 4W,,not stated,keyword_rules_on_source_text
+ll2all_643d52ab,1967-05-30,failure,Scout B,European Space Research Organisation,PO,Space Launch Complex 5,,not stated,keyword_rules_on_source_text
+ll2all_822c8481,1967-06-17,failure,Molniya-M 2BL,Soviet Space Program,Venus,1/5,,not stated,keyword_rules_on_source_text
+ll2all_d82f21b4,1967-06-20,failure,Voskhod,Soviet Space Program,LEO,41/1,,not stated,keyword_rules_on_source_text
+ll2all_40cff040,1967-06-26,failure,Kosmos-3M (11K65M),Soviet Space Program,LEO,132/2,,not stated,keyword_rules_on_source_text
+ll2all_3c1a2a18,1967-07-21,failure,Voskhod,Soviet Space Program,LEO,31/6,,not stated,keyword_rules_on_source_text
+ll2all_5f866d35,1967-07-27,failure,SM-65D Atlas,United States Air Force,LEO,576B3,,not stated,keyword_rules_on_source_text
+ll2all_91b76ad4,1967-09-01,failure,Voskhod,Soviet Space Program,LEO,41/1,,not stated,keyword_rules_on_source_text
+ll2all_10c5e23d,1967-09-27,failure,Kosmos-3M (11K65M),Soviet Space Program,LEO,132/2,,not stated,keyword_rules_on_source_text
+ll2all_10e8bbc9,1967-09-27,failure,Proton / UR-500 K/D,Soviet Space Program,,81/23 (81L),,not stated,keyword_rules_on_source_text
+ll2all_4121ac6e,1967-11-15,failure,North American X-15,United States Air Force,Sub,Edwards Air Force Base,,not stated,keyword_rules_on_source_text
+ll2all_7bc45146,1967-11-22,failure,Proton / UR-500 K/D,Soviet Space Program,,81/24 (81P),,not stated,keyword_rules_on_source_text
+ll2all_cf1e5850,1968-02-07,failure,Molniya-M 2BL,Soviet Space Program,LO,1/5,,not stated,keyword_rules_on_source_text
+ll2all_46d1f7f9,1968-03-06,failure,Kosmos 11K63,Soviet Space Program,LEO,86/4,,not stated,keyword_rules_on_source_text
+ll2all_24756fd7,1968-04-04,partial_failure,Saturn V,National Aeronautics and Space Administration,Elliptical,Launch Complex 39A,,not stated,keyword_rules_on_source_text
+ll2all_cf73062e,1968-04-22,failure,Proton / UR-500 K/D,Soviet Space Program,,81/24 (81P),,not stated,keyword_rules_on_source_text
+ll2all_5bb34d1b,1968-05-18,failure,Thorad SLV-2G Agena D,United States Air Force,SSO,Space Launch Complex 2E,,not stated,keyword_rules_on_source_text
+ll2all_6889c5c3,1968-06-04,failure,Kosmos-3M (11K65M),Soviet Space Program,LEO,132/2,,not stated,keyword_rules_on_source_text
+ll2all_11e437cb,1968-06-15,failure,Kosmos 11K65,Soviet Space Program,LEO,41/15,,not stated,keyword_rules_on_source_text
+ll2all_397bdc65,1968-07-21,failure,Proton / UR-500 K/D,Soviet Space Program,,81/23 (81L),,not stated,keyword_rules_on_source_text
+ll2all_0dae8a60,1968-08-16,failure,Atlas SLV-3 Burner-2,United States Air Force,LEO,Space Launch Complex 3E,,not stated,keyword_rules_on_source_text
+ll2all_bf12b9f3,1968-09-19,failure,Thor Delta M,United States Air Force,Direct-GEO,Space Launch Complex 17A,,not stated,keyword_rules_on_source_text
+ll2all_92a2c8e9,1968-11-29,failure,Europa I,European Launcher Development Organisation,LEO,Launch Area 6A,,not stated,keyword_rules_on_source_text
+ll2all_fede9a20,1969-01-20,failure,Proton / UR-500 K/D,Soviet Space Program,,81/23 (81L),,not stated,keyword_rules_on_source_text
+ll2all_50181967,1969-01-25,failure,Tsiklon-2A,Soviet Space Program,LEO,90/19,,not stated,keyword_rules_on_source_text
+ll2all_e2a70002,1969-02-01,failure,Vostok 8A92M,Soviet Space Program,LEO,41/1,,not stated,keyword_rules_on_source_text
+ll2all_6d6fd8d2,1969-02-19,failure,Proton / UR-500 K/D,Soviet Space Program,LO,81/24 (81P),,not stated,keyword_rules_on_source_text
+ll2all_dc11b2a9,1969-02-21,failure,N1,Soviet Space Program,,110/38 (110R),,not stated,keyword_rules_on_source_text
+ll2all_e66006d4,1969-03-27,failure,Proton / UR-500 K/D,Soviet Space Program,Mars,81/23 (81L),,not stated,keyword_rules_on_source_text
+ll2all_c93d8566,1969-04-02,failure,Proton / UR-500 K/D,Soviet Space Program,Mars,81/24 (81P),,not stated,keyword_rules_on_source_text
+ll2all_3e071e4f,1969-06-14,failure,Proton / UR-500 K/D,Soviet Space Program,LO,81/24 (81P),,not stated,keyword_rules_on_source_text
+ll2all_cf498259,1969-06-21,failure,Thor Delta E1,United States Air Force,Elliptical,Space Launch Complex 2W,,not stated,keyword_rules_on_source_text
+ll2all_a481f8e9,1969-07-02,failure,Europa I,European Launcher Development Organisation,LEO,Launch Area 6A,,not stated,keyword_rules_on_source_text
+ll2all_8f07342c,1969-07-03,failure,N1,Soviet Space Program,,110/38 (110R),,not stated,keyword_rules_on_source_text
+ll2all_be130615,1969-07-23,failure,Kosmos 11K63,Soviet Space Program,LEO,133/3 (133L),,not stated,keyword_rules_on_source_text
+ll2all_cd52c344,1969-07-26,failure,Thor Delta M,United States Air Force,Direct-GEO,Space Launch Complex 17A,,not stated,keyword_rules_on_source_text
+ll2all_8ce5a4c6,1969-08-27,failure,Thor Delta L,United States Air Force,Helio-N/A,Space Launch Complex 17A,,not stated,keyword_rules_on_source_text
+ll2all_31a1f461,1969-09-22,failure,Lambda 4S,Institute of Space and Astronautical Science,LEO,KS Center,,not stated,keyword_rules_on_source_text
+ll2all_fa9af4d8,1969-09-23,failure,Proton / UR-500 K/D,Soviet Space Program,LO,81/24 (81P),,not stated,keyword_rules_on_source_text
+ll2all_84686f71,1969-10-22,failure,Proton / UR-500 K/D,Soviet Space Program,LO,81/24 (81P),,not stated,keyword_rules_on_source_text
+ll2all_58a667db,1969-11-28,failure,Proton / UR-500 K/D,Soviet Space Program,,81/23 (81L),,not stated,keyword_rules_on_source_text
+ll2all_588462df,1969-12-27,failure,Kosmos-3M (11K65M),Soviet Space Program,LEO,132/1 (132L),,not stated,keyword_rules_on_source_text
+ll2all_2ef70209,1970-01-30,failure,Kosmos 11K63,Soviet Space Program,LEO,133/3 (133L),,not stated,keyword_rules_on_source_text
+ll2all_9e43282a,1970-02-06,failure,Proton / UR-500 K/D,Soviet Space Program,LO,81/23 (81L),,not stated,keyword_rules_on_source_text
+ll2all_7815444b,1970-05-22,failure,Kosmos 11K63,Soviet Space Program,LEO,133/3 (133L),,not stated,keyword_rules_on_source_text
+ll2all_a6cef920,1970-06-12,failure,Europa I,European Launcher Development Organisation,LEO,Launch Area 6A,,not stated,keyword_rules_on_source_text
+ll2all_80946a87,1970-06-27,failure,Kosmos-3M (11K65M),Soviet Space Program,LEO,132/1 (132L),,not stated,keyword_rules_on_source_text
+ll2all_fba1039c,1970-07-21,failure,Voskhod,Soviet Space Program,LEO,43/4 (43R),,not stated,keyword_rules_on_source_text
+ll2all_61339e20,1970-08-22,failure,Molniya-M 2BL,Soviet Space Program,Venus,31/6,,not stated,keyword_rules_on_source_text
+ll2all_2d1a819f,1970-09-02,failure,Black Arrow,Royal Aircraft Establishment,LEO,Launch Area 5B,,not stated,keyword_rules_on_source_text
+ll2all_e57ffbbf,1970-09-25,failure,Mu-4S,Institute of Space and Astronautical Science,LEO,Mu Center,,not stated,keyword_rules_on_source_text
+ll2all_4da61190,1970-11-30,failure,Atlas SLV-3C Centaur,United States Air Force,LEO,Launch Complex 36B,,not stated,keyword_rules_on_source_text
+ll2all_7cbcf478,1970-12-22,failure,Kosmos-3M (11K65M),Soviet Space Program,LEO,132/2,,not stated,keyword_rules_on_source_text
+ll2all_edb9fb24,1971-02-17,failure,Thorad SLV-2H Agena D,United States Air Force,LEO,Space Launch Complex 3W,,not stated,keyword_rules_on_source_text
+ll2all_008b4d60,1971-03-05,failure,Voskhod,Soviet Space Program,LEO,43/4 (43R),,not stated,keyword_rules_on_source_text
+ll2all_4c04a388,1971-03-05,failure,Kosmos 11K63,Soviet Space Program,LEO,86/4,,not stated,keyword_rules_on_source_text
+ll2all_6f7f51ac,1971-05-09,failure,Atlas SLV-3C Centaur,United States Air Force,Mars,Launch Complex 36A,,not stated,keyword_rules_on_source_text
+ll2all_aeb979a3,1971-05-10,failure,Proton / UR-500 K/D,Soviet Space Program,Mars,81/23 (81L),,not stated,keyword_rules_on_source_text
+ll2all_d0f8ed25,1971-06-25,failure,Voskhod,Soviet Space Program,LEO,43/4 (43R),,not stated,keyword_rules_on_source_text
+ll2all_e4be286d,1971-06-26,failure,N1,Soviet Space Program,,110/37 (110L),,not stated,keyword_rules_on_source_text
+ll2all_8842d8ff,1971-07-22,failure,Kosmos-3M (11K65M),Soviet Space Program,LEO,132/2,,not stated,keyword_rules_on_source_text
+ll2all_c4144174,1971-08-03,failure,Kosmos 11K63,Soviet Space Program,LEO,133/3 (133L),,not stated,keyword_rules_on_source_text
+ll2all_f6c8d7c8,1971-08-19,failure,Voskhod,Soviet Space Program,LEO,31/6,,not stated,keyword_rules_on_source_text
+ll2all_b8064f99,1971-09-29,failure,Thor Delta N,United States Air Force,LEO,Space Launch Complex 17A,,not stated,keyword_rules_on_source_text
+ll2all_23464825,1971-10-21,failure,Thor Delta N6,United States Air Force,SSO,Space Launch Complex 2E,,not stated,keyword_rules_on_source_text
+ll2all_361a9c30,1971-11-05,failure,Europa II,European Launcher Development Organisation,LEO,Ariane Launch Area 1 (ELV),,not stated,keyword_rules_on_source_text
+ll2all_bddc2a18,1971-12-03,failure,Voskhod,Soviet Space Program,LEO,43/4 (43R),,not stated,keyword_rules_on_source_text
+ll2all_1af93428,1971-12-04,failure,Atlas SLV-3A Agena D,United States Air Force,Direct-GEO,Space Launch Complex 13,,not stated,keyword_rules_on_source_text
+ll2all_4a34f5ce,1971-12-05,failure,Diamant B,National Center of Space Research,PO,Diamant Launch Area,,not stated,keyword_rules_on_source_text
+ll2all_f2d69be1,1972-02-16,failure,Titan 33B,United States Air Force,Elliptical,Space Launch Complex 4W,,not stated,keyword_rules_on_source_text
+ll2all_d12c06f3,1972-03-31,failure,Molniya-M 2BL,Soviet Space Program,Venus,31/6,,not stated,keyword_rules_on_source_text
+ll2all_e6072756,1972-04-25,failure,Kosmos 11K63,Soviet Space Program,LEO,133/3 (133L),,not stated,keyword_rules_on_source_text
+ll2all_80d54a73,1972-05-20,failure,Titan 24B,United States Air Force,LEO,Space Launch Complex 4W,,not stated,keyword_rules_on_source_text
+ll2all_b262e4ba,1972-07-29,failure,Proton-K,Soviet Space Program,LEO,81/23 (81L),,not stated,keyword_rules_on_source_text
+ll2all_1aed3cb3,1972-09-02,failure,Voskhod,Soviet Space Program,LEO,43/4 (43R),,not stated,keyword_rules_on_source_text
+ll2all_6797d6a9,1972-10-17,failure,Kosmos-3M (11K65M),Soviet Space Program,LEO,132/1 (132L),,not stated,keyword_rules_on_source_text
+ll2all_6fb7a93d,1972-11-23,failure,N1,Soviet Space Program,,110/37 (110L),,not stated,keyword_rules_on_source_text
+ll2all_9c95712a,1973-04-25,failure,Tsiklon-2,Soviet Space Program,LEO,90,,not stated,keyword_rules_on_source_text
+ll2all_1abc0ed7,1973-05-21,failure,Diamant B,National Center of Space Research,LEO,Diamant Launch Area,,not stated,keyword_rules_on_source_text
+ll2all_27cd1bcf,1973-05-25,failure,Kosmos-3M (11K65M),Soviet Space Program,LEO,132/1 (132L),,not stated,keyword_rules_on_source_text
+ll2all_ef318a38,1973-06-26,failure,Titan 24B,United States Air Force,LEO,Space Launch Complex 4W,,not stated,keyword_rules_on_source_text
+ll2all_c887fd87,1973-07-04,failure,Voskhod,Soviet Space Program,LEO,43/3 (43L),,not stated,keyword_rules_on_source_text
+ll2all_fa85c4d7,1973-07-16,failure,Delta 0300,United States Air Force,SSO,Space Launch Complex 2W,,not stated,keyword_rules_on_source_text
+ll2all_8e86cacb,1973-09-18,failure,Feng Bao 1,Seventh Ministry of Machine Building Industry,LEO,Launch Area 2B,,not stated,keyword_rules_on_source_text
+ll2all_ab946a3c,1974-01-19,failure,Delta 2313,United States Air Force,Direct-GEO,Space Launch Complex 17B,,not stated,keyword_rules_on_source_text
+ll2all_5f8221e3,1974-02-11,failure,Titan IIIE,Lockheed Martin,HEO,Space Launch Complex 41,Centaur LOX turbopump malfunction. RSO destruct at T+742 seconds.,engine/propulsion,keyword_rules_on_source_text
+ll2all_517088b9,1974-04-12,failure,Voskhod,Soviet Space Program,LEO,31/6,,not stated,keyword_rules_on_source_text
+ll2all_c1a19ba4,1974-05-17,failure,Delta 2914,United States Air Force,Direct-GEO,Space Launch Complex 17B,,not stated,keyword_rules_on_source_text
+ll2all_fac94e25,1974-05-23,failure,Soyuz U,Soviet Space Program,LEO,43/3 (43L),,not stated,keyword_rules_on_source_text
+ll2all_10f45e00,1974-07-11,failure,Kosmos 11K63,Soviet Space Program,LEO,133/3 (133L),,not stated,keyword_rules_on_source_text
+ll2all_ba7b8eeb,1974-07-12,failure,Feng Bao 1,Seventh Ministry of Machine Building Industry,LEO,Launch Area 2B,,not stated,keyword_rules_on_source_text
+ll2all_ae77bf9e,1974-08-30,failure,Voskhod,Soviet Space Program,LEO,41/1,,not stated,keyword_rules_on_source_text
+ll2all_866ad4df,1974-11-05,failure,Long March 2A,Seventh Ministry of Machine Building Industry,LEO,Launch Area 2B,,not stated,keyword_rules_on_source_text
+ll2all_51ad9443,1975-02-20,failure,Atlas SLV-3D Centaur,United States Air Force,Direct-GEO,Launch Complex 36A,,not stated,keyword_rules_on_source_text
+ll2all_c9e8af62,1975-04-05,failure,Soyuz,Soviet Space Program,LEO,1/5,,not stated,keyword_rules_on_source_text
+ll2all_75fca82e,1975-04-13,failure,SM-65F Atlas,United States Air Force,LEO,Space Launch Complex 3W,,not stated,keyword_rules_on_source_text
+ll2all_f116ca1e,1975-06-03,failure,Kosmos-3M (11K65M),Soviet Space Program,LEO,107/2,,not stated,keyword_rules_on_source_text
+ll2all_7628e5ba,1975-10-16,failure,Proton-K/D-1,Soviet Space Program,Lunar Impactor,81/23 (81L),,not stated,keyword_rules_on_source_text
+ll2all_926c05ff,1975-12-06,failure,Scout F-1,National Aeronautics and Space Administration,LEO,Space Launch Complex 5,,not stated,keyword_rules_on_source_text
+ll2all_cbb5142b,1975-12-19,failure,Kosmos-3M (11K65M),Soviet Space Program,LEO,132/1 (132L),,not stated,keyword_rules_on_source_text
+ll2all_cf2cc98d,1976-02-04,failure,Mu-3C,Institute of Space and Astronautical Science,LEO,Mu Center,,not stated,keyword_rules_on_source_text
+ll2all_f164ce2a,1976-07-01,failure,Molniya-M 2BL,Soviet Space Program,Elliptical,43/4 (43R),,not stated,keyword_rules_on_source_text
+ll2all_ebfdf07a,1976-09-01,failure,Molniya-M 2BL,Soviet Space Program,Elliptical,43/3 (43L),,not stated,keyword_rules_on_source_text
+ll2all_20ef1b06,1976-10-04,failure,Soyuz U,Soviet Space Program,LEO,43/4 (43R),,not stated,keyword_rules_on_source_text
+ll2all_f9388eac,1976-11-10,failure,Feng Bao 1,Seventh Ministry of Machine Building Industry,LEO,Launch Area 2B,,not stated,keyword_rules_on_source_text
+ll2all_3879fa81,1977-02-22,failure,Soyuz U,Soviet Space Program,LEO,31/6,,not stated,keyword_rules_on_source_text
+ll2all_afa2d2e6,1977-04-20,failure,Delta 2914,United States Air Force,Elliptical,Space Launch Complex 17B,,not stated,keyword_rules_on_source_text
+ll2all_cf8cf401,1977-08-04,failure,Proton-K,Soviet Space Program,LEO,81/24 (81P),,not stated,keyword_rules_on_source_text
+ll2all_0d9efe35,1977-08-10,failure,Soyuz U,Soviet Space Program,LEO,31/6,,not stated,keyword_rules_on_source_text
+ll2all_09e45d9e,1977-09-13,failure,Delta 3914,United States Air Force,Direct-GEO,Space Launch Complex 17A,,not stated,keyword_rules_on_source_text
+ll2all_95dee817,1977-09-30,failure,Atlas SLV-3D Centaur,United States Air Force,Direct-GEO,Launch Complex 36A,,not stated,keyword_rules_on_source_text
+ll2all_a29cbdb9,1977-11-29,failure,Kosmos-3M (11K65M),Soviet Space Program,LEO,132/1 (132L),,not stated,keyword_rules_on_source_text
+ll2all_8444243f,1978-03-25,failure,Titan IIIC,United States Air Force,Direct-GEO,Space Launch Complex 40,,not stated,keyword_rules_on_source_text
+ll2all_daa4c6be,1978-05-27,failure,Proton-K/DM,Soviet Space Program,Direct-GEO,200/40,,not stated,keyword_rules_on_source_text
+ll2all_312a2127,1978-08-17,failure,Proton-K/DM,Soviet Space Program,Direct-GEO,200/40,,not stated,keyword_rules_on_source_text
+ll2all_26a1968e,1978-10-17,failure,Proton-K/DM,Soviet Space Program,Direct-GEO,200/40,,not stated,keyword_rules_on_source_text
+ll2all_e2379cf6,1978-12-20,failure,Kosmos-3M (11K65M),Soviet Space Program,LEO,132/1 (132L),,not stated,keyword_rules_on_source_text
+ll2all_62708d44,1979-02-06,failure,N-I,National Space Development Agency of Japan,Direct-GEO,Osaki Launch Complex,,not stated,keyword_rules_on_source_text
+ll2all_619fb661,1979-02-16,failure,Soyuz U,Soviet Space Program,LEO,41/1,,not stated,keyword_rules_on_source_text
+ll2all_962c04a2,1979-07-27,failure,Feng Bao 1,Seventh Ministry of Machine Building Industry,LEO,Launch Area 2B,,not stated,keyword_rules_on_source_text
+ll2all_82ebe308,1979-08-10,failure,SLV-3,Indian Space Research Organization,LEO,SLV-3 Launch Pad,,not stated,keyword_rules_on_source_text
+ll2all_72d5eb54,1979-10-12,failure,Soyuz U,Soviet Space Program,LEO,43/3 (43L),,not stated,keyword_rules_on_source_text
+ll2all_de10ff2a,1980-02-12,failure,Molniya-M 2BL,Soviet Space Program,Elliptical,43/4 (43R),,not stated,keyword_rules_on_source_text
+ll2all_60c1b5ca,1980-04-18,failure,Molniya-M 2BL,Soviet Space Program,Elliptical,41/1,,not stated,keyword_rules_on_source_text
+ll2all_89a25d65,1980-05-23,failure,Ariane 1,Arianespace,Elliptical,Ariane Launch Area 1 (ELV),,not stated,keyword_rules_on_source_text
+ll2all_1b724bae,1980-07-15,failure,Thor DSV-2U,United States Air Force,SSO,Space Launch Complex 10W,,not stated,keyword_rules_on_source_text
+ll2all_762c8f79,1980-12-09,failure,Atlas E MSD,United States Air Force,LEO,Space Launch Complex 3W,,not stated,keyword_rules_on_source_text
+ll2all_1e94c896,1981-01-23,failure,Tsiklon-3,Soviet Space Program,LEO,32/1,,not stated,keyword_rules_on_source_text
+ll2all_3011274b,1981-03-28,failure,Soyuz U,Soviet Space Program,LEO,31/6,,not stated,keyword_rules_on_source_text
+ll2all_c8d328c0,1981-12-19,failure,Atlas E/SVS,United States Air Force,MEO,Space Launch Complex 3E,,not stated,keyword_rules_on_source_text
+ll2all_cbae7bd0,1982-03-04,failure,Kosmos-3M (11K65M),Soviet Space Program,LEO,107/1,,not stated,keyword_rules_on_source_text
+ll2all_2247ab97,1982-05-15,failure,Soyuz U,Soviet Space Program,LEO,41/1,,not stated,keyword_rules_on_source_text
+ll2all_be396383,1982-06-12,failure,Soyuz U,Soviet Space Program,LEO,31/6,,not stated,keyword_rules_on_source_text
+ll2all_be3d1a82,1982-06-18,failure,Kosmos-3M (11K65M),Soviet Space Program,LEO,132/2,,not stated,keyword_rules_on_source_text
+ll2all_8e2ccdf9,1982-07-22,failure,Proton-K/DM,Soviet Space Program,Direct-GEO,200/40,,not stated,keyword_rules_on_source_text
+ll2all_a7c877a2,1982-08-30,failure,Kosmos-3M (11K65M),Soviet Space Program,LEO,132/2,,not stated,keyword_rules_on_source_text
+ll2all_b642c7d7,1982-09-09,failure,Ariane 1,Arianespace,Direct-GEO,Ariane Launch Area 1 (ELV),,not stated,keyword_rules_on_source_text
+ll2all_75c2153b,1982-11-24,failure,Kosmos-3M (11K65M),Soviet Space Program,LEO,132/1 (132L),,not stated,keyword_rules_on_source_text
+ll2all_6814c410,1982-12-08,failure,Molniya-M 2BL,Soviet Space Program,Elliptical,1/5,,not stated,keyword_rules_on_source_text
+ll2all_c6e1cae3,1982-12-24,failure,Proton-K/DM,Soviet Space Program,Direct-GEO,200/39 (200L),,not stated,keyword_rules_on_source_text
+ll2all_a89612ba,1983-01-25,failure,Kosmos-3M (11K65M),Soviet Space Program,LEO,132/2,,not stated,keyword_rules_on_source_text
+ll2all_ccb25c93,1983-09-26,failure,Soyuz U,Soviet Space Program,LEO,1/5,"Approximately 90 seconds before the intended launch, a bad valve caused nitrogen pressurization gas to enter the RP-1 turbopump of the Blok B strap-on. The pump began spinning up, but with no propellant in it, RPM speeds quickly exceeded its design limits which caused it to rupture and allow RP-1 to leak out and start a fire which quickly engulfed the base of the launch vehicle.",engine/propulsion,keyword_rules_on_source_text
+ll2all_14376b98,1984-01-29,partial_failure,Long March 3,Ministry of Space Industry,Direct-GEO,Launch Complex 3 (LC-3/LA-1),"Due to insufficient pressurization of the third stage during restart, the payload was inserted in a lower-than-planned orbit.",engine/propulsion,keyword_rules_on_source_text
+ll2all_9c78fc69,1984-11-27,failure,Tsiklon-3,Soviet Space Program,SSO,32/1,,not stated,keyword_rules_on_source_text
+ll2all_b4d19ca3,1985-04-13,failure,Zenit-2,Soviet Space Program,LEO,45/1,,not stated,keyword_rules_on_source_text
+ll2all_22b6ed8d,1985-06-21,failure,Zenit-2,Soviet Space Program,LEO,45/1,,not stated,keyword_rules_on_source_text
+ll2all_82ae6d5f,1985-08-28,failure,Titan 34D,United States Air Force,LEO,Space Launch Complex 4E,,not stated,keyword_rules_on_source_text
+ll2all_08253959,1985-09-12,failure,Ariane 3,Arianespace,Direct-GEO,Ariane Launch Area 1 (ELV),,not stated,keyword_rules_on_source_text
+ll2all_552f6f49,1985-10-23,failure,Kosmos-3M (11K65M),Soviet Space Program,LEO,133/3 (133L),,not stated,keyword_rules_on_source_text
+ll2all_ca242e45,1986-01-28,failure,Space Shuttle,Lockheed Space Operations Company,LEO,Launch Complex 39B,"During the ascent phase, 73 seconds after liftoff, the vehicle experienced a catastrophic structural failure resulting in the loss of crew and vehicle. The Rogers Commission later determined the cause of the accident to have been the failure of the primary and secondary (backup) O-ring seals on Challenger's right Solid Rocket Booster.",structure/aerodynamic,keyword_rules_on_source_text
+ll2all_f7f14098,1986-03-26,failure,Soyuz U,Soviet Space Program,LEO,31/6,,not stated,keyword_rules_on_source_text
+ll2all_b1ff82a9,1986-04-18,failure,Titan 34D,United States Air Force,LEO,Space Launch Complex 4E,,not stated,keyword_rules_on_source_text
+ll2all_1c1cca56,1986-05-03,failure,Delta 3914,United States Air Force,Direct-GEO,Space Launch Complex 17A,,not stated,keyword_rules_on_source_text
+ll2all_2eb9887b,1986-05-31,failure,Ariane 2,Arianespace,Direct-GEO,Ariane Launch Area 1 (ELV),,not stated,keyword_rules_on_source_text
+ll2all_8b72fa1c,1986-10-03,failure,Molniya-M 2BL,Soviet Space Program,Elliptical,41/1,,not stated,keyword_rules_on_source_text
+ll2all_064e2b55,1986-10-15,failure,Tsiklon-3,Soviet Space Program,LEO,32/2,,not stated,keyword_rules_on_source_text
+ll2all_d0c9ea00,1986-11-29,failure,Proton-K,Soviet Space Program,LEO,200/40,,not stated,keyword_rules_on_source_text
+ll2all_16b56e56,1987-01-30,failure,Proton K/DM-2,Soviet Space Program,Direct-GEO,200/40,,not stated,keyword_rules_on_source_text
+ll2all_f25fe46b,1987-03-24,failure,ASLV,Indian Space Research Organization,LEO,SLV-3 Launch Pad,,not stated,keyword_rules_on_source_text
+ll2all_d04b80af,1987-03-26,failure,Atlas G Centaur,United States Air Force,Direct-GEO,Launch Complex 36B,,not stated,keyword_rules_on_source_text
+ll2all_d892b891,1987-04-24,failure,Proton K/DM-2,Soviet Space Program,MEO,200/40,,not stated,keyword_rules_on_source_text
+ll2all_e2e83236,1987-05-15,failure,Energiya,Soviet Space Program,LEO,250,,not stated,keyword_rules_on_source_text
+ll2all_0176c3b5,1987-06-18,failure,Soyuz U,Soviet Space Program,SSO,43/3 (43L),,not stated,keyword_rules_on_source_text
+ll2all_6eeacadd,1988-01-18,failure,Proton K/DM-2,Soviet Space Program,Direct-GEO,200/40,,not stated,keyword_rules_on_source_text
+ll2all_82dd9607,1988-02-17,failure,Proton K/DM-2,Soviet Space Program,MEO,200/39 (200L),,not stated,keyword_rules_on_source_text
+ll2all_7749c20c,1988-07-09,failure,Soyuz U,Soviet Space Program,LEO,1/5,,not stated,keyword_rules_on_source_text
+ll2all_2ad5a34b,1988-07-13,failure,ASLV,Indian Space Research Organization,LEO,SLV-3 Launch Pad,,not stated,keyword_rules_on_source_text
+ll2all_dcbe5434,1988-07-27,failure,Soyuz U,Soviet Space Program,LEO,43/4 (43R),,not stated,keyword_rules_on_source_text
+ll2all_eec7c5e4,1988-11-11,failure,Soyuz U,Soviet Space Program,LEO,1/5,,not stated,keyword_rules_on_source_text
+ll2all_4feb9b91,1989-06-09,failure,Tsiklon-3,Soviet Space Program,LEO,32/2,,not stated,keyword_rules_on_source_text
+ll2all_2caddda1,1989-11-24,failure,Tsiklon-2,Soviet Space Program,LEO,90,,not stated,keyword_rules_on_source_text
+ll2all_dce0b178,1990-02-22,failure,Ariane 44L,Arianespace,Direct-GEO,Ariane Launch Area 2,,not stated,keyword_rules_on_source_text
+ll2all_01dc9569,1990-04-03,failure,Soyuz U,Soviet Space Program,LEO,43/4 (43R),,not stated,keyword_rules_on_source_text
+ll2all_8d30f1ae,1990-06-21,failure,Molniya-M 2BL,Soviet Space Program,Elliptical,43/3 (43L),,not stated,keyword_rules_on_source_text
+ll2all_831fac4e,1990-07-03,failure,Soyuz U,Soviet Space Program,LEO,16/2,,not stated,keyword_rules_on_source_text
+ll2all_0917e599,1990-08-09,failure,Proton K/DM-2,Soviet Space Program,Direct-GEO,200/39 (200L),,not stated,keyword_rules_on_source_text
+ll2all_cc9d42c8,1990-10-04,failure,Zenit-2,Soviet Space Program,LEO,45/2,,not stated,keyword_rules_on_source_text
+ll2all_8b2a2d86,1991-04-18,failure,Atlas I,General Dynamics,Direct-GEO,Launch Complex 36B,,not stated,keyword_rules_on_source_text
+ll2all_f7034397,1991-06-25,failure,Kosmos-3M (11K65M),Soviet Space Program,LEO,132/1 (132L),,not stated,keyword_rules_on_source_text
+ll2all_05674dc7,1991-08-30,failure,Zenit-2,Soviet Space Program,LEO,45/1,,not stated,keyword_rules_on_source_text
+ll2all_106e8090,1991-12-28,partial_failure,Long March 3,Ministry of Aerospace Industry,Direct-GEO,Launch Complex 3 (LC-3/LA-1),Satellite left in unusable orbit due to the third stage shutting down earlier than planned.,upper stage/orbit insertion,keyword_rules_on_source_text
+ll2all_7e7d5bea,1992-02-05,failure,Zenit-2,Russian Federal Space Agency (ROSCOSMOS),LEO,45/1,,not stated,keyword_rules_on_source_text
+ll2all_71bb4f6f,1992-08-22,failure,Atlas I,General Dynamics,Direct-GEO,Launch Complex 36B,,not stated,keyword_rules_on_source_text
+ll2all_3893b5d0,1992-12-21,failure,Long March 2E,Ministry of Aerospace Industry,Direct-GEO,Launch Complex 2 (LC-2),"Structural failure of payload fairing or satellite 48 seconds after launch destroyed the satellite. 
+
+The launcher continued its flight to low earth orbit, where it successfully jettisoned the debris. The cause of the failure has never been identified with certainty.",stage separation/fairing,keyword_rules_on_source_text
+ll2all_4aaf43bb,1993-05-27,failure,Proton K/DM-2,Khrunichev State Research and Production Space Center,Direct-GEO,81/23 (81L),,not stated,keyword_rules_on_source_text
+ll2all_2bf879d5,1993-08-02,failure,Titan 403A,United States Air Force,Elliptical,Space Launch Complex 4E,,not stated,keyword_rules_on_source_text
+ll2all_e6ca914b,1993-09-20,failure,PSLV,Indian Space Research Organization,LEO,Satish Dhawan Space Centre First Launch Pad,,not stated,keyword_rules_on_source_text
+ll2all_7affcdd0,1993-10-05,failure,Titan II SLV,United States Air Force,LEO,Space Launch Complex 4W,,not stated,keyword_rules_on_source_text
+ll2all_8b003044,1994-01-24,failure,Ariane 44LP,Arianespace,Direct-GEO,Ariane Launch Area 2,,not stated,keyword_rules_on_source_text
+ll2all_59a1addd,1994-05-25,failure,Tsiklon-3,Russian Space Forces,LEO,32/2,,not stated,keyword_rules_on_source_text
+ll2all_fd608f82,1994-06-27,failure,Pegasus XL,Orbital Sciences Corporation,,Vandenberg Space Force Base,Flight termination after loss of vehicle control 35 seconds into flight,guidance/control/software,keyword_rules_on_source_text
+ll2all_b802a6d2,1994-12-01,failure,Ariane 42P,Arianespace,Direct-GEO,Ariane Launch Area 2,,not stated,keyword_rules_on_source_text
+ll2all_892e5aea,1995-01-15,failure,Mu-3S-II,Institute of Space and Astronautical Science,LEO,Mu Center,,not stated,keyword_rules_on_source_text
+ll2all_fd64bfae,1995-01-25,failure,Long March 2E,China Aerospace Corporation,Direct-GEO,Launch Complex 2 (LC-2),,not stated,keyword_rules_on_source_text
+ll2all_dfb8e0f5,1995-03-28,failure,Start,Russian Space Forces,LEO,158,,not stated,keyword_rules_on_source_text
+ll2all_5ec0d041,1995-06-22,failure,Pegasus XL,Orbital Sciences Corporation,,Vandenberg Space Force Base,Destroyed during second stage flight,upper stage/orbit insertion,keyword_rules_on_source_text
+ll2all_f3f96691,1995-08-05,failure,Delta II 7925,United States Air Force,Direct-GEO,Space Launch Complex 17B,,not stated,keyword_rules_on_source_text
+ll2all_51663388,1995-08-15,failure,Athena I,Lockheed Martin,LEO,Space Launch Complex 6,,not stated,keyword_rules_on_source_text
+ll2all_74c7b4d9,1995-10-06,failure,Kosmos-3M (11K65M),Production Corporation Polyot,LEO,132/1 (132L),,not stated,keyword_rules_on_source_text
+ll2all_4922c17c,1995-10-23,failure,Conestoga 1620,Space Services Inc.,LEO,Launch Area 0 A,,not stated,keyword_rules_on_source_text
+ll2all_e8b85a69,1996-02-14,failure,Long March 3B,China Aerospace Corporation,Direct-GEO,Launch Complex 2 (LC-2),"Guidance platform short-circuited right at liftoff, leading to loss of attitude control. The vehicle hit the ground at T+23 seconds and exploded, killing at least 6 people on the ground.",guidance/control/software,keyword_rules_on_source_text
+ll2all_1a2f306f,1996-05-14,failure,Soyuz U,Russian Federal Space Agency (ROSCOSMOS),LEO,31/6,,not stated,keyword_rules_on_source_text
+ll2all_bf03e206,1996-06-04,failure,Ariane 5 G,Arianespace,HEO,Ariane Launch Area 3,"A software error led to integer overflow, causing the rocket to veer off its flight path 37 seconds after launch. This caused the vehicle to disintegrate under high aerodynamic forces, eventually self-destructing due to its flight termination system.",guidance/control/software,keyword_rules_on_source_text
+ll2all_f72d7ccf,1996-06-20,failure,Soyuz-U-PVB,Russian Space Forces,LEO,16/2,,not stated,keyword_rules_on_source_text
+ll2all_7ac557e8,1996-08-18,failure,Long March 3,China Aerospace Corporation,Direct-GEO,Launch Complex 3 (LC-3/LA-1),Third stage engine shut down 48 seconds too early.,engine/propulsion,keyword_rules_on_source_text
+ll2all_1d9d2b69,1996-11-04,failure,Pegasus XL,Orbital Sciences Corporation,,Wallops Flight Facility,"Battery failure in the Pegasus XL rocket third stage, satellites did not separate from third stage.",stage separation/fairing,keyword_rules_on_source_text
+ll2all_d0973bfe,1997-01-17,failure,Delta II 7925,United States Air Force,MEO,Space Launch Complex 17A,,not stated,keyword_rules_on_source_text
+ll2all_78e0755c,1997-05-20,failure,Zenit-2,Russian Federal Space Agency (ROSCOSMOS),LEO,45/1,,not stated,keyword_rules_on_source_text
+ll2all_192e29ad,1997-09-29,failure,PSLV,Indian Space Research Organization,LEO,Satish Dhawan Space Centre First Launch Pad,,not stated,keyword_rules_on_source_text
+ll2all_144c67db,1997-10-30,failure,Ariane 5 G,European Space Agency,GTO,Ariane Launch Area 3,,not stated,keyword_rules_on_source_text
+ll2all_15183b48,1997-11-02,failure,VLS-1,Brazilian Space Agency,LEO,VLS Pad,,not stated,keyword_rules_on_source_text
+ll2all_f816a831,1997-12-24,failure,Proton-K/DM-2M,Khrunichev State Research and Production Space Center,Direct-GEO,81/23 (81L),,not stated,keyword_rules_on_source_text
+ll2all_02c372d4,1998-01-22,failure,Shavit-2,Israeli Space Agency,LEO,Shavit Launch Pad,,not stated,keyword_rules_on_source_text
+ll2all_470ae747,1998-08-12,failure,Titan 401A Centaur,United States Air Force,Direct-GEO,Space Launch Complex 41,,not stated,keyword_rules_on_source_text
+ll2all_15ee36ba,1998-08-27,failure,Delta III 8930,United States Air Force,Direct-GEO,Space Launch Complex 17B,,not stated,keyword_rules_on_source_text
+ll2all_0b13e339,1998-08-31,failure,Paektusan 1,Korean Committee of Space Technology,LEO,Satellite Launch Pad,,not stated,keyword_rules_on_source_text
+ll2all_2640fdbc,1998-09-09,failure,Zenit-2 11K77.05,Russian Federal Space Agency (ROSCOSMOS),LEO,45/1,,not stated,keyword_rules_on_source_text
+ll2all_75a55781,1999-04-09,failure,Titan 402B IUS,United States Air Force,Direct-GEO,Space Launch Complex 41,,not stated,keyword_rules_on_source_text
+ll2all_8f6ecc70,1999-04-27,failure,Athena II,Lockheed Martin,PO,Space Launch Complex 6,,not stated,keyword_rules_on_source_text
+ll2all_cfa2a664,1999-04-30,failure,Titan IVB/Centaur,United States Air Force,GSO,Space Launch Complex 40,,not stated,keyword_rules_on_source_text
+ll2all_3954ac60,1999-05-05,failure,Delta III 8930,United States Air Force,Direct-GEO,Space Launch Complex 17B,,not stated,keyword_rules_on_source_text
+ll2all_ffcada79,1999-07-05,failure,Proton-K/Briz-M,Khrunichev State Research and Production Space Center,Direct-GEO,81/24 (81P),,not stated,keyword_rules_on_source_text
+ll2all_bbdc2186,1999-10-27,failure,Proton K/DM-2,Khrunichev State Research and Production Space Center,Direct-GEO,200/39 (200L),,not stated,keyword_rules_on_source_text
+ll2all_c58d2a1a,1999-11-15,failure,H-II,Japan Aerospace Exploration Agency,Direct-GEO,Yoshinobu Launch Complex LP-1,,not stated,keyword_rules_on_source_text
+ll2all_7df36bc5,1999-12-11,failure,VLS-1,Brazilian Space Agency,LEO,VLS Pad,,not stated,keyword_rules_on_source_text
+ll2all_1e57db40,2000-02-10,failure,M-V,Institute of Space and Astronautical Science,LEO,Mu Center,,not stated,keyword_rules_on_source_text
+ll2all_5195b5e3,2000-03-12,failure,Zenit 3SL,Sea Launch,MEO,Launch Platform Odyssey,,not stated,keyword_rules_on_source_text
+ll2all_a3bb3fa0,2000-11-20,failure,Kosmos-3M (11K65M),Production Corporation Polyot,LEO,132/1 (132L),,not stated,keyword_rules_on_source_text
+ll2all_5c5da2d3,2000-12-27,failure,Tsiklon-3,Strategic Rocket Forces,LEO,32/1,,not stated,keyword_rules_on_source_text
+ll2all_8ee559c4,2001-04-18,failure,GSLV,Indian Space Research Organization,,Satish Dhawan Space Centre First Launch Pad,Payload placed into lower than planned orbit. Payload didn't have enough fuel to get to a usable orbit.,engine/propulsion,keyword_rules_on_source_text
+ll2all_caca9e1a,2001-07-12,partial_failure,Ariane 5 G,Arianespace,GTO,Ariane Launch Area 3,"Upper stage under-performance left payloads in MEO. Artemis was able to climb to GEO over time with operational propellant, BSAT-2b couldn't compensate and was abandoned.",upper stage/orbit insertion,keyword_rules_on_source_text
+ll2all_9ddcb285,2001-09-21,failure,Minotaur-C 2110,Orbital Sciences Corporation,SSO,Space Launch Complex 576E,,not stated,keyword_rules_on_source_text
+ll2all_5800784b,2002-09-15,failure,Kaituozhe-1,China Aerospace Science and Technology Corporation,LEO,Kaituozhe Launch Pad,,not stated,keyword_rules_on_source_text
+ll2all_5ec966fd,2002-10-15,failure,Soyuz-U-PVB,Russian Space Forces,LEO,43/3 (43L),,not stated,keyword_rules_on_source_text
+ll2all_72d7b03a,2002-11-25,failure,Proton-K/DM-2M,Khrunichev State Research and Production Space Center,Direct-GEO,81/23 (81L),,not stated,keyword_rules_on_source_text
+ll2all_05cc2e97,2002-12-11,failure,Ariane 5 ECA,Arianespace,GTO,Ariane Launch Area 3,,not stated,keyword_rules_on_source_text
+ll2all_d7021072,2003-01-16,failure,Space Shuttle,United Space Alliance,LEO,Launch Complex 39A,"The seven members of the crew were killed on February 1 when Columbia disintegrated during reentry into the atmosphere. The Columbia Accident Investigation Board determined the failure was caused by a piece of foam that broke off during launch and damaged the thermal protection system (reinforced carbon-carbon panels and thermal protection tiles) on the leading edge of the orbiter's Left wing. During re-entry the damaged wing slowly overheated and came apart, eventually leading to loss of control and disintegration of the vehicle.",guidance/control/software,keyword_rules_on_source_text
+ll2all_ece77e04,2003-09-16,failure,Kaituozhe-1,China Aerospace Science and Technology Corporation,LEO,Kaituozhe Launch Pad,,not stated,keyword_rules_on_source_text
+ll2all_0d60f2ed,2003-11-29,failure,H-IIA 2024,Japan Aerospace Exploration Agency,SSO,Yoshinobu Launch Complex LP-1,One of the SRBs failed to separate from the 1st stage.,stage separation/fairing,keyword_rules_on_source_text
+ll2all_87592bf3,2004-09-06,failure,Shavit-2,Israeli Space Agency,LEO,Shavit Launch Pad,,not stated,keyword_rules_on_source_text
+ll2all_6681c5ad,2004-12-21,partial_failure,Delta IV Heavy,Boeing,,Space Launch Complex 37B,"Two nanosats were lost after a first stage anomaly. Additionally, the mass simulator was placed into the wrong orbit.",upper stage/orbit insertion,keyword_rules_on_source_text
+ll2all_f09ec581,2004-12-24,failure,Tsiklon-3,Russian Space Forces,LEO,32/2,,not stated,keyword_rules_on_source_text
+ll2all_b79acbdb,2005-06-09,failure,Kaituozhe-1,China Aerospace Science and Technology Corporation,LEO,Kaituozhe Launch Pad,,not stated,keyword_rules_on_source_text
+ll2all_eed27674,2005-06-21,failure,Molniya-M 2BL,Progress Rocket Space Center,LEO,16/2,,not stated,keyword_rules_on_source_text
+ll2all_f49d890e,2005-06-21,failure,Volna,Makeyev Rocket Design Bureau,LEO,Borisoglebsk (K-496),,not stated,keyword_rules_on_source_text
+ll2all_bff2befb,2005-10-08,failure,Rokot/Briz-KM,Eurockot Launch Services,LEO,133/3 (133L),,not stated,keyword_rules_on_source_text
+ll2all_7f781fe3,2006-02-28,failure,Proton-M Briz-M,Khrunichev State Research and Production Space Center,Direct-GEO,200/39 (200L),,not stated,keyword_rules_on_source_text
+ll2all_b8741d6a,2006-03-24,failure,Falcon 1,SpaceX,LEO,Omelek Island,Engine failure at T+33 seconds,engine/propulsion,keyword_rules_on_source_text
+ll2all_6ce720ab,2006-07-10,failure,GSLV,Indian Space Research Organization,,Satish Dhawan Space Centre Second Launch Pad,The primary cause for the failure was the sudden loss of thrust in one out of the four liquid propellant strap-on stages (S4) immediately after lift-off at 0.2 sec. Rocket's self destruct was engaged over the Bay of Bengal.,engine/propulsion,keyword_rules_on_source_text
+ll2all_2e986328,2006-07-26,failure,Dnepr 1,ISC Kosmotras,SSO,109/95,,not stated,keyword_rules_on_source_text
+ll2all_c43c4892,2007-01-30,failure,Zenit 3SL,Sea Launch,Direct-GEO,Launch Platform Odyssey,,not stated,keyword_rules_on_source_text
+ll2all_9a50023f,2007-03-21,failure,Falcon 1,SpaceX,LEO,Omelek Island,Premature engine shutdown at T+7:30,engine/propulsion,keyword_rules_on_source_text
+ll2all_bdcbb367,2007-09-02,failure,GSLV,Indian Space Research Organization,,Satish Dhawan Space Centre Second Launch Pad,Error in guidance subsystem caused low apogee and high inclination. Payload reached correct orbit on its own power.,guidance/control/software,keyword_rules_on_source_text
+ll2all_99e0e595,2007-09-05,failure,Proton-M Briz-M,Khrunichev State Research and Production Space Center,Direct-GEO,200/39 (200L),,not stated,keyword_rules_on_source_text
+ll2all_70ec6283,2008-03-14,failure,Proton-M Briz-M,Khrunichev State Research and Production Space Center,GSO,200/39 (200L),,not stated,keyword_rules_on_source_text
+ll2all_cdeb321f,2008-08-03,failure,Falcon 1,SpaceX,LEO,Omelek Island,Residual stage 1 thrust led to collision between stage 1 and stage 2 during separation.,engine/propulsion,keyword_rules_on_source_text
+ll2all_e8684f46,2008-08-16,failure,Safir,Iranian Space Agency,LEO,Safir Launch Pad,,not stated,keyword_rules_on_source_text
+ll2all_c8bbd494,2009-02-24,failure,Minotaur-C 3110,Orbital Sciences Corporation,LEO,Space Launch Complex 576E,,not stated,keyword_rules_on_source_text
+ll2all_4a3a82b4,2009-04-05,failure,Unha,Korean Committee of Space Technology,LEO,Satellite Launch Pad,,not stated,keyword_rules_on_source_text
+ll2all_b1b41a30,2009-05-21,failure,Soyuz 2.1a Fregat,Russian Space Forces,Elliptical,43/4 (43R),,not stated,keyword_rules_on_source_text
+ll2all_9cf80b86,2009-08-25,failure,KSLV Naro-1,Korea Aerospace Research Institute,LEO,LC-1,,not stated,keyword_rules_on_source_text
+ll2all_c9b79d9a,2009-08-31,partial_failure,Long March 3B,China Aerospace Science and Technology Corporation,,Launch Complex 2 (LC-2),The satellite was deployed into the wrong orbit.,stage separation/fairing,keyword_rules_on_source_text
+ll2all_aa2cd819,2010-04-15,failure,GSLV Mk. II,Indian Space Research Organization,,Satish Dhawan Space Centre Second Launch Pad,Third stage failure.,upper stage/orbit insertion,keyword_rules_on_source_text
+ll2all_1cb9fb8c,2010-06-10,failure,KSLV Naro-1,Korea Aerospace Research Institute,,LC-1,Rapid Unscheduled Disassembly during first stage burn.,engine/propulsion,keyword_rules_on_source_text
+ll2all_3f3c6a26,2010-12-05,failure,Proton-M Blok DM-03,Khrunichev State Research and Production Space Center,MEO,81/24 (81P),Human error during fueling caused the upper stage mass to be too great and the rocket failure to achieve parking orbit.,engine/propulsion,keyword_rules_on_source_text
+ll2all_e2bc0c5a,2010-12-25,failure,GSLV,Indian Space Research Organization,,Satish Dhawan Space Centre Second Launch Pad,Destroyed by range safety officer after loss of control over liquid-fueled boosters.,engine/propulsion,keyword_rules_on_source_text
+ll2all_5d8f38e9,2011-02-01,failure,Rokot/Briz-KM,Russian Space Forces,SSO,133/3 (133L),,not stated,keyword_rules_on_source_text
+ll2all_23eb5281,2011-03-04,failure,Minotaur C,Orbital Sciences Corporation,,Space Launch Complex 8,,not stated,keyword_rules_on_source_text
+ll2all_d899cade,2011-06-09,partial_failure,SpaceShipTwo,Virgin Galactic,Sub,Mojave Air and Space Port,,not stated,keyword_rules_on_source_text
+ll2all_43a82409,2011-08-17,failure,Proton-M Briz-M Enhanced,Khrunichev State Research and Production Space Center,,200/39 (200L),,not stated,keyword_rules_on_source_text
+ll2all_a34514d7,2011-08-18,failure,Long March 2C,China Aerospace Science and Technology Corporation,,Launch Area 94 (SLS-2 / 603),,not stated,keyword_rules_on_source_text
+ll2all_020530e2,2011-08-24,failure,Soyuz U,Russian Federal Space Agency (ROSCOSMOS),,1/5,"Approximately 325 seconds into flight, a malfunction was detected in the RD-0110 engine powering the Blok I third stage of the Soyuz-U rocket, which caused the onboard computer to terminate the flight through thrust termination. As a result, the vehicle failed to achieve orbit, reentering over the Altai Republic region of Russia. It was the first failure of a Progress spacecraft since launches began in 1978, and the third consecutive orbital launch failure worldwide.",engine/propulsion,keyword_rules_on_source_text
+ll2all_b8729e97,2011-11-08,failure,Zenit 2M,Russian Federal Space Agency (ROSCOSMOS),,45/1,,not stated,keyword_rules_on_source_text
+ll2all_abeb23a1,2011-12-23,failure,Soyuz 2.1b Fregat,Russian Aerospace Defence Forces,,43/4 (43R),,not stated,keyword_rules_on_source_text
+ll2all_828e4398,2012-04-12,failure,Unha-3,Korean Committee of Space Technology,,Unha Launch Pad,,not stated,keyword_rules_on_source_text
+ll2all_d8f30f66,2012-05-23,failure,Safir 1B,Iranian Space Agency,,Safir Launch Pad,,not stated,keyword_rules_on_source_text
+ll2all_933bfc67,2012-08-06,failure,Proton-M Briz-M Enhanced,Khrunichev State Research and Production Space Center,,81/24 (81P),,not stated,keyword_rules_on_source_text
+ll2all_04073b47,2012-09-22,failure,Safir 1B,Iranian Space Agency,,Safir Launch Pad,,not stated,keyword_rules_on_source_text
+ll2all_0f2d170a,2012-10-08,partial_failure,Falcon 9 v1.0,SpaceX,LEO,Space Launch Complex 40,"Dragon was placed into the correct orbit after a first stage engine failed during ascent. However, an Orbcomm secondary payload was placed into a lower than planned orbit and subsequently lost.",engine/propulsion,keyword_rules_on_source_text
+ll2all_4ade7d6b,2012-12-08,partial_failure,Proton-M Briz-M Enhanced,International Launch Services,,200/39 (200L),The Breeze-M upper stage shutdown several minutes early leaving the payload in an lower than intended orbit.,engine/propulsion,keyword_rules_on_source_text
+ll2all_6f7a0434,2013-01-15,failure,Rokot/Briz-KM,Russian Aerospace Defence Forces,,133/3 (133L),,not stated,keyword_rules_on_source_text
+ll2all_3eb9eb19,2013-02-01,failure,Zenit 3SL,Sea Launch,,Launch Platform Odyssey,,not stated,keyword_rules_on_source_text
+ll2all_2e6be816,2013-07-02,failure,Proton-M Blok DM-03,Khrunichev State Research and Production Space Center,,81/24 (81P),,not stated,keyword_rules_on_source_text
+ll2all_294245b7,2013-12-09,failure,Long March 4B,China Aerospace Science and Technology Corporation,SSO,Launch Complex 9,,not stated,keyword_rules_on_source_text
+ll2all_cf03600a,2014-05-15,failure,Proton-M Briz-M,Khrunichev State Research and Production Space Center,,200/39 (200L),,not stated,keyword_rules_on_source_text
+ll2all_2ac49b3d,2014-08-22,partial_failure,Soyuz STB Fregat,Arianespace,MEO,Soyuz Launch Complex,Satellites were placed into an incorrect orbit due to an anomaly with the Fregat upper stage. Both payloads recovered using their own propulsion.,engine/propulsion,keyword_rules_on_source_text
+ll2all_33fc568e,2014-10-21,partial_failure,Proton-M Briz-M,Khrunichev State Research and Production Space Center,GTO,81/24 (81P),The payload was placed into a lower than planned orbit.,upper stage/orbit insertion,keyword_rules_on_source_text
+ll2all_1048ab71,2014-10-28,failure,Antares 130,Orbital Sciences Corporation,LEO,Launch Area 0 A,,not stated,keyword_rules_on_source_text
+ll2all_b74dd1c6,2014-10-31,failure,SpaceShipTwo,Virgin Galactic,Sub,Mojave Air and Space Port,,not stated,keyword_rules_on_source_text
+ll2all_06f68719,2015-04-28,failure,Soyuz 2.1a,Russian Federal Space Agency (ROSCOSMOS),,31/6,"After reaching low Earth orbit, but before separation of the spacecraft from the rocket, communication with the vessel was lost. Ground controllers only received brief telemetry shortly after that confirmed spacecraft separation as well as the deployment of the solar panels, but were not able to confirm the deployment of rendezvous antennas of the KURS system. Initially controllers tried to fall back to the plan of making a 2-day rendezvous with the ISS, but this was also abandoned after ground stations were not able to communicate with the spacecraft during the next 3 orbits.",stage separation/fairing,keyword_rules_on_source_text
+ll2all_bc549101,2015-05-16,failure,Proton-M Briz-M,International Launch Services,,200/39 (200L),Proton-M third stage vernier engine failed at T+8min17sec due to turbopump shaft coating degradation causing excess vibration.,engine/propulsion,keyword_rules_on_source_text
+ll2all_16aae09d,2015-06-28,failure,Falcon 9 v1.1,SpaceX,LEO,Space Launch Complex 40,Rapid Unscheduled Disassembly at T+ 2min19sec after a support strut failure in the second stage.,upper stage/orbit insertion,keyword_rules_on_source_text
+ll2all_1b9d8671,2015-11-04,failure,SPARK,Sandia National Laboratories,,LP-41,Vehicle lost attitude control around a minute into flight.,guidance/control/software,keyword_rules_on_source_text
+ll2all_20f460a4,2015-12-05,failure,Soyuz 2.1v Volga,Russian Space Forces,,43/4 (43R),,not stated,keyword_rules_on_source_text
+ll2all_f802155a,2016-08-31,failure,Long March 4C,China Aerospace Science and Technology Corporation,SSO,Launch Complex 9,Unknown.,other/unclassified,keyword_rules_on_source_text
+ll2all_3622669f,2016-09-03,failure,Falcon 9 Full Thrust,SpaceX,GTO,Space Launch Complex 40,"Rocket and payload lost during anomaly originating around the upper stage oxygen tank during propellant load few minutes before static fire on Sept 1, 1307UTC.",upper stage/orbit insertion,keyword_rules_on_source_text
+ll2all_6a1991d2,2016-11-01,partial_failure,SpaceShipTwo,Virgin Galactic,Sub,Mojave Air and Space Port,,not stated,keyword_rules_on_source_text
+ll2all_6ef99977,2016-11-03,partial_failure,SpaceShipTwo,Virgin Galactic,Sub,Mojave Air and Space Port,,not stated,keyword_rules_on_source_text
+ll2all_a84b77de,2016-12-01,failure,Soyuz U,Russian Federal Space Agency (ROSCOSMOS),LEO,1/5,"The launch proceeded normally until telemetry was lost at T+382 seconds, about two minutes into the Blok I stage burn. At this time, the Progress apparently separated from the third stage, almost six minutes earlier than nominal. A high altitude explosion was reported over the skies of Tuva, and debris from the third stage and Progress impacted in a mountainous area approximately 2200 miles (3500 km) downrange from Baikonur.",engine/propulsion,keyword_rules_on_source_text
+ll2all_35159904,2016-12-28,partial_failure,Long March 2D,China Aerospace Science and Technology Corporation,SSO,Launch Complex 9,Satellites were placed into the incorrect orbit.,upper stage/orbit insertion,keyword_rules_on_source_text
+ll2all_decf3c30,2017-01-14,failure,SS-520-4,Japan Aerospace Exploration Agency,LEO,KS Center,,not stated,keyword_rules_on_source_text
+ll2all_f8e04552,2017-05-25,failure,Electron,Rocket Lab,LEO,Rocket Lab Launch Complex 1A,"Third-party contractor supporting the launch misconfigured ground equipment that translated radio signals from the rocket into data used by range safety officials. That caused â€œextensive corruption of received position data,â€ resulting in the data loss that led safety officials to trigger the rocketâ€™s flight termination system.",other/unclassified,keyword_rules_on_source_text
+ll2all_f13fbc9b,2017-06-18,partial_failure,Long March 3B/E,China Aerospace Science and Technology Corporation,GTO,Launch Complex 2 (LC-2),"The satellite was placed into the wrong orbit due to a third stage anomaly. However, the payload recovered using onboard propulsion.",engine/propulsion,keyword_rules_on_source_text
+ll2all_83c36458,2017-07-02,failure,Long March 5/YZ-2,China Aerospace Science and Technology Corporation,GTO,101,,not stated,keyword_rules_on_source_text
+ll2all_1eeafaec,2017-07-14,partial_failure,Soyuz 2.1a Fregat-M,Russian Federal Space Agency (ROSCOSMOS),SSO,31/6,Numerous payloads experienced technical problems after an upper stage anomaly.,upper stage/orbit insertion,keyword_rules_on_source_text
+ll2all_c1d2ea04,2017-07-27,failure,Simorgh,Iranian Space Agency,LEO,Imam Khomeini Spaceport,"Failure due to a problem with the second stage, which failed after 20 seconds of powered flight (of planned 300 seconds).",upper stage/orbit insertion,keyword_rules_on_source_text
+ll2all_5d6245e1,2017-07-30,failure,MOMO v0,Interstellar Technologies,Sub,Launch Complex 0,Flight was terminated about 80 seconds after engine ignition.,engine/propulsion,keyword_rules_on_source_text
+ll2all_39b28c16,2017-08-31,failure,PSLV XL,Indian Space Research Organization,GSTO,Satish Dhawan Space Centre First Launch Pad,Payload fairing did not separate.,stage separation/fairing,keyword_rules_on_source_text
+ll2all_f7dce879,2017-11-28,failure,Soyuz 2.1b Fregat,Russian Federal Space Agency (ROSCOSMOS),SSO,Cosmodrome Site 1S,An algorithm glitch caused the Fregat upper stage to de-orbit.,upper stage/orbit insertion,keyword_rules_on_source_text
+ll2all_5998c086,2018-01-25,partial_failure,Ariane 5 ECA,Arianespace,Super-GTO,Ariane Launch Area 3,Payloads placed into an incorrect orbit.,upper stage/orbit insertion,keyword_rules_on_source_text
+ll2all_3a09a678,2018-06-29,failure,MOMO v0,Interstellar Technologies,Sub,Launch Complex 0,Engine cut off after two seconds and the vehicle fell back to the pad and exploded.,engine/propulsion,keyword_rules_on_source_text
+ll2all_676e30cc,2018-08-25,partial_failure,SARGE,EXOS Aerospace,Sub,Vertical Launch Area,,not stated,keyword_rules_on_source_text
+ll2all_62267793,2018-10-11,failure,Soyuz FG,Russian Federal Space Agency (ROSCOSMOS),LEO,1/5,"An anomaly occurred during flight resulting in loss of vehicle, both crew members returned to Earth safely following a nominal ballistic abort.",other/unclassified,keyword_rules_on_source_text
+ll2all_4a35280f,2018-10-27,failure,Zhuque-1,LandSpace,SSO,Launch Area 95A,Attitude control failed after third stage ignition.,engine/propulsion,keyword_rules_on_source_text
+ll2all_9e4da066,2019-01-15,failure,Simorgh,Iranian Space Agency,LEO,Imam Khomeini Spaceport,"Issue with the third stage during flight, satellite didn't reach orbit.",upper stage/orbit insertion,keyword_rules_on_source_text
+ll2all_8f8cf374,2019-02-05,failure,Safir 1B,Iranian Space Agency,LEO,Safir Launch Pad,,not stated,keyword_rules_on_source_text
+ll2all_987b33f4,2019-03-02,partial_failure,SARGE,EXOS Aerospace,Sub,Vertical Launch Area,,not stated,keyword_rules_on_source_text
+ll2all_8e87b56f,2019-03-27,failure,OS-M1,OneSpace,LEO,Launch Area 95A,Rocket lost attitude control after first stage separation.,stage separation/fairing,keyword_rules_on_source_text
+ll2all_aadef5e8,2019-05-22,failure,Long March 4C,China Aerospace Science and Technology Corporation,LEO,Launch Complex 7,Third stage failed and payload did not reach orbit.,upper stage/orbit insertion,keyword_rules_on_source_text
+ll2all_c2634035,2019-06-29,partial_failure,SARGE,EXOS Aerospace,Sub,Vertical Launch Area,,not stated,keyword_rules_on_source_text
+ll2all_582fa292,2019-07-11,failure,Vega,Arianespace,PO,Ariane Launch Area 1 (ELV),"An anomaly occurred shortly after MECO and stage separation.  Preliminary findings indicate that super-hot gas from burning solid propellant impinged on the structure of the second stage, causing the vehicle to break apart.",engine/propulsion,keyword_rules_on_source_text
+ll2all_2fd9bc54,2019-07-27,failure,MOMO v0,Interstellar Technologies,Sub,Launch Complex 0,Launch anomaly,other/unclassified,keyword_rules_on_source_text
+ll2all_b149c2f5,2019-10-26,failure,SARGE,EXOS Aerospace,Sub,Vertical Launch Area,,not stated,keyword_rules_on_source_text
+ll2all_8695499e,2020-02-09,failure,Simorgh,Iranian Space Agency,LEO,Imam Khomeini Spaceport,,not stated,keyword_rules_on_source_text
+ll2all_6cee0118,2020-03-16,failure,Long March 7A,China Aerospace Science and Technology Corporation,GSTO,201,"According to video footage from locals, failure occurred shortly after separation of the first and second stages. No official details have been released yet.",stage separation/fairing,keyword_rules_on_source_text
+ll2all_748ed2a0,2020-04-09,failure,Long March 3B,China Aerospace Science and Technology Corporation,GTO,Launch Complex 2 (LC-2),"Third stage of the rocket suffered an anomaly resulting in only one of the two engines operating properly, and it broke up along with the payload while reentering the atmosphere.",engine/propulsion,keyword_rules_on_source_text
+ll2all_4a47e6e2,2020-05-25,failure,LauncherOne,Virgin Orbit,LEO,Mojave Air and Space Port,"Shortly after release from the carrier plane and several seconds after first stage engine startup, the high-pressure LOX feeding line broke. This resulted in engine shutdown and subsequent flight termination.",engine/propulsion,keyword_rules_on_source_text
+ll2all_ac65e6af,2020-06-13,failure,MOMO v0,Interstellar Technologies,Sub,Launch Complex 0,The Momo-5 rocket had a successful liftoff before experiencing a loss of attitude control.,guidance/control/software,keyword_rules_on_source_text
+ll2all_e39e845d,2020-07-04,failure,Electron,Rocket Lab,SSO,Rocket Lab Launch Complex 1A,Launch vehicle suffered an anomaly during the second stage that resulted in the loss of the mission and all satellite payloads.,upper stage/orbit insertion,keyword_rules_on_source_text
+ll2all_6619844e,2020-07-10,failure,Kuaizhou 11,ExPace,LEO,Launch Area 95A,,not stated,keyword_rules_on_source_text
+ll2all_38ed8ff1,2020-09-12,failure,Astra Rocket 3,Astra Space,LEO,Launch Pad 3B,,not stated,keyword_rules_on_source_text
+ll2all_6f3ece0b,2020-09-12,failure,Kuaizhou 1A,ExPace,SSO,Launch Area 95A,,not stated,keyword_rules_on_source_text
+ll2all_d9486816,2020-11-17,failure,Vega,Arianespace,SSO,Ariane Launch Area 1 (ELV),AVUM upper stage tumbled uncontrollably during the first burn because cables in the engine control system were improperly connected.,engine/propulsion,keyword_rules_on_source_text
+ll2all_fdfc71c4,2020-12-09,partial_failure,Starship Prototype,SpaceX,Sub,Suborbital Pad A,"Test completed set out objectives, but the vehicle failed to land successfully due to low pressure in the propellant header tanks cutting out the engines.",engine/propulsion,keyword_rules_on_source_text
+ll2all_a59c24dc,2020-12-12,partial_failure,SpaceShipTwo,Virgin Galactic,Sub,Spaceport America,,not stated,keyword_rules_on_source_text
+ll2all_ffaceda9,2020-12-15,failure,Astra Rocket 3,Astra Space,PO,Launch Pad 3B,Premature second stage engine cutoff prevented successful orbit insertion.,engine/propulsion,keyword_rules_on_source_text
+ll2all_181b52ee,2021-02-01,failure,Hyperbola-1,i-Space,,Launch Area 95A,,not stated,keyword_rules_on_source_text
+ll2all_44670393,2021-02-02,partial_failure,Starship Prototype,SpaceX,Sub,Suborbital Pad B,Destroyed on landing,other/unclassified,keyword_rules_on_source_text
+ll2all_fc7a010b,2021-03-30,failure,Starship Prototype,SpaceX,Sub,Suborbital Pad B,,not stated,keyword_rules_on_source_text
+ll2all_0c2347a5,2021-05-15,failure,Electron,Rocket Lab,LEO,Rocket Lab Launch Complex 1A,Unspecified issue shortly after stage two ignition,engine/propulsion,keyword_rules_on_source_text
+ll2all_2facca07,2021-06-12,failure,Simorgh,Iranian Space Agency,LEO,Imam Khomeini Spaceport,"Failure was reported per US government sources, however the details were not made public.",other/unclassified,keyword_rules_on_source_text
+ll2all_ce27d597,2021-08-03,failure,Hyperbola-1,i-Space,SSO,Launch Area 95A,Payload fairing failed to separate.,stage separation/fairing,keyword_rules_on_source_text
+ll2all_397c50c5,2021-08-12,failure,GSLV Mk. II,Indian Space Research Organization,GTO,Satish Dhawan Space Centre Second Launch Pad,Third stage of the launch vehicle did not ignite due to a technical anomaly,upper stage/orbit insertion,keyword_rules_on_source_text
+ll2all_5d461570,2021-08-28,failure,Astra Rocket 3,Astra Space,PO,Launch Pad 3B,,not stated,keyword_rules_on_source_text
+ll2all_bb2a5291,2021-09-03,failure,Firefly Alpha,Firefly Aerospace,LEO,Space Launch Complex 2W,"The launch vehicle was destroyed after reaching Max-Q, exact reason unknown yet.",other/unclassified,keyword_rules_on_source_text
+ll2all_23e92c1c,2021-09-16,failure,Hapith I,TiSPACE,Sub,Pad 1,,not stated,keyword_rules_on_source_text
+ll2all_1f79ce8e,2021-10-21,failure,KSLV-2 Nuri,Korea Aerospace Research Institute,SSO,LC-2,"Third stage failed to place the payload simulator into orbit, for unknown reason.",upper stage/orbit insertion,keyword_rules_on_source_text
+ll2all_a0effefd,2021-12-15,failure,Kuaizhou 1A,ExPace,LEO,Launch Area 95A,,not stated,keyword_rules_on_source_text
+ll2all_20054280,2021-12-27,failure,Angara A5/Blok DM-03,Khrunichev State Research and Production Space Center,Direct-GEO,35/1,"Upper stage failed to restart for 2nd burn leaving upper stage & payload simulator in LEO. As the resulting orbit would be completely unsalvageable by a hypothetical real payload, and the main purpose of the launch was to test the Persey upper stage, it should be considered a failure.",engine/propulsion,keyword_rules_on_source_text
+ll2all_335aae0f,2021-12-30,failure,Simorgh,Iranian Space Agency,LEO,Imam Khomeini Spaceport,"Although official reports by Iran call this a successful launch, no objects have been detected in orbit. The general consensus is that it was a failed orbital launch attempt.",upper stage/orbit insertion,keyword_rules_on_source_text
+ll2all_2b74e95d,2022-02-10,failure,Astra Rocket 3,Astra Space,LEO,Space Launch Complex 46,Second stage begun spinning out of control shortly after separation.,stage separation/fairing,keyword_rules_on_source_text
+ll2all_c2f5d50b,2022-05-13,failure,Hyperbola-1,i-Space,SSO,Launch Area 95A,,not stated,keyword_rules_on_source_text
+ll2all_f4ffe15c,2022-06-12,failure,Astra Rocket 3,Astra Space,LEO,Space Launch Complex 46,Premature second stage shutdown. Cause is not yet known.,engine/propulsion,keyword_rules_on_source_text
+ll2all_5336dd45,2022-08-07,failure,SSLV,Indian Space Research Organization,LEO,Satish Dhawan Space Centre First Launch Pad,Sensor failure and subsequent programming error caused satellites to be injected into 76 x 356 km unstable orbit which they would re-enter quickly.,guidance/control/software,keyword_rules_on_source_text
+ll2all_d4a6a953,2022-09-12,failure,New Shepard,Blue Origin,Sub,West Texas Suborbital Launch Site/ Corn Ranch,Launch escape system activated at T+1:05 following apparent BE-3 booster engine shutdown; capsule landed nominally,engine/propulsion,keyword_rules_on_source_text
+ll2all_1017c305,2022-10-12,failure,Epsilon,Japan Aerospace Exploration Agency,SSO,Mu Center,Flight Termination System activated at T+06:28 after rocket was observed not in correct attitude for normal 2nd/3rd stage separation.,stage separation/fairing,keyword_rules_on_source_text
+ll2all_86ea974e,2022-12-14,failure,Zhuque-2,LandSpace,LEO,Launch Area 96A,Second-stage vernier engines unexpectedly shut down during second stage main engine cut-off after LOX pump casing was broken by SECO-induced forces at the LOX inlet; the vernier engines were planned to continue firing to reach orbit.,engine/propulsion,keyword_rules_on_source_text
+ll2all_9009b780,2022-12-21,failure,Vega-C,Arianespace,SSO,Ariane Launch Area 1 (ELV),"2nd stage Zefiro 40 motor lost chamber pressure from T+151 seconds due to unexpected erosion of carbon-carbon (C-C) material in the motor nozzle's throat insert, caused by the material's flaw in homogeneity.",engine/propulsion,keyword_rules_on_source_text
+ll2all_b0fbc1b8,2023-01-09,failure,LauncherOne,Virgin Orbit,LEO,Spaceport Cornwall,"2nd stage engine failure at ~17000 km/h after 2nd stage fuel filter within the fuel feedline was dislodged from its normal position, causing lower than usual fuel flow and subsequent rise in engine combustion chamber temperature.",engine/propulsion,keyword_rules_on_source_text
+ll2all_06066a71,2023-01-10,failure,RS1,Long Wall,LEO,Launch Pad 3C,RS1 successfully lifted off and flew nominally for 10.85 seconds until RS1's nine E2 engines as well as other systems on the vehicle shut down simultaneously and communications were lost. ABL believes the cause of failure was a fire in the engine bay of the first stage.,engine/propulsion,keyword_rules_on_source_text
+ll2all_45f43220,2023-03-04,failure,Qaem 100,Islamic Revolutionary Guard Corps Aerospace Force,LEO,Launch Platform,,not stated,keyword_rules_on_source_text
+ll2all_13439df6,2023-03-07,failure,H3-22,Mitsubishi Heavy Industries,SSO,Yoshinobu Launch Complex LP-2,2nd stage engine failed to ignite due to electrical circuit failure between vehicle controller and engine igniter at engine ignition.,engine/propulsion,keyword_rules_on_source_text
+ll2all_25d652f7,2023-03-23,failure,Terran 1,Relativity Space,LEO,Launch Complex 16,2nd stage engine failed to reach full thrust after slow response of main valves and failure in pressure increase of the liquid oxygen turbopump. Presence of vapor bubble at the LOX pump inlet is suspected.,engine/propulsion,keyword_rules_on_source_text
+ll2all_e32d375f,2023-04-20,failure,Starship V1,SpaceX,Sub,Orbital Launch Pad 1,"After liftoff, the vehicle sustained fires from leaking propellant in the aft end of the Super Heavy booster, severing connection with the vehicle’s primary flight computer. This led to a loss of communications to most of the booster engines and eventually control of the vehicle. After the second stage failed to separate from the first stage, the vehicle reached an apogee of ~39km before tumbling downwards until the flight termination system was activated.
+
+Unexpected severe damage was also imparted on the launch pad.",engine/propulsion,keyword_rules_on_source_text
+ll2all_4aa4088f,2023-05-30,failure,Chollima-1,National Aerospace Development Administration,LEO,Malligyong-1 Pad,Officially declared to be a 2nd stage engine failure after start-up.,engine/propulsion,keyword_rules_on_source_text
+ll2all_b3950eeb,2023-08-23,failure,Chollima-1,National Aerospace Development Administration,LEO,Malligyong-1 Pad,,not stated,keyword_rules_on_source_text
+ll2all_08f52ca7,2023-09-19,failure,Electron,Rocket Lab,LEO,Rocket Lab Launch Complex 1B,Ignition failure of the 2nd stage after separation.,engine/propulsion,keyword_rules_on_source_text
+ll2all_6eef3c8d,2023-09-21,failure,Ceres-1,Galactic Energy,SSO,Launch Area 95A,Vehicle lost attitude control at T+67.5 s after suffering 1st stage motor nozzle expansion burn-through. Failure was traced to improper drilling of screw holes that caused damage in the inner carbon fiber layers.,engine/propulsion,keyword_rules_on_source_text
+ll2all_04b91bb8,2023-11-18,partial_failure,Starship V1,SpaceX,Sub,Orbital Launch Pad 1,"Flight termination system activated on Starship after T+8 minutes, seconds before planned SECO, due to a leak of liquid oxygen causing a combustion event and fires which led to a loss of communication. Booster was destroyed during the boost-back burn. most likely due to a filter blockage on a liquid oxygen line supplying the engines. Most planned primary objectives achieved.",engine/propulsion,keyword_rules_on_source_text
+ll2all_1c322288,2023-12-22,partial_failure,Firefly Alpha,Firefly Aerospace,LEO,Space Launch Complex 2W,Stage 2 2nd burn suffered problems and did not deliver the payload to its precise target orbit. Communication to the spacecraft has been established and mission operations are now underway.,engine/propulsion,keyword_rules_on_source_text
+ll2all_9633c43d,2024-03-13,failure,Kii-based Advanced & Instant ROcket System,Space One,SSO,Space One Launch Pad,Vehicle disintegrated several seconds after liftoff with Autonomous Flight Termination System (AFTS) triggered.,structure/aerodynamic,keyword_rules_on_source_text
+ll2all_85235d3c,2024-03-13,partial_failure,Long March 2C/YZ-1S,China Aerospace Science and Technology Corporation,LO,Launch Complex 3 (LC-3/LA-1),Upper stage problem; payload deployed to wrong orbit.,stage separation/fairing,keyword_rules_on_source_text
+ll2all_431324cc,2024-05-27,failure,Chollima-1,National Aerospace Development Administration,SSO,Malligyong-1 Pad,,not stated,keyword_rules_on_source_text
+ll2all_155e61ba,2024-07-10,failure,Hyperbola-1,i-Space,SSO,Launch Area 95A,4th stage failure; failed to reach orbit.,upper stage/orbit insertion,keyword_rules_on_source_text
+ll2all_9ddacbab,2024-07-12,failure,Falcon 9 Block 5,SpaceX,LEO,Space Launch Complex 4E,An oxygen leak caused a failure of the second stage engine during its second burn leading to the loss of all Starlink satellites.,engine/propulsion,keyword_rules_on_source_text
+ll2all_2baf1b13,2024-12-18,failure,Kii-based Advanced & Instant ROcket System,Space One,SSO,Space One Launch Pad,Vehicle lost attitude control after first stage motor nozzle thrust vector control (TVC) failure at T+80s.,engine/propulsion,keyword_rules_on_source_text
+ll2all_18b49918,2024-12-27,failure,Kinetica 1,CAS Space,SSO,Launch Area 130,"3rd stage loss of attitude control 3 seconds after ignition due to damage of the power supply wire to the 3rd stage motor Thrust Vector Control (TVC) mechanism during installation, then subsequent breaking due to vibration while in powered flight.",engine/propulsion,keyword_rules_on_source_text
+ll2all_c5566f6e,2025-01-16,failure,Starship V2,SpaceX,Sub,Orbital Launch Pad 1,Ship 33 lost all 6 engines gradually late in ascent and was observed to have self-destructed.,engine/propulsion,keyword_rules_on_source_text
+ll2all_f640a809,2025-03-01,failure,Kuaizhou 1A,ExPace,LEO,Launch Area 95A,Launch attempt not officially reported; unconfirmed reports of launch vehicle exploded on pad before liftoff.,structure/aerodynamic,keyword_rules_on_source_text
+ll2all_a2b94add,2025-03-06,failure,Starship V2,SpaceX,Sub,Orbital Launch Pad 1,Ship 34 lost 4 out of 6 Raptors at around T+8:00 and entered unrecoverable roll.,other/unclassified,keyword_rules_on_source_text
+ll2all_e652a538,2025-03-30,failure,Spectrum,Isar Aerospace,SSO,Orbital Launch Pad,,not stated,keyword_rules_on_source_text
+ll2all_d6dd6900,2025-04-29,failure,Firefly Alpha,Firefly Aerospace,LEO,Space Launch Complex 2W,"Problem during stage separation and second stage ignition caused disintegration of the separated 1st stage and the loss of the Lightning engine nozzle extension on the 2nd stage, substantially reducing the engine’s thrust. 2nd stage reached 320 km in altitude but did not reach orbital velocity, eventually impacted the Pacific Ocean north of Antarctica.",engine/propulsion,keyword_rules_on_source_text
+ll2all_e6d98870,2025-05-18,failure,PSLV XL,Indian Space Research Organization,SSO,Satish Dhawan Space Centre First Launch Pad,3rd stage failure during burn.,engine/propulsion,keyword_rules_on_source_text
+ll2all_ef9b458b,2025-05-27,failure,Starship V2,SpaceX,Sub,Orbital Launch Pad 1,,not stated,keyword_rules_on_source_text
+ll2all_5792dbed,2025-07-29,failure,Eris Block 1,Gilmour Space Technologies,LEO,Eris Pad,"Rocket never developed sufficient thrust, ascended for about 50 meters before flying sideways and fall back near the pad.",engine/propulsion,keyword_rules_on_source_text
+ll2all_bc6530e6,2025-08-15,failure,Zhuque-2E,LandSpace,LEO,Launch Area 96A,"2nd stage attitude control failed at T+258 seconds due to TVC system short circuit, caused by electric arcing on the control system's 450V main bus.",guidance/control/software,keyword_rules_on_source_text
+ll2all_e208fa2b,2025-11-10,failure,Ceres-1,Galactic Energy,SSO,Launch Area 95A,4th stage shut down prematurely 510 seconds into the burn after engine valve control cable suffered burn through during the engine burn.,engine/propulsion,keyword_rules_on_source_text
+ll2all_dc1b1aea,2025-12-22,failure,H3-22,Mitsubishi Heavy Industries,GSTO,Yoshinobu Launch Complex LP-2,"2nd stage liquid hydrogen tank pressure abnormally start decreasing after fairing separation, leading up to 2nd stage 1st burn 27 seconds longer than planned & engine shutting down 1 second into 2nd burn. Payload stranded in LEO and re-entered shortly after.",engine/propulsion,keyword_rules_on_source_text
+ll2all_a81fcb21,2025-12-23,failure,HANBIT-Nano,Innospace,SSO,HANBIT Pad,Apparently loss of control and crashed back on ground about 1 minute after launch.,guidance/control/software,keyword_rules_on_source_text
+ll2all_520a0927,2026-01-12,failure,PSLV-DL,Indian Space Research Organization,SSO,Satish Dhawan Space Centre First Launch Pad,3rd stage lost attitude control towards the end of burn; 4th stage separated and ignited but was unable to regain control.,engine/propulsion,keyword_rules_on_source_text
+ll2all_67068998,2026-01-16,failure,Long March 3B/E,China Aerospace Science and Technology Corporation,GTO,Launch Complex 2 (LC-2),"3rd stage failure, failed to reach orbit.",upper stage/orbit insertion,keyword_rules_on_source_text
+ll2all_7650a17a,2026-01-17,failure,Ceres-2,Galactic Energy,SSO,Launch Area 95A,"1st stage failure, failed to reach orbit.",upper stage/orbit insertion,keyword_rules_on_source_text
+ll2all_cd4bb934,2026-03-05,failure,Kii-based Advanced & Instant ROcket System,Space One,SSO,Space One Launch Pad,"AFTS activated at T+68.8 seconds, cause under investigation with possibility of mis-activation.",other/unclassified,keyword_rules_on_source_text
+ll2all_98451321,2026-04-03,failure,Tianlong-3,Space Pioneer,PO,Tianlong-3 Launch Pad,Apparently failed around stage separation.,stage separation/fairing,keyword_rules_on_source_text
+ll2all_53769468,2026-04-19,failure,New Glenn,Blue Origin,LEO,Launch Complex 36A,"AST SpaceMobile’s BlueBird 7 successfully launched on Blue Origin’s New Glenn rocket, but was placed into an unusable lower orbit and will be deorbited despite the booster landing successfully.",upper stage/orbit insertion,keyword_rules_on_source_text
+ll2all_cff704ab,2026-08-10,failure,Long March 7A,China Aerospace Science and Technology Corporation,GTO,201,Launch vehicle disintegrated when passing around Max-Q.,structure/aerodynamic,keyword_rules_on_source_text

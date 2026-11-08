@@ -1,0 +1,221 @@
+{
+  "kaggle_rows": 4324,
+  "parsed": 4198,
+  "matched_to_ll2": 3057,
+  "outcome_agrees": 2982,
+  "outcome_agreement_rate": 0.9755,
+  "unmatched_by_decade": {
+    "1960": 180,
+    "1970": 409,
+    "1980": 347,
+    "1990": 146,
+    "2000": 45,
+    "2010": 14
+  },
+  "disagreements_sample": [
+    {
+      "date": "2015-12-05",
+      "kaggle_detail": "Soyuz 2.1v/Volga | Cosmos 2511 and 2512",
+      "kaggle_status": "Partial Failure",
+      "ll2_status": [
+        "Launch Failure"
+      ]
+    },
+    {
+      "date": "2013-01-15",
+      "kaggle_detail": "Rokot/Briz KM | Cosmos 2482 to 2484",
+      "kaggle_status": "Partial Failure",
+      "ll2_status": [
+        "Launch Failure"
+      ]
+    },
+    {
+      "date": "2011-02-01",
+      "kaggle_detail": "Rokot/Briz KM | Cosmos 2470",
+      "kaggle_status": "Partial Failure",
+      "ll2_status": [
+        "Launch Failure"
+      ]
+    },
+    {
+      "date": "2008-04-28",
+      "kaggle_detail": "Zenit-3 SLB | AMOS 3",
+      "kaggle_status": "Partial Failure",
+      "ll2_status": [
+        "Launch Successful"
+      ]
+    },
+    {
+      "date": "2007-09-02",
+      "kaggle_detail": "GSLV Mk I | INSAT-4CR",
+      "kaggle_status": "Partial Failure",
+      "ll2_status": [
+        "Launch Failure"
+      ]
+    },
+    {
+      "date": "2007-06-15",
+      "kaggle_detail": "Atlas V 401 | NROL-30 & NOSS-3",
+      "kaggle_status": "Partial Failure",
+      "ll2_status": [
+        "Launch Successful",
+        "Launch Successful"
+      ]
+    },
+    {
+      "date": "2001-04-18",
+      "kaggle_detail": "GSLV Mk I | GSAT-1",
+      "kaggle_status": "Partial Failure",
+      "ll2_status": [
+        "Launch Failure",
+        "Launch Successful"
+      ]
+    },
+    {
+      "date": "1998-02-21",
+      "kaggle_detail": "H-II | Kakehashi",
+      "kaggle_status": "Partial Failure",
+      "ll2_status": [
+        "Launch Successful"
+      ]
+    },
+    {
+      "date": "1997-10-30",
+      "kaggle_detail": "Ariane 5 G | MaqSat-H, TEAMSAT, MaqSat-B, YES",
+      "kaggle_status": "Partial Failure",
+      "ll2_status": [
+        "Launch Failure"
+      ]
+    },
+    {
+      "date": "1997-09-29",
+      "kaggle_detail": "PSLV-G | IRS-1D",
+      "kaggle_status": "Partial Failure",
+      "ll2_status": [
+        "Launch Failure"
+      ]
+    },
+    {
+      "date": "1996-08-18",
+      "kaggle_detail": "Long March 3 | Chinasat-7",
+      "kaggle_status": "Partial Failure",
+      "ll2_status": [
+        "Launch Failure"
+      ]
+    },
+    {
+      "date": "1995-01-15",
+      "kaggle_detail": "Mu-III S2 | EXPRESS",
+      "kaggle_status": "Partial Failure",
+      "ll2_status": [
+        "Launch Failure"
+      ]
+    },
+    {
+      "date": "1994-11-29",
+      "kaggle_detail": "Long March 3A | Chinasat-5",
+      "kaggle_status": "Partial Failure",
+      "ll2_status": [
+        "Launch Successful"
+      ]
+    },
+    {
+      "date": "1994-05-19",
+      "kaggle_detail": "Pegasus/HAPS | STEP-2",
+      "kaggle_status": "Partial Failure",
+      "ll2_status": [
+        "Launch Successful"
+      ]
+    },
+    {
+      "date": "1993-03-25",
+      "kaggle_detail": "Atlas I | UHF F1",
+      "kaggle_status": "Failure",
+      "ll2_status": [
+        "Launch Successful"
+      ]
+    },
+    {
+      "date": "1990-03-14",
+      "kaggle_detail": "Commercial Titan III | Intelsat 603",
+      "kaggle_status": "Failure",
+      "ll2_status": [
+        "Launch Successful"
+      ]
+    },
+    {
+      "date": "1988-09-02",
+      "kaggle_detail": "Titan 34D | USA-31 (Vortex)",
+      "kaggle_status": "Partial Failure",
+      "ll2_status": [
+        "Launch Successful"
+      ]
+    },
+    {
+      "date": "1987-05-15",
+      "kaggle_detail": "Energiya/Polyus | Polyus Space Station",
+      "kaggle_status": "Success",
+      "ll2_status": [
+        "Launch Failure"
+      ]
+    },
+    {
+      "date": "1985-12-28",
+      "kaggle_detail": "Zenit-2 | Cosmos 1714",
+      "kaggle_status": "Partial Failure",
+      "ll2_status": [
+        "Launch Successful"
+      ]
+    },
+    {
+      "date": "1984-06-09",
+      "kaggle_detail": "Atlas-G Centaur-D1AR | Intelsat V -509",
+      "kaggle_status": "Failure",
+      "ll2_status": [
+        "Launch Successful"
+      ]
+    },
+    {
+      "date": "1981-08-06",
+      "kaggle_detail": "Atlas-SLV3D Centaur-D1AR | FLTSATCOM-5",
+      "kaggle_status": "Partial Failure",
+      "ll2_status": [
+        "Launch Successful"
+      ]
+    },
+    {
+      "date": "1981-05-31",
+      "kaggle_detail": "SLV-3 | Rohini RS-D1",
+      "kaggle_status": "Partial Failure",
+      "ll2_status": [
+        "Launch Successful"
+      ]
+    },
+    {
+      "date": "1980-05-29",
+      "kaggle_detail": "Atlas-E/F Star-37S-ISS | NOAA-B",
+      "kaggle_status": "Failure",
+      "ll2_status": [
+        "Launch Successful"
+      ]
+    },
+    {
+      "date": "1979-02-06",
+      "kaggle_detail": "N-I Star-37E | Ayame 1",
+      "kaggle_status": "Partial Failure",
+      "ll2_status": [
+        "Launch Failure"
+      ]
+    },
+    {
+      "date": "1978-12-26",
+      "kaggle_detail": "Soyuz U | Cosmos 1068",
+      "kaggle_status": "Partial Failure",
+      "ll2_status": [
+        "Launch Successful"
+      ]
+    }
+  ],
+  "disagreements_total": 75,
+  "note": "Kaggle file used only to cross-check Launch Library 2 outcomes; Kaggle values (including its cost column) are not redistributed."
+}

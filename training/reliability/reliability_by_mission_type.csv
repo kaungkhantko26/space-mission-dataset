@@ -1,0 +1,24 @@
+mission_type,launches,successes,failures,partial_failures,success_rate,ci95_low,ci95_high,low_sample_warning
+Government/Top Secret,2304,2178,126,0,0.9453,0.9353,0.9539,0
+Communications,1731,1656,69,6,0.9567,0.946,0.9653,0
+Earth Science,988,913,73,2,0.9241,0.9059,0.939,0
+Navigation,419,400,18,1,0.9547,0.9303,0.9708,0
+Test Flight,360,272,77,11,0.7556,0.7086,0.7971,0
+Human Exploration,315,307,7,1,0.9746,0.9507,0.9871,0
+Test Target,205,187,18,0,0.9122,0.8655,0.9437,0
+Astrophysics,170,155,15,0,0.9118,0.8595,0.9458,0
+Resupply,131,127,3,1,0.9695,0.9241,0.9881,0
+Robotic Exploration,88,71,17,0,0.8068,0.7122,0.8757,0
+Lunar Exploration,83,59,24,0,0.7108,0.6057,0.7973,0
+Dedicated Rideshare,72,68,4,0,0.9444,0.8657,0.9782,0
+Planetary Science,61,55,6,0,0.9016,0.8016,0.9541,0
+Technology,54,48,4,2,0.8889,0.7781,0.9481,0
+Heliophysics,37,36,1,0,0.973,0.8618,0.9952,0
+Tourism,27,27,0,0,1.0,0.8754,1,0
+,26,26,0,0,1.0,0.8713,1,0
+Materials Science,24,24,0,0,1.0,0.862,1,0
+Suborbital,22,13,6,3,0.5909,0.3873,0.7674,0
+Biology,18,18,0,0,1.0,0.8241,1,1
+Unknown,2,0,2,0,0.0,0,0.6576,1
+Mission Extension,2,2,0,0,1.0,0.3424,1,1
+Space Situational Awareness,1,1,0,0,1.0,0.2065,1,1

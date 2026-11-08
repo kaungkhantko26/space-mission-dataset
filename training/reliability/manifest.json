@@ -1,0 +1,60 @@
+{
+  "source": "verified/launch_history_all.json",
+  "launches": 7657,
+  "failures": 523,
+  "partial": 34,
+  "files": {
+    "baseline_report.json": {
+      "sha256": "3fe0eaa9a8b2494a3128a64f2fcef27bbb96fda23b709afdd71bfd43bbbb5b4f",
+      "bytes": 531
+    },
+    "failure_reasons.csv": {
+      "sha256": "3d61ced2e1e5eade70875735571b19860cd4104f21aae0428816380ea66d0b17",
+      "bytes": 93851
+    },
+    "kaggle_crosscheck.json": {
+      "sha256": "411fbee3ab70fcc1837b11d95f9fa5b9a810057fa53eda3a1758e282bced57fe",
+      "bytes": 5314
+    },
+    "launch_outcomes_all.csv": {
+      "sha256": "4fd017ed5e4d9387fe4759951162a6bd601e8201e918938fded286a0a6dab015",
+      "bytes": 1696129
+    },
+    "maturity_curve.csv": {
+      "sha256": "44e9ea14154c0cad7c1ea85d8ff9303349ae20fe0af6566bcd315c9be6e6985f",
+      "bytes": 257
+    },
+    "reliability_by_country.csv": {
+      "sha256": "93866eb992d94e37ec43bd1aeef7e11c2fea446683bbbb93ca9c105c2a374579",
+      "bytes": 845
+    },
+    "reliability_by_family.csv": {
+      "sha256": "4e3076f3ebd12b754458226fc4adc8d5366dcbff2f0a5b65407c7c0726460120",
+      "bytes": 2666
+    },
+    "reliability_by_mission_type.csv": {
+      "sha256": "1a7d7e89b7e6d71776de02ac394f9cec236c656dfc4558e2943a880086d6a5a0",
+      "bytes": 1185
+    },
+    "reliability_by_orbit.csv": {
+      "sha256": "fb95917fff63315f42ca190f2816c11d64fb77d1db2c7f6781c359d4b1d1f893",
+      "bytes": 1203
+    },
+    "reliability_by_provider.csv": {
+      "sha256": "ed75f827261a96af47d5b7d289124f187729902754166ad5e5506d0004916e45",
+      "bytes": 5354
+    },
+    "reliability_by_vehicle.csv": {
+      "sha256": "fc5e158784117f6b6cc6e7ef0bc4a53cc5d00856c35d8a00fd28a3c4b4b1280f",
+      "bytes": 19462
+    },
+    "reliability_by_year.csv": {
+      "sha256": "37886fb237935eb10d71a10555362d11306cd797ae6f93a6c8c49c33662ff49d",
+      "bytes": 2892
+    },
+    "reliability_qa.jsonl": {
+      "sha256": "241a7691d55d020d61754bab1b157d181c0318e25a91b6ca853e7d15261a4923",
+      "bytes": 139116
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "test_launches": 1149,
+  "test_failure_rate": 0.0348,
+  "train_failure_rate": 0.0823,
+  "brier_always_train_base_rate": 0.03586,
+  "brier_family_prior_failure_rate": 0.03181,
+  "brier_vehicle_prior_failure_rate": 0.03254,
+  "auc_family_prior_failure_rate": 0.8196573489630298,
+  "auc_vehicle_prior_failure_rate": 0.8262623985572588,
+  "auc_young_family_age": 0.8360798016230838,
+  "note": "Failure is the positive class. A learned model should beat these simple baselines on the chronological test split; AUC 0.5 = no skill."
+}

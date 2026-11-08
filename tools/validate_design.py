@@ -26,6 +26,9 @@ for c in cat.values():
     elif c["type"] == "solar_array": b2 += not math.isclose(c["power_w"], [v for k, v in s["numeric"].items() if "Peak BOL" in k][0])
     elif c["type"] == "thruster": b2 += not math.isclose(c["mass_kg"], s["numeric"]["Mass [kg]"])
 check("catalog specs equal verified source values", b2 == 0, f"{b2} mismatches")
+rates, ev = DR.cost_rates()
+check("cost anchors: NASA sentence found in verified missions; rates ordered", len(ev) == 3 and all(e["nasa_sentence"] for e in ev) and rates[0] < rates[1] < rates[2], [e["usd_per_kg"] for e in ev])
+check("catalog est_cost = mass x median rate (non-launchers)", all(abs(c["est_cost_usd"] - round(DR.RATE_MID * c["mass_kg"])) <= 1 for c in cat.values() if c["type"] != "launcher"))
 env = DR.environment()
 rows = list(csv.DictReader(open(f"{D}/designs.csv")))
 mism = 0

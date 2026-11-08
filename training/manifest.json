@@ -48,10 +48,6 @@
       "sha256": "1dd1827d86e6be4740dc8741cbdebe149617d3f322dea384a256ed2c2ad92e13",
       "bytes": 290101
     },
-    "image_prompts.csv": {
-      "sha256": "afa96a5808924f6cf6bde8daba2d4876bf2ce4673c38726b8f8ec7275221f0ba",
-      "bytes": 175330
-    },
     "launch_outcome.csv": {
       "sha256": "c748a940a03800edc08607a0bb774374ef8757c40d1b141ba547f182dd4aa693",
       "bytes": 114283

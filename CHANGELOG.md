@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.3.0 — training data, trajectories, reliability, budgets, user guide
+* New verified collection `launch_history_all`: all 7,657 launches since 1957 (7,100 success / 523 failure / 34 partial) from Launch Library 2; Kaggle *All Space Missions* used only as a cross-check (97.6% agreement).
+* `training/`: fact Q&A, physics examples, mission-design set (compatibility, success/failure reasons, per-component budget estimates), Earth→Moon/planet trajectories, launch reliability tables, AI-image prompt CSV.
+* Budgets: launch prices are real; hardware cost is an estimate anchored to NASA-stated development costs ($149k-$428k/kg).
+* New `USER_GUIDE.md` and site page `guide.html`.
+
 ## v2.2.0 — game-scoped dataset
 * Scope check against the Space Mission Design Game brief (spacecraft, instruments, launch vehicle, budget, mass, power, communication, orbit). Removed data the game does not use: asteroids/dwarf planets, JPL NHATS (7,185) and NEO (1,265) lists, NASA facilities (485), 450 moon-element rows for non-game moons, and irrelevant SoA tables (3D printing, software, tracking, deorbit…). 12,830 → 3,250 records.
 * Added from real sources: NSSDC fact-sheet values on planets/moons (solar irradiance, J2, day length…), instrument mass/power and mission cost statements parsed from NASA text with the source sentence kept.

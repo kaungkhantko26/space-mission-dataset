@@ -18,9 +18,15 @@ Reason codes: `MISSING_*`, `BUDGET_EXCEEDED`, `MASS_OVER_CAPACITY`, `LAUNCHER_NO
 
 `designs.csv` also has `transfer_days`, `total_mission_days` and `one_way_light_time_min` (from `../trajectories/`).
 
+## Budgets per component
+`components_catalog.csv` has `est_cost_usd` (+ `est_cost_low_usd` / `est_cost_high_usd`) and `cost_basis` for every part; `designs.csv` has `hardware_cost_usd`, `total_cost_usd` (+ low/high) and `cost_breakdown_usd` (instruments, propulsion, power, communications, launch). `image_prompts.csv` carries `est_budget_usd` too.
+* **Launchers:** the *published launch price* (Launch Library 2, 64 vehicles with a price) — real data.
+* **Everything else is an ESTIMATE.** No source we could retrieve publishes component prices (NASA's report has only a thermal-coating `$`..`$$$$` scale, a $30 drag device and a $350k-per-50-kg rideshare quote). So hardware cost = mass x USD/kg, with USD/kg taken from NASA-stated *development* costs of three missions divided by their catalog mass: Mars Global Surveyor $154M, Lunar Prospector $34M, Stardust $128.4M -> **low $149k/kg, median $214k/kg, high $428k/kg** (sentences in `rules.json`). Operations cost is excluded. Use these numbers for game balance, not as real prices; replace them if you have real quotes.
+* `BUDGET_EXCEEDED` compares hardware estimate + launch price with the design's budget.
+
 ## Limits
 * **Class balance is by design** (45% success / 55% failure, designs partly "repaired" toward feasibility). Real random designs almost always fail. Destinations are unbalanced: Mars successes are rare (14) because a small spacecraft rarely satisfies delta-v, thrust and link together — use more Mars data from your own generator if you need it.
-* Not modelled: batteries/eclipse, thermal, attitude control, component prices (none are published — the budget covers the launch only), fairing size, radiation, launch windows. Mars/Moon/GTO use the launcher's LEO/GTO capacity as a conservative proxy (no source states Mars-transfer capacity).
+* Not modelled: batteries/eclipse, thermal, attitude control, real component prices (only estimates, see above), operations cost, fairing size, radiation, launch windows. Mars/Moon/GTO use the launcher's LEO/GTO capacity as a conservative proxy (no source states Mars-transfer capacity).
 * Units that were unknown are left empty, never zero. Components with missing power use a flagged heuristic load.
 * Splits are by design id; components repeat across splits. For a strict held-out-component test, split on `launcher` or `thruster` yourself.
 

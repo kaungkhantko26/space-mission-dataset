@@ -12,6 +12,9 @@ staging:
 	$(PY) tools/make_schemas.py
 	$(PY) tools/validate.py
 
+guide:
+	$(PY) tools/make_guide.py
+
 verified:
 	$(PY) tools/make_verified.py
 
@@ -27,6 +30,9 @@ export:
 training:                                            ## ML-ready files in training/
 	$(PY) tools/make_training.py
 	$(PY) tools/validate_training.py
+	$(PY) tools/make_reliability.py
+	$(PY) tools/crosscheck_kaggle.py
+	$(PY) tools/validate_reliability.py
 	$(PY) tools/make_trajectories.py
 	$(PY) tools/validate_trajectories.py
 	$(PY) tools/make_design_dataset.py
