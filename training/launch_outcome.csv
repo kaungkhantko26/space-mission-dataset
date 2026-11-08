@@ -1,0 +1,744 @@
+id,date_utc,year,vehicle,vehicle_family,mission_type,orbit,pad,location,prior_launches_of_vehicle,success,split
+ll2_launch_b8741d6a,2006-03-24T22:30:00Z,2006,Falcon 1,Falcon,Technology,LEO,Omelek Island,"Ronald Reagan Ballistic Missile Defense Test Site, Kwajalein Atoll, Marshall Islands",0,0,train
+ll2_launch_9a50023f,2007-03-21T01:10:00Z,2007,Falcon 1,Falcon,Test Flight,LEO,Omelek Island,"Ronald Reagan Ballistic Missile Defense Test Site, Kwajalein Atoll, Marshall Islands",1,0,train
+ll2_launch_cdeb321f,2008-08-03T03:34:00Z,2008,Falcon 1,Falcon,Dedicated Rideshare,LEO,Omelek Island,"Ronald Reagan Ballistic Missile Defense Test Site, Kwajalein Atoll, Marshall Islands",2,0,train
+ll2_launch_0560cfb0,2008-09-28T23:15:00Z,2008,Falcon 1,Falcon,Test Flight,LEO,Omelek Island,"Ronald Reagan Ballistic Missile Defense Test Site, Kwajalein Atoll, Marshall Islands",3,1,train
+ll2_launch_10be093a,2009-07-14T03:36:00Z,2009,Falcon 1,Falcon,Earth Science,LEO,Omelek Island,"Ronald Reagan Ballistic Missile Defense Test Site, Kwajalein Atoll, Marshall Islands",4,1,train
+ll2_launch_2ead3d70,2010-06-04T18:45:00Z,2010,Falcon 9 v1.0,Falcon,Test Flight,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",0,1,train
+ll2_launch_04106da6,2010-12-08T15:43:00Z,2010,Falcon 9 v1.0,Falcon,Test Flight,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",1,1,train
+ll2_launch_ef3b84de,2012-05-22T07:44:38Z,2012,Falcon 9 v1.0,Falcon,Resupply,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",2,1,train
+ll2_launch_0f2d170a,2012-10-08T00:35:07Z,2012,Falcon 9 v1.0,Falcon,Resupply,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",3,0,train
+ll2_launch_6c70bbf3,2013-03-01T15:10:13Z,2013,Falcon 9 v1.0,Falcon,Resupply,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",4,1,train
+ll2_launch_e12d20b3,2013-09-29T16:00:13Z,2013,Falcon 9 v1.1,Falcon,Earth Science,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",0,1,train
+ll2_launch_e2431691,2013-12-03T22:41:00Z,2013,Falcon 9 v1.1,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",1,1,train
+ll2_launch_5a1f68d5,2014-01-06T22:06:00Z,2014,Falcon 9 v1.1,Falcon,Earth Science,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",2,1,train
+ll2_launch_bb8ab96d,2014-04-18T19:25:22Z,2014,Falcon 9 v1.1,Falcon,Resupply,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",3,1,train
+ll2_launch_ae212477,2014-07-14T15:15:00Z,2014,Falcon 9 v1.1,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",4,1,train
+ll2_launch_49980d63,2014-08-05T08:00:00Z,2014,Falcon 9 v1.1,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",5,1,train
+ll2_launch_9086c318,2014-09-07T05:00:00Z,2014,Falcon 9 v1.1,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",6,1,train
+ll2_launch_3833e794,2014-09-21T05:52:03Z,2014,Falcon 9 v1.1,Falcon,Resupply,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",7,1,train
+ll2_launch_5c333099,2015-01-10T09:47:10Z,2015,Falcon 9 v1.1,Falcon,Resupply,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",8,1,train
+ll2_launch_d8dd15a0,2015-02-11T23:03:32Z,2015,Falcon 9 v1.1,Falcon,Earth Science,L1-point,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",9,1,train
+ll2_launch_bfc70e01,2015-03-02T03:50:00Z,2015,Falcon 9 v1.1,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",10,1,train
+ll2_launch_db2dfb3b,2015-04-14T20:10:41Z,2015,Falcon 9 v1.1,Falcon,Resupply,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",11,1,train
+ll2_launch_7be4031b,2015-04-27T23:03:00Z,2015,Falcon 9 v1.1,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",12,1,train
+ll2_launch_16aae09d,2015-06-28T14:21:11Z,2015,Falcon 9 v1.1,Falcon,Resupply,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",13,0,train
+ll2_launch_7cea85fa,2015-12-22T01:29:00Z,2015,Falcon 9 Full Thrust,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",0,1,train
+ll2_launch_de278bee,2016-01-17T18:42:18Z,2016,Falcon 9 v1.1,Falcon,Earth Science,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",14,1,train
+ll2_launch_b69f83d9,2016-03-04T23:35:00Z,2016,Falcon 9 Full Thrust,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",1,1,train
+ll2_launch_d47b8475,2016-04-08T20:43:32Z,2016,Falcon 9 Full Thrust,Falcon,Resupply,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",2,1,train
+ll2_launch_c1f172a5,2016-05-06T05:21:00Z,2016,Falcon 9 Full Thrust,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",3,1,train
+ll2_launch_1af4fa39,2016-05-27T21:39:00Z,2016,Falcon 9 Full Thrust,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",4,1,train
+ll2_launch_8717277d,2016-06-15T14:29:00Z,2016,Falcon 9 Full Thrust,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",5,1,train
+ll2_launch_74eb8c19,2016-07-18T04:45:29Z,2016,Falcon 9 Full Thrust,Falcon,Resupply,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",6,1,train
+ll2_launch_42af1017,2016-08-14T05:26:00Z,2016,Falcon 9 Full Thrust,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",7,1,train
+ll2_launch_3622669f,2016-09-03T07:00:00Z,2016,Falcon 9 Full Thrust,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",8,0,train
+ll2_launch_908879a4,2017-01-14T17:54:34Z,2017,Falcon 9 Full Thrust,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",9,1,train
+ll2_launch_35e3bff1,2017-02-19T14:39:00Z,2017,Falcon 9 Full Thrust,Falcon,Resupply,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",10,1,train
+ll2_launch_a9908568,2017-03-16T06:00:00Z,2017,Falcon 9 Full Thrust,Falcon,Communications,GTO,Launch Complex 39A,"Kennedy Space Center, FL, USA",11,1,train
+ll2_launch_8690c683,2017-03-30T22:27:00Z,2017,Falcon 9 Full Thrust,Falcon,Communications,GTO,Launch Complex 39A,"Kennedy Space Center, FL, USA",12,1,train
+ll2_launch_df8a584b,2017-05-01T11:15:00Z,2017,Falcon 9 Full Thrust,Falcon,Government/Top Secret,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",13,1,train
+ll2_launch_50da4982,2017-05-15T23:21:00Z,2017,Falcon 9 Full Thrust,Falcon,Communications,GTO,Launch Complex 39A,"Kennedy Space Center, FL, USA",14,1,train
+ll2_launch_54f5fb21,2017-06-03T21:07:38Z,2017,Falcon 9 Full Thrust,Falcon,Resupply,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",15,1,train
+ll2_launch_b600cba0,2017-06-23T19:10:00Z,2017,Falcon 9 Full Thrust,Falcon,Communications,GTO,Launch Complex 39A,"Kennedy Space Center, FL, USA",16,1,train
+ll2_launch_eb953c99,2017-06-25T20:25:18Z,2017,Falcon 9 Full Thrust,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",17,1,train
+ll2_launch_fe77ab35,2017-07-05T23:38:00Z,2017,Falcon 9 Full Thrust,Falcon,Communications,GTO,Launch Complex 39A,"Kennedy Space Center, FL, USA",18,1,train
+ll2_launch_8802f398,2017-08-14T16:31:37Z,2017,Falcon 9 Block 4,Falcon,Resupply,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",0,1,train
+ll2_launch_f9779d72,2017-08-24T18:51:00Z,2017,Falcon 9 Full Thrust,Falcon,Earth Science,SSO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",19,1,train
+ll2_launch_82995933,2017-09-07T14:00:00Z,2017,Falcon 9 Block 4,Falcon,Government/Top Secret,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",1,1,train
+ll2_launch_b8800f25,2017-10-09T12:37:01Z,2017,Falcon 9 Block 4,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",2,1,train
+ll2_launch_b18c9845,2017-10-11T22:53:00Z,2017,Falcon 9 Full Thrust,Falcon,Communications,GTO,Launch Complex 39A,"Kennedy Space Center, FL, USA",20,1,train
+ll2_launch_cf40e58a,2017-10-30T19:34:00Z,2017,Falcon 9 Block 4,Falcon,Communications,GTO,Launch Complex 39A,"Kennedy Space Center, FL, USA",3,1,train
+ll2_launch_c63b742b,2017-12-15T15:36:09Z,2017,Falcon 9 Full Thrust,Falcon,Resupply,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",21,1,train
+ll2_launch_dd92253d,2017-12-23T01:27:34Z,2017,Falcon 9 Full Thrust,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",22,1,train
+ll2_launch_2cf36ccb,2018-01-08T01:00:00Z,2018,Falcon 9 Block 4,Falcon,Government/Top Secret,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",4,1,train
+ll2_launch_dc007d6f,2018-01-31T21:25:00Z,2018,Falcon 9 Full Thrust,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",23,1,train
+ll2_launch_598af929,2018-02-06T20:45:00Z,2018,Falcon Heavy,Falcon,Test Flight,Helio-N/A,Launch Complex 39A,"Kennedy Space Center, FL, USA",0,1,train
+ll2_launch_e443b805,2018-02-22T14:17:00Z,2018,Falcon 9 Full Thrust,Falcon,Government/Top Secret,SSO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",24,1,train
+ll2_launch_067aaad8,2018-03-06T05:33:00Z,2018,Falcon 9 Block 4,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",5,1,train
+ll2_launch_7fddc602,2018-03-30T14:13:51Z,2018,Falcon 9 Block 4,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",6,1,train
+ll2_launch_161dee30,2018-04-02T20:30:38Z,2018,Falcon 9 Block 4,Falcon,Resupply,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",7,1,train
+ll2_launch_ca4e796d,2018-04-18T22:51:31Z,2018,Falcon 9 Block 4,Falcon,Astrophysics,HEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",8,1,train
+ll2_launch_38ef9c7a,2018-05-11T20:14:00Z,2018,Falcon 9 Block 5,Falcon,Communications,GTO,Launch Complex 39A,"Kennedy Space Center, FL, USA",0,1,train
+ll2_launch_cdfd242c,2018-05-22T19:47:58Z,2018,Falcon 9 Block 4,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",9,1,train
+ll2_launch_3693d46b,2018-06-04T04:45:00Z,2018,Falcon 9 Block 4,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",10,1,train
+ll2_launch_9961a642,2018-06-29T09:42:41Z,2018,Falcon 9 Block 4,Falcon,Resupply,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",11,1,train
+ll2_launch_0ea374f1,2018-07-22T05:50:00Z,2018,Falcon 9 Block 5,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",1,1,train
+ll2_launch_143b7f89,2018-07-25T11:39:30Z,2018,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",2,1,train
+ll2_launch_76191cb9,2018-08-07T05:18:00Z,2018,Falcon 9 Block 5,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",3,1,train
+ll2_launch_a7e8ed2a,2018-09-10T04:45:00Z,2018,Falcon 9 Block 5,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",4,1,train
+ll2_launch_b0b300ee,2018-10-08T02:21:28Z,2018,Falcon 9 Block 5,Falcon,Communications,SSO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",5,1,train
+ll2_launch_1f252074,2018-11-15T20:46:00Z,2018,Falcon 9 Block 5,Falcon,Communications,GTO,Launch Complex 39A,"Kennedy Space Center, FL, USA",6,1,train
+ll2_launch_90eb3d56,2018-12-03T18:34:05Z,2018,Falcon 9 Block 5,Falcon,Dedicated Rideshare,SSO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",7,1,train
+ll2_launch_34d6609f,2018-12-05T18:16:16Z,2018,Falcon 9 Block 5,Falcon,Resupply,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",8,1,train
+ll2_launch_3a4faa1b,2018-12-23T13:51:00Z,2018,Falcon 9 Block 5,Falcon,Navigation,MEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",9,1,train
+ll2_launch_b6e25a46,2019-01-11T15:31:33Z,2019,Falcon 9 Block 5,Falcon,Communications,PO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",10,1,train
+ll2_launch_e5bd8f98,2019-02-22T01:45:00Z,2019,Falcon 9 Block 5,Falcon,Dedicated Rideshare,LO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",11,1,train
+ll2_launch_d889debc,2019-03-02T07:49:00Z,2019,Falcon 9 Block 5,Falcon,Test Flight,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",12,1,train
+ll2_launch_ed90f149,2019-04-11T22:35:00Z,2019,Falcon Heavy,Falcon,Communications,Super-GTO,Launch Complex 39A,"Kennedy Space Center, FL, USA",1,1,train
+ll2_launch_de607493,2019-05-04T06:48:58Z,2019,Falcon 9 Block 5,Falcon,Resupply,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",13,1,train
+ll2_launch_267f232e,2019-05-24T02:30:00Z,2019,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",14,1,train
+ll2_launch_b347b02e,2019-06-12T14:17:00Z,2019,Falcon 9 Block 5,Falcon,Earth Science,SSO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",15,1,train
+ll2_launch_0a0a1326,2019-06-25T06:30:00Z,2019,Falcon Heavy,Falcon,Dedicated Rideshare,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",2,1,train
+ll2_launch_28a5a464,2019-07-25T22:01:56Z,2019,Falcon 9 Block 5,Falcon,Resupply,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",16,1,train
+ll2_launch_eae177d1,2019-07-26T03:45:00Z,2019,Starship Prototype,Starship,Test Flight,Sub,Suborbital Pad A,"SpaceX Starbase, TX, USA",0,1,train
+ll2_launch_68ecf878,2019-08-06T23:23:00Z,2019,Falcon 9 Block 5,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",17,1,train
+ll2_launch_0389266e,2019-08-27T22:02:00Z,2019,Starship Prototype,Starship,Test Flight,Sub,Suborbital Pad A,"SpaceX Starbase, TX, USA",1,1,train
+ll2_launch_501900f6,2019-11-11T14:56:00Z,2019,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",18,1,train
+ll2_launch_4425a1b9,2019-12-05T17:29:24Z,2019,Falcon 9 Block 5,Falcon,Resupply,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",19,1,train
+ll2_launch_5e63ba5c,2019-12-17T00:10:00Z,2019,Falcon 9 Block 5,Falcon,Communications,,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",20,1,train
+ll2_launch_a2851487,2020-01-07T02:19:21Z,2020,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",21,1,train
+ll2_launch_41495097,2020-01-19T15:30:00Z,2020,Falcon 9 Block 5,Falcon,Test Flight,Sub,Launch Complex 39A,"Kennedy Space Center, FL, USA",22,1,train
+ll2_launch_76b54190,2020-01-29T14:06:00Z,2020,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",23,1,train
+ll2_launch_93750120,2020-02-17T15:05:55Z,2020,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",24,1,train
+ll2_launch_e7f4d577,2020-03-07T04:50:31Z,2020,Falcon 9 Block 5,Falcon,Resupply,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",25,1,train
+ll2_launch_fbf1234b,2020-03-18T12:16:39Z,2020,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",26,1,train
+ll2_launch_f10b74d3,2020-04-22T19:30:00Z,2020,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",27,1,train
+ll2_launch_e71d3b58,2020-05-30T19:22:45Z,2020,Falcon 9 Block 5,Falcon,Test Flight,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",28,1,train
+ll2_launch_51dcfdc7,2020-06-04T01:25:33Z,2020,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",29,1,train
+ll2_launch_f0f2d68e,2020-06-13T09:21:18Z,2020,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",30,1,train
+ll2_launch_3825c276,2020-06-30T20:10:46Z,2020,Falcon 9 Block 5,Falcon,Navigation,MEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",31,1,train
+ll2_launch_7e9fd521,2020-07-20T21:30:00Z,2020,Falcon 9 Block 5,Falcon,Government/Top Secret,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",32,1,train
+ll2_launch_20e3fd08,2020-08-04T23:57:00Z,2020,Starship Prototype,Starship,Test Flight,Sub,Suborbital Pad A,"SpaceX Starbase, TX, USA",2,1,train
+ll2_launch_955fe2fa,2020-08-07T05:12:00Z,2020,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",33,1,train
+ll2_launch_24b3b696,2020-08-18T14:31:00Z,2020,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",34,1,train
+ll2_launch_98a5da32,2020-08-30T23:18:00Z,2020,Falcon 9 Block 5,Falcon,Communications,SSO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",35,1,train
+ll2_launch_82b600f6,2020-09-03T12:46:14Z,2020,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",36,1,train
+ll2_launch_6ada5478,2020-09-03T17:48:00Z,2020,Starship Prototype,Starship,Test Flight,Sub,Suborbital Pad A,"SpaceX Starbase, TX, USA",3,1,train
+ll2_launch_8cbc59c0,2020-10-06T11:29:34Z,2020,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",37,1,train
+ll2_launch_2b04a116,2020-10-18T12:25:57Z,2020,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",38,1,train
+ll2_launch_47c91a03,2020-10-24T15:31:34Z,2020,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",39,1,train
+ll2_launch_23e362ae,2020-11-05T23:24:23Z,2020,Falcon 9 Block 5,Falcon,Navigation,MEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",40,1,train
+ll2_launch_0ede12be,2020-11-16T00:27:17Z,2020,Falcon 9 Block 5,Falcon,Human Exploration,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",41,1,train
+ll2_launch_56623c2d,2020-11-21T17:17:08Z,2020,Falcon 9 Block 5,Falcon,Earth Science,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",42,1,train
+ll2_launch_145b2935,2020-11-25T02:13:12Z,2020,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",43,1,train
+ll2_launch_06dfcb34,2020-12-06T16:17:08Z,2020,Falcon 9 Block 5,Falcon,Resupply,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",44,1,train
+ll2_launch_fdfc71c4,2020-12-09T22:45:25Z,2020,Starship Prototype,Starship,Test Flight,Sub,Suborbital Pad A,"SpaceX Starbase, TX, USA",4,0,train
+ll2_launch_fd63c683,2020-12-13T17:30:00Z,2020,Falcon 9 Block 5,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",45,1,train
+ll2_launch_528b72ff,2020-12-19T14:00:00Z,2020,Falcon 9 Block 5,Falcon,Government/Top Secret,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",46,1,train
+ll2_launch_d5d607b7,2021-01-08T02:15:00Z,2021,Falcon 9 Block 5,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",47,1,train
+ll2_launch_74426779,2021-01-20T13:02:00Z,2021,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",48,1,train
+ll2_launch_f213a5df,2021-01-24T15:00:00Z,2021,Falcon 9 Block 5,Falcon,Dedicated Rideshare,SSO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",49,1,train
+ll2_launch_44670393,2021-02-02T20:25:15Z,2021,Starship Prototype,Starship,Test Flight,Sub,Suborbital Pad B,"SpaceX Starbase, TX, USA",5,0,train
+ll2_launch_f31702e8,2021-02-04T06:19:54Z,2021,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",50,1,train
+ll2_launch_985f1cc1,2021-02-16T03:59:37Z,2021,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",51,1,train
+ll2_launch_c0ac9a61,2021-03-03T23:15:00Z,2021,Starship Prototype,Starship,Test Flight,Sub,Suborbital Pad A,"SpaceX Starbase, TX, USA",6,1,train
+ll2_launch_dfd4f0e0,2021-03-04T08:24:54Z,2021,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",52,1,train
+ll2_launch_134eb787,2021-03-11T08:13:29Z,2021,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",53,1,train
+ll2_launch_896d876d,2021-03-14T10:01:26Z,2021,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",54,1,train
+ll2_launch_ec03fe36,2021-03-24T08:28:00Z,2021,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",55,1,train
+ll2_launch_fc7a010b,2021-03-30T13:00:00Z,2021,Starship Prototype,Starship,Test Flight,Sub,Suborbital Pad B,"SpaceX Starbase, TX, USA",7,0,train
+ll2_launch_385455f4,2021-04-07T16:34:00Z,2021,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",56,1,train
+ll2_launch_32dcb5ad,2021-04-23T09:49:02Z,2021,Falcon 9 Block 5,Falcon,Human Exploration,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",57,1,train
+ll2_launch_fbd23c86,2021-04-29T03:44:30Z,2021,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",58,1,train
+ll2_launch_1ecc82c0,2021-05-04T19:01:00Z,2021,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",59,1,train
+ll2_launch_73ae8553,2021-05-05T22:24:00Z,2021,Starship Prototype,Starship,Test Flight,Sub,Suborbital Pad A,"SpaceX Starbase, TX, USA",8,1,train
+ll2_launch_e5085f22,2021-05-09T06:42:00Z,2021,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",60,1,train
+ll2_launch_c32d1f5e,2021-05-15T22:56:00Z,2021,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",61,1,train
+ll2_launch_fb25ecf0,2021-05-26T18:59:00Z,2021,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",62,1,train
+ll2_launch_89a150ea,2021-06-03T17:29:15Z,2021,Falcon 9 Block 5,Falcon,Resupply,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",63,1,train
+ll2_launch_edaf9a8d,2021-06-06T04:26:00Z,2021,Falcon 9 Block 5,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",64,1,train
+ll2_launch_110c808a,2021-06-17T16:09:35Z,2021,Falcon 9 Block 5,Falcon,Navigation,MEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",65,1,train
+ll2_launch_5d248abe,2021-06-30T19:31:00Z,2021,Falcon 9 Block 5,Falcon,Dedicated Rideshare,SSO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",66,1,train
+ll2_launch_13386512,2021-08-29T07:14:49Z,2021,Falcon 9 Block 5,Falcon,Resupply,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",67,1,train
+ll2_launch_6b9f9fe6,2021-09-14T03:55:50Z,2021,Falcon 9 Block 5,Falcon,Communications,PO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",68,1,train
+ll2_launch_621d64e6,2021-09-16T00:02:56Z,2021,Falcon 9 Block 5,Falcon,Human Exploration,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",69,1,train
+ll2_launch_0d779392,2021-11-11T02:03:31Z,2021,Falcon 9 Block 5,Falcon,Human Exploration,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",70,1,train
+ll2_launch_e4200e5c,2021-11-13T12:18:56Z,2021,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",71,1,train
+ll2_launch_c4b2f90e,2021-11-24T06:21:02Z,2021,Falcon 9 Block 5,Falcon,Robotic Exploration,Helio-N/A,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",72,1,train
+ll2_launch_56db9abd,2021-12-02T23:12:00Z,2021,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",73,1,train
+ll2_launch_dfb2cc3b,2021-12-09T06:00:00Z,2021,Falcon 9 Block 5,Falcon,Astrophysics,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",74,1,train
+ll2_launch_0d4b0c0f,2021-12-18T12:41:40Z,2021,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",75,1,train
+ll2_launch_16d0c02e,2021-12-19T03:58:39Z,2021,Falcon 9 Block 5,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",76,1,train
+ll2_launch_878ba32c,2021-12-21T10:07:08Z,2021,Falcon 9 Block 5,Falcon,Resupply,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",77,1,train
+ll2_launch_3ddb1934,2022-01-06T21:49:10Z,2022,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",78,1,train
+ll2_launch_c660df6f,2022-01-13T15:25:39Z,2022,Falcon 9 Block 5,Falcon,Dedicated Rideshare,SSO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",79,1,train
+ll2_launch_50ac28f2,2022-01-19T02:02:40Z,2022,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",80,1,train
+ll2_launch_23229c2b,2022-01-31T23:11:14Z,2022,Falcon 9 Block 5,Falcon,Earth Science,SSO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",81,1,train
+ll2_launch_2e650790,2022-02-02T20:27:26Z,2022,Falcon 9 Block 5,Falcon,Government/Top Secret,SSO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",82,1,train
+ll2_launch_de39dd1a,2022-02-03T18:13:20Z,2022,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",83,1,train
+ll2_launch_398e713f,2022-02-21T14:44:20Z,2022,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",84,1,train
+ll2_launch_b7b24770,2022-02-25T17:12:10Z,2022,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",85,1,train
+ll2_launch_861795c5,2022-03-03T14:25:00Z,2022,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",86,1,train
+ll2_launch_d8c7fbe0,2022-03-09T13:45:00Z,2022,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",87,1,train
+ll2_launch_72188aca,2022-03-19T04:42:30Z,2022,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",88,1,train
+ll2_launch_335acce9,2022-04-01T16:24:17Z,2022,Falcon 9 Block 5,Falcon,Dedicated Rideshare,SSO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",89,1,train
+ll2_launch_a3eeb03b,2022-04-08T15:17:11Z,2022,Falcon 9 Block 5,Falcon,Tourism,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",90,1,train
+ll2_launch_42932355,2022-04-17T13:13:12Z,2022,Falcon 9 Block 5,Falcon,Government/Top Secret,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",91,1,train
+ll2_launch_2c5447d7,2022-04-21T17:51:40Z,2022,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",92,1,train
+ll2_launch_d786d8fc,2022-04-27T07:52:55Z,2022,Falcon 9 Block 5,Falcon,Human Exploration,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",93,1,train
+ll2_launch_b79a9332,2022-04-29T21:27:10Z,2022,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",94,1,train
+ll2_launch_4f25c927,2022-05-06T09:42:00Z,2022,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",95,1,train
+ll2_launch_0bc91464,2022-05-13T22:07:50Z,2022,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",96,1,train
+ll2_launch_b418d984,2022-05-14T20:40:50Z,2022,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",97,1,train
+ll2_launch_27795b91,2022-05-18T10:59:40Z,2022,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",98,1,train
+ll2_launch_949421ac,2022-05-25T18:35:00Z,2022,Falcon 9 Block 5,Falcon,Dedicated Rideshare,SSO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",99,1,train
+ll2_launch_62fb58f6,2022-06-08T21:04:00Z,2022,Falcon 9 Block 5,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",100,1,train
+ll2_launch_179789f0,2022-06-17T16:08:50Z,2022,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",101,1,train
+ll2_launch_4ca945f6,2022-06-18T14:19:52Z,2022,Falcon 9 Block 5,Falcon,Government/Top Secret,SSO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",102,1,train
+ll2_launch_33223258,2022-06-19T04:27:36Z,2022,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",103,1,train
+ll2_launch_86a3010e,2022-06-29T21:04:00Z,2022,Falcon 9 Block 5,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",104,1,train
+ll2_launch_ac4ce8e1,2022-07-07T13:11:00Z,2022,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",105,1,train
+ll2_launch_051c4c90,2022-07-11T01:39:40Z,2022,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",106,1,train
+ll2_launch_2773613e,2022-07-15T00:44:20Z,2022,Falcon 9 Block 5,Falcon,Resupply,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",107,1,train
+ll2_launch_84f9bbdd,2022-07-17T14:20:00Z,2022,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",108,1,train
+ll2_launch_b3d0dafc,2022-07-22T17:39:40Z,2022,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",109,1,train
+ll2_launch_4ddf282b,2022-07-24T13:38:20Z,2022,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",110,1,train
+ll2_launch_75d7306e,2022-08-04T23:08:48Z,2022,Falcon 9 Block 5,Falcon,Lunar Exploration,Elliptical,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",111,1,train
+ll2_launch_a6b9deb4,2022-08-10T02:14:40Z,2022,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",112,1,train
+ll2_launch_4f2c5733,2022-08-12T21:40:20Z,2022,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",113,1,train
+ll2_launch_4a114237,2022-08-19T19:21:20Z,2022,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",114,1,train
+ll2_launch_67158b3c,2022-08-28T03:41:20Z,2022,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",115,1,train
+ll2_launch_576b04d6,2022-08-31T05:40:10Z,2022,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",116,1,train
+ll2_launch_84bf3b54,2022-09-05T02:09:40Z,2022,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",117,1,train
+ll2_launch_992823ad,2022-09-11T01:20:00Z,2022,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",118,1,train
+ll2_launch_9ba04064,2022-09-19T00:18:40Z,2022,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",119,1,train
+ll2_launch_1c903b65,2022-09-24T23:32:10Z,2022,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",120,1,train
+ll2_launch_f33d5ece,2022-10-05T16:00:57Z,2022,Falcon 9 Block 5,Falcon,Human Exploration,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",121,1,train
+ll2_launch_597cbe7c,2022-10-05T23:10:30Z,2022,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",122,1,train
+ll2_launch_03ee73b8,2022-10-08T23:05:00Z,2022,Falcon 9 Block 5,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",123,1,train
+ll2_launch_13977bd5,2022-10-15T05:22:00Z,2022,Falcon 9 Block 5,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",124,1,train
+ll2_launch_adcb0090,2022-10-20T14:50:40Z,2022,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",125,1,train
+ll2_launch_4d3bde71,2022-10-28T01:14:10Z,2022,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",126,1,train
+ll2_launch_aa88b853,2022-11-01T13:41:00Z,2022,Falcon Heavy,Falcon,Government/Top Secret,Direct-GEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",3,1,train
+ll2_launch_baf2eb66,2022-11-03T05:22:00Z,2022,Falcon 9 Block 5,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",127,1,train
+ll2_launch_409f94d5,2022-11-12T16:06:00Z,2022,Falcon 9 Block 5,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",128,1,train
+ll2_launch_d39b1374,2022-11-23T02:57:00Z,2022,Falcon 9 Block 5,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",129,1,train
+ll2_launch_8b360e14,2022-11-26T19:20:43Z,2022,Falcon 9 Block 5,Falcon,Resupply,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",130,1,train
+ll2_launch_03d55128,2022-12-08T22:27:48Z,2022,Falcon 9 Block 5,Falcon,Communications,PO,Launch Complex 39A,"Kennedy Space Center, FL, USA",131,1,train
+ll2_launch_2306e0bc,2022-12-11T07:38:13Z,2022,Falcon 9 Block 5,Falcon,Lunar Exploration,LO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",132,1,train
+ll2_launch_8226d219,2022-12-16T11:46:47Z,2022,Falcon 9 Block 5,Falcon,Earth Science,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",133,1,train
+ll2_launch_7105c4f4,2022-12-16T22:48:00Z,2022,Falcon 9 Block 5,Falcon,Communications,MEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",134,1,train
+ll2_launch_bf91b6d9,2022-12-17T21:32:30Z,2022,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",135,1,train
+ll2_launch_d955a829,2022-12-28T09:34:00Z,2022,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",136,1,train
+ll2_launch_fbd69a52,2022-12-30T07:38:00Z,2022,Falcon 9 Block 5,Falcon,Earth Science,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",137,1,train
+ll2_launch_fc0b222b,2023-01-03T14:55:56Z,2023,Falcon 9 Block 5,Falcon,Dedicated Rideshare,SSO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",138,1,train
+ll2_launch_d0132d83,2023-01-10T04:50:17Z,2023,Falcon 9 Block 5,Falcon,Communications,PO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",139,1,train
+ll2_launch_571bf2c1,2023-01-15T22:56:00Z,2023,Falcon Heavy,Falcon,Government/Top Secret,Direct-GEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",4,1,train
+ll2_launch_572dbb78,2023-01-18T12:24:00Z,2023,Falcon 9 Block 5,Falcon,Navigation,MEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",140,1,train
+ll2_launch_050eecbc,2023-01-19T15:43:10Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",141,1,train
+ll2_launch_8e6946a2,2023-01-26T09:32:20Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",142,1,train
+ll2_launch_f5a5ba75,2023-01-31T16:15:00Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",143,1,train
+ll2_launch_072f9f30,2023-02-02T07:58:20Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",144,1,train
+ll2_launch_59449fa1,2023-02-07T01:32:00Z,2023,Falcon 9 Block 5,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",145,1,train
+ll2_launch_3bd674c9,2023-02-12T05:10:10Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",146,1,train
+ll2_launch_ae6b4088,2023-02-17T19:12:20Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",147,1,train
+ll2_launch_d6e60f3b,2023-02-18T03:59:00Z,2023,Falcon 9 Block 5,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",148,1,train
+ll2_launch_62588687,2023-02-27T23:13:50Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",149,1,train
+ll2_launch_bc325945,2023-03-02T05:34:14Z,2023,Falcon 9 Block 5,Falcon,Human Exploration,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",150,1,train
+ll2_launch_16b81321,2023-03-03T18:38:50Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",151,1,train
+ll2_launch_7d6982f5,2023-03-09T19:13:28Z,2023,Falcon 9 Block 5,Falcon,Communications,PO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",152,1,train
+ll2_launch_9a0216fd,2023-03-15T00:30:42Z,2023,Falcon 9 Block 5,Falcon,Resupply,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",153,1,train
+ll2_launch_4470fe15,2023-03-17T19:26:40Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",154,1,train
+ll2_launch_bd1d5c2b,2023-03-17T23:38:00Z,2023,Falcon 9 Block 5,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",155,1,train
+ll2_launch_393eb981,2023-03-24T15:43:10Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",156,1,train
+ll2_launch_324cb054,2023-03-29T20:01:00Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",157,1,train
+ll2_launch_0705d82e,2023-04-02T14:29:00Z,2023,Falcon 9 Block 5,Falcon,Government/Top Secret,PO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",158,1,train
+ll2_launch_89931acb,2023-04-07T04:30:00Z,2023,Falcon 9 Block 5,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",159,1,train
+ll2_launch_d8bd2b25,2023-04-15T06:47:39Z,2023,Falcon 9 Block 5,Falcon,Dedicated Rideshare,SSO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",160,1,train
+ll2_launch_8e4e1804,2023-04-19T14:31:10Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",161,1,train
+ll2_launch_e32d375f,2023-04-20T13:33:09Z,2023,Starship V1,Starship,Test Flight,Sub,Orbital Launch Pad 1,"SpaceX Starbase, TX, USA",0,0,train
+ll2_launch_bb327f29,2023-04-27T13:40:50Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",162,1,train
+ll2_launch_ff9b6a09,2023-04-28T22:12:00Z,2023,Falcon 9 Block 5,Falcon,Communications,MEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",163,1,train
+ll2_launch_8b1067dd,2023-05-01T00:26:00Z,2023,Falcon Heavy,Falcon,Communications,Direct-GEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",5,1,train
+ll2_launch_16e0f780,2023-05-04T07:31:00Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",164,1,train
+ll2_launch_84dd42a7,2023-05-10T20:09:00Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",165,1,train
+ll2_launch_f5a3eb4c,2023-05-14T05:03:50Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",166,1,train
+ll2_launch_0962fe02,2023-05-19T06:19:30Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",167,1,train
+ll2_launch_6d55d3cf,2023-05-20T13:16:33Z,2023,Falcon 9 Block 5,Falcon,Communications,PO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",168,1,train
+ll2_launch_0297d3dc,2023-05-21T21:37:09Z,2023,Falcon 9 Block 5,Falcon,Human Exploration,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",169,1,train
+ll2_launch_d5a80dcc,2023-05-27T04:30:00Z,2023,Falcon 9 Block 5,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",170,1,train
+ll2_launch_5fa79e26,2023-05-31T06:02:30Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",171,1,train
+ll2_launch_066250e1,2023-06-04T12:20:00Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",172,1,train
+ll2_launch_e53eecd6,2023-06-05T15:47:00Z,2023,Falcon 9 Block 5,Falcon,Resupply,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",173,1,train
+ll2_launch_5eba4955,2023-06-12T07:10:50Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",174,1,train
+ll2_launch_1e0c3a19,2023-06-12T21:35:00Z,2023,Falcon 9 Block 5,Falcon,Dedicated Rideshare,SSO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",175,1,train
+ll2_launch_76e42f7b,2023-06-18T22:21:00Z,2023,Falcon 9 Block 5,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",176,1,train
+ll2_launch_4250862e,2023-06-22T07:19:00Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",177,1,train
+ll2_launch_168f4cf5,2023-06-23T15:35:10Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",178,1,train
+ll2_launch_49d20d1b,2023-07-01T15:12:00Z,2023,Falcon 9 Block 5,Falcon,Astrophysics,L2,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",179,1,train
+ll2_launch_5d3e11d7,2023-07-07T19:29:50Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",180,1,train
+ll2_launch_6f4ed2b9,2023-07-10T03:58:50Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",181,1,train
+ll2_launch_885ceb2a,2023-07-16T03:50:00Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",182,1,train
+ll2_launch_9e94b0b7,2023-07-20T04:09:30Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",183,1,train
+ll2_launch_c407b340,2023-07-24T00:50:30Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",184,1,train
+ll2_launch_ce5f4f47,2023-07-28T04:01:10Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",185,1,train
+ll2_launch_72491a20,2023-07-29T03:04:00Z,2023,Falcon Heavy,Falcon,Communications,GTO,Launch Complex 39A,"Kennedy Space Center, FL, USA",6,1,train
+ll2_launch_afc772a3,2023-08-03T05:00:00Z,2023,Falcon 9 Block 5,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",186,1,train
+ll2_launch_ce0089c7,2023-08-07T02:41:10Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",187,1,train
+ll2_launch_31df6182,2023-08-08T03:57:00Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",188,1,train
+ll2_launch_12e9acca,2023-08-11T05:17:40Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",189,1,train
+ll2_launch_09642682,2023-08-17T03:36:50Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",190,1,train
+ll2_launch_15699687,2023-08-22T09:37:30Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",191,1,train
+ll2_launch_1caacff9,2023-08-26T07:27:27Z,2023,Falcon 9 Block 5,Falcon,Human Exploration,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",192,1,train
+ll2_launch_87fba73c,2023-08-27T01:05:40Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",193,1,train
+ll2_launch_83dccf61,2023-09-01T02:21:50Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",194,1,train
+ll2_launch_9248a1d0,2023-09-02T14:25:00Z,2023,Falcon 9 Block 5,Falcon,Government/Top Secret,PO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",195,1,train
+ll2_launch_f66687a3,2023-09-04T02:47:20Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",196,1,train
+ll2_launch_4fcf9157,2023-09-09T03:12:50Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",197,1,train
+ll2_launch_8ab7d138,2023-09-12T06:57:50Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",198,1,train
+ll2_launch_470bac70,2023-09-16T03:38:20Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",199,1,train
+ll2_launch_7fc31961,2023-09-20T03:38:10Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",200,1,train
+ll2_launch_1c099ba2,2023-09-24T03:38:30Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",201,1,train
+ll2_launch_1da29c40,2023-09-25T08:48:20Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",202,1,train
+ll2_launch_1c75cf8f,2023-09-30T02:00:00Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",203,1,train
+ll2_launch_16c2eec5,2023-10-05T05:36:30Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",204,1,train
+ll2_launch_432bc342,2023-10-09T07:43:00Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",205,1,train
+ll2_launch_66133437,2023-10-13T14:19:43Z,2023,Falcon Heavy,Falcon,Planetary Science,Helio-N/A,Launch Complex 39A,"Kennedy Space Center, FL, USA",7,1,train
+ll2_launch_2da96504,2023-10-13T23:01:10Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",206,1,train
+ll2_launch_396524c2,2023-10-18T00:39:00Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",207,1,train
+ll2_launch_327a3fa6,2023-10-21T08:23:00Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",208,1,train
+ll2_launch_b46768df,2023-10-22T02:17:00Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",209,1,train
+ll2_launch_9bfd7559,2023-10-29T09:00:00Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",210,1,train
+ll2_launch_ec6b5681,2023-10-30T23:20:30Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",211,1,train
+ll2_launch_48f71d70,2023-11-04T00:37:20Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",212,1,train
+ll2_launch_6159729f,2023-11-08T05:05:30Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",213,1,train
+ll2_launch_63076c5e,2023-11-10T01:28:14Z,2023,Falcon 9 Block 5,Falcon,Resupply,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",214,1,train
+ll2_launch_a4a7fa7f,2023-11-11T18:49:00Z,2023,Falcon 9 Block 5,Falcon,Dedicated Rideshare,SSO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",215,1,train
+ll2_launch_0be2e9d6,2023-11-12T21:08:00Z,2023,Falcon 9 Block 5,Falcon,Communications,MEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",216,1,train
+ll2_launch_dc5c0513,2023-11-18T05:05:50Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",217,1,train
+ll2_launch_04b91bb8,2023-11-18T13:02:50Z,2023,Starship V1,Starship,Test Flight,Sub,Orbital Launch Pad 1,"SpaceX Starbase, TX, USA",1,0,train
+ll2_launch_a6e6b618,2023-11-20T10:30:40Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",218,1,train
+ll2_launch_fe91ad95,2023-11-22T07:47:40Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",219,1,train
+ll2_launch_7bf22b01,2023-11-28T04:20:00Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",220,1,train
+ll2_launch_fd2a9c7e,2023-12-01T18:19:00Z,2023,Falcon 9 Block 5,Falcon,Government/Top Secret,SSO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",221,1,train
+ll2_launch_8cf1015d,2023-12-03T04:00:50Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",222,1,train
+ll2_launch_b666d809,2023-12-07T05:07:30Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",223,1,train
+ll2_launch_2008dbb3,2023-12-08T08:03:40Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",224,1,train
+ll2_launch_7e34bf07,2023-12-19T04:01:00Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",225,1,train
+ll2_launch_3a88fa72,2023-12-23T05:33:00Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",226,1,train
+ll2_launch_dff32800,2023-12-24T13:11:00Z,2023,Falcon 9 Block 5,Falcon,Government/Top Secret,PO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",227,1,train
+ll2_launch_0098c032,2023-12-29T01:07:00Z,2023,Falcon Heavy,Falcon,Government/Top Secret,Elliptical,Launch Complex 39A,"Kennedy Space Center, FL, USA",8,1,train
+ll2_launch_d92ecdac,2023-12-29T04:01:40Z,2023,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",228,1,train
+ll2_launch_161dbc75,2024-01-03T03:44:20Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",229,1,train
+ll2_launch_1d374bef,2024-01-03T23:04:00Z,2024,Falcon 9 Block 5,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",230,1,train
+ll2_launch_60634a63,2024-01-07T22:35:40Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",231,1,train
+ll2_launch_429277e6,2024-01-14T08:59:30Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",232,1,train
+ll2_launch_839c1427,2024-01-15T01:52:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",233,1,train
+ll2_launch_da48063e,2024-01-18T21:49:11Z,2024,Falcon 9 Block 5,Falcon,Tourism,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",234,1,train
+ll2_launch_f8f2a91e,2024-01-24T00:35:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",235,1,train
+ll2_launch_378bd440,2024-01-29T01:10:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",236,1,train
+ll2_launch_20f597cc,2024-01-29T05:57:20Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",237,1,train
+ll2_launch_665678b9,2024-01-30T17:07:21Z,2024,Falcon 9 Block 5,Falcon,Resupply,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",238,1,train
+ll2_launch_549f26ed,2024-02-08T06:33:36Z,2024,Falcon 9 Block 5,Falcon,Earth Science,SSO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",239,1,train
+ll2_launch_3fe9e0be,2024-02-10T00:34:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",240,1,train
+ll2_launch_d8fead19,2024-02-14T22:30:00Z,2024,Falcon 9 Block 5,Falcon,Government/Top Secret,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",241,1,train
+ll2_launch_942a1814,2024-02-15T06:05:37Z,2024,Falcon 9 Block 5,Falcon,Lunar Exploration,LO,Launch Complex 39A,"Kennedy Space Center, FL, USA",242,1,train
+ll2_launch_9603b3c2,2024-02-15T21:34:30Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",243,1,train
+ll2_launch_ffd29f94,2024-02-20T20:11:00Z,2024,Falcon 9 Block 5,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",244,1,train
+ll2_launch_43edc89d,2024-02-23T04:11:50Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",245,1,train
+ll2_launch_0c61bd06,2024-02-25T22:06:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",246,1,train
+ll2_launch_a9388d6a,2024-02-29T15:30:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",247,1,train
+ll2_launch_2f101902,2024-03-04T03:53:38Z,2024,Falcon 9 Block 5,Falcon,Human Exploration,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",248,1,train
+ll2_launch_2f10c861,2024-03-04T22:05:00Z,2024,Falcon 9 Block 5,Falcon,Dedicated Rideshare,SSO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",249,1,train
+ll2_launch_42b2c850,2024-03-04T23:56:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",250,1,train
+ll2_launch_ed3aa4cd,2024-03-10T23:05:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",251,1,train
+ll2_launch_8b703f3e,2024-03-11T04:09:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",252,1,train
+ll2_launch_c0d90c60,2024-03-14T13:25:00Z,2024,Starship V1,Starship,Test Flight,Sub,Orbital Launch Pad 1,"SpaceX Starbase, TX, USA",2,1,train
+ll2_launch_827fac66,2024-03-16T00:21:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",253,1,train
+ll2_launch_2323baef,2024-03-19T02:28:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",254,1,train
+ll2_launch_604e4aa8,2024-03-21T20:55:09Z,2024,Falcon 9 Block 5,Falcon,Resupply,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",255,1,train
+ll2_launch_e7b297d1,2024-03-24T03:09:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",256,1,train
+ll2_launch_5acc8f72,2024-03-25T23:42:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",257,1,train
+ll2_launch_ba739b7f,2024-03-30T21:52:00Z,2024,Falcon 9 Block 5,Falcon,Communications,GTO,Launch Complex 39A,"Kennedy Space Center, FL, USA",258,1,train
+ll2_launch_3f61f099,2024-03-31T01:30:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",259,1,train
+ll2_launch_8bb37c47,2024-04-02T02:30:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",260,1,train
+ll2_launch_d90ac995,2024-04-05T09:12:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",261,1,train
+ll2_launch_b76b836f,2024-04-07T02:25:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",262,1,train
+ll2_launch_c6344720,2024-04-07T23:16:57Z,2024,Falcon 9 Block 5,Falcon,Dedicated Rideshare,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",263,1,train
+ll2_launch_706b81df,2024-04-10T05:40:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",264,1,train
+ll2_launch_a2e723fe,2024-04-11T14:25:00Z,2024,Falcon 9 Block 5,Falcon,Earth Science,PO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",265,1,train
+ll2_launch_08508c47,2024-04-13T01:40:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",266,1,train
+ll2_launch_c42e2d5f,2024-04-17T21:26:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",267,1,train
+ll2_launch_b1098e0e,2024-04-18T22:40:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",268,1,train
+ll2_launch_63e1a1f2,2024-04-23T22:17:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",269,1,train
+ll2_launch_974b4774,2024-04-28T00:34:00Z,2024,Falcon 9 Block 5,Falcon,Navigation,MEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",270,1,train
+ll2_launch_242a5669,2024-04-28T22:08:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",271,1,train
+ll2_launch_629f10e4,2024-05-02T18:36:00Z,2024,Falcon 9 Block 5,Falcon,Earth Science,SSO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",272,1,train
+ll2_launch_638eca04,2024-05-03T02:37:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",273,1,train
+ll2_launch_40e91ca4,2024-05-06T18:14:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",274,1,train
+ll2_launch_37b23feb,2024-05-08T18:42:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",275,1,train
+ll2_launch_b7767100,2024-05-10T04:30:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",276,1,train
+ll2_launch_67152d83,2024-05-13T00:53:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",277,1,train
+ll2_launch_63bb93ea,2024-05-14T18:39:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",278,1,train
+ll2_launch_791ef5c4,2024-05-18T00:32:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",279,1,train
+ll2_launch_bcab98e3,2024-05-22T08:00:00Z,2024,Falcon 9 Block 5,Falcon,Government/Top Secret,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",280,1,train
+ll2_launch_1e84545e,2024-05-23T02:35:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",281,1,train
+ll2_launch_d51da9b0,2024-05-24T02:45:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",282,1,train
+ll2_launch_345131f6,2024-05-28T14:24:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",283,1,train
+ll2_launch_c98dabc0,2024-05-28T22:20:10Z,2024,Falcon 9 Block 5,Falcon,Earth Science,SSO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",284,1,train
+ll2_launch_cefe475a,2024-06-01T02:37:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",285,1,train
+ll2_launch_587cba9a,2024-06-05T02:16:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",286,1,train
+ll2_launch_2b1b756f,2024-06-06T12:50:00Z,2024,Starship V1,Starship,Test Flight,Sub,Orbital Launch Pad 1,"SpaceX Starbase, TX, USA",3,1,train
+ll2_launch_cdc8274b,2024-06-08T01:56:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",287,1,train
+ll2_launch_32f98a5d,2024-06-08T12:58:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",288,1,train
+ll2_launch_86600b01,2024-06-19T03:40:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",289,1,train
+ll2_launch_e59f9e0b,2024-06-20T21:35:00Z,2024,Falcon 9 Block 5,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",290,1,train
+ll2_launch_63a205d7,2024-06-23T17:15:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",291,1,train
+ll2_launch_53b0220d,2024-06-24T03:47:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",292,1,train
+ll2_launch_ad53f165,2024-06-25T21:26:00Z,2024,Falcon Heavy,Falcon,Earth Science,GTO,Launch Complex 39A,"Kennedy Space Center, FL, USA",9,1,train
+ll2_launch_89961315,2024-06-27T11:14:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",293,1,train
+ll2_launch_bc2c6103,2024-06-29T03:14:00Z,2024,Falcon 9 Block 5,Falcon,Government/Top Secret,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",294,1,train
+ll2_launch_37d99477,2024-07-03T08:55:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",295,1,train
+ll2_launch_ae5db3d2,2024-07-08T23:30:00Z,2024,Falcon 9 Block 5,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",296,1,train
+ll2_launch_9ddacbab,2024-07-12T02:35:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",297,0,train
+ll2_launch_0f63b33d,2024-07-27T05:45:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",298,1,train
+ll2_launch_a059955d,2024-07-28T05:09:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",299,1,train
+ll2_launch_2aa76cd0,2024-07-28T09:22:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",300,1,train
+ll2_launch_172111f8,2024-08-02T05:01:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",301,1,train
+ll2_launch_86139b24,2024-08-04T07:24:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",302,1,train
+ll2_launch_59426ed2,2024-08-04T15:02:53Z,2024,Falcon 9 Block 5,Falcon,Resupply,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",303,1,train
+ll2_launch_c34d9c5e,2024-08-10T12:50:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",304,1,train
+ll2_launch_670b2644,2024-08-12T02:02:00Z,2024,Falcon 9 Block 5,Falcon,Communications,Elliptical,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",305,1,train
+ll2_launch_34aa9340,2024-08-12T10:37:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",306,1,train
+ll2_launch_3ecc1d59,2024-08-15T13:00:00Z,2024,Falcon 9 Block 5,Falcon,Earth Science,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",307,1,train
+ll2_launch_d61c53c4,2024-08-16T18:56:00Z,2024,Falcon 9 Block 5,Falcon,Dedicated Rideshare,SSO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",308,1,train
+ll2_launch_1458b11c,2024-08-20T13:20:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",309,1,train
+ll2_launch_1da9d898,2024-08-28T07:48:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",310,1,train
+ll2_launch_95bff87b,2024-08-31T07:43:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",311,1,train
+ll2_launch_1bf11245,2024-08-31T08:48:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",312,1,train
+ll2_launch_46ddb5ee,2024-09-05T15:33:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",313,1,train
+ll2_launch_e8c62aa0,2024-09-06T03:20:00Z,2024,Falcon 9 Block 5,Falcon,Government/Top Secret,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",314,1,train
+ll2_launch_b69cfada,2024-09-10T09:23:49Z,2024,Falcon 9 Block 5,Falcon,Human Exploration,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",315,1,train
+ll2_launch_11f32024,2024-09-12T08:52:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",316,1,train
+ll2_launch_f53462c6,2024-09-13T01:45:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",317,1,train
+ll2_launch_b9c44ac9,2024-09-17T22:50:49Z,2024,Falcon 9 Block 5,Falcon,Navigation,MEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",318,1,train
+ll2_launch_facd46c6,2024-09-20T13:50:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",319,1,train
+ll2_launch_f97e9181,2024-09-25T04:01:20Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",320,1,train
+ll2_launch_0102940a,2024-09-28T17:17:21Z,2024,Falcon 9 Block 5,Falcon,Human Exploration,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",321,1,train
+ll2_launch_e1ffdd01,2024-10-07T14:52:11Z,2024,Falcon 9 Block 5,Falcon,Robotic Exploration,Asteroid,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",322,1,train
+ll2_launch_83ba001e,2024-10-13T12:25:00Z,2024,Starship V1,Starship,Test Flight,Sub,Orbital Launch Pad 1,"SpaceX Starbase, TX, USA",4,1,train
+ll2_launch_59548105,2024-10-14T16:06:00Z,2024,Falcon Heavy,Falcon,Planetary Science,Helio-N/A,Launch Complex 39A,"Kennedy Space Center, FL, USA",10,1,train
+ll2_launch_9d576892,2024-10-15T06:10:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",323,1,train
+ll2_launch_e2a88842,2024-10-15T08:21:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",324,1,train
+ll2_launch_5f9fa9b2,2024-10-18T23:31:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",325,1,train
+ll2_launch_525ed290,2024-10-20T05:13:00Z,2024,Falcon 9 Block 5,Falcon,Communications,PO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",326,1,train
+ll2_launch_beb6bfff,2024-10-23T21:47:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",327,1,train
+ll2_launch_9048f0e1,2024-10-24T17:14:00Z,2024,Falcon 9 Block 5,Falcon,Government/Top Secret,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",328,1,train
+ll2_launch_d20c9252,2024-10-26T21:47:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",329,1,train
+ll2_launch_eed1132a,2024-10-30T12:07:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",330,1,train
+ll2_launch_48284305,2024-10-30T21:10:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",331,1,train
+ll2_launch_f97bce95,2024-11-05T02:29:31Z,2024,Falcon 9 Block 5,Falcon,Resupply,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",332,1,train
+ll2_launch_507a6df7,2024-11-07T20:19:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",333,1,train
+ll2_launch_be86d592,2024-11-09T06:14:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",334,1,train
+ll2_launch_a9fa3ed5,2024-11-11T17:22:00Z,2024,Falcon 9 Block 5,Falcon,Communications,GTO,Launch Complex 39A,"Kennedy Space Center, FL, USA",335,1,train
+ll2_launch_ce986507,2024-11-11T21:28:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",336,1,train
+ll2_launch_32727766,2024-11-14T05:23:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",337,1,train
+ll2_launch_aa398317,2024-11-14T13:21:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",338,1,train
+ll2_launch_4509981c,2024-11-17T22:28:00Z,2024,Falcon 9 Block 5,Falcon,Communications,GTO,Launch Complex 39A,"Kennedy Space Center, FL, USA",339,1,train
+ll2_launch_eddda4b4,2024-11-18T05:53:30Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",340,1,train
+ll2_launch_a0809bf8,2024-11-18T18:31:00Z,2024,Falcon 9 Block 5,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",341,1,train
+ll2_launch_da9a0172,2024-11-19T22:00:00Z,2024,Starship V1,Starship,Test Flight,Sub,Orbital Launch Pad 1,"SpaceX Starbase, TX, USA",5,1,train
+ll2_launch_168b41aa,2024-11-21T16:07:50Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",342,1,train
+ll2_launch_f2e861e9,2024-11-24T05:25:30Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",343,1,train
+ll2_launch_0e6efb5d,2024-11-25T10:02:20Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",344,1,train
+ll2_launch_ffc148dc,2024-11-27T04:41:30Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",345,1,train
+ll2_launch_7beb2fcf,2024-11-30T05:00:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",346,1,train
+ll2_launch_fed1b36f,2024-11-30T08:10:00Z,2024,Falcon 9 Block 5,Falcon,Government/Top Secret,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",347,1,train
+ll2_launch_f50d89cf,2024-12-04T10:13:10Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",348,1,train
+ll2_launch_a757f8b0,2024-12-05T03:05:00Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",349,1,train
+ll2_launch_ae15ed89,2024-12-05T16:10:00Z,2024,Falcon 9 Block 5,Falcon,Communications,GTO,Launch Complex 39A,"Kennedy Space Center, FL, USA",350,1,train
+ll2_launch_d1b5f507,2024-12-08T05:12:30Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",351,1,train
+ll2_launch_c0da2601,2024-12-13T21:55:40Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",352,1,train
+ll2_launch_99570ecf,2024-12-17T00:52:00Z,2024,Falcon 9 Block 5,Falcon,Navigation,MEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",353,1,train
+ll2_launch_a889a7d1,2024-12-17T13:19:00Z,2024,Falcon 9 Block 5,Falcon,Government/Top Secret,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",354,1,train
+ll2_launch_8ee42a39,2024-12-17T22:26:00Z,2024,Falcon 9 Block 5,Falcon,Communications,MEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",355,1,train
+ll2_launch_50a1337c,2024-12-21T11:34:24Z,2024,Falcon 9 Block 5,Falcon,Dedicated Rideshare,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",356,1,train
+ll2_launch_9ba9d2de,2024-12-23T05:35:30Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",357,1,train
+ll2_launch_eea43b3f,2024-12-29T01:58:30Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",358,1,train
+ll2_launch_33bf462e,2024-12-29T05:00:00Z,2024,Falcon 9 Block 5,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",359,1,train
+ll2_launch_58e080d1,2024-12-31T05:39:10Z,2024,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",360,1,train
+ll2_launch_0a9a511a,2025-01-04T01:27:00Z,2025,Falcon 9 Block 5,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",361,1,train
+ll2_launch_957f00c7,2025-01-06T20:43:59Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",362,1,train
+ll2_launch_02a67327,2025-01-08T15:27:00Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",363,1,train
+ll2_launch_f9308f6c,2025-01-10T03:53:49Z,2025,Falcon 9 Block 5,Falcon,Government/Top Secret,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",364,1,train
+ll2_launch_b56beca9,2025-01-10T19:11:20Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",365,1,train
+ll2_launch_a07622a2,2025-01-13T16:47:09Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",366,1,train
+ll2_launch_02b28510,2025-01-14T19:09:00Z,2025,Falcon 9 Block 5,Falcon,Dedicated Rideshare,SSO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",367,1,train
+ll2_launch_9a30d934,2025-01-15T06:11:39Z,2025,Falcon 9 Block 5,Falcon,Lunar Exploration,LO,Launch Complex 39A,"Kennedy Space Center, FL, USA",368,1,train
+ll2_launch_c5566f6e,2025-01-16T22:37:00Z,2025,Starship V2,Starship,Test Flight,Sub,Orbital Launch Pad 1,"SpaceX Starbase, TX, USA",0,0,train
+ll2_launch_626c9bf7,2025-01-21T05:24:50Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",369,1,train
+ll2_launch_f42de197,2025-01-21T15:45:50Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",370,1,train
+ll2_launch_0d989b81,2025-01-24T14:07:00Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",371,1,train
+ll2_launch_32e2c0d2,2025-01-27T22:05:00Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",372,1,train
+ll2_launch_a22c6e2c,2025-01-30T01:34:00Z,2025,Falcon 9 Block 5,Falcon,Communications,GTO,Launch Complex 39A,"Kennedy Space Center, FL, USA",373,1,train
+ll2_launch_6f18e0ac,2025-02-01T23:02:10Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",374,1,train
+ll2_launch_028d5699,2025-02-04T10:15:00Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",375,1,train
+ll2_launch_6632587d,2025-02-04T23:13:00Z,2025,Falcon 9 Block 5,Falcon,Earth Science,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",376,1,train
+ll2_launch_fb0df8b6,2025-02-08T19:18:30Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",377,1,train
+ll2_launch_e4c34b02,2025-02-11T02:09:40Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",378,1,train
+ll2_launch_a2f29d72,2025-02-11T18:53:20Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",379,1,train
+ll2_launch_8c960a9e,2025-02-15T06:14:10Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",380,1,train
+ll2_launch_4571a6a4,2025-02-18T23:21:50Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",381,1,train
+ll2_launch_e97293bd,2025-02-21T15:19:00Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",382,1,train
+ll2_launch_2b616a35,2025-02-23T01:38:20Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",383,1,train
+ll2_launch_fd0fbaac,2025-02-27T00:16:30Z,2025,Falcon 9 Block 5,Falcon,Lunar Exploration,LO,Launch Complex 39A,"Kennedy Space Center, FL, USA",384,1,train
+ll2_launch_ce4b7780,2025-02-27T03:34:20Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",385,1,train
+ll2_launch_21fa8a9b,2025-03-03T02:24:00Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",386,1,train
+ll2_launch_a2b94add,2025-03-06T23:30:00Z,2025,Starship V2,Starship,Test Flight,Sub,Orbital Launch Pad 1,"SpaceX Starbase, TX, USA",1,0,train
+ll2_launch_800351fd,2025-03-12T03:10:12Z,2025,Falcon 9 Block 5,Falcon,Astrophysics,SSO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",387,1,train
+ll2_launch_f616e759,2025-03-13T02:35:30Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",388,1,train
+ll2_launch_fb39ac94,2025-03-14T23:03:48Z,2025,Falcon 9 Block 5,Falcon,Human Exploration,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",389,1,train
+ll2_launch_4c2dfc7b,2025-03-15T06:43:00Z,2025,Falcon 9 Block 5,Falcon,Dedicated Rideshare,SSO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",390,1,train
+ll2_launch_721a8641,2025-03-15T11:35:10Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",391,1,train
+ll2_launch_ff04cc6f,2025-03-18T19:57:50Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",392,1,train
+ll2_launch_171bf3b5,2025-03-21T06:49:00Z,2025,Falcon 9 Block 5,Falcon,Government/Top Secret,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",393,1,train
+ll2_launch_c985cc7c,2025-03-24T17:48:00Z,2025,Falcon 9 Block 5,Falcon,Government/Top Secret,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",394,1,train
+ll2_launch_8bfaa532,2025-03-26T22:11:40Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",395,1,train
+ll2_launch_a0058cfb,2025-03-31T19:52:50Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",396,1,train
+ll2_launch_8ce07863,2025-04-01T01:46:50Z,2025,Falcon 9 Block 5,Falcon,Human Exploration,PO,Launch Complex 39A,"Kennedy Space Center, FL, USA",397,1,train
+ll2_launch_ac88db1a,2025-04-04T01:02:50Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",398,1,train
+ll2_launch_c6a16e97,2025-04-06T03:07:20Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",399,1,train
+ll2_launch_505662c5,2025-04-07T23:06:10Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",400,1,train
+ll2_launch_88675d6b,2025-04-12T12:25:00Z,2025,Falcon 9 Block 5,Falcon,Government/Top Secret,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",401,1,train
+ll2_launch_cfe2177c,2025-04-13T00:53:30Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",402,1,train
+ll2_launch_af19169f,2025-04-14T04:00:10Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",403,1,train
+ll2_launch_121ae1a6,2025-04-20T12:29:00Z,2025,Falcon 9 Block 5,Falcon,Government/Top Secret,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",404,1,train
+ll2_launch_6f25718d,2025-04-21T08:15:45Z,2025,Falcon 9 Block 5,Falcon,Resupply,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",405,1,train
+ll2_launch_affb557b,2025-04-22T00:48:34Z,2025,Falcon 9 Block 5,Falcon,Dedicated Rideshare,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",406,1,train
+ll2_launch_a4f7594c,2025-04-25T01:52:40Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",407,1,train
+ll2_launch_8bfe9ea6,2025-04-28T02:09:40Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",408,1,train
+ll2_launch_b1605acf,2025-04-28T20:42:30Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",409,1,train
+ll2_launch_306fbca9,2025-04-29T02:34:10Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",410,1,train
+ll2_launch_1a105ccb,2025-05-02T01:51:10Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",411,1,train
+ll2_launch_8ffb4866,2025-05-04T08:54:40Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",412,1,train
+ll2_launch_d5e8b971,2025-05-07T01:17:20Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",413,1,train
+ll2_launch_7b685ef7,2025-05-10T00:19:50Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",414,1,train
+ll2_launch_ebed9e27,2025-05-10T06:28:00Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",415,1,train
+ll2_launch_0ab25471,2025-05-13T01:15:10Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",416,1,train
+ll2_launch_1166593d,2025-05-13T05:02:20Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",417,1,train
+ll2_launch_05eef4ad,2025-05-14T16:38:50Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",418,1,train
+ll2_launch_17b4ef9c,2025-05-16T13:43:50Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",419,1,train
+ll2_launch_38782ad8,2025-05-21T03:19:10Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",420,1,train
+ll2_launch_b37179f7,2025-05-23T22:32:20Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",421,1,train
+ll2_launch_2f3402d8,2025-05-24T17:19:10Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",422,1,train
+ll2_launch_02e56635,2025-05-27T16:57:15Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",423,1,train
+ll2_launch_ef9b458b,2025-05-27T23:36:00Z,2025,Starship V2,Starship,Test Flight,Sub,Orbital Launch Pad 1,"SpaceX Starbase, TX, USA",2,0,train
+ll2_launch_1c2d7f7c,2025-05-28T13:30:00Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",424,1,train
+ll2_launch_7abd2e55,2025-05-30T17:37:59Z,2025,Falcon 9 Block 5,Falcon,Navigation,MEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",425,1,train
+ll2_launch_53264b64,2025-05-31T20:10:00Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",426,1,train
+ll2_launch_0c4546c7,2025-06-03T04:43:40Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",427,1,train
+ll2_launch_93f37c4a,2025-06-04T23:40:30Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",428,1,train
+ll2_launch_b3f7dd08,2025-06-07T04:54:00Z,2025,Falcon 9 Block 5,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",429,1,train
+ll2_launch_fb36a6be,2025-06-08T14:20:10Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",430,1,train
+ll2_launch_e084e9ae,2025-06-10T13:05:40Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",431,1,train
+ll2_launch_20f57212,2025-06-13T01:54:50Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",432,1,train
+ll2_launch_f52bce97,2025-06-13T15:29:00Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",433,1,train
+ll2_launch_b9c7d6a5,2025-06-17T03:36:50Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",434,1,train
+ll2_launch_35c0c65c,2025-06-18T05:55:10Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",435,1,train
+ll2_launch_f78364d9,2025-06-23T05:58:30Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",436,1,train
+ll2_launch_0d3c2ff0,2025-06-23T21:25:30Z,2025,Falcon 9 Block 5,Falcon,Dedicated Rideshare,SSO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",437,1,train
+ll2_launch_0805af04,2025-06-25T06:31:52Z,2025,Falcon 9 Block 5,Falcon,Tourism,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",438,1,train
+ll2_launch_bf1ba689,2025-06-25T19:54:50Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",439,1,train
+ll2_launch_6eec6708,2025-06-28T04:26:00Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",440,1,train
+ll2_launch_903b888d,2025-06-28T17:13:00Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",441,1,train
+ll2_launch_a6317760,2025-07-01T21:04:00Z,2025,Falcon 9 Block 5,Falcon,Earth Science,GTO,Launch Complex 39A,"Kennedy Space Center, FL, USA",442,1,train
+ll2_launch_17500639,2025-07-02T06:28:10Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",443,1,train
+ll2_launch_017fa05c,2025-07-08T08:21:00Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",444,1,train
+ll2_launch_d54113f9,2025-07-13T05:04:00Z,2025,Falcon 9 Block 5,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",445,1,train
+ll2_launch_8a06f398,2025-07-16T02:05:20Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",446,1,train
+ll2_launch_fa8460de,2025-07-16T06:30:00Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",447,1,train
+ll2_launch_9f1f16e9,2025-07-19T03:52:59Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",448,1,train
+ll2_launch_5221eb56,2025-07-22T21:12:00Z,2025,Falcon 9 Block 5,Falcon,Communications,MEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",449,1,train
+ll2_launch_c1dc33ba,2025-07-23T18:13:00Z,2025,Falcon 9 Block 5,Falcon,Heliophysics,SSO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",450,1,train
+ll2_launch_d4eba3cb,2025-07-26T09:01:40Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",451,1,train
+ll2_launch_a483028f,2025-07-27T04:31:09Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",452,1,train
+ll2_launch_760cea4c,2025-07-30T03:37:50Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",453,1,train
+ll2_launch_77260245,2025-07-31T18:35:09Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",454,1,train
+ll2_launch_88b4b179,2025-08-01T15:43:42Z,2025,Falcon 9 Block 5,Falcon,Human Exploration,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",455,1,train
+ll2_launch_ebaf6c77,2025-08-04T07:57:50Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",456,1,train
+ll2_launch_594ae0c5,2025-08-11T12:35:00Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",457,1,train
+ll2_launch_258dd7cc,2025-08-14T05:05:37Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",458,1,train
+ll2_launch_e369a238,2025-08-14T12:29:30Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",459,1,train
+ll2_launch_d66bb4a0,2025-08-18T16:26:49Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",460,1,train
+ll2_launch_2d5f2335,2025-08-22T03:50:00Z,2025,Falcon 9 Block 5,Falcon,Government/Top Secret,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",461,1,train
+ll2_launch_80af8d63,2025-08-22T17:04:49Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",462,1,train
+ll2_launch_e8e93778,2025-08-24T06:45:36Z,2025,Falcon 9 Block 5,Falcon,Resupply,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",463,1,train
+ll2_launch_cad4ded9,2025-08-26T18:53:41Z,2025,Falcon 9 Block 5,Falcon,Government/Top Secret,SSO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",464,1,train
+ll2_launch_fc1dafd8,2025-08-26T23:30:00Z,2025,Starship V2,Starship,Test Flight,Sub,Orbital Launch Pad 1,"SpaceX Starbase, TX, USA",3,1,train
+ll2_launch_1ba21ab5,2025-08-27T11:10:40Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",465,1,val
+ll2_launch_a2f73993,2025-08-28T08:12:00Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",466,1,val
+ll2_launch_b7b6c516,2025-08-30T04:59:14Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",467,1,val
+ll2_launch_e0427db4,2025-08-31T11:49:00Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",468,1,val
+ll2_launch_3628175d,2025-09-03T03:51:26Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",469,1,val
+ll2_launch_2a799baa,2025-09-03T11:56:10Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",470,1,val
+ll2_launch_03ecf869,2025-09-05T12:32:30Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",471,1,val
+ll2_launch_a0310ea9,2025-09-06T18:06:39Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",472,1,val
+ll2_launch_4ed83998,2025-09-10T14:12:11Z,2025,Falcon 9 Block 5,Falcon,Government/Top Secret,PO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",473,1,val
+ll2_launch_84a2a107,2025-09-12T01:56:00Z,2025,Falcon 9 Block 5,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",474,1,val
+ll2_launch_08fbd641,2025-09-13T17:55:49Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",475,1,val
+ll2_launch_3bfed6d5,2025-09-14T22:11:48Z,2025,Falcon 9 Block 5,Falcon,Resupply,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",476,1,val
+ll2_launch_09678f8e,2025-09-18T09:30:00Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",477,1,val
+ll2_launch_64b19cd9,2025-09-19T16:31:39Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",478,1,val
+ll2_launch_161ca0fe,2025-09-21T10:53:00Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",479,1,val
+ll2_launch_86d62815,2025-09-22T17:38:00Z,2025,Falcon 9 Block 5,Falcon,Government/Top Secret,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",480,1,val
+ll2_launch_689d7129,2025-09-24T11:30:50Z,2025,Falcon 9 Block 5,Falcon,Heliophysics,L1-point,Launch Complex 39A,"Kennedy Space Center, FL, USA",481,1,val
+ll2_launch_c717d2b5,2025-09-25T08:39:00Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",482,1,val
+ll2_launch_018c85ab,2025-09-26T04:26:29Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",483,1,val
+ll2_launch_ee1f78af,2025-09-29T02:04:50Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",484,1,val
+ll2_launch_969a026c,2025-10-03T14:06:50Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",485,1,val
+ll2_launch_a99bb1eb,2025-10-07T06:46:10Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",486,1,val
+ll2_launch_6f3212c1,2025-10-08T03:54:00Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",487,1,val
+ll2_launch_41068e09,2025-10-13T23:23:41Z,2025,Starship V2,Starship,Test Flight,Sub,Orbital Launch Pad 1,"SpaceX Starbase, TX, USA",4,1,val
+ll2_launch_88d03398,2025-10-14T01:58:00Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",488,1,val
+ll2_launch_4b42add0,2025-10-15T23:06:06Z,2025,Falcon 9 Block 5,Falcon,Government/Top Secret,PO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",489,1,val
+ll2_launch_02348ca1,2025-10-16T09:27:10Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",490,1,val
+ll2_launch_ed145de1,2025-10-19T17:39:40Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",491,1,val
+ll2_launch_0d2920f2,2025-10-19T19:24:00Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",492,1,val
+ll2_launch_67c287d7,2025-10-22T14:16:20Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",493,1,val
+ll2_launch_6ecd1d24,2025-10-24T01:30:00Z,2025,Falcon 9 Block 5,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",494,1,val
+ll2_launch_b99e48e1,2025-10-25T14:20:50Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",495,1,val
+ll2_launch_5707ddea,2025-10-26T15:00:40Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",496,1,val
+ll2_launch_22eb6520,2025-10-28T00:43:49Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",497,1,val
+ll2_launch_94ec1605,2025-10-29T16:35:20Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",498,1,val
+ll2_launch_e92f090c,2025-10-31T20:41:10Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",499,1,val
+ll2_launch_41d2ac1b,2025-11-02T05:09:59Z,2025,Falcon 9 Block 5,Falcon,Dedicated Rideshare,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",500,1,val
+ll2_launch_9dd2d2b7,2025-11-06T01:31:10Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",501,1,val
+ll2_launch_6602c88f,2025-11-06T21:13:50Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",502,1,val
+ll2_launch_29e88f09,2025-11-09T08:10:10Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",503,1,val
+ll2_launch_a63253be,2025-11-11T03:21:30Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",504,1,val
+ll2_launch_fdb8c931,2025-11-15T03:08:10Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",505,1,val
+ll2_launch_098173dc,2025-11-15T06:44:20Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",506,1,val
+ll2_launch_a5e8c7ff,2025-11-17T05:21:42Z,2025,Falcon 9 Block 5,Falcon,Earth Science,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",507,1,val
+ll2_launch_d124e85e,2025-11-19T00:12:20Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",508,1,val
+ll2_launch_f0554c45,2025-11-21T03:39:30Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",509,1,val
+ll2_launch_3a22283a,2025-11-22T07:53:50Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",510,1,val
+ll2_launch_8cda58f9,2025-11-23T08:48:00Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",511,1,val
+ll2_launch_dc4c201e,2025-11-28T18:44:30Z,2025,Falcon 9 Block 5,Falcon,Dedicated Rideshare,SSO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",512,1,val
+ll2_launch_4d61413a,2025-12-01T07:44:10Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",513,1,val
+ll2_launch_2ad305ca,2025-12-02T05:28:20Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",514,1,val
+ll2_launch_d1ee3587,2025-12-02T22:18:50Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",515,1,val
+ll2_launch_880a7824,2025-12-04T20:42:20Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",516,1,val
+ll2_launch_e9a5374e,2025-12-07T17:58:30Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",517,1,val
+ll2_launch_c1fb73cf,2025-12-08T22:26:10Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",518,1,val
+ll2_launch_c203e807,2025-12-09T19:16:25Z,2025,Falcon 9 Block 5,Falcon,Government/Top Secret,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",519,1,val
+ll2_launch_a5f8ab2c,2025-12-10T11:40:30Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",520,1,val
+ll2_launch_bea05b91,2025-12-11T22:01:20Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",521,1,val
+ll2_launch_faf4a0bc,2025-12-14T05:49:00Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",522,1,val
+ll2_launch_49e52470,2025-12-15T05:25:10Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",523,1,val
+ll2_launch_9d12fbac,2025-12-17T13:42:10Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Launch Complex 39A,"Kennedy Space Center, FL, USA",524,1,val
+ll2_launch_0b5da6e2,2025-12-17T15:27:50Z,2025,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",525,1,val
+ll2_launch_63ddb2d1,2026-01-03T02:09:16Z,2026,Falcon 9 Block 5,Falcon,Earth Science,SSO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",526,1,val
+ll2_launch_ae315ab0,2026-01-04T06:48:10Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",527,1,val
+ll2_launch_7e36b745,2026-01-09T21:41:00Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",528,1,val
+ll2_launch_02700e48,2026-01-11T13:44:50Z,2026,Falcon 9 Block 5,Falcon,Astrophysics,SSO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",529,1,val
+ll2_launch_0fb47674,2026-01-12T21:08:20Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",530,1,val
+ll2_launch_b8d9ff2b,2026-01-14T18:08:20Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",531,1,val
+ll2_launch_1cdbe42e,2026-01-17T04:39:51Z,2026,Falcon 9 Block 5,Falcon,Government/Top Secret,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",532,1,val
+ll2_launch_13979f7e,2026-01-18T23:31:40Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",533,1,val
+ll2_launch_18292387,2026-01-22T05:47:29Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",534,1,val
+ll2_launch_90a7b825,2026-01-25T17:30:39Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",535,1,val
+ll2_launch_98f70f28,2026-01-28T04:53:16Z,2026,Falcon 9 Block 5,Falcon,Navigation,MEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",536,1,val
+ll2_launch_5b32bfe3,2026-01-29T17:53:20Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",537,1,val
+ll2_launch_5d4e8970,2026-01-30T07:22:00Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",538,1,val
+ll2_launch_d0949d55,2026-02-02T15:47:11Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",539,1,val
+ll2_launch_5fd638a9,2026-02-07T20:58:09Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",540,1,val
+ll2_launch_d9c4e13d,2026-02-11T17:11:29Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",541,1,val
+ll2_launch_862b54e3,2026-02-13T10:15:56Z,2026,Falcon 9 Block 5,Falcon,Human Exploration,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",542,1,val
+ll2_launch_041e2143,2026-02-15T01:59:59Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",543,1,val
+ll2_launch_a0ed15aa,2026-02-16T07:59:40Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",544,1,val
+ll2_launch_57cc5e9e,2026-02-20T01:41:40Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",545,1,val
+ll2_launch_7442d6d7,2026-02-21T09:04:19Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",546,1,val
+ll2_launch_49532577,2026-02-22T03:47:10Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",547,1,val
+ll2_launch_db5c6392,2026-02-24T23:04:10Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",548,1,val
+ll2_launch_742daf86,2026-02-25T14:17:49Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",549,1,val
+ll2_launch_aeccc82e,2026-02-27T12:16:10Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",550,1,val
+ll2_launch_887eb3dc,2026-03-01T10:10:39Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",551,1,val
+ll2_launch_3f71a8a7,2026-03-02T02:56:40Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",552,1,val
+ll2_launch_5d5e17f4,2026-03-04T10:52:20Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",553,1,val
+ll2_launch_12e62caf,2026-03-08T11:00:19Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",554,1,val
+ll2_launch_8701f102,2026-03-10T04:19:00Z,2026,Falcon 9 Block 5,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",555,1,val
+ll2_launch_d44f47c7,2026-03-13T14:57:59Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",556,1,val
+ll2_launch_6f2868b8,2026-03-14T12:37:10Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",557,1,test
+ll2_launch_42e15d83,2026-03-17T05:19:09Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",558,1,test
+ll2_launch_f5df8e48,2026-03-17T13:27:34Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",559,1,test
+ll2_launch_890f714a,2026-03-19T14:20:10Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",560,1,test
+ll2_launch_1ca3ea18,2026-03-20T21:51:49Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",561,1,test
+ll2_launch_2ab15fcb,2026-03-22T14:47:00Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",562,1,test
+ll2_launch_37dd4870,2026-03-26T23:03:19Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",563,1,test
+ll2_launch_fd4ba54a,2026-03-30T11:02:00Z,2026,Falcon 9 Block 5,Falcon,Dedicated Rideshare,SSO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",564,1,test
+ll2_launch_10fbecb2,2026-03-30T21:15:00Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",565,1,test
+ll2_launch_63aa7636,2026-04-02T11:55:10Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",566,1,test
+ll2_launch_becc7e9c,2026-04-07T02:50:39Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",567,1,test
+ll2_launch_f6c9396f,2026-04-11T05:04:19Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",568,1,test
+ll2_launch_5ed6ab75,2026-04-11T11:41:21Z,2026,Falcon 9 Block 5,Falcon,Resupply,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",569,1,test
+ll2_launch_5352577c,2026-04-14T09:33:10Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",570,1,test
+ll2_launch_7cb38bf5,2026-04-15T04:29:49Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",571,1,test
+ll2_launch_0727a92f,2026-04-19T16:03:09Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",572,1,test
+ll2_launch_2c5686ec,2026-04-21T06:53:25Z,2026,Falcon 9 Block 5,Falcon,Navigation,MEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",573,1,test
+ll2_launch_20418dc6,2026-04-23T03:23:09Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",574,1,test
+ll2_launch_d3a6d59f,2026-04-26T14:37:09Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",575,1,test
+ll2_launch_4cc237b2,2026-04-29T14:13:00Z,2026,Falcon Heavy,Falcon,Communications,GTO,Launch Complex 39A,"Kennedy Space Center, FL, USA",11,1,test
+ll2_launch_6bfe08b4,2026-04-30T02:42:49Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",576,1,test
+ll2_launch_b3877a27,2026-05-01T18:06:10Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",577,1,test
+ll2_launch_05530ccb,2026-05-03T07:00:00Z,2026,Falcon 9 Block 5,Falcon,Earth Science,SSO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",578,1,test
+ll2_launch_dd82ccd7,2026-05-06T03:59:19Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",579,1,test
+ll2_launch_24f0b5b1,2026-05-12T02:13:50Z,2026,Falcon 9 Block 5,Falcon,Government/Top Secret,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",580,1,test
+ll2_launch_e60aa241,2026-05-15T22:05:41Z,2026,Falcon 9 Block 5,Falcon,Resupply,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",581,1,test
+ll2_launch_7ba18bcb,2026-05-20T02:46:19Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",582,1,test
+ll2_launch_ef65c43b,2026-05-21T10:04:20Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",583,1,test
+ll2_launch_ed83366c,2026-05-22T22:30:24Z,2026,Starship V3,Starship,Test Flight,Sub,Orbital Launch Pad 2,"SpaceX Starbase, TX, USA",0,1,test
+ll2_launch_e6159040,2026-05-25T11:48:04Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",584,1,test
+ll2_launch_75a35be5,2026-05-26T14:50:34Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",585,1,test
+ll2_launch_384fb817,2026-05-29T12:57:15Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",586,1,test
+ll2_launch_a7341350,2026-05-30T15:25:10Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",587,1,test
+ll2_launch_4936311a,2026-06-03T15:40:39Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",588,1,test
+ll2_launch_cfff5e89,2026-06-04T10:26:30Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",589,1,test
+ll2_launch_af8d71dd,2026-06-07T04:24:45Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",590,1,test
+ll2_launch_114577dc,2026-06-08T10:13:50Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",591,1,test
+ll2_launch_c7b7e18f,2026-06-11T15:05:59Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",592,1,test
+ll2_launch_229267d8,2026-06-12T12:37:00Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",593,1,test
+ll2_launch_bad5ea8c,2026-06-15T15:34:35Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",594,1,test
+ll2_launch_c3f48f48,2026-06-17T06:39:00Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",595,1,test
+ll2_launch_5d4099bf,2026-06-19T08:50:45Z,2026,Falcon 9 Block 5,Falcon,Government/Top Secret,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",596,1,test
+ll2_launch_de5fbae3,2026-06-21T16:39:06Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",597,1,test
+ll2_launch_74bf8472,2026-06-23T10:53:00Z,2026,Falcon 9 Block 5,Falcon,Technology,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",598,1,test
+ll2_launch_a4fb0d1a,2026-06-25T03:30:38Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",599,1,test
+ll2_launch_0740c699,2026-06-28T16:09:18Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",600,1,test
+ll2_launch_ce3db8f7,2026-06-29T02:25:00Z,2026,Falcon 9 Block 5,Falcon,Communications,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",601,1,test
+ll2_launch_491122a3,2026-07-02T02:58:19Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",602,1,test
+ll2_launch_1ef27ca1,2026-07-05T10:50:00Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",603,1,test
+ll2_launch_a6db1e67,2026-07-07T07:12:00Z,2026,Falcon 9 Block 5,Falcon,Dedicated Rideshare,SSO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",604,1,test
+ll2_launch_62d4cd48,2026-07-09T09:25:43Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",605,1,test
+ll2_launch_135fb199,2026-07-11T03:01:57Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",606,1,test
+ll2_launch_e09f254f,2026-07-14T01:28:17Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",607,1,test
+ll2_launch_9999a3a3,2026-07-14T09:10:12Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",608,1,test
+ll2_launch_d9adedc4,2026-07-16T20:32:36Z,2026,Falcon 9 Block 5,Falcon,Government/Top Secret,PO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",609,1,test
+ll2_launch_e1079d3a,2026-07-21T14:49:34Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",610,1,test
+ll2_launch_0f6780cf,2026-07-21T21:15:00Z,2026,Falcon 9 Block 5,Falcon,Mission Extension,GTO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",611,1,test
+ll2_launch_ac897b9f,2026-07-24T22:51:00Z,2026,Starship V3,Starship,Test Flight,Sub,Orbital Launch Pad 2,"SpaceX Starbase, TX, USA",1,1,test
+ll2_launch_5b2f05d7,2026-07-25T15:51:55Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",612,1,test
+ll2_launch_24675e3d,2026-07-30T07:10:19Z,2026,Falcon 9 Block 5,Falcon,Government/Top Secret,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",613,1,test
+ll2_launch_e7e55b53,2026-08-01T03:08:43Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",614,1,test
+ll2_launch_0448d030,2026-08-04T17:05:03Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",615,1,test
+ll2_launch_56a85c82,2026-08-05T07:49:00Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",616,1,test
+ll2_launch_e4316d4c,2026-08-08T16:35:02Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",617,1,test
+ll2_launch_36ab6924,2026-08-11T15:58:26Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",618,1,test
+ll2_launch_6f94dbe4,2026-08-12T04:46:47Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",619,1,test
+ll2_launch_be8b4b0d,2026-08-16T01:12:14Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",620,1,test
+ll2_launch_55b79515,2026-08-16T01:50:45Z,2026,Falcon 9 Block 5,Falcon,Government/Top Secret,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",621,1,test
+ll2_launch_f6958a77,2026-08-19T04:01:07Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",622,1,test
+ll2_launch_bbdc4d47,2026-08-21T15:14:22Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",623,1,test
+ll2_launch_6208f972,2026-08-22T07:25:16Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",624,1,test
+ll2_launch_ad501ebd,2026-08-25T09:33:38Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",625,1,test
+ll2_launch_95653d52,2026-08-26T09:35:11Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",626,1,test
+ll2_launch_521f3a1c,2026-08-30T11:26:04Z,2026,Falcon Heavy,Falcon,Astrophysics,L2,Launch Complex 39A,"Kennedy Space Center, FL, USA",12,1,test
+ll2_launch_63181269,2026-09-02T08:42:12Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",627,1,test
+ll2_launch_153ef8ef,2026-09-06T14:26:54Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",628,1,test
+ll2_launch_3e0456da,2026-09-10T15:42:30Z,2026,Falcon 9 Block 5,Falcon,Government/Top Secret,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",629,1,test
+ll2_launch_ad358a4d,2026-09-13T18:49:00Z,2026,Falcon 9 Block 5,Falcon,Communications,MEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",630,1,test
+ll2_launch_17c71937,2026-09-17T01:07:56Z,2026,Falcon 9 Block 5,Falcon,Government/Top Secret,PO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",631,1,test
+ll2_launch_d1471f9d,2026-09-20T01:47:00Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",632,1,test
+ll2_launch_7330d83b,2026-09-26T14:00:54Z,2026,Falcon 9 Block 5,Falcon,Government/Top Secret,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",633,1,test
+ll2_launch_7d1afb26,2026-09-28T12:48:59Z,2026,Starship V3,Starship,Communications,LEO,Orbital Launch Pad 2,"SpaceX Starbase, TX, USA",2,1,test
+ll2_launch_18441371,2026-10-01T15:10:06Z,2026,Falcon 9 Block 5,Falcon,Human Exploration,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",634,1,test
+ll2_launch_67213393,2026-10-01T18:32:00Z,2026,Falcon 9 Block 5,Falcon,Dedicated Rideshare,SSO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",635,1,test
+ll2_launch_4651fd8a,2026-10-02T03:54:00Z,2026,Falcon Heavy,Falcon,Government/Top Secret,N/A,Launch Complex 39A,"Kennedy Space Center, FL, USA",13,1,test
+ll2_launch_da43dc2c,2026-10-10T07:39:44Z,2026,Falcon 9 Block 5,Falcon,Government/Top Secret,PO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",636,1,test
+ll2_launch_97c6f5e1,2026-10-13T00:28:11Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",637,1,test
+ll2_launch_bf2c3027,2026-10-13T10:33:44Z,2026,Falcon 9 Block 5,Falcon,Resupply,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",638,1,test
+ll2_launch_df88cfbf,2026-10-16T00:01:05Z,2026,Falcon 9 Block 5,Falcon,Government/Top Secret,PO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",639,1,test
+ll2_launch_3b430f81,2026-10-20T11:04:00Z,2026,Falcon 9 Block 5,Falcon,Dedicated Rideshare,LEO,Space Launch Complex 40,"Cape Canaveral SFS, FL, USA",640,1,test
+ll2_launch_f6af629d,2026-10-23T22:48:44Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",641,1,test
+ll2_launch_e2886a96,2026-10-27T07:25:51Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",642,1,test
+ll2_launch_57ce0a39,2026-10-31T04:04:34Z,2026,Falcon 9 Block 5,Falcon,Communications,LEO,Space Launch Complex 4E,"Vandenberg SFB, CA, USA",643,1,test

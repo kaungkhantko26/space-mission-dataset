@@ -1,0 +1,533 @@
+id,full_name,family,manufacturer,manufacturer_country,active,reusable,length_m,diameter_m,launch_mass_t,liftoff_thrust_kn,leo_capacity_kg,gto_capacity_kg,launch_cost_usd,total_launches,successful_launches,failed_launches,success_rate,usd_per_kg_leo,split
+ll2_cfg_136,Angara 1.2,Angara,Khrunichev State Research and Production Space Center,RUS,True,False,41.5,2.9,171,1920,3700,,31000000,7,7,0,1.0,8378.38,train
+ll2_cfg_53,Angara 1.2pp,Angara,Khrunichev State Research and Production Space Center,RUS,False,False,40.4,2.9,172,1920,,,31000000,1,1,0,,,train
+ll2_cfg_73,Angara A5,Angara,Khrunichev State Research and Production Space Center,RUS,True,False,55.4,8.86,773,9600,24500,,,0,0,0,,,train
+ll2_cfg_196,Angara A5/Blok DM-03,Angara,Khrunichev State Research and Production Space Center,RUS,True,False,55.4,8.86,773,9600,24500,7000,31000000,2,1,1,,1265.31,train
+ll2_cfg_504,Angara A5/Briz-M,Angara,Khrunichev State Research and Production Space Center,RUS,True,False,55.4,8.86,773,9600,24500,5400,31000000,3,3,0,,1265.31,train
+ll2_cfg_69,Antares 110,Antares,Orbital Sciences Corporation,USA,False,False,40.5,3.9,276,3265,4450,,,2,2,0,,,train
+ll2_cfg_63,Antares 120,Antares,Orbital Sciences Corporation,USA,False,False,40.5,3.9,276,3265,4600,,80000000,2,2,0,,17391.3,train
+ll2_cfg_59,Antares 130,Antares,Orbital Sciences Corporation,USA,False,False,41.9,3.9,286,3265,5100,,,1,0,1,,,test
+ll2_cfg_165,Antares 230,Antares,Northrop Grumman Space Systems,USA,False,False,42.5,3.9,286,3844,7800,,,5,5,0,1.0,,train
+ll2_cfg_210,Antares 230+,Antares,Northrop Grumman Space Systems,USA,False,False,42.5,3.9,286,3844,8200,,,8,8,0,1.0,,train
+ll2_cfg_487,Antares 330,Antares,Northrop Grumman Space Systems,USA,False,False,,,,7200,,,,0,0,0,,,train
+ll2_cfg_513,Apollo LM Ascent Stage,,Northrop Grumman Space Systems,USA,False,False,2.832,4.29,5,16,,,,6,6,0,1.0,,train
+ll2_cfg_126,Ares I-X,,National Aeronautics and Space Administration,USA,False,False,99.7,3.71,816,12000,,,,1,1,0,,,train
+ll2_cfg_219,Ariane 1,Ariane,Aérospatiale,FRA,False,False,50.0,3.8,207,2771,1400,1850,,11,9,2,0.8182,,train
+ll2_cfg_220,Ariane 2,Ariane,Aérospatiale,FRA,False,False,49.13,3.8,215,2580,,2175,,6,5,1,0.8333,,train
+ll2_cfg_221,Ariane 3,Ariane,Aérospatiale,FRA,False,False,49.13,3.8,234,5100,,2700,,11,10,1,0.9091,,train
+ll2_cfg_222,Ariane 40,Ariane,Aérospatiale,FRA,False,False,55.6,3.8,245,2720,4600,2290,,7,7,0,1.0,,train
+ll2_cfg_223,Ariane 42L,Ariane,Aérospatiale,FRA,False,False,55.6,3.8,367,4600,7000,3590,,13,13,0,1.0,,train
+ll2_cfg_224,Ariane 42P,Ariane,Aérospatiale,FRA,False,False,55.9,3.8,323,3944,6000,2990,,15,14,1,0.9333,,train
+ll2_cfg_225,Ariane 44L,Ariane,Aérospatiale,FRA,False,False,58.7,3.8,484,5395,10200,4950,,40,39,1,0.975,,train
+ll2_cfg_226,Ariane 44LP,Ariane,Aérospatiale,FRA,False,False,58.4,3.8,420,5270,8000,4170,,26,25,1,0.9615,,train
+ll2_cfg_227,Ariane 44P,Ariane,Aérospatiale,FRA,False,False,56.9,3.8,357,5140,6500,3390,,15,15,0,1.0,,train
+ll2_cfg_20,Ariane 5 ECA,Ariane,ArianeGroup,FRA,False,False,57.7,5.4,780,11400,,10500,,73,71,2,0.9726,,train
+ll2_cfg_215,Ariane 5 ECA+,Ariane,ArianeGroup,FRA,False,False,57.7,5.4,780,11400,,10200,,11,11,0,1.0,,train
+ll2_cfg_18,Ariane 5 ES,Ariane,ArianeGroup,FRA,False,False,45.7,5.4,746,11400,21000,,,8,8,0,1.0,,val
+ll2_cfg_131,Ariane 5 G,Ariane,ArianeGroup,FRA,False,False,57.0,5.4,737,,12200,6900,,16,13,3,0.8125,,train
+ll2_cfg_146,Ariane 5 G+,Ariane,ArianeGroup,FRA,False,False,55.0,5.4,750,12000,,7100,,3,3,0,,,train
+ll2_cfg_149,Ariane 5 GS,Ariane,ArianeGroup,FRA,False,False,55.0,5.4,750,12000,,6600,,6,6,0,1.0,,train
+ll2_cfg_506,Ariane 6,Ariane,ArianeGroup,FRA,True,False,63.0,5.4,,,21650,11500,,0,0,0,,,train
+ll2_cfg_121,Ariane 62,Ariane,ArianeGroup,FRA,True,False,63.0,5.4,530,10370,10900,5100,85000000,6,6,0,1.0,7798.17,val
+ll2_cfg_553,Ariane 62 Block 2,Ariane,ArianeGroup,FRA,True,False,,,,,,,,0,0,0,,,val
+ll2_cfg_512,Ariane 64 Block 2,Ariane,ArianeGroup,FRA,True,False,63.0,5.4,,,21900,11700,,1,1,0,,,train
+ll2_cfg_116,Ariane 64,Ariane,ArianeGroup,FRA,False,False,63.0,5.4,860,15000,21650,12000,90000000,2,2,0,,4157.04,train
+ll2_cfg_218,ASLV,ASLV,Indian Space Research Organization,IND,False,False,23.5,1.0,41,910,150,,,4,2,2,,,test
+ll2_cfg_213,Astra Rocket 3,Astra Rocket,Astra Space,USA,False,False,11.6,1.32,,140,100,,2500000,7,2,5,0.2857,25000.0,train
+ll2_cfg_526,Astra Rocket 4,Astra Rocket,Astra Space,USA,True,False,18.9,1.8,30,310,750,,5000000,0,0,0,,6666.67,train
+ll2_cfg_228,Athena I,Athena,Lockheed Martin,USA,False,False,18.9,2.36,66,1900,820,,,4,3,1,,,test
+ll2_cfg_229,Athena II,Athena,Lockheed Martin,USA,False,False,28.2,2.36,120,1900,2065,593,,3,2,1,,,train
+ll2_cfg_230,Atlas-Able,Atlas,Convair,USA,False,False,35.0,3.05,120,1587,,250,,3,0,3,,,val
+ll2_cfg_231,Atlas LV-3 Agena A,Atlas,Convair,USA,False,False,36.0,3.0,155,1340,1000,,,3,1,2,,,train
+ll2_cfg_183,Atlas LV-3 Agena B,Atlas,United States Air Force,USA,False,False,20.27,3.05,130,363,,,14210000,29,21,8,0.7241,,train
+ll2_cfg_232,Atlas LV-3 Agena D,Atlas,Convair,USA,False,False,36.0,3.0,155,1340,1000,,,15,15,0,1.0,,train
+ll2_cfg_233,SM-65B Atlas,Atlas,Convair,USA,False,False,31.4,3.66,3,,68,,,1,1,0,,,test
+ll2_cfg_234,Atlas SLV-3 Burner-2,Atlas,Convair,USA,False,False,21.0,3.05,120,3824,800,,,2,1,1,,,train
+ll2_cfg_235,Atlas LV-3C Centaur,Atlas,Convair,USA,False,False,33.0,3.05,,1704,,1800,,4,2,2,,,train
+ll2_cfg_236,Atlas LV-3C Centaur D,Atlas,Convair,USA,False,False,33.0,3.05,,1704,,1800,,7,7,0,1.0,,train
+ll2_cfg_237,SM-65D Atlas,Atlas,Convair,USA,False,False,25.15,3.0,119,1880,1400,,,9,6,3,0.6667,,train
+ll2_cfg_238,SM-65E Atlas,Atlas,Convair,USA,False,False,,,,,,,,15,15,0,1.0,,train
+ll2_cfg_239,Atlas E Altair,Atlas,Convair,USA,False,False,,,,,210,,,1,1,0,,,val
+ll2_cfg_240,Atlas E MSD,Atlas,Convair,USA,False,False,,,,,800,,,1,0,1,,,train
+ll2_cfg_241,Atlas E/OIS,Atlas,Convair,USA,False,False,,,,,870,,,1,1,0,,,train
+ll2_cfg_242,Atlas E/SGS-2,Atlas,Convair,USA,False,False,,,,,,,,4,4,0,,,train
+ll2_cfg_243,Atlas E/SVS,Atlas,Convair,USA,False,False,,,,,,,,1,0,1,,,train
+ll2_cfg_244,SM-65F Atlas,Atlas,Convair,USA,False,False,,,,,,,,9,8,1,0.8889,,train
+ll2_cfg_245,Atlas F/Agena D,Atlas,Convair,USA,False,False,,,,,,,,1,1,0,,,train
+ll2_cfg_246,Atlas F MSD,Atlas,Convair,USA,False,False,,,,,,,,3,3,0,,,val
+ll2_cfg_247,Atlas F/OIS,Atlas,Convair,USA,False,False,,,,,,,,1,1,0,,,train
+ll2_cfg_248,Atlas F/PTS,Atlas,Convair,USA,False,False,,,,,,,,1,1,0,,,train
+ll2_cfg_249,Atlas F/SVS,Atlas,Convair,USA,False,False,,,,,,,,7,7,0,1.0,,train
+ll2_cfg_250,Atlas G Centaur,Atlas,Convair,USA,False,False,38.0,3.05,166,1896,3630,,,7,6,1,0.8571,,train
+ll2_cfg_251,Atlas H,Atlas,Convair,USA,False,False,27.0,3.05,150,2282,3630,2255,,5,5,0,1.0,,train
+ll2_cfg_252,Atlas I,Atlas,General Dynamics,USA,False,False,43.9,3.05,164,1939,5900,,,11,9,2,0.8182,,train
+ll2_cfg_253,Atlas II,Atlas,Lockheed Martin,USA,False,False,47.54,3.04,204,2479,6580,2810,,10,10,0,1.0,,train
+ll2_cfg_254,Atlas IIA,Atlas,Lockheed Martin,USA,False,False,47.54,3.04,204,2479,6580,2810,,23,23,0,1.0,,val
+ll2_cfg_255,Atlas IIAS,Atlas,Lockheed Martin,USA,False,False,47.54,3.04,204,4391,6580,2810,,30,30,0,1.0,,train
+ll2_cfg_471,Atlas IIIA,Atlas,Lockheed Martin,USA,False,False,52.8,3.05,214,4149,8640,4055,,2,2,0,,,val
+ll2_cfg_472,Atlas IIIB,Atlas,Lockheed Martin,USA,False,False,52.8,3.05,213,4149,10218,4498,,4,4,0,,,train
+ll2_cfg_162,Atlas LV-3B,Atlas,National Aeronautics and Space Administration,USA,False,False,28.7,3.0,120,1300,1360,,,10,7,3,0.7,,train
+ll2_cfg_256,Atlas SLV-3,Atlas,Convair,USA,False,False,21.0,3.05,120,3824,800,,,4,4,0,,,train
+ll2_cfg_259,Atlas SLV-3A Agena D,Atlas,Convair,USA,False,False,36.0,3.0,155,1340,1000,,,12,11,1,0.9167,,train
+ll2_cfg_257,Atlas SLV-3 Agena B,Atlas,Convair,USA,False,False,36.0,3.0,155,1340,1000,,,1,1,0,,,train
+ll2_cfg_258,Atlas SLV-3 Agena D,Atlas,Convair,USA,False,False,36.0,3.0,155,1340,1000,,,48,44,4,0.9167,,train
+ll2_cfg_260,Atlas SLV-3C Centaur,Atlas,Convair,USA,False,False,21.0,3.05,120,,800,,,17,15,2,0.8824,,train
+ll2_cfg_261,Atlas SLV-3D Centaur,Atlas,Convair,USA,False,False,21.0,3.05,120,,800,,,32,30,2,0.9375,,test
+ll2_cfg_182,Atlas V,Atlas,United Launch Alliance,USA,True,False,60.0,,650,3826,,,109000000,0,0,0,,,train
+ll2_cfg_16,Atlas V 401,Atlas,United Launch Alliance,USA,False,False,58.3,3.8,590,3827,9050,4950,115000000,41,41,0,1.0,12707.18,train
+ll2_cfg_83,Atlas V 411,Atlas,United Launch Alliance,USA,False,False,58.3,3.8,,,8080,5950,115000000,6,6,0,1.0,14232.67,train
+ll2_cfg_28,Atlas V 421,Atlas,United Launch Alliance,USA,False,False,58.3,3.8,433,,14067,6890,123000000,9,9,0,1.0,8743.87,train
+ll2_cfg_111,Atlas V 431,Atlas,United Launch Alliance,USA,False,False,59.1,3.8,479,,15260,7700,130000000,3,3,0,,8519.0,train
+ll2_cfg_4,Atlas V 501,Atlas,United Launch Alliance,USA,False,False,58.3,3.8,334,3827,8210,3780,120000000,8,8,0,1.0,14616.32,test
+ll2_cfg_214,Atlas V 511,Atlas,United Launch Alliance,USA,False,False,58.3,3.81,590,5490,10986,5250,130000000,1,1,0,,11833.24,test
+ll2_cfg_262,Atlas V 521,Atlas,United Launch Alliance,USA,False,False,58.3,3.81,590,7203,13490,6475,135000000,2,2,0,,10007.41,train
+ll2_cfg_8,Atlas V 531,Atlas,United Launch Alliance,USA,False,False,60.0,3.8,479,,15530,7450,140000000,5,5,0,1.0,9014.81,train
+ll2_cfg_1,Atlas V 541,Atlas,United Launch Alliance,USA,False,False,60.0,3.8,479,,17410,8290,145000000,9,9,0,1.0,8328.55,train
+ll2_cfg_27,Atlas V 551,Atlas,United Launch Alliance,USA,False,False,59.7,3.8,573,12269,18850,8890,153000000,23,23,0,1.0,8116.71,train
+ll2_cfg_166,Atlas V N22,Atlas,United Launch Alliance,USA,True,False,58.0,3.8,,,13034,,110000000,3,3,0,,8439.47,train
+ll2_cfg_535,Baguette One,Baguette,HyPrSpace,FRA,True,False,10.0,0.8,,,0,0,,0,0,0,,,train
+ll2_cfg_263,Black Arrow,,Royal Aircraft Establishment,GBR,False,False,13.0,2.0,18,256,135,,,2,1,1,,,train
+ll2_cfg_481,Black Brant IX,,Magellan Aerospace Corporation,CAN,True,False,12.2,0.46,2,,,,,3,3,0,,,test
+ll2_cfg_264,Blue Scout II,Blue Scout,Vought,USA,False,False,24.0,1.02,16,471,30,,,1,0,1,,,train
+ll2_cfg_265,Blue Scout Jr,Blue Scout,Vought,USA,False,False,12.4,0.79,5,222,,,,8,8,0,1.0,,train
+ll2_cfg_524,Callisto,,National Center of Space Research,FRA,True,True,13.0,1.1,,46,,,,0,0,0,,,train
+ll2_cfg_461,Ceres-1,Ceres-1,Galactic Energy,CHN,True,False,,,,598,350,,,17,15,2,0.8824,,train
+ll2_cfg_500,Ceres-1S,Ceres-1,Galactic Energy,CHN,True,False,,,,598,350,,,7,7,0,1.0,,train
+ll2_cfg_546,Ceres-2,,Galactic Energy,CHN,True,False,,3.35,98,,2000,,,1,0,1,,,train
+ll2_cfg_515,Chang'e Sample Ascender,,China Aerospace Science and Technology Corporation,CHN,False,False,,,,,,,,2,2,0,,,train
+ll2_cfg_495,Chollima-1,Taepodong,Korean Committee of Space Technology,PRK,True,False,,,,,,,,4,1,3,,,train
+ll2_cfg_272,Commercial Titan III,Titan,Lockheed Martin,USA,False,False,47.3,3.05,680,,14742,4990,,4,4,0,,,val
+ll2_cfg_273,Conestoga 1620,,Space Services Inc.,USA,False,False,,,,,1179,,,1,0,1,,,train
+ll2_cfg_275,Delta 0300,Delta,McDonnell Douglas,USA,False,False,34.0,2.44,90,1590,,,,3,2,1,,,train
+ll2_cfg_276,Delta 0900,Delta,McDonnell Douglas,USA,False,False,34.0,2.44,116,2500,1300,,,2,2,0,,,test
+ll2_cfg_277,Delta 1410,Delta,McDonnell Douglas,USA,False,False,35.0,2.44,110,1863,,,,1,1,0,,,train
+ll2_cfg_278,Delta 1604,Delta,McDonnell Douglas,USA,False,False,35.0,2.44,118,,600,,,2,2,0,,,train
+ll2_cfg_279,Delta 1900,Delta,McDonnell Douglas,USA,False,False,35.0,2.44,130,2410,,,,1,1,0,,,train
+ll2_cfg_280,Delta 1910,Delta,McDonnell Douglas,USA,False,False,35.0,2.44,130,2410,,,,1,1,0,,,train
+ll2_cfg_281,Delta 1913,Delta,McDonnell Douglas,USA,False,False,35.0,2.44,130,2410,,,,1,1,0,,,train
+ll2_cfg_282,Delta 1914,Delta,McDonnell Douglas,USA,False,False,35.0,2.44,130,2287,,,,2,2,0,,,train
+ll2_cfg_283,Delta 2310,Delta,McDonnell Douglas,USA,False,False,35.0,2.44,131,1737,,,,3,3,0,,,train
+ll2_cfg_284,Delta 2313,Delta,McDonnell Douglas,USA,False,False,35.0,2.44,131,1737,500,,,3,2,1,,,train
+ll2_cfg_285,Delta 2910,Delta,McDonnell Douglas,USA,False,False,35.0,2.44,131,2560,,,,6,6,0,1.0,,train
+ll2_cfg_286,Delta 2913,Delta,McDonnell Douglas,USA,False,False,35.0,2.44,131,2560,2000,700,,2,2,0,,,train
+ll2_cfg_287,Delta 2914,Delta,McDonnell Douglas,USA,False,False,35.0,2.44,130,2287,724,,,30,28,2,0.9333,,train
+ll2_cfg_288,Delta 3910,Delta,McDonnell Douglas,USA,False,False,35.0,2.44,190,3188,,,,3,3,0,,,train
+ll2_cfg_289,Delta 3910/PAM,Delta,McDonnell Douglas,USA,False,False,35.0,2.44,191,3188,1087,,,7,7,0,1.0,,train
+ll2_cfg_290,Delta 3913,Delta,McDonnell Douglas,USA,False,False,35.0,2.44,190,3188,,,,1,1,0,,,train
+ll2_cfg_291,Delta 3914,Delta,McDonnell Douglas,USA,False,False,35.0,2.44,185,3046,951,954,,12,10,2,0.8333,,train
+ll2_cfg_292,Delta 3920,Delta,McDonnell Douglas,USA,False,False,36.0,2.44,191,3188,,,,3,3,0,,,test
+ll2_cfg_293,Delta 3920-8,Delta,McDonnell Douglas,USA,False,False,36.0,2.44,190,3188,,,,1,1,0,,,val
+ll2_cfg_294,Delta 3920/PAM,Delta,McDonnell Douglas,USA,False,False,36.0,2.44,191,3188,1280,,,6,6,0,1.0,,train
+ll2_cfg_295,Delta 3924,Delta,McDonnell Douglas,USA,False,False,36.0,2.44,191,3188,,954,,5,5,0,1.0,,train
+ll2_cfg_296,Delta 4925-8,Delta,McDonnell Douglas,USA,False,False,34.0,2.44,200,3468,3400,1200,34220000,2,2,0,,10064.71,train
+ll2_cfg_297,Delta 5920-8,Delta,McDonnell Douglas,USA,False,False,34.0,2.44,201,3468,3848,1405,34220000,1,1,0,,8892.93,train
+ll2_cfg_189,Thor-Delta,Thor,United States Air Force,USA,False,False,18.42,2.44,54,759,,,4930000,3,3,0,,,train
+ll2_cfg_298,Delta II 6920-10,Delta,McDonnell Douglas,USA,False,False,39.0,2.44,219,3790,,,,2,2,0,,,train
+ll2_cfg_309,Delta II 7925-8,Delta,McDonnell Douglas,USA,False,False,38.2,2.44,220,4000,,,,2,2,0,,,train
+ll2_cfg_159,Delta II 7925,Delta,United Launch Alliance,USA,False,False,38.9,2.4,232,,,1840,51000000,36,34,2,0.9444,,train
+ll2_cfg_155,Delta II 7925H-9.5,Delta,United Launch Alliance,USA,False,False,38.9,2.4,286,,,2190,51000000,3,3,0,,,train
+ll2_cfg_307,Delta II 7920-8,Delta,McDonnell Douglas,USA,False,False,39.0,2.44,220,4000,,,,1,1,0,,,train
+ll2_cfg_151,Delta II 7925-10L,Delta,United Launch Alliance,USA,False,False,38.9,2.4,232,,,1840,51000000,2,2,0,,,train
+ll2_cfg_304,Delta II 7425-9.5,Delta,McDonnell Douglas,USA,False,False,39.0,2.44,170,3020,,,,3,3,0,,,train
+ll2_cfg_467,Delta II 7420-10C,Delta,McDonnell Douglas,USA,False,False,39.0,2.44,170,3020,,,,8,8,0,1.0,,train
+ll2_cfg_306,Delta II 7920-10L,Delta,McDonnell Douglas,USA,False,False,40.0,2.44,232,,,,,2,2,0,,,train
+ll2_cfg_308,Delta II 7925-10,Delta,McDonnell Douglas,USA,False,False,38.9,2.44,231,4000,,,,2,2,0,,,val
+ll2_cfg_300,Delta II 6925,Delta,McDonnell Douglas,USA,False,False,38.1,2.44,218,3981,3981,1446,,13,13,0,1.0,,train
+ll2_cfg_301,Delta II 6925-8,Delta,McDonnell Douglas,USA,False,False,39.0,2.44,219,,1500,,,1,1,0,,,train
+ll2_cfg_302,Delta II 7326-9.5,Delta,McDonnell Douglas,USA,False,False,38.4,2.44,155,2500,,,,3,3,0,,,train
+ll2_cfg_154,Delta II 7920H-10C,Delta,United Launch Alliance,USA,False,False,38.9,2.4,256,,5959,2120,51000000,2,2,0,,8558.48,train
+ll2_cfg_303,Delta II 7425-10,Delta,McDonnell Douglas,USA,False,False,39.0,2.44,170,3020,,,,1,1,0,,,test
+ll2_cfg_140,Delta II 7925-9.5,Delta,United Launch Alliance,USA,False,False,38.9,2.4,232,,,1840,51000000,26,26,0,1.0,,train
+ll2_cfg_75,Delta II 7920-10,Delta,United Launch Alliance,USA,False,False,38.7,2.4,251,,5959,1828,51000000,9,9,0,1.0,8558.48,train
+ll2_cfg_81,Delta II 7920H,Delta,United Launch Alliance,USA,False,False,38.9,2.44,232,,5959,2120,51000000,1,1,0,,8558.48,train
+ll2_cfg_99,Delta II 7920-10C,Delta,United Launch Alliance,USA,False,False,38.7,2.4,,,5959,1842,51000000,17,17,0,1.0,8558.48,train
+ll2_cfg_305,Delta II 7426-9.5,Delta,McDonnell Douglas,USA,False,False,39.0,2.44,170,3020,,,,1,1,0,,,train
+ll2_cfg_157,Delta II 7925-10C,Delta,United Launch Alliance,USA,False,False,38.9,2.4,286,,,1840,51000000,1,1,0,,,test
+ll2_cfg_88,Delta II 7320,Delta,United Launch Alliance,USA,False,False,38.9,2.44,168,,2800,,51000000,6,6,0,1.0,18214.29,train
+ll2_cfg_299,Delta II 6920-8,Delta,McDonnell Douglas,USA,False,False,39.0,2.44,219,3790,,,,1,1,0,,,train
+ll2_cfg_105,Delta II 7420-10C,Delta,United Launch Alliance,USA,False,False,38.7,2.4,,1895,3099,,51000000,6,6,0,1.0,16456.92,train
+ll2_cfg_56,Delta II 7320-10C,Delta,United Launch Alliance,USA,False,False,38.9,2.44,168,,2800,,51000000,6,6,0,1.0,18214.29,test
+ll2_cfg_310,Delta III 8930,Delta,Boeing,USA,False,False,35.0,4.0,301,4889,8290,3810,,3,1,2,,,train
+ll2_cfg_21,Delta IV Heavy,Delta,United Launch Alliance,USA,False,False,72.0,5.0,733,8674,28370,14210,350000000,16,15,1,0.9375,12336.98,train
+ll2_cfg_458,Delta IV M,Delta,United Launch Alliance,USA,False,False,63.0,5.0,250,2890,8600,3900,164000000,3,3,0,,19069.77,train
+ll2_cfg_33,"Delta IV M+(4,2)",Delta,United Launch Alliance,USA,False,False,66.2,5.0,292,4200,11920,6270,350000000,15,15,0,1.0,29362.42,val
+ll2_cfg_35,"Delta IV M+(5,2)",Delta,United Launch Alliance,USA,False,False,72.0,5.0,404,5860,11700,6565,80000000,3,3,0,,6837.61,train
+ll2_cfg_23,"Delta IV M+(5,4)",Delta,United Launch Alliance,USA,False,False,70.7,5.0,404,5860,13730,6890,,8,8,0,1.0,,train
+ll2_cfg_311,Diamant A,Diamant,Société d'étude et de réalisation d'engins balistiques,FRA,False,False,18.95,1.34,18,301,160,,,4,4,0,,,train
+ll2_cfg_312,Diamant B,Diamant,Société d'étude et de réalisation d'engins balistiques,FRA,False,False,23.5,1.34,18,396,160,,,5,3,2,0.6,,train
+ll2_cfg_313,Diamant BP4,Diamant,Société d'étude et de réalisation d'engins balistiques,FRA,False,False,21.6,1.34,18,396,160,,,3,3,0,,,train
+ll2_cfg_31,Dnepr 1,,ISC Kosmotras,RUS,False,False,,,,,,,,22,21,1,0.9545,,train
+ll2_cfg_26,Electron,,Rocket Lab,USA,True,False,18.0,1.2,13,162,300,,6000000,99,95,4,0.9596,20000.0,train
+ll2_cfg_314,Energiya,Energiya,Energia,RUS,False,False,97.0,17.65,2524,35129,88000,,,1,0,1,,,test
+ll2_cfg_315,Energiya/Buran,Energiya,Energia,RUS,False,True,97.0,17.65,2629,35301,90400,,,1,1,0,,,test
+ll2_cfg_112,Epsilon,Epsilon,Japan Aerospace Exploration Agency,JPN,True,False,24.4,2.5,91,2271,,,39000000,6,5,1,0.8333,,train
+ll2_cfg_115,Epsilon S,Epsilon,Japan Aerospace Exploration Agency,JPN,True,False,24.4,2.5,91,2158,,,39000000,0,0,0,,,test
+ll2_cfg_460,Eris Block 1,Eris,Gilmour Space Technologies,"AUS,SGP",True,False,25.0,2.0,,,305,,,1,0,1,,,val
+ll2_cfg_316,Europa I,Europa,European Launcher Development Organisation,"FRA,ITA,DEU,GBR,BEL,NLD,AUS",False,False,33.0,3.05,104,1500,200,200,,3,0,3,,,train
+ll2_cfg_317,Europa II,Europa,European Launcher Development Organisation,"FRA,ITA,DEU,GBR,BEL,NLD,AUS",False,False,31.7,3.05,111,1512,1160,360,,1,0,1,,,test
+ll2_cfg_133,Falcon 1,Falcon,SpaceX,USA,False,False,22.25,1.7,33,454,470,,7000000,5,2,3,0.4,14893.62,train
+ll2_cfg_164,Falcon 9 Block 5,Falcon,SpaceX,USA,True,True,70.0,3.65,549,7607,22800,8300,52000000,644,643,1,0.9984,2280.7,train
+ll2_cfg_169,Falcon 9 v1.0,Falcon,SpaceX,USA,False,False,47.8,3.65,318,3807,9300,3400,59000000,5,4,1,0.8,6344.09,train
+ll2_cfg_145,Falcon 9 Block 4,Falcon,SpaceX,USA,False,True,71.0,3.65,546,6804,22800,8305,50000000,12,12,0,1.0,2192.98,train
+ll2_cfg_55,Falcon 9 Full Thrust,Falcon,SpaceX,USA,False,True,71.0,3.65,546,6804,22800,8305,50000000,25,24,1,0.96,2192.98,train
+ll2_cfg_14,Falcon 9 v1.1,Falcon,SpaceX,USA,False,False,68.4,3.65,506,5883,13150,4850,61200000,15,14,1,0.9333,4653.99,val
+ll2_cfg_161,Falcon Heavy,Falcon,SpaceX,USA,True,True,70.0,12.2,1400,22819,63800,26700,90000000,14,14,0,1.0,1410.66,train
+ll2_cfg_318,Feng Bao 1,,China Aerospace Science and Technology Corporation,CHN,False,False,33.0,3.35,191,3000,2500,,,8,4,4,0.5,,train
+ll2_cfg_179,Firefly Alpha,Firefly Alpha,Firefly Aerospace,USA,True,False,29.6,1.82,54,736,1000,,15000000,7,4,3,0.5714,15000.0,train
+ll2_cfg_551,Firefly Alpha Block 2,Firefly Alpha,Firefly Aerospace,USA,True,False,31.6,1.82,54,736,1030,,15000000,0,0,0,,14563.11,train
+ll2_cfg_497,Gaganyaan Abort Test Booster,,Indian Space Research Organization,IND,True,False,,,,760,,,,1,1,0,,,train
+ll2_cfg_503,Gravity-1,,Orienspace Technology,CHN,False,False,29.4,,405,5880,6500,,,4,4,0,,,val
+ll2_cfg_544,Gravity-2,,Orienspace Technology,CHN,True,True,70.0,4.2,715,9700,21500,5900,,0,0,0,,,train
+ll2_cfg_5,GSLV,GSLV,Indian Space Research Organization,IND,True,False,49.13,2.8,414,4860,5000,2500,47000000,6,2,4,0.3333,9400.0,train
+ll2_cfg_168,GSLV Mk. II,GSLV,Indian Space Research Organization,IND,True,False,49.0,2.8,401,7420,0,2500,,14,12,2,0.8571,,train
+ll2_cfg_319,H-I,,Mitsubishi Heavy Industries,JPN,False,False,42.0,2.44,142,,3200,1100,,9,9,0,1.0,,train
+ll2_cfg_30,H3,H3,Mitsubishi Heavy Industries,JPN,True,False,63.0,5.27,574,,,6500,50000000,0,0,0,,,train
+ll2_cfg_486,H3-22,H3,Mitsubishi Heavy Industries,JPN,True,False,63.0,5.27,,7542,,5400,50000000,7,5,2,0.7143,,train
+ll2_cfg_204,H3-24,H3,Mitsubishi Heavy Industries,JPN,True,False,63.0,5.27,,12142,,7900,50000000,2,2,0,,,train
+ll2_cfg_203,H3-30,H3,Mitsubishi Heavy Industries,JPN,True,False,63.0,5.27,274,4413,,2300,50000000,1,1,0,,,train
+ll2_cfg_530,HANBIT-Nano,HANBIT,Innospace,KOR,True,False,21.8,1.4,18,245,,,,1,0,1,,,train
+ll2_cfg_529,HANBIT-TLV,HANBIT,Innospace,KOR,False,False,16.3,1.0,9,150,,,,1,1,0,,,train
+ll2_cfg_474,Hapith I,,TiSPACE,TWN,True,False,10.2,2.2,3,,,,,1,0,1,,,train
+ll2_cfg_320,H-II,H-II,Mitsubishi Heavy Industries,JPN,False,False,49.0,4.0,260,,10060,3930,,7,6,1,0.8571,,train
+ll2_cfg_321,H-IIA 2022,H-II,Mitsubishi Heavy Industries,JPN,False,False,53.0,4.0,316,,,4500,,3,3,0,,,train
+ll2_cfg_322,H-IIA 2024,H-II,Mitsubishi Heavy Industries,JPN,False,False,53.0,4.0,347,,,5000,,7,6,1,0.8571,,test
+ll2_cfg_48,H-IIA 204,H-II,Mitsubishi Heavy Industries,JPN,False,False,53.0,4.0,445,2260,,6000,90000000,5,5,0,1.0,,train
+ll2_cfg_32,H-IIA 202,H-II,Mitsubishi Heavy Industries,JPN,False,False,53.0,4.0,285,2260,10000,4100,90000000,35,35,0,1.0,9000.0,train
+ll2_cfg_77,H-IIB 304,H-II,Mitsubishi Heavy Industries,JPN,False,False,56.6,5.2,551,9000,16500,8000,112500000,9,9,0,1.0,6818.18,train
+ll2_cfg_193,Hyperbola-1,,i-Space,CHN,True,False,38.0,2.5,,,300,,,8,4,4,0.5,,train
+ll2_cfg_543,Hyperbola-3,,i-Space,CHN,True,True,69.6,4.2,491,7500,14000,,,0,0,0,,,train
+ll2_cfg_324,Juno-I,Redstone,Chrysler,USA,False,False,21.2,1.78,29,416,11,,,6,3,3,0.5,,val
+ll2_cfg_188,Juno II,,Army Ballistic Missile Agency,USA,False,False,24.0,2.67,55,654,41,,,10,5,5,0.5,,train
+ll2_cfg_325,K65M-RB,,Production Corporation Polyot,RUS,False,False,32.4,2.4,109,1485,,,,4,4,0,,,train
+ll2_cfg_507,Kii-based Advanced & Instant ROcket System,,Space One,JPN,True,False,18.0,1.35,,,250,,9000000,3,0,3,,36000.0,train
+ll2_cfg_125,Kaituozhe-2,Kaituozhe,China Aerospace Science and Industry Corporation,CHN,False,False,,,,,,,,1,1,0,,,train
+ll2_cfg_326,Kaituozhe-1,Kaituozhe,China Aerospace Science and Industry Corporation,CHN,False,False,18.0,2.0,20,,100,,,3,0,3,,,train
+ll2_cfg_483,Kinetica 1,,CAS Space,CHN,True,False,30.0,2.65,135,1961,2000,,,16,15,1,0.9375,,train
+ll2_cfg_541,Kinetica 2,,CAS Space,CHN,True,True,52.0,3.35,625,7515,12000,,,2,2,0,,,train
+ll2_cfg_327,Kosmos 11K63,Kosmos,Strategic Rocket Forces,RUS,False,False,31.0,1.6,48,,300,,,126,118,8,0.9365,,train
+ll2_cfg_328,Kosmos 11K65,Kosmos,Strategic Rocket Forces,RUS,False,False,26.0,2.4,107,,1400,,,4,2,2,,,train
+ll2_cfg_190,Kosmos-2I,Kosmos,Strategic Rocket Forces,RUS,False,False,31.0,1.6,48,,300,,,38,26,12,0.6842,,train
+ll2_cfg_102,Kosmos-3M (11K65M),Kosmos,Russian Space Forces,RUS,False,False,,,,,,,,445,423,22,0.9506,,val
+ll2_cfg_329,Kosmos 65S3,Kosmos,Strategic Rocket Forces,RUS,False,False,26.0,2.4,107,,1400,,,8,7,1,0.875,,train
+ll2_cfg_147,KSLV 2 TLV,KSLV,Korea Aerospace Research Institute,KOR,False,False,,,,,,,,1,1,0,,,train
+ll2_cfg_65,Kuaizhou,Kuaizhou,China Aerospace Science and Industry Corporation,CHN,False,False,11.0,1.4,20,,0,0,,2,2,0,,,train
+ll2_cfg_194,Kuaizhou 11,Kuaizhou,ExPace,CHN,True,False,,2.2,78,,1000,,,7,6,1,0.8571,,test
+ll2_cfg_135,Kuaizhou 1A,Kuaizhou,ExPace,CHN,True,False,19.4,1.4,30,,300,,,31,28,3,0.9032,,train
+ll2_cfg_330,Kwangmyongsong,,Korean Committee of Space Technology,PRK,False,False,,,,,,,,0,0,0,,,test
+ll2_cfg_333,Lambda 4S,,Institute of Space and Astronautical Science,JPN,False,False,16.5,0.74,9,,26,,,5,1,4,0.2,,train
+ll2_cfg_141,LauncherOne,,Virgin Orbit,USA,False,False,16.0,1.6,30,327,500,,12000000,6,4,2,0.6667,24000.0,train
+ll2_cfg_473,Little Joe,Little Joe,North American Aviation,USA,False,False,17.0,,,,,,,8,3,5,0.375,,train
+ll2_cfg_470,Little Joe II,Little Joe,Convair,USA,False,False,26.2,3.9,,,,,,5,4,1,0.8,,train
+ll2_cfg_120,Long March (Unknown Variant),Long March,China Aerospace Science and Technology Corporation,CHN,True,False,,,,,,,,0,0,0,,,train
+ll2_cfg_92,Long March 1,Long March,China Aerospace Science and Technology Corporation,CHN,False,False,,,,,,,,2,2,0,,,train
+ll2_cfg_536,Long March 10,Long March,China Aerospace Science and Technology Corporation,CHN,True,False,92.5,5.0,2189,26250,70000,,,0,0,0,,,train
+ll2_cfg_537,Long March 10A,Long March,China Aerospace Science and Technology Corporation,CHN,True,True,67.4,5.0,750,8750,18000,,,0,0,0,,,train
+ll2_cfg_554,Long March 10B,Long March,China Aerospace Science and Technology Corporation,CHN,True,True,63.0,5.0,760,8728,16000,,,1,1,0,,,train
+ll2_cfg_47,Long March 11,Long March,China Aerospace Science and Technology Corporation,CHN,True,False,20.0,2.0,58,1177,500,0,,18,18,0,1.0,,train
+ll2_cfg_517,Long March 12,Long March,China Aerospace Science and Technology Corporation,CHN,True,False,62.0,3.8,428,5000,12000,,,9,9,0,1.0,,test
+ll2_cfg_538,Long March 12A,Long March,China Aerospace Science and Technology Corporation,CHN,True,True,69.0,3.8,,5250,12000,,,1,1,0,,,val
+ll2_cfg_552,Long March 12B,Long March,China Aerospace Science and Technology Corporation,CHN,True,True,72.0,4.37,,7940,20000,,,1,1,0,,,val
+ll2_cfg_266,Long March 2A,Long March,China Aerospace Science and Technology Corporation,CHN,False,False,31.17,3.35,190,2786,1800,,,4,3,1,,,train
+ll2_cfg_61,Long March 2C,Long March,China Aerospace Science and Technology Corporation,CHN,True,False,42.0,3.35,233,,3850,,,67,66,1,0.9851,,train
+ll2_cfg_267,Long March 2C/SD,Long March,China Aerospace Science and Technology Corporation,CHN,False,False,42.0,3.35,192,2786,3850,,,7,7,0,1.0,,train
+ll2_cfg_269,Long March 2C/SM,Long March,China Aerospace Science and Technology Corporation,CHN,False,False,42.0,3.35,233,2962,3850,1440,,2,2,0,,,train
+ll2_cfg_66,Long March 2C/SMA,Long March,China Aerospace Science and Technology Corporation,CHN,False,False,,,,,,,,3,3,0,,,train
+ll2_cfg_156,Long March 2C/YZ-1S,Long March,China Aerospace Science and Technology Corporation,CHN,True,False,42.0,3.35,233,2962,3850,1250,,10,9,1,0.9,,train
+ll2_cfg_17,Long March 2D,Long March,China Aerospace Science and Technology Corporation,CHN,True,False,38.3,3.35,232,2962,3500,0,30000000,101,100,1,0.9901,8571.43,test
+ll2_cfg_176,Long March 2D/YZ-3,Long March,China Aerospace Science and Technology Corporation,CHN,True,False,,,,,,,,4,4,0,,,train
+ll2_cfg_268,Long March 2E,Long March,China Aerospace Science and Technology Corporation,CHN,False,False,49.686,7.85,462,5923,9200,,,7,5,2,0.7143,,train
+ll2_cfg_79,Long March 2F,Long March,China Aerospace Science and Technology Corporation,CHN,False,False,62.0,3.35,464,5985,8400,,,7,7,0,1.0,,val
+ll2_cfg_84,Long March 2F/G,Long March,China Aerospace Science and Technology Corporation,CHN,True,False,62.0,3.35,464,,8399,,,22,22,0,1.0,,train
+ll2_cfg_270,Long March 3,Long March,China Aerospace Science and Technology Corporation,CHN,False,False,23.49,3.35,204,2961,5000,1500,,13,10,3,0.7692,,test
+ll2_cfg_71,Long March 3A,Long March,China Aerospace Science and Technology Corporation,CHN,True,False,52.5,3.35,240,2962,0,2300,,27,27,0,1.0,,train
+ll2_cfg_19,Long March 3B,Long March,China Aerospace Science and Technology Corporation,CHN,True,False,54.8,3.35,426,5923,11500,5100,70000000,24,21,3,0.875,6086.96,train
+ll2_cfg_50,Long March 3B/E,Long March,China Aerospace Science and Technology Corporation,CHN,True,False,56.3,3.35,456,5924,12000,5500,70000000,78,76,2,0.9744,5833.33,train
+ll2_cfg_78,Long March 3B/YZ-1,Long March,China Aerospace Science and Technology Corporation,CHN,True,False,54.8,3.35,425,5923,11500,5100,70000000,15,15,0,1.0,6086.96,train
+ll2_cfg_90,Long March 3C,Long March,China Aerospace Science and Technology Corporation,CHN,True,False,,,,,,,,14,14,0,1.0,,train
+ll2_cfg_51,Long March 3C/E,Long March,China Aerospace Science and Technology Corporation,CHN,True,False,55.64,3.35,344,5923,8000,3900,,3,3,0,,,train
+ll2_cfg_36,Long March 3C/YZ-1,Long March,China Aerospace Science and Technology Corporation,CHN,True,False,54.8,3.35,345,4441,0,4800,,3,3,0,,,test
+ll2_cfg_271,Long March 4A,Long March,China Aerospace Science and Technology Corporation,CHN,False,False,41.9,3.35,249,,4000,,,2,2,0,,,train
+ll2_cfg_10,Long March 4B,Long March,China Aerospace Science and Technology Corporation,CHN,True,False,44.1,3.35,249,2961,4200,1500,,59,58,1,0.9831,,train
+ll2_cfg_64,Long March 4C,Long March,China Aerospace Science and Technology Corporation,CHN,True,False,,,,,,,,60,58,2,0.9667,,train
+ll2_cfg_128,Long March 5,Long March,China Aerospace Science and Technology Corporation,CHN,True,False,57.0,5.0,867,10600,25000,14000,,9,9,0,1.0,,train
+ll2_cfg_208,Long March 5B,Long March,China Aerospace Science and Technology Corporation,CHN,True,False,53.66,5.0,837,10565,25000,,,4,4,0,,,train
+ll2_cfg_508,Long March 5B/YZ-2,Long March,China Aerospace Science and Technology Corporation,CHN,True,False,53.66,5.0,837,10565,,,,3,3,0,,,val
+ll2_cfg_123,Long March 5/YZ-2,Long March,China Aerospace Science and Technology Corporation,CHN,True,False,,,,,,,,2,1,1,,,train
+ll2_cfg_54,Long March 6,Long March,China Aerospace Science and Technology Corporation,CHN,True,False,29.0,3.35,103,,,,,15,15,0,1.0,,train
+ll2_cfg_478,Long March 6A,Long March,China Aerospace Science and Technology Corporation,CHN,True,False,50.0,3.35,530,7230,,,,28,28,0,1.0,,test
+ll2_cfg_510,Long March 6C,Long March,China Aerospace Science and Technology Corporation,CHN,True,False,43.0,3.35,216,2376,4500,,,2,2,0,,,val
+ll2_cfg_100,Long March 7,Long March,China Aerospace Science and Technology Corporation,CHN,True,False,53.1,3.35,,7128,13500,5500,,10,10,0,1.0,,train
+ll2_cfg_216,Long March 7A,Long March,China Aerospace Science and Technology Corporation,CHN,True,False,,,,,,,,18,16,2,0.8889,,test
+ll2_cfg_109,Long March 7/YZ-1A,Long March,China Aerospace Science and Technology Corporation,CHN,True,False,,,,,,,,1,1,0,,,train
+ll2_cfg_462,Long March 8,Long March,China Aerospace Science and Technology Corporation,CHN,True,False,50.34,3.35,356,4800,8100,2800,,6,6,0,1.0,,val
+ll2_cfg_518,Long March 8A,Long March,China Aerospace Science and Technology Corporation,CHN,True,False,50.5,3.35,371,4800,9800,3500,,12,12,0,1.0,,train
+ll2_cfg_477,Long March 8 (Core Only),Long March,China Aerospace Science and Technology Corporation,CHN,True,False,48.0,3.35,198,2400,,,,1,1,0,,,test
+ll2_cfg_514,Luna Ascent Stage,,NPO Lavochkin,RUS,False,False,,,,,,,,3,3,0,,,train
+ll2_cfg_172,Launch Vehicle Mark-3 (GSLV Mk III),GSLV,Indian Space Research Organization,IND,True,False,43.4,4.0,629,11898,10000,5000,46000000,9,9,0,1.0,4600.0,train
+ll2_cfg_547,Maia,,MaiaSpace,FRA,True,True,50.0,3.5,,2940,1500,,,0,0,0,,,val
+ll2_cfg_82,Minotaur C,Minotaur,Orbital ATK,USA,False,False,,,,,,,,4,3,1,,,train
+ll2_cfg_383,Minotaur-C 1110,Minotaur,Orbital Sciences Corporation,USA,True,False,27.9,2.35,73,1320,1320,,,1,1,0,,,train
+ll2_cfg_384,Minotaur-C 2110,Minotaur,Orbital Sciences Corporation,USA,True,False,27.9,2.35,73,1380,1380,,,2,1,1,,,train
+ll2_cfg_385,Minotaur-C 2210,Minotaur,Orbital Sciences Corporation,USA,True,False,29.7,2.35,73,1380,1380,,,1,1,0,,,train
+ll2_cfg_386,Minotaur-C 3110,Minotaur,Orbital Sciences Corporation,USA,True,False,31.6,2.35,73,1380,,,,1,0,1,,,train
+ll2_cfg_387,Minotaur-C 3210,Minotaur,Orbital Sciences Corporation,USA,True,False,31.6,2.35,73,1380,,,,1,1,0,,,val
+ll2_cfg_175,Minotaur I,Minotaur,Orbital Sciences Corporation,USA,True,False,19.21,1.67,36,935,580,,,12,12,0,1.0,,val
+ll2_cfg_108,Minotaur IV HAPS,Minotaur,Orbital Sciences Corporation,USA,True,False,23.9,2.35,86,2200,1750,0,,1,1,0,,,test
+ll2_cfg_85,Minotaur IV+,Minotaur,Orbital Sciences Corporation,USA,True,False,23.9,2.35,86,2200,1950,0,,1,1,0,,,train
+ll2_cfg_52,Minotaur IV,Minotaur,Orbital ATK,USA,True,False,23.9,2.35,86,2200,1735,0,,5,5,0,1.0,,train
+ll2_cfg_13,Minotaur V,Minotaur,Orbital Sciences Corporation,USA,True,False,23.9,2.35,36,1600,1735,0,,1,1,0,,,train
+ll2_cfg_502,Mir,Mir,Agency for Defense Development,KOR,True,False,,,,,500,,,0,0,0,,,val
+ll2_cfg_501,Mir (3 stage),Mir,Agency for Defense Development,KOR,False,False,,,,,100,,,1,1,0,,,train
+ll2_cfg_494,Miura 1,Miura,Payload Aerospace S.L.,ESP,True,True,12.7,0.7,3,30,,,,1,1,0,,,train
+ll2_cfg_509,Miura 5,Miura,Payload Aerospace S.L.,ESP,True,True,35.81,2.0,,950,900,,,0,0,0,,,train
+ll2_cfg_184,Molniya 8K78,R-7,Strategic Rocket Forces,RUS,False,False,43.44,3.0,305,813,1900,,,40,20,20,0.5,,train
+ll2_cfg_335,Molniya 8K78M-PVB,R-7,Progress Rocket Space Center,RUS,False,False,,,,,,,,8,8,0,1.0,,train
+ll2_cfg_106,Molniya-M 2BL,R-7,Russian Space Forces,RUS,False,False,,,,,,,,272,259,13,0.9522,,train
+ll2_cfg_198,MOMO v0,MOMO,Interstellar Technologies,JPN,False,False,9.9,0.5,1,12,,,,5,1,4,0.2,,train
+ll2_cfg_466,MOMO v1,MOMO,Interstellar Technologies,JPN,True,False,10.1,0.5,1,14,,,,2,2,0,,,train
+ll2_cfg_336,Mu-3C,Mu,Institute of Space and Astronautical Science,JPN,False,False,20.2,1.41,41,1932,195,,,4,3,1,,,train
+ll2_cfg_337,Mu-3H,Mu,Institute of Space and Astronautical Science,JPN,False,False,23.8,1.41,44,2150,300,,,3,3,0,,,train
+ll2_cfg_338,Mu-3S,Mu,Institute of Space and Astronautical Science,JPN,False,False,23.8,1.41,49,2150,300,,,4,4,0,,,val
+ll2_cfg_339,Mu-3S-II,Mu,Institute of Space and Astronautical Science,JPN,False,False,27.8,1.41,61,1930,800,,,8,7,1,0.875,,train
+ll2_cfg_340,Mu-4S,Mu,Institute of Space and Astronautical Science,JPN,False,False,23.6,1.41,43,1932,180,,,4,3,1,,,train
+ll2_cfg_334,M-V,Mu,IHI Corporation,JPN,False,False,30.8,2.5,137,3780,1800,,,7,6,1,0.8571,,train
+ll2_cfg_114,N1,,Russian Federal Space Agency (ROSCOSMOS),RUS,False,False,105.0,17.0,2750,45400,95000,,,4,0,4,,,train
+ll2_cfg_341,N-2,,Mitsubishi Heavy Industries,JPN,False,False,35.0,2.44,132,2278,2000,730,,8,8,0,1.0,,train
+ll2_cfg_12,KSLV Naro-1,KSLV,Korea Aerospace Research Institute,KOR,False,False,,,,,,,,3,1,2,,,train
+ll2_cfg_545,Nebula-1,,Deep Blue Aerospace,CHN,True,True,35.0,3.35,150,2130,2000,,,0,0,0,,,train
+ll2_cfg_476,Neutron,,Rocket Lab,USA,False,True,40.0,7.0,480,5960,15000,,,0,0,0,,,train
+ll2_cfg_138,New Glenn,New Glenn,Blue Origin,USA,True,True,98.0,7.0,,17126,45000,13000,,3,2,1,,,train
+ll2_cfg_550,New Glenn 9x4,New Glenn,Blue Origin,USA,False,True,120.0,7.0,,25621,70000,,,0,0,0,,,train
+ll2_cfg_137,New Shepard,,Blue Origin,USA,False,True,15.0,3.7,75,490,0,0,,38,37,1,0.9737,,train
+ll2_cfg_459,N-I,,Mitsubishi Heavy Industries,JPN,False,False,34.0,2.44,131,,1200,360,,7,6,1,0.8571,,train
+ll2_cfg_342,Nike Cajun,,National Aeronautics and Space Administration,USA,False,False,7.7,0.42,0,246,,,,4,4,0,,,test
+ll2_cfg_209,North American X-15,,North American Aviation,USA,False,True,15.47,6.61,15195,286,,,,13,12,1,0.9231,,train
+ll2_cfg_533,Nova,Nova,Stoke Space,USA,True,True,40.2,4.2,227,3110,3000,2500,,0,0,0,,,train
+ll2_cfg_117,KSLV-2 Nuri,KSLV,Korea Aerospace Research Institute,KOR,True,False,47.2,3.5,200,2612,2600,,,5,4,1,0.8,,train
+ll2_cfg_195,Orion Abort Test Booster,,National Aeronautics and Space Administration,USA,False,False,,5.5,,2200,,,,1,1,0,,,train
+ll2_cfg_177,OS-M1,,OneSpace,CHN,False,False,19.0,1.2,21,,,,,1,0,1,,,train
+ll2_cfg_343,Paektusan 1,,Korean Committee of Space Technology,PRK,False,False,25.8,1.8,33,525,,,,1,0,1,,,test
+ll2_cfg_542,Pallas-1,,Galactic Energy,CHN,True,True,49.6,3.35,283,3435,7000,,,1,1,0,,,train
+ll2_cfg_119,Pegasus,Pegasus,Orbital Sciences Corporation,USA,False,False,16.9,1.27,18,580,443,0,40000000,4,4,0,,90293.45,train
+ll2_cfg_132,Pegasus HAPS,Pegasus,Orbital Sciences Corporation,USA,False,False,15.5,1.28,18,580,250,0,,2,2,0,,,test
+ll2_cfg_129,Pegasus Hybrid,Pegasus,Orbital Sciences Corporation,USA,False,False,15.5,1.28,18,580,350,0,,4,4,0,,,train
+ll2_cfg_173,Pegasus XL,Pegasus,Orbital Sciences Corporation,USA,True,False,17.6,1.27,23,580,443,0,40000000,32,29,3,0.9062,90293.45,train
+ll2_cfg_118,Pegasus XL HAPS,Pegasus,Orbital Sciences Corporation,USA,True,False,17.6,1.27,23,580,443,0,40000000,5,5,0,1.0,90293.45,train
+ll2_cfg_480,Orbex Prime,,Orbex,GBR,False,False,19.0,1.3,18,,,,,0,0,0,,,train
+ll2_cfg_344,Project Pilot,,US Navy,USA,False,False,4.4,0.76,0,125,1,,,6,0,6,0.0,,val
+ll2_cfg_191,Proton / UR-500 K/D,Proton / UR-500,Russian Federal Space Agency (ROSCOSMOS),RUS,False,False,57.0,4.0,696,8847,,,,39,24,15,0.6154,,train
+ll2_cfg_80,Proton K/DM-2,Proton / UR-500,Khrunichev State Research and Production Space Center,RUS,False,False,,,,,,,,110,103,7,0.9364,,train
+ll2_cfg_95,Proton-K,Proton / UR-500,Khrunichev State Research and Production Space Center,RUS,False,False,,,,,,,,29,26,3,0.8966,,train
+ll2_cfg_345,Proton-K/17S40,Proton / UR-500,Khrunichev State Research and Production Space Center,RUS,False,False,59.0,4.15,708,8847,6000,,,6,6,0,1.0,,train
+ll2_cfg_346,Proton-K/Briz-M,Proton / UR-500,Khrunichev State Research and Production Space Center,RUS,False,False,57.0,4.15,710,8847,19760,,,4,3,1,,,train
+ll2_cfg_347,Proton-K/D-1,Proton / UR-500,Khrunichev State Research and Production Space Center,RUS,False,False,57.0,4.15,707,8847,,,,12,11,1,0.9167,,train
+ll2_cfg_348,Proton-K/D-2,Proton / UR-500,Khrunichev State Research and Production Space Center,RUS,False,False,57.0,4.15,710,8847,6220,,,3,3,0,,,train
+ll2_cfg_349,Proton-K/DM,Proton / UR-500,Khrunichev State Research and Production Space Center,RUS,False,False,59.0,4.15,711,8847,,,,66,61,5,0.9242,,val
+ll2_cfg_350,Proton-K/DM-2M,Proton / UR-500,Khrunichev State Research and Production Space Center,RUS,False,False,59.0,4.15,712,8847,,,,41,39,2,0.9512,,train
+ll2_cfg_87,Proton-M Briz-M Enhanced,Proton / UR-500,Khrunichev State Research and Production Space Center,RUS,True,False,,,,,,,,33,30,3,0.9091,,train
+ll2_cfg_152,Proton-M,Proton / UR-500,Khrunichev State Research and Production Space Center,RUS,True,False,58.2,7.4,705,10532,23000,6920,65000000,1,1,0,,2826.09,test
+ll2_cfg_46,Proton-M Blok DM-03,Proton / UR-500,Khrunichev State Research and Production Space Center,RUS,True,False,58.2,7.4,712,10532,21000,6920,65000000,8,6,2,0.75,3095.24,train
+ll2_cfg_94,Proton-M DM-2 Enhanced,Proton / UR-500,Khrunichev State Research and Production Space Center,RUS,True,False,,,,,,,,6,6,0,1.0,,train
+ll2_cfg_22,Proton-M Briz-M,Proton / UR-500,Khrunichev State Research and Production Space Center,RUS,True,False,53.0,7.4,712,10000,21000,4500,,68,62,6,0.9118,,train
+ll2_cfg_7,PSLV,PSLV,Indian Space Research Organization,IND,True,False,44.0,2.8,295,4847,3800,1200,21000000,12,10,2,0.8333,5526.32,train
+ll2_cfg_43,PSLV-CA,PSLV,Indian Space Research Organization,IND,True,False,44.0,2.8,230,4847,3800,1200,16000000,18,18,0,1.0,4210.53,train
+ll2_cfg_178,PSLV-DL,PSLV,Indian Space Research Organization,IND,True,False,44.0,2.8,,,3800,1200,,5,4,1,0.8,,train
+ll2_cfg_181,PSLV-QL,PSLV,Indian Space Research Organization,IND,True,False,44.0,2.8,287,2969,1500,,,2,2,0,,,train
+ll2_cfg_38,PSLV XL,PSLV,Indian Space Research Organization,IND,True,False,44.0,2.8,320,,,,,27,25,2,0.9259,,train
+ll2_cfg_505,Qaem 100,,Islamic Revolutionary Guard Corps Aerospace Force,IRN,True,False,,,,,80,,,3,2,1,,,train
+ll2_cfg_217,Qased,,Islamic Revolutionary Guard Corps Aerospace Force,IRN,True,False,,1.25,,290,50,,,3,3,0,,,train
+ll2_cfg_351,R-36O 8K69,R-36O,Yuzhnoye Design Bureau,UKR,False,False,32.6,3.0,182,,,,,21,19,2,0.9048,,train
+ll2_cfg_352,R-36O 8K69M,R-36O,Yuzhnoye Design Bureau,UKR,False,False,35.0,3.0,180,,,,,2,2,0,,,test
+ll2_cfg_206,Ravn X,,Aevum,USA,True,False,,,,,,,,0,0,0,,,test
+ll2_cfg_107,Redstone MRLV,Redstone,Chrysler,USA,False,False,25.41,1.78,30,,,,,6,5,1,0.8333,,train
+ll2_cfg_488,RFA One,,Rocket Factory Augsburg,DEU,False,False,30.0,2.0,,100,1600,450,3000000,0,0,0,,1875.0,train
+ll2_cfg_3,Rokot/Briz-K,Rokot,Khrunichev State Research and Production Space Center,RUS,False,False,29.0,2.5,107,1870,1850,,41800000,1,1,0,,22594.59,train
+ll2_cfg_40,Rokot/Briz-KM,Rokot,Russian Aerospace Defence Forces,RUS,True,False,29.0,2.5,107,1870,1850,0,,31,28,3,0.9032,,test
+ll2_cfg_475,RS1,,Long Wall,USA,False,False,26.8,1.83,,485,1350,400,12000000,1,0,1,,8888.89,train
+ll2_cfg_39,Safir,Nodong,Iranian Space Agency,IRN,True,False,22.0,1.25,26,255,0,0,,5,4,1,0.8,,train
+ll2_cfg_74,Safir 1B,Nodong,Iranian Space Agency,IRN,True,False,22.0,1.25,26,255,0,0,,3,0,3,,,val
+ll2_cfg_197,SARGE,,EXOS Aerospace,USA,True,True,11.0,0.51,,24,,,,4,0,4,,,train
+ll2_cfg_355,Saturn I,Saturn,Chrysler,USA,False,False,55.0,6.6,510,6700,9100,,,10,10,0,1.0,,test
+ll2_cfg_163,Saturn IB,Saturn,National Aeronautics and Space Administration,USA,False,False,43.2,6.61,590,7100,21000,,,10,9,1,0.9,,train
+ll2_cfg_93,Saturn V,Saturn,National Aeronautics and Space Administration,USA,False,False,110.6,10.1,2970,35100,140000,,,13,12,1,0.9231,,val
+ll2_cfg_356,Scout A,Scout,Vought,USA,False,False,25.0,1.01,17,513,122,,8610000,11,11,0,1.0,70573.77,test
+ll2_cfg_357,Scout A-1,Scout,Vought,USA,False,False,22.0,1.02,17,440,,,,1,1,0,,,train
+ll2_cfg_358,Scout B,Scout,Vought,USA,False,False,25.0,1.01,17,513,143,,8660000,23,21,2,0.913,60559.44,test
+ll2_cfg_359,Scout B-1,Scout,Vought,USA,False,False,22.0,1.02,17,440,,,,5,5,0,1.0,,train
+ll2_cfg_360,Scout D-1,Scout,Vought,USA,False,False,25.0,1.14,20,464,183,,,16,16,0,1.0,,train
+ll2_cfg_361,Scout E-1,Scout,Vought,USA,False,False,25.0,1.14,20,464,200,,,1,1,0,,,train
+ll2_cfg_362,Scout F-1,Scout,Vought,USA,False,False,25.0,1.14,20,395,193,,,2,1,1,,,train
+ll2_cfg_363,Scout G-1,Scout,Vought,USA,False,False,26.0,1.14,20,395,210,,8660000,17,17,0,1.0,41238.1,train
+ll2_cfg_185,Scout X-1,Scout,National Aeronautics and Space Administration,USA,False,False,25.0,1.01,16,471,59,,8910000,6,3,3,0.5,151016.95,train
+ll2_cfg_364,Scout X-2,Scout,Vought,USA,False,False,25.0,1.01,16,427,76,,8910000,2,1,1,,117236.84,train
+ll2_cfg_365,Scout X-2B,Scout,Vought,USA,False,False,22.0,1.02,17,440,,,,1,0,1,,,val
+ll2_cfg_366,Scout X-2M,Scout,Vought,USA,False,False,22.0,1.02,17,440,,,,3,1,2,,,train
+ll2_cfg_367,Scout X-3,Scout,Vought,USA,False,False,24.0,1.01,17,513,87,,8910000,5,4,1,0.8,102413.79,train
+ll2_cfg_368,Scout X-3A,Scout,Vought,USA,False,False,22.0,1.02,17,380,,,,1,1,0,,,train
+ll2_cfg_369,Scout X-3M,Scout,Vought,USA,False,False,22.0,1.02,17,380,,,,1,1,0,,,train
+ll2_cfg_370,Scout X-4,Scout,Vought,USA,False,False,25.0,1.01,17,513,103,,,12,11,1,0.9167,,train
+ll2_cfg_371,Scout X-4A,Scout,Vought,USA,False,False,22.0,1.02,17,380,,,,2,2,0,,,test
+ll2_cfg_44,Shavit,Shavit,Israeli Space Agency,ISR,True,False,,,,,,,,2,2,0,,,train
+ll2_cfg_110,Shavit-2,Shavit,Israel Aerospace Industries,ISR,True,False,,,,,,,,11,9,2,0.8182,,train
+ll2_cfg_372,Shtil'-1,,KB Mashinostroyeniya,RUS,False,False,14.8,1.9,40,809,430,,,2,2,0,,,train
+ll2_cfg_142,Simorgh,,Iranian Space Agency,IRN,True,False,,,,,,,,7,2,5,0.2857,,val
+ll2_cfg_485,Skyrora XL,,Skyrora,GBR,False,False,22.7,2.2,56,70,,,,0,0,0,,,train
+ll2_cfg_531,SL1,,HyImpulse,DEU,True,False,33.0,2.2,,,600,,,0,0,0,,,train
+ll2_cfg_353,SLV-3,,Indian Space Research Organization,IND,False,False,22.0,1.0,17,503,40,,,4,3,1,,,train
+ll2_cfg_192,Smart Dragon 1,Smart Dragon,China Rocket Co. Ltd.,CHN,True,False,19.2,1.2,23,,150,,,1,1,0,,,train
+ll2_cfg_484,Smart Dragon 3,Smart Dragon,China Rocket Co. Ltd.,CHN,True,False,32.0,2.64,140,,,,,12,12,0,1.0,,train
+ll2_cfg_96,Soyuz,Soyuz,Russian Federal Space Agency (ROSCOSMOS),RUS,True,False,,,,,,,,32,30,2,0.9375,,test
+ll2_cfg_113,Soyuz Fregat,Soyuz,Russian Federal Space Agency (ROSCOSMOS),RUS,False,False,50.0,3.0,305,,7100,,,0,0,0,,,test
+ll2_cfg_153,Soyuz 2.1v,Soyuz,Ministry of Defence of the Russian Federation,RUS,False,False,44.0,3.0,158,,2850,,,4,4,0,,,val
+ll2_cfg_34,Soyuz FG,,Progress Rocket Space Center,RUS,False,False,49.5,3.0,305,,6450,,,60,59,1,0.9833,,train
+ll2_cfg_373,Soyuz 11A510,Soyuz,Energia,RUS,False,False,31.0,10.3,275,4037,4500,,,2,2,0,,,train
+ll2_cfg_374,Soyuz 11A511,Soyuz,Energia,RUS,False,False,45.6,10.3,308,4037,6450,,,0,0,0,,,train
+ll2_cfg_375,Soyuz 11A511L,Soyuz,Energia,RUS,False,False,50.0,2.95,300,4054,5500,,,3,3,0,,,train
+ll2_cfg_376,Soyuz 11A511M,Soyuz,Energia,RUS,False,False,50.0,2.95,300,4054,6600,,,8,8,0,1.0,,val
+ll2_cfg_24,Soyuz 2.1a,Soyuz,Progress Rocket Space Center,RUS,True,False,46.3,2.95,312,4149,7020,2810,80000000,58,57,1,0.9828,11396.01,train
+ll2_cfg_212,Soyuz 2.1a Fregat,Soyuz,Progress Rocket Space Center,RUS,True,False,,,,,,,,3,2,1,,,train
+ll2_cfg_45,Soyuz 2.1a Fregat-M,Soyuz,Progress Rocket Space Center,RUS,True,False,46.3,2.95,312,4149,7020,,80000000,20,19,1,0.95,11396.01,train
+ll2_cfg_57,Soyuz 2.1a Volga,Soyuz,Progress Rocket Space Center,RUS,True,False,19.6,2.68,,4149,,,80000000,1,1,0,,,test
+ll2_cfg_15,Soyuz 2.1b,Soyuz,Progress Rocket Space Center,RUS,True,False,46.3,2.95,312,,8200,3250,80000000,25,25,0,1.0,9756.1,train
+ll2_cfg_42,Soyuz 2.1b Fregat,Soyuz,Progress Rocket Space Center,RUS,True,False,46.3,2.95,312,4150,8200,3250,80000000,26,24,2,0.9231,9756.1,train
+ll2_cfg_134,Soyuz 2.1b Fregat-M,Soyuz,Progress Rocket Space Center,RUS,True,False,46.3,10.3,313,4150,8200,3250,48500000,36,36,0,1.0,5914.63,train
+ll2_cfg_555,Soyuz 2.1b Volga,Soyuz,Progress Rocket Space Center,RUS,True,False,46.3,2.95,,4149,,,,1,1,0,,,train
+ll2_cfg_60,Soyuz 2.1v Volga,Soyuz,Progress Rocket Space Center,RUS,False,False,44.0,3.0,158,,2850,,,9,8,1,0.8889,,test
+ll2_cfg_521,Soyuz-5,Soyuz-5,RKK Energiya,RUS,True,False,65.258,4.1,525,7257,17000,5000,,1,1,0,,,train
+ll2_cfg_70,Soyuz-FG Fregat,,Progress Rocket Space Center,RUS,False,False,4.95,2.68,305,,7100,,,10,10,0,1.0,,train
+ll2_cfg_49,Soyuz STA Fregat,Soyuz,Progress Rocket Space Center,RUS,False,False,46.3,2.95,312,,7020,2810,,8,8,0,1.0,,train
+ll2_cfg_72,Soyuz STB Fregat-MT,Soyuz,Progress Rocket Space Center,RUS,False,False,46.3,2.95,310,,8200,3250,80000000,5,5,0,1.0,9756.1,train
+ll2_cfg_171,Soyuz STB Fregat,Soyuz,Progress Rocket Space Center,RUS,False,False,46.3,2.95,312,,8200,3250,,14,13,1,0.9286,,train
+ll2_cfg_37,Soyuz U,Soyuz,Russian Federal Space Agency (ROSCOSMOS),RUS,False,False,51.1,2.95,313,,6900,,,714,694,20,0.972,,val
+ll2_cfg_101,Soyuz-U2,,Soviet Space Program,RUS,False,False,34.54,2.95,298,,7050,,,71,71,0,1.0,,train
+ll2_cfg_378,Soyuz-U-PVB,Soyuz,Progress Rocket Space Center,RUS,False,False,51.0,3.0,313,,6900,,,74,72,2,0.973,,val
+ll2_cfg_205,Space Launch System Block 1B,Space Launch System,National Aeronautics and Space Administration,USA,False,False,111.0,8.4,2948,39000,105000,,2000000000,0,0,0,,19047.62,train
+ll2_cfg_143,Space Launch System Block 1,Space Launch System,National Aeronautics and Space Administration,USA,True,False,98.0,8.4,2628,39000,95000,,2000000000,2,2,0,,21052.63,train
+ll2_cfg_465,SpaceShipTwo,,Virgin Galactic,USA,True,True,18.0,8.2,9,310,0,0,,67,62,5,0.9254,,val
+ll2_cfg_493,Space Shuttle,,National Aeronautics and Space Administration,USA,False,True,56.1,8.0,2030,28200,27500,,450000000,135,133,2,0.9852,16363.64,train
+ll2_cfg_62,SPARK,,Sandia National Laboratories,USA,False,False,,,,,,,,1,0,1,,,train
+ll2_cfg_354,SPARTA,,Chrysler,USA,False,False,21.8,1.78,30,416,45,,,1,1,0,,,train
+ll2_cfg_491,Spectrum,,Isar Aerospace,DEU,True,False,28.0,2.0,,675,1000,,,2,1,1,,,train
+ll2_cfg_379,Sputnik 11A59,Sputnik,Energia,RUS,False,False,30.0,2.99,277,3999,1400,,,2,2,0,,,train
+ll2_cfg_469,Sputnik 8A91,Sputnik,Energia,RUS,False,False,,,,,,,,2,1,1,,,train
+ll2_cfg_468,Sputnik 8K74PS,Sputnik,Energia,RUS,False,False,,,,,,,,2,2,0,,,val
+ll2_cfg_499,SR75,,HyImpulse,DEU,True,False,,0.64,,75,,,,1,1,0,,,test
+ll2_cfg_144,SS-520-5,S-Series,Japan Aerospace Exploration Agency,JPN,False,False,,0.5,3,,4,,,1,1,0,,,train
+ll2_cfg_122,SS-520-4,S-Series,Japan Aerospace Exploration Agency,JPN,False,False,9.7,0.5,3,,4,,,1,0,1,,,train
+ll2_cfg_150,SSLV,,Indian Space Research Organization,IND,True,False,34.0,2.0,120,,500,,,3,2,1,,,train
+ll2_cfg_528,Starship,Starship,SpaceX,USA,True,False,124.4,9.0,5000,80807,100000,,,0,0,0,,,val
+ll2_cfg_522,Starship V3,Starship,SpaceX,USA,True,True,124.4,9.0,5250,80807,100000,,,3,3,0,,,train
+ll2_cfg_464,Starship V1,Starship,SpaceX,USA,False,True,121.3,9.0,5000,73550,15000,,,6,4,2,0.6667,,train
+ll2_cfg_527,Starship V2,Starship,SpaceX,USA,False,True,123.3,9.0,5000,73550,35000,,,5,2,3,0.4,,train
+ll2_cfg_207,Starship Prototype,Starship,SpaceX,USA,False,True,50.0,9.0,45,,,,,9,6,3,0.6667,,train
+ll2_cfg_380,Start,Start,Moscow Institute of Thermal Technology,RUS,False,False,28.9,1.61,60,887,645,,10500000,1,0,1,,16279.07,train
+ll2_cfg_381,Start-1,Start,Moscow Institute of Thermal Technology,RUS,False,False,22.7,1.61,47,887,632,,9000000,5,5,0,1.0,14240.51,train
+ll2_cfg_382,Start-1.2,Start,Moscow Institute of Thermal Technology,RUS,False,False,22.7,1.8,47,500,,,,1,1,0,,,train
+ll2_cfg_76,Strela,,Khrunichev State Research and Production Space Center,RUS,False,False,,,,,,,,3,3,0,,,train
+ll2_cfg_463,Super Heavy Prototype,Starship,SpaceX,USA,True,True,70.0,9.0,300,,,,,0,0,0,,,train
+ll2_cfg_180,Terran 1,Terran,Relativity Space,USA,False,False,35.0,2.3,,920,1479,,12000000,1,0,1,,8113.59,val
+ll2_cfg_482,Terran R,Terran,Relativity Space,USA,True,True,66.0,5.5,,9400,20000,,,0,0,0,,,train
+ll2_cfg_523,Themis Demonstrator,,ArianeGroup,FRA,True,True,28.0,3.5,170,980,,,,0,0,0,,,train
+ll2_cfg_388,Thor Able I,Thor,McDonnell Douglas,USA,False,False,30.0,2.44,51,667,120,,8900000,3,1,2,,74166.67,val
+ll2_cfg_389,Thor Able II,Thor,McDonnell Douglas,USA,False,False,27.3,2.44,52,668,,,,2,1,1,,,train
+ll2_cfg_390,Thor Able III,Thor,McDonnell Douglas,USA,False,False,27.4,2.44,52,668,,,,1,1,0,,,train
+ll2_cfg_391,Thor Able IV,Thor,McDonnell Douglas,USA,False,False,27.2,2.44,52,668,,,,1,1,0,,,train
+ll2_cfg_418,Thorad SLV-2G Agena D,Thor,McDonnell Douglas,USA,False,False,32.9,2.44,91,1444,,,19560000,30,29,1,0.9667,,train
+ll2_cfg_419,Thorad SLV-2H Agena D,Thor,McDonnell Douglas,USA,False,False,34.0,2.44,88,1571,,,,13,12,1,0.9231,,train
+ll2_cfg_392,Thor Agena A,Thor,McDonnell Douglas,USA,False,False,28.0,2.44,53,667,250,,10700000,15,9,6,0.6,42800.0,train
+ll2_cfg_393,Thor Agena D,Thor,McDonnell Douglas,USA,False,False,31.0,2.44,56,667,,,22170000,13,11,2,0.8462,,val
+ll2_cfg_394,Thor Burner 1,Thor,McDonnell Douglas,USA,False,False,23.0,2.44,50,668,,,,4,3,1,,,train
+ll2_cfg_395,Thor Burner 2,Thor,McDonnell Douglas,USA,False,False,22.4,2.44,50,750,,,,12,12,0,1.0,,val
+ll2_cfg_396,Thor Burner 2A,Thor,McDonnell Douglas,USA,False,False,23.0,2.44,50,750,,,,8,8,0,1.0,,train
+ll2_cfg_398,Thor Delta,Thor,McDonnell Douglas,USA,False,False,31.0,2.44,54,667,226,,7270000,9,8,1,0.8889,32168.14,train
+ll2_cfg_399,Thor Delta A,Thor,McDonnell Douglas,USA,False,False,31.0,2.44,50,667,250,68,9590000,2,2,0,,38360.0,train
+ll2_cfg_400,Thor Delta B,Thor,McDonnell Douglas,USA,False,False,31.0,2.44,51,667,370,68,9590000,9,8,1,0.8889,25918.92,train
+ll2_cfg_401,Thor Delta C,Thor,McDonnell Douglas,USA,False,False,27.5,2.44,52,667,81,,,10,8,2,0.8,,train
+ll2_cfg_402,Thor Delta C1,Thor,McDonnell Douglas,USA,False,False,27.5,2.44,52,756,81,,,3,3,0,,,test
+ll2_cfg_403,Thor Delta D,Thor,McDonnell Douglas,USA,False,False,32.0,2.44,63,1571,450,104,12720000,2,2,0,,28266.67,val
+ll2_cfg_404,Thor Delta E,Thor,McDonnell Douglas,USA,False,False,31.0,2.44,69,1452,540,150,13930000,6,6,0,1.0,25796.3,train
+ll2_cfg_405,Thor Delta E1,Thor,McDonnell Douglas,USA,False,False,28.0,2.44,68,1450,540,150,,17,16,1,0.9412,,train
+ll2_cfg_406,Thor Delta G,Thor,McDonnell Douglas,USA,False,False,30.0,2.44,55,765,,,10150000,2,2,0,,,val
+ll2_cfg_407,Thor Delta J,Thor,McDonnell Douglas,USA,False,False,31.0,2.44,69,1452,260,263,16600000,1,1,0,,63846.15,train
+ll2_cfg_408,Thor Delta L,Thor,McDonnell Douglas,USA,False,False,35.0,2.44,89,1452,300,300,16540000,2,1,1,,55133.33,train
+ll2_cfg_409,Thor Delta M,Thor,McDonnell Douglas,USA,False,False,34.0,2.44,103,2140,355,355,22300000,12,10,2,0.8333,62816.9,train
+ll2_cfg_410,Thor Delta M6,Thor,McDonnell Douglas,USA,False,False,32.4,2.44,103,2411,450,450,,1,1,0,,,train
+ll2_cfg_411,Thor Delta N,Thor,McDonnell Douglas,USA,False,False,33.0,2.44,90,1590,,,18800000,6,5,1,0.8333,,train
+ll2_cfg_412,Thor Delta N6,Thor,McDonnell Douglas,USA,False,False,33.0,2.44,102,2411,,,,3,2,1,,,test
+ll2_cfg_187,Thor DM-21 Ablestar,Thor,United States Air Force,USA,False,False,29.0,1.44,51,760,150,,,19,13,6,0.6842,,train
+ll2_cfg_186,Thor DM-21 Agena-B,Thor,United States Air Force,USA,False,False,,,,,,,,40,32,8,0.8,,train
+ll2_cfg_397,Thor DSV-2U,Thor,McDonnell Douglas,USA,False,False,23.0,2.44,49,750,500,,,5,4,1,0.8,,train
+ll2_cfg_413,Thor MG-18,Thor,McDonnell Douglas,USA,False,False,23.0,2.44,50,668,,,,2,2,0,,,train
+ll2_cfg_416,Thor SLV-2A Agena B,Thor,McDonnell Douglas,USA,False,False,31.0,2.44,67,1571,,,,2,2,0,,,train
+ll2_cfg_417,Thor SLV-2A Agena D,Thor,McDonnell Douglas,USA,False,False,31.0,2.44,67,1571,,,,61,57,4,0.9344,,train
+ll2_cfg_414,Thor SLV-2 Agena B,Thor,McDonnell Douglas,USA,False,False,27.2,2.44,56,756,400,,19560000,3,3,0,,48900.0,train
+ll2_cfg_415,Thor SLV-2 Agena D,Thor,McDonnell Douglas,USA,False,False,27.2,2.44,56,756,,,19560000,8,6,2,0.75,,val
+ll2_cfg_492,Tianlong-2,,Space Pioneer,CHN,True,False,32.8,3.35,150,1863,2000,,,1,1,0,,,train
+ll2_cfg_540,Tianlong-3,,Space Pioneer,CHN,True,True,72.0,3.8,600,8100,17000,,,1,0,1,,,val
+ll2_cfg_420,Titan 23B,Titan,Lockheed Martin,USA,False,False,45.0,3.05,165,2300,3000,,,9,9,0,1.0,,train
+ll2_cfg_421,Titan 24B,Titan,Lockheed Martin,USA,False,False,45.0,3.05,170,2410,3000,,,23,21,2,0.913,,test
+ll2_cfg_422,Titan 33B,Titan,Lockheed Martin,USA,False,False,45.0,3.05,185,2300,3000,,,3,2,1,,,test
+ll2_cfg_423,Titan 34B,Titan,Lockheed Martin,USA,False,False,48.0,3.05,188,1997,3500,,25810000,11,11,0,1.0,7374.29,train
+ll2_cfg_424,Titan 34D,Titan,Lockheed Martin,USA,False,False,50.0,3.05,723,11279,14515,5000,150000000,7,5,2,0.7143,10334.14,train
+ll2_cfg_425,Titan 34D IUS,Titan,Lockheed Martin,USA,False,False,52.4,3.05,725,11279,,5000,,1,1,0,,,train
+ll2_cfg_426,Titan 34D Transtage,Titan,Lockheed Martin,USA,False,False,50.0,3.05,720,11280,,5000,,7,7,0,1.0,,test
+ll2_cfg_427,Titan 401A Centaur,Titan,Lockheed Martin,USA,False,False,63.1,3.05,868,14200,21680,9000,,9,8,1,0.8889,,train
+ll2_cfg_428,Titan 402A IUS,Titan,Lockheed Martin,USA,False,False,54.0,3.05,910,14200,21680,,,3,3,0,,,train
+ll2_cfg_429,Titan 402B IUS,Titan,Lockheed Martin,USA,False,False,54.0,3.05,925,15000,21680,,,5,4,1,0.8,,train
+ll2_cfg_430,Titan 403A,Titan,Lockheed Martin,USA,False,False,54.0,3.05,906,14200,17700,,,5,4,1,0.8,,train
+ll2_cfg_431,Titan 403B,Titan,Lockheed Martin,USA,False,False,54.0,3.05,910,15000,21680,,,1,1,0,,,train
+ll2_cfg_432,Titan 404A,Titan,Lockheed Martin,USA,False,False,54.0,3.05,906,14200,17700,,,3,3,0,,,train
+ll2_cfg_433,Titan 404B,Titan,Lockheed Martin,USA,False,False,54.0,3.05,910,15000,21680,,,3,3,0,,,train
+ll2_cfg_434,Titan 405A,Titan,Lockheed Martin,USA,False,False,54.0,3.05,906,14200,17700,,,2,2,0,,,val
+ll2_cfg_435,Titan 405B,Titan,Lockheed Martin,USA,False,False,54.0,3.05,906,14200,14500,,,1,1,0,,,train
+ll2_cfg_98,Titan II GLV,Titan,National Aeronautics and Space Administration,USA,False,False,33.2,3.05,154,1913,3850,,,12,12,0,1.0,,train
+ll2_cfg_148,Titan IIIE,Titan,Lockheed Martin,USA,False,False,48.8,3.05,632,12991,15400,,,7,6,1,0.8571,,train
+ll2_cfg_437,Titan IIIA,Titan,Lockheed Martin,USA,False,False,42.0,3.05,161,1941,3100,,,4,3,1,,,test
+ll2_cfg_438,Titan IIIB,Titan,Lockheed Martin,USA,False,False,45.0,3.05,156,1913,3000,,,22,21,1,0.9545,,train
+ll2_cfg_439,Titan IIIC,Titan,Lockheed Martin,USA,False,False,42.0,3.0,626,10586,13100,3000,,36,34,2,0.9444,,train
+ll2_cfg_440,Titan IIID,Titan,Lockheed Martin,USA,False,False,36.0,3.05,612,10586,12300,,,22,22,0,1.0,,train
+ll2_cfg_436,Titan II SLV,Titan,Lockheed Martin,USA,False,False,31.4,3.05,117,1900,3600,,,13,12,1,0.9231,,train
+ll2_cfg_130,Titan IVB/Centaur,Titan,Lockheed Martin,USA,False,False,,,,,,,,7,6,1,0.8571,,train
+ll2_cfg_441,Trailblazer 1,Trailblazer,National Aeronautics and Space Administration,USA,False,False,17.1,0.58,3,365,,,,1,1,0,,,train
+ll2_cfg_442,Trailblazer 2,Trailblazer,National Aeronautics and Space Administration,USA,False,False,15.7,0.79,6,547,,,,3,3,0,,,val
+ll2_cfg_443,Tsiklon-2,Tsiklon,Yuzhnoye Design Bureau,UKR,False,False,39.7,3.0,182,2366,2820,,12000000,105,103,2,0.981,4255.32,test
+ll2_cfg_444,Tsiklon-2A,Tsiklon,Yuzhnoye Design Bureau,UKR,False,False,39.7,3.0,182,2366,3000,,,8,7,1,0.875,,train
+ll2_cfg_445,Tsiklon-3,Tsiklon,Yuzhnoye Design Bureau,UKR,False,False,39.27,3.0,189,2713,4100,,15000000,122,115,7,0.9426,3658.54,train
+ll2_cfg_86,Unha,Taepodong,Korean Committee of Space Technology,PRK,True,False,,,,,,,,2,1,1,,,train
+ll2_cfg_67,Unha-3,Taepodong,Korean Committee of Space Technology,PRK,True,False,,,,,,,,2,1,1,,,train
+ll2_cfg_511,Unknown Launch Vehicle,,Unknown,???,True,False,,,,,,,,0,0,0,,,train
+ll2_cfg_446,UR-500,Proton / UR-500,Khrunichev State Research and Production Space Center,RUS,False,False,46.28,4.15,595,8847,8400,,,4,3,1,,,test
+ll2_cfg_449,Vanguard,,Lockheed Martin,USA,False,False,23.0,1.14,10,123,9,,,11,3,8,0.2727,,train
+ll2_cfg_139,Vector-R,,Vector,USA,True,False,,,,,,,,0,0,0,,,train
+ll2_cfg_167,Vega,Vega,Avio S.p.A,ITA,False,False,29.9,3.025,137,2974,1500,,37000000,22,20,2,0.9091,24666.67,train
+ll2_cfg_548,Vega-C Block 2,Vega,Avio S.p.A,ITA,False,False,34.8,3.0,,,,,,0,0,0,,,train
+ll2_cfg_127,Vega-C,Vega,Avio S.p.A,ITA,True,False,34.8,3.0,210,2974,3300,,48000000,8,7,1,0.875,14545.45,train
+ll2_cfg_549,Vega-E,Vega,Avio S.p.A,ITA,False,False,36.8,3.0,,,,,,0,0,0,,,test
+ll2_cfg_532,Vikram-I,Vikram,Skyroot Aerospace,IND,True,False,20.0,1.7,,1200,350,,,1,1,0,,,train
+ll2_cfg_448,VLS-1,,Department of Aerospace Science and Technology,BRA,False,False,19.5,1.01,50,1172,120,,,2,0,2,,,train
+ll2_cfg_450,Volna,,Makeyev Rocket Design Bureau,RUS,False,False,14.1,1.9,35,682,120,,,1,0,1,,,train
+ll2_cfg_104,Voskhod,R-7,Soviet Space Program,RUS,False,False,,,,,,,,299,286,13,0.9565,,train
+ll2_cfg_103,Vostok-K,R-7,Soviet Space Program,RUS,False,False,30.84,2.99,280,971,4725,,,13,11,2,0.8462,,train
+ll2_cfg_451,Vostok 8A92,Vostok,RKK Energiya,RUS,False,False,30.84,2.99,281,3996,4730,,,44,40,4,0.9091,,train
+ll2_cfg_452,Vostok 8A92M,Vostok,RKK Energiya,RUS,False,False,30.84,2.99,282,3996,3800,,,93,92,1,0.9892,,train
+ll2_cfg_453,Vostok 8K72,Vostok,RKK Energiya,RUS,False,False,30.84,2.99,281,3873,4550,,,4,3,1,,,val
+ll2_cfg_454,Vostok-L 8K72,Vostok,Energia,RUS,False,False,30.84,2.6,277,3956,4000,,,9,3,6,0.3333,,train
+ll2_cfg_200,Vulcan,Vulcan,United Launch Alliance,USA,True,False,,5.4,,,,,,0,0,0,,,train
+ll2_cfg_201,Vulcan VC2S,Vulcan,United Launch Alliance,USA,True,False,61.6,5.4,663,9303,19000,8400,,2,2,0,,,train
+ll2_cfg_202,Vulcan VC4L,Vulcan,United Launch Alliance,USA,True,False,67.4,5.4,770,13706,24600,11700,,0,0,0,,,test
+ll2_cfg_516,Vulcan VC4S,Vulcan,United Launch Alliance,USA,True,False,,,,,,,,2,2,0,,,train
+ll2_cfg_479,Vulcan VC6L,Vulcan,United Launch Alliance,USA,True,False,67.4,5.4,877,18110,27200,15300,,0,0,0,,,train
+ll2_cfg_11,Zenit 3SL,Zenith,Sea Launch,RUS,False,False,4.6,0.42,0,45,0,0,,36,33,3,0.9167,,train
+ll2_cfg_91,Zenit 3SLB,Zenith,Land Launch,RUS,False,False,4.6,0.42,0,45,0,0,,6,6,0,1.0,,train
+ll2_cfg_455,Zenit-2,Zenith,Yuzhnoye Design Bureau,UKR,False,False,57.0,3.9,459,7300,13740,,,35,29,6,0.8286,,train
+ll2_cfg_456,Zenit-2 11K77.05,Zenith,Yuzhnoye Design Bureau,UKR,False,False,57.0,3.9,459,7259,,,,1,0,1,,,test
+ll2_cfg_89,Zenit 2M,Zenith,Russian Federal Space Agency (ROSCOSMOS),RUS,False,False,4.6,0.42,0,45,0,0,,2,1,1,,,train
+ll2_cfg_457,Zenit-2SB,Zenith,Yuzhnoye Design Bureau,UKR,False,False,,3.9,,,,,,0,0,0,,,train
+ll2_cfg_58,Zenit,Zenith,Russian Federal Space Agency (ROSCOSMOS),RUS,False,False,4.6,0.42,0,45,0,0,,4,4,0,,,train
+ll2_cfg_534,Zéphyr,,Latitude,FRA,True,False,19.0,1.5,,315,100,,,0,0,0,,,val
+ll2_cfg_498,ZERO,,Interstellar Technologies,JPN,False,False,32.0,2.3,71,,800,,,0,0,0,,,train
+ll2_cfg_160,Zhuque-1,Zhuque,LandSpace,CHN,False,False,,,,,,,,1,0,1,,,train
+ll2_cfg_199,Zhuque-2,Zhuque,LandSpace,CHN,False,False,49.5,3.35,229,2680,4000,,,3,2,1,,,train
+ll2_cfg_519,Zhuque-2E,Zhuque,LandSpace,CHN,True,False,49.5,3.35,229,2880,6000,,,3,2,1,,,train
+ll2_cfg_556,Zhuque-2E Block 2,Zhuque,LandSpace,CHN,True,False,55.9,3.35,267,3312,6000,,,4,4,0,,,train
+ll2_cfg_539,Zhuque-3,Zhuque,LandSpace,CHN,True,True,76.6,4.5,660,9000,21300,,,2,2,0,,,train

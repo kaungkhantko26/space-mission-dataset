@@ -1,0 +1,68 @@
+{
+  "note": "Built only from verified/ by tools/make_training.py. Splits: launches chronological 75/12.5/12.5; others by sha256(id) mod 10 (test=0,val=1).",
+  "tables": {
+    "launch_outcome": {
+      "rows": 743,
+      "failures": 15,
+      "splits": {
+        "train": 557,
+        "val": 93,
+        "test": 93
+      }
+    },
+    "launcher_specs": {
+      "rows": 532,
+      "splits": {
+        "train": 424,
+        "test": 55,
+        "val": 53
+      }
+    },
+    "component_numeric": {
+      "rows": 2544,
+      "splits": {
+        "train": 2047,
+        "val": 248,
+        "test": 249
+      }
+    },
+    "qa_pairs": {
+      "rows": 3151,
+      "splits": {
+        "val": 296,
+        "train": 2530,
+        "test": 325
+      }
+    },
+    "physics_examples": {
+      "rows": 110,
+      "splits": {
+        "test": 15,
+        "train": 85,
+        "val": 10
+      }
+    }
+  },
+  "files": {
+    "component_numeric.csv": {
+      "sha256": "1dd1827d86e6be4740dc8741cbdebe149617d3f322dea384a256ed2c2ad92e13",
+      "bytes": 290101
+    },
+    "launch_outcome.csv": {
+      "sha256": "c748a940a03800edc08607a0bb774374ef8757c40d1b141ba547f182dd4aa693",
+      "bytes": 114283
+    },
+    "launcher_specs.csv": {
+      "sha256": "b87fc837af2719d45e5ac0f6d82f7b56c17017e3087bb8c0f9fd47e6566ff2dc",
+      "bytes": 60810
+    },
+    "physics_examples.jsonl": {
+      "sha256": "5078dc6395ae2cc121e742d0e9fd3a086a4b3a97e4c407e803ef0595b8c630c3",
+      "bytes": 77879
+    },
+    "qa_pairs.jsonl": {
+      "sha256": "4133f595bc8c790f3c243d45ce92e9ef7f055e2263503649ad403654cf454a08",
+      "bytes": 1544823
+    }
+  }
+}

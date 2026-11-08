@@ -24,6 +24,8 @@ The game: design, manage and simulate a space mission balancing spacecraft, inst
 
 **Removed as not needed by the game:** asteroid/dwarf-planet data, JPL NHATS and NEO lists, NASA facilities table, and unrelated NASA report tables (3D-printing materials, software, tracking, deorbit, …).
 
+**Training data:** [`training/`](training/DATASET_CARD.md) has ML-ready train/val/test files (chat-format Q&A, physics calculations, launch-outcome and launcher tables).
+
 Access: static JSON API (`docs/api/v1`), local backend (`tools/serve_api.py`), CSV + SQLite (`exports/`), one JSON (`verified/combined/`), website (`docs/`), JS and Python clients, OpenAPI spec.
 
 ## Trust model

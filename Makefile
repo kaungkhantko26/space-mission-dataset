@@ -1,11 +1,11 @@
-.PHONY: setup all staging verified validate api export test verify fetch serve site clean
+.PHONY: setup all staging verified validate api export training test verify fetch serve site clean
 PY ?= python3
 
 setup:
 	$(PY) -m pip install -r requirements.txt
 
 # Public dataset = verified/ (strict mode). `staging` is the internal build that still contains unverified/estimated values and is never served.
-all: staging verified validate api export     ## full pipeline (no network needed)
+all: staging verified validate api export training     ## full pipeline (no network needed)
 
 staging:
 	$(PY) tools/build.py
@@ -23,6 +23,10 @@ api:
 
 export:
 	$(PY) tools/export_data.py
+
+training:                                            ## ML-ready files in training/
+	$(PY) tools/make_training.py
+	$(PY) tools/validate_training.py
 
 test: validate                                       ## backend smoke test (16 endpoint checks)
 	$(PY) tools/smoke_test.py
