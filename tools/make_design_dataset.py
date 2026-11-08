@@ -189,7 +189,7 @@ while len(rows) < N_DESIGNS and tries < N_DESIGNS * 400:
                primary_reason=failed[0] if failed else "ALL_CHECKS_PASS", all_reasons="|".join(failed),
                p_mission_success=round(m.get("p_launch_success") or 0, 4) if ok else 0.0, data_class="derived", label_source="rule_engine")
     for k in ("component_mass_kg", "dry_mass_kg", "total_mass_kg", "launcher_capacity_kg", "launch_cost_usd", "mass_margin_ratio",
-              "dv_available_m_s", "dv_required_m_s", "burn_time_days", "array_power_w", "load_w", "link_margin_db", "warn_launcher_overkill"):
+              "dv_available_m_s", "dv_required_m_s", "burn_time_days", "transfer_days", "total_mission_days", "one_way_light_time_min", "array_power_w", "load_w", "link_margin_db", "warn_launcher_overkill"):
         v = m.get(k)
         row[k] = round(v, 3) if isinstance(v, float) else v
     rows.append(row)
@@ -198,6 +198,8 @@ while len(rows) < N_DESIGNS and tries < N_DESIGNS * 400:
             f"{d['n_thr']}x {names([d['thruster']]) or 'none'}, propellant {d['propellant_kg']} kg. Power: {d['n_arr']}x {names([d['array']]) or 'none'}. "
             f"Radio: {names([d['radio']]) or 'none'}. Antenna: {names([d['antenna']]) or 'none'}. Instruments: {names(d['instruments'] or []) or 'none'}.")
     lines = [f"- {'OK ' if p else 'FAIL'} {c}: {t}" for c, p, t in chk]
+    if "transfer_days" in m:
+        lines.append(f"- INFO TRAJECTORY: Earth LEO -> {d['dest']}: burn {m['burn_time_days']:.0f} d + coast {m['transfer_days']:.1f} d (Hohmann) = {m['total_mission_days']:.0f} d; one-way light time {m['one_way_light_time_min']:.2f} min.")
     fix = "" if ok else " Fixes: " + "; ".join(sorted({FIX[c] for c in failed})) + "."
     verdict = (f"Verdict: SUCCESS. Estimated mission success probability {m['p_launch_success']*100:.1f}% (limited by the launcher's historical launch success rate; all design checks pass)."
                if ok else f"Verdict: FAILURE. Reasons: {', '.join(failed)}.")

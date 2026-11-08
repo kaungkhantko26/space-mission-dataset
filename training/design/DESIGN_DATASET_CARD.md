@@ -16,6 +16,8 @@ Built by `python3 tools/make_design_dataset.py`, checked by `tools/validate_desi
 Reason codes: `MISSING_*`, `BUDGET_EXCEEDED`, `MASS_OVER_CAPACITY`, `LAUNCHER_NO_CAPACITY`, `DELTA_V_SHORT`, `THRUST_TOO_LOW`, `POWER_SHORT`, `BAND_MISMATCH`, `DATA_RATE_LOW`, `LINK_MARGIN_LOW`.
 `p_mission_success` = the launcher's historical launch success rate (Launch Library) when every design check passes, otherwise 0.
 
+`designs.csv` also has `transfer_days`, `total_mission_days` and `one_way_light_time_min` (from `../trajectories/`).
+
 ## Limits
 * **Class balance is by design** (45% success / 55% failure, designs partly "repaired" toward feasibility). Real random designs almost always fail. Destinations are unbalanced: Mars successes are rare (14) because a small spacecraft rarely satisfies delta-v, thrust and link together — use more Mars data from your own generator if you need it.
 * Not modelled: batteries/eclipse, thermal, attitude control, component prices (none are published — the budget covers the launch only), fairing size, radiation, launch windows. Mars/Moon/GTO use the launcher's LEO/GTO capacity as a conservative proxy (no source states Mars-transfer capacity).

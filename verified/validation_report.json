@@ -286,7 +286,7 @@
   {
    "check": "ll2_spacex_status_values_known",
    "passed": true,
-   "detail": "{'Launch Successful', 'Launch Failure', 'Launch was a Partial Failure'}"
+   "detail": "{'Launch Failure', 'Launch was a Partial Failure', 'Launch Successful'}"
   },
   {
    "check": "nist_boiling_points_and_liquid_densities_match_known_physics",

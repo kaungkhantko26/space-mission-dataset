@@ -35,7 +35,11 @@ def environment():
                 math.sqrt(mu_e / r2) * (1 - math.sqrt(2 * r1 / (r1 + r2))))
     geo = 42164e3
     vinf = math.sqrt(mu_s / a_e) * (math.sqrt(2 * a_m / (a_e + a_m)) - 1)
+    def tof(a):
+        return math.pi * math.sqrt(a ** 3 / mu_e) / 86400.0
     return dict(
+        transfer_days=dict(LEO=0.0, GTO=tof((r1 + geo) / 2), MOON=tof((r1 + mo["moon"]["semi_major_axis_m"]) / 2),
+                           MARS=math.pi * math.sqrt(((a_e + a_m) / 2) ** 3 / mu_s) / 86400.0),
         req_dv=dict(LEO=HEUR["leo_station_keeping_dv"], GTO=hoh(geo)[1], MOON=hoh(mo["moon"]["semi_major_axis_m"])[0],
                     MARS=math.sqrt(vinf ** 2 + 2 * mu_e / r1) - vc),
         distance_m=dict(LEO=1.0e6, GTO=3.6e7, MOON=mo["moon"]["semi_major_axis_m"], MARS=a_m),
@@ -119,6 +123,9 @@ def evaluate(d, cat, env):
     m["link_margin_db"] = margin
     chk.append(("LINK_MARGIN_LOW", margin >= HEUR["link_margin_db"],
                 f"Link margin {margin:.1f} dB (antenna {N['gain_dbi']:.1f} dBi, path loss {fspl:.0f} dB) vs {HEUR['link_margin_db']} dB needed."))
+    m["transfer_days"] = env["transfer_days"][dest]
+    m["total_mission_days"] = m["burn_time_days"] + m["transfer_days"]
+    m["one_way_light_time_min"] = d_m / C / 60
     m["warn_launcher_overkill"] = bool(cap and cap > HEUR["overkill_ratio"] * total)
     m["p_launch_success"] = L["success_rate"]
     return m, chk
