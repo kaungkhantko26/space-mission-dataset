@@ -12,6 +12,7 @@
 | **NIST WebBook fluid data** | NIST Standard Reference Data; credit NIST (see https://webbook.nist.gov/ for its terms). |
 | **The Space Devs Launch Library 2 data** (`launch_vehicle_configs`, `spacex_launch_history`) | Third-party aggregator. **Its terms of use were not verified** (the API is free to use with attribution and is aimed at non-commercial use; check https://thespacedevs.com/llapi before commercial use). Credit "The Space Devs - Launch Library 2". |
 | **`data_raw/spacex_launch_data.csv`** and **`data_raw/NASA_Facilities.csv`** (the latter is not used by the game and not published) | **Supplied by the repository owner; origin and licence not verified; excluded from the public verified dataset** (kept only in `data_raw/` and the staging build). The SpaceX table is described as Kaggle `scoleman/spacex-launch-data`; check that dataset's licence before redistributing. Do not assume commercial reuse is permitted. |
+| **`minm01210-svg/Space-mission-` (third-party repository, no licence file)** | Used only as a cross-check; none of its files or values are copied into this repository. Only agreement statistics are in `reports/external_crosscheck_minm01210.json`. |
 | **Values marked `unverified`** | Recalled values, not copied from a licensed source; treat as unverified facts. |
 | **`estimated` / `fictional` values** (optimizer catalog, credits, science weights) | Original, created for this project (CC BY 4.0). Not real hardware or prices. |
 | **Code** | MIT (see `LICENSE`). |

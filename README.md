@@ -9,7 +9,7 @@ python3 tools/serve_api.py          # local backend on http://127.0.0.1:8000 (st
 make all && make test               # rebuild everything, 68 validation checks, 22 backend checks
 ```
 
-## What you get (10,925 verified records, scoped to the game)
+## What you get (11,127 verified records, scoped to the game)
 The game: design, manage and simulate a space mission balancing spacecraft, instruments, launch vehicle, budget, mass, power, communication and orbit. See **[`GAME_DATA_GUIDE.md`](GAME_DATA_GUIDE.md)** for which data feeds which game mechanic.
 
 | Game need | Records | Source |
@@ -19,6 +19,7 @@ The game: design, manage and simulate a space mission balancing spacecraft, inst
 | **Launch vehicles** (dimensions, mass, thrust, capacities, cost, launch stats) | 532 configs | Launch Library 2 (aggregator) |
 | **Launch reliability:** every launch of every provider since 1957 (outcome, rocket, pad, orbit, failure reason) + the SpaceX subset | 7,657 / 743 | Launch Library 2 (aggregator); cross-checked with Kaggle (97.6% outcome agreement) and your 2010-2018 file |
 | **Scientific instruments / missions** with NASA descriptions (mass/power/cost where stated) | 181 / 39 | NASA NSSDC Master Catalog |
+| **Launch sites:** 202 launch pads with coordinates, country, launch counts and the free eastward speed from Earth's rotation | 202 | Launch Library 2 (aggregator); coordinates cross-checked with a third-party dataset |
 | **Propellant physics** (O₂, H₂, CH₄, Xe, N₂, He saturation) | 6 | NIST Chemistry WebBook |
 | Engines/thrusters, launch vehicles, Saturn V stages, payload capacities, missions (verified fields only) | 41 | NTRS, Apollo 11 press kit, NASA SLS page, ULA, ESA |
 

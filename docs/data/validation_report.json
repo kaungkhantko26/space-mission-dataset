@@ -1,7 +1,7 @@
 {
- "passed": 68,
- "total": 68,
- "run_date": "2026-11-08",
+ "passed": 73,
+ "total": 73,
+ "run_date": "2026-11-11",
  "checks": [
   {
    "check": "json_syntax_all_files",
@@ -62,6 +62,11 @@
    "check": "unique_ids:fluid_properties",
    "passed": true,
    "detail": "6"
+  },
+  {
+   "check": "unique_ids:launch_pads",
+   "passed": true,
+   "detail": "202"
   },
   {
    "check": "unique_ids:spacex_launch_history",
@@ -286,7 +291,27 @@
   {
    "check": "ll2_all_status_values_known",
    "passed": true,
-   "detail": "{'Launch Failure', 'Launch was a Partial Failure', 'Launch Successful'}"
+   "detail": "{'Launch Successful', 'Launch Failure', 'Launch was a Partial Failure'}"
+  },
+  {
+   "check": "launch_pads_count_equals_raw_pads_with_coordinates",
+   "passed": true,
+   "detail": "202 vs 202"
+  },
+  {
+   "check": "launch_pads_coordinates_in_range_and_unique",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "launch_pads_rotation_boost_physical",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "launch_pads_known_sites_present",
+   "passed": true,
+   "detail": ""
   },
   {
    "check": "ll2_spacex_count_equals_raw",
@@ -306,7 +331,7 @@
   {
    "check": "ll2_spacex_status_values_known",
    "passed": true,
-   "detail": "{'Launch Failure', 'Launch was a Partial Failure', 'Launch Successful'}"
+   "detail": "{'Launch Successful', 'Launch Failure', 'Launch was a Partial Failure'}"
   },
   {
    "check": "nist_boiling_points_and_liquid_densities_match_known_physics",

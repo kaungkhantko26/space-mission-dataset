@@ -1,6 +1,6 @@
 {
  "mode": "STRICT: verified data only",
- "build_date": "2026-11-08",
+ "build_date": "2026-11-11",
  "record_counts": {
   "planets": 9,
   "moons": 11,
@@ -21,13 +21,14 @@
   "launch_vehicle_configs": 532,
   "spacex_launch_history": 743,
   "launch_history_all": 7657,
+  "launch_pads": 202,
   "fluid_properties": 6,
   "sources": 18
  },
  "data_class_counts": {
-  "verified": 10907
+  "verified": 11109
  },
- "verified_records": 10907,
+ "verified_records": 11109,
  "targets": {},
  "target_attainment_pct": {},
  "retrieval": {

@@ -5,7 +5,7 @@ which contains ONLY:
   * datasets ingested directly from authoritative sources (JPL NHATS, JPL SBDB query, JPL satellite mean elements, official NASA Facilities CSV),
   * analyses derived purely from verified inputs.
 Everything estimated, fictional or merely recalled (optimizer catalog, costs, instruments, components, user-supplied SpaceX table, ...) is excluded."""
-import json, os, re, csv, html, math, hashlib, datetime, shutil, collections, sys
+import math, json, os, re, csv, html, math, hashlib, datetime, shutil, collections, sys
 sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
 import ingest_real as IR
 HERE=os.path.dirname(os.path.abspath(__file__)); ROOT=os.path.join(HERE,".."); RET=os.path.join(ROOT,"data_raw","retrieved"); OUT=os.path.join(ROOT,"verified")
@@ -91,7 +91,7 @@ for r in rows[1:]:
 moon_el=[m for m in moon_el if m["satellite"] in {x["name"] for x in moons}]
 # ---------- NASA SoA components, NSSDC missions/instruments/atmospheres (ingested directly) ----------
 soa,soa_tables,soa_files=IR.soa_components(); nmc_ms,nmc_ex=IR.nmc_missions(); atm=IR.atmospheres()
-ll2_cfg=IR.ll2_launchers(); sx_hist=IR.ll2_spacex_launches(); all_hist=IR.ll2_all_launches(); fluid=IR.fluids()
+ll2_cfg=IR.ll2_launchers(); sx_hist=IR.ll2_spacex_launches(); all_hist=IR.ll2_all_launches(); pads=IR.ll2_pads(); fluid=IR.fluids()
 ll2_files={os.path.basename(r['provenance']['file']):r['provenance'] for r in ll2_cfg+sx_hist}
 EXC=re.compile(r"Filament|Photopolymer|Windform|Resistivity|Software|Operating Systems|Memory Types|AI Space|FSW|Tracking Aids|Primary Elements of a Ground|Drag Sail|TechEdSat|Contact",re.I)
 soa=[r for r in soa if r["domain"] not in ("tracking","deorbit") and not EXC.search(r["table_title"])]; soa_tables=[t for t in soa_tables if t["domain"] not in ("tracking","deorbit") and not EXC.search(t["title"])]
@@ -127,8 +127,12 @@ sources+= [dict(id="S52",title="JPL Planetary Satellite Mean Elements",organizat
  dict(id="S55",title="The Space Devs Launch Library 2 (launcher configurations; SpaceX launch record)",organization="The Space Devs",url="https://ll.thespacedevs.com/2.2.0/",retrieved=True,retrieval_date=max(v["retrieved"] for v in ll2_files.values()),retrieved_pages=[dict(url=v["url"],sha256=v["source_sha256"],retrieved=v["retrieved"],file=v["file"]) for v in ll2_files.values()],note="Community-curated aggregator citing manufacturers and agencies; reference orbits of capacity figures are not stated."),
  dict(id="S56",title="NIST Chemistry WebBook: thermophysical properties of fluids (saturation tables)",organization="NIST",url="https://webbook.nist.gov/chemistry/fluid/",retrieved=True,retrieval_date=max(r["provenance"]["retrieved"] for r in fluid),retrieved_pages=[dict(url=r["provenance"]["url"],sha256=r["provenance"]["source_sha256"],retrieved=r["provenance"]["retrieved"]) for r in fluid])]
 elements=[e for e in elements if e["body_id"] in {x["id"] for x in planets}]
+_e=[x for x in planets if x["id"]=="earth"][0]
+_v_eq=2*math.pi*_e["equatorial_radius_m"]/(_e["rotation_period_h"]*3600) if _e.get("equatorial_radius_m") and _e.get("rotation_period_h") else None
+for _p in pads:
+    if _v_eq: _p["earth_rotation_boost_m_s"]=round(_v_eq*math.cos(math.radians(_p["latitude_deg"])),2) if _p["country_code"] else None; _p["derived_note"]="eastward surface speed = 2*pi*R_eq/rotation_period*cos(lat), from verified Earth radius and rotation period (ideal due-east launch benefit; Earth-launch pads only)"
 cols=dict(planets=planets,moons=moons,orbital_elements=elements,rocket_engines=engines,electric_propulsion=electric,launch_vehicles=vehicles,rocket_stages=stages,boosters=boosters,payload_capabilities=payload_caps,
-          missions=missions,moon_mean_elements=moon_el,smallsat_components=soa,smallsat_tables=soa_table_recs,nasa_missions=nmc_ms,nasa_instruments=nmc_ex,atmospheres=atm,launch_vehicle_configs=ll2_cfg,spacex_launch_history=sx_hist,launch_history_all=all_hist,fluid_properties=fluid,sources=sources)
+          missions=missions,moon_mean_elements=moon_el,smallsat_components=soa,smallsat_tables=soa_table_recs,nasa_missions=nmc_ms,nasa_instruments=nmc_ex,atmospheres=atm,launch_vehicle_configs=ll2_cfg,spacex_launch_history=sx_hist,launch_history_all=all_hist,launch_pads=pads,fluid_properties=fluid,sources=sources)
 counts={k:len(v) for k,v in cols.items()}
 cls=collections.Counter(r.get("data_class") for k,v in cols.items() if k!="sources" for r in v)
 q0=S["metadata"]["quality"]
@@ -154,7 +158,7 @@ W("combined/verified_space_mission_data.json",combined)
 COLPROV={"moon_mean_elements":P3}
 for k,v in cols.items(): W(f"{k}.json",dict(collection=k,count=len(v),mode="STRICT: verified data only",**({"provenance":COLPROV[k]} if k in COLPROV else {}),records=v))
 W("quality_report.json",quality)
-DESC=dict(launch_history_all="every past launch of every provider with outcome, vehicle, pad, orbit and failure reason (Launch Library 2; aggregator)",launch_vehicle_configs="532 launch vehicle configurations (Launch Library 2): dimensions, mass, thrust, LEO/GTO capacity, cost, launch statistics",spacex_launch_history="complete SpaceX launch record, 743 launches (Launch Library 2)",fluid_properties="NIST saturation properties of O2, H2, CH4, Xe, N2, He",planets="Sun, planets, dwarf planets (verified fields only)",moons="moons (verified GM/radius/mass)",asteroids="Bennu, Vesta",orbital_elements="planet/dwarf-planet orbital elements",rocket_engines="engines (verified fields only)",electric_propulsion="NEXT, NSTAR, BPT-4000",launch_vehicles="launch vehicles (verified fields only)",rocket_stages="Saturn V stages",boosters="SLS booster",
+DESC=dict(launch_pads="launch pads with coordinates, location and launch counts (Launch Library 2; aggregator); earth_rotation_boost_m_s derived",launch_history_all="every past launch of every provider with outcome, vehicle, pad, orbit and failure reason (Launch Library 2; aggregator)",launch_vehicle_configs="532 launch vehicle configurations (Launch Library 2): dimensions, mass, thrust, LEO/GTO capacity, cost, launch statistics",spacex_launch_history="complete SpaceX launch record, 743 launches (Launch Library 2)",fluid_properties="NIST saturation properties of O2, H2, CH4, Xe, N2, He",planets="Sun, planets, dwarf planets (verified fields only)",moons="moons (verified GM/radius/mass)",asteroids="Bennu, Vesta",orbital_elements="planet/dwarf-planet orbital elements",rocket_engines="engines (verified fields only)",electric_propulsion="NEXT, NSTAR, BPT-4000",launch_vehicles="launch vehicles (verified fields only)",rocket_stages="Saturn V stages",boosters="SLS booster",
   payload_capabilities="verified payload capacities with stated reference orbits",missions="missions: verified launch date / vehicle family",nasa_facilities="official NASA facilities (data.nasa.gov)",nhats_targets="JPL NHATS accessible near-Earth targets",neo_catalog="JPL SBDB near-Earth objects with measured diameter",moon_mean_elements="JPL mean orbital elements of planetary satellites",
   smallsat_components="NASA SoA 2026 product tables: thrusters, power, GNC, radios, antennas, computers, platforms, launch, ground (vendor-reported)",smallsat_tables="index of the SoA tables and their columns",nasa_missions="39 missions from the NASA NSSDC catalog (launch date, vehicle, site, catalogued mass/power, description)",nasa_instruments="181 instruments/experiments with NASA catalog descriptions",atmospheres="NSSDC fact-sheet atmosphere data (published text + parsed numbers)",sources="retrieved sources")
 open(os.path.join(OUT,"README.md"),"w").write(f"# verified/ — strict-mode dataset (generated)\n{quality['statement']}\n\n| Collection | Records | What |\n|---|---:|---|\n"+"\n".join(f"| `{k}.json` | {n} | {DESC.get(k,k)} |" for k,n in counts.items())+"\n\nEvery record has `data_class: verified`, `source_ids`, `retrieval_status: retrieved` and either `field_verification` (per-field source text, URL, SHA-256, tolerance) or a `provenance` block (file, URL, SHA-256, retrieval date). Generated by `python3 tools/make_verified.py`.\n")

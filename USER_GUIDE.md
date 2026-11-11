@@ -26,7 +26,7 @@ Open the site and use the tabs along the top.
 | **Compare** | Put two or more items side by side and see which is better for a mission |
 | **Mission fit** | Pick a destination (LEO, GTO, Moon, Mars) and see which launchers and thrusters fit, with the reasoning |
 | **Calculators** | Rocket equation (delta-v), Hohmann transfer, light time, power and link budget |
-| **Launchers** | 532 launch vehicles: capacity, cost, launch record |
+| **Launchers** | 532 launch vehicles: capacity, cost, launch record (launch pad coordinates are in the `launch_pads` collection, 202 pads) |
 | **Components** | NASA small-spacecraft parts: thrusters, solar arrays, radios, antennas, reaction wheels… |
 | **Missions & instruments** | 39 NASA missions and 181 instruments with NASA's descriptions |
 | **API** | How to fetch the data from code |

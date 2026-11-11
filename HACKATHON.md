@@ -24,12 +24,13 @@ curl "localhost:8000/light-time?target=mars"
 ```
 Examples: [`examples/python_quickstart.py`](examples/python_quickstart.py), [`examples/node_quickstart.mjs`](examples/node_quickstart.mjs), [`examples/pandas_demo.py`](examples/pandas_demo.py).
 
-## What is in the dataset (all verified; 10,925 records) — game guide: [`GAME_DATA_GUIDE.md`](GAME_DATA_GUIDE.md)
+## What is in the dataset (all verified; 11,127 records) — game guide: [`GAME_DATA_GUIDE.md`](GAME_DATA_GUIDE.md)
 | Collection | Records | Source |
 |---|---:|---|
 | `planets` (Sun + 8), `moons`, `orbital_elements`, `atmospheres`, `moon_mean_elements` | 9 / 11 / 8 / 10 / 11 | JPL SSD, NASA NSSDC (field-by-field checks; planets carry `nssdc_fact_sheet`) |
 | `smallsat_components` (+ `smallsat_tables` index) | 1,578 (81 tables) | NASA SoA 2026: propulsion, power, GNC, comms, avionics, thermal, structures, platforms, launch integration, ground — **vendor-reported**, strings as published, `numeric` parsed where units are in the header |
 | `launch_vehicle_configs` | 532 | Launch Library 2 — **aggregator**; capacities don't state reference orbits |
+| `launch_pads` | 202 | launch pads: latitude/longitude, country, launch counts, `earth_rotation_boost_m_s` (derived) — Launch Library 2, aggregator |
 | `launch_history_all` | 7,657 | every past launch of every provider with success/failure and reason — Launch Library 2, aggregator |
 | `spacex_launch_history` | 743 | Launch Library 2 — aggregator |
 | `nasa_missions`, `nasa_instruments` | 39 / 181 | NASA NSSDC Master Catalog (prose; stated mass/power/cost parsed with the source sentence) |

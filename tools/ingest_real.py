@@ -193,6 +193,26 @@ def ll2_all_launches():
         if r["ll2_uuid"] in seen: continue
         seen.add(r["ll2_uuid"]); res.append(r)
     return res
+def ll2_pads():
+    """Launch pads (coordinates, location, country, launch counts) from the Launch Library 2 launch records already retrieved (aggregator)."""
+    pads={}
+    fs=sorted(glob.glob(os.path.join(RET,"ll2","all_*.json")),key=lambda x:int(re.search(r"all_(\d+)\.json",x).group(1)))
+    for f in fs:
+        d=_json.load(open(f)); P=fileinfo(f,"https://ll.thespacedevs.com/2.2.0/launch/previous/?limit=100&mode=normal")
+        for r in d["results"]:
+            pad=r.get("pad") or {}; loc=pad.get("location") or {}
+            try: lat=float(pad["latitude"]); lon=float(pad["longitude"])
+            except (KeyError,TypeError,ValueError): continue
+            if not (-90<=lat<=90 and -180<=lon<=180) or (lat==0 and lon==0): continue
+            k=pad["id"]
+            if k not in pads:
+                pads[k]=dict(id=f"ll2_pad_{k}",ll2_pad_id=k,name=pad.get("name"),location=loc.get("name"),country_code=loc.get("country_code"),latitude_deg=lat,longitude_deg=lon,
+                    launches_in_dataset=0,ll2_total_launch_count=pad.get("total_launch_count"),first_launch_utc=r.get("net"),last_launch_utc=r.get("net"),
+                    data_class="verified",source_authority="aggregator: The Space Devs Launch Library 2",confidence="medium",source_ids=["S55"],retrieval_status="retrieved",provenance=P)
+            q=pads[k]; q["launches_in_dataset"]+=1
+            if r.get("net"):
+                q["first_launch_utc"]=min(q["first_launch_utc"],r["net"]); q["last_launch_utc"]=max(q["last_launch_utc"],r["net"])
+    return sorted(pads.values(),key=lambda q:(-q["launches_in_dataset"],q["name"] or ""))
 FLUIDS={"oxygen":("C7782447","O2"),"hydrogen":("C1333740","H2"),"methane":("C74828","CH4"),"xenon":("C7440633","Xe"),"nitrogen":("C7727379","N2"),"helium":("C7440597","He")}
 def fluids():
     out=[]

@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.3.1 — third-party dataset cross-check
+* Reviewed `minm01210-svg/Space-mission-`: all 55 numeric values that overlap the verified data agree (gravity constants, engines, launcher payloads, thrust); its 3 launch-site coordinates match Launch Library pads within 1.1 km. Report: `reports/external_crosscheck_minm01210.json`.
+* New verified collection `launch_pads` (202 pads, coordinates, Earth-rotation launch boost) from the Launch Library records. Unverifiable items from that repository (atmosphere table, azimuth ranges, SLS core-stage estimate, templates) were not added; its files are not redistributed (no licence).
+
 ## v2.3.0 — training data, trajectories, reliability, budgets, user guide
 * New verified collection `launch_history_all`: all 7,657 launches since 1957 (7,100 success / 523 failure / 34 partial) from Launch Library 2; Kaggle *All Space Missions* used only as a cross-check (97.6% agreement).
 * `training/`: fact Q&A, physics examples, mission-design set (compatibility, success/failure reasons, per-component budget estimates), Earth→Moon/planet trajectories, launch reliability tables, AI-image prompt CSV.

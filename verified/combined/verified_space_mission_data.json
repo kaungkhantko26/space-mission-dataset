@@ -1,7 +1,7 @@
 {
  "schema_version": "verified-1.0.0",
  "mode": "STRICT: verified data only",
- "generated": "2026-11-08",
+ "generated": "2026-11-11",
  "note": "STRICT MODE: this dataset contains only values that were compared with, or ingested directly from, retrieved sources: JPL (SSD, SBDB), NASA (NSSDC fact sheets and mission catalog, Small Spacecraft SoA report 2026, SLS page, Apollo 11 press kit, NTRS papers, ), ULA, ESA, NIST, and the Launch Library 2 aggregator. Records carry source_authority/confidence where the source is an aggregator or vendor-reported compilation. Recalled, estimated and fictional values (optimizer catalog, costs, engine/vehicle specs without a retrievable source, the user-supplied SpaceX table) are not included. Derived values are computed only from verified inputs and are labelled derived.",
  "celestial": {
   "planets": [
@@ -16461,7 +16461,7 @@
   ],
   "quality": {
    "mode": "STRICT: verified data only",
-   "build_date": "2026-11-08",
+   "build_date": "2026-11-11",
    "record_counts": {
     "planets": 9,
     "moons": 11,
@@ -16482,13 +16482,14 @@
     "launch_vehicle_configs": 532,
     "spacex_launch_history": 743,
     "launch_history_all": 7657,
+    "launch_pads": 202,
     "fluid_properties": 6,
     "sources": 18
    },
    "data_class_counts": {
-    "verified": 10907
+    "verified": 11109
    },
-   "verified_records": 10907,
+   "verified_records": 11109,
    "targets": {},
    "target_attainment_pct": {},
    "retrieval": {

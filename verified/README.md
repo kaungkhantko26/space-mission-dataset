@@ -22,6 +22,7 @@ STRICT MODE: this dataset contains only values that were compared with, or inges
 | `launch_vehicle_configs.json` | 532 | 532 launch vehicle configurations (Launch Library 2): dimensions, mass, thrust, LEO/GTO capacity, cost, launch statistics |
 | `spacex_launch_history.json` | 743 | complete SpaceX launch record, 743 launches (Launch Library 2) |
 | `launch_history_all.json` | 7657 | every past launch of every provider with outcome, vehicle, pad, orbit and failure reason (Launch Library 2; aggregator) |
+| `launch_pads.json` | 202 | launch pads with coordinates, location and launch counts (Launch Library 2; aggregator); earth_rotation_boost_m_s derived |
 | `fluid_properties.json` | 6 | NIST saturation properties of O2, H2, CH4, Xe, N2, He |
 | `sources.json` | 18 | retrieved sources |
 

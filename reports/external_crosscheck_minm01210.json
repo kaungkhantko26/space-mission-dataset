@@ -1,0 +1,99 @@
+{
+  "external_repository": "https://github.com/minm01210-svg/Space-mission-",
+  "commit": "93b451c4f433673e65f6abd57d7b75033bf847dc",
+  "licence": "none found in the repository",
+  "compared_values": 55,
+  "agree": 55,
+  "conflicts": [],
+  "launch_sites_vs_launch_library_pads": [
+    {
+      "site": "ksc_lc39a",
+      "nearest_ll2_pad": "Launch Complex 39A",
+      "location": "Kennedy Space Center, FL, USA",
+      "distance_km": 0.02,
+      "within_5km": true
+    },
+    {
+      "site": "ccsfs_slc40",
+      "nearest_ll2_pad": "Space Launch Complex 40",
+      "location": "Cape Canaveral SFS, FL, USA",
+      "distance_km": 0.01,
+      "within_5km": true
+    },
+    {
+      "site": "vandenberg_sfb",
+      "nearest_ll2_pad": "Vandenberg Space Force Base",
+      "location": "Air launch to orbit",
+      "distance_km": 1.1,
+      "within_5km": true
+    }
+  ],
+  "transfer_reference_vs_ours": [
+    {
+      "transfer": "earth_leo400_moon100",
+      "external_total_dv_m_s": 3904.58,
+      "ours_total_dv_m_s_200km_leo_circular_capture": 3954.8885,
+      "external_days": null,
+      "ours_days": 4.9778,
+      "note": "different parking orbits (400 km vs 200 km LEO; their Mars capture is a 1-sol ellipse)"
+    },
+    {
+      "transfer": "earth_leo400_mars400_1sol",
+      "external_total_dv_m_s": 5651.29,
+      "ours_total_dv_m_s_200km_leo_circular_capture": 5704.3769,
+      "external_days": 258.87,
+      "ours_days": 258.871,
+      "note": "different parking orbits (400 km vs 200 km LEO; their Mars capture is a 1-sol ellipse)"
+    },
+    {
+      "transfer": "earth_leo400_earth_geo",
+      "external_total_dv_m_s": 3856.69,
+      "ours_total_dv_m_s_200km_leo_circular_capture": 3934.6896,
+      "external_days": 0.2204,
+      "ours_days": 0.2191,
+      "note": "different parking orbits (400 km vs 200 km LEO; their Mars capture is a 1-sol ellipse)"
+    }
+  ],
+  "file_sha256": {
+    "atmospheric_properties.csv": "4c83f9fea7d57dfb6b23c17bfbc5ed0073d1f9129128b3ead46d82e7efc5f182",
+    "celestial_bodies.csv": "beb96a906a691aa32b48a82ca492af8e29d27fa22a3a016c10d739bbb88095d0",
+    "launch_site_specs.csv": "26265eb54cb45e981f04a44c1ad01d34d428693af8a18c35c031417e0e04ad63",
+    "launch_vehicle_specs.csv": "dbe693bbf77d29df324548394da52b1bd6f9c4881a3eb6e254ae883d210b9038",
+    "mission_burn_plan.csv": "be78052382c15ae6053a3bee34a538cd2c2c85fded87c65505456b91fb700f56",
+    "orbit_targets.csv": "f61e19543806a581a1d07fcc04b65a085f7b85c101d030edaa7de7bee841bd9b",
+    "planetary_ephemeris_template.csv": "7b55c1e9521d3cf4d4081bf5424f40382c0be70395e9d7c9bcb8b73a4b73193c",
+    "propulsion_specs.csv": "101f7cac4762a9d507fd1499b98dcbd6f3677c0c393f928a0da61f2024da07f2",
+    "rocket_stage_specs.csv": "53bc74721cf16ec4aa627550b2146949a25aeaf03faa7100b46548b9c2afdba1",
+    "source_register.csv": "c0ab5d40017ee46539caa36edac86f018567a7819fbf0648c3b4d596a65e0629",
+    "spacecraft_input_template.csv": "d5d9ec118dcd7d7c072bf512cf366fb35aaa6c45da6de7980be57e171181941a",
+    "spacecraft_propulsion.csv": "32637dfffbfee28d080d85f4e7edf4bdbab8b5016fc39392df511433a4c1980d",
+    "transfer_reference.csv": "9bf052289e1ee39799f89bf9c8f2e4a5df178ffb2ec42a537c0d00bf16709025",
+    "validation_cases.csv": "d5c96bf852dac820bd957c441f53d8f7ffcd6c087c0b300788fa918e6a10bed0",
+    "dataset_manifest.json": "d78a93c5f1544132ecb2e065fd90b90da0187fcde71d359cce706ff81c9d8113"
+  },
+  "added_to_dataset": [
+    "launch_pads (202 pads with coordinates from Launch Library 2 records, verified; external site coordinates were cross-checked against them)"
+  ],
+  "not_added": [
+    {
+      "item": "atmospheric_properties.csv (Earth standard atmosphere, Mars exponential)",
+      "reason": "no retrieved source to verify; Mars values duplicate NSSDC data already in atmospheres"
+    },
+    {
+      "item": "launch_site_specs azimuth ranges",
+      "reason": "marked placeholders by the authors; no source"
+    },
+    {
+      "item": "rocket_stage_specs SLS core stage (130,000 kg dry, 1,530,000 kg propellant, Isp 421 s)",
+      "reason": "marked 'approximate configuration reference'; not found in retrieved NASA SLS page"
+    },
+    {
+      "item": "orbit_targets / mission_burn_plan / spacecraft templates / ephemeris template / validation_cases",
+      "reason": "empty templates, team design inputs, or order-of-magnitude cases; no new verifiable data"
+    },
+    {
+      "item": "transfer_reference.csv",
+      "reason": "derived by the authors from the same GM/orbit constants; our own derived transfers (training/trajectories) already cover and agree"
+    }
+  ]
+}

@@ -90,6 +90,17 @@ for _f in glob.glob(os.path.join(RET,"ll2","all_*.json")): raw_ids|={x["id"] for
 chk("ll2_all_count_equals_raw_unique_launches",len(ha)==len(raw_ids)>=1000,f"{len(ha)} vs {len(raw_ids)}")
 chk("ll2_all_dated_sorted_unique",all(r["date_utc"] for r in ha) and [r["date_utc"] for r in ha]==sorted(r["date_utc"] for r in ha) and len({r["ll2_uuid"] for r in ha})==len(ha))
 chk("ll2_all_status_values_known",{r["status"] for r in ha}<={"Launch Successful","Launch Failure","Launch was a Partial Failure","Launch Partial Failure"},{r["status"] for r in ha})
+pd_=cols["launch_pads"]["records"]; raw_pads=set()
+for _f in glob.glob(os.path.join(RET,"ll2","all_*.json")):
+    for _x in json.load(open(_f))["results"]:
+        _p=_x.get("pad") or {}
+        try:
+            if (float(_p["latitude"]),float(_p["longitude"]))!=(0.0,0.0): raw_pads.add(_p["id"])
+        except (KeyError,TypeError,ValueError): pass
+chk("launch_pads_count_equals_raw_pads_with_coordinates",len(pd_)==len(raw_pads)>=100,f"{len(pd_)} vs {len(raw_pads)}")
+chk("launch_pads_coordinates_in_range_and_unique",all(-90<=p["latitude_deg"]<=90 and -180<=p["longitude_deg"]<=180 for p in pd_) and len({p["ll2_pad_id"] for p in pd_})==len(pd_))
+chk("launch_pads_rotation_boost_physical",all(0<=p["earth_rotation_boost_m_s"]<=466 for p in pd_ if p.get("earth_rotation_boost_m_s") is not None))
+chk("launch_pads_known_sites_present",any(abs(p["latitude_deg"]-28.6084)<0.01 and abs(p["longitude_deg"]+80.6043)<0.01 for p in pd_))
 sx=cols["spacex_launch_history"]["records"]; chk("ll2_spacex_count_equals_raw",len(sx)==raw_sx>=700,f"{len(sx)} vs {raw_sx}")
 chk("ll2_spacex_all_provider_spacex_and_dated",all(r["launch_provider"]=="SpaceX" and r["date_utc"] for r in sx))
 chk("ll2_spacex_dates_sorted_ascending",[r["date_utc"] for r in sx]==sorted(r["date_utc"] for r in sx))
