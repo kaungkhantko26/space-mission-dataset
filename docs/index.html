@@ -1,13 +1,49 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Space Mission Research Explorer</title>
+<title>Space Mission Dataset</title><meta name="description" content="Verified space-mission engineering data for the Space Mission Design Game">
 <link rel="stylesheet" href="style.css"></head>
 <body>
-<header><h1>Space Mission Research Explorer</h1>
-<p class="sub">Real, verified data for the Space Mission Design Game: spacecraft, instruments, launch vehicles, budget, mass, power, communication and orbit. Everything shown was checked against, or ingested directly from, a retrieved source.</p><p class="sub"><a href="guide.html"><b>User guide: how to use this site, API and data &rarr;</b></a> &middot; <a href="api.html">API reference</a></p></header>
-<div id="banner" class="banner"></div>
-<nav id="tabs" role="tablist"></nav>
-<main id="view" tabindex="-1"></main>
-<footer>Data: <code>space-mission-research/</code> · Strict mode: unverified, estimated and fictional values are excluded.</footer>
-<script src="advisor.js"></script><script src="extras.js"></script><script src="app.js"></script>
+<header><a class="brand" href="index.html">space-mission-dataset</a><nav class="top"><a href="index.html" aria-current=page>home</a> <a href="datasets.html">datasets</a> <a href="api.html">api</a> <a href="equations.html">equations</a> <a href="guide.html">guide</a> <a href="explorer.html">explorer</a> <a href="https://github.com/kaungkhantko26/space-mission-dataset">github</a></nav></header>
+<main>
+<h1>Space Mission Dataset</h1>
+<p class="lead">Verified engineering data for the <b>Space Mission Design Game</b>: spacecraft, instruments, launch vehicle, budget, mass, power, communication and orbit. Every value traces to a retrieved source.</p>
+<p class="stats"><b>11,127</b> records &middot; <b>22</b> collections &middot; <b>7,657</b> launches &middot; <b>532</b> launch vehicles &middot; <b>1,578</b> components &middot; <b>202</b> pads</p>
+
+<h2>start</h2>
+<ul class="links">
+<li><a href="datasets.html">datasets</a> &mdash; download any collection as JSON, CSV or SQLite; training files</li>
+<li><a href="api.html">api</a> &mdash; static JSON endpoints, no key, try it in the browser</li>
+<li><a href="equations.html">equations</a> &mdash; rocket equation, transfers, power, link budget, cost: formulas + calculators</li>
+<li><a href="explorer.html">explorer</a> &mdash; browse, compare, mission-fit</li>
+<li><a href="guide.html">guide</a> &mdash; how to use everything</li>
+</ul>
+
+<h2>use it in 10 seconds</h2>
+<pre>curl https://kaungkhantko26.github.io/space-mission-dataset/api/v1/planets/mars.json
+curl https://kaungkhantko26.github.io/space-mission-dataset/api/v1/launch_vehicle_configs.json | jq '.records[0]'</pre>
+<pre>import json, urllib.request
+u = "https://kaungkhantko26.github.io/space-mission-dataset/api/v1/launch_pads.json"
+pads = json.load(urllib.request.urlopen(u))["records"]
+print(pads[0]["name"], pads[0]["latitude_deg"])</pre>
+
+<h2>what the game needs &rarr; where it is</h2>
+<div class="tw"><table><thead><tr><th>game need</th><th>collection</th><th>records</th></tr></thead><tbody>
+<tr><td>orbit, destinations</td><td><code>planets</code> <code>moons</code> <code>orbital_elements</code> <code>atmospheres</code></td><td>9 / 11 / 8 / 10</td></tr>
+<tr><td>spacecraft parts</td><td><code>smallsat_components</code></td><td>1,578</td></tr>
+<tr><td>launch vehicle, budget</td><td><code>launch_vehicle_configs</code> <code>launch_pads</code></td><td>532 / 202</td></tr>
+<tr><td>launch success / failure</td><td><code>launch_history_all</code> <code>spacex_launch_history</code></td><td>7,657 / 743</td></tr>
+<tr><td>instruments, missions</td><td><code>nasa_instruments</code> <code>nasa_missions</code></td><td>181 / 39</td></tr>
+<tr><td>propellants</td><td><code>fluid_properties</code></td><td>6</td></tr>
+<tr><td>model training</td><td><a href="datasets.html#training">training files</a></td><td>design, trajectories, reliability</td></tr>
+</tbody></table></div>
+
+<h2>trust</h2>
+<ul>
+<li><code>data_class</code> is <code>verified</code> (checked against a source) or <code>derived</code> (computed from verified inputs).</li>
+<li>An empty value means unknown. It is never zero.</li>
+<li>Estimates (component budgets, rule-engine labels) are marked as such. See <a href="guide.html#trust-rules-and-limits">limits</a>.</li>
+</ul>
+</main>
+<footer>verified data only &middot; <a href="https://github.com/kaungkhantko26/space-mission-dataset/blob/main/LICENSE-DATA.md">licences</a> &middot; <a href="https://github.com/kaungkhantko26/space-mission-dataset">source</a> &middot; not endorsed by NASA</footer>
+
 </body></html>

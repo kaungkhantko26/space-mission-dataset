@@ -16,7 +16,7 @@ This project is the **data backend for the Space Mission Design Game**: a second
 | Know what is trustworthy | [Trust and limits](#7-trust-rules-and-limits) |
 
 ## 2. Use the website
-Open the site and use the tabs along the top.
+Open the site. Top links: **home**, **datasets** (downloads), **api** (try it live), **equations** (formulas + calculators), **guide**, **explorer** (the tabs below).
 
 | Tab | What it does |
 |---|---|

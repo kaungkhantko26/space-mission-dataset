@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Equations - Space Mission Dataset</title><meta name="description" content="Verified space-mission engineering data for the Space Mission Design Game">
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<header><a class="brand" href="index.html">space-mission-dataset</a><nav class="top"><a href="index.html">home</a> <a href="datasets.html">datasets</a> <a href="api.html">api</a> <a href="equations.html" aria-current=page>equations</a> <a href="guide.html">guide</a> <a href="explorer.html">explorer</a> <a href="https://github.com/kaungkhantko26/space-mission-dataset">github</a></nav></header>
+<main>
+<h1>equations</h1>
+<p class="lead">The formulas used by the dataset, with live calculators. Constants for bodies load from the verified API.</p>
+<p class="mut">g0 = 9.80665 m/s&sup2; &middot; c = 299 792 458 m/s &middot; k<sub>B</sub> = 1.380649e-23 J/K &middot; GM, radii, semi-major axes and irradiance come from <code>planets</code> / <code>moons</code>.</p>
+<nav class="toc"><a href="#rocket">rocket</a> <a href="#orbit">orbit</a> <a href="#hohmann">hohmann</a> <a href="#interplanetary">interplanetary</a> <a href="#power">power</a> <a href="#link">link</a> <a href="#light">light time</a> <a href="#budget">mass &amp; cost</a> <a href="#reliability">reliability</a></nav>
+
+<section id="rocket"><h2>1 &middot; rocket equation</h2>
+<pre>dv = Isp * g0 * ln(m0 / mf)        mf = m0 * exp(-dv / (Isp*g0))
+propellant = m0 - mf               burn time = (m0 - mf) * Isp * g0 / F
+thrust-to-weight = F / (m0 * g0)</pre>
+<div class="grid"><label>Isp (s)<input id="r_isp" type="number" value="311"></label><label>start mass m0 (kg)<input id="r_m0" type="number" value="1000"></label>
+<label>end mass mf (kg)<input id="r_mf" type="number" value="600"></label><label>thrust F (N)<input id="r_f" type="number" value="3000"></label>
+<label>required dv (m/s)<input id="r_dv" type="number" value="3000"></label></div>
+<pre class="res" id="r_out"></pre></section>
+
+<section id="orbit"><h2>2 &middot; circular orbit, escape, gravity</h2>
+<pre>v_circ = sqrt(GM / r)     T = 2*pi*sqrt(r^3 / GM)     v_esc = sqrt(2*GM / r)     g = GM / r^2     r = R + altitude</pre>
+<div class="grid"><label>body<select id="o_b" class="bodysel"></select></label><label>altitude (km)<input id="o_h" type="number" value="400"></label></div>
+<pre class="res" id="o_out"></pre></section>
+
+<section id="hohmann"><h2>3 &middot; Hohmann transfer between circular orbits (same body)</h2>
+<pre>a_t = (r1 + r2)/2
+dv1 = sqrt(GM/r1) * (sqrt(2*r2/(r1+r2)) - 1)
+dv2 = sqrt(GM/r2) * (1 - sqrt(2*r1/(r1+r2)))
+time = pi * sqrt(a_t^3 / GM)</pre>
+<div class="grid"><label>body<select id="h_b" class="bodysel"></select></label><label>start altitude (km)<input id="h_1" type="number" value="400"></label><label>end altitude (km)<input id="h_2" type="number" value="35786"></label></div>
+<pre class="res" id="h_out"></pre></section>
+
+<section id="interplanetary"><h2>4 &middot; Earth to planet (patched conics, circular coplanar)</h2>
+<pre>a_t = (a1 + a2)/2          time = pi * sqrt(a_t^3 / GM_sun)
+v_inf_dep = sqrt(GM_sun/a1) * (sqrt(2*a2/(a1+a2)) - 1)
+dv_depart = sqrt(v_inf^2 + 2*GM_E/r_leo) - sqrt(GM_E/r_leo)          (from circular LEO)
+dv_capture = sqrt(v_inf_arr^2 + 2*GM_T/r_p) - sqrt(GM_T/r_p)          (to circular orbit radius r_p)
+synodic = 1 / |1/T1 - 1/T2|     phase angle = 180 - 360 * time / T2</pre>
+<div class="grid"><label>target planet<select id="p_t"></select></label><label>LEO altitude (km)<input id="p_l" type="number" value="200"></label><label>capture altitude (km)<input id="p_c" type="number" value="300"></label></div>
+<pre class="res" id="p_out"></pre></section>
+
+<section id="power"><h2>5 &middot; solar power and eclipse</h2>
+<pre>S(d) = S_earth * (1 AU / d)^2       P = P_peak * S/S_earth * efficiency       needed = load * margin
+eclipse time (circular, worst case) = T * asin(R / r) / pi          battery Wh = load * t_eclipse / DoD</pre>
+<div class="grid"><label>array peak power at 1 AU (W)<input id="w_p" type="number" value="300"></label><label>destination<select id="w_b" class="bodysel"></select></label>
+<label>efficiency (pointing, aging)<input id="w_e" type="number" value="0.8" step="0.05"></label><label>load (W)<input id="w_l" type="number" value="200"></label>
+<label>margin<input id="w_m" type="number" value="1.15" step="0.05"></label><label>orbit altitude for eclipse (km)<input id="w_h" type="number" value="500"></label><label>depth of discharge<input id="w_d" type="number" value="0.3" step="0.05"></label></div>
+<pre class="res" id="w_out"></pre></section>
+
+<section id="link"><h2>6 &middot; radio link budget (Friis)</h2>
+<pre>FSPL (dB) = 20*log10(4*pi*d*f / c)
+EIRP (dBW) = 10*log10(Pt) + Gt
+noise (dBW) = 10*log10(kB * T * R)
+margin (dB) = EIRP + Gr - FSPL - losses - noise - Eb/N0_required</pre>
+<div class="grid"><label>transmit power (W)<input id="l_p" type="number" value="5"></label><label>spacecraft antenna gain (dBi)<input id="l_g" type="number" value="10"></label><label>ground antenna gain (dBi)<input id="l_r" type="number" value="35"></label>
+<label>frequency (MHz)<input id="l_f" type="number" value="2200"></label><label>distance (km)<input id="l_d" type="number" value="384400"></label><label>data rate (kbps)<input id="l_b" type="number" value="100"></label>
+<label>Eb/N0 required (dB)<input id="l_e" type="number" value="10"></label><label>losses (dB)<input id="l_l" type="number" value="3"></label><label>noise temperature (K)<input id="l_t" type="number" value="290"></label></div>
+<pre class="res" id="l_out"></pre></section>
+
+<section id="light"><h2>7 &middot; light time</h2>
+<pre>one-way = d / c        round trip = 2d / c</pre>
+<div class="grid"><label>target<select id="t_b" class="bodysel"></select></label><label>or distance (km)<input id="t_d" type="number" placeholder="override"></label></div>
+<pre class="res" id="t_out"></pre></section>
+
+<section id="budget"><h2>8 &middot; mass and cost budget</h2>
+<pre>dry = sum(parts) * (1 + structure)       total = dry + propellant       need: total &lt;= margin * launcher capacity
+hardware cost = dry * USD_per_kg         total cost = hardware + launch price
+USD_per_kg: low 149k / median 214k / high 428k  (ESTIMATE from NASA-stated development costs; launch price is real)</pre>
+<div class="grid"><label>sum of part masses (kg)<input id="b_m" type="number" value="120"></label><label>structure overhead<input id="b_s" type="number" value="0.25" step="0.05"></label><label>propellant (kg)<input id="b_p" type="number" value="80"></label>
+<label>launcher capacity (kg)<input id="b_c" type="number" value="22800"></label><label>capacity margin<input id="b_k" type="number" value="0.9" step="0.05"></label><label>launch price (USD)<input id="b_l" type="number" value="52000000"></label><label>budget (USD)<input id="b_b" type="number" value="80000000"></label></div>
+<pre class="res" id="b_out"></pre></section>
+
+<section id="reliability"><h2>9 &middot; launch reliability</h2>
+<pre>rate = successes / launches
+Wilson 95%: centre = (p + z^2/2n) / (1 + z^2/n),  half = z*sqrt(p(1-p)/n + z^2/4n^2) / (1 + z^2/n)
+P(mission) = P(launch) * P(design checks pass)</pre>
+<div class="grid"><label>launches<input id="s_n" type="number" value="400"></label><label>successes<input id="s_s" type="number" value="392"></label><label>P(design ok)<input id="s_d" type="number" value="0.95" step="0.01"></label></div>
+<pre class="res" id="s_out"></pre></section>
+
+</main>
+<footer>verified data only &middot; <a href="https://github.com/kaungkhantko26/space-mission-dataset/blob/main/LICENSE-DATA.md">licences</a> &middot; <a href="https://github.com/kaungkhantko26/space-mission-dataset">source</a> &middot; not endorsed by NASA</footer>
+<script>
+const B="api/v1/",G0=9.80665,C=299792458,KB=1.380649e-23,AU=1.495978707e11,$=i=>document.getElementById(i),num=i=>parseFloat($(i).value);
+const f=(x,d=5)=>x==null||!isFinite(x)?"n/a":Math.abs(x)>=1e6||(Math.abs(x)<1e-3&&x!==0)?x.toExponential(4):(+x.toPrecision(d)).toLocaleString("en-US");
+let BODIES={},PL={};
+async function load(){const [a,b]=await Promise.all([fetch(B+"planets.json").then(r=>r.json()),fetch(B+"moons.json").then(r=>r.json())]);
+ [...a.records,...b.records].forEach(r=>{BODIES[r.id]=r;});a.records.forEach(r=>PL[r.id]=r);
+ document.querySelectorAll(".bodysel").forEach(s=>{Object.values(BODIES).filter(b=>b.id!=="sun"&&b.mean_radius_m&&b.gravitational_parameter_km3_s2).forEach(b=>s.append(new Option(b.name,b.id)));s.value=s.id==="w_b"||s.id==="t_b"?"mars":"earth";});
+ const pt=$("p_t");["mercury","venus","mars","jupiter","saturn","uranus","neptune"].forEach(i=>pt.append(new Option(PL[i].name,i)));pt.value="mars";
+ document.querySelectorAll("input,select").forEach(e=>e.addEventListener("input",run));run();}
+const GM=b=>BODIES[b].gravitational_parameter_km3_s2*1e9,RAD=b=>BODIES[b].mean_radius_m;
+function run(){try{
+ {const isp=num("r_isp"),m0=num("r_m0"),mf=num("r_mf"),F=num("r_f"),dv=num("r_dv");const d=isp*G0*Math.log(m0/mf),mfn=m0*Math.exp(-dv/(isp*G0));
+  $("r_out").textContent=`delta-v            ${f(d)} m/s\nmass ratio         ${f(m0/mf)}\npropellant         ${f(m0-mf)} kg\nburn time          ${f((m0-mf)*isp*G0/F/60)} min\nthrust/weight      ${f(F/(m0*G0))}\n--\nfor dv ${f(dv)} m/s: end mass ${f(mfn)} kg, propellant ${f(m0-mfn)} kg`;}
+ {const b=$("o_b").value,mu=GM(b),r=RAD(b)+num("o_h")*1e3;$("o_out").textContent=`radius r           ${f(r/1e3)} km\ncircular speed     ${f(Math.sqrt(mu/r))} m/s\nperiod             ${f(2*Math.PI*Math.sqrt(r**3/mu)/60)} min\nescape speed       ${f(Math.sqrt(2*mu/r))} m/s\ngravity at r       ${f(mu/r**2)} m/s^2\nGM (verified)      ${f(mu/1e9)} km^3/s^2`;}
+ {const b=$("h_b").value,mu=GM(b),R=RAD(b),r1=R+num("h_1")*1e3,r2=R+num("h_2")*1e3,v1=Math.sqrt(mu/r1),v2=Math.sqrt(mu/r2);
+  const d1=v1*(Math.sqrt(2*r2/(r1+r2))-1),d2=v2*(1-Math.sqrt(2*r1/(r1+r2))),t=Math.PI*Math.sqrt(((r1+r2)/2)**3/mu);
+  $("h_out").textContent=`dv1 (burn 1)       ${f(d1)} m/s\ndv2 (burn 2)       ${f(d2)} m/s\ntotal              ${f(Math.abs(d1)+Math.abs(d2))} m/s\ntransfer time      ${f(t/3600)} h`;}
+ {const e=PL.earth,t=PL[$("p_t").value],mS=PL.sun.gravitational_parameter_km3_s2*1e9,mE=GM("earth"),a1=e.semi_major_axis_m,a2=t.semi_major_axis_m,rl=e.mean_radius_m+num("p_l")*1e3;
+  const tof=Math.PI*Math.sqrt(((a1+a2)/2)**3/mS),vd=Math.sqrt(mS/a1)*(Math.sqrt(2*a2/(a1+a2))-1),va=Math.sqrt(mS/a2)*(1-Math.sqrt(2*a1/(a1+a2)));
+  const dep=Math.sqrt(vd*vd+2*mE/rl)-Math.sqrt(mE/rl),rp=t.mean_radius_m+num("p_c")*1e3,mT=t.gravitational_parameter_km3_s2*1e9,cap=Math.sqrt(va*va+2*mT/rp)-Math.sqrt(mT/rp);
+  const T1=2*Math.PI*Math.sqrt(a1**3/mS),T2=2*Math.PI*Math.sqrt(a2**3/mS),syn=Math.abs(1/(1/T1-1/T2));
+  $("p_out").textContent=`transfer time      ${f(tof/86400)} days (${f(tof/86400/365.25)} yr)\nv_inf departure    ${f(Math.abs(vd))} m/s   C3 ${f((vd/1e3)**2)} km^2/s^2\ndeparture burn     ${f(dep)} m/s (from circular LEO)\nv_inf arrival      ${f(Math.abs(va))} m/s\ncapture burn       ${f(cap)} m/s (to circular ${f(num("p_c"))} km)\ntotal dv           ${f(dep+cap)} m/s\nlaunch windows     every ${f(syn/86400)} days\nphase angle        ${f(180-360*tof/T2)} deg (target ahead of Earth)`;}
+ {const b=$("w_b").value,S0=PL.earth.nssdc_fact_sheet.numeric["Solar irradiance (W/m 2 )"],S=BODIES[b].nssdc_fact_sheet&&BODIES[b].nssdc_fact_sheet.numeric["Solar irradiance (W/m 2 )"]||(PL[b]?null:S0);
+  const P=S?num("w_p")*S/S0*num("w_e"):null,need=num("w_l")*num("w_m");
+  const mu=GM("earth"),r=RAD("earth")+num("w_h")*1e3,T=2*Math.PI*Math.sqrt(r**3/mu),te=T*Math.asin(RAD("earth")/r)/Math.PI,wh=num("w_l")*te/3600/num("w_d");
+  $("w_out").textContent=`irradiance at dest ${S?f(S)+" W/m^2 (NASA NSSDC)":"n/a for moons; uses parent planet"}\navailable power    ${f(P)} W\nneeded             ${f(need)} W   ${P==null?"":P>=need?"OK":"SHORT by "+f(need-P)+" W"}\n--\nLEO eclipse (max)  ${f(te/60)} min per ${f(T/60)} min orbit\nbattery energy     ${f(wh)} Wh at DoD ${f(num("w_d"))}`;}
+ {const Pt=10*Math.log10(num("l_p")),d=num("l_d")*1e3,fq=num("l_f")*1e6,fspl=20*Math.log10(4*Math.PI*d*fq/C),eirp=Pt+num("l_g"),nz=10*Math.log10(KB*num("l_t")*num("l_b")*1e3);
+  const mg=eirp+num("l_r")-fspl-num("l_l")-nz-num("l_e");$("l_out").textContent=`path loss FSPL    ${f(fspl)} dB\nEIRP               ${f(eirp)} dBW\nnoise power        ${f(nz)} dBW\nmargin             ${f(mg)} dB   ${mg>=3?"OK (>= 3 dB)":"LOW (< 3 dB)"}`;}
+ {const b=$("t_b").value,ov=num("t_d");let lo,hi;if(ov>0){lo=hi=ov*1e3;}else{const x=PL[b]||PL[BODIES[b].parent_id]||PL.earth,a=x.semi_major_axis_m,ae=PL.earth.semi_major_axis_m;lo=b==="moon"?3.844e8:Math.abs(a-ae);hi=b==="moon"?3.844e8:a+ae;}
+  $("t_out").textContent=`distance           ${f(lo/1e9)}${hi!==lo?" to "+f(hi/1e9):""} million km\none-way            ${f(lo/C/60)}${hi!==lo?" to "+f(hi/C/60):""} min\nround trip         ${f(2*lo/C/60)}${hi!==lo?" to "+f(2*hi/C/60):""} min`;}
+ {const dry=num("b_m")*(1+num("b_s")),tot=dry+num("b_p"),lim=num("b_k")*num("b_c"),L=num("b_l"),B=num("b_b");const h=r=>r*dry,tc=r=>h(r)+L;
+  $("b_out").textContent=`dry mass           ${f(dry)} kg\ntotal mass         ${f(tot)} kg   limit ${f(lim)} kg   ${tot<=lim?"OK":"TOO HEAVY"}\nhardware (est.)    $${f(h(214240)/1e6)}M  (range $${f(h(149442)/1e6)}M - $${f(h(428000)/1e6)}M)\nlaunch (price)     $${f(L/1e6)}M\ntotal (est.)       $${f(tc(214240)/1e6)}M   budget $${f(B/1e6)}M   ${tc(214240)<=B?"OK":"OVER BUDGET"}`;}
+ {const n=num("s_n"),s=num("s_s"),p=s/n,z=1.96,d=1+z*z/n,c=(p+z*z/(2*n))/d,h=z*Math.sqrt(p*(1-p)/n+z*z/(4*n*n))/d;
+  $("s_out").textContent=`launch success rate ${f(100*p)} %\n95% interval       ${f(100*(c-h))} - ${f(100*(c+h))} %\nP(mission)         ${f(100*p*num("s_d"))} %`;}
+}catch(e){console.error(e);}}
+load();
+</script>
+</body></html>

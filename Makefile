@@ -13,7 +13,7 @@ staging:
 	$(PY) tools/validate.py
 
 guide:
-	$(PY) tools/make_guide.py
+	$(PY) tools/make_site.py
 
 verified:
 	$(PY) tools/make_verified.py
