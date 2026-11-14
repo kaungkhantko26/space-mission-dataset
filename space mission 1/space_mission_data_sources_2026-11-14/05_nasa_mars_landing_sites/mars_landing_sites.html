@@ -1,0 +1,1221 @@
+<html>
+<title>Mars Exploration Program Landing Sites</title>
+<head>
+<meta name="keywords" content="Mars,landing sites,MER 2003,MGS,Global Surveyor,MOC,Mars Orbiter Camera,CMEX,Center for Mars Exploration,Mars Exploration,Mars Orbiter,Mars Exploration Rover,">
+<meta name="description" content="Mars Exploration Program Landing Sites">
+<Script language="JavaScript">
+<!--
+
+function openNewWin( html, winName, width, height ) {
+  window.open( html, winName,
+     'width='+width+',height='+height+',resizable=yes,status=no,scrollbars=yes' );
+}
+
+function preloadImages() {
+	if (document.images) {
+		hematite = new Image(175,131);
+		hematite.src = 'images/imagemap/hematite.jpg';
+		hematite_over = new Image(175,131);
+		hematite_over.src = 'images/imagemap/hematite_over.jpg';
+		
+		gusev = new Image(175,131);
+		gusev.src = 'images/imagemap/gusev.jpg';
+		gusev_over = new Image(175,131);
+		gusev_over.src = 'images/imagemap/gusev_over.jpg';
+		
+		elysium = new Image(175,131);
+		elysium.src = 'images/imagemap/elysium.jpg';
+		elysium_over = new Image(175,131);
+		elysium_over.src = 'images/imagemap/elysium_over.jpg';
+		
+		isidis = new Image(175,131);
+		isidis.src = 'images/imagemap/isidis.jpg';
+		isidis_over = new Image(175,131);
+		isidis_over.src = 'images/imagemap/isidis_over.jpg';
+		
+		dv_mapviewer = new Image( 189,180 );
+		dv_mapviewer.src = 'images/dataViz/thumbnails/dataViz2.jpg';
+		dv_mapviewer_over = new Image( 189,180 );
+		dv_mapviewer_over.src = 'images/dataViz/thumbnails/dataViz2_over.jpg';
+		
+		dv_vrml = new Image( 251,180 );
+		dv_vrml.src = 'images/dataViz/thumbnails/vrml_atlas.jpg';                                                   
+		dv_vrml_over = new Image( 251,180 );
+		dv_vrml_over.src = 'images/dataViz/thumbnails/vrml_atlas_over.jpg';
+		
+		dv_mola = new Image( 256,180 );
+		dv_mola.src = 'images/dataViz/thumbnails/mola_tracks.jpg'; 
+		dv_mola_over = new Image( 256,180 );
+		dv_mola_over.src = 'images/dataViz/thumbnails/mola_tracks_over.jpg';
+		
+		dv_moc = new Image( 188,180 );
+		dv_moc.src = 'images/dataViz/thumbnails/moc.jpg'; 
+		dv_moc_over = new Image( 188,180 );
+		dv_moc_over.src = 'images/dataViz/thumbnails/moc_over.jpg'; 
+		
+		dv_mer_moc = new Image( 200,180 );
+		dv_mer_moc.src = 'images/dataViz/thumbnails/mer_moc.jpg';
+		dv_mer_moc_over = new Image( 200,180 );
+		dv_mer_moc_over.src = 'images/dataViz/thumbnails/mer_moc_over.jpg'; 
+		
+		dv_mersites = new Image( 293,180 );
+		dv_mersites.src = 'images/dataViz/thumbnails/landingsites.jpg'; 
+		dv_mersites_over = new Image( 293,180 );
+		dv_mersites_over.src = 'images/dataViz/thumbnails/landingsites_over.jpg';
+
+	  // Start countdown
+	  // start_countdown();
+	}
+}
+function changeImage( id,name ){
+	if (document.images) { document.images[id].src=eval(name+".src"); }
+}
+
+ol_captionsize = 1;
+
+var is_win_IE = false;
+if ( ( navigator.appName.indexOf( "Microsoft Internet Explorer" ) != -1 ) &&
+		( navigator.userAgent.indexOf( "Windows" ) != -1 ) )
+	is_win_IE = true;	
+
+function showWidth() { 
+	var width = document.window.width;
+	return confirm('Window width = ',width);
+}
+
+function showDesc( descript ) { 
+/* 	ol_bgcolor = "saddlebrown"; */
+/* 	ol_border=4; */
+/* 	ol_fgcolor = "wheat"; */
+
+	ol_bgcolor = "gray";
+	ol_border=1;
+	ol_fgcolor = "black";
+	ol_closecolor = "white";
+	ol_closesize=2;
+	ol_capcolor="white";
+	ol_textcolor="white";
+	ol_width = 500;
+	/* ol_width = 300; */
+/* 	ol_height= 138; */
+	ol_textsize = 2;
+	ol_aboveheight = 10;
+	ol_vpos = 35; /* ABOVE; */
+/* 	ol_fixx = -1; */
+/* 	ol_fixy = -1; */
+/* 	ol_fixx = 162; */
+	ol_fixx = 200;
+	if ( is_win_IE ) ol_fixy = 910;
+	else ol_fixy = 850;
+/* 	ol_fixx = 162; */
+/* 	ol_fixy = 320; */
+	drs( descript );
+}
+function clearDescAll() { nd(); }
+/* function clearDesc() { showDesc( "" ); } */
+function clearDesc() { nd(); }
+
+
+function openRegisterWindow() {
+	window.open( "msl/workshops/1st_workshop/registration.html", "Registration", 
+	"width=490,height=350,resizable=yes,status=no,scrollbars=no" );
+}
+function openAbstractWindow() {
+	window.open( "msl/workshops/1st_workshop/submit_abstract.html", "Abstract_Submission", 
+	"width=490,height=280,resizable=yes,status=no,scrollbars=no" );
+}
+
+//-->
+</Script>
+
+<style type="text/css">
+a:hover { 
+	/*color: #FFD700;*/
+	font-style:italic;
+} 
+.basic {font-size: 9pt; font-style: normal; font-weight: normal; font-family: "Arial"; color: Black}
+.link {font-size: 9pt; font-style: normal; font-weight: normal; font-family: "Arial"; color: Maroon}
+.link2 {font-size: 8pt; font-style: normal; font-family: "Arial"; color: Black}
+.link3 {font-size: 10pt; font-style: normal; font-weight: normal; font-family: "Arial"; color: Maroon}
+.link4 {font-size: 11pt; font-style: normal; font-weight: normal; font-family: "Arial"; color: Maroon}
+.hdr0 {font-size: 11pt; font-style: normal; font-weight: bold; font-family: "Arial"; color: Black}
+.hdr1 {font-size: 10pt; font-style: normal; font-weight: bold; font-family: "Arial"; color: Black}
+.hdr2 {font-size: 8pt; font-style: normal; font-weight: normal; font-family: "Arial"; color: Black}
+.note {font-size: 8pt; font-style: italic; font-weight: normal; font-family: "Arial"; color: Black}
+.subnote {font-size: 8pt; font-style: italic; font-weight: normal; font-family: "Arial"; color: Darkslategray}
+td.note {font-size: 8pt; font-style: italic; font-weight: normal; font-family: "Arial"; color: Black}
+</style>
+
+<script type="text/javascript" language="javascript" src="sniffer.js"></script>
+<script type="text/javascript" language="javascript1.2" src="custom_splash.js"></script>
+<script type="text/javascript" language="javascript1.2" src="style.js"></script>
+
+<!-- <script type="text/javascript" language="javascript1.2" src="counter.js"></script> -->
+<script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=NASA&subagency=ARC" id="_fed_an_ua_tag"></script>
+</head>
+
+<!--<body bgcolor="black" background="images/mars_stars.jpg" link="cyan" vlink="cyan" alink="white">-->
+<!-- <body bgcolor="black" background="images/twinklingStars.gif" link="black" vlink="black" alink="white" -->
+
+<!-- 
+	<body bgcolor="black" link="black" vlink="gray" alink="gray" onLoad="loadFunction(); preloadImages();"> -->
+<body bgcolor="black" link="black" vlink="black" alink="black" onLoad="loadFunction(); preloadImages();">
+<!-- <div id="overDiv" style="position:absolute; visibility:hide; z-index:1;"></div> -->
+<script language="JavaScript" src="overlib.js"></script>
+<!-- ============================= Navigation Bar =============================  -->
+<script language="javascript1.2" type="text/javascript" src="menu.js"></script>
+
+
+<center>
+<!-- <a href="javascript:openNewWin( 'misc/windowsIE_users.html','info',400,200)"> -->
+<!--   <font size=2 face="verdana, arial" color=lavenderblush><em> -->
+<!--   Special note concerning problems for Windows/Internet Explorer users</em></a> -->
+<!-- <p> -->
+
+<table>
+<!-- ============================= Graphic Header ==============================  -->
+	<tr align=center>
+		<td align=left valign=center width=200>
+			<img align="left" src="images/blackBG/NASAball.gif"
+			width=67 height=62 alt="NAS logo">
+		</td>
+		<td align=center>
+
+			<img align="center" src="icons/marsoweb_logo.jpg" width=386 height=76 alt="Marsoweb logo">
+		</td>
+	
+		<td valign=center align=right  width=200>
+			<table border=3  cellpadding=2  cellspacing=0 bordercolor=brown>
+				<tr  bgcolor=white>
+					<td align=right valign=top bgcolor=white>
+						<img align="right" src="images/ames_logo.gif"
+						width=100  height=50 alt="Ames logo">
+					</td>
+				 </tr>
+
+			</table>
+		</td>
+		
+	</tr>
+
+		<TABLE NOBORDER CELLSPACING=5>
+		
+		<TR valign=bottom align=center><TD height=50>&nbsp;</TD></TR>
+
+
+<!-- ========================== Current Mission Status ============================  -->
+		<TR align=center><TD>
+			<table border=3 cellpadding=3 cellspacing=0>
+
+				<tr align=center bgcolor=tan>
+					<td rowspan=2 bgcolor=saddlebrown><font face="verdana, arial" size=1 color=white>
+						<b>CURRENT<br> MISSION<br> STATUS</b>
+					<td colspan=4><font class='hdr2'><em>NASA, Jet Propulsion Laboratory</em></td>
+					<td><font class='hdr2'><em>European Space Agency</em></td>
+
+				</tr>						
+				<tr align=center bgcolor=wheat>
+					<td>
+						<a href="http://marsprogram.jpl.nasa.gov/mgs/">
+						<font class='link'>Mars Global Surveyor</font></a>
+					</td>
+					<td>
+						<a href="http://marsrovers.jpl.nasa.gov/">
+						<font class='link'>Mars Exploration Rovers</font></a>
+
+					</td>
+					<td>
+						<a href="http://marsprogram.jpl.nasa.gov/odyssey/">
+						<font class='link'>Mars Odyssey</font></a>
+					</td>
+					<td>
+						<a href="http://mars.jpl.nasa.gov/mro/newsroom/pressreleases/20050817a.html">
+						<font class='link'>Mars Reconnaissance Orbiter</font></a>
+
+					</td>
+					<td>
+						<a href="http://sci.esa.int/science-e/www/area/index.cfm?fareaid=9">
+						<font class='link'>Mars Express</font></a>
+					</td>
+				</tr>	
+			</table>
+		</TD></TR>		
+
+<!-- ======================= Non-MSL Future Landing Sites =========================  -->
+
+		<TR align=center><TD>
+
+			<table border=3 cellpadding=10 cellspacing=0><tr bgcolor=wheat align=center><td>
+
+				<table border=1 cellpadding=2 cellspacing=0 bgcolor=bisque><tr align=center><td>
+					<font class='hdr0'>Prospective Landing Sites for Future (non-MSL) Missions</font>
+					<!-- &nbsp;<font class='note'>(Jan. 5<sup>th</sup>, 2010) -->
+					
+					<table border=1 cellspacing=0 cellpadding=4 bgcolor=burlywood width=100%>
+						<tr>
+							<td width=600>
+								<center>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<font class='hdr1'><b>RFP for Future Mars Landing Sites</b>
+								&nbsp;<font class='note'>(Nov. 16<sup>th</sup>, 2010)
+								<!-- &nbsp;<img src="images/new.gif"> -->
+								</center>
+								<p>
+								<font class=basic>
+								The Mars Exploration Program has issued, in November 2010, a Request for Proposal (round VI) for the Critical Data Products program.  This RFP provides support to develop a number of scientifically high-priority landing sites on Mars that will form an initial list for future landed missions.  Details of the RFPs are posted </font>
+								
+								<a href="http://acquisition.jpl.nasa.gov/rfp/NKB-269-122010/default.htm"><font class='link'>here</font></a>.
+								
+								
+							</td>
+
+						</tr><tr align=center>
+							<td align=center>
+		
+								<!-- <img src="icons/new2.gif"><br> -->
+								<!-- <img src="icons/new.gif">&nbsp; -->
+								<font class='hdr1'><b>Imaging Future Candidate Landing Sites</b>
+								&nbsp;<font class='note'>(Oct. 28<sup>th</sup>, 2010)
+								<p>
+	
+								<a href="msl/memoranda/oct10call/Call_for_New_Candidate_Future_Mars_Landing_Sites_10-28-10.doc">
+									<font class='link3'>Call for Imaging of Candidate Future Landing Sites</font>
+								</a>
+								&nbsp;&nbsp;<font class='note'>(Word)</font>
+								<br>
+								<font class='subnote'>(from the Mars Program Offices at NASA HQ and JPL)</font>
+								<p>
+									
+								<a href="msl/memoranda/oct10call/Template_Future_Landing_Site_v8.doc">
+									<font class='link3'>Abstract Template for Submitting Imaging Requests</font>
+								</a>
+								&nbsp;&nbsp;<font class='note'>(Word)</font>
+								<br><br>
+								
+							</td>
+								
+						</tr><tr align=center>
+							<td colspan=2><font class='hdr2'>
+								<b>Call for Prospective Landing Sites for Future (non-MSL) Missions</b>&nbsp;<font class='note'>(Nov. 2<sup>nd</sup>, 2009)
+								<p>
+								<a href="msl/memoranda/nov09call/Final_Call_for_Candidates.doc">
+									<font class='link'>Call for Future Landing Sites</font>
+								</a>
+								&nbsp;&nbsp;<font class='note'>(Word)</font>
+								&nbsp;&nbsp;&nbsp;
+								<a href="msl/memoranda/nov09call/Candidate_Landing_Site_Abstract_Template_v-4.doc">
+									<font class='link'>Landing Site Abstract Template</font>
+								</a>
+								&nbsp;&nbsp;<font class='note'>(Word)</font>
+							</td>
+						</tr>
+					</table>
+					
+				</td></tr></table>
+			</tr></td></table>
+
+		</TD></TR>
+
+<!-- ============================= MSL Links ===============================  -->
+
+		<TR align=center><TD>
+			<table border=3 cellpadding=0 cellspacing=0><tr><td>
+			<table border=0 cellpadding=6 cellspacing=0>
+
+				<!-- Title Bar -->
+				<tr align=center bgcolor=wheat>
+					<td align=center colspan=2>
+						<a href="http://mars.jpl.nasa.gov/msl/">
+							<table border=1 cellspacing=0 cellpadding=2><tr  bgcolor=Cornsilk align=center><td>
+								<font  face="verdana, arial" size=3 color=Indianred><b><em>
+								<font size=3 color=black>2011</font>
+								<font size=4 color=Maroon>M</font>ARS
+								<font size=4 color=Maroon>S</font>CIENCE
+								<font size=4 color=Maroon>L</font>ABORATORY
+							</td></tr></table>
+						</a>
+					</td>
+
+				</tr>
+				
+				<!-- Announcement for 5th MSL landing site workshop -->
+				<tr align=center bgcolor=wheat>
+					<td colspan=2>
+					
+						<table noborder=0 cellspacing=10 cellpadding=0><tr>
+							<td>
+
+								<table border=1 cellpadding=2 cellspacing=0 bgcolor=bisque><tr align=center><td>
+									<font class='hdr1'>Fifth MSL Landing Site Workshop</font>
+									<br>
+									<font class='hdr2'>May 16 - May 17, 2011, Monrovia, CA, DoubleTree Hotel</font>
+			
+									<table border=1 cellspacing=0 cellpadding=4 bgcolor=burlywood width=100%>
+										<tr align=center>
+											<td>
+												<a href="msl/workshops/5th_workshop/program.html">
+													<font class='link'><b>Workshop Presentations</b></font>
+												</a>
+												&nbsp;<font class='note'>(HTML)</font>
+											</td>
+											<td>
+												<a href="msl/workshops/5th_workshop/Final_Letter_for_Meyer_and_Grotzinger_5-26-11.doc">
+													<font class='link'><b>MSL Landing Site Steering Committee Letter</b></font>
+												</a>
+												&nbsp;<font class='note'>(Word)</font>
+												<br>
+												<font class='subnote'>(workshop summary letter to Meyer &amp; Grotzinger; posted June 9, 2011)</font>
+											</td>
+											<td>
+												<!-- &nbsp;<img src="icons/new.gif"> -->
+												<a href="msl/workshops/5th_workshop/Final_Quad_Charts_for_5th_MSL_Workshop_5-26-11.ppt">
+													<font class='link'><b>Latest Quad Charts of Landing Sites</b></font>
+												</a>
+												&nbsp;<font class='note'>(PPT)</font>
+												<br>
+												<font class='subnote'>(posted June 9, 2011)</font>
+											</td>
+										</tr>
+<!-- 
+										<tr align=center>
+											<td colspan=2>
+												<font class='basic'>This conference will be WebEx-accessible.</font>
+													<a href="javascript: void(0)" onClick="javascript:window.open( 'msl/workshops/5th_workshop/webex.html', '_BLANK', 'width=420,height=220' )"; >
+													<font class='link'>(See instructions.)</font>
+												</a>
+											</td>
+										</tr>
+ -->
+									</table>
+								</td></tr></table>
+							
+							</td>
+						</tr></table>
+							
+					</td>
+				</tr>
+
+				<!-- 4th MSL landing site workshop -->
+				<tr align=center bgcolor=wheat>
+					<td colspan=2>
+					
+						<table noborder=0 cellspacing=10 cellpadding=0><tr>
+							<td>
+
+								<table border=1 cellpadding=2 cellspacing=0 bgcolor=bisque><tr align=center><td>
+									<font class='hdr1'>Fourth MSL Landing Site Workshop</font>
+									<br>
+									<font class='hdr2'>Sep. 27 - Sep. 29, 2010</font>
+			
+									<table border=1 cellspacing=0 cellpadding=4 bgcolor=burlywood width=100%>
+										<tr align=center valign=bottom>
+											<td>
+												<a href="msl/workshops/4th_workshop/program.html">
+													<font class='link'><b>Workshop Presentations</b></font>
+												</a>
+												<!-- &nbsp;&nbsp;<font class='note'>(HTML)</font> -->
+											</td>
+										<!-- </tr><tr align=center> -->
+											<td><font class='hdr2'>
+												<a href="msl/memoranda/Final_Letter_for_Meyer_and_Grotzinger_10-14-10.doc">
+													<font class='link'><b>Workshop Summary Letter</b></font>
+												</a>
+												&nbsp;<font class='note'>(Word)</font>
+											</td>
+											<td><font class='hdr2'>
+												<a href="msl/memoranda/Update_on_MSL_Landing_Site_Selection_Process_10-28-10.doc">
+													<font class='link'><b>Update on on MSL Landing Site Selection Process</b></font>
+												</a>
+												&nbsp;<font class='note'>(Word)</font>
+<!-- 
+												<br>
+												<font class='note'>
+													(Golombek &amp; Grant)
+													&nbsp;
+													(Oct. 28<sup>th</sup>, 2010)
+												</font>
+ -->
+											</td>
+										</tr>
+									</table>
+								</td></tr></table>
+							
+							</td><td>	
+			
+<!-- 
+								<table border=1 cellpadding=2 cellspacing=0 bgcolor=bisque><tr align=center><td>
+									<font class='hdr1'>Landing Site Selection Updates</font>
+									<table border=1 cellspacing=0 cellpadding=4 bgcolor=burlywood width=100%>
+										<tr align=center valign=bottom>
+											<td>
+												
+												<a href="msl/memoranda/Update_on_MSL_Landing_Site_Selection_Process_10-28-10.doc">
+													<font class='link'><b>Update on on MSL Landing Site Selection Process</b></font>
+												</a>
+												&nbsp;<font class='note'>(Word)</font>
+												<br>
+												<font class='note'>
+													(Golombek &amp; Grant)
+													&nbsp;
+													(Oct. 28<sup>th</sup>, 2010)
+												</font>
+											</td>
+									</table>
+								</td></tr></table>
+ -->
+		
+							</td>
+						</tr></table>
+							
+					</td>
+				</tr>
+
+				<!-- New calls for MSL site suggestions -->
+				<tr align=center bgcolor=wheat>
+					<td colspan=2>
+
+							<table border=1 cellpadding=2 cellspacing=0 bgcolor=bisque><tr align=center><td>
+								<font class='hdr1'>Current Prospective MSL Landing Sites</font>
+								<!-- &nbsp;<font class='note'>(Jan. 5<sup>th</sup>, 2010) -->
+								
+								<table border=1 cellspacing=0 cellpadding=4 bgcolor=burlywood width=100%>
+									<tr>
+										<td align=center>
+											
+											<font class='hdr2'><b><b>Documents for MSL Landing Sites, 2011</b>
+											<p>
+
+											<table border=0 cellspacing=1 cellpadding=0 width=100%>
+
+												<tr>
+													<td align=left class='note'>(3/4/11)</td>
+													<td width=20></td>
+													<td align=center>
+														<a href="http://europlanet.dlr.de/msl">
+															<font class='link'>HRSC digital terrain models for the MSL candidate landing sites</font>
+														</a>
+														<br>
+														<font class='subnote'>(Klaus Gwinner&#39;s HRSC 50 m/pixel DEMs of the MSL landing sites)</font>
+													</td>
+													<td width=20></td>
+													<td align=left class='note'>(HTML)</td>
+												</tr>
+														
+												<tr>
+													<td align=left class='note'>(1/5/11)</td>
+													<td width=20></td>
+													<td align=center>
+														<a href="msl/memoranda/sites_jan11/Golombek_MSL_LS_2011.pdf"
+															onClick="javascript:window.open( 'msl/docs/citation.html', '_BLANK', 'width=400,height=150' )"; >
+															<font class='link'>Final Four Landing Sites for the Mars Science Laboratory</font>
+														</a>
+														<br>
+														<font class='subnote'>(2011 LPSC abstract, showing slightly shifted ellipses for the 2011 opportunity)</font>
+													</td>
+													<td width=20></td>
+													<td align=left class='note'>(PDF)</td>
+												</tr>
+
+											</table>
+	
+										</td>
+									</tr>
+									
+									<tr align=center>
+										<td colspan=2>
+											<font class='hdr2'><b>Documents for MSL Landing Sites, 2010</b>
+											<p>
+											
+											<table border=0 cellspacing=1 cellpadding=0>
+												<tr>
+													<td align=left class='note'>(6/15/10)</td>
+													<td width=20></td>
+													<td align=center>
+														<a href="msl/memoranda/sites_jan10/MSL_Project_5th_Site.pdf">
+															<font class='link'>MSL Project Letter to MSL Landing Site Steering Committee</font>
+														</a>
+														<br>
+														<font class='subnote'>(accepting Committee's recommendation to not consider NE Syrtis or E Margaritifer)</font>
+													</td>
+													<td width=20></td>
+													<td align=left class='note'>(PDF)</td>
+												</tr>
+												<tr>
+													<td align=left class='note'>(5/11/10)</td>
+													<td width=20></td>
+													<td align=center>
+														<a href="msl/memoranda/sites_jan10/MSL_Steering_Committee_Letter_5-11-10.doc">
+															<font class='link'>MSL Landing Site Steering Committee Letter: Decision to not add a 5<sup>th</sup> site</font>
+														</a>
+														<br>
+														<font class='subnote'>(discussing the science merits and landing site hazards of NE Syrtis &amp; E Margaritifer)</font>
+													</td>
+													<td width=20></td>
+													<td align=left class='note'>(Word)</td>
+												</tr>
+											</table>
+											<br>
+											
+											<font class='hdr2'><b>Documents from Jan. 5<sup>th</sup> 2010</b>
+											<p>
+											<table border=0 cellspacing=0 cellpadding=4 bgcolor=burlywood>
+												<tr>
+													<td>
+														<a href="msl/memoranda/sites_jan10/Steering_Committee_Letter_1-4-10.pdf">
+															<font class='link'>Steering Committee Letter on 2 New Sites</font>
+														</a>
+														&nbsp;&nbsp;<font class='note'>(PDF)</font>
+														<br><font class='subnote'>(Grant &amp; Golombek)</font>
+													</td>
+													<td>
+														<a href="msl/memoranda/sites_jan10/Aqueous_enviroments_MSL-Mustard.pdf">
+															<font class='link'>Abstract Describing NE Syrtis</font>
+														</a>
+														&nbsp;&nbsp;<font class='note'>(PDF)</font>
+														<br><font class='subnote'>(Mustard and Ehlmann)</font>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<a href="msl/memoranda/sites_jan10/Marg_NE_Syrtis_Ellipse_Locations.ppt">
+															<font class='link'>Ellipse Locations for 2 New Sites</font>
+														</a>
+														&nbsp;&nbsp;<font class='note'>(PPT)</font>
+														<br><font class='subnote'>(Grant &amp; Golombek)</font>
+													</td>
+													<td>
+														<a href="msl/memoranda/sites_jan10/Christensen_MSL_Margaritifer_Terra_v3.pdf">
+															<font class='link'>Abstract Describing E Margaritifer</font>
+														</a>
+														&nbsp;&nbsp;<font class='note'>(PDF)</font>
+														<br><font class='subnote'>(Christensen et al.)</font>
+													</td>
+												</tr>
+											</table>
+										
+										</td>
+									</tr>
+									<tr align=center>
+										<td colspan=2><font class='hdr2'>
+											<b>Call for New MSL Landing Sites</b>&nbsp;<font class='note'>(Aug. 22<sup>nd</sup>, 2009)
+											<p>
+											<a href="msl/memoranda/Call_for_new_MSL_Site_8-20-09.doc">
+												<font class='link'>Call for New MSL Sites</font>
+											</a>
+											&nbsp;&nbsp;<font class='note'>(Word)</font>
+											&nbsp;&nbsp;&nbsp;
+											<a href="msl/memoranda/Landing_Site_Abstract_Template_8-20-09_v.2.doc">
+												<font class='link'>Landing Site Abstract Template</font>
+											</a>
+											&nbsp;&nbsp;<font class='note'>(Word)</font>
+										</td>
+									</tr>
+								</table>
+								
+                			</td></tr></table>
+					</td>
+				</tr>
+				
+				<tr align=center bgcolor=wheat>
+
+					<!-- Final 7 Landing Sites -->
+					<td colspan=2>
+						<table border=1 cellpadding=2 cellspacing=0 bgcolor=bisque>
+							<tr align=center>
+
+								<td colspan=2>
+									<font class='hdr1'>Previously-Considered MSL Landing Sites</font>&nbsp;<font class='note'>(April, 2009)
+								</td>
+
+							<tr align=center>
+
+								<td>
+									<table border=1 cellspacing=0 cellpadding=2 bgcolor=burlywood width=100%>
+
+										<tr>
+											<td valign=top>
+	
+												<center>
+												<a href="javascript:openNewWin( 'msl2009/workshops/3rd_workshop/final_announcement.html', '_blank', 550, 320 )">
+													<font class='hdr1'>Third MSL Landing Site Workshop</font>
+												</a>
+												<br>
+												<font class='hdr2'>Sep. 15 - Sep. 17, 2008, Monrovia, California</font>
+
+												</center>
+													<ul><font class='note'>
+														<li><a href="msl2009/workshops/3rd_workshop/program.html">
+																<font class='link'>
+																Workshop Presentations</font></a>
+																<p>
+														<li><a href="msl2009/workshops/3rd_workshop/Third_MSL_Workshop_Notes_FINAL.doc">
+																<font class='link'>
+																Final Notes from the Workshop</font></a>
+																<font class='note'>(Word)</font>
+																<p>
+<!-- 
+														<li><a href="msl2009/workshops/3rd_workshop/Agenda_LSW3%208-27-08.doc">
+																<font class='link'>
+																Third MSL Landing Site Workshop Agenda</font></a>
+																<font class='note'>(Word)</font>
+																<p>
+														<li><a href="msl2009/workshops/3rd_workshop/Second%20Announcement%203rd%20MSL Workshop%207-10-08.doc">
+																<font class='link'>
+																Third MSL Landing Site Workshop</font></a>
+																<font class='note'>(Word)</font>
+																<br>&nbsp;<font class='note'>2<sup>nd</sup> announcement</em>
+																<p>
+ -->
+														<li><a href="msl2009/memoranda/sites_jul08/Letter%20for%20Michael%20Meyer%207-11-08.doc">
+																<font class='link'>
+																Steering Committe Letter on Current 7 Sites</font></a>
+																<font class='note'>(Word)</font>
+																<p>
+														<li><a href="msl2009/memoranda/sites_jul08/Discussion%20Points-Science%20Criteria.doc">
+																<font class='link'>
+																Discussion Points and Science Criteria</font></a>
+																<font class='note'>(Word)</font>
+																<!-- <br>&nbsp;<font class='note'>(how sites will be discussed and ranked)</font> -->
+																<p>
+														<li><a href="msl2009/memoranda/sites_jul08/MSL%20Landing%20Sites%20-%20Final%207%20v.7.doc">
+																<font class='link'>
+																 MSL Landing Sites - Final 7</font></a>
+																<font class='note'>(Word)</font>
+																<p>
+														<li><a href="msl2009/memoranda/sites_jul08/7%20MSL%20Sites.jpg">
+																<font class='link'>
+																Maps of Final 7 Sites</font></a>
+																<font class='note'>(JPEG)</font>
+													</ul>
+											</td>
+											
+											<td valign=top>
+												<center>
+												<!-- <font class='hdr1'>Steering Committee Presentations</font> -->
+												<font class='hdr1'>Landing Site Presentations and Memoranda</font>
+												</center>
+												<ul><font class='note'>
+													<li><a href="msl2009/memoranda/MSL_Site_Selection_March2009.pdf">
+															<font class='link'>
+															Final Four Candidate Landing Sites (March 2009)</font></a>
+															<font class='note'>(PDF)</font>
+															<br>&nbsp;<font class='note'>Golombek et al.</font>
+															<p>
+													<li><a href="msl2009/memoranda/msl_landing_site_memo_nov_08.pdf">
+															<font class='link'>
+															Landing Site Down-selection Meeting (JPL, Nov. 5)</font></a>
+															<font class='note'>(PDF)</font>
+															<br>&nbsp;<font class='note'>Watkins, Grotzinger, Vasavada</font>
+															<p>
+													<li><a href="msl2009/memoranda/sites_jul08/GaleCrater_Edgett_etal_Jun08.pdf">
+															<font class='link'>
+															MSL Landing Sites: Gale, Reconsidered</font></a>
+															<font class='note'>(PDF)</font>
+															<br>&nbsp;<font class='note'>Edgett, Milliken, Grotzinger, Malin</font>
+															<p>
+													<li><a href="msl2009/memoranda/sites_jul08/MSL_project_constraints_AC1FAE.pdf">
+															<font class='link'>
+															Additional MSL Landing Site: <br>Opportunities and Constraints from the Project Side</font></a>
+															<font class='note'>(PDF)</font>
+															<br>&nbsp;<font class='note'>Watkins et al.</font>
+															<p>
+													<li><a href="msl2009/memoranda/sites_jul08/Wiseman_Arvidson_6_23_08.pdf">
+															<font class='link'>
+															Candidate MSL Landing Site:<br>Southern Meridiani Phyllosilicate / Sulfate Contact</font></a>
+															<font class='note'>(PDF)</font>
+															<br>&nbsp;<font class='note'>Arvidson, Wiseman, and the CRISM Team</font>
+															<p>
+												</ul>
+											</td>
+											
+										</tr>
+									</table>
+
+						</td></tr></table>
+					
+					</td>
+
+				</tr>
+				<!-- -----------------------------------------------------------  New Row  ----------------------------------------------------------- -->
+				<tr align=center bgcolor=wheat>
+
+					<!-- Ellipses of Prospective 7 Sites -->
+					<td>
+						<table border=1 cellpadding=2 cellspacing=0 bgcolor=bisque><tr ><td>
+
+						<center>
+						<font class='hdr1'>MSL Landing Sites Ellipses</font><br><font class='note'>(April, 2009)
+
+						<table border=1 cellspacing=0 cellpadding=4 bgcolor=burlywood width=100%>
+							<tr align=center>
+								<td><font class='hdr2'>
+									<b>HiRISE, CTX, &amp; MOC Image Maps</b>
+									<br>Interactive Guide to Landing Site Images
+									<!-- <img src="images/new.gif">&nbsp; -->
+								</td>
+								<td><font class='hdr2'>
+									<b>JPEG</b>
+								</td>
+							</tr>
+							<tr align=center>
+								<td><a href="msl/topsites/holden_crater/"><font class='link'>Holden Crater</a></td>
+								<td><a href="msl/docs/site_ellipses_4_09/Holden_ellipse_sm.jpg"><font class='link2'>JPEG</a></td>
+							</tr>
+							<tr align=center>
+								<td><a href="msl/topsites/mawrth_vallis/"><font class='link'>Mawrth Vallis</a></td>
+								<td><a href="msl/docs/site_ellipses_4_09/Mawrth2_ellipse_sm.jpg"><font class='link2'>JPEG</a></td>
+							</tr>
+							<tr align=center>
+								<td><a href="msl/topsites/eberswalde/"><font class='link'>Eberswalde Crater</a></td>
+								<td><a href="msl/docs/site_ellipses_4_09/Eberswalde_ellipse_sm.jpg"><font class='link2'>JPEG</a></td>
+							</tr>
+							<tr align=center>
+								<td><a href="msl/topsites/gale_crater/"><font class='link'>Gale Crater</a></td>
+								<td><a href="msl/docs/site_ellipses_4_09/Gale_ellipse_sm.jpg"><font class='link2'>JPEG</a></td>
+							</tr>
+
+						</table>
+						</td></tr></table>
+
+					</td>
+					
+					<td>
+					<TABLE NOBORDER>
+						<TR ALIGN=CENTER><TD>
+							
+					<!-- Other Landing Site Image and Data Resources -->
+					<!-- <td> -->
+
+							<table border=1 cellpadding=2 cellspacing=0 bgcolor=bisque><tr align=center><td>
+								<font class='hdr1'>MSL Landing Site Image &amp; Data Resources</font>
+								
+								<table border=1 cellspacing=0 cellpadding=4 bgcolor=burlywood width=100%>
+									<tr>
+										<td>
+											<!-- <ul><font class='note'> -->
+												<font class='note'>
+													<a href="http://hirise.lpl.arizona.edu/anaglyph/msl.php"><font class='link'>
+													HiRISE Stereo Anaglyphs</font></a><!-- &nbsp;<img src="images/new.gif"> -->
+													<br>
+													<font class='hdr2'>19 HiRISE Stereo Anaglyphs of MSL landing sites</font>
+													<br>
+													<font class='subnote'>(HiRISE Science Team)</font>
+													<p>
+													<a href="http://www.msss.com/mro/ctx/deep/msl_anaglyphs/"><font class='link'>
+													CTX Stereo Anaglyphs</font></a>
+													<br>
+													<font class='hdr2'>19 CTX Stereo Anaglyphs of MSL landing sites</font>
+													<br>
+													<font class='subnote'>(Malin Space Science Systems)</font>
+													<p>
+													<a href="http://hirise.lpl.arizona.edu/anaglyph/msl_obs.php"><font class='link'>
+													HiRISE MSL Images</font></a>
+													<br>
+													<font class='hdr2'>Links to all HiRISE images of MSL landing sites</font>
+													<br>
+													<font class='subnote'>(HiRISE Science Team)</font>
+													<p>
+											<!-- </ul> -->
+										</td><td>
+											<!-- <ul><font class='note'> -->
+												<font class='note'>
+													<a href="http://faculty.washington.edu/joshband/cdp/"><font class='link'>
+													TES/THEMIS-Derived Composition</font></a>
+													<br>
+													<font class='hdr2'>Bulk surface composition data and maps of landing sites</font>
+													<br>
+													<font class='subnote'>(Bandfield/Rogers, for JPL's Critical Data Products)</font>
+													<p>
+													<a href="http://crism.jhuapl.edu/msl_landing_sites"><font class='link'>
+													CRISM support for MSL landing site selection</font></a>
+													<br>
+													<font class='hdr2'>Systematic set of derived CRISM analysis products provides<br> an objective framework for the evaluation and comparison of the<br> spectral signatures at each candidate site.  CRISM prototype<br> TRR3 I/F data available. </font>
+													<br>
+													<font class='subnote'>(CRISM Science Team, for JPL's Critical Data Products)</font>
+													<p>											
+													<a href="http://themis.asu.edu/landingsites/"><font class='link'>
+													THEMIS Images</font></a>
+													<br>
+													<font class='hdr2'>Full-resolution landing site images from THEMIS</font>
+													<br>
+													<font class='subnote'>(THEMIS Science Team)</font>
+													<p>
+											<!-- </ul> -->
+										</td>
+									</tr><tr align=center>
+										<td colspan=2><font class='hdr2'>
+											<b>From the Public</b>
+										</td>
+									</tr><tr>
+										<td colspan=2>
+											<a href="msl/docs/public/hobbs_perspective_views/holden_screen.jpg">
+											<font class='link'>Holden Crater</a>
+											&nbsp;&nbsp;
+											<a href="msl/docs/public/hobbs_perspective_views/mawrth_screen.jpg">
+											<font class='link'>Mawrth Vallis</a>
+											&nbsp;&nbsp;
+											<a href="msl/docs/public/hobbs_perspective_views/eberswalde_screen.jpg">
+											<font class='link'>Eberswalde Crater</a>
+											&nbsp;&nbsp;
+											<a href="msl/docs/public/hobbs_perspective_views/gale_screen.jpg">
+											<font class='link'>Gale Crater</a>
+											<br>
+											<font class='hdr2'>Perspective views of prospective landing sites, 
+											using Mars Express, MOLA, MDIM, &amp; THEMIS data</font>
+											<!-- &nbsp;<img src="images/new.gif"> -->
+											<br>
+											<font class='subnote'>(Steven Hobbs)</font>
+										</td>
+									</tr>
+								</table>
+								
+                			</td></tr></table>
+               		<!-- </td> -->
+               		
+              			</TD></TR>
+              		</TABLE>
+                 		
+                	</td>
+
+				</tr>
+				<!-- -----------------------------------------------------------  New Row  ----------------------------------------------------------- -->
+				<tr align=center bgcolor=wheat>
+				
+					<!-- Other Landing Site Image and Data Resources -->
+
+					<td colspan=2>
+					
+					<TABLE NOBORDER><TR>
+						<TD>
+						<!-- General MSL Documents -->
+							<table border=1 cellpadding=2 cellspacing=0 bgcolor=bisque><tr align=center><td>
+										<font class='hdr1'>General MSL Documents</font>
+										<table border=1 cellspacing=0 cellpadding=2 bgcolor=burlywood width=100%><tr><td>
+													<ul><font class='note'>
+														<li><a href="msl/memoranda/MSL_overview_LS.pdf">
+																<font class='link'>
+																Mission Overview</font></a>
+	
+																<font class='note'>(PDF)</font><p>
+														<li><a href="msl/memoranda/MSL_Eng_User_Guide_v4.5.1.pdf">
+																<font class='link'>
+																Engineering Constraints, v4.5</font></a>
+																<font class='note'>(PDF)</font>
+																<!--<br>&nbsp;<font class='note'>(Revised: Aug. 24, 2007)</em>-->
+																<p>
+	
+														<li><a href="msl/memoranda/MSL_PPCategorizationLetter.pdf">
+																<font class='link'>
+																Planetary Protection Constraints</font></a>
+																<font class='note'>(PDF)</font>
+													</ul>
+										</td></tr></table>
+							</td></tr></table>
+							
+               			</TD><TD>
+               			
+							<table border=1 cellpadding=2 cellspacing=0 bgcolor=bisque>
+								<tr align=center>
+	
+									<td colspan=2>
+										<font class='hdr1'>Previous Landing Site Workshops</font>
+	
+								<tr align=center>
+	
+									<td>
+	
+										<table border=1 cellspacing=0 cellpadding=2 bgcolor=burlywood width=100%>
+											<tr>
+												<td valign=top>
+	
+													<center>
+													<font class='hdr1'>First Landing Site Workshop</font>
+													<br>
+													<font class='hdr2'>May 31 - June 2, 2006, Pasadena, California
+													</center>
+	
+													<p>
+													<ul><font class='note'>
+														<li><a href="msl/workshops/1st_workshop/program.html">
+															<font class='link'>
+															Workshop Presentations</font></a>
+														<li><a href="msl/workshops/1st_workshop/docs/MSL_workshop_report.pdf">
+															<font class='link'>
+															Workshop Report</font></a>
+	
+															<font class='note'>(PDF)</font>
+														<li><a href="msl/workshops/1st_workshop/docs/MSL_workshop_summary.pdf">
+															<font class='link'>
+															Workshop Summary Letter</font></a>
+															<font class='note'>(PDF)</font>
+														<li><a href="msl/workshops/1st_workshop/docs/MSL_workshop_site_list.pdf">
+															<font class='link'>
+	
+															Landing Site List from Workshop</font></a>
+															<font class='note'>(PDF)</font>
+														<li><a href="msl/workshops/1st_workshop/docs/MSL_workshop_vote_results.pdf">
+															<font class='link'>
+															Landing Site Voting Results</font></a>
+															<font class='note'>(PDF)</font>
+														</ul>
+	
+												</td>
+												
+												<td valign=top>
+													<center>
+													<font class='hdr1'>Second Landing Site Workshop</font>
+													<br>
+													<font class='hdr2'>Oct. 23 - Oct. 25, 2007, Pasadena, California</font>
+													</center>
+													<p>
+	
+													<ul><font class='note'>
+														<li>
+															<a href="msl/workshops/2nd_workshop/program.html">
+																<font class='link'>
+																Workshop Presentations</font>
+															</a>
+														<li>
+															<a href="msl2009/workshops/2nd_workshop/Second_Announcement_2nd_MSL_Workshop_8-24-07.doc">
+	
+																<font class='link'>
+																Announcement</font>
+															</a>
+															<font class='note'>(Word)</font>
+														<li>
+															<a href="msl/workshops/2nd_workshop/assessments/Site_assessment_counts_Summary_v3.pdf"">
+																<font class='link'>
+																Assessment Summary of Science Criteria</font>
+	
+															</a>
+															<font class='note'>(PDF)</font>
+														<li>
+															<a href="msl2009/workshops/2nd_workshop/assessments/Top_Priority_Sites.pdf">
+																<font class='link'>
+																Top Priority Sites from Workshop
+																</font>
+															</a>
+															<font class='note'>(PDF)</font>
+	
+													</ul>
+												</td>
+						
+											</tr>
+										</table>
+									</tr>
+								</td>
+							</table>
+                		
+                		</TD></TR></TABLE>
+		</TD></TR>
+		
+		<TR bgcolor=wheat align=center> <TD colspan=2>
+
+			<!-- Historical Landing Site Documents -->
+				<table border=1 cellpadding=2 cellspacing=0 bgcolor=bisque><tr align=center><td>
+					<font class='hdr1'>Historical Landing Site Documents</font>&nbsp;<img src="images/new.gif">
+					<table border=1 cellspacing=0 cellpadding=2 bgcolor=burlywood width=100%>
+						<tr><td>
+							<ul>
+							<font class='note'>
+								<li>													
+									<a href="http://cmex.ihmc.us/marstools/mars_cat/Mars_Cat.html"><font class='link'>
+									Mars Landing Site Catalog</font></a>
+									&nbsp;&nbsp;(HTML)
+									<br>
+									<font class='hdr2'>NASA Reference Publication 1238, 1990</font>
+									<br>
+									<font class='subnote'>(Ronald Greeley and Peggy Ellen Thomas, editors)</font>
+									<br>
+									<a href="http://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19900018291_1990018291.pdf">PDF Version</a>
+									<p>
+								<li>													
+									<a href="http://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20000112986_2000120258.pdf"><font class='link'>
+									Mars Surveyor 2001 Landing Site Workshop</font></a>
+									&nbsp;&nbsp;(PDF)
+									<br>
+									<font class='hdr2'>NASA Ames Research Center, Moffett Field, CA, January 26-27, 1998</font>
+									<br>
+									<font class='subnote'>(Virginia Gulick, editor)</font>
+									<p>
+								</ul>
+						</td></tr>
+					</table>
+				</td></tr></table>
+
+			
+		</TD></TR>
+		</TABLE>
+
+		</td>
+	</tr>
+
+</table>
+
+<!-- ========================== HiRISE Announcement ============================  -->
+		<TR ><TD height=20>&nbsp;</TD></TR>
+		<TR align=center><TD>
+						<table cellpadding=5 cellspacing=0  background="images/hr_backdrop3.jpg" border=4><tr>
+							<td align=left>
+
+								
+								<center><!--<img src="images/new2.gif"><br>-->
+								<a href="/HiRISE/">
+									<font face="verdana, arial" size=2 color=white><em>
+									<font size=3>MRO</font>
+									<font size=3>HIRISE:</font>
+									<font size=3>H</font>IGH
+									<font size=3>R</font>ESOLUTION
+									<font size=3>I</font>MAGING
+									<font size=3>S</font>CIENCE
+									<font size=3>E</font>XPERIMENT</em>
+
+								</a>
+								</font>
+								</center>
+								<font face="Arial" size=2 color="white">
+								<ul><font class='note'>
+									<li>
+										<a href="/HiRISE/hirise_images/">
+											<font color=palegoldenrod face=Arial size=2>
+											<b>HiRISE Image Viewer</b></a></font>
+
+											<br><font size=2 color="white"><b>
+											<em>Explore images online in full-resolution</em></b></font><p>
+									<li>
+										<a href="http://hiroc.lpl.arizona.edu/images/PSP/">
+											<font color=palegoldenrod face=Arial size=2>
+											<b>Latest Image Download Center</b></a></font>
+											<br><font size=2 color="white"><b>
+											<em>Weekly releases at HiRISE Operations Center</em></b></font><p>
+
+									<li>
+										<a href="http://hirise.seti.org/epo">
+											<font color=palegoldenrod face=Arial size=2>
+											<b>HiRISE Learning and Activities Center</b></a></font>
+											<br><font size=2 color="white"><b>
+											<em>HiRISE fact sheets, tutorials, K-14 activity books with teacher guides,<br>
+											detailed science theme descriptions</em></b></font><p>
+
+									<li>
+										<a href="http://clickworkers.arc.nasa.gov/hirise">
+											<font color=palegoldenrod face=Arial size=2>
+											<b>HiRISE Clickworkers</b></a></font>
+											<br><font size=2 color="white"><b>
+											<em>Volunteer to help identify landforms in HiRISE images</em></b></font>
+								</ul>
+								</font>
+
+							</td>
+						</tr></table>
+</TD></TR>		
+
+<!-- ============================= DataViz Panels =============================  -->
+<table>
+	<tr valign=bottom align=center><td height=20>&nbsp;</td></tr>
+	<tr valign=bottom align=center>
+		<td>
+			<table border=1 cellpadding=3 cellspacing=0 bordercolor=gray>
+				<tr align=center><td>
+
+					<font face="verdana, arial" size=2 color=white><em>
+						<font size=3>M</font>ARS
+						<font size=3>D</font>ATA
+						<font size=3>V</font>ISUALIZATION 
+						<font size=3>T</font>OOLS</em>
+				</td></tr>
+			</table>
+		</td>
+
+	</tr>
+	<tr align=center>
+		<td>
+			<table border=1 cellpadding=3 cellspacing=0 bordercolor=gray>
+				<tr align=center valign=top>
+					<td>
+						<!-- <a href="javascript:openNewWin( 'images/dataViz/dataViz2.jpg', dataVizWin1, 654,622 )"> -->
+						<a href="/dataViz/"
+							onMouseOver=
+								"changeImage( 'dv_mapviewer_img', 'dv_mapviewer_over' );
+								showDesc( 'Interface to global and landing site-specific maps and data, including TES, MOLA, MDIM, geology, and others.  Includes links to all MOC and THEMIS images.  <font color=skyblue><br><em>New:</em> Includes complete atlas of 1/128<sup>th</sup>-degree MOLA maps with interactive altitude profiler, and newly-released MDIM 2.1 surface images (1/256<sup>th</sup>-degree).' )"
+							onMouseOut=
+								"changeImage( 'dv_mapviewer_img', 'dv_mapviewer' );
+								clearDesc()">
+							<img name="dv_mapviewer_img"
+								src="images/dataViz/thumbnails/dataViz2.jpg" width=189 height=180></a>
+
+						<br>
+						<font face="verdana, arial" size=2 color=wheat>Interactive Data Maps
+					</td>
+					<td>
+<!-- 								showDesc( 'On-the-fly VRML generator for user-selected regions-of-interest.' )" -->
+						<!-- <a href="javascript:openNewWin( 'images/dataViz/mola_tracks.jpg', dataVizWin3, 763,537 )"> -->
+						<a href="/MOLA/"
+							onMouseOver=
+								"changeImage( 'dv_mola_img', 'dv_mola_over' );
+								showDesc( 'Plan and profile views of MOLA tracks, with interactive data querying.' )"
+							onMouseOut=
+								"changeImage( 'dv_mola_img', 'dv_mola' );
+								clearDesc()">
+							<img name="dv_mola_img"
+								src="images/dataViz/thumbnails/mola_tracks.jpg" width=256 height=180></a>
+						<br>
+						<font face="verdana, arial" size=2 color=wheat>MOLA Track Atlas
+					</td>
+
+					<td>
+						<table border=1 cellpadding=3 cellspacing=0 bordercolor=gray>
+							<tr align=center>
+								<td>
+									<!-- <a href="javascript:openNewWin( 'images/dataViz/moc.jpg', dataVizWin4, 382,366 )"> -->
+									<a href="/MOC/"
+										onMouseOver=
+											"changeImage( 'dv_moc_img', 'dv_moc_over' );
+											showDesc( 'MOC images from aerobraking, science phasing orbit-1, and science phasing orbit-2 subphases, with georectified context images and online image processing.' )"
+										onMouseOut=
+											"changeImage( 'dv_moc_img', 'dv_moc' );
+											clearDesc()">
+										<img name="dv_moc_img"
+											src="images/dataViz/thumbnails/moc.jpg" width=188 height=180></a>
+									<br>
+									<font face="verdana, arial" size=2 color=wheat>MOC Images</font>
+
+									<font face="verdana, arial" size=1 color=wheat>(w/ image processing)</font>
+								</td>
+							</tr>
+						</table>
+					</td>
+					
+				</tr>
+			</table
+		</td>
+	</tr>
+
+</table>
+
+<!-- ============================== Site Credits ==============================  -->
+<p>
+<table cellpadding=6>
+	<tr><td colspan=3 height=90 valign=bottom><hr></td></tr>
+	<tr>
+		<td align=center><font face="verdana, arial" color=EEDD82 size=2>
+	        Webwork:</td>
+		<td><a href="mailto:gdeardorff@mail.arc.nasa.gov"><i><b>
+			<font face="verdana, arial" size=2 color=lightsteelblue>Glenn Deardorff</a></td>
+
+		<td><a href="http://www.nas.nasa.gov/">
+			<font face="verdana, arial" size=2 color=FAFAD2>NAS Systems Division</a></td>
+	<tr>
+		<td align=center><font face="verdana, arial" color=EEDD82 size=2>
+			Principal<br>Investigator:</td>
+		<td><a href="mailto:vgulick@mail.arc.nasa.gov"><i><b>
+			<font face="verdana, arial" color=lightsteelblue size=2>Dr. Virginia Gulick</a></td>
+
+		<td><a href="http://cmex.arc.nasa.gov/">
+			<font face="verdana, arial" size=2 color=FAFAD2>Center for Mars Exploration</a></td>
+</table>
+<center>
+<iframe src ="/website/footer_blackbg.html" style="border:none;" width="100%" />
+</body>
+</html>
+
