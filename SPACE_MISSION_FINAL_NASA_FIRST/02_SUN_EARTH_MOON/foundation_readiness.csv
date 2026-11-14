@@ -1,0 +1,6 @@
+requirement,available_asset,status,follow_up
+"Sun, Earth, Moon geometric state",NASA NAIF DE440S shared kernel,AVAILABLE_BINARY,"Query all three target states at same SPICE epoch, frame and origin"
+"Earth, Moon, Sun daily state-vector CSV","Three original 4,018-row CSVs",QA_HOLD,Fix drifting epoch_utc labels before promotion
+Earth-Moon transfer dynamics,Another team researcher,AWAIT_TEAMMATE,Agree final state interface and tests
+Earth-Moon-Sun gravitational parameters,"Shared NASA/JPL constants, PCK and approved primary references",PARTIAL,Check exact GM source/units for all bodies at same declared model revision
+Launch-to-transfer handoff,TypeScript/JSON schemas in Workstream 3,DRAFT,Sign off origin/frame/TDB epoch and payload/propellant conventions

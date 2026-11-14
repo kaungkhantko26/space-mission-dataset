@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/mission-event.schema.json",
+  "title": "Mission Event Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "event_id",
+    "mission_id",
+    "event_type",
+    "event_name",
+    "time_basis",
+    "time_value",
+    "data_quality_status"
+  ],
+  "properties": {
+    "event_id": {
+      "type": "string"
+    },
+    "mission_id": {
+      "type": "string"
+    },
+    "event_type": {
+      "type": "string"
+    },
+    "event_name": {
+      "type": "string"
+    },
+    "time_basis": {
+      "type": "string",
+      "enum": [
+        "MET_SECONDS",
+        "TDB_SECONDS_PAST_J2000",
+        "UTC_ISO8601"
+      ]
+    },
+    "time_value": {
+      "oneOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "epoch_utc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "event_status": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "data_quality_status": {
+      "type": "string",
+      "enum": [
+        "published",
+        "reconstructed",
+        "calculated",
+        "estimated",
+        "game_configurable",
+        "unknown"
+      ]
+    },
+    "notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

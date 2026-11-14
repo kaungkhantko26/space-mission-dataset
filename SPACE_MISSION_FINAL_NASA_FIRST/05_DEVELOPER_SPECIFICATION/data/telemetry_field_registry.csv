@@ -1,0 +1,23 @@
+field_name,data_type,unit,producer,definition,requirement
+mission_id,string,—,All,Stable mission identifier,required
+simulation_time_s,number,s,simulation engine,"Monotonic simulation clock, not UTC",required
+epoch_utc,string,ISO 8601 UTC,simulation adapter,Human-readable wall-clock/mission epoch timestamp,required_when_epoch_known
+epoch_tdb_seconds_past_j2000,number,s TDB,navigation/trajectory module,SPICE ET numeric epoch; TDB seconds past J2000,required_for_ephemeris_state
+mission_elapsed_s,number,s MET,mission event manager,Seconds since explicitly named mission start event,recommended
+mission_phase,string,phase_id,mission state manager,Value from mission_phase_registry.csv,required
+reference_frame,string,frame name,state producer,Exact frame name attached to the vector,required_for_position_velocity
+origin,string,body/frame origin,state producer,Origin/observer for position and velocity; e.g. Earth center or solar-system barycenter,required_for_position_velocity
+position_km,"array[number,3]",km,state producer,"Cartesian position x,y,z in reference_frame relative to origin",required_for_position_velocity
+velocity_km_s,"array[number,3]",km/s,state producer,"Cartesian velocity vx,vy,vz in same frame and origin",required_for_position_velocity
+speed_km_s,number,km/s,derived telemetry,Magnitude of velocity vector; derived not independent source,optional_derived
+altitude_km,number,km,launch module / body-relative adapter,Height above named reference body/surface; define geoid/ellipsoid/model,conditional
+spacecraft_mass_kg,number,kg,launch/mission module,Current total mass,recommended
+remaining_propellant_kg,number,kg,propulsion module,Remaining propellant; null if module does not model it,conditional
+thrust_N,number,N,propulsion module,Current commanded or produced thrust; identify which,conditional
+dynamic_pressure_Pa,number,Pa,launch module,q = 0.5*rho*v_rel^2 in atmosphere,conditional
+delta_v_used_km_s,number,km/s,maneuver/propulsion module,Accumulated commanded or realized maneuver delta-v; define convention,optional_derived
+target_body,string,body name or NAIF ID,mission configuration,Current target body,recommended
+distance_to_target_km,number,km,derived navigation layer,"Computed from states with matching time, origin and frame",conditional
+estimated_arrival_utc,string,ISO 8601 UTC,transfer module,ETA from transfer solution; may be null until solved,conditional
+data_quality_status,string,enum,data adapter,"published, reconstructed, calculated, estimated, or game_configurable",required
+source_ids,array[string],source IDs,data adapter,References from technical_source_registry/source registry,recommended

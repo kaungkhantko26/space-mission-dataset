@@ -1,0 +1,7 @@
+requirement,available_asset,status,follow_up
+"Sun, Earth, Mars geometric state",NASA NAIF DE440S shared kernel,AVAILABLE_BINARY,"Query Sun Earth Mars at same TDB, J2000 frame, SSB origin"
+Earth and Mars state samples,"JPL Horizons DE441/mar099, 122 matched 30-day epochs each",REFERENCE_ONLY,Sparse 30-day samples cannot replace a propagated transfer trajectory
+Sun matching Horizons state,Not yet included for DE441 ECLIPJ2000 epochs,MISSING,Query matching Sun vectors or use consistent DE440S J2000 for all bodies
+Earth-Mars trajectory and launch windows,Another team researcher,AWAIT_TEAMMATE,"Agree interface, epoch and model"
+Mars reference physical values,NASA planetary fact sheet original and JPL physical parameters page,SOURCE_INCLUDED,Validate chosen GM/radius model-specific values before using in equations
+Earth departure to Mars transfer handoff,TypeScript/JSON schemas in Workstream 3,DRAFT,"Agree exact target, origin, time and state units"

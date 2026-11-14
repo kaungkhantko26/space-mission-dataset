@@ -1,0 +1,3 @@
+vehicle_id,configuration,orbit_or_mission,payload_kg,orbit_definition,C3_km2_s2,source_id,status,notes
+SLS_BLOCK1,SLS Block 1,LEO,95000,NASA Block 1 payload capability to low Earth orbit; mission details apply,,S19,Rounded NASA reference capability,"Mission payload, adapter and trajectory details alter usable payload."
+SLS_BLOCK1,SLS Block 1,Lunar / beyond Moon,27000,NASA statement: more than 27 metric tonnes beyond the Moon / on lunar missions,,S19,Numeric field stores a rounded lower-bound reference only,"Textual source statement is “more than 27 t”; 27,000 kg is not an exact upper or exact performance point."

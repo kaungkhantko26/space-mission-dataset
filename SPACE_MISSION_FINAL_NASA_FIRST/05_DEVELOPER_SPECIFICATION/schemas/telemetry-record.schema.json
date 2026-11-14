@@ -1,0 +1,183 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/telemetry-record.schema.json",
+  "title": "Mission Telemetry Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "mission_id",
+    "simulation_time_s",
+    "mission_phase",
+    "data_quality_status"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "mission_id": {
+      "type": "string"
+    },
+    "simulation_time_s": {
+      "type": "number",
+      "minimum": 0
+    },
+    "epoch_utc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "epoch_tdb_seconds_past_j2000": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "mission_elapsed_s": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "mission_phase": {
+      "type": "string"
+    },
+    "reference_frame": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "origin": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "position_km": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "velocity_km_s": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "speed_km_s": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "altitude_km": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "spacecraft_mass_kg": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "exclusiveMinimum": 0
+    },
+    "remaining_propellant_kg": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "thrust_N": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "dynamic_pressure_Pa": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "delta_v_used_km_s": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "target_body": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "distance_to_target_km": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "estimated_arrival_utc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "data_quality_status": {
+      "type": "string",
+      "enum": [
+        "published",
+        "reconstructed",
+        "calculated",
+        "estimated",
+        "game_configurable",
+        "unknown"
+      ]
+    },
+    "source_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "quality_flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

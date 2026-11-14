@@ -1,0 +1,6 @@
+api_service,event_category,endpoint_template,possible_game_use,scientific_caution
+CME,Coronal Mass Ejection,https://api.nasa.gov/DONKI/CME?startDate={YYYY-MM-DD}&endDate={YYYY-MM-DD}&api_key={API_KEY},Optional solar event card / mission environment context,Do not feed directly into gravitational trajectory propagation
+CMEAnalysis,Coronal Mass Ejection Analysis,https://api.nasa.gov/DONKI/CMEAnalysis?startDate={YYYY-MM-DD}&endDate={YYYY-MM-DD}&mostAccurateOnly=true&api_key={API_KEY},Optional CME analysis display,Use only if the game models radiation/space-weather environment with documented rules
+FLR,Solar Flare,https://api.nasa.gov/DONKI/FLR?startDate={YYYY-MM-DD}&endDate={YYYY-MM-DD}&api_key={API_KEY},Optional solar flare timeline/event marker,Do not infer spacecraft impact without a physical exposure model
+GST,Geomagnetic Storm,https://api.nasa.gov/DONKI/GST?startDate={YYYY-MM-DD}&endDate={YYYY-MM-DD}&api_key={API_KEY},Optional Earth-space-weather context,Not a substitute for a magnetic-field or radiation model
+IPS,Interplanetary Shock,https://api.nasa.gov/DONKI/IPS?startDate={YYYY-MM-DD}&endDate={YYYY-MM-DD}&api_key={API_KEY},Optional solar-wind/shock event context,Display-only unless game includes a validated hazard model

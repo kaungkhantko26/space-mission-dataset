@@ -1,0 +1,2 @@
+site_id,vehicle_id,vehicle_configuration,compatibility_status,evidence_type,source_ids,notes
+KSC_LC39B,SLS_BLOCK1,SLS Block 1,Confirmed,NASA Artemis mission launch records and pad reference,S20;S21,Artemis I and Artemis II launched from LC-39B.

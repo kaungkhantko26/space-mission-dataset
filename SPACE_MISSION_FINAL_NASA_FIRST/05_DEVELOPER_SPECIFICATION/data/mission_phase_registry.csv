@@ -1,0 +1,11 @@
+phase_id,phase_name,module_owner,entry_condition,expected_data_output,scope_status
+MISSION_CONFIG,Mission configuration,player/configuration,Mission parameters validated,Launch module input,IN_SCOPE
+COUNTDOWN,Launch countdown,launch module,Launch epoch and countdown reached zero,Liftoff event,IN_SCOPE
+ASCENT,Powered ascent,launch module,Rocket leaves launch pad,Vehicle state; staging events; telemetry,IN_SCOPE
+PARKING_ORBIT,Earth parking orbit,launch module,Orbit-insertion criterion satisfied,Spacecraft state vector at epoch,IN_SCOPE
+DEPARTURE_BURN,Earth departure maneuver,transfer module / launch interface,Mission-specific departure burn complete,Updated spacecraft state vector,INTERFACE_ONLY
+TRANSFER_CRUISE,Interplanetary/lunar cruise,other researcher transfer module,Trajectory propagation starts,Time-tagged state and mission events,OTHER_RESEARCHER_OWNS_TRAJECTORY
+MIDCOURSE_CORRECTION,Trajectory correction maneuver,other researcher transfer module,Correction event applied,Updated state and maneuver event,OTHER_RESEARCHER_OWNS_TRAJECTORY
+ARRIVAL_HANDOFF,Arrival conditions handoff,transfer module,Arrival state meets agreed handoff condition,"Position, velocity, epoch, frame, origin, mass and propellant",INTERFACE_ONLY
+ENTRY_DESCENT_LANDING,"Entry, descent and landing",landing research module,Arrival state accepted by landing module,Landing input state,OTHER_RESEARCHER
+SURFACE_OPERATIONS,Surface and material-gathering operations,surface research module,Landing completed,Surface gameplay state,OTHER_RESEARCHER
