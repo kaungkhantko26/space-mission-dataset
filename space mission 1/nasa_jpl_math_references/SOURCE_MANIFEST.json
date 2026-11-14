@@ -1,0 +1,11 @@
+{
+  "retrieved_on": "2026-11-14",
+  "timezone": "Asia/Rangoon",
+  "sources": [
+    {"name":"NASA Basics of Space Flight — Gravity & Mechanics","url":"https://science.nasa.gov/learn/basics-of-space-flight/chapter3-2/","local_file":"nasa_chapter3_gravity_mechanics.html"},
+    {"name":"NASA Basics of Space Flight — Trajectories","url":"https://science.nasa.gov/learn/basics-of-space-flight/chapter4-1/","local_file":"nasa_chapter4_trajectories.html"},
+    {"name":"NASA/JPL NAIF — SPICE Tutorials index","url":"https://naif.jpl.nasa.gov/naif/tutorials.html","local_file":"naif_spice_tutorials_index.html"},
+    {"name":"NASA/JPL NAIF — all tutorials PDF","url":"https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/Tutorials/pdf/individual_docs/SPICE_Tutorials_all.pdf","local_file":"SPICE_Tutorials_all.pdf","status":"attempted_separately"},
+    {"name":"NASA/JPL NAIF — all tutorials ZIP","url":"https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/Tutorials/pdf/packages/SPICE_Tutorials_Package.zip","local_file":"SPICE_Tutorials_Package.zip","status":"attempted_separately"}
+  ]
+}

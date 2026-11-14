@@ -1,0 +1,13 @@
+{
+  "created_on": "2026-11-14",
+  "timezone": "Asia/Rangoon",
+  "folder": "space_mission_data_sources_2026-11-14",
+  "sources": [
+    {"category":"NASA Planetary Fact Sheet","source":"https://nssdc.gsfc.nasa.gov/planetary/factsheet/","files":["01_nasa_planetary_fact_sheet/planetary_fact_sheet.html"]},
+    {"category":"JPL Horizons","source":"https://ssd.jpl.nasa.gov/horizons/","files":["02_jpl_horizons/earth_vectors_2026_2036.txt","02_jpl_horizons/mars_vectors_2026_2036.txt"],"notes":"Heliocentric vectors; 30-day step; 2026-01-01 through 2036-01-01."},
+    {"category":"NAIF SPICE","source":"https://naif.jpl.nasa.gov/naif/data_generic.html","files":["03_naif_spice/de440s.bsp","03_naif_spice/pck00011.tpc","03_naif_spice/naif0012.tls"]},
+    {"category":"Kaggle rocket dataset","source":"https://www.kaggle.com/datasets/akhilram7/allrocketsfrom1957","files":["04_kaggle_rocket_dataset/allrocketsfrom1957.zip","04_kaggle_rocket_dataset/extracted/"],"notes":"Community dataset; validate fields and units before treating as authoritative."},
+    {"category":"NASA Mars landing sites","source":"https://marsoweb.nas.nasa.gov/landingsites/landingsites.html","files":["05_nasa_mars_landing_sites/mars_landing_sites.html"]},
+    {"category":"NASA DONKI","source":"https://ccmc.gsfc.nasa.gov/tools/DONKI/","files":["06_nasa_donki/solar_flares_2026-01-01_2026-02-28.json"],"notes":"Downloaded successfully from the current CCMC DONKI endpoint; additional date windows were unavailable during download."}
+  ]
+}
