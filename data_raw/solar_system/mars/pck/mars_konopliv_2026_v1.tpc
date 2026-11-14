@@ -1,0 +1,574 @@
+KPL/PCK
+
+P_constants (PCK) SPICE kernel file mars_konopliv_2026_v1.tpc
+===========================================================================
+
+   By: Nat Bachman (NAIF)    2026 October 3
+
+   PCK for Mars rotation, based on data from the 2026 publication
+   by Konopliv et al. [1].
+
+   To assist with PCK interoperability, rotation data for Phobos and Deimos, 
+   and triaxial ellipsoid shape models for all three bodies, are included.
+   These data are from sources [2] and [3]. 
+
+   This kernel was created with the assistance of Claude Sonnet 5.
+
+
+Sources and References
+--------------------------------------------------------
+
+   Sources and background references for the constants listed in this
+   file are:
+
+        [1] Alex. S. Konopliv, Ryan S. Park, Sebastien Le Maistre, 
+            Marie Yseboodt, and Rose-Marie Baland, "Updated Mars 
+            Orientation and Gravity Field and Indication of Decadal 
+            Changes in Rotation Rate." The Planetary Science Journal, 
+            2026, DOI: 10.3847/PSJ/ae9ba7.
+
+        [2] Archinal, B.A., Acton, C.H., A'Hearn, M.F., Conrad, A.,
+            Consolmagno, G.J., Duxbury, T., Hestroffer, D., Hilton,
+            J.L., Kirk, R.L., Klioner, S.A., McCarthy, D.,
+            Meech, K., Oberst, J., Ping, J., Seidelmann, P.K., Tholen,
+            D.J., Thomas, P.C., and Williams, I.P., "Report of the IAU
+            Working Group on Cartographic Coordinates and Rotational
+            Elements: 2015," Celestial Mechanics and Dynamical Astronomy
+            130, Article number 22 (2018).
+            DOI: https://doi.org/10.1007/s10569-017-9805-5
+
+        [3] Archinal, B.A., Acton, C.H., Conrad, A., Duxbury, T.,
+            Hestroffer, D., Hilton, J.L., Jorda, L., Kirk, R.L.,
+            Klioner, S.A., Margot, J.-L., Meech, K., Oberst, J., 
+            Paganelli, F., Ping, J., Seidelmann, P.K., Stark, A.,
+            Tholen, D.J., Wang, Y., and Williams, I.P., "Correction to:
+            Report of the IAU Working Group on Cartographic Coordinates
+            and Rotational Elements: 2015."
+
+
+   Rotation data for Phobos and Deimos, and triaxial ellipsoid 
+   radii for all three bodies, are included. These data are from 
+   [2] and [3].
+
+
+Toolkit Compatibility Warning
+--------------------------------------------------------
+
+   This file provides Mars system rotation data usable with the
+   N0067 and newer versions of the SPICE Toolkit. This file cannot 
+   be used to compute Mars, Phobos, or Deimos orientation with 
+   Toolkit versions N0066 or earlier versions. See "Software Limitations" 
+   below.
+
+   All other data are compatible with the N0066 and earlier Toolkits.
+
+   NAIF provides the PCK file 
+
+      mars_konopliv_2026_n0066_v1.tpc 
+      
+   for use with older Toolkits. That PCK contains all the data from this 
+   file, except that, in that file, one of the phase angle polynomials
+   for Phobos is truncated to first order.
+
+
+Software Limitations
+--------------------------------------------------------
+
+   SPICE support for quadratic phase angle polynomials was introduced 
+   in the N0067 Toolkit version. Older Toolkits cannot make use of the 
+   Mars system orientation data provided in this file. 
+   
+   Older Toolkits are unable to detect and signal a SPICE error if
+   they are used to compute orientation of Mars, Phobos, or Deimos
+   using these data: memory corruption will occur in user applications
+   linked to these Toolkits if the applications attempt such computations.
+   Any results, including those of unrelated computations, may be invalid
+   after such memory corruption occurs.
+
+   See the NAIF server at
+
+      https://naif.jpl.nasa.gov
+
+   for the file mars_konopliv_2026_n0066_v1.tpc, which can be used 
+   with older Toolkits.
+
+
+Kernel Interoperability
+--------------------------------------------------------
+
+   This PCK file can be safely loaded after other, older 
+   generic text PCKs created by NAIF. Loading it before 
+   these or other text PCKs may prevent use of Mars system 
+   rotation models from those files.
+
+   PCK incompatibility can be due to kernel variables defined 
+   by this PCK and not overwritten by PCKs loaded later.
+
+   This problem can be resolved in two ways: 
+
+      1) After using this kernel, unload it before loading 
+         incompatible PCKs.
+       
+      2) After using this kernel, load the PCK 
+
+            mars_rotation_reset_v1.tpc 
+
+         before loading incompatible PCKs. Loading that file after 
+         this PCK has been used, and before another PCK is loaded, 
+         enables Mars system rotation models from the last-loaded 
+         PCK to function properly.
+
+         See the documentation within mars_rotation_reset_v1.tpc 
+         for details.
+  
+
+Data Modifications
+--------------------------------------------------------
+
+   1) Poisson terms in the angular expressions for alpha, delta, and W 
+      in the source model have been replaced by asymptotic approximations, 
+      in order to represent the expressions in a format compatible with 
+      SPICE Toolkit software. 
+
+      The approximation replaces expressions of the form
+
+         T * sin ( a + b * T )
+         T * cos ( a + b * T )
+
+      with, respectively, sums of expressions of the form
+
+         constant * scale * sin( T / scale ) * sin ( a + b * T )
+         constant * scale * sin( T / scale ) * cos ( a + b * T )
+
+      Here T represents Julian centuries past J2000 TDB, and 
+      
+         scale = 1.0e4
+
+      The modified expressions agree with the original ones,
+      over the time range 1970-2050, to these levels:
+
+         Maximum absolute alpha error (rad) = 5.33e-15
+         Maximum absolute delta error (rad) = 6.66e-16
+         Maximum absolute W error     (rad) = 1.09e-10
+
+      These errors were determined by sampling using a step size of 
+      approximately 250 seconds. 
+
+      The modified expressions have been analytically transformed
+      to expressions that satisfy SPICE text PCK requirements.
+
+   2) A typo in a constant in pck00011.tpc has been corrected. 
+      The quadratic coefficient in the 5th Mars system phase angle 
+      has been set to 
+
+         12.71192322
+
+      replacing the value from pck00011.tpc 
+
+         12.711923222
+
+ 
+Data
+--------------------------------------------------------
+
+\begintext
+
+   The first set of angle coefficients below are those supporting 
+   rotation models for Phobos and Deimos. Later assignments in this 
+   file augment the angle set with data used by the Mars rotation model.
+
+\begindata
+
+      BODY4_MAX_PHASE_DEGREE = 2
+
+      BODY4_NUT_PREC_ANGLES  = (
+
+         190.72646643      15917.10818695   0
+         21.46892470       31834.27934054   0
+         332.86082793      19139.89694742   0
+         394.93256437      38280.79631835   0
+         189.63271560   41215158.18420050   12.71192322
+
+         121.46893664        660.22803474   0
+         231.05028581        660.99123540   0
+         251.37314025       1320.50145245   0
+         217.98635955      38279.96125550   0
+         196.19729402      19139.83628608   0
+
+         198.991226        19139.4819985    0
+         226.292679        38280.8511281    0
+         249.663391        57420.7251593    0
+         266.183510        76560.6367950    0
+         79.398797             0.5042615    0
+
+         122.433576        19139.9407476    0
+         43.058401         38280.8753272    0
+         57.663379         57420.7517205    0
+         79.476401         76560.6495004    0
+         166.325722            0.5042615    0
+
+         129.071773        19140.0328244    0
+         36.352167         38281.0473591    0
+         56.668646         57420.9295360    0
+         67.364003         76560.2552215    0
+         104.792680        95700.4387578    0
+
+         95.391654             0.5042615    0 )
+ 
+\begintext 
+
+   Polynomial terms of expressions for Mars pole RA, pole Dec, 
+   and prime meridian angle W.
+
+\begindata 
+
+      BODY499_POLE_RA  = (  317.6811001   -0.1085514      -2.99e-5 )
+      BODY499_POLE_DEC = (   52.8863461   -0.0614879       4.41e-5 )
+      BODY499_PM       = (  176.6302669  350.89198247002  -8.5e-15 )
+
+\begintext
+
+   Nutation precession angles for Mars pole RA:
+
+\begindata
+
+      BODY4_NUT_PREC_ANGLES += (
+         226.3   38280.6             0
+         198.6   19140.3             0
+         248.7   57420.9             0
+         266.0   76561.2             0
+         194.7   15924.9             0
+         285.2   95701.5             0
+         305.1     657.5             0
+         304.5  114841.8             0
+          59.2   38280.594270422051  0
+         239.2   38280.605729577946  0
+         210.7   19140.294270422048  0
+          30.7   19140.305729577951  0 )
+ 
+\begintext
+
+   Nutation precession angles for Mars pole Dec:
+ 
+\begindata
+
+      BODY4_NUT_PREC_ANGLES += ( 
+          43.0    38280.6             0
+         122.7    19140.3             0
+          58.7    57420.9             0
+          79.8    76561.2             0 
+         194.7    15924.9             0
+          99.3    95701.5             0
+         305.1      657.5             0
+         118.7   114841.8             0
+          80.8    19140.294270422048  0
+         260.8    19140.305729577951  0
+         212.3    38280.594270422051  0
+          32.3    38280.605729577946  0 )
+
+\begintext
+
+   Nutation precession angles for Mars prime meridian angle W:
+ 
+\begindata
+
+      BODY4_NUT_PREC_ANGLES += ( 
+          46.3    38280.6             0
+         147.5    19139.9             0
+          92.6     1395.3             0
+          18.6    19140.3             0
+         253.3    38279.7             0
+          68.7    57420.9             0
+          86.0    76561.2             0
+         291.9    57419.6             0
+         237.1    76559.4             0
+          14.7    15924.9             0
+         105.2    95701.5             0
+         125.1      657.5             0
+         321.0    16105.3             0
+         124.5   114841.8             0
+          27.6    19140.294270422048  0
+         207.6    19140.305729577951  0
+         247.7    38280.594270422051  0
+          67.7    38280.605729577946  0  )
+
+\begintext
+
+   Nutation precession angle coefficients for Mars pole RA:
+
+\begindata
+
+      BODY499_NUT_PREC_RA   = (  0 0 0 0 0 
+                                 0 0 0 0 0 
+                                 0 0 0 0 0 
+                                 0 0 0 0 0 
+                                 0 0 0 0 0 
+                                 0         )
+
+      BODY499_NUT_PREC_RA   += ( 0.0002383 
+                                 0.0000682
+                                 0.0000519
+                                 0.0000088
+                                 0.0000019
+                                 0.0000014 
+                                 0.0000007
+                                 0.0000002
+                                 0.006
+                                 0.006
+                                 0.005
+                                 0.005
+                                 0 0 0 0 0 0 0 0 
+                                 0 0 0 0 0 0 0 0 
+                                 0 0 0 0 0 0 0 0 
+                                 0 0 0 0 0 0 )
+
+\begintext
+ 
+   Nutation precession angle coefficients for Mars pole Dec:
+
+\begindata 
+
+      BODY499_NUT_PREC_DEC  = (  0 0 0 0 0 
+                                 0 0 0 0 0 
+                                 0 0 0 0 0 
+                                 0 0 0 0 0 
+                                 0 0 0 0 0 
+                                 0         )
+
+      BODY499_NUT_PREC_DEC += (  0 0 0 0 0 0 0 0
+                                 0 0 0 0 
+                                 0.0001414 
+                                 0.0000519
+                                 0.0000310
+                                 0.0000053
+                                 0.0000012
+                                 0.0000008
+                                 0.0000004
+                                 0.0000001
+                                 0.002
+                                 0.002
+                                 0.004
+                                 0.004
+                                 0 0 0 0 0 0 0 0 
+                                 0 0 0 0 0 0 0 0
+                                 0 0 )
+
+\begintext
+
+   Nutation precession angle coefficients for Mars prime meridian
+   angle W:
+
+\begindata 
+
+      BODY499_NUT_PREC_PM   = (  0 0 0 0 0 
+                                 0 0 0 0 0 
+                                 0 0 0 0 0 
+                                 0 0 0 0 0 
+                                 0 0 0 0 0 
+                                 0         )
+
+      BODY499_NUT_PREC_PM  += (  0 0 0 0 0 0 0 0 
+                                 0 0 0 0 0 0 0 0 
+                                 0 0 0 0 0 0 0 0 
+                                 0.0001900
+                                 0.0001448
+                                 0.0000683
+                                 0.0000544
+                                 0.0000467
+                                 0.0000414
+                                 0.0000070
+                                 0.0000055
+                                 0.0000030
+                                 0.0000015
+                                 0.0000011
+                                 0.0000006
+                                 0.0000002 
+                                 0.0000002
+                                 0.004
+                                 0.004
+                                 0.005
+                                 0.005  )
+
+\begintext
+
+   Rotation data for Phobos and Deimos follow.
+
+
+   Satellites of Mars
+
+
+      Phobos
+
+          Old values are from the 2009 IAU report.
+
+
+          body401_pole_ra  = ( 317.68    -0.108     0.                     )
+          body401_pole_dec = (  52.90    -0.061     0.                     )
+          body401_pm       = (  35.06  1128.8445850 6.6443009930565219e-09 )
+
+          body401_long_axis     = (    0.   )
+
+          body401_nut_prec_ra   = (   1.79    0.    0.   0. )
+          body401_nut_prec_dec  = (  -1.08    0.    0.   0. )
+          body401_nut_prec_pm   = (  -1.42   -0.78  0.   0. )
+
+            The quadratic prime meridian term is scaled by 1/36525**2:
+
+               8.864000000000000   --->   6.6443009930565219E-09
+
+
+          Current values:
+
+            Values from the 2015 IAU report [2] were corrected by [3], which
+            is used as the source for the data below.
+
+            The quadratic prime meridian term is scaled by 1/36525**2:
+
+               12.72192797000000000000   --->  9.536137031212154e-09
+
+\begindata
+
+      BODY401_POLE_RA  = ( 317.67071657    -0.10844326  0. )
+      BODY401_POLE_DEC = (  52.88627266    -0.06134706  0. )
+      BODY401_PM       = (  35.18774440  1128.84475928
+                             9.536137031212154e-09 )
+
+      BODY401_LONG_AXIS     = (    0.   )
+
+      BODY401_NUT_PREC_RA   = (  -1.78428399
+                                  0.02212824
+                                 -0.01028251
+                                 -0.00475595  )
+
+
+
+      BODY401_NUT_PREC_DEC  = (  -1.07516537
+                                  0.00668626
+                                 -0.00648740
+                                  0.00281576  )
+
+
+      BODY401_NUT_PREC_PM   = (   1.42421769
+                                 -0.02273783
+                                  0.00410711
+                                  0.00631964
+                                 -1.143      )
+
+\begintext
+
+
+      Deimos
+
+         Old values are from the 2009 IAU report.
+
+           The Deimos prime meridian expression from that report is:
+
+                                                     2
+              W = 79.41  +  285.1618970 d  -  0.520 T  -  2.58 sin M
+                                                                    3
+
+                                                       +  0.19 cos M .
+                                                                    3
+
+           At the present time, the PCK kernel software (the routine
+           BODEUL in particular) cannot handle the cosine term directly,
+           but we can represent it as
+
+              0.19 sin M
+                        4
+
+           where
+
+              M   =  90.D0 - M
+               4              3
+
+           Therefore, the old nutation precession angle assignments for Phobos
+           and Deimos contain four coefficients rather than three.
+
+           The quadratic prime meridian term is scaled by 1/36525**2:
+
+              -0.5200000000000000  --->   -3.8978300049519307E-10
+
+
+           body402_pole_ra       = (  316.65     -0.108       0.           )
+           body402_pole_dec      = (   53.52     -0.061       0.           )
+           body402_pm            = (   79.41    285.1618970  -3.897830d-10 )
+           body402_long_axis     = (    0.                                 )
+
+           body402_nut_prec_ra   = (    0.   0.   2.98    0.   )
+           body402_nut_prec_dec  = (    0.   0.  -1.78    0.   )
+           body402_nut_prec_pm   = (    0.   0.  -2.58    0.19 )
+
+
+        New values:
+
+\begindata
+
+      BODY402_POLE_RA       = (  316.65705808     -0.10518014      0. )
+      BODY402_POLE_DEC      = (   53.50992033     -0.05979094      0. )
+
+      BODY402_PM            = (   79.39932954    285.16188899      0. )
+      BODY402_LONG_AXIS     = (    0.                                 )
+
+      BODY402_NUT_PREC_RA   = (    0    0    0    0    0
+                                   3.09217726
+                                   0.22980637
+                                   0.06418655
+                                   0.02533537
+                                   0.00778695       )
+
+
+      BODY402_NUT_PREC_DEC  = (    0    0    0    0    0
+                                   1.83936004
+                                   0.14325320
+                                   0.01911409
+                                  -0.01482590
+                                   0.00192430       )
+
+
+      BODY402_NUT_PREC_PM   = (    0    0    0    0    0
+                                  -2.73954829
+                                  -0.39968606
+                                  -0.06563259
+                                  -0.02912940
+                                   0.01699160  )
+
+\begintext
+
+
+Radii of Mars System Objects
+--------------------------------------------------------
+
+   Values are from [2].
+
+
+   Mars 
+
+\begindata 
+
+      BODY499_RADII       = ( 3396.19   3396.19   3376.20 )
+
+\begintext 
+
+
+   Phobos 
+
+\begindata 
+
+      BODY401_RADII     = ( 13.0    11.4    9.1 )
+
+\begintext
+
+
+   Deimos 
+
+\begindata 
+
+      BODY402_RADII     = (  7.8     6.0    5.1 )
+
+\begintext 
+
+===========================================================================
+End of file mars_konopliv_2026_v1.tpc
+===========================================================================
+ 

@@ -4,3 +4,7 @@ node_modules/
 .DS_Store
 .venv/
 *.log
+data_raw/mars/insight_edl/edl_atmosphere.tab
+data_raw/mars/insight_edl/edl_atmosphere.csv
+data_raw/mars/insight_edl/edl_atmosphere_working.xlsx
+~$*.xlsx

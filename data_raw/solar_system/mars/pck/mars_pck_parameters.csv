@@ -1,0 +1,13 @@
+body,parameter,component,coefficient_order,value,unit
+Mars,BODY499_POLE_RA,,0,317.6811001,degree
+Mars,BODY499_POLE_RA,,1,-0.1085514,degree/century
+Mars,BODY499_POLE_RA,,2,-2.99e-5,degree/century^2
+Mars,BODY499_POLE_DEC,,0,52.8863461,degree
+Mars,BODY499_POLE_DEC,,1,-0.0614879,degree/century
+Mars,BODY499_POLE_DEC,,2,4.41e-5,degree/century^2
+Mars,BODY499_PM,,0,176.6302669,degree
+Mars,BODY499_PM,,1,350.89198247002,degree/day
+Mars,BODY499_PM,,2,-8.5e-15,degree/day^2
+Mars,BODY499_RADII,X,,3396.19,km
+Mars,BODY499_RADII,Y,,3396.19,km
+Mars,BODY499_RADII,Z,,3376.20,km
