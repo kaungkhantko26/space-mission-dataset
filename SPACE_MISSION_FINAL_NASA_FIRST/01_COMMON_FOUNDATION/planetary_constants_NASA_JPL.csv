@@ -1,0 +1,8 @@
+body,source_id,parameter,value,unit,uncertainty,reference_note
+Earth,JPL-SSD-PHYS,equatorial_radius,6378136.6,m,0.1,JPL page displays 6378.1366 km ±0.0001 km
+Earth,JPL-SSD-PHYS,mean_radius,6371008.4,m,0.1,JPL page displays 6371.0084 km ±0.0001 km
+Earth,JPL-SSD-PHYS,mass,5.97217e24,kg,2.8e20,JPL page displays 5.97217e24 kg ±0.00028e24 kg
+Earth,JPL-SSD-PHYS,equatorial_gravity,9.80,m/s^2,,JPL displayed value
+Earth,JPL-SSD-PHYS,escape_velocity,11190,m/s,,JPL displayed value 11.19 km/s
+Moon,JPL-SSD-SAT,GM,4902.800,km^3/s^2,0.001,JPL satellite page; reference DE440
+Moon,JPL-SSD-SAT,mean_radius,1737400,m,100,JPL satellite page displays 1737.4 km ±0.1 km

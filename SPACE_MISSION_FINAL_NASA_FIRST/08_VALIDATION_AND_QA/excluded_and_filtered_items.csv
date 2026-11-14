@@ -1,0 +1,5 @@
+item,disposition,reason
+workstream_1_Rocket_Launch/workstream_1_rocket_launch_ascent_v0.2/data/rocket_vehicle_catalog.csv,04_LAUNCH_AND_ASCENT/data/rocket_vehicle_catalog.csv,Commercial / manufacturer-only vehicle rows omitted from NASA-only scientific production tables; NASA SLS retained
+workstream_1_Rocket_Launch/workstream_1_rocket_launch_ascent_v0.2/data/rocket_stage_engine_specs.csv,04_LAUNCH_AND_ASCENT/data/rocket_stage_engine_specs.csv,Commercial / manufacturer-only vehicle rows omitted from NASA-only scientific production tables; NASA SLS retained
+workstream_1_Rocket_Launch/workstream_1_rocket_launch_ascent_v0.2/data/rocket_payload_performance_reference.csv,04_LAUNCH_AND_ASCENT/data/rocket_payload_performance_reference.csv,Commercial / manufacturer-only vehicle rows omitted from NASA-only scientific production tables; NASA SLS retained
+space mission 1/space_mission_data_sources_2026-11-14/all-rockets-from-1957.csv,07_KAGGLE_CANDIDATES_NOT_AUTHORITATIVE/,"416 original rows; only 20 rows labelled NASA are retained as unauthoritative candidates; all others are not included, avoiding Russian/Chinese or otherwise unverified affiliations."

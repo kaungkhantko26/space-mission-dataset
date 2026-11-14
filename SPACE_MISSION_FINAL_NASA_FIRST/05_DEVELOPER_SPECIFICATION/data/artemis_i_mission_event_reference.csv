@@ -1,0 +1,13 @@
+event_id,event_name,met_hhmmss,met_seconds,event_type,data_status,mission,source_id,source_url
+ARTEMIS_I_LAUNCH,Launch,000/00:00:00,0,launch,NASA-published mission event time; not continuous telemetry,Artemis I,S04,https://www.nasa.gov/reference/artemis-i-mission-timeline/
+ARTEMIS_I_MAX_Q,Maximum dynamic pressure,000/00:01:10,70,ascent_environment,NASA-published mission event time; not continuous telemetry,Artemis I,S04,https://www.nasa.gov/reference/artemis-i-mission-timeline/
+ARTEMIS_I_SRB_SEP,Solid rocket booster separation,000/00:02:12,132,stage_separation,NASA-published mission event time; not continuous telemetry,Artemis I,S04,https://www.nasa.gov/reference/artemis-i-mission-timeline/
+ARTEMIS_I_FAIRING_JETTISON,Service module fairing jettison,000/00:03:11,191,jettison,NASA-published mission event time; not continuous telemetry,Artemis I,S04,https://www.nasa.gov/reference/artemis-i-mission-timeline/
+ARTEMIS_I_LAS_JETTISON,Launch abort system jettison,000/00:03:16,196,jettison,NASA-published mission event time; not continuous telemetry,Artemis I,S04,https://www.nasa.gov/reference/artemis-i-mission-timeline/
+ARTEMIS_I_CORE_MECO,Core stage main engine cutoff commanded,000/00:08:03,483,engine_cutoff,NASA-published mission event time; not continuous telemetry,Artemis I,S04,https://www.nasa.gov/reference/artemis-i-mission-timeline/
+ARTEMIS_I_CORE_ICPS_SEP,Core stage / ICPS separation,000/00:08:03,483,stage_separation,NASA-published mission event time; not continuous telemetry,Artemis I,S04,https://www.nasa.gov/reference/artemis-i-mission-timeline/
+ARTEMIS_I_SAW_DEPLOY,Orion solar array wing deploy begins,000/00:18:09,1089,spacecraft_deployment,NASA-published mission event time; not continuous telemetry,Artemis I,S04,https://www.nasa.gov/reference/artemis-i-mission-timeline/
+ARTEMIS_I_PERIGEE_RAISE,Perigee raise maneuver,000/00:52:56,3176,maneuver,NASA-published mission event time; not continuous telemetry,Artemis I,S04,https://www.nasa.gov/reference/artemis-i-mission-timeline/
+ARTEMIS_I_TLI,Trans-lunar injection burn,000/01:29:27,5367,departure_maneuver,NASA-published mission event time; not continuous telemetry,Artemis I,S04,https://www.nasa.gov/reference/artemis-i-mission-timeline/
+ARTEMIS_I_ORION_ICPS_SEP,Orion / ICPS separation,000/01:57:36,7056,spacecraft_separation,NASA-published mission event time; not continuous telemetry,Artemis I,S04,https://www.nasa.gov/reference/artemis-i-mission-timeline/
+ARTEMIS_I_OTC1,Outbound trajectory correction burn 1,000/07:47:31,28051,trajectory_correction,NASA-published mission event time; not continuous telemetry,Artemis I,S04,https://www.nasa.gov/reference/artemis-i-mission-timeline/

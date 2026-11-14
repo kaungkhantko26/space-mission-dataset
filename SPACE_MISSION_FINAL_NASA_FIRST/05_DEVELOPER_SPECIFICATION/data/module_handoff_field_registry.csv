@@ -1,0 +1,18 @@
+field_name,data_type,used_in,requirement,definition
+contract_version,string,all handoffs,required,Versioned data contract identifier
+mission_id,string,all modules,required,Stable mission identifier
+from_module,string,all handoffs,required,Module producing the message
+to_module,string,all handoffs,required,Module receiving the message
+handoff_type,string,all handoffs,required,"e.g. launch_to_transfer, transfer_to_arrival"
+epoch_utc,string,all handoffs,required_when_known,UTC timestamp for display and provenance
+epoch_tdb_seconds_past_j2000,number,navigation handoffs,required,TDB seconds past J2000 for ephemeris evaluation
+reference_frame,string,state handoffs,required,Exact coordinate frame name
+origin,string,state handoffs,required,Origin/observer of state vector
+position_km,array[3],state handoffs,required,State position vector in km
+velocity_km_s,array[3],state handoffs,required,State velocity vector in km/s
+spacecraft_mass_kg,number,launch/transfer/arrival,required_if_available,Vehicle total mass
+remaining_propellant_kg,number|null,launch/transfer/arrival,required_if_modelled,Current remaining propellant
+target_body,string,launch_to_transfer,required,Target destination body ID or agreed name
+mission_phase,string,all handoffs,required,Mission phase at handoff
+maneuver_events,array[object],maneuver/phase handoffs,optional,Time-tagged events/maneuvers since prior checkpoint
+quality_flags,array[string],all handoffs,required,"Known caveats: reconstructed, interpolated, estimated, missing values, etc."

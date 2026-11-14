@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "package": "Workstream 1 - Rocket Launch and Ascent",
+    "version": "0.1.0",
+    "created_utc_date": "2026-11-14",
+    "scope": "Launch systems, atmospheric ascent and insertion to a defined Earth parking orbit; excludes interplanetary transfer and landing."
+  },
+  "units": {
+    "position": "m in launch physics helpers; use km in SPICE/ephemeris interfaces and convert at API boundary",
+    "velocity": "m/s",
+    "acceleration": "m/s^2",
+    "mass": "kg",
+    "force": "N",
+    "pressure": "Pa",
+    "density": "kg/m^3",
+    "time": "s",
+    "angle": "rad internally; deg in human-facing CSV values"
+  },
+  "constants": {
+    "standard_gravity_m_s2": 9.80665,
+    "earth_gravitational_parameter_m3_s2": 398600441800000.0,
+    "earth_equatorial_radius_m": 6378137.0,
+    "earth_mean_radius_m": 6371008.8,
+    "dry_air_specific_gas_constant_J_kg_K": 287.05287,
+    "dry_air_gamma": 1.4,
+    "universal_gas_constant_J_mol_K": 8.314462618
+  },
+  "atmosphere": {
+    "model": "U.S. Standard Atmosphere 1976",
+    "coverage_geometric_altitude_m": [
+      0,
+      80000
+    ],
+    "sample_step_m": 1000,
+    "data_file": "data/earth_standard_atmosphere_1976_0_80km_1km.csv",
+    "interpolation": "linear between adjacent tabulated altitude rows",
+    "limitation": "Standard dry-air reference atmosphere, not real-time launch-day weather; no wind, humidity, clouds, local pressure deviations or upper-atmosphere space-weather coupling."
+  },
+  "launch_model_recommendation": {
+    "initial_model": "3-DOF point-mass ascent model",
+    "state_recommendation": [
+      "position in Earth-centered inertial frame",
+      "velocity in Earth-centered inertial frame",
+      "vehicle mass",
+      "active stage id",
+      "propellant mass by stage"
+    ],
+    "forces_to_model": [
+      "thrust vector",
+      "central Earth gravity",
+      "atmospheric drag relative to rotating atmosphere"
+    ],
+    "later_refinements": [
+      "Earth rotation and launch-site inertial velocity",
+      "winds and weather profile",
+      "Earth J2 and additional geopotential terms",
+      "steering/guidance law",
+      "thrust and Isp time histories",
+      "throttle limits and engine-out cases",
+      "aerodynamic coefficient tables",
+      "thermal and structural limits"
+    ],
+    "integrator_recommendation": "Adaptive Runge-Kutta (e.g. RK45/DOP853) or validated fixed-step RK4 with convergence tests; choose step size from accuracy and performance tests.",
+    "important": "A payload-to-orbit headline figure is not a complete flight trajectory. The stage masses, thrust histories, guidance law and vehicle aerodynamic data are not publicly specified in the sources for all vehicles."
+  },
+  "coordinate_conventions": {
+    "site_lat_lon": "WGS84 geodetic degrees",
+    "site_elevation": "metres above stated/unknown vertical datum; verify datum for each pad",
+    "launch_simulation_frame": "Earth-centered inertial (ECI); define exact inertial frame and epoch convention in the game API",
+    "conversion": "Convert WGS84 geodetic site coordinates to Earth-fixed Cartesian coordinates, then rotate to ECI using Earth orientation/rotation and launch epoch. Do not label the geodetic coordinates as ICRF."
+  },
+  "provenance_policy": {
+    "blank_numeric_fields": "Not located in the cited public source set; do not substitute guessed values.",
+    "status_values": [
+      "Published",
+      "Calculated from published values",
+      "Provisional legacy value",
+      "Unverified",
+      "Not publicly specified"
+    ],
+    "source_fields": "Every canonical data row should retain source_id and source URL through source_registry.csv."
+  }
+}

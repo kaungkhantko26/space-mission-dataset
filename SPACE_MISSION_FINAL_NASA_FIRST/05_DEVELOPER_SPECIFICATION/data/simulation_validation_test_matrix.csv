@@ -1,0 +1,15 @@
+test_id,test_name,procedure,acceptance_criteria,test_type,priority
+V01,Contract JSON validates,Validate all example messages against Draft 2020-12 schemas,All examples pass; required fields present,Automated schema validation,High
+V02,Units consistency,Compare every state/telemetry field with unit_registry.csv,No field uses ambiguous or undocumented unit,Schema/unit registry audit,High
+V03,Frame metadata required,Reject any position/velocity without named reference_frame and origin,Unknown/missing frame or origin rejected,Contract validation,Critical
+V04,Time metadata required,State handoff includes TDB seconds past J2000; display UTC is separate,TDB and UTC fields cannot be silently substituted,Contract validation,Critical
+V05,Frame transformation correctness,Compare SPICE pxform/sxform transforms for known test vectors,Position and state transforms use correct matrix types,NAIF/SPICE test fixture,High
+V06,Launch-to-transfer handshake,Feed a valid launch output state into transfer adapter,Transfer module accepts same epoch/frame/origin/units or returns explicit conversion failure,Cross-module integration test,Critical
+V07,Transfer-to-arrival handshake,Feed transfer output to landing module contract,Required arrival state and quality flags preserved,Cross-module integration test,High
+V08,Three.js render rebasing,Render coordinates after subtracting render origin and applying scale,Visual position is finite and camera precision remains acceptable,Browser visual test,High
+V09,No physics in scene units,Confirm simulation calculations use physical units before rendering transform,"Changing scene scale changes display only, never physical trajectory",Code review / regression test,Critical
+V10,Mission event ordering,Load Artemis I MET event fixture,Events sort by MET; simultaneous NASA-listed events remain separate,Event list test,Medium
+V11,Missing telemetry handling,Submit null optional propellant/thrust fields,UI marks unavailable; does not display as zero,Telemetry UI test,High
+V12,Data quality lineage,Check every ingested reference has source and quality status,Published/reconstructed/calculated/estimated/game-configurable distinguished,Data provenance audit,High
+V13,External API resilience,"Simulate DONKI timeout, rate limit, missing key and malformed response",Core mission sim still works; optional panel degrades gracefully,API integration test,Medium
+V14,Time interpolation range,Request SPICE state outside kernel coverage,Module returns explicit out-of-coverage error; no extrapolation by default,SPICE adapter test,High

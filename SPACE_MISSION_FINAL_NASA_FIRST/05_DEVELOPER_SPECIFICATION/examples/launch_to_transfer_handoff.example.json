@@ -1,0 +1,42 @@
+{
+  "contract_version": "1.0.0",
+  "mission_id": "DEMO-MISSION-001",
+  "from_module": "launch_simulation",
+  "to_module": "transfer_trajectory",
+  "handoff_type": "launch_to_transfer",
+  "spacecraft_state": {
+    "schema_version": "1.0.0",
+    "mission_id": "DEMO-MISSION-001",
+    "mission_phase": "PARKING_ORBIT",
+    "epoch_utc": "2026-04-02T00:00:00Z",
+    "epoch_tdb_seconds_past_j2000": 830000000.0,
+    "mission_elapsed_s": 3600.0,
+    "reference_frame": "J2000",
+    "origin": "EARTH_CENTER",
+    "position_km": [
+      7000.0,
+      0.0,
+      0.0
+    ],
+    "velocity_km_s": [
+      0.0,
+      7.5,
+      0.0
+    ],
+    "spacecraft_mass_kg": 12000.0,
+    "remaining_propellant_kg": 2500.0,
+    "target_body": "MOON",
+    "data_quality_status": "game_configurable",
+    "source_ids": [],
+    "quality_flags": [
+      "ILLUSTRATIVE_EXAMPLE_NOT_FLIGHT_DATA",
+      "epoch_tdb_seconds_past_j2000_is_placeholder"
+    ]
+  },
+  "maneuver_events": [],
+  "quality_flags": [
+    "ILLUSTRATIVE_EXAMPLE_NOT_FLIGHT_DATA",
+    "frame_and_origin_must_be_agreed_with_transfer_module"
+  ],
+  "created_at_utc": "2026-11-14T00:00:00Z"
+}

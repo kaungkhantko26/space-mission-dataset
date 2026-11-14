@@ -1,0 +1,17 @@
+{
+  "format": "JPL Horizons API query template",
+  "COMMAND": null,
+  "CENTER": "500@399",
+  "MAKE_EPHEM": "YES",
+  "EPHEM_TYPE": "VECTORS",
+  "START_TIME": null,
+  "STOP_TIME": null,
+  "STEP_SIZE": null,
+  "REF_SYSTEM": "J2000",
+  "REF_PLANE": "ECLIPTIC",
+  "OUT_UNITS": "KM-S",
+  "VECT_CORR": "NONE",
+  "CSV_FORMAT": "YES",
+  "OBJ_DATA": "YES",
+  "notes": "Populate COMMAND, START_TIME, STOP_TIME, and STEP_SIZE only after mission configuration is approved. CENTER 500@399 is geocentric; change explicitly if a different center is required."
+}

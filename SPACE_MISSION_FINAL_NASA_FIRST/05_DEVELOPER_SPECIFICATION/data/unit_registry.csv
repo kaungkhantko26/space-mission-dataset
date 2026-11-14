@@ -1,0 +1,16 @@
+quantity,canonical_unit_symbol,unit_name,used_for,rule,basis_or_note
+position,km,kilometre,Vector components in the mission-state handoff,Canonical for orbital/transfer exchange; launch code may use metres internally,NASA/NAIF SPICE state convention and existing project ephemeris data
+velocity,km/s,kilometre per second,Vector components in the mission-state handoff,Canonical for orbital/transfer exchange,NASA/NAIF SPICE state vectors; convert from launch m/s at module boundary
+acceleration,km/s^2,kilometre per second squared,Vector acceleration in mission state/telemetry,Use one explicit unit per field; launch helpers may use m/s^2,Project contract convention; convert consistently
+mass,kg,kilogram,Vehicle/spacecraft and propellant mass,Canonical,Workstream 1 dataset convention
+thrust,N,newton,Engine/vehicle thrust,Canonical; convert from kN/lbf source values with provenance retained,Workstream 1 data dictionary
+pressure,Pa,pascal,Dynamic pressure and atmospheric pressure,Canonical; do not mix with kPa/bar,Workstream 1 atmosphere/physics dataset
+density,kg/m^3,kilogram per cubic metre,Atmospheric density,Canonical,U.S. Standard Atmosphere 1976 dataset
+temperature,K,kelvin,Physical environment telemetry,Canonical for calculations; UI may show °C,NASA PDS environment records must preserve source units and convert explicitly
+relative_humidity,percent,percent relative humidity,Environmental telemetry,Range 0–100; null if not measured,Artemis II PDS Orion environment data description
+time,s,second,Elapsed integration time and mission elapsed time,Use separate fields for MET and ephemeris ET/TDB,NAIF SPICE time documentation
+angle_internal,rad,radian,Trigonometric and simulation calculations,Internal calculations; document degree-to-radian conversion,Software convention
+angle_display,deg,degree,Human-readable latitude/longitude/inclination values,Display/CSV input only unless explicitly defined,Workstream 1 CSV convention
+gravitational_parameter,km^3/s^2,cubic kilometres per second squared,Two-body and N-body gravity parameter,Use matching distance/time units,NAIF/SPICE and planetary constant kernels
+dynamic_pressure,Pa,pascal,Atmospheric dynamic pressure q,Calculated as 0.5*rho*v_rel^2,Workstream 1 physics convention
+delta_v,km/s,kilometre per second,Maneuver delta-v in transfer handoff,Keep mass/thrust units consistent in calculations,Project contract convention

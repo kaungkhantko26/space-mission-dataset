@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/spacecraft-state.schema.json",
+  "title": "Spacecraft State Contract",
+  "description": "A time-tagged Cartesian spacecraft state. The frame and origin are mandatory and must be interpreted exactly as declared.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "mission_id",
+    "mission_phase",
+    "epoch_tdb_seconds_past_j2000",
+    "reference_frame",
+    "origin",
+    "position_km",
+    "velocity_km_s",
+    "data_quality_status"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "mission_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "mission_phase": {
+      "type": "string",
+      "minLength": 1
+    },
+    "epoch_utc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "epoch_tdb_seconds_past_j2000": {
+      "type": "number",
+      "description": "SPICE ET/TDB seconds past J2000; not UTC seconds."
+    },
+    "mission_elapsed_s": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "reference_frame": {
+      "type": "string",
+      "minLength": 1
+    },
+    "origin": {
+      "type": "string",
+      "minLength": 1
+    },
+    "position_km": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "velocity_km_s": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "spacecraft_mass_kg": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "exclusiveMinimum": 0
+    },
+    "remaining_propellant_kg": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "target_body": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "data_quality_status": {
+      "type": "string",
+      "enum": [
+        "published",
+        "reconstructed",
+        "calculated",
+        "estimated",
+        "game_configurable",
+        "unknown"
+      ]
+    },
+    "source_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "quality_flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

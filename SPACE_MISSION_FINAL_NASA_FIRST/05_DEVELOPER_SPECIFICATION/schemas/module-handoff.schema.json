@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/module-handoff.schema.json",
+  "title": "Mission Module Handoff",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_version",
+    "mission_id",
+    "from_module",
+    "to_module",
+    "handoff_type",
+    "spacecraft_state",
+    "quality_flags"
+  ],
+  "properties": {
+    "contract_version": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "mission_id": {
+      "type": "string"
+    },
+    "from_module": {
+      "type": "string"
+    },
+    "to_module": {
+      "type": "string"
+    },
+    "handoff_type": {
+      "type": "string",
+      "enum": [
+        "launch_to_transfer",
+        "transfer_to_arrival",
+        "arrival_to_landing",
+        "module_checkpoint"
+      ]
+    },
+    "spacecraft_state": {
+      "$ref": "spacecraft-state.schema.json"
+    },
+    "maneuver_events": {
+      "type": "array",
+      "items": {
+        "$ref": "mission-event.schema.json"
+      }
+    },
+    "quality_flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "created_at_utc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    }
+  }
+}

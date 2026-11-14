@@ -1,0 +1,13 @@
+{
+  "event_id": "ARTEMIS_I_MAX_Q",
+  "mission_id": "ARTEMIS-I-REFERENCE",
+  "event_type": "ascent_environment",
+  "event_name": "Maximum dynamic pressure",
+  "time_basis": "MET_SECONDS",
+  "time_value": 70,
+  "epoch_utc": null,
+  "event_status": "NASA-published mission timeline event time",
+  "source_id": "S04",
+  "data_quality_status": "published",
+  "notes": "Event time is a timeline reference, not a continuous telemetry sample."
+}
